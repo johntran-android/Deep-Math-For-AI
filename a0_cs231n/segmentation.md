@@ -185,9 +185,9 @@
 
 <a id="node-1355"></a>
 
-<p align="center"><kbd><img src="assets/ec2ffcdadf6c80ba65f996ce3878af79e27fba6c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/81fc2fef8334ef16178d43eaa5e2f0c1438e543c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ec2ffcdadf6c80ba65f996ce3878af79e27fba6c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là phương pháp pooling kiểu như fixed function, còn cách thứ hai
@@ -232,9 +232,9 @@
 
 <a id="node-1359"></a>
 
-<p align="center"><kbd><img src="assets/1baa7fb05e65b1895f7cd4bf8c029b8a990bc1b4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/64fe488d3265f4a3e832d2a286a9207a99eb6bfc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1baa7fb05e65b1895f7cd4bf8c029b8a990bc1b4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại ý là ta có thể thực hiện phép convolution như một phép nhân matrix để "

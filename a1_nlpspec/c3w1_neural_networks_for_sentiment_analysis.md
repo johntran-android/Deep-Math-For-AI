@@ -289,9 +289,9 @@ Learning Objectives
 
 <a id="node-1953"></a>
 
-<p align="center"><kbd><img src="assets/afeab2b33cce2f69674efc47f215051b9c4f321a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/add7a3b12d84ca2c2772d628f6b3bf72d2494fe0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/afeab2b33cce2f69674efc47f215051b9c4f321a.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1794,9 +1794,9 @@ Learning Objectives
 
 <a id="node-2107"></a>
 
-<p align="center"><kbd><img src="assets/cb58eb8cf3716b44a4937672e20e04c0a78e577f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b584862a78412badbe7887e2d5a5bb955f72ae35.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cb58eb8cf3716b44a4937672e20e04c0a78e577f.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2031,9 +2031,9 @@ Learning Objectives
 
 <a id="node-2136"></a>
 
-<p align="center"><kbd><img src="assets/4f17f7e83ab466c210118b8047231231ba1b0f7e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/72deffcc19050e69af6f1e3631d3eb6345f48e7e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4f17f7e83ab466c210118b8047231231ba1b0f7e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đáng chú ý ở đây tính **weighted accuracy** - accuracy **có tính tới
@@ -2075,9 +2075,9 @@ Learning Objectives
 
 <a id="node-2141"></a>
 
-<p align="center"><kbd><img src="assets/c34fef6e39c362a5dd097e10974bd62a1ccaa4a1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/516392be786b8bcdf160eb59ebc33c14e394ead0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c34fef6e39c362a5dd097e10974bd62a1ccaa4a1.png" width="100%"></kbd></p>
 
 <br>
 

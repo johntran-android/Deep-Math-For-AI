@@ -237,9 +237,9 @@
 
 <a id="node-84"></a>
 
-<p align="center"><kbd><img src="assets/9b23614482c54e12cf1b25eb8178e77f27a79bd2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/97284831ebb99bbc4fa7bd6d38e85fe9e56089e8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9b23614482c54e12cf1b25eb8178e77f27a79bd2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là vầy, như ta đã biết ta có thể xây dựng CDF của Y = g(X), để tìm 
@@ -274,9 +274,9 @@
 
 <a id="node-85"></a>
 
-<p align="center"><kbd><img src="assets/f090ba02547d618a34f8b0495e99464e87b93a47.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9191fb05339bccd3d5d2ebe0edc3d83c2a0c7f89.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f090ba02547d618a34f8b0495e99464e87b93a47.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ này, X ~ Unif(0, 2π) (stat110 đã học, điều này có nghĩa là trên đoạn 
@@ -312,9 +312,9 @@
 
 <a id="node-86"></a>
 
-<p align="center"><kbd><img src="assets/479ee5228e3194ed9e4ab2629d1ac98222975df1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a647443463ffb69fec72ee1746506042d040a0bb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/479ee5228e3194ed9e4ab2629d1ac98222975df1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là thế này, như vừa rồi ta thấy một ví dụ cho thấy thách thức 
@@ -429,9 +429,9 @@
 
 <a id="node-90"></a>
 
-<p align="center"><kbd><img src="assets/df7f352b0603cc46aa9720986e1489b7c3fc71c4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/37e71a85334afeb04b9c822a9cfc8750a0530b44.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/df7f352b0603cc46aa9720986e1489b7c3fc71c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thử làm ví dụ này f(x) = x^(n-1) e^-x/β / (n - 1)! β^n x ∈ (0, inf)
@@ -647,9 +647,9 @@
 
 <a id="node-94"></a>
 
-<p align="center"><kbd><img src="assets/eb27db0561b16fae5126f46f4bf0570f27fdf85a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/48cd4e227da4d6bd84456bd621758bd77983b39d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eb27db0561b16fae5126f46f4bf0570f27fdf85a.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.6 GENERATING RANDOM SAMPLE](56_generating_random_sample.md#node-439)
 
@@ -737,9 +737,9 @@
 
 <a id="node-95"></a>
 
-<p align="center"><kbd><img src="assets/8c904bb819caf3f82857dffe8af5c6fc72d41a9e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2079d75136ec602dc9ca96e8b026dd38253cfc72.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c904bb819caf3f82857dffe8af5c6fc72d41a9e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta sẽ chứng minh Finv là gì rồi thì ta sẽ chứng minh Y = FX(X) sẽ ~ Unif(0,1)

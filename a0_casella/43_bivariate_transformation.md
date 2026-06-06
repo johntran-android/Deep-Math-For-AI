@@ -5,9 +5,9 @@
 ---
 <a id="node-251"></a>
 
-<p align="center"><kbd><img src="assets/2d23dac71d61e3bd1ea18e881f61ff001bcffbaa.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f8534b60afc7a67ed53787e6d826346c39637b11.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2d23dac71d61e3bd1ea18e881f61ff001bcffbaa.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ok, phần này sẽ mở rộng ý tưởng khi mà ta có transformation theorem giúp
@@ -115,9 +115,9 @@
 
 <a id="node-252"></a>
 
-<p align="center"><kbd><img src="assets/cb536a576f699e34626448322499b611d9d9920b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1836c0ba6f5b99d4c7f11a7fbbab22e70be8f6fc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cb536a576f699e34626448322499b611d9d9920b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là đoạn mở đầu vừa rồi, chú ý là, định nghĩa của tập A, chỉ là tập chứa (x,y) sao
@@ -236,9 +236,9 @@
 
 <a id="node-253"></a>
 
-<p align="center"><kbd><img src="assets/cdcba505fbeb67ef558173e7b932cf93c0df85cf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f448d0846f701d0813dd14d2e73ea1886fe2e868.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cdcba505fbeb67ef558173e7b932cf93c0df85cf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi thế thì ở đây (U,V), (X,Y) là các discrete vector. Nên các member  A_curly
@@ -364,9 +364,9 @@
 
 <a id="node-255"></a>
 
-<p align="center"><kbd><img src="assets/421d633675b48e00152f4410788a96ea2f281b08.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2bce0f07bc6ab92782b4dbfef409b271b8b27872.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/421d633675b48e00152f4410788a96ea2f281b08.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, thế thì tiếp theo đại khái là vầy, ta đã có **joint pmf của U,V**. Thì như đã
@@ -423,9 +423,9 @@
 
 <a id="node-256"></a>
 
-<p align="center"><kbd><img src="assets/b0899d89962d4cced28ccc1e29f2003dd047ec4c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/937e1cdc0f4716e9d1f35d87cfe4db95129f17d5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b0899d89962d4cced28ccc1e29f2003dd047ec4c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì ở đây học sẽ **giả sử dùng quan hệ mapping từ A_curly đến
@@ -587,9 +587,9 @@
 
 <a id="node-257"></a>
 
-<p align="center"><kbd><img src="assets/8918c5260fba84bda15e7a8a1637f68f648e5ba0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8aadec4672fc296b12aa7d2a5d16d5c2c3dccbbe.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8918c5260fba84bda15e7a8a1637f68f648e5ba0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua ví dụ này, **X ~ beta(α, β)**. **Y ~ beta (α + β, γ)** và **độc lập**
@@ -669,11 +669,11 @@
 
 <a id="node-259"></a>
 
+<p align="center"><kbd><img src="assets/03d687b764651c740ad326e9334f02ef824fa7c0.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/74c6b39df1a3da3921967080049b6806c21b29a8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/75e96b3ef1933acb3999d292fafd9eda32e234e0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/03d687b764651c740ad326e9334f02ef824fa7c0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > qua ví dụ này, (nói trước một tí, nhớ rằng ta đang bàn về việc transform vector
@@ -846,9 +846,9 @@
 
 <a id="node-261"></a>
 
-<p align="center"><kbd><img src="assets/127d6cce879818b5efa5087be68b4b53036d3392.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ff57499584dd674261b404991246f683b88effbb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/127d6cce879818b5efa5087be68b4b53036d3392.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, qua một theorem đơn giản nhưng rất quan trọng. là nếu X, Y độc lập
@@ -1032,9 +1032,9 @@
 
 <a id="node-264"></a>
 
-<p align="center"><kbd><img src="assets/0d94b13b326b7b7a69d215f81f089a3c50de7c61.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f6fb8e17a617e83303b05c4b53b0526169269391.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0d94b13b326b7b7a69d215f81f089a3c50de7c61.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vô ví dụ này, X,Y ~ n(0,1), U = X/Y, V = |Y|, ở đây không map 1-1 giữa A_curly

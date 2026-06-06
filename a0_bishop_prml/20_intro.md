@@ -5,9 +5,9 @@
 ---
 <a id="node-175"></a>
 
-<p align="center"><kbd><img src="assets/1f314d62d2bf2d7f40b4862bf6411a9a9d5146ca.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/32246b318ae1d569ed005c7b7dfce3ca83d3c474.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1f314d62d2bf2d7f40b4862bf6411a9a9d5146ca.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Mở đầu ông nhắc lại vai trò trung tâm trong lĩnh vực pattern recognition

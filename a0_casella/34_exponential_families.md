@@ -30,9 +30,9 @@
 
 <a id="node-184"></a>
 
-<p align="center"><kbd><img src="assets/35c9d50d2cc5952820c764bd2079bb0ab9d9f819.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f53bfec82f3d3dadfea432fe97110849768f105d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/35c9d50d2cc5952820c764bd2079bb0ab9d9f819.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Chứng minh **Binomial** thuộc **exponential family**,
@@ -80,9 +80,9 @@
 
 <a id="node-186"></a>
 
-<p align="center"><kbd><img src="assets/8b062e445153bc1f45d073abeb5bffd99db6e7c1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ce364cd6bc3fd7032f31398e67f878e288668c9f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8b062e445153bc1f45d073abeb5bffd99db6e7c1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ **áp dụng theorem này với Bin(n, p)**:
@@ -163,11 +163,11 @@
 
 <a id="node-187"></a>
 
+<p align="center"><kbd><img src="assets/bc191decb012bed40353a88bfd991f9acabe87ba.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/baa02a70fc541113e4f1598152e5cfc62ad580dc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/977c305166dd937d86426bcd01ba5eda7577c3aa.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/bc191decb012bed40353a88bfd991f9acabe87ba.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thử với **normal** xem nó **có đúng là có dạng exponential family** không:
@@ -392,9 +392,9 @@
 
 <a id="node-192"></a>
 
-<p align="center"><kbd><img src="assets/ec9eabdf68179c63c2ea7527d514848ec4e62372.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93af2e7446fe690ddf6cef94e6bb8496e6a96ee7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ec9eabdf68179c63c2ea7527d514848ec4e62372.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, qua chương 5 ta sẽ học rằng nếu X1, X2...Xn là một sample

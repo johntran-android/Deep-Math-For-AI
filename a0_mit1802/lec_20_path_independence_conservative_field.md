@@ -5,9 +5,9 @@
 ---
 <a id="node-493"></a>
 
-<p align="center"><kbd><img src="assets/c3e63482f80b32427f4dca8ce0e355570fe4bcfe.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7a9a72e54935414fcbc3e01e87f13aee0e79b4e2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c3e63482f80b32427f4dca8ce0e355570fe4bcfe.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ôn lại bài trước ta đã học về Line integral dùng để tính Công (Work)
@@ -36,9 +36,9 @@
 
 <a id="node-495"></a>
 
-<p align="center"><kbd><img src="assets/fcd4d11e8a52d1436ae38761915316db02db8bd0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ab9eff8d033172746f88c12af41156c709238f8b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fcd4d11e8a52d1436ae38761915316db02db8bd0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và c tạo nên một phần của dĩa có bán kính đơn vị với góc theta
@@ -82,9 +82,9 @@
 
 <a id="node-498"></a>
 
-<p align="center"><kbd><img src="assets/e1864a053c8d89e4a7cf5116c45778728eed1975.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/051db36a30756139a72e9ee95af2b7bcc0f2e936.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e1864a053c8d89e4a7cf5116c45778728eed1975.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Phần thứ 2 có thể thấy là một phần của đường tròn đơn vị. Thế thì ta
@@ -137,9 +137,9 @@
 
 <a id="node-502"></a>
 
-<p align="center"><kbd><img src="assets/65357f9137fb79018b08c9efc4d284c736543cd9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/773acd07c7c7f4903ce552f844b970850a95620d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/65357f9137fb79018b08c9efc4d284c736543cd9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cách tốt hơn đó là cho x = t, y = t với t từ 0 đến 1/sqrt(2) nhưng khi đó,
@@ -544,9 +544,9 @@
 
 <a id="node-526"></a>
 
-<p align="center"><kbd><img src="assets/0cdfab3bf42dc77a74df774c4d0293573439e865.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8043968aaf80eef698ab8c645d90c9cbb768a755.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0cdfab3bf42dc77a74df774c4d0293573439e865.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo, gs nhắc lại thì nếu nói đúng theo vật lí thì trường lực

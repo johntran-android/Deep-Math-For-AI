@@ -186,11 +186,11 @@
 
 <a id="node-359"></a>
 
+<p align="center"><kbd><img src="assets/b6d8d8f05164d3177e4cec55ed1ffdea78209334.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/874b5f093cb52bfcca9e025df498868b6b549a93.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c2d7e75601f5eecb93990e62735da0b3cb8fd293.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b6d8d8f05164d3177e4cec55ed1ffdea78209334.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Để chứng minh ý b): Xbar và S^2 độc lập, nhìn khá khoai. Nhưng chiến lược
@@ -377,9 +377,9 @@
 
 <a id="node-360"></a>
 
-<p align="center"><kbd><img src="assets/de42148f27e778b31c4748166fb3392c905ea5e5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b8e079341e8d4d92aef5200d03b98c372cd366e8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/de42148f27e778b31c4748166fb3392c905ea5e5.png" width="100%"></kbd></p>
 
 🔗 **Related:** [2.1 DISTRIBUTION](21_distribution.md#node-91)
 
@@ -415,9 +415,9 @@
 
 <a id="node-361"></a>
 
-<p align="center"><kbd><img src="assets/e1cf4928aca7e1d97eb723f3466844c54728e2ae.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7e12e34ff073bccf0efadf66ebb024656ce81d7a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e1cf4928aca7e1d97eb723f3466844c54728e2ae.png" width="100%"></kbd></p>
 
 🔗 **Related:** [4.2 CONDITIONAL DISTRIBUTIONS & INDEPENDENT](42_conditional_distributions_independent.md#node-249)
 
@@ -580,9 +580,9 @@
 
 <a id="node-363"></a>
 
-<p align="center"><kbd><img src="assets/7e147c5475e4f27ea392552859fa86bdce42e56e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c46d1f90d586d0a064fa1cb866e9c6918ac1a398.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7e147c5475e4f27ea392552859fa86bdce42e56e.png" width="100%"></kbd></p>
 
 🔗 **Related:** [4.5 COVARIANCE & CORRELATION](45_covariance_correlation.md#node-282)
 
@@ -829,9 +829,9 @@
 
 <a id="node-366"></a>
 
-<p align="center"><kbd><img src="assets/85914f5c69eb9468f2ef48fbd2a78f65f485b725.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/14fc683cfbff9cdc6fe0d2b9064bf9bd1de2b64d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/85914f5c69eb9468f2ef48fbd2a78f65f485b725.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy đại ý là cái bổ đề vừa rồi: Nó cho phép: KHI TA BẮT ĐẦU VỚI CÁC
@@ -1032,9 +1032,9 @@
 
 <a id="node-371"></a>
 
-<p align="center"><kbd><img src="assets/bcd855f7a86b3059619075b1660b5b67110a5165.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2ad040534d3ee9e2476794ecb1742c55f052db40.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bcd855f7a86b3059619075b1660b5b67110a5165.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-360)
 
@@ -1162,9 +1162,9 @@
 
 <a id="node-374"></a>
 
-<p align="center"><kbd><img src="assets/32e807f61f924d5410fcb1fddd6b75f1fb0e3941.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1c15a973148d7f2e918e50e853714af09f210da6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/32e807f61f924d5410fcb1fddd6b75f1fb0e3941.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Định nghĩa này nói rằng, với random sample size n từ n(μX, σX^2)

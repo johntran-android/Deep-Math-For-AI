@@ -244,9 +244,9 @@
 
 <a id="node-356"></a>
 
-<p align="center"><kbd><img src="assets/6185fc1d01a32d5751c3efa641161787008b0250.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ea2540ca4f6fbe49a9a1a085af283dfde32d32c1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6185fc1d01a32d5751c3efa641161787008b0250.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và cách thứ hai chỉ là áp dụng Chain-rule trừ việc sự dụng new notation

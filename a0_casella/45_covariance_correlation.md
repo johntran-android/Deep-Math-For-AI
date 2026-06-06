@@ -68,9 +68,9 @@
 
 <a id="node-281"></a>
 
-<p align="center"><kbd><img src="assets/7ce7f1645ccd8799338fbea0d84c221b363a7455.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/09d76224e7527a015a29654f5241e6e2c58f3ca3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7ce7f1645ccd8799338fbea0d84c221b363a7455.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, ví dụ này, f(x, y) = 1, x ∈ (0,1), x < y < x + 1
@@ -221,9 +221,9 @@
 
 <a id="node-284"></a>
 
-<p align="center"><kbd><img src="assets/1cf0cf21e503c58cc2b1f3e634ef1cdd0abd72a7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fec931fd2f7f2c82eb5c52071533abf682c14ac2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1cf0cf21e503c58cc2b1f3e634ef1cdd0abd72a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một theorem (đã gặp trong stat110): Cho X, Y và hai constant a, b:
@@ -288,9 +288,9 @@
 
 <a id="node-286"></a>
 
-<p align="center"><kbd><img src="assets/808642e88c9f6037aba89e452c6560b2aba98a19.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b047daf2c6d60e3400df096d2a581114739d6a4d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/808642e88c9f6037aba89e452c6560b2aba98a19.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Theorem này , phần 1 nói giá trị của correlation luôn nằm trong [-1,1]
@@ -535,9 +535,9 @@
 
 <a id="node-289"></a>
 
-<p align="center"><kbd><img src="assets/ba45aee7e782398eed7f440025147eb0729ce484.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/37540296c47f96afb507bce7b0f3bc70d3f74f2d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ba45aee7e782398eed7f440025147eb0729ce484.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo ta sẽ tính Cov(X, Y) đại ý là với Y = Z + X thì tính cái này dễ thôi
@@ -575,9 +575,9 @@
 
 <a id="node-290"></a>
 
-<p align="center"><kbd><img src="assets/4ee8c7b88f0ba3abc273a0e247deaa19faa30425.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/086e1d9ee887564590d9b2b7f8ce775c8fdcf7f8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4ee8c7b88f0ba3abc273a0e247deaa19faa30425.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, khi đã có Var(X).
@@ -641,9 +641,9 @@
 
 <a id="node-291"></a>
 
-<p align="center"><kbd><img src="assets/5089d1ee68115318861e6c509da13fb7414c093d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e295a6b745e4e1ff11b6e7dc41bb428f7a167866.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5089d1ee68115318861e6c509da13fb7414c093d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, qua ví dụ này, đại khái là sẽ minh hoạ một một case mà quan hệ của
@@ -705,9 +705,9 @@
 
 <a id="node-292"></a>
 
-<p align="center"><kbd><img src="assets/fbee41b4a220643821332f324127f353133e39cc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9306d7a72cc46a1178af815bac124a44d0551a29.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fbee41b4a220643821332f324127f353133e39cc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU

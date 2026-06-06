@@ -90,9 +90,9 @@
 
 <a id="node-309"></a>
 
-<p align="center"><kbd><img src="assets/013191fcb0c2350ad8ccb99802482162715c1182.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4af1bc852453e47650218c7868201f379048b407.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/013191fcb0c2350ad8ccb99802482162715c1182.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Hoặc ta có thể coi **random variable như căn nhà** còn **distribution như bản thiết kế**
@@ -131,9 +131,9 @@
 
 <a id="node-311"></a>
 
-<p align="center"><kbd><img src="assets/60a260065c328bb17300d47af525c9ac429c8626.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e82343e8fa307ffa725bf5f53b1dcd4d538faa09.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/60a260065c328bb17300d47af525c9ac429c8626.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Như thường lệ, ta sẽ **check tính valid của nó** (xem nó có **không âm** không,
@@ -261,9 +261,9 @@
 
 <a id="node-316"></a>
 
-<p align="center"><kbd><img src="assets/48219b3df1d82a6f5ddb2264d5916503953a62f6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/105cc48969abaf9a416609ba0c0033a185e0989d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/48219b3df1d82a6f5ddb2264d5916503953a62f6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và ta gọi đó là mô hình **Poisson Poisson paradigm**. Có **SỐ LƯỢNG LỚN N EVENTS A_j** với
@@ -295,11 +295,11 @@
 
 <a id="node-318"></a>
 
+<p align="center"><kbd><img src="assets/3cfbee1e5154d66aa7da1cac03e10a09b5d3462e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/fbaec82b36a91fe21bde0a8e1c636ecc92270040.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f14d448e591d20862267f347694f56e20344f10d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3cfbee1e5154d66aa7da1cac03e10a09b5d3462e.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  Poisson distribution X ~Pois(λ)  PMF P(X=k) = e^-λ λ^k / k! k = 0,1,2....  - Chứng minh PMF valid: không âm và Σk P(X=k) = 1  - E(X) = λ  - Story của Poison: Số success trial khi có rất nhiều trial với xác suất success nhỏ  - Poison paradigm: Có nhiều event Ai, xác suất xảy ra mỗi event nhỏ π ⇨ Có thể approx số event xảy ra (success) bởi Pois distribution  - Poison paradigm cho phép các event có thể weak independent  E[#số event xảy ra] = λ = Σ π  - KHI n LỚN VÀ p NHỎ LẠI (ĐỂ GẦN TRỞ VỀ POISSON PARADIGM) thì BINOMIAL (n, p) SẼ CONVERGE VỀ POISSON  Chứng minh khi n LỚN ĐẾN VÔ CÙNG và p NGÀY CÀNG NHỎ thì BINOMIAL sẽ CONVERGE về POISSON.  - Trở lại Bài toán Birthday tính xác suất có ít nhất 1 bộ 3 người trùng ngày sinh: Vì số bộ 3 người là lớn, và xác suất 1 bộ 3 người trùng ngày sinh xảy ra là nhỏ, nên số bộ 3 trùng ngày sinh có thể approx bởi poison r.v Từ đó ta tính E(X) để có λ. Và từ đó tính P(có ít nhất 1 bộ trùng ngày sinh) =  P(X!=0) = 1 - P(X=0)](tóm_tắt_poisson_distribution_x_poisλ_pmf_pxk_e_λ_λk_k_k_012_chứng_minh_pmf_valid_không_âm_và_σk_pxk_.md#node-335)
 
@@ -391,9 +391,9 @@
 
 <a id="node-322"></a>
 
-<p align="center"><kbd><img src="assets/67d11b1aaadb00dfb86b7efbf9ab5d6414503a26.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0daea6c322ad1e662acc998836b26f884b5d85d3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/67d11b1aaadb00dfb86b7efbf9ab5d6414503a26.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  Tiếp tục về CDF: Định nghĩa của CDF  Bước nhảy của CDFD là giá trị PMF tại đó  Tính chất của CDF: 1) Non decreasing, 2) right continuous và   3) F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity  - Định nghĩa Independent random variables theo independent event:  X, Y độc lập khi  + Continuous rv: P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y   + Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)  - Expected value: Là con số tóm tắt distribution của r.v  - Hai cách tính average  - E(X) = Σx x*P(X=x)  - X ~ Bern(p) thì E(X) = p  - FUNDAMENTAL BRIDGE: E(X) = P(A), X là indicator rv mang giá trị = 1 khi event A xảy ra và 0 khi ngược lại  - X ~ Bin(n, p):  E(X) = ∑ k=0,1..n [ k * (n choose k)*p^k*q^(n-k)] = ..= np  - TÍNH LINEARITY CỦA AVERAGE  - Tính lại E(X) của Bin(n, p) nhanh hơn bằng linearity, fundamental bridge và E(X) của Bern(p)  - TÍnh E(X) của Hypergeometric Dù các trial không độc lập nhưng dùng Symmetry, linearity, fundamental bridge vẫn tính được  - X ~ Geom(p): P(X=k) = q^k*p  - E(X) = p Σ k=0:infinity [k * q^k]](tóm_tắt_tiếp_tục_về_cdf_định_nghĩa_của_cdf_bước_nhảy_của_cdfd_là_giá_trị_pmf_tại_đó_tính_chất_của_cd.md#node-250)
 
@@ -581,9 +581,9 @@
 
 <a id="node-331"></a>
 
-<p align="center"><kbd><img src="assets/e67a29e3e62def6babf90d9178193a0c66e20ca5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fc37429c1282f3ff407333e0e72dfc372fca0ed8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e67a29e3e62def6babf90d9178193a0c66e20ca5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là giống như bài toán Birthday trước t**a thấy chỉ với 23 người là xác suất trùng ngày sinh xảy ra đã hơn
@@ -605,9 +605,9 @@
 
 <a id="node-332"></a>
 
-<p align="center"><kbd><img src="assets/c26319dd54b2be20b908f3a93510cb71b1514c9e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2a691d3c4c64e15add93f0cbe162a402d12d0252.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c26319dd54b2be20b908f3a93510cb71b1514c9e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì dựa vào các công cụ **linearity**, **indicator** **r.v**, **fundamental** **bridge** ta có **E(#Số triple có matched birthday)** sẽ là:

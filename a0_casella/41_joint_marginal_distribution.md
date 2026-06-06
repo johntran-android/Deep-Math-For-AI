@@ -5,9 +5,9 @@
 ---
 <a id="node-218"></a>
 
-<p align="center"><kbd><img src="assets/5f018927ceae3dc61a173fcf62379ed4f51c2bc1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/13afd78a0f8ee29cc7f17be877f6b5119252e89f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5f018927ceae3dc61a173fcf62379ed4f51c2bc1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại ý là trong thực tế rất hiếm khi ta chỉ dùng univariate model (chỉ có  một
@@ -22,9 +22,9 @@
 
 <a id="node-219"></a>
 
-<p align="center"><kbd><img src="assets/86616ee5b54a8a985224b86db380f12b6684c69b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d85c7c3c656d93561a8e4767a1e92c19f818d40e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/86616ee5b54a8a985224b86db380f12b6684c69b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là một ví dụ về việc ta định nghĩa ra một bivariate random vector (X, Y)
@@ -141,9 +141,9 @@
 
 <a id="node-222"></a>
 
-<p align="center"><kbd><img src="assets/30f2d99bed4cbc7c828a04fa3e6ad5f3f9201e10.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fb049ec230bfc9b650325db86435efb2367e08e1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/30f2d99bed4cbc7c828a04fa3e6ad5f3f9201e10.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là expected value của bivariate random variable cũng được define
@@ -282,9 +282,9 @@
 
 <a id="node-226"></a>
 
-<p align="center"><kbd><img src="assets/eaa696eb3242ea17ac16d0e5dcdb88702988888a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/24af9a25d965ba9cba62113c608ad59a648ccac1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eaa696eb3242ea17ac16d0e5dcdb88702988888a.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.6 GENERATING RANDOM SAMPLE](56_generating_random_sample.md#node-452)
 
@@ -436,9 +436,9 @@
 
 <a id="node-228"></a>
 
-<p align="center"><kbd><img src="assets/52e90c91bdcbe1fe28dceef829942fca003eb2b5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0408e0d2844e505b63182c851f466dfeb748c4c2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/52e90c91bdcbe1fe28dceef829942fca003eb2b5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU, nhưng đại khái là hai ví dụ về việc dùng joint pdf để tính
@@ -451,9 +451,9 @@
 
 <a id="node-229"></a>
 
-<p align="center"><kbd><img src="assets/4bf263070cb082bf21273f15a88437aa7b984254.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d5d769503bd152bb1192b1deafb051c2bbac74d7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4bf263070cb082bf21273f15a88437aa7b984254.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU

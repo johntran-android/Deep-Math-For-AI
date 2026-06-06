@@ -149,9 +149,9 @@ https://cs231n.github.io/optimization-1/
 
 <a id="node-259"></a>
 
-<p align="center"><kbd><img src="assets/5e2690240a9fd63c4f84867512120218537d4281.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f676e679567907f01c0513fe8b5ae59624029b17.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5e2690240a9fd63c4f84867512120218537d4281.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Function này đại khái là nhận. 1 điểm (1 vector) ví dụ như w là [w1,

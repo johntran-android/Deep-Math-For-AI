@@ -154,9 +154,9 @@
 
 <a id="node-517"></a>
 
-<p align="center"><kbd><img src="assets/cdbd291b0c291bd9461c0df9318c73f1aeec645d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d9c3de38607167c42f6b22ae2fa9e76e7be9864e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cdbd291b0c291bd9461c0df9318c73f1aeec645d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Bữa trước ta **đã chứng minh** rằng **Exponential distribution** có tính chất
@@ -234,9 +234,9 @@
 
 <a id="node-521"></a>
 
-<p align="center"><kbd><img src="assets/514d0d76261a232885aff5a5c1fc8050555bb2c1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e81e0e085acb1c348a37288ae7ce0357f7241c6e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/514d0d76261a232885aff5a5c1fc8050555bb2c1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy thì **kiểu như** ta sẽ **ngày càng** khám phá để **biết nhiều hơn về G** vậy. Thì đầu tiên ta có thể **cho s=t** để
@@ -341,9 +341,9 @@
 
 <a id="node-527"></a>
 
-<p align="center"><kbd><img src="assets/a581f268c6cfcb84e2cfd354bd6d0c9d2686a762.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fc67e0dfcaa11a411e87048598b4a94b87174f89.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a581f268c6cfcb84e2cfd354bd6d0c9d2686a762.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy thì ta đang có G(x) = e^[x * ln G(1)]
@@ -519,9 +519,9 @@
 
 <a id="node-534"></a>
 
-<p align="center"><kbd><img src="assets/898c5f63955e7ccf2cd871da5a53e1d364910eb7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/74e3fa6f5a8a43a2eaf84b63fd6fc1a9020f40f9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/898c5f63955e7ccf2cd871da5a53e1d364910eb7.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1  - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho ta n'th moment.  - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series  a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]  Nên 1/1-t chính là Tổng n=0:infinity t^n với |t| < 1  Thế thì theo gs, từ đây cho phép ta KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ N LÀM GÌ CHO MỆT, mà chỉ cần ĐỌC NÓ RA THÔI  Cụ thể là ta đã biết ở bài trước rằng, n'th moment = đạo hàm cấp n của M(t) (là coefficient của (t^n / n!) khi expand M(t) theo Taylor series tại 0)  Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ CHÍNH LÀ N'TH MOMENT  Do đó ta sẽ nhân thêm n! và chia n! để có (t^n / n!). Như vậy cái lòi ra làm coefficient của t^n/n! ở đây là n! CHÍNH LÀ N'TH MOMENT.  Từ đó cho phép ta ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!  N'TH MOMENT CỦA EXPO(1) E(X^n) = n!  -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.  Trong khi đó, nếu ta có MGF, để có nth moment, ta CHỈ CẦN TÍNH DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH PHÂN  -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ): E[Y^n] = n! / λ^n  - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0  - MGF CỦA POIS(λ) = e^[λ(e^t-1)]  - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~ Pois(λ+µ)](tóm_tắt_tính_mgf_mt_của_expo1_11_t_t_1_khi_đã_có_mgf_như_bài_trước_ta_đã_biết_các_lí_do_mà_mgf_quan_.md#node-571)
 
@@ -572,13 +572,13 @@
 
 <a id="node-536"></a>
 
+<p align="center"><kbd><img src="assets/37579ca201d76bfeadcc8a3b78d88e14a2f37a1d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/3f6830a65c9a732a3939f555e09d1dcad4b8864f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a7d1618eadedf77b2d05f8004dcb5cd7ea3107e6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/49ad85a6541343a363f30e73e113943f857b5d34.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/37579ca201d76bfeadcc8a3b78d88e14a2f37a1d.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1  - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho ta n'th moment.  - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series  a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]  Nên 1/1-t chính là Tổng n=0:infinity t^n với |t| < 1  Thế thì theo gs, từ đây cho phép ta KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ N LÀM GÌ CHO MỆT, mà chỉ cần ĐỌC NÓ RA THÔI  Cụ thể là ta đã biết ở bài trước rằng, n'th moment = đạo hàm cấp n của M(t) (là coefficient của (t^n / n!) khi expand M(t) theo Taylor series tại 0)  Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ CHÍNH LÀ N'TH MOMENT  Do đó ta sẽ nhân thêm n! và chia n! để có (t^n / n!). Như vậy cái lòi ra làm coefficient của t^n/n! ở đây là n! CHÍNH LÀ N'TH MOMENT.  Từ đó cho phép ta ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!  N'TH MOMENT CỦA EXPO(1) E(X^n) = n!  -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.  Trong khi đó, nếu ta có MGF, để có nth moment, ta CHỈ CẦN TÍNH DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH PHÂN  -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ): E[Y^n] = n! / λ^n  - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0  - MGF CỦA POIS(λ) = e^[λ(e^t-1)]  - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~ Pois(λ+µ)](tóm_tắt_tính_mgf_mt_của_expo1_11_t_t_1_khi_đã_có_mgf_như_bài_trước_ta_đã_biết_các_lí_do_mà_mgf_quan_.md#node-585)
 
@@ -724,9 +724,9 @@
 
 <a id="node-540"></a>
 
-<p align="center"><kbd><img src="assets/89ef7d7e2a41ba91c6485cf2f3a41b61a36af91c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/09e4863ec62eaff0cf5af1be138a7d37a3b7bfd9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/89ef7d7e2a41ba91c6485cf2f3a41b61a36af91c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > tiếp ta sẽ làm qua **MGF** của **Normal** random variable. Thế thì gs nói rằng ta **sẽ làm với
@@ -859,9 +859,9 @@
 
 <a id="node-546"></a>
 
-<p align="center"><kbd><img src="assets/6c6602e9ef83e57c7f0caae476e0c82278403634.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d66fd27eac4d17ec077cc8d0e73d0c5c8399f40a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6c6602e9ef83e57c7f0caae476e0c82278403634.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì với việc **p** unknown, có **2 cách tiếp cận khác nhau** của trường phải **Bayesian**
@@ -904,9 +904,9 @@
 
 <a id="node-549"></a>
 
-<p align="center"><kbd><img src="assets/d47d0cb229b62d5cb7f94abc89bb57cd92980674.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/baa39ffc8173ad594c34eac24e6b61e0771cf5d4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d47d0cb229b62d5cb7f94abc89bb57cd92980674.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì, như nãy ta đã nói, **chỉ khi nào** **dựa trên (conditioned on) việc biết p**, thì các Xj
@@ -920,9 +920,9 @@
 
 <a id="node-550"></a>
 
-<p align="center"><kbd><img src="assets/8969d7ad4e210c52b8d93eb79c2b1ddcd4f3337c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fdec6268cbda1f38dfa6a9c03b4ef73499355a83.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8969d7ad4e210c52b8d93eb79c2b1ddcd4f3337c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và nhiệm vụ bây giờ là tìm **posterior (p | Sn)** hay **p | {X1, X2...Xn}** cũng được với ý nghĩa là, **sau khi collecting data**

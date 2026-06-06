@@ -170,9 +170,9 @@
 
 <a id="node-100"></a>
 
-<p align="center"><kbd><img src="assets/4dc990140467efb121edaa869d77c0ab9af99c99.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d58c5ed2196016ec48b2c0defa0bc723936d0d32.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4dc990140467efb121edaa869d77c0ab9af99c99.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Việc fitting mô hính với data sẽ là việc giải bài toán tối ưu để minimize
@@ -258,11 +258,11 @@
 
 <a id="node-103"></a>
 
+<p align="center"><kbd><img src="assets/bf21021394f7ba4030b7ab96b5a83ce6c12ecc9f.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/0b1bf14aa736aa697c8d09e4f31874ffda92ac7a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d4ef126cac26246a11390999a71d3ee1c6a5f4f7.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/bf21021394f7ba4030b7ab96b5a83ce6c12ecc9f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là, case đơn giản nhất, p = 1, tức chỉ có một feature. 
@@ -334,9 +334,9 @@
 
 <a id="node-104"></a>
 
-<p align="center"><kbd><img src="assets/be2fef79768e892f5ab7d76462f94b1472675ffc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6e0a210aeddb3404b7431cf626c132232bad198c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/be2fef79768e892f5ab7d76462f94b1472675ffc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là assumption về A full column rank có thể giải nghĩa như sau:
@@ -465,11 +465,11 @@
 
 <a id="node-107"></a>
 
+<p align="center"><kbd><img src="assets/a930952a628c8f7b1419d7c78c3788b053002840.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/cd51a890052dd633084598ab97326a130fcd0f63.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/653e8a3df832c6a2e42211a2f8bd2cc8ea7c4603.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/a930952a628c8f7b1419d7c78c3788b053002840.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ko khó để nhìn ta ngay θ^_2, sẽ là dot product của row 2 matrix 

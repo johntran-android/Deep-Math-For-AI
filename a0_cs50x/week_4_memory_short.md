@@ -432,9 +432,9 @@
 
 <a id="node-790"></a>
 
-<p align="center"><kbd><img src="assets/5eb791938f6667f59d088fc0c53a5d24e888d0dc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a5832d6e549b9f580a02485d979c609b8dfb6bd6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5eb791938f6667f59d088fc0c53a5d24e888d0dc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và trong lecture David nói pointer var được 8

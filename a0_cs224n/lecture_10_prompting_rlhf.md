@@ -174,11 +174,11 @@
 
 <a id="node-760"></a>
 
+<p align="center"><kbd><img src="assets/cca7aa6f5f17d64304c57a2b010735dcb133aa94.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/b6e81212015ab6e553192ec73c31743ee4321ead.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/df617630466bd61bc81ef3030e34a80d83976b74.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/cca7aa6f5f17d64304c57a2b010735dcb133aa94.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đánh giá trên SuperGLUE benchmark cho thấy performance tăng dần khi từ
@@ -394,9 +394,9 @@
 
 <a id="node-775"></a>
 
-<p align="center"><kbd><img src="assets/610613dab185dc55b91ce1ed15b8c2915862ca4b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/11669ee115e11c926dd79fa8f1c381898c30d31a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/610613dab185dc55b91ce1ed15b8c2915862ca4b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > thế thì quay lại cơ chế pretrain-finetuning đã biết, có điều thay vì ta
@@ -485,9 +485,9 @@
 
 <a id="node-782"></a>
 
-<p align="center"><kbd><img src="assets/212563f53eb62d254fe6bdf657df296350162471.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4cc7d5468d2406279b6c37ad0686e337d5d3cb03.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/212563f53eb62d254fe6bdf657df296350162471.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ví dụ của kết quả trước và sau khi finetuning. Ta có thể thử với
@@ -906,9 +906,9 @@
 
 <a id="node-801"></a>
 
-<p align="center"><kbd><img src="assets/86d31682146dbab867b3f2f774d0464affdc6011.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e5c99634902a88e02bf447814479b78d753fb691.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/86d31682146dbab867b3f2f774d0464affdc6011.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Kết quả là lm có thể align với

@@ -251,9 +251,9 @@
 
 <a id="node-100"></a>
 
-<p align="center"><kbd><img src="assets/6baff35d8259744ae21bec4a95649f0a680940cc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/252acff12a20062e31b301717b65f8c2908f048f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6baff35d8259744ae21bec4a95649f0a680940cc.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-430)
 
@@ -277,9 +277,9 @@
 
 <a id="node-101"></a>
 
-<p align="center"><kbd><img src="assets/0457b79dff2d46544f15ede3755334004f199cc5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/52f1de5279e08764bac586d1850cd03477f5387f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0457b79dff2d46544f15ede3755334004f199cc5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Trong stat110 đã biết tính linearity của expectation và còn các tính chất
@@ -375,9 +375,9 @@
 
 <a id="node-103"></a>
 
-<p align="center"><kbd><img src="assets/27ca9f70e9cd30cdf4c0913b81ae05d3e21c296e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/31cf3c3b8bff63567d8fa625bb64a590d1474b90.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/27ca9f70e9cd30cdf4c0913b81ae05d3e21c296e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này nói điều quá dể hiểu sau khi học stat110, tính Eg(X) dĩ nhiên

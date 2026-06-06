@@ -188,9 +188,9 @@
 
 <a id="node-397"></a>
 
-<p align="center"><kbd><img src="assets/f2ab015ad51cca7a8ceda912a876e87d4a5036fd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/460c12f4a6996b1133a32f50cb4159e66f8afa24.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f2ab015ad51cca7a8ceda912a876e87d4a5036fd.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là yêu cầu ta khởi tạo (chuẩn bị các thành phần cho việc
@@ -443,11 +443,11 @@
 
 <a id="node-408"></a>
 
+<p align="center"><kbd><img src="assets/f3a0c8fe216405dfbd2404e99ee990329a736c73.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/9d887856800e61cc9abe49cc6f41ae2cbd8da59f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d4ce9b5cbab31bf91817faba0fe2b1f6bf8dc996.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f3a0c8fe216405dfbd2404e99ee990329a736c73.png" width="100%"></kbd></p>
 
 <br>
 
@@ -473,13 +473,13 @@
 
 <a id="node-410"></a>
 
+<p align="center"><kbd><img src="assets/7d1959b3d1f97e6e8e432e63ea713e67057f186d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/190879694a8e44e1391212e17624fe5fb75060df.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/61eea354221b233dcdeff9d1276f987c607876a1.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/99eff95713e69ce610fb84e94e095e6ee277fa1c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7d1959b3d1f97e6e8e432e63ea713e67057f186d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, cái này họ yêu cầu mình làm cái function dùng để ' lookup' embedding.
@@ -620,9 +620,9 @@
 
 <a id="node-416"></a>
 
-<p align="center"><kbd><img src="assets/6d48d0e23ce2c66ddd347ef6788fa3112f4c6e1b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ab4939d3e5085b12c436c0615eba2c36b11f460d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6d48d0e23ce2c66ddd347ef6788fa3112f4c6e1b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, xét tới function "train một epoch", với các input như đã nói, nó
@@ -651,11 +651,11 @@
 
 <a id="node-417"></a>
 
+<p align="center"><kbd><img src="assets/ca0aaa87bebeaf16367a6e25a28ab4cfb338bae3.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/21831709e0598dca97b1c819984bda6d6c78ee73.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7ee648c430c4e92443286d3b1e2791fe6cc4c170.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ca0aaa87bebeaf16367a6e25a28ab4cfb338bae3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Run với debug đạt loss < 0.
@@ -665,11 +665,11 @@
 
 <a id="node-418"></a>
 
+<p align="center"><kbd><img src="assets/01b3058e159b05586f28df372863a9d1fe33af08.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/57b44791cb2bed1d3d7353505a693fe53585303d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/204e4910212331ffd2dab5cb8c8acb0b22d956ab.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/01b3058e159b05586f28df372863a9d1fe33af08.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Run no debug để train với full dataset, sau 10 epoch đạt loss 0.
@@ -697,9 +697,9 @@
 
 <a id="node-420"></a>
 
-<p align="center"><kbd><img src="assets/d8854862627a4dc6d4052e3e8b7b13d362667467.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93ffc993e3e7a7ed764d9d22a43401ed1369ff2b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d8854862627a4dc6d4052e3e8b7b13d362667467.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > tiếp theo họ cho biết cái loại lỗi trong ví dụ vừa rồi gọi là Prepositional

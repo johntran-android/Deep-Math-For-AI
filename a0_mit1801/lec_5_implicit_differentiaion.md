@@ -84,9 +84,9 @@
 
 <a id="node-108"></a>
 
-<p align="center"><kbd><img src="assets/eb31c427d22756244f0ba69e85ed968363952e7a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f7b18ff40fd7627ee26ee1df554b74fd6e88df51.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eb31c427d22756244f0ba69e85ed968363952e7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và kết quả là a*x^a-1. Cho thấy công thức derivative của x^a =

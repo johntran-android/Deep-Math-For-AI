@@ -110,9 +110,9 @@
 
 <a id="node-97"></a>
 
-<p align="center"><kbd><img src="assets/da255ccd03d176d575fbc2205870345caec1a8bb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d80573fef542290607f734d17e3f76ac67755ba1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/da255ccd03d176d575fbc2205870345caec1a8bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là nói về công thức objective function của SkipGram như ta đã biết

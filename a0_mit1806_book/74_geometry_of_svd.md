@@ -363,9 +363,9 @@
 
 <a id="node-64"></a>
 
-<p align="center"><kbd><img src="assets/27adb9ebab9e48dd7a83e98e5e1a8cd6bba2994e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a62a0606a9e4d5814e0ac924d4046d15c21930d6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/27adb9ebab9e48dd7a83e98e5e1a8cd6bba2994e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU

@@ -113,11 +113,11 @@
 
 <a id="node-528"></a>
 
+<p align="center"><kbd><img src="assets/438569b207201ce29ddbc603d81eb6db13d91253.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/375fefd2208e420ed7476623c47fd24351d32dde.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/752fee760985bc5e193624596517401b89254daf.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/438569b207201ce29ddbc603d81eb6db13d91253.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Function build_dataset:
@@ -332,9 +332,9 @@
 
 <a id="node-546"></a>
 
-<p align="center"><kbd><img src="assets/ac27740f9198c8cccea5844bbd7257ca2bc060bc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/83f924b153f3dbd996a6d085fa0832b9f4223492.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ac27740f9198c8cccea5844bbd7257ca2bc060bc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Function này sẽ nhận model, dataset, lần lượt inference data từ dataset vào model,
@@ -420,9 +420,9 @@
 
 <a id="node-554"></a>
 
-<p align="center"><kbd><img src="assets/c1715866e7650e596900115688d8287c1bb5c56f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1e082fce4c80e5d6eea267219b75c667bf6c1663.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c1715866e7650e596900115688d8287c1bb5c56f.png" width="100%"></kbd></p>
 
 <br>
 
@@ -461,9 +461,9 @@
 
 <a id="node-559"></a>
 
-<p align="center"><kbd><img src="assets/78e802a829e3ace493b5aebfc1da5ea203d3be87.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e7f95fa75d6a37104791756156a7c8afbc420080.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/78e802a829e3ace493b5aebfc1da5ea203d3be87.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là
@@ -492,9 +492,9 @@
 
 <a id="node-561"></a>
 
-<p align="center"><kbd><img src="assets/d40e86dc5e154628e0fedb240ae7775456e30e00.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/06a6621d3d58fc2c7a6a63bfb40455dc1e9e8226.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d40e86dc5e154628e0fedb240ae7775456e30e00.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Kết quả cho thấy chỉ số logits do RoBERTa model generate

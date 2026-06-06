@@ -237,9 +237,9 @@
 
 <a id="node-700"></a>
 
-<p align="center"><kbd><img src="assets/ac4bf6bf983871997dfefd3db024706b2fc3e782.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/dacd7713b644394330d61d94801271881217878c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ac4bf6bf983871997dfefd3db024706b2fc3e782.png" width="100%"></kbd></p>
 
 <br>
 
@@ -326,9 +326,9 @@
 
 <a id="node-706"></a>
 
-<p align="center"><kbd><img src="assets/801c9ef1cb384b4d6713d7eff05ce87aa67a3b6a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2e4ffabbc2a10f65441a2391a659f0f9d05620bf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/801c9ef1cb384b4d6713d7eff05ce87aa67a3b6a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là nếu weight được initialized nhỏ, thì w_T@x + b tức output  cũng
@@ -347,9 +347,9 @@
 
 <a id="node-707"></a>
 
-<p align="center"><kbd><img src="assets/e70f219767ae079d3e755316679b911c7ecc15ef.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/942e5269965c7f3526e7acbac4f4fa1fb4b97ed9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e70f219767ae079d3e755316679b911c7ecc15ef.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > vậy đại khái là khi các điểm đều nằm trên hoặc sát decision boundary
@@ -422,11 +422,11 @@
 
 <a id="node-711"></a>
 
+<p align="center"><kbd><img src="assets/3a1395456cf877da50084ee765417e260d44e7b9.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/00b6d197dc72e45d0b287eb70b8a72966571b4c8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/601a244e2d1489bfce13c72a82b8739ce977a332.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3a1395456cf877da50084ee765417e260d44e7b9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là trước khi bắt đầu training nên check mức giá trị của loss khi ban đầu
@@ -579,9 +579,9 @@
 
 <a id="node-719"></a>
 
-<p align="center"><kbd><img src="assets/157beea331f148d497885fad5f7427c52d83b431.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2d45fefc441ced6e153a0a827c6e0e246d1ce36b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/157beea331f148d497885fad5f7427c52d83b431.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > một cách làm hay nữa là plot feature của first layer, ý là ta sẽ visualize
@@ -611,9 +611,9 @@
 
 <a id="node-721"></a>
 
-<p align="center"><kbd><img src="assets/c595e81edf98060a8f16be252210ed9d795568d5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7c1ffb45bbd3e3e987e0433f091efae1a5f13c80.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c595e81edf98060a8f16be252210ed9d795568d5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đoạn đầu tạm dịch đại khái là phương pháp momentum được lấy
@@ -917,11 +917,11 @@
 
 <a id="node-735"></a>
 
+<p align="center"><kbd><img src="assets/c5b96666e2817e3f4b65ebd38c12154e7742d98d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/382443b3e683ef6668fbb1557314af52b60ace35.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/693a835234481bdd674ce3ed1ecd25b04ffa90f4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c5b96666e2817e3f4b65ebd38c12154e7742d98d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là RMSProp cơ bản là sự cải tiến của AdaGrad, cải thiện vấn đề lr

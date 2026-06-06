@@ -119,9 +119,9 @@
 
 <a id="node-1370"></a>
 
-<p align="center"><kbd><img src="assets/14dfb140ebba012f9a597ee0481c44ec634ca412.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d07078d2b6b8c4799fd00d5d0f70d96a81e01677.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/14dfb140ebba012f9a597ee0481c44ec634ca412.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > mở rộng ra, ta hoàn toàn có thể làm các bài toán tương tự như Human

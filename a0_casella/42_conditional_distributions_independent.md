@@ -5,9 +5,9 @@
 ---
 <a id="node-232"></a>
 
-<p align="center"><kbd><img src="assets/d24f56828472ce849959f8ee5e6b792ad23a92a7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3256c8772a5f80376ea0f5e064d20a58ee33f173.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d24f56828472ce849959f8ee5e6b792ad23a92a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là trong các thực nghiệm, khi lấy mẫu (các observed values) của
@@ -86,11 +86,11 @@
 
 <a id="node-234"></a>
 
+<p align="center"><kbd><img src="assets/a9c986a3634dec382825dabfb505c92e357b19e1.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/87792f1cb9d1be34beab464bf0f5a5ca24b5320b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/710b33e456eae88e4362f92c8d3cf47f45d42ef0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/a9c986a3634dec382825dabfb505c92e357b19e1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một ví dụ cũng đơn giản, đại khái là người ta cho một joint pmf (tại các
@@ -214,9 +214,9 @@
 
 <a id="node-237"></a>
 
-<p align="center"><kbd><img src="assets/117dcff348fb1e9ad52a7d1d5178bd7f9f03536f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/64be1e5a9d165afedfa496a764cb234c64478ac7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/117dcff348fb1e9ad52a7d1d5178bd7f9f03536f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta trong một ví dụ trước đây ta có joint pdf: f(x, y) = e^-y, 0 < x < y <
@@ -520,9 +520,9 @@
 
 <a id="node-240"></a>
 
-<p align="center"><kbd><img src="assets/f144c9f3bfc13a85533e11736ea61b6ea8c273fc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f81a619d906fdc3dd8c540ff9b38efa322233d47.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f144c9f3bfc13a85533e11736ea61b6ea8c273fc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một điểm kiến thức cũng cực kì quan trọng, cái này thì stat110 đã thấy rồi.
@@ -573,9 +573,9 @@
 
 <a id="node-242"></a>
 
-<p align="center"><kbd><img src="assets/b692ea3516023be8a81754b945f1f3433c282e8c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ceba0d9f068c7169fe017782ce27f6c3fa0b6ca0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b692ea3516023be8a81754b945f1f3433c282e8c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một ví dụ đại khái là cho giá trị của joint pmf tại các (cặp) possible values của
@@ -587,9 +587,9 @@
 
 <a id="node-243"></a>
 
-<p align="center"><kbd><img src="assets/425813270e3193ffb8335c37c2292ef67b8bcdf5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/669f17de2f0216bbf3d75212644e3b27b0531ace.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/425813270e3193ffb8335c37c2292ef67b8bcdf5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đại khái là nếu như ta muốn dùng định nghĩa nói rằng nếu hai 
@@ -802,9 +802,9 @@
 
 <a id="node-246"></a>
 
-<p align="center"><kbd><img src="assets/4534c5f7de683c07f0adb7bc78cf1da106c59683.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/45428f20f5e0f61e7a2d4f5fead1ae8e046a6b0e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4534c5f7de683c07f0adb7bc78cf1da106c59683.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là theorem nói rằng ta có X,Y độc lập thì
@@ -1016,9 +1016,9 @@
 
 <a id="node-249"></a>
 
-<p align="center"><kbd><img src="assets/4e07cfeb23d66662f9e64946906b77b42414477a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f7d99b3ce49082dadc6b70f7cb59d59d2025e450.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4e07cfeb23d66662f9e64946906b77b42414477a.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.3 SAMPLING FROM THE NORMAL DISTRIBUTION](53_sampling_from_the_normal_distribution.md#node-361)
 

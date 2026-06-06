@@ -50,9 +50,9 @@
 
 <a id="node-393"></a>
 
-<p align="center"><kbd><img src="assets/cc82b76f443363dd5eb9914021113a4bc74456ef.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1dbd0694548bda14a0f03741078ea8de2e194335.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cc82b76f443363dd5eb9914021113a4bc74456ef.png" width="100%"></kbd></p>
 
 🔗 **Related:** [3.6 INEQUALITIES](36_inequalities.md#node-207)
 
@@ -417,9 +417,9 @@
 
 <a id="node-405"></a>
 
-<p align="center"><kbd><img src="assets/bceb2be55bec58824fedc68c06ae0fe88247a5bb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/661e8ceac3d1b195c6e92ed52571aefbd26d8275.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bceb2be55bec58824fedc68c06ae0fe88247a5bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cho X1,X2...iid uniform(0,1) và X(n) được định nghĩa là max i ∈ [1,n] Xi,
@@ -664,9 +664,9 @@
 
 <a id="node-412"></a>
 
-<p align="center"><kbd><img src="assets/fe60052a55f734c8410e19ce0eeb198d7d821389.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b588755662c13859925bf87cd7318acc11cef4b7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fe60052a55f734c8410e19ce0eeb198d7d821389.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, theo định nghĩa, đại khái là mình đã từng học đó là, THEO ĐỊNH
@@ -711,9 +711,9 @@
 
 <a id="node-414"></a>
 
-<p align="center"><kbd><img src="assets/c49b561de52df992a4bf198e68171610cff69846.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/48f40eafa9b6871edab3d69f42f4f1e13a6a548e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c49b561de52df992a4bf198e68171610cff69846.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái khái đây là phiên bản mạnh hơn của CLT, trong đó ko cần các 
@@ -805,11 +805,11 @@
 
 <a id="node-416"></a>
 
+<p align="center"><kbd><img src="assets/d2ce785ee178d914f55279e208bd605360fbb883.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/256c083963cdbcc7b4d70f33c66c0d637a1618c3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/df4f6fa2a2ab067c8c38b0ab5f71f66a8982afed.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d2ce785ee178d914f55279e208bd605360fbb883.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Theorem này rất quan trọng, hữu ích:
@@ -824,9 +824,9 @@
 
 <a id="node-417"></a>
 
-<p align="center"><kbd><img src="assets/a2d53e0b220cf1869f60c4981eef726b4ca4f992.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/95a5327707889fe0394332d364ad3faea818cb63.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a2d53e0b220cf1869f60c4981eef726b4ca4f992.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, phần trước, là ta quan tâm đến điều kiện khi nào thì một
@@ -1201,9 +1201,9 @@
 
 <a id="node-423"></a>
 
-<p align="center"><kbd><img src="assets/8269f23bd843019ff9bdc0fec78795d2134fa599.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/700adb626966bab3002934929a4cd2470c4254a0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8269f23bd843019ff9bdc0fec78795d2134fa599.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là khi dùng Taylor series approximation để estimate mean và
@@ -1436,11 +1436,11 @@
 
 <a id="node-427"></a>
 
+<p align="center"><kbd><img src="assets/7ad2692eaf88e19ac1d1de8d160c79b237926264.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/71fb5dcba11e058fffc5c87a21e1e328bd1dd253.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d80ddb58c67b6226bdb19df201ec5f6ffcf3e742.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7ad2692eaf88e19ac1d1de8d160c79b237926264.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là mở rộng của Δ method theorem.

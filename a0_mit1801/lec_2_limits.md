@@ -5,9 +5,9 @@
 ---
 <a id="node-29"></a>
 
-<p align="center"><kbd><img src="assets/bccea28f4cd114587a3d84c95b215daadab136c9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/77e710e0eaeffc7ebadd6221a981d2dd92fa20d4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bccea28f4cd114587a3d84c95b215daadab136c9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs: tuần trước ta đã học về định nghĩa của derivative: là độ dốc (slope)
@@ -246,9 +246,9 @@
 
 <a id="node-48"></a>
 
-<p align="center"><kbd><img src="assets/44e08c13063562eca5a278f1f582b9bdf44babb8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/673865a75cd0eb403e5564ae9a39062c7d368373.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/44e08c13063562eca5a278f1f582b9bdf44babb8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs nói tiếp về dạng DISCONTINUITY thứ 3 là INFINITE

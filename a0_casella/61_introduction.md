@@ -94,9 +94,9 @@
 
 <a id="node-470"></a>
 
-<p align="center"><kbd><img src="assets/b61c05d755563dc60b7f54f478d71a0d6cfa0d90.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/542d7c198fac02a9a835856ac29f196c53fc130c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b61c05d755563dc60b7f54f478d71a0d6cfa0d90.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì mình sẽ học 3 nguyên lý của data reduction. Mà trong đó ta

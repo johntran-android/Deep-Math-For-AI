@@ -5,9 +5,9 @@
 ---
 <a id="node-1253"></a>
 
-<p align="center"><kbd><img src="assets/25f25bd0d9891605f2591b7b9eecafce36c02eaf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a9eb5b62adf91e8176e7f82df1d61aeac1a9bae8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/25f25bd0d9891605f2591b7b9eecafce36c02eaf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ở đây lại không bị cái vụ lỗi import như ở RNN captioning, cũng như
@@ -38,9 +38,9 @@
 
 <a id="node-1256"></a>
 
-<p align="center"><kbd><img src="assets/efe5ef82229b0c9dee148ed1fa42da393b8677bf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1d3768f18d6428f719b7dffb5d0b6b3b9b805816.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/efe5ef82229b0c9dee148ed1fa42da393b8677bf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > forward tương đối đơn giản, theo mô tả đã rất rõ
@@ -49,6 +49,8 @@
 <br>
 
 <a id="node-1257"></a>
+
+<p align="center"><kbd><img src="assets/11f322313ad34dc68ab3d13bd35ac4d294e7c4b3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b965cacb1ece1751812cc5aeff0e86a9b12e74ab.png" width="100%"></kbd></p>
 
@@ -65,8 +67,6 @@
 <p align="center"><kbd><img src="assets/9512dc78b627b6fb8773bc461c34a9e48c800e85.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/648f30261cc1fb29c0928b46373fb88bf4f04a2e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/11f322313ad34dc68ab3d13bd35ac4d294e7c4b3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > dnext_c input chỉ là 1 nhánh, ct có tham gia tính ht,nên phải có 
@@ -92,9 +92,9 @@
 
 <a id="node-1258"></a>
 
-<p align="center"><kbd><img src="assets/6f63750a822c5bbdd48eeb2737e649e0c7c242f6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7769dc44e519ca4bf109fc032c4f4a330e22f8b8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6f63750a822c5bbdd48eeb2737e649e0c7c242f6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > You should see errors on the
@@ -129,25 +129,25 @@
 
 <a id="node-1262"></a>
 
-<p align="center"><kbd><img src="assets/2cd69f9904a51efc1a6bd0c25d3344efaac07a53.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4c6986302b6ca8f1574f52cdb7194250d362995f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2cd69f9904a51efc1a6bd0c25d3344efaac07a53.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1263"></a>
 
-<p align="center"><kbd><img src="assets/1e78df196745134514a631776282ec6dd0ad6d0b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/73f9ce97898dbb34532224392075f6d77436ef97.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1e78df196745134514a631776282ec6dd0ad6d0b.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1264"></a>
 
-<p align="center"><kbd><img src="assets/41ec0615cbf0099fb9558784361bc1ca15adfc45.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a78496e912c5c76844c1649bb4106b91d8c4e4e8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/41ec0615cbf0099fb9558784361bc1ca15adfc45.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Update thêm case lstm
@@ -166,9 +166,9 @@
 
 <a id="node-1266"></a>
 
-<p align="center"><kbd><img src="assets/534251266806e8c07400efb7a9666f12e1952b8a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8469ffe7fc9405bf78bc546042fecbe8faf78782.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/534251266806e8c07400efb7a9666f12e1952b8a.png" width="100%"></kbd></p>
 
 <br>
 
@@ -180,11 +180,11 @@
 
 <a id="node-1268"></a>
 
+<p align="center"><kbd><img src="assets/4827199345866d5226a6b871375204548dc107e7.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/263aa026d8920e1163ecae8c29db995ce0182920.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ab7f85cc4412e01fc5881b5538d223774153e7f3.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/4827199345866d5226a6b871375204548dc107e7.png" width="100%"></kbd></p>
 
 <br>
 

@@ -199,9 +199,9 @@
 
 <a id="node-469"></a>
 
-<p align="center"><kbd><img src="assets/84d0b6bed5cec27ff2c5fe187d86c60cccc54383.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6b1d55f4c278f5194332e8e88f1fcc09772a8170.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/84d0b6bed5cec27ff2c5fe187d86c60cccc54383.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và đó là exact result. Nếu cần ta có thể có **approx result** ≈ **log n** với n
@@ -337,9 +337,9 @@
 
 <a id="node-475"></a>
 
-<p align="center"><kbd><img src="assets/d34d70b1abfec6641c117255c1056fdf90c1701d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/91231bd0902cfb09c198a57b8e85cc08701d0d46.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d34d70b1abfec6641c117255c1056fdf90c1701d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta qua ví dụ này, cho **X, Y, Z** là các i.i.d **positive** random variable. Bài toán là tìm
@@ -515,9 +515,9 @@
 
 <a id="node-482"></a>
 
-<p align="center"><kbd><img src="assets/d5ee5027e947efc195875193f08a82d820ab590d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/db465dc6e3f11e7e430fb65ae48148b75657459b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d5ee5027e947efc195875193f08a82d820ab590d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nhưng **thậm chí còn có thể làm nhanh hơn nữa** bằng cách **lập luận theo Story** (Story

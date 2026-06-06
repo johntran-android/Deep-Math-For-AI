@@ -23,9 +23,9 @@
 
 <a id="node-11"></a>
 
-<p align="center"><kbd><img src="assets/9e0ebdb704b14c3e564b69b213d123d98a753e04.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fbe50581aee1d558893dfb620ca795b28e696bbf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9e0ebdb704b14c3e564b69b213d123d98a753e04.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ngược lại nếu chỉ có bộ coefficients zero hết mới giúp linearly

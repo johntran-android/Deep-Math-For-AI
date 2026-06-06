@@ -5,9 +5,9 @@
 ---
 <a id="node-4"></a>
 
-<p align="center"><kbd><img src="assets/4a08dbed6eb5b20e9a7a6442b3fe2b1532ccec77.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/56a609453169b8c6bf697d9a941d0eed2208ef64.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4a08dbed6eb5b20e9a7a6442b3fe2b1532ccec77.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là review về khái niệm **sample space**: Chứa **mọi possible outcome
@@ -25,9 +25,9 @@
 
 <a id="node-5"></a>
 
-<p align="center"><kbd><img src="assets/02ccf2149c6446bbfce6749a682af7843fef1bd8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d531f8ed299d10104afaf995f513fdd9305500de.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/02ccf2149c6446bbfce6749a682af7843fef1bd8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo là định nghĩa về **EVENT**, rất quan trọng. Một cách ngắn gọn,
@@ -62,9 +62,9 @@
 
 <a id="node-6"></a>
 
-<p align="center"><kbd><img src="assets/4a0852b67ff538b290ce541a35ac2dd95c1c58c7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0df5b79a074090d9b1bbf5d2228dd78b9eee6f36.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4a0852b67ff538b290ce541a35ac2dd95c1c58c7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một ví dụ về Sample Space chứa 4 possible outcomes là các outcome khi

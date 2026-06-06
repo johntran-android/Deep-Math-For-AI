@@ -874,9 +874,9 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 <a id="node-2348"></a>
 
-<p align="center"><kbd><img src="assets/f63213fab16b89f6d5ee3c94e02560a16e770d0d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9262eeae9603a50c767fa4f56dc3633ed5791306.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f63213fab16b89f6d5ee3c94e02560a16e770d0d.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1270,9 +1270,9 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 <a id="node-2399"></a>
 
-<p align="center"><kbd><img src="assets/c15b3162167d0d84d835ec11b7bbd04b2999e024.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f345d65c0a2c83ec048b73c58819020fd85a553e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c15b3162167d0d84d835ec11b7bbd04b2999e024.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1372,9 +1372,9 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 
 <a id="node-2415"></a>
 
-<p align="center"><kbd><img src="assets/8e77cb382ea326b7563a63733cbb554f773855e2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/858c741c001f4fd4ddc75a002d36ec1808fad3a0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8e77cb382ea326b7563a63733cbb554f773855e2.png" width="100%"></kbd></p>
 
 <br>
 

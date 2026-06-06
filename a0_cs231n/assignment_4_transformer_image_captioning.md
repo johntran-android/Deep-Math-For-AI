@@ -139,9 +139,9 @@
 
 <a id="node-1323"></a>
 
-<p align="center"><kbd><img src="assets/e0ac4e61be3957ab01522f5233523785f12fb90f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2a7007149202fad4752917947dd026cbd19f811e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e0ac4e61be3957ab01522f5233523785f12fb90f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Chú ý, hơi khác bên assignment 4 của cs224n, trong đó mask được
@@ -207,9 +207,9 @@
 
 <a id="node-1328"></a>
 
-<p align="center"><kbd><img src="assets/e9bde966e9a2b93e3ad9c2edb44e2ac8421d4481.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8d46f90e23ec1c1d2520161927c778fb3b5cc64c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e9bde966e9a2b93e3ad9c2edb44e2ac8421d4481.png" width="100%"></kbd></p>
 
 <br>
 
@@ -228,11 +228,11 @@
 
 <a id="node-1330"></a>
 
+<p align="center"><kbd><img src="assets/56af69268123c49d5d6024954373fff3ffef98c7.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d23f38a3574b582422b41a027aaf5fad242abc59.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/25791e0bf918fc84675b87295ff35dbf709cfa51.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/56af69268123c49d5d6024954373fff3ffef98c7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Dùng function
@@ -289,6 +289,8 @@
 
 <a id="node-1334"></a>
 
+<p align="center"><kbd><img src="assets/56082e7e18aaf9b98a1369eccec85fddbc152ef2.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/771d5fea0beb3cfbfc5a3e54107e6e72bcdd31a0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/274d737cb4aef04361bd4d2be65d48a4bd520c52.png" width="100%"></kbd></p>
@@ -298,8 +300,6 @@
 <p align="center"><kbd><img src="assets/2ec18a20e78d89e58428797402c3536919184894.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3ddeeaf421853577a0d186c4653ae800047b1f39.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/56082e7e18aaf9b98a1369eccec85fddbc152ef2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, cái TransformerDecoderLayer module, trong init ta (thấy họ) define các layer như
@@ -382,11 +382,11 @@
 
 <a id="node-1335"></a>
 
+<p align="center"><kbd><img src="assets/b1a1d68c986cd5e896ec04b659f46d5a15cc7d01.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/766cff9721efd2aad2ce0572e0200907381e29e3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bd4f83c5c2b8b904412a09ca3174a5c41a760b2c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b1a1d68c986cd5e896ec04b659f46d5a15cc7d01.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > giờ ta sẽ hoàn thiện function forward. Vậy trước tiên cần suy nghĩ một
@@ -443,9 +443,9 @@
 
 <a id="node-1336"></a>
 
-<p align="center"><kbd><img src="assets/1666556a7559c5ee68794293eda79375ef006cb8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/80ec076f2aeb55feb174f4f0743bbdb873a1edb0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1666556a7559c5ee68794293eda79375ef006cb8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đây, nếu đúng thật sự là Image Captioning dùng transformers thì ta cần
@@ -482,9 +482,9 @@
 
 <a id="node-1337"></a>
 
-<p align="center"><kbd><img src="assets/a0f8b7a082056de7ab74ce53b8569a8270581d5c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6815c0717752e5009bd4f61a4cce6d450ac1f349.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a0f8b7a082056de7ab74ce53b8569a8270581d5c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > kết quả ra đúng cho thấy đúng là ý đồ của
@@ -497,9 +497,9 @@
 
 <a id="node-1338"></a>
 
-<p align="center"><kbd><img src="assets/cbb777e2cd5c5cf2d0853d16662655d6b0c3dba8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fe05cf39b03cc9b0551a7ea995135e64c3833dfc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cbb777e2cd5c5cf2d0853d16662655d6b0c3dba8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > You should see a final loss

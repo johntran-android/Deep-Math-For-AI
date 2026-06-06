@@ -356,9 +356,9 @@
 
 <a id="node-1225"></a>
 
-<p align="center"><kbd><img src="assets/b6c64f2360c950c4ed59a9266e6b98b5387e40f0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0836532f0ac4702a11cc730778b94e63f3f1f09b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b6c64f2360c950c4ed59a9266e6b98b5387e40f0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ổng thử dùng tính năng **inspector** của web
@@ -758,9 +758,9 @@
 
 <a id="node-1262"></a>
 
-<p align="center"><kbd><img src="assets/632065fbba617654690d181b9ea9553f36294187.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0386273509ccca7fd804ac4928f3b27723ae3851.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/632065fbba617654690d181b9ea9553f36294187.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ h1, h2...h6 giúp tạo các heading - tiêu đề
@@ -769,9 +769,9 @@
 
 <a id="node-1263"></a>
 
-<p align="center"><kbd><img src="assets/a8cb5a880a4e58772a6e3bafc34dd2322b658694.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/65041af6211cefe634d9404a0ba106963d2f2047.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a8cb5a880a4e58772a6e3bafc34dd2322b658694.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **Muốn dạng list** thì dùng **<ul>**
@@ -842,9 +842,9 @@
 
 <a id="node-1272"></a>
 
-<p align="center"><kbd><img src="assets/898213341cfaf488a7969af47698d67bf112b663.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/47c9652bccdd107d4399c14371a938789302dd88.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/898213341cfaf488a7969af47698d67bf112b663.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái nói qua **link tag, giúp link các page với nhau**
@@ -880,9 +880,9 @@
 
 <a id="node-1276"></a>
 
-<p align="center"><kbd><img src="assets/823c95ee9d403f5af56e2c503f4bc8c942d00e57.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3dba24051f938053b600baf33e68d16b1e9bc6aa.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/823c95ee9d403f5af56e2c503f4bc8c942d00e57.png" width="100%"></kbd></p>
 
 <br>
 
@@ -898,9 +898,9 @@
 
 <a id="node-1278"></a>
 
-<p align="center"><kbd><img src="assets/e917a25da46c1312ea80f1d494b48b8bfcefe80c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/90dcf9cfe40800d90298c25f5cf268e8c82fb191.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e917a25da46c1312ea80f1d494b48b8bfcefe80c.png" width="100%"></kbd></p>
 
 <br>
 
@@ -921,9 +921,9 @@
 
 <a id="node-1281"></a>
 
-<p align="center"><kbd><img src="assets/d382c484c50bcd825927ba4989982772f80ddffe.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bf2cb3176ed3b97f4b334766ddead91648918e6d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d382c484c50bcd825927ba4989982772f80ddffe.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, nếu thích thì có thể đổi **Submit** thành **Google Search** 
@@ -934,9 +934,9 @@
 
 <a id="node-1282"></a>
 
-<p align="center"><kbd><img src="assets/834cf648fbb5fa3de0f52b0537e58c6c6f11503d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/66f3d41adb6f0d5971f2b0b97a34c9011bef3c03.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/834cf648fbb5fa3de0f52b0537e58c6c6f11503d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và có thể **thêm các attribute** như **autocomplete** **= "
@@ -1062,9 +1062,9 @@
 
 <a id="node-1294"></a>
 
-<p align="center"><kbd><img src="assets/32ece5fd67f6d86d7afb781f5290644a8594e118.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7a96d841353739e09513bb740cc06bf0a4ff193a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/32ece5fd67f6d86d7afb781f5290644a8594e118.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ok, start lại với simple
@@ -1074,9 +1074,9 @@
 
 <a id="node-1295"></a>
 
-<p align="center"><kbd><img src="assets/2b5ed11310a041e51dc99388ce30f4773b7d3040.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2046e676f5e2e4019a2c8daef1851e15942daf22.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2b5ed11310a041e51dc99388ce30f4773b7d3040.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp để **bắt đầu "styling"** cho nó. Ổng bắt đầu với kiểu này
@@ -1092,9 +1092,9 @@
 
 <a id="node-1296"></a>
 
-<p align="center"><kbd><img src="assets/a22456d28ccf2b11f1cdf960a5bbb078ad747f9b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8c8776836324542d78dbf8e6ddbbbc535454ecec.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a22456d28ccf2b11f1cdf960a5bbb078ad747f9b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Define thêm style
@@ -1104,9 +1104,9 @@
 
 <a id="node-1297"></a>
 
-<p align="center"><kbd><img src="assets/41186bf523c60277699c9cebdfb8729d8676f69f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/21537e0957fac35c11829c8b82a966f38fbf1319.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/41186bf523c60277699c9cebdfb8729d8676f69f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, để làm cái **kí hiệu copy right** đúng hơn thì dùng cái
@@ -1123,9 +1123,9 @@
 
 <a id="node-1298"></a>
 
-<p align="center"><kbd><img src="assets/00e0f5d1c46ad61d75b49aa21cd5a31f4a08b8f2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/86e3c9cf35d0a0500fd3527bd1e0e166e9912792.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/00e0f5d1c46ad61d75b49aa21cd5a31f4a08b8f2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **Correct**. Do đó ta có thể làm vầ, giới thiệu thêm
@@ -1168,11 +1168,11 @@
 
 <a id="node-1301"></a>
 
+<p align="center"><kbd><img src="assets/6ee5ab4cbc81b59cf5bcd16c7ade56bebd6abd53.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/297763c9419a1275e14bcff03b3dfb77ad0f52e2.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/00e0f5d1c46ad61d75b49aa21cd5a31f4a08b8f2.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/6ee5ab4cbc81b59cf5bcd16c7ade56bebd6abd53.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Do đó có thể làm thế này: **define style tag ở trên
@@ -1211,9 +1211,9 @@
 
 <a id="node-1304"></a>
 
-<p align="center"><kbd><img src="assets/8e1b6be79e257558bc7d0c44cc037b5571b41f0f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a7053802956426cc825788a50a5f2f93cc3ddf5b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8e1b6be79e257558bc7d0c44cc037b5571b41f0f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Làm thêm một cái nữa đó là **tách bạch hai file css và 
@@ -1347,9 +1347,9 @@
 
 <a id="node-1316"></a>
 
-<p align="center"><kbd><img src="assets/7be5bf79cd180dfc9e990081f406cbcf36dbb2cb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6533bae9201df3c86d19a197b02448aea9c45ec1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7be5bf79cd180dfc9e990081f406cbcf36dbb2cb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Xong, quay lại cái page này, thử làm cái gọi là thay
@@ -1371,9 +1371,9 @@
 
 <a id="node-1318"></a>
 
-<p align="center"><kbd><img src="assets/4e47d59d6e134d2a9f4539496b3cfb02260270be.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/72c2952b5bc073008a28e78fb9602c73ed8bd5b9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4e47d59d6e134d2a9f4539496b3cfb02260270be.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế là ta có thể dùng **onsubmit** = greet() như vầy,
@@ -1456,9 +1456,9 @@
 
 <a id="node-1324"></a>
 
-<p align="center"><kbd><img src="assets/b71df1d8ecb201f518cef7cd7aa3245fb36fb10c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93f8c84944c17ae934b9992fb689b82a208fe25a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b71df1d8ecb201f518cef7cd7aa3245fb36fb10c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì ổng nói vấn đề là giống như ta **từng gặp trong C,** đó
@@ -1471,9 +1471,9 @@
 
 <a id="node-1325"></a>
 
-<p align="center"><kbd><img src="assets/8b0c69e6351874e91e2a666e144c86d3ef84e9d2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/25cbdbffe9be678718fbc88b75f9de57e6f270ae.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8b0c69e6351874e91e2a666e144c86d3ef84e9d2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì giải pháp hay hơn đó là **bỏ nó vào một cái event 
@@ -1485,9 +1485,9 @@
 
 <a id="node-1326"></a>
 
-<p align="center"><kbd><img src="assets/cebbf4f2b83e59de6bc5986ea078c7fd8d24d01c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/95721844fd74267adde446269899876aa6915ed2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cebbf4f2b83e59de6bc5986ea078c7fd8d24d01c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp làm động tác **tương tự với css đó là
@@ -1512,9 +1512,9 @@
 
 <a id="node-1328"></a>
 
-<p align="center"><kbd><img src="assets/7a17bae63e2b2a16dd9f318f11836b352cf58e16.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/86bee6e0a778a3deaaecc9f15abdfe5c2a6b3952.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7a17bae63e2b2a16dd9f318f11836b352cf58e16.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cũng dễ hiểu, vài ghi chú thôi
@@ -1543,9 +1543,9 @@
 
 <a id="node-1330"></a>
 
-<p align="center"><kbd><img src="assets/f54c2953f580c00a1fdd3f763bce4a7de7e8de8c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/91bdb059f6e78c6585ff63a62d3c094d14242e6e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f54c2953f580c00a1fdd3f763bce4a7de7e8de8c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì đại khái cũng như **nhờ bootstrap** **làm đẹp thêm cho 
@@ -1576,9 +1576,9 @@
 
 <a id="node-1333"></a>
 
-<p align="center"><kbd><img src="assets/c4982f7f8fc36466b359e1fd64ab511dca76e8d1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ff19c62a47bcf9b2c9befb80ebd3ec8e815ccf12.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c4982f7f8fc36466b359e1fd64ab511dca76e8d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cũng đơn giản. Chỉ là **add event listener** và **set value
@@ -1592,9 +1592,9 @@
 
 <a id="node-1334"></a>
 
-<p align="center"><kbd><img src="assets/e30ef1ccacbf01b1fcb19b916828c3363fb993cd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7e98f530df79f0f72ec72cf806c09d739fed84fb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e30ef1ccacbf01b1fcb19b916828c3363fb993cd.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ổng show một ví dụ khác trong đó chữ **hello, world** cứ 
@@ -1638,9 +1638,9 @@
 
 <a id="node-1337"></a>
 
-<p align="center"><kbd><img src="assets/f864cdee5fa9bd7a4bf04cedf26df8d4326d6346.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e4c03bf30262c0118921e093c47c04e3f3998348.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f864cdee5fa9bd7a4bf04cedf26df8d4326d6346.png" width="100%"></kbd></p>
 
 <br>
 

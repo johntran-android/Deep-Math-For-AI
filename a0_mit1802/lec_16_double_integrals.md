@@ -59,9 +59,9 @@
 
 <a id="node-365"></a>
 
-<p align="center"><kbd><img src="assets/d21865e8d6f08bc27d678d120643a8bb217929d5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/99994a8c751f808d0c81e3de22a1cf4c10496a02.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d21865e8d6f08bc27d678d120643a8bb217929d5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Định nghĩa của double integrals: Ta sẽ **chia Area R thành các vùng nhỏ
@@ -249,9 +249,9 @@
 
 <a id="node-376"></a>
 
-<p align="center"><kbd><img src="assets/999569a0c19dea581b33b885e35a662e2129c016.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2757f15aec33d380d47129fe2c36d99a05c8ec5c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/999569a0c19dea581b33b885e35a662e2129c016.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tính cái **inner integra**l: tích phân từ 0 đến 1 (1-x^2 - y^2) dy đơn giản  là làm theo việc tính

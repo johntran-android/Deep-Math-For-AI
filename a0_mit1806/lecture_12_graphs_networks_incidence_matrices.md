@@ -385,9 +385,9 @@
 
 <a id="node-347"></a>
 
-<p align="center"><kbd><img src="assets/f8f5e54eb896708ab6d6d6cee22488eec44dfd78.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b1b82b33b69589638c568a408cb54b8a1c49b815.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f8f5e54eb896708ab6d6d6cee22488eec44dfd78.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, triển khai A.Ty = 0 ra (nhân y vô, để ta có equation

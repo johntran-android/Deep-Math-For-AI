@@ -278,9 +278,9 @@
 
 <a id="node-923"></a>
 
-<p align="center"><kbd><img src="assets/cedd5dba671e3722f551a2ea26365f299fb22a73.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/90567ca00a8abeccc26446ed65774edeb2e0d611.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cedd5dba671e3722f551a2ea26365f299fb22a73.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì: 

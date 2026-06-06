@@ -309,9 +309,9 @@
 
 <a id="node-1001"></a>
 
-<p align="center"><kbd><img src="assets/0abcb3618a479c710519e85ee158ef2e2e8ac0be.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/01bc24d431e38b03acb42ef043c2663cf2f5ab99.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0abcb3618a479c710519e85ee158ef2e2e8ac0be.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là người ta thử nghiệm vầy, đó là dùng một câu bình thường mà
@@ -495,9 +495,9 @@
 
 <a id="node-1010"></a>
 
-<p align="center"><kbd><img src="assets/d021bc574fbd4781b7042fe9f414501b6319d95b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2dfb637365dfffae46a721d91772f612aaf2cc10.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d021bc574fbd4781b7042fe9f414501b6319d95b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > hiểu đại khái là language model (thông qua một số cách thức để xem xét)

@@ -32,9 +32,9 @@
 
 <a id="node-607"></a>
 
-<p align="center"><kbd><img src="assets/666a05d93e3f8eaefbdc46140b86d9478a3ad349.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9e6cefb93700c945937e4729d49058d9c2775692.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/666a05d93e3f8eaefbdc46140b86d9478a3ad349.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > === Embedding & Conv1D
@@ -171,11 +171,11 @@
 
 <a id="node-610"></a>
 
+<p align="center"><kbd><img src="assets/274561eabdc858a271db4d7a589c4c7e498ba02d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/71e46d1a48ea581ce91ee3ad99fb9f00db69ba18.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/765678275dd1c074f3f03710db722fc25b35a47d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/274561eabdc858a271db4d7a589c4c7e498ba02d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Function torch.nn.utils.rnn. pad_sequence sẽ pad các sequence
@@ -185,9 +185,9 @@
 
 <a id="node-611"></a>
 
-<p align="center"><kbd><img src="assets/3e72dd3e69d0ce0f58a1e91ce76994398c88a140.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/eb3cc495d07e0123e19a34d95fe3429187146e4b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3e72dd3e69d0ce0f58a1e91ce76994398c88a140.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Hiểu về Embedding layer:
@@ -218,9 +218,9 @@
 
 <a id="node-612"></a>
 
-<p align="center"><kbd><img src="assets/2e7d39553a1ec582e3c1367986a1195db549c8b0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0db70daa62ff1833421765008c00b293ab0df3cd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2e7d39553a1ec582e3c1367986a1195db549c8b0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Câu b yêu cầu ta sẽ implement __init__() function để initialize source embeddings và target
@@ -242,13 +242,13 @@
 
 <a id="node-613"></a>
 
+<p align="center"><kbd><img src="assets/d091f7118344bd396de05f661bd96df934ae0e0e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/c38867cee3317f1090d98e66ffff89b3bce27d90.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/527e2dff3cec22c72ee7a4b661c21a5088a8e9df.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d821da642a95f4e546b4e5ad4e7f7c2653065fea.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d091f7118344bd396de05f661bd96df934ae0e0e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **post_embed_cnn** sẽ là Conv1D layer, như mô tả, sẽ giúp convol một
@@ -318,13 +318,13 @@
 
 <a id="node-614"></a>
 
+<p align="center"><kbd><img src="assets/25802117646a58a34876761f0ce355d3963e070a.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d2f64c83982a30ac52b0b322aaf9392f71207256.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1047536808802a5c772603e7a20504eaef1ff6f3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5ec85ae1b431f41a254dab88eb0ad49e40cd55dc.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/25802117646a58a34876761f0ce355d3963e070a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ==== Embedding
@@ -395,6 +395,8 @@
 
 <a id="node-615"></a>
 
+<p align="center"><kbd><img src="assets/9033f7ffab99576d7d8bffef7d50cbcff5999912.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/91121d40525a095bcec8191ed85ed1329acf78bc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fd37a489b770d39bdefd0abb495f782199d23c5d.png" width="100%"></kbd></p>
@@ -402,8 +404,6 @@
 <p align="center"><kbd><img src="assets/48cf2f3cf9117b57ec3170eb14895fec8fb2e2c6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1a4e2493e48970995d51066dc9e23ef7454e8a35.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/9033f7ffab99576d7d8bffef7d50cbcff5999912.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, nhiệm vụ là decode function. Nó sẽ construct y_bar và chạy một step function trên mọi time-step
@@ -516,6 +516,8 @@
 
 <a id="node-616"></a>
 
+<p align="center"><kbd><img src="assets/ed5f2a1ccfe2deb8eed623ee8208f956f0122f7f.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d841c72840907480624fb9ef43e5555cf69e0a35.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0fd04b51b05fbc08b9c934640268758dbcc689ba.png" width="100%"></kbd></p>
@@ -529,8 +531,6 @@
 <p align="center"><kbd><img src="assets/f590a228efd82f40b4f42f75b5c25676a2db94ba.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9155a77a72a88aa164deaddae1d68ff56d55b424.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ed5f2a1ccfe2deb8eed623ee8208f956f0122f7f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ok, đây là function sẽ thực hiện một bước tính toán của LSTM Cell thông thường: nhận input tại
@@ -608,9 +608,9 @@
 
 <a id="node-617"></a>
 
-<p align="center"><kbd><img src="assets/93d7e9084958595bfcd0da2fa10fa7df5f6ab664.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/75ebdd1d6705851405baaaad68ab68acadc14ffc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/93d7e9084958595bfcd0da2fa10fa7df5f6ab664.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là người ta hỏi trong step(), có một dòng người làm "giùm" đó là apply cái encoder mask "vào" attention score
@@ -647,11 +647,11 @@
 
 <a id="node-619"></a>
 
+<p align="center"><kbd><img src="assets/d9ff6d58e41f44e4dcafdbc0b626be64f7fa6a51.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/335313d4cbd8cdbd37b2016e5a824378dc222f37.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ac53bb689e07830c3e2cbea42c47e36b1a8ff811.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d9ff6d58e41f44e4dcafdbc0b626be64f7fa6a51.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Kết quả sau khi sửa lại cái vụ pass o_t và h_t, c_t (lỗi quá stupid) vào

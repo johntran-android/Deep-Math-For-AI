@@ -99,11 +99,11 @@
 
 <a id="node-287"></a>
 
+<p align="center"><kbd><img src="assets/097efd42897e4dbe6c6c9b2fd742d3fb8defaaae.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/1c14faf5018a942f03fb1e813ce53cc77999884e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4090284d6979ec289767b1b0b7d71bc3ce0f5aff.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/097efd42897e4dbe6c6c9b2fd742d3fb8defaaae.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tác dụng sẽ giúp kết quả của việc ước lượng coefficient

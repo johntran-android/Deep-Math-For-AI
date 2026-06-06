@@ -153,9 +153,9 @@
 
 <a id="node-374"></a>
 
-<p align="center"><kbd><img src="assets/147256288bf997f44550ad8b9526a04f30bde65b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/66bfae2c3da555aab8ba04092010a6d737b15f61.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/147256288bf997f44550ad8b9526a04f30bde65b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > và đương nhiên ta có thể nhân [O -U] ở dưới cho -1 để nó
@@ -444,9 +444,9 @@
 
 <a id="node-388"></a>
 
-<p align="center"><kbd><img src="assets/f41e46a58a3f7b78b6744b1659f8cb309db71c05.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/68f474fa025cda4d03ab7d0978249245a20c9ea8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f41e46a58a3f7b78b6744b1659f8cb309db71c05.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp: cho matrix A nxn, có các cols independent Câu

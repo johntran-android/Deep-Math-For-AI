@@ -79,11 +79,11 @@
 
 <a id="node-325"></a>
 
+<p align="center"><kbd><img src="assets/eab60a46bab5829192cc1d08f29c76134075552e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/41de6a14a16180f320bee0986822b9e8b8447aab.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/96c9cc66791062f05fd383731dee9e8c45c702d1.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/eab60a46bab5829192cc1d08f29c76134075552e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Từ định nghĩa đó, ta có joint pdf/pmf của X1, X2, ....Xn sẽ  là:
@@ -256,9 +256,9 @@
 
 <a id="node-328"></a>
 
-<p align="center"><kbd><img src="assets/2cc29a9a02a22bcfcf5359ae1fc4ee7786d4b950.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/883a62042f29cd1312de1a4b9e075dcd08d81878.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2cc29a9a02a22bcfcf5359ae1fc4ee7786d4b950.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nhắc lại cho ta lần nữa rằng ví dụ vừa rồi minh họa cho ta thấy rằng pdf

@@ -318,9 +318,9 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 <a id="node-887"></a>
 
-<p align="center"><kbd><img src="assets/71025f672f9dab667d2fc8c9054ad533b14ade29.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/48faef0a34c25a3a392d9f78ca46cf00dfad3a1b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/71025f672f9dab667d2fc8c9054ad533b14ade29.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ở đây nó cũng normalize Theo kiểu tương tự 
@@ -435,9 +435,9 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 <a id="node-896"></a>
 
-<p align="center"><kbd><img src="assets/60e5295aca78b17a148bd12afd441e064bd7ce9e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5ff4284d724dfaee79c230e67a92c6838bbad308.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/60e5295aca78b17a148bd12afd441e064bd7ce9e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > "So from the perspective of the third hidden layer, these hidden unit
@@ -857,9 +857,9 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 <a id="node-947"></a>
 
-<p align="center"><kbd><img src="assets/3ff430888f386d6acceddf8ba33d4180806db6d1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a5969ed2b9543280c485e7ddbcd1a64608118075.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3ff430888f386d6acceddf8ba33d4180806db6d1.png" width="100%"></kbd></p>
 
 <br>
 
@@ -983,9 +983,9 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 <a id="node-965"></a>
 
-<p align="center"><kbd><img src="assets/7abc8f6d18432a302d897d436721b8978f817a24.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ae154354de5e7d3bc324dabcb53ca385addcc360.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7abc8f6d18432a302d897d436721b8978f817a24.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Argument -1 có nghĩa là để nó tự chuyển thành 1D vector size bằng

@@ -178,9 +178,9 @@
 
 <a id="node-51"></a>
 
-<p align="center"><kbd><img src="assets/f45fd479d3b47465930348c27868ea092d9cb1b2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8caa97ac3598b050ef11c0b689dd9e11a0dbdb2f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f45fd479d3b47465930348c27868ea092d9cb1b2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này trong sách có bổ sung về việc có **hai cách interpret khái niệm

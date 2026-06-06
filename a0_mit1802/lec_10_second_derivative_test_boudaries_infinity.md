@@ -200,9 +200,9 @@
 
 <a id="node-209"></a>
 
-<p align="center"><kbd><img src="assets/9ca798b5013ec77d6fb62f75c7b88eb8f7e4cf2f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3c7ebdb89f0c9b89a3ac1b34462a0486083127f6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9ca798b5013ec77d6fb62f75c7b88eb8f7e4cf2f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo, gs nói về việc **b^2 - 4ac trông giống quadratic formula** (khi

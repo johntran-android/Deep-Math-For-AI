@@ -1051,9 +1051,9 @@
 
 <a id="node-111"></a>
 
-<p align="center"><kbd><img src="assets/d2232907266da2fd01ae7fa1f18f5d7d8e769d68.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1d54c5600af461255f52a5a579ca77865346c585.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d2232907266da2fd01ae7fa1f18f5d7d8e769d68.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ý là với Scratch ta có thể build game, app như game này.
@@ -1065,9 +1065,9 @@
 
 <a id="node-112"></a>
 
-<p align="center"><kbd><img src="assets/d6482e4c571d239ecb75f25828dd90d977f3f492.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e6aa5f9337e9a9b7543490dc3354ba6efa34a19f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d6482e4c571d239ecb75f25828dd90d977f3f492.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ổng nói về cái game do ổng viết hồi xưa, trong đó

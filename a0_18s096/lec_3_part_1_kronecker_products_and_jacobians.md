@@ -145,9 +145,9 @@
 
 <a id="node-70"></a>
 
-<p align="center"><kbd><img src="assets/87ddc9c267477a6290dc71f7269bd34f6bce0cdc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6ea954b38b7d84d2b76f81777432e0a4a5149a85.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/87ddc9c267477a6290dc71f7269bd34f6bce0cdc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này đại khái là gs define một matrix M 2x2 có giá trị (thay vì symbolic p q r s

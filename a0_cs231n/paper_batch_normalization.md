@@ -72,9 +72,9 @@
 
 <a id="node-838"></a>
 
-<p align="center"><kbd><img src="assets/c705b489f2b2e2e3fa4cb19e5fdea68dbbabaec6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fb03c2e79bc5ee3d362216270f1714e5b892603e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c705b489f2b2e2e3fa4cb19e5fdea68dbbabaec6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > việc này cũng **hữu ích khi xét input vào một layer có output
@@ -158,9 +158,9 @@
 
 <a id="node-842"></a>
 
-<p align="center"><kbd><img src="assets/93461635188970610bf418ed3daa3290e290662d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/41905dad0961385a1b092751d09879f75694bb9d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/93461635188970610bf418ed3daa3290e290662d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Có thể hiểu là vấn đề trên xảy ra là do khi tính
@@ -245,9 +245,9 @@
 
 <a id="node-846"></a>
 
-<p align="center"><kbd><img src="assets/efc7a3a46f59b972249e9a41b27b69a9ab1421a7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/aa92fe5573fe4010b3d7d2990bb005847d345424.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/efc7a3a46f59b972249e9a41b27b69a9ab1421a7.png" width="100%"></kbd></p>
 
 <br>
 
@@ -297,9 +297,9 @@
 
 <a id="node-852"></a>
 
-<p align="center"><kbd><img src="assets/618ff732f86451465a702fe512049374eeb0d269.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/820077aff354f1ad3e0289f5b899fb6db75473f8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/618ff732f86451465a702fe512049374eeb0d269.png" width="100%"></kbd></p>
 
 <br>
 
@@ -311,13 +311,13 @@
 
 <a id="node-854"></a>
 
+<p align="center"><kbd><img src="assets/216d31f9407c76e354ef02efa2f2813c177db831.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/9277e108ed6f15f63b3d1a16d0d4b3bea9441ea0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1714f04fc7be73d7f4a48170947b020d52db1faf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7472a04a11300b76ef255054e46898e0e8aaaddf.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/216d31f9407c76e354ef02efa2f2813c177db831.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là, tóm lại để thực thi BN, ta sẽ 'làm' với các batch of
@@ -348,9 +348,9 @@
 
 <a id="node-855"></a>
 
-<p align="center"><kbd><img src="assets/29e0ccd18a8d0805c65c0c1a90e79706a2c65ce6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4a5055d4e0be5747105fbd253842273bd4c38fb9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/29e0ccd18a8d0805c65c0c1a90e79706a2c65ce6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ở đây đại ý là nói rằng trong batch normalization, ta sẽ
@@ -394,9 +394,9 @@
 
 <a id="node-856"></a>
 
-<p align="center"><kbd><img src="assets/87e13d3a1da8906437b598d426c0200aeb91c742.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/006bbfc7737fd9b04b3dc47dc15ac9eb9ca7f3c8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/87e13d3a1da8906437b598d426c0200aeb91c742.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy với conv layer, đại khái là ở đây người ta nói: nhiều element khác

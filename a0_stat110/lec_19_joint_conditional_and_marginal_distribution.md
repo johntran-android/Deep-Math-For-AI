@@ -287,9 +287,9 @@
 
 <a id="node-619"></a>
 
-<p align="center"><kbd><img src="assets/a558833fccceec497018879d50e50293e205ba1c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/49b06c9d1a7430325fc6c46095465d589ff4c6cf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a558833fccceec497018879d50e50293e205ba1c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và tích phân này thì cũng dễ, **tích phân của constant** bằng **constant *
@@ -774,9 +774,9 @@
 
 <a id="node-641"></a>
 
-<p align="center"><kbd><img src="assets/febef6cc9f6fe04e5c9c56509029890941bb13a3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4caad4dda03e7b725f4238b42b586961a1c62d4b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/febef6cc9f6fe04e5c9c56509029890941bb13a3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, như đã nói, **với việc biết giá trị cụ thể n (= i+j)** **của N**, thì **X** với ý nghĩa là số **trial success** trong

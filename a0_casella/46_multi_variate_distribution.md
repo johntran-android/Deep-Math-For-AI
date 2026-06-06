@@ -187,9 +187,9 @@
 
 <a id="node-301"></a>
 
-<p align="center"><kbd><img src="assets/ba48f4ad0ac5140aee713141ee5e5f3474ad84a6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/725da76d6f3f0b40f1f748bc8ea10c2769594f8d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ba48f4ad0ac5140aee713141ee5e5f3474ad84a6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua ví dụ này, họ cho một joint pdf của **X** = (X1, X2, X3, X4)
@@ -376,9 +376,9 @@
 
 <a id="node-307"></a>
 
-<p align="center"><kbd><img src="assets/bf63189e9f80b2f1f82a667afc1635ba3f05eb19.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0c6d40ae317af5447547fb9c88612491af7c201d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bf63189e9f80b2f1f82a667afc1635ba3f05eb19.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì gặp lại một kiến thức đã học trong Stat110: Đó là, nếu như đang
@@ -566,9 +566,9 @@
 
 <a id="node-314"></a>
 
-<p align="center"><kbd><img src="assets/035b5d86e65d264f649c69a08bcf52b796847382.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fb1be4dd352cec1b2f711bddae21ba1ab65d0ade.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/035b5d86e65d264f649c69a08bcf52b796847382.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta có thể khái quát hơn nữa: thay vì xét Z = Σi Xi ta sẽ xét 
@@ -674,9 +674,9 @@
 
 <a id="node-317"></a>
 
-<p align="center"><kbd><img src="assets/a2d7a11688e45e5f7e7f2890e7b841eaefeefdda.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/39832519a320c28fb8aa890759968ceb27bcab46.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a2d7a11688e45e5f7e7f2890e7b841eaefeefdda.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cái này y như (khái quát) của 4.3.6 là nếu mapping từ A_curly → B_curly ko
@@ -717,9 +717,9 @@
 
 <a id="node-318"></a>
 
-<p align="center"><kbd><img src="assets/d635aeac3ad74d5151bf7f18dab170ef071747ee.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cb376bf2295455edf702dee8c2a71825e3487e3e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d635aeac3ad74d5151bf7f18dab170ef071747ee.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Áp dụng vô ví dụ này

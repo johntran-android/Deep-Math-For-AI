@@ -505,9 +505,9 @@
 
 <a id="node-283"></a>
 
-<p align="center"><kbd><img src="assets/256e890dace40e2e0db20999a4e492b8d5568a0e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8bd72a2279d48a297d2267558864b9f4cc7fb6c3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/256e890dace40e2e0db20999a4e492b8d5568a0e.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  Tiếp tục về CDF: Định nghĩa của CDF  Bước nhảy của CDFD là giá trị PMF tại đó  Tính chất của CDF: 1) Non decreasing, 2) right continuous và   3) F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity  - Định nghĩa Independent random variables theo independent event:  X, Y độc lập khi  + Continuous rv: P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y   + Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)  - Expected value: Là con số tóm tắt distribution của r.v  - Hai cách tính average  - E(X) = Σx x*P(X=x)  - X ~ Bern(p) thì E(X) = p  - FUNDAMENTAL BRIDGE: E(X) = P(A), X là indicator rv mang giá trị = 1 khi event A xảy ra và 0 khi ngược lại  - X ~ Bin(n, p):  E(X) = ∑ k=0,1..n [ k * (n choose k)*p^k*q^(n-k)] = ..= np  - TÍNH LINEARITY CỦA AVERAGE  - Tính lại E(X) của Bin(n, p) nhanh hơn bằng linearity, fundamental bridge và E(X) của Bern(p)  - TÍnh E(X) của Hypergeometric Dù các trial không độc lập nhưng dùng Symmetry, linearity, fundamental bridge vẫn tính được  - X ~ Geom(p): P(X=k) = q^k*p  - E(X) = p Σ k=0:infinity [k * q^k]](tóm_tắt_tiếp_tục_về_cdf_định_nghĩa_của_cdf_bước_nhảy_của_cdfd_là_giá_trị_pmf_tại_đó_tính_chất_của_cd.md#node-262)
 
@@ -600,9 +600,9 @@
 
 <a id="node-286"></a>
 
-<p align="center"><kbd><img src="assets/0f393ab91b7b63edc9c9254c76d99a457d2fecfe.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ab5b8cc2978fc2342f5d62e25c9593d59ff1118b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0f393ab91b7b63edc9c9254c76d99a457d2fecfe.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs: Rất dễ để **convert giữa hai kiểu convention** này. Nên gs lấy bài toán này: X ~ FS(p) có nghĩa là, cũng thực
@@ -646,9 +646,9 @@
 
 <a id="node-289"></a>
 
-<p align="center"><kbd><img src="assets/36c3407b8edf299e2c7fb8a70e7bb26a09abb157.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/60b5f50f0969058601ec8cab63c1672917438816.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/36c3407b8edf299e2c7fb8a70e7bb26a09abb157.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ta sẽ biết vể **Putnam problem**. Cho **n integer**, **n lớn hơn 1**. Và xét trong **tất cả các permutation của các
@@ -664,9 +664,9 @@
 
 <a id="node-290"></a>
 
-<p align="center"><kbd><img src="assets/82048b7f47507d1c1c75608b5e53890bdc318b75.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93a0b8755174c07afabc5713b082b2567e2dd1df.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/82048b7f47507d1c1c75608b5e53890bdc318b75.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên, ta sẽ define **I_j là indicator random variable** của event [**position thứ j là một local maxima**] (như đã
@@ -889,9 +889,9 @@
 
 <a id="node-301"></a>
 
-<p align="center"><kbd><img src="assets/9980c436c02b14c6c2f871131f73b91075c7fbca.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/744d8147ff0be86fa4333e73957627886c7c5eb3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9980c436c02b14c6c2f871131f73b91075c7fbca.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và như vậy ta có E(Y) = Tổng k=1:infinity [2^k * 1/(2^k)] = Tổng k=1:infinity [1] = 1+1+....1

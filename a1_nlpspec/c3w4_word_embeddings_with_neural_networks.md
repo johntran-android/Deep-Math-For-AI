@@ -546,9 +546,9 @@ Learning Objectives
 
 <a id="node-1630"></a>
 
-<p align="center"><kbd><img src="assets/8c48105c7072ddcad8c9ffaa2a18bc0af6c60c82.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c42a678387fa15cbec041ef372b7a35010d5f869.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c48105c7072ddcad8c9ffaa2a18bc0af6c60c82.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nhớ lại Word2vec nó chỉ có 1 dense layer
@@ -1149,9 +1149,9 @@ Learning Objectives
 
 <a id="node-1679"></a>
 
-<p align="center"><kbd><img src="assets/985f7191eb851e2061f344216d84b03adff30bd9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/62790490c0ab6d5012500788d1edc55a09fec52f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/985f7191eb851e2061f344216d84b03adff30bd9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Khi có thể **biết index của từ** là bao nhiêu rồi thì **tạo
@@ -1553,9 +1553,9 @@ Learning Objectives
 
 <a id="node-1711"></a>
 
-<p align="center"><kbd><img src="assets/c84a47c698c0eddff2095fa92a5e22913b7e0482.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4259b6bb6994868338610a4e5f8195973a15ef40.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c84a47c698c0eddff2095fa92a5e22913b7e0482.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Notice that using numpy's random.rand function returns a numpy
@@ -1810,9 +1810,9 @@ Learning Objectives
 
 <a id="node-1727"></a>
 
-<p align="center"><kbd><img src="assets/1235f8a4b84eb8f75a0aa6d902d1a881136ea678.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/039d168e7969900c7a1789a4c61adde135650b5f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1235f8a4b84eb8f75a0aa6d902d1a881136ea678.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì đại khái là **giá trị của loss** cuối cùng bằng / hoá ra bằng **-log của
@@ -1835,9 +1835,9 @@ Learning Objectives
 
 <a id="node-1728"></a>
 
-<p align="center"><kbd><img src="assets/cf06ed7fd7775829c006039587eed26741056f24.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d1588fb284d9ad75df07b2048b7df72c6b329d54.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cf06ed7fd7775829c006039587eed26741056f24.png" width="100%"></kbd></p>
 
 <br>
 
@@ -3473,13 +3473,13 @@ Learning Objectives
 
 <a id="node-1901"></a>
 
+<p align="center"><kbd><img src="assets/e0904368e9132ec1ceb4a7dfe25bc9fa92b4c1d1.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d6cdba5592492ef80cf93b8aba0db6016a8c067f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9bd37b96bb85722e70eb55ed004cef2c7da92b8d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e19862b9becf4c8ab5e70689f0e6c250ec1e0436.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e0904368e9132ec1ceb4a7dfe25bc9fa92b4c1d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Có chỗ broadcast xảy ra
@@ -3576,11 +3576,11 @@ Learning Objectives
 
 <a id="node-1914"></a>
 
+<p align="center"><kbd><img src="assets/2df7143537c6f554bb5a814975fc878c4d51430d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/33074cc4bc9ef31d6c2ebcc28342b94a8ced6eaf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/182e6bf4687daa69985440bd956a9a89db5a0eb4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/2df7143537c6f554bb5a814975fc878c4d51430d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thật ra chỗ tính grad_b1,b2 chỉ cần: Tính sum rồi chia cho m.

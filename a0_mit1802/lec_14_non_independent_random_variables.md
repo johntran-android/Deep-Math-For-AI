@@ -179,9 +179,9 @@
 
 <a id="node-321"></a>
 
-<p align="center"><kbd><img src="assets/401211fc205706fc1e88b25a890a41f57d8be2c4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0e5dcf22899d97fb546705dad488b994abbd1242.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/401211fc205706fc1e88b25a890a41f57d8be2c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo là một chú ý: Lấy ví dụ f(x,y) = x + y. Thì ta sẽ có partial
@@ -433,9 +433,9 @@
 
 <a id="node-339"></a>
 
-<p align="center"><kbd><img src="assets/e1020378bb4b703826022c4675ed358d154c8dec.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ba725c54722d7d0565ba31768e695fca099b1a66.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e1020378bb4b703826022c4675ed358d154c8dec.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Từ đó, gom lại thì ta có dA = (...)*d_theta **thì coefficient (...) chính là

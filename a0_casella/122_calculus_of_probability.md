@@ -5,9 +5,9 @@
 ---
 <a id="node-21"></a>
 
-<p align="center"><kbd><img src="assets/b399fb3adc90b2e9a0546e784a6e2f6f7fcf19ad.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c3382c86e2898642b7e5888dee9009d9194365e9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b399fb3adc90b2e9a0546e784a6e2f6f7fcf19ad.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là **từ các tiên đề** ta sẽ **có thể chứng min**h một số t**ính chất**
@@ -39,9 +39,9 @@
 
 <a id="node-22"></a>
 
-<p align="center"><kbd><img src="assets/0e8dca0ea5ffb7e423f714528dbcc994f6d77753.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c38ff842a0d2350aea32cf1cc8c8b92e1d04739a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0e8dca0ea5ffb7e423f714528dbcc994f6d77753.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo đại ý là thêm **3 properties** nữa cũng ko khó chứng minh:
@@ -117,9 +117,9 @@
 
 <a id="node-24"></a>
 
-<p align="center"><kbd><img src="assets/3721aaf01f823b159ab07bbb7446718e8e7d098c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5fcedb6ddeabd362d608917f3051a366e31bae62.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3721aaf01f823b159ab07bbb7446718e8e7d098c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cuối cùng là thêm **hai theorem quan trọng**. Đầu tiên chính là cái trong Stat110

@@ -80,9 +80,9 @@
 
 <a id="node-1898"></a>
 
-<p align="center"><kbd><img src="assets/3f22769a4c635317cec6ca11aeb9f0e4a1112c7a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6613ec784f8f1795eff173a15f2381acfb063234.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3f22769a4c635317cec6ca11aeb9f0e4a1112c7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy discriminative model đại khái là sẽ tìm cách mô hình một phân
@@ -458,9 +458,9 @@
 
 <a id="node-1912"></a>
 
-<p align="center"><kbd><img src="assets/1b4fe7c7a179a285f735140bdc9d5fd007f8738e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a6281dbb4437384e8d6eb2361635235012f3a723.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1b4fe7c7a179a285f735140bdc9d5fd007f8738e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và quá trình sẽ expand dần dần từ top-left -> bottom right corner. Trong đó
@@ -687,9 +687,9 @@
 
 <a id="node-1923"></a>
 
-<p align="center"><kbd><img src="assets/753d453ab58135663cf495d0f82a3972d07e4146.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b9aec991e2075e7b36a2239479160cb1b6fe62a4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/753d453ab58135663cf495d0f82a3972d07e4146.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Sau khi training, ta sẽ **không cần dùng đến decoder** nữa, mà chỉ  quan
@@ -1012,9 +1012,9 @@
 
 <a id="node-1931"></a>
 
-<p align="center"><kbd><img src="assets/1c7c82e498d2e3595579c2dca25506703739aa10.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bc02b58515e762c6f0c1ee1ceb09014cf4110e77.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1c7c82e498d2e3595579c2dca25506703739aa10.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì khi đó, trong công thức **p_θ(x)** là **tích phân mọi z** của **p_θ(x|z)*p(z)*dz**
@@ -1054,9 +1054,9 @@
 
 <a id="node-1933"></a>
 
-<p align="center"><kbd><img src="assets/c2ef5c60cd44bf5ec221cd1a4f83de0a3d328d78.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/57afcb5e0500c7cc834aef70cd207e32a92bb9cd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c2ef5c60cd44bf5ec221cd1a4f83de0a3d328d78.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > thế thì thay vì triển khai p(x) theo cách tiếp cận là **marginalize**: **tích phân
@@ -1226,9 +1226,9 @@
 
 <a id="node-1942"></a>
 
-<p align="center"><kbd><img src="assets/b9e75a8d29cfb3b28d5b006bb09c14cb288db7f5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/edb6b4708a462bbd39c4a635306427a515e73007.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b9e75a8d29cfb3b28d5b006bb09c14cb288db7f5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Term thứ hai chính là **KL divergence giữa hai probability distribution:**
@@ -1425,9 +1425,9 @@
 
 <a id="node-1950"></a>
 
-<p align="center"><kbd><img src="assets/5056d5ea82111d3ad89cb75ba28eebcd69179a80.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5134f42fdbb96c013ecb584febba0e0801a8ca1e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5056d5ea82111d3ad89cb75ba28eebcd69179a80.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là tại sao lại có công thức này thì tạm thời cứ hiểu rằng, có công
@@ -1640,9 +1640,9 @@
 
 <a id="node-1955"></a>
 
-<p align="center"><kbd><img src="assets/a121f8a9684c915ce5bd8dfc189053251e6a85e1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e0728bb17b6d95ee2f30278508ddc3198d044435.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a121f8a9684c915ce5bd8dfc189053251e6a85e1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là vì trong VAE, ta đã ràng **buộc latent distribution** có tính chất
@@ -1812,9 +1812,9 @@
 
 <a id="node-1964"></a>
 
-<p align="center"><kbd><img src="assets/35cafc939e8e272b199938c7b73279a1ee41cc91.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bba49def64afe5205f2321aad7dbb167d32aa5dc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/35cafc939e8e272b199938c7b73279a1ee41cc91.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và kết quả của nó rất tốt
@@ -1824,11 +1824,11 @@
 
 <a id="node-1965"></a>
 
+<p align="center"><kbd><img src="assets/28aa1e59110ef37e5ed4a15acfaa6b53648906ef.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/ddbf30e62e0ad52cf669486a8c66d762eb0940cc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/49475972c7986da515ea58ce0e42d21c712bed7b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/28aa1e59110ef37e5ed4a15acfaa6b53648906ef.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > và khả năng của nó với face image rất ấn tượng

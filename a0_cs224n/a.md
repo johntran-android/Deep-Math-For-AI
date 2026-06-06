@@ -26,9 +26,9 @@
 
 <a id="node-310"></a>
 
-<p align="center"><kbd><img src="assets/125847e298ac14b3f31496d06e0520cc2c5f6a6e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/03d16cefc3897a96ad2dd203dca279601b0918e8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/125847e298ac14b3f31496d06e0520cc2c5f6a6e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > chỉ cần hiểu rằng, ta xây dựng matrix U_plus (là matrix U' trong phần note trả lời lý thuyết,
@@ -126,17 +126,17 @@
 
 <a id="node-317"></a>
 
-<p align="center"><kbd><img src="assets/5433b1a57c0500830cfedcb4273073650be9870c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/246f77495dbc193ccbec149ba927c725ca3d7322.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5433b1a57c0500830cfedcb4273073650be9870c.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-318"></a>
 
-<p align="center"><kbd><img src="assets/9abe7b02fe93d22fed12aafaa4534b4be18236b7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f867eb67ae427831e7052b01c869d1f1e02b2e43.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9abe7b02fe93d22fed12aafaa4534b4be18236b7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Kết quả cho thấy các từ gần nghĩa nằm gần nhau trong không

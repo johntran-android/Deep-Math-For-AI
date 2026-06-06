@@ -1341,9 +1341,9 @@ Learning Objectives
 
 <a id="node-495"></a>
 
-<p align="center"><kbd><img src="assets/251a682cf012b187b1505170eef6b518ce0e85c4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/abbce8ceacf48e6f87ed2c279b46de0e27894099.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/251a682cf012b187b1505170eef6b518ce0e85c4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một số training algorithm khi learn words họ dùng cách identifying
@@ -1857,9 +1857,9 @@ Learning Objectives
 
 <a id="node-584"></a>
 
-<p align="center"><kbd><img src="assets/903c51ad5062416227d119fc9c05dea3dfeedd0a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/31384a0ba66cc4f672f3ae05b57642b4390eded9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/903c51ad5062416227d119fc9c05dea3dfeedd0a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là với cái input city 1, country 1, country 2 (là tên) ta chuyển

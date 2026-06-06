@@ -11,9 +11,9 @@
 
 <a id="node-805"></a>
 
-<p align="center"><kbd><img src="assets/431507fbba6621f63344889e2a6e58b2e16e28df.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/61166dcddbd7774afa12603ba74442aaf5c49507.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/431507fbba6621f63344889e2a6e58b2e16e28df.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > cái  subtrac_max là tự thêm để thử nghiệm
@@ -42,9 +42,9 @@
 
 <a id="node-807"></a>
 
-<p align="center"><kbd><img src="assets/facd2d904b3d527e6569fe7afa66804460b1109b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2b5091eec97d64bea03d454c84f708b47c73932a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/facd2d904b3d527e6569fe7afa66804460b1109b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nếu là layer đầu thì input là X, còn sau đó input là output của layer
@@ -60,9 +60,9 @@
 
 <a id="node-808"></a>
 
-<p align="center"><kbd><img src="assets/4a4c0effee18d72ef14a90ea94a4b16c58b2fee7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a40f3bbce43aa9af885894bdb553d5f88a0fff3e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4a4c0effee18d72ef14a90ea94a4b16c58b2fee7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > backprop thì nếu là layer cuối thì không backprop qua relu,
@@ -72,9 +72,9 @@
 
 <a id="node-809"></a>
 
-<p align="center"><kbd><img src="assets/64b1f1df9e2a7556c78a3b5e6c66a27128656053.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e30b7f41155e2d78998303264aecadeaf78744b9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/64b1f1df9e2a7556c78a3b5e6c66a27128656053.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > kết quả cho thấy các  Ini loss (softmax) 10 class là
@@ -86,11 +86,11 @@
 
 <a id="node-810"></a>
 
+<p align="center"><kbd><img src="assets/f6b10ff70755dd2141ec34de0b970d5dc180c82a.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/ec7d2c77974e92576beed204c7c7565fd4173b80.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/319641e81b41701ff188dee86ed37bdcbbb97f62.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f6b10ff70755dd2141ec34de0b970d5dc180c82a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > tiếp theo họ kêu mình tuning lr, và weight scale sao cho
@@ -101,17 +101,17 @@
 
 <a id="node-811"></a>
 
-<p align="center"><kbd><img src="assets/f6dba41c0bbe71e519cae979070e75dbe0c39b2d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2fadc3f5ada91d5270b967a61791df1e5d43b533.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f6dba41c0bbe71e519cae979070e75dbe0c39b2d.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-812"></a>
 
-<p align="center"><kbd><img src="assets/56968469bf2348d45776a800a0c1e0aa0b4f8f61.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/37ba62f5f85ca6af807f42bf527edf960d88e4a0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/56968469bf2348d45776a800a0c1e0aa0b4f8f61.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Sau đó làm vậy với 4 hidden layers và câu hỏi đặt ra là
@@ -121,6 +121,8 @@
 
 <a id="node-813"></a>
 
+<p align="center"><kbd><img src="assets/c44eeb938632ef158ec3666a36fc9993d7a1374f.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/1b869f667d388f0a1365545bed217c232b375016.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/920b7d263f04f599fd923cccde6ad907f427c77e.png" width="100%"></kbd></p>
@@ -128,8 +130,6 @@
 <p align="center"><kbd><img src="assets/d15fcb919262d8f263261ab1d6a6c11e630f611b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6ddb3bd7ff182f40b91078f30638f65f764f76ae.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c44eeb938632ef158ec3666a36fc9993d7a1374f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy trước khi trả lời câu hỏi thì nhìn vào qúa trình thử với các depth, lr,
@@ -167,6 +167,8 @@
 
 <a id="node-814"></a>
 
+<p align="center"><kbd><img src="assets/9ba0534e838e8e05f004add4c0699a6ce58154fb.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d026a0b6a68ce48e3e4117f919ab63ec159dac60.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1426b0a2cf8810a880a128d5a50443b0e16351db.png" width="100%"></kbd></p>
@@ -176,8 +178,6 @@
 <p align="center"><kbd><img src="assets/acceb33b933f5a12c9c9b9004523c58572e1f2fa.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d0a8b590f2be32957e9c579afd6ef35c084efa45.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/9ba0534e838e8e05f004add4c0699a6ce58154fb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > với **weight scale 0.1 nhỏ, gradient nhỏ model learn chậm**, In
@@ -199,13 +199,13 @@
 
 <a id="node-815"></a>
 
+<p align="center"><kbd><img src="assets/7cbe16f697ffc275bf3d9b3bbd55cbac325eb7ef.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/f73d8e901fc8ae33c52810aa8b83594e9f45273d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2024627e940fd2d71df2c2842312a362b815e778.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b9115551823a3ed51212bc2603731a364ee20def.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7cbe16f697ffc275bf3d9b3bbd55cbac325eb7ef.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > có thể thấy **hiện tượng này lặp lại** với các lr khác 3e-5,
@@ -246,9 +246,9 @@
 
 <a id="node-816"></a>
 
-<p align="center"><kbd><img src="assets/1f86c096685f0bb86cf33c92493520b61624e7c0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/52a6aa973c0781db6bd6b2a398ee36c47a62ac77.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1f86c096685f0bb86cf33c92493520b61624e7c0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > với depth 3, lr 0.0006, 0.001 có thể thấy cũng có hiện tượng trên,
@@ -270,6 +270,8 @@
 
 <a id="node-818"></a>
 
+<p align="center"><kbd><img src="assets/22a14e5ed5cb20ac292124e7c129f053a04db7d2.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/c298131609e8edfb273407f89d7155fbd29f66f8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/52048e4acd550df760519dbbceeb862382f1949d.png" width="100%"></kbd></p>
@@ -277,8 +279,6 @@
 <p align="center"><kbd><img src="assets/e1128afb108a1bc1ca49cd7daa8ce5338b1141b0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/dd87664d3ba39fff25659a7278ffd636810b1851.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/22a14e5ed5cb20ac292124e7c129f053a04db7d2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Depth = 4, lr 3e-4, ws: 0.01 - 0.03, train acc: 24% 100%
@@ -328,9 +328,9 @@
 
 <a id="node-821"></a>
 
-<p align="center"><kbd><img src="assets/06091718c60e8cf58c325a0786c1d4da3ca760ea.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7c988266915c8c2904e465d7668fe2e52b741fb2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/06091718c60e8cf58c325a0786c1d4da3ca760ea.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > nhiệm vụ là làm cái sgd_momentum update. Dựa trên
@@ -341,9 +341,9 @@
 
 <a id="node-822"></a>
 
-<p align="center"><kbd><img src="assets/7e7b2cb641bb21393c3abc94c506cfc620841a2f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b3a20e0900c28abe0d6912dd0ede0f6698ba0c7d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7e7b2cb641bb21393c3abc94c506cfc620841a2f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Train 5 hidden layers neural net cho thấy sgd
@@ -374,9 +374,9 @@
 
 <a id="node-825"></a>
 
-<p align="center"><kbd><img src="assets/8bfbb681c12e5c9571807869da44baee10b0b6d1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3f46439f2d5b9b244beccae8eb0ee3db728c365a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8bfbb681c12e5c9571807869da44baee10b0b6d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > cứ theo công thức mà làm thôi
@@ -394,11 +394,11 @@
 
 <a id="node-827"></a>
 
+<p align="center"><kbd><img src="assets/e85aad587a5b81929adaa2566a79b2f216738d8d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/13906e5671bcd3cd1c3442861fd5a4a1b5749bdb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/611b8e545ae49fa7f55f6f120d78b59b03c9e086.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e85aad587a5b81929adaa2566a79b2f216738d8d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > cứ theo công thức mà làm thôi, chú ý t là number of iteration,
@@ -423,9 +423,9 @@
 
 <a id="node-830"></a>
 
-<p align="center"><kbd><img src="assets/1a53816fc51b7d8ced6e968747913df1780c4d0c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c3954aef5a58650fc027967a680cf654ff3298c6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1a53816fc51b7d8ced6e968747913df1780c4d0c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > có thể thấy rõ Adam converge sớm nhất, sau đó là
@@ -435,9 +435,9 @@
 
 <a id="node-831"></a>
 
-<p align="center"><kbd><img src="assets/57b614ce46ed76c16e46aac519408e40f4b30118.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7395a40be81bfd78b15a0e19c8779734738ab7e4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/57b614ce46ed76c16e46aac519408e40f4b30118.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Câu hỏi là khi John train với AdaGrad thì thấy hiện tượng parameters

@@ -90,9 +90,9 @@
 
 <a id="node-1224"></a>
 
-<p align="center"><kbd><img src="assets/585a18d6a0d12ba439e9bc43a3f23a146b7836b9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0730bae835c6ef490c8406ed27af47d7a8b0db75.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/585a18d6a0d12ba439e9bc43a3f23a146b7836b9.png" width="100%"></kbd></p>
 
 <br>
 
@@ -108,9 +108,9 @@
 
 <a id="node-1226"></a>
 
-<p align="center"><kbd><img src="assets/6e546ba56c6b15f35ea25d7d554a548d8dbf7590.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3031d10f032269814c0932c2649bc9c0455b65d8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6e546ba56c6b15f35ea25d7d554a548d8dbf7590.png" width="100%"></kbd></p>
 
 <br>
 
@@ -153,9 +153,9 @@
 
 <a id="node-1232"></a>
 
-<p align="center"><kbd><img src="assets/577b5afe5f86d8c7b93b25bff17f448ebc5431e4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4530d477375a7aa07db3d7e0082eae65f649172c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/577b5afe5f86d8c7b93b25bff17f448ebc5431e4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > 1. Đại ý tại mỗi step, dùng rnn_step_backward để từ upstream grad tính các
@@ -196,11 +196,11 @@
 
 <a id="node-1236"></a>
 
+<p align="center"><kbd><img src="assets/d4cd99f461f557869cec6f411948232db4763d79.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/4602849c567bb11fa864972c1f041b8b2691e81d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/de01f6589987890a526ac217a78697de2dfdc326.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d4cd99f461f557869cec6f411948232db4763d79.png" width="100%"></kbd></p>
 
 <br>
 
@@ -228,9 +228,9 @@
 
 <a id="node-1240"></a>
 
-<p align="center"><kbd><img src="assets/344a40dbaa03524601a77e2769643782ba003f90.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d12c31b0d3e6ae8617c36ead6ef98e4f291550ae.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/344a40dbaa03524601a77e2769643782ba003f90.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > cái này người ta ko bắt làm nhưng vẫn làm
@@ -240,9 +240,9 @@
 
 <a id="node-1241"></a>
 
-<p align="center"><kbd><img src="assets/9ffdd3544353ef5c397fa3fa507d060a87907106.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/443d53d1fa82edcfb2ab3322f04e5d99840aff5d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9ffdd3544353ef5c397fa3fa507d060a87907106.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Solution chuẩn của Standford có thể học theo
@@ -251,27 +251,27 @@
 
 <a id="node-1242"></a>
 
-<p align="center"><kbd><img src="assets/623f0062811fe4c38cb90f1d881f2311d61a54b7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/de80e38d7d5ba23b36668bc1fc3cfc2e5bd1797e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/623f0062811fe4c38cb90f1d881f2311d61a54b7.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1243"></a>
 
-<p align="center"><kbd><img src="assets/a30d5bb7d66704b93ea4649944a4dc1b6dc5a1e9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c9ec540e6df814aa978030a311b52b8f43469b1c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a30d5bb7d66704b93ea4649944a4dc1b6dc5a1e9.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1244"></a>
 
+<p align="center"><kbd><img src="assets/39eb207277d1117e220197f466fa95f15ce8db45.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/1c27d4ba602b2f4e63dce55b604ede35f25279ed.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e5ecca843e51a926d27ede602a37944e0ffb0cbc.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/39eb207277d1117e220197f466fa95f15ce8db45.png" width="100%"></kbd></p>
 
 <br>
 
@@ -283,17 +283,17 @@
 
 <a id="node-1246"></a>
 
-<p align="center"><kbd><img src="assets/6334e5b3632a04d54686d974cb7aee0b0132ff03.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/039b595f5302dfe054d1cf757e6b1b8b59424296.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6334e5b3632a04d54686d974cb7aee0b0132ff03.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1247"></a>
 
-<p align="center"><kbd><img src="assets/12386509482e91faa7086acecdf8c2ed27952a48.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ac40f588125f52654ab576b8e48d819c4d82809f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/12386509482e91faa7086acecdf8c2ed27952a48.png" width="100%"></kbd></p>
 
 <br>
 
@@ -305,9 +305,9 @@
 
 <a id="node-1249"></a>
 
-<p align="center"><kbd><img src="assets/6852b81b95c2a43e9a51709cbf468d6ad28189cb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/151c70c73bc4d019a96d735c58f28509a8a3b783.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6852b81b95c2a43e9a51709cbf468d6ad28189cb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Affine layer chuyển image embedding thành h0,
@@ -328,9 +328,9 @@
 
 <a id="node-1250"></a>
 
-<p align="center"><kbd><img src="assets/3710f1baf75615914f47282e69413e41591d8916.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2e8f4b60dc36bd7efa96fbfe04d73b63da479622.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3710f1baf75615914f47282e69413e41591d8916.png" width="100%"></kbd></p>
 
 <br>
 

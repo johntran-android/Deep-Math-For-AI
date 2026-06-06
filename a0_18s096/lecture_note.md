@@ -5,9 +5,9 @@
 ---
 <a id="node-224"></a>
 
-<p align="center"><kbd><img src="assets/75d091b5409b6e19cdb06cf96f283dbb887f6a02.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/648d7c5daede5dc69fde57a8a837fa42a5ec9b2d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/75d091b5409b6e19cdb06cf96f283dbb887f6a02.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên đại khái là, gs lấy ví dụ đơn giản của một scalar value multivariate

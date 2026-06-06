@@ -23,9 +23,9 @@
 
 <a id="node-30"></a>
 
-<p align="center"><kbd><img src="assets/14415571827ae58a99d031665d70b4f7d6db0167.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a6a04ab5fba3c214a1fecdd732d4d665f46e517f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/14415571827ae58a99d031665d70b4f7d6db0167.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs sẽ dùng ví dụ đơn giản này để nói về các khái niệm nền tảng của xác suất:
@@ -79,9 +79,9 @@
 
 <a id="node-32"></a>
 
-<p align="center"><kbd><img src="assets/89755ed0012de26410640da8773c7d6e3551278c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/46c9f4d6e91cf6e02f02afcd769450686ec73c29.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/89755ed0012de26410640da8773c7d6e3551278c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp chỗ này gs Bishop thật ra đang định nghĩa xác suất theo trường phái cổ
@@ -142,11 +142,11 @@
 
 <a id="node-35"></a>
 
+<p align="center"><kbd><img src="assets/d49e90bc762c2890897c0d89d1687253f11ad3a0.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/15d24879f0e702d7ec2170162a29baceb11055f7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a81069e20cc7f83950a0dba0acfa8923ff731d1e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d49e90bc762c2890897c0d89d1687253f11ad3a0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là ông dùng ví dụ này để ta hiểu về sum rule và product rule: Cho X, Y là hai rvs
@@ -240,9 +240,9 @@
 
 <a id="node-36"></a>
 
-<p align="center"><kbd><img src="assets/4ac8c51dd67b33eea54dac1a43a8dee0efd2708a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7f2a3346729bef4ce5d9d2552424a9aa6cd0bcb8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4ac8c51dd67b33eea54dac1a43a8dee0efd2708a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs quy ước một chút về kí hiệu, p(B) sẽ chỉ distribution của B, p(r) sẽ chỉ  giá trị
@@ -327,9 +327,9 @@
 
 <a id="node-38"></a>
 
-<p align="center"><kbd><img src="assets/df33b6782b24b7893bf2301e215a99c1c155658e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9f91b4a6acef618d2b1bc791393eec0978f34897.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/df33b6782b24b7893bf2301e215a99c1c155658e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs Bishop cho mình hình ảnh minh họa joint distribution của hai rv X, Y.
@@ -356,11 +356,11 @@
 
 <a id="node-39"></a>
 
+<p align="center"><kbd><img src="assets/da84cbb690e21d2e1854e769ef80887602e3c2dd.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/dd6311eb04762f6e58df5512f50fd3a2e6969d40.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/71076b6b106fa8b4e03e1cb73e6619540e65648d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/da84cbb690e21d2e1854e769ef80887602e3c2dd.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này chỉ là ông quay lại áp mấy cái khái niệm, rule đã giới thiệu vào lại

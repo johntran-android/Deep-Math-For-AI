@@ -692,9 +692,9 @@
 
 <a id="node-23"></a>
 
-<p align="center"><kbd><img src="assets/d25aecfa693f2d38e7ac07aac3b23fa1407c4138.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c3f76cfdee68f59bd558737ad43715b1ae10ee09.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d25aecfa693f2d38e7ac07aac3b23fa1407c4138.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > BỎ QUA
@@ -727,9 +727,9 @@
 
 <a id="node-25"></a>
 
-<p align="center"><kbd><img src="assets/64085f36955a35a134655f5bb13bf1999b8c6d57.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7d4e751eda1d0049e9d6fc98a7bca240927acf49.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/64085f36955a35a134655f5bb13bf1999b8c6d57.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên, đại khái là còn nhớ ở chap 6, trong BFGS gốc, sau khi
@@ -969,9 +969,9 @@
 
 <a id="node-29"></a>
 
-<p align="center"><kbd><img src="assets/bc1025143865e9492a9aaa8390ae570a1a920f8b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d5c8a23c1fe733e3796a0ba6c0b4698c420eb26f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bc1025143865e9492a9aaa8390ae570a1a920f8b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, đại ý đoạn này là ta cũng có thể có công thức compact cho thuật

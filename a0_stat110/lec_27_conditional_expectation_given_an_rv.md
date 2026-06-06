@@ -5,9 +5,9 @@
 ---
 <a id="node-830"></a>
 
-<p align="center"><kbd><img src="assets/73bb005d859dc226e4ac4f77c77e927f631f2e04.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/226ca0379ba512c2caf744813315b9de476aeadc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/73bb005d859dc226e4ac4f77c77e927f631f2e04.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Bài này ta sẽ tiếp tục về **conditional expectation**. Đầu tiên gs lấy ví dụ cho **X~N(0,1)** và **Y=X^2**
@@ -31,11 +31,11 @@
 
 <a id="node-831"></a>
 
+<p align="center"><kbd><img src="assets/1adbac76a44c9afe1029d8418b8ef5ec590e7625.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d4702768559acecb29cf3ddd5454595f8f56557c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1e69d2e265e762dccf2be83c4bcf65c75fd6e60b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1adbac76a44c9afe1029d8418b8ef5ec590e7625.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ tiếp theo để suy ngẫm là **E(X|Y)**?
@@ -115,9 +115,9 @@
 
 <a id="node-835"></a>
 
-<p align="center"><kbd><img src="assets/426d660276645e88dcfc94dca76debbd93093668.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bdb4bd73d589035158135d7ab18720660d017ed4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/426d660276645e88dcfc94dca76debbd93093668.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ta sẽ biết đến các **properties** rất **hữu ích** khi ta làm việc **liên quan đến conditional
@@ -195,9 +195,9 @@
 
 <a id="node-837"></a>
 
-<p align="center"><kbd><img src="assets/473b5cd4c76b16e0a286673e0c1902a64925ac29.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b1a7f9ad9b3037d60c9bedbc9cb718b664d46fd1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/473b5cd4c76b16e0a286673e0c1902a64925ac29.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tính chất thứ 3 là **E[E(Y|X)] = E[Y]**. Ta sẽ chứng minh nó trong chốc lát. Nhưng ở đây ta hiểu nó
@@ -217,13 +217,13 @@
 
 <a id="node-838"></a>
 
+<p align="center"><kbd><img src="assets/5c8bc0133d9d28c6dfee385ae95cc5d9aebefdc7.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/fcff9d13c60c0d2d77233443c851c02f6d3e3d12.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/defbc713656a6196832f9b3e6942eef277628fa0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fc79d0a2be0a8b7230a76904adeb95336ae48d3b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5c8bc0133d9d28c6dfee385ae95cc5d9aebefdc7.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 21: COVARIANCE & CORRELATION](untitled.md#node-684)
 
@@ -507,9 +507,9 @@
 
 <a id="node-851"></a>
 
-<p align="center"><kbd><img src="assets/a245fce06519b09d5d3b95d9d5900be8d4e81674.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3f66245494db8eefd23487710985d03bb189d1d2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a245fce06519b09d5d3b95d9d5900be8d4e81674.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta qua một ví dụ, chọn một city ngẫu nhiên, và **sampling n người** từ city đó. Ta quan tâm **X là số người
@@ -654,9 +654,9 @@
 
 <a id="node-854"></a>
 
-<p align="center"><kbd><img src="assets/02108a99f1075c29e715545911fb27e270a54282.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a6803f50e30c25d61a4c2d2c72fc6a702b571030.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/02108a99f1075c29e715545911fb27e270a54282.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp tục với **Var(X)**, theo **property (5)**, ta có **Var(X) = E[Var(X|Q)] + Var[E(X|Q)]**

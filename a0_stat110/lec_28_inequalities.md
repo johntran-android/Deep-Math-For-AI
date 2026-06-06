@@ -5,9 +5,9 @@
 ---
 <a id="node-857"></a>
 
-<p align="center"><kbd><img src="assets/396bb584b2b32d5a3b984f64f296ac21e97714e0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3d2c38021284430722ba1e56faa372acb5757c1f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/396bb584b2b32d5a3b984f64f296ac21e97714e0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta sẽ tiếp tục với **Conditional Expectation** trước khi qua **Statistic Inequalities.**
@@ -167,9 +167,9 @@
 
 <a id="node-862"></a>
 
-<p align="center"><kbd><img src="assets/44350b0262bef304df04c15d81d9d7da07d267f9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8df8d9f3db7b79f1d498bc72c5d16c39e3fdaf65.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/44350b0262bef304df04c15d81d9d7da07d267f9.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 21: COVARIANCE & CORRELATION](untitled.md#node-692)
 

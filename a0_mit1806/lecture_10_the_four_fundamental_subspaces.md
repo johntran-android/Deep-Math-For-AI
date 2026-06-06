@@ -344,11 +344,11 @@
 
 <a id="node-276"></a>
 
+<p align="center"><kbd><img src="assets/1a2c86d9832fa6616ba244e1271a2b07becce005.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/156f2f1bd03d2bfebbaeb2ceb30ae95d2ff5d883.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cc1cc1e792ca166812addd5a752dfd1294eedda0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1a2c86d9832fa6616ba244e1271a2b07becce005.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > tới đây ta đã trả lời xong câu hỏi dimension của chúng là gì,
@@ -381,9 +381,9 @@
 
 <a id="node-278"></a>
 
-<p align="center"><kbd><img src="assets/e3c5a50063903d5309f21162484d2f54e036f119.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/50e0fc6f4e6692d3af6c176f86ec8aa5b7140cd8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e3c5a50063903d5309f21162484d2f54e036f119.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **COLUMN SPACE CỦA R KHÁC COLUMN SPACE CỦA
@@ -469,9 +469,9 @@
 
 <a id="node-282"></a>
 
-<p align="center"><kbd><img src="assets/d525200e46a18840f890e4fe8801243d9c8c6bc5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3ec8cf5e6ca8e17b4ae25fcd4e77602a72183be1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d525200e46a18840f890e4fe8801243d9c8c6bc5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, gs xét qua **nullspace của AT**. hay còn gọi là **left

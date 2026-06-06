@@ -5,9 +5,9 @@
 ---
 <a id="node-158"></a>
 
-<p align="center"><kbd><img src="assets/bc39e5af723574c3a0e85d529448411892a89f35.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ff6200f34d8e6f8e1f2d9eac6a1582ce6503c868.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bc39e5af723574c3a0e85d529448411892a89f35.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gặp lại Uniform(a, b) có pdf = constant c trên mọi điểm thuộc (a, b)
@@ -348,9 +348,9 @@
 
 <a id="node-163"></a>
 
-<p align="center"><kbd><img src="assets/19cf4d3a21aecd277f6af7468f316ee5049f7b00.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cc25b35f7bf1d8ebc5c2a6ee967a2a3f743dc1d1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/19cf4d3a21aecd277f6af7468f316ee5049f7b00.png" width="100%"></kbd></p>
 
 🔗 **Related:** [9.2 METHODS OF FINDING INTERVAL ESTIMATORS](92_methods_of_finding_interval_estimators.md#node-797)
 
@@ -455,9 +455,9 @@
 
 <a id="node-165"></a>
 
-<p align="center"><kbd><img src="assets/d5641f077fd270ca77b776a22d93ecd922eb852d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/81805aee500feaca8970fba81e7e1ff2d182589c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d5641f077fd270ca77b776a22d93ecd922eb852d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là như đã biết từ stat110, expo random variable có story là thời
@@ -863,11 +863,11 @@
 
 <a id="node-170"></a>
 
+<p align="center"><kbd><img src="assets/6ae9e2e3ddce29fa516e728a7528a55af4cf4181.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/a43750ef5ea58697f4176ae14a8a74affac6a854.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4c4944a338e6be36051d6dc9206f381bbf230009.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/6ae9e2e3ddce29fa516e728a7528a55af4cf4181.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Phần này nói về cách tính cái tích phân ∫-inf:inf e^-z^2/2dz, mình đã làm rồi.
@@ -1027,9 +1027,9 @@
 
 <a id="node-173"></a>
 
-<p align="center"><kbd><img src="assets/63aca5db76bb830a9c74873df9c9f4f71627639c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/89f43c3853b5e0bcb4b03d473d796b4b56817740.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/63aca5db76bb830a9c74873df9c9f4f71627639c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái nói là một ứng dụng quan trọng của Normal là dùng để approximate 
@@ -1042,9 +1042,9 @@
 
 <a id="node-174"></a>
 
-<p align="center"><kbd><img src="assets/19dd3588d68c194aa29cf1479fced492155f301b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1a775440f42cec24837166ded442c2a9f5793a80.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/19dd3588d68c194aa29cf1479fced492155f301b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU, nhưng đại ý là một ví dụ cho thấy ta có thể dùnf Normal để 
@@ -1081,13 +1081,13 @@
 
 <a id="node-176"></a>
 
+<p align="center"><kbd><img src="assets/66c4ddd1f6668b4b50c41153a1b77d5a74867258.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/bb863e2c847f814169b98dd6f45a949f549df672.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d396d7e84cd02b670648971c8a92923c320342e6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/de38affa4546933417f75875afbda9734c10f064.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/66c4ddd1f6668b4b50c41153a1b77d5a74867258.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là với Βeta pdf thì vì cái dạng của nó có x^..(1-x)^.. nên rất dễ để tính
@@ -1161,9 +1161,9 @@
 
 <a id="node-178"></a>
 
-<p align="center"><kbd><img src="assets/63310452161acbd7e9baee6c93bd7bf097bcb063.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/77b884c7402a5e1a8882c8402b5f70b602df6f1f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/63310452161acbd7e9baee6c93bd7bf097bcb063.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta gặp lại Cauchy distribution.
@@ -1276,9 +1276,9 @@
 
 <a id="node-180"></a>
 
-<p align="center"><kbd><img src="assets/307ec11042d9ce09a61ceaee1b72bee97b5f6c5f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2ff67da1cda92d3e662bc841c833dfe95cbe5cbb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/307ec11042d9ce09a61ceaee1b72bee97b5f6c5f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta qua một distribution mà stat110 chưa gặp, nhưng trong EE364A thì có nghe
@@ -1378,11 +1378,11 @@
 
 <a id="node-181"></a>
 
+<p align="center"><kbd><img src="assets/61e830165b5606c0c76f37e7310169dab60374fb.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/c031fdde8784a6138a30576c80b6dccd43b914c8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/91de945ec51416e222df6b7c5f1a41d9ce37d44e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/61e830165b5606c0c76f37e7310169dab60374fb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU

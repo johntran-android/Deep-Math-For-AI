@@ -545,9 +545,9 @@
 
 <a id="node-240"></a>
 
-<p align="center"><kbd><img src="assets/ca226590ead6dfa82554697a7b8267f42a08125b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/19095c2d2eebd9242b7ddc051befd1a4344064d1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ca226590ead6dfa82554697a7b8267f42a08125b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > một ví dụ, về **polar** **coordinate** (vector (x,y) có thể được thể hiện theo r

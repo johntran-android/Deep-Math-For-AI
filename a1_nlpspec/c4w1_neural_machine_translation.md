@@ -823,9 +823,9 @@ quality
 
 <a id="node-2697"></a>
 
-<p align="center"><kbd><img src="assets/7ede07e3d54d28ff6bcded34261a65b3fd6ccccc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ea5cba5e2579ef16f9d7e925cea3e3b305fccd57.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7ede07e3d54d28ff6bcded34261a65b3fd6ccccc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > m size của layers tức là số hidden unit của hai cái dense layer và weight của 
@@ -1598,9 +1598,9 @@ quality
 
 <a id="node-2749"></a>
 
-<p align="center"><kbd><img src="assets/b288288cc7298e38db83ca151423d6d91ae52abf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/542178169f410ea26f5dee3b364192c5b125b046.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b288288cc7298e38db83ca151423d6d91ae52abf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta sẽ **tính BLEU score theo kiểu khác một chút**, đó là ví dụ
@@ -1717,9 +1717,9 @@ quality
 
 <a id="node-2759"></a>
 
-<p align="center"><kbd><img src="assets/b288288cc7298e38db83ca151423d6d91ae52abf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/70274632957233272b34e5f6f91d9430b1a39a32.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b288288cc7298e38db83ca151423d6d91ae52abf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là **n càng tăng thì precision giảm theo exponentially**. họ nói **"
@@ -2915,9 +2915,9 @@ quality
 
 <a id="node-2845"></a>
 
-<p align="center"><kbd><img src="assets/3faefbcba39c60e1d30a1a0bddb17cb03cb97460.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/255684409994268ca216055186a7c736002b0fad.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3faefbcba39c60e1d30a1a0bddb17cb03cb97460.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nhận thấy họ dùng **generator function trax.data.TFDS** take input là
@@ -3385,9 +3385,9 @@ quality
 
 <a id="node-2878"></a>
 
-<p align="center"><kbd><img src="assets/0843371e3facf2a227410a4b7e6ca6f75f4bf93b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/14f8225b29b4b7c8492e79d5aa98923e79b397db.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0843371e3facf2a227410a4b7e6ca6f75f4bf93b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Pre-attention decoder, đầu tiên target (cũng là một batch các zero padded vector of
@@ -3498,9 +3498,9 @@ quality
 
 <a id="node-2888"></a>
 
-<p align="center"><kbd><img src="assets/4511fff4e884748c4d46470292b3c3ab3e762c20.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a54bb593c9ba1f3ef995878050b2470c773ec879.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4511fff4e884748c4d46470292b3c3ab3e762c20.png" width="100%"></kbd></p>
 
 <br>
 
@@ -3603,13 +3603,15 @@ quality
 
 <a id="node-2900"></a>
 
-<p align="center"><kbd><img src="assets/8f2ef8a65c613aed35ebbc46c1f69a0295fc9f53.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bbd3b21036c6473b72722061435924c5a2bdc9a3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8f2ef8a65c613aed35ebbc46c1f69a0295fc9f53.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-2901"></a>
+
+<p align="center"><kbd><img src="assets/073b2e890e07cf4a1347c48019b5500d5a0010dc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/faa6255bd3bddf54178f7e037a90d1abe78246f9.png" width="100%"></kbd></p>
 
@@ -3620,8 +3622,6 @@ quality
 <p align="center"><kbd><img src="assets/38245af51861bee80f5ca74496bc8f4864448c89.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/763ba005a7ee26e8395f760ebdc736908a9bdadf.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/073b2e890e07cf4a1347c48019b5500d5a0010dc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nguyên tắc: (đưa vào function (x0, x1)) thì x1 vào trước, x0 vào sau stack: x0 x1 -> [] = [x0 x1]
@@ -3688,9 +3688,9 @@ quality
 
 <a id="node-2902"></a>
 
-<p align="center"><kbd><img src="assets/59338829b9a38eecffb0594d36f8a1a3541ce0a3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d96919c38393b9d41607a3d3c37e3e4888623f5f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/59338829b9a38eecffb0594d36f8a1a3541ce0a3.png" width="100%"></kbd></p>
 
 <br>
 
@@ -3842,9 +3842,9 @@ quality
 
 <a id="node-2923"></a>
 
-<p align="center"><kbd><img src="assets/7565a18c82bee27fc37ede02b59b1b07dfb83b6a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/80a788680d82354e1bf78f490a5243303831ff6e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7565a18c82bee27fc37ede02b59b1b07dfb83b6a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > T**ại sao lại không padding cho input tokens:** Lý do đó là vì KHÔNG
@@ -3913,9 +3913,9 @@ quality
 
 <a id="node-2926"></a>
 
-<p align="center"><kbd><img src="assets/b22c41054b56c7a036fc0f7e14f6fe2f4ca7771c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e219562a2e93afc2808d31edeee0c4a26a06f636.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b22c41054b56c7a036fc0f7e14f6fe2f4ca7771c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ERROR: Không để 2 input vào model trong tuple thì nó ra lỗi này.
@@ -3928,9 +3928,9 @@ quality
 
 <a id="node-2927"></a>
 
-<p align="center"><kbd><img src="assets/b2ec8d63129e467a1b4ff2a4ce0b28145c989889.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fcd85a0a625138d2ce5d4cfcbf4095db5868a690.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b2ec8d63129e467a1b4ff2a4ce0b28145c989889.png" width="100%"></kbd></p>
 
 <br>
 
@@ -3948,9 +3948,9 @@ quality
 
 <a id="node-2930"></a>
 
-<p align="center"><kbd><img src="assets/5094955e577480cd9a01252762afb84e367aea44.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5d60e5b7e5d2b107ae2cd2fd6f5d3c7f3a31acc4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5094955e577480cd9a01252762afb84e367aea44.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Giải thích: 
@@ -3978,9 +3978,9 @@ quality
 
 <a id="node-2931"></a>
 
-<p align="center"><kbd><img src="assets/15c278af581b57390c6318d7d375d447ec0f4273.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/53a3dc01d59f70873c89448edaddedb0c553f144.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/15c278af581b57390c6318d7d375d447ec0f4273.png" width="100%"></kbd></p>
 
 <br>
 
@@ -4036,9 +4036,9 @@ quality
 
 <a id="node-2938"></a>
 
-<p align="center"><kbd><img src="assets/9d3f8880dee4a7b608f959f3218cbf368052cc95.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/01cf6961d0d63691a3b0177fafb363e606b45c06.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9d3f8880dee4a7b608f959f3218cbf368052cc95.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Không có gì khó hiểu, chỉ loop trong n_samples để dùng
@@ -4092,9 +4092,9 @@ quality
 
 <a id="node-2944"></a>
 
-<p align="center"><kbd><img src="assets/9cfe9156cdd170d7a4911bba4d95c05440617010.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b8f24bddeb6db7ab33c032d74ef72c4ae1e98ebb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9cfe9156cdd170d7a4911bba4d95c05440617010.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Function này nhận 2 sequence of token indices. Ta sẽ bỏ vào Counter để nó tạo ra

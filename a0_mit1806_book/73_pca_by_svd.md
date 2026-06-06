@@ -65,9 +65,9 @@
 
 <a id="node-51"></a>
 
-<p align="center"><kbd><img src="assets/eb34013b6c1ab77a7583b0bb495872cbc57cb439.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3d119988bfe4fc6329bfb6d27b7ae2a962258afd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eb34013b6c1ab77a7583b0bb495872cbc57cb439.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên xem AT là matrix gì: Nó là các cột của A chuyển
@@ -156,9 +156,9 @@
 
 <a id="node-52"></a>
 
-<p align="center"><kbd><img src="assets/b950f4b7c6c3921777c25dc6d1e0747600b50f7a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d018fe5441898347e76b9c647f47ee933bdee103.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b950f4b7c6c3921777c25dc6d1e0747600b50f7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rất nhiều điều hay trong cái ví dụ này. gs cho matrix A mxn = 2x6 như
@@ -247,9 +247,9 @@
 
 <a id="node-53"></a>
 
-<p align="center"><kbd><img src="assets/7c8aaed16392c0d3999813a171fd18266db0be30.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d93d6ef33857a12a0aabde45d7a6c8cd742d7fcb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7c8aaed16392c0d3999813a171fd18266db0be30.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Trong screenshot này là những điểm cốt lõi của PCA Đầu tiên, gs

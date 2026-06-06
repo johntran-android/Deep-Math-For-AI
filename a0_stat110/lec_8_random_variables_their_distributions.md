@@ -256,11 +256,11 @@
 
 <a id="node-201"></a>
 
+<p align="center"><kbd><img src="assets/c3d9731b3834f5f284758daa02e67fa0334468e7.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/6096c8df841d04d09140f738c28ce15b8c45b02d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/749ccfc9fc056d3584b741cd1ad6ac27099c310a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c3d9731b3834f5f284758daa02e67fa0334468e7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì công thức này Σk=0:n (n choose k)*p^k*q*(n-k) chính là **(p+q)^n** theo **BINOMIAL THEOREM** (**ĐỊNH LÝ NHỊ THỨC**)
@@ -371,9 +371,9 @@
 
 <a id="node-204"></a>
 
-<p align="center"><kbd><img src="assets/48d49a004b2e490827a7cec7f1ff3449252a9d19.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c36432a3f235b536a094f8fdca8cce544f093da1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/48d49a004b2e490827a7cec7f1ff3449252a9d19.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > P(X+Y=k) = Σ j P(X+Y=k|X=j)*P(X=j)
@@ -665,9 +665,9 @@
 
 <a id="node-215"></a>
 
-<p align="center"><kbd><img src="assets/51dacf5b4731452358cd0e2dc6eb3584cb76e8da.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/414913e8c04e439033ecd1620b7aab0e726edc00.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/51dacf5b4731452358cd0e2dc6eb3584cb76e8da.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì khái quát hơn, gs cho **bài toán Marble**: có b bi đen, w bi trắng. Câu

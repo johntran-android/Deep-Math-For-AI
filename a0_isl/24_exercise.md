@@ -88,9 +88,9 @@
 
 <a id="node-117"></a>
 
-<p align="center"><kbd><img src="assets/89d8ad30ee962002d40e875eec6bf0982188c7d4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c7c0b9ef9695d4acfd3bb13ffb3177c222a99365.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/89d8ad30ee962002d40e875eec6bf0982188c7d4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nói rõ thêm câu d: Để match tốt với "ground truth" decision

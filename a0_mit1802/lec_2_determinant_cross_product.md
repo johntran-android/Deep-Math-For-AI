@@ -277,9 +277,9 @@
 
 <a id="node-21"></a>
 
-<p align="center"><kbd><img src="assets/997ec54220d6d9e6c1c87f8d72134e74aad62a29.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/05301c1a3d84ecc50dfdd64468bdd3682fea5178.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/997ec54220d6d9e6c1c87f8d72134e74aad62a29.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và **ứng dụng của cross product của A, B (kí hiệu là AxB)** chính là:

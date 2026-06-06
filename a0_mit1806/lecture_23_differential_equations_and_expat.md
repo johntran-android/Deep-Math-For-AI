@@ -198,9 +198,9 @@
 
 <a id="node-774"></a>
 
-<p align="center"><kbd><img src="assets/a419e6eb346cb86b2364acf0b04fedd2093e43c3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fb85ad8bcfdd2a41cad4b7dc19fc32e9cbcb0970.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a419e6eb346cb86b2364acf0b04fedd2093e43c3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta sẽ check xem có đúng u1(t) = **e^(λ1t)*x1** là solution
@@ -562,13 +562,13 @@
 
 <a id="node-794"></a>
 
+<p align="center"><kbd><img src="assets/37a67fffc19816ccd4cc86b883b17243335f5962.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/4b2e3918ca88c3657fafb621f8aa5313e1607e24.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/21aef97496085f31844652eaa1f23ced6c27897b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7d06ccfd2a1b060031c7b50955088f29f03d9720.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/37a67fffc19816ccd4cc86b883b17243335f5962.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LECTURE 23: DIFFERENTIAL EQUATIONS AND EXP(AT)](untitled.md#node-804)
 
@@ -797,9 +797,9 @@
 
 <a id="node-805"></a>
 
-<p align="center"><kbd><img src="assets/df1a0630c6bcc02a23f38752e04b41638bee63f8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/276c53a315a84a9f4712ec90c551176ec57f4b52.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/df1a0630c6bcc02a23f38752e04b41638bee63f8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và sau đó với dạng khái quát này, ta trả lời lại câu hỏi **khi

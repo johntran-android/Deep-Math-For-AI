@@ -18,9 +18,9 @@
 
 <a id="node-142"></a>
 
-<p align="center"><kbd><img src="assets/28216963e6d8d2b26805b72fe053df945adac616.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6673b61b88cd80d212481922991b1b57bd20dc37.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/28216963e6d8d2b26805b72fe053df945adac616.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đầu tiên là xét một biến rời rạc (discrete) X (như đã nói, trong notebook
@@ -169,9 +169,9 @@
 
 <a id="node-146"></a>
 
-<p align="center"><kbd><img src="assets/055b0b132c1dfdac3315657f252354fcbb4eb067.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fe2a2a36997b6faa184926c8c47029b492d159a1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/055b0b132c1dfdac3315657f252354fcbb4eb067.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì, nãy giờ ta đang định nghĩa, hay hiểu khái niệm entropy theo góc 
@@ -345,9 +345,9 @@
 
 <a id="node-150"></a>
 
-<p align="center"><kbd><img src="assets/40fdd1a641232eaaea0336849b08d1c2fd7d5e1d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/64c074ad2ac3cf83308ed2673607a411918e12c5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/40fdd1a641232eaaea0336849b08d1c2fd7d5e1d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì khi phân phối f(x) mà có vài đỉnh, tức là xác suất tập trung xung quanh
@@ -380,9 +380,9 @@
 
 <a id="node-151"></a>
 
-<p align="center"><kbd><img src="assets/6ac689be56673544964ff15a869f8058b15f25e0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/299e189a22fc8d93d410886b536ab4650bcf9605.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6ac689be56673544964ff15a869f8058b15f25e0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ở đây chính là gs đặt ra bài toán này: maximize entropy.
@@ -628,9 +628,9 @@
 
 <a id="node-152"></a>
 
-<p align="center"><kbd><img src="assets/e554cbb95f6a5205436a43f431924651a79f43d0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/309022961a669702b55eddcfd7c722c8e44f88cc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e554cbb95f6a5205436a43f431924651a79f43d0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, ta sẽ mở rộng qua trường hợp khi X là biến liên tục. Khi đó, như đã biết,
@@ -742,9 +742,9 @@
 
 <a id="node-154"></a>
 
-<p align="center"><kbd><img src="assets/7ff60e988c0292113c3c9ee1c4fd9b419f345abe.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/87857d0eb6193bdd483f0010d8d0b372c8614123.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7ff60e988c0292113c3c9ee1c4fd9b419f345abe.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là như phần trước ta đã chứng minh distribution rời rạc có entropy cao
@@ -970,9 +970,9 @@
 
 <a id="node-156"></a>
 
-<p align="center"><kbd><img src="assets/afad6233908c40f05c56027cbde3394a786f57a8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0df0ccf3c9be1dcc00a6d2287593599d49dcf594.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/afad6233908c40f05c56027cbde3394a786f57a8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cuối cùng ta được học một khái niệm nữa, đại khái là xét một joint distribution
@@ -1081,9 +1081,9 @@
 
 <a id="node-158"></a>
 
-<p align="center"><kbd><img src="assets/7c30f77a4a3ec5e2a416f7555ff6133dd489467f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1dc08cde38f588bbb18fa9530cd41eebf77bdfe7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7c30f77a4a3ec5e2a416f7555ff6133dd489467f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì đại ý là tiếp theo ta sẽ đi chứng minh rằng LK(p||q) sẽ không âm, và chỉ

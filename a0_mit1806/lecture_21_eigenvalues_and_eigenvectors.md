@@ -210,9 +210,9 @@
 
 <a id="node-692"></a>
 
-<p align="center"><kbd><img src="assets/a77b1eb6f50835bb2f9f4bc226b3dcccd1885feb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7e511d6a540452231726f5c7854298d13fd43e9b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a77b1eb6f50835bb2f9f4bc226b3dcccd1885feb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs: Đúng vậy, ta có thể thấy hai eigenvectors với

@@ -332,9 +332,9 @@
 
 <a id="node-101"></a>
 
-<p align="center"><kbd><img src="assets/0a7ab4d3fc14a6bc9e6075cad52e2eea7a623e0c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/951427dda076f68ca28515beeb86290187f193f9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0a7ab4d3fc14a6bc9e6075cad52e2eea7a623e0c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Phần này đã hiểu rồi
@@ -343,9 +343,9 @@
 
 <a id="node-102"></a>
 
-<p align="center"><kbd><img src="assets/aad53ff40694d18940a58d033501ca23ef054dbf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2e096671b1399f3416f8d6d42df96259e7c0cfc4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/aad53ff40694d18940a58d033501ca23ef054dbf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU
@@ -366,9 +366,9 @@
 
 <a id="node-104"></a>
 
-<p align="center"><kbd><img src="assets/bd1a916e571c1fb96e48f04e26d9048e271fc81f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a8d645708b353c9283e298b8f43bc66b8ac1a5f0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bd1a916e571c1fb96e48f04e26d9048e271fc81f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ví dụ này rất hay,minh họa cho cái vừa nói. Đại khái xét T và S đều là

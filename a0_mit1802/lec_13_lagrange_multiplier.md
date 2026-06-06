@@ -330,9 +330,9 @@
 
 <a id="node-294"></a>
 
-<p align="center"><kbd><img src="assets/c94e7260606b334042addbe65f44fac36015c1bb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/dbc7cf9590655636b8d0874c99fa7bba852debe6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c94e7260606b334042addbe65f44fac36015c1bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > hình ảnh cho thấy điều đó, 1 solution là (sqrt3, sqrt3) 
@@ -354,9 +354,9 @@
 
 <a id="node-296"></a>
 
-<p align="center"><kbd><img src="assets/7df491b0038f1948387205c937dfcd3b0fb9baa6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/34f1c5018caf9031aa0bcebec9480718ed31bade.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7df491b0038f1948387205c937dfcd3b0fb9baa6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, tại constrained min/max (là hai điểm (sqrt3, sqrt3) và (-sqrt3,

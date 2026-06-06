@@ -110,9 +110,9 @@
 
 <a id="node-209"></a>
 
-<p align="center"><kbd><img src="assets/fc00d99610193eeb1f00076706bf9f04847072d3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0827bba0ba881cf99fc565d6f5f6e9bb2cd3a551.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fc00d99610193eeb1f00076706bf9f04847072d3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là một ví dụ minh họa cho nhận định rằng tuy bất đẳng thức
@@ -239,9 +239,9 @@
 
 <a id="node-212"></a>
 
-<p align="center"><kbd><img src="assets/f16d8850a4fca53176f93fcf38d347ec05f8e511.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8d41696a7949a124c9004ec888e59cc40ec1fe26.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f16d8850a4fca53176f93fcf38d347ec05f8e511.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là gs cho biết có một loạt các identities dựa trên integration by part.
@@ -303,9 +303,9 @@
 
 <a id="node-213"></a>
 
-<p align="center"><kbd><img src="assets/5f2afc1f151167b7717d258281785309fb637857.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/91f6f4293864c119ba8a82ce01ac03dc618738de.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5f2afc1f151167b7717d258281785309fb637857.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU

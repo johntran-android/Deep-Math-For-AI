@@ -752,9 +752,9 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 <a id="node-1074"></a>
 
-<p align="center"><kbd><img src="assets/e09bb4558758f63ae0a622ce1901947d2254b177.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/84a8849e275338288beb1e711904b8acb6a189ff.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e09bb4558758f63ae0a622ce1901947d2254b177.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Hiểu đại khái là tăng Dev set để nó phản ánh

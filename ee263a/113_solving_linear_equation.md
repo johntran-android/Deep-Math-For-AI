@@ -61,9 +61,9 @@
 
 <a id="node-63"></a>
 
-<p align="center"><kbd><img src="assets/0f061eb4ee04145ec100c8cf5c5db020e731de7e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/99975682cab859cc84eaf4d0ee397b6b1b7292f3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0f061eb4ee04145ec100c8cf5c5db020e731de7e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta có thể tính complexity của back substitution là n^2.

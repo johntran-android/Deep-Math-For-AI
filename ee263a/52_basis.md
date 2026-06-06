@@ -20,9 +20,9 @@
 
 <a id="node-17"></a>
 
-<p align="center"><kbd><img src="assets/e61e6d945dc5fe4536183a61dacbae3fea2546bf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/03f72f3f7c0a64ec348cf6c471dc8bf810b9c01e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e61e6d945dc5fe4536183a61dacbae3fea2546bf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta sẽ dựa vào independence - dimension inequality để chứng minh

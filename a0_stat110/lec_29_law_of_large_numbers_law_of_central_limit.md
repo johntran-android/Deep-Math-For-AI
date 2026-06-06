@@ -5,9 +5,9 @@
 ---
 <a id="node-877"></a>
 
-<p align="center"><kbd><img src="assets/36cbd83876b23144b13c7d644de6e34692142fcd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8423fc2a2fac23d89d936f47a6fe63e1f7217a08.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/36cbd83876b23144b13c7d644de6e34692142fcd.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Bài này ta sẽ học về **hai** **luật** **quan trọng nhất trong xác suất** theo gs.

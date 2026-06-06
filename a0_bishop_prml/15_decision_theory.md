@@ -241,9 +241,9 @@
 
 <a id="node-116"></a>
 
-<p align="center"><kbd><img src="assets/51d1bb21d9e200f13d92f4183ff21f9b8f692526.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5ce8cf390b2d4eb7ed721733558bf7efe42cd2c2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/51d1bb21d9e200f13d92f4183ff21f9b8f692526.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, cùng tìm hiểu sao ông Bishop nói dễ thấy là cái rule mà sẽ giúp ta giảm thiểu
@@ -639,9 +639,9 @@
 
 <a id="node-120"></a>
 
-<p align="center"><kbd><img src="assets/716d3c525b029fbeba6014906a56caf2c42c33ce.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6042c9481eddc6670360912cb3f54e07fad6180a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/716d3c525b029fbeba6014906a56caf2c42c33ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Quay lại đây, trong bối cảnh machine learning, gs Bishop giới thiệu về cách tiếp
@@ -942,9 +942,9 @@
 
 <a id="node-123"></a>
 
-<p align="center"><kbd><img src="assets/2bbe0abe4d9b56da91cf525031096b51d8c79a0f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a1e3712d245508f45be86a726cfccc200225786e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2bbe0abe4d9b56da91cf525031096b51d8c79a0f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Như vậy đến đây ta đã hiểu là cái optimal decision rule đó là:
@@ -977,9 +977,9 @@
 
 <a id="node-124"></a>
 
-<p align="center"><kbd><img src="assets/d9def9387d98a616750a6b298afbe623a6b03818.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/544c304360ad25a9e3f3da3689ccb1c517fcfcfa.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d9def9387d98a616750a6b298afbe623a6b03818.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, như ta đã thấy vừa rồi, cái decision rule / hay classifier tối ưu xét theo
@@ -1051,9 +1051,9 @@
 
 <a id="node-126"></a>
 
-<p align="center"><kbd><img src="assets/b78606c3dd716321513e8385bfdb6e2c48cdd2a6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/48d2b2fb3bdafb9fe8292971a60e154db46f19b1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b78606c3dd716321513e8385bfdb6e2c48cdd2a6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái gs nói là bữa giờ ta đang tiếp cận bài toán classification theo hai
@@ -1153,9 +1153,9 @@
 
 <a id="node-130"></a>
 
-<p align="center"><kbd><img src="assets/fbee5581e24dbbe6a2c0b611821153cd55983710.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0e5e5ef8b66da5fe05798a7bdc7df75b7a9e2857.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fbee5581e24dbbe6a2c0b611821153cd55983710.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Bàn một chút về ưu nhược diểm của 3 cách làm này.
@@ -1179,9 +1179,9 @@
 
 <a id="node-131"></a>
 
-<p align="center"><kbd><img src="assets/6770520e6b9d5eea53f5ea36f8ca1f37780827d8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d595eacbaf31b8aa53c97d350f4f9f383e5a05ee.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6770520e6b9d5eea53f5ea36f8ca1f37780827d8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tuy nhiên, nếu như ta chỉ muốn làm bài toán classification thì việc học ra joint 
@@ -1215,9 +1215,9 @@
 
 <a id="node-132"></a>
 
-<p align="center"><kbd><img src="assets/1098de16646aa71a6a777b54d6033cb0e4d0985a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/840de2f3b8d4eb446e9abaafd4add8cc29a1c76a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1098de16646aa71a6a777b54d6033cb0e4d0985a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Với c, tuy vậy, ta sẽ ko có posterior,  mà cái này thì rất hữu dụng.
@@ -1289,9 +1289,9 @@
 
 <a id="node-134"></a>
 
-<p align="center"><kbd><img src="assets/af092b7e2174655d56fcf9ada3b7803c15b07ff8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/55244556e3f8a4e4ca310fc1b7657e979564c425.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/af092b7e2174655d56fcf9ada3b7803c15b07ff8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, một công dụng nữa của cách tiếp cận posterior là ta giải quyết một bài
@@ -1354,9 +1354,9 @@
 
 <a id="node-136"></a>
 
-<p align="center"><kbd><img src="assets/76dfd43ed8e3254d646ad24bf925cd156408d3d1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f0a1f03a94e7bd2908d8ca537fc813ac315a0eac.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/76dfd43ed8e3254d646ad24bf925cd156408d3d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một lựa chọn phổ biến cho loss trong regression problem là squared loss, L(t, y(**x**)) = (y(**x**)
@@ -1816,9 +1816,9 @@
 
 <a id="node-138"></a>
 
-<p align="center"><kbd><img src="assets/f1a25cb3bab4975301484d6b16e7784218583524.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2263abf42cd2b5e67bb7275b3ff0ebf5fa40c0ca.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f1a25cb3bab4975301484d6b16e7784218583524.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cũng tương tự như classification problem, cũng có các approaches:
@@ -1835,9 +1835,9 @@
 
 <a id="node-139"></a>
 
-<p align="center"><kbd><img src="assets/9430a51c0b3b376dcc7ff520603f21b8a971b904.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b47cd1943e1be8b19411e9b3bb991d4d44ba4cbb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9430a51c0b3b376dcc7ff520603f21b8a971b904.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cuối cùng, đại ý là, có những tình huống hàm squared loss sẽ cho ra

@@ -1337,9 +1337,9 @@
 
 <a id="node-620"></a>
 
-<p align="center"><kbd><img src="assets/7f0f1f2eeabcccacc5617630a1f14b49b002cc16.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6a3de3d6214f2a820cc00f2f1f772229a5e3b71c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7f0f1f2eeabcccacc5617630a1f14b49b002cc16.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, nếu các samples độc lập (mình hiểu là random variable X1,...Xn trong
@@ -1675,9 +1675,9 @@
 
 <a id="node-627"></a>
 
-<p align="center"><kbd><img src="assets/54f795f995e5c2070d232b8b14e0a0f9c1cd94d8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/659e16d9e81676fa85df7cabcd46e3429b623f23.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/54f795f995e5c2070d232b8b14e0a0f9c1cd94d8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ví dụ này sẽ minh họa cho tình huống mà ta thấy cái candidate estimator
@@ -2546,9 +2546,9 @@
 
 <a id="node-641"></a>
 
-<p align="center"><kbd><img src="assets/dc5eab5af32553269959597731b0c1f552fb5396.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c2c8ec288ab889f48840a45eb91709da42f6f7bb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dc5eab5af32553269959597731b0c1f552fb5396.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU
@@ -2593,9 +2593,9 @@
 
 <a id="node-642"></a>
 
-<p align="center"><kbd><img src="assets/9c62bec006e736466102aa8ea8483b8c0051959f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/535e657e973b57edc2ba931126a91497c6770718.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9c62bec006e736466102aa8ea8483b8c0051959f.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-510)
 
@@ -2713,9 +2713,9 @@
 
 <a id="node-644"></a>
 
-<p align="center"><kbd><img src="assets/bfdc0291786a121f3b8f092153a4adb4e525d0da.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/81aed8d9e03ef9aa65243df05a8daee8b226d858.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bfdc0291786a121f3b8f092153a4adb4e525d0da.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ở đây tác giả nhắc lại là với việc ta có Rao-Blackwell theorem nói rằng
@@ -2964,9 +2964,9 @@
 
 <a id="node-648"></a>
 
-<p align="center"><kbd><img src="assets/70b78669f2da45a7ab286be1cf32c7efbfb5557c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/77d5a81713d0427451ef764131787cce7df2582b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/70b78669f2da45a7ab286be1cf32c7efbfb5557c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, bữa giờ tiêu chí ta đánh giá một estimator là dựa trên MSE. (nhớ
@@ -3092,9 +3092,9 @@
 
 <a id="node-652"></a>
 
-<p align="center"><kbd><img src="assets/cd5f9b3808eec5c172e0bac8b795257dce247c79.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/aefb2d8da317d918b93dbe338ec34c2faf38346a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cd5f9b3808eec5c172e0bac8b795257dce247c79.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua ví dụ này, cho X1,...Xn là random sample từ Bern(p) distribution. Và xem
@@ -3154,9 +3154,9 @@
 
 <a id="node-654"></a>
 
-<p align="center"><kbd><img src="assets/727c53c927332311af56e1bbbc8871612c5158e8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/db8fe14918712f850f1d12f4102b2a512cebf812.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/727c53c927332311af56e1bbbc8871612c5158e8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, thế thì đại khái , cái kết quả vừa rồi R((μ, σ^2), δb(**X**)) = = [2b^2/(n-1) +
@@ -3209,9 +3209,9 @@
 
 <a id="node-655"></a>
 
-<p align="center"><kbd><img src="assets/bfea9abb2fe2d14f5c55d5dffab014406dd404a7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/51deab5726abc564cfb0b9672911f7c05a6f9fd3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bfea9abb2fe2d14f5c55d5dffab014406dd404a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua ví dụ này, ta tiếp tục xem xét việc estimate population variance σ^2, và
@@ -3689,9 +3689,9 @@
 
 <a id="node-661"></a>
 
-<p align="center"><kbd><img src="assets/cab06aee78e3f2286fda54589c2f32bdc0b3946a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fe49c75bdf2996a645009f930b810370ec32bd2a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cab06aee78e3f2286fda54589c2f32bdc0b3946a.png" width="100%"></kbd></p>
 
 🔗 **Related:** [7.2 METHOD OF FINDING ESTIMATORS](72_method_of_finding_estimators.md#node-582)
 

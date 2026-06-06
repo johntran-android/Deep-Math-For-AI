@@ -150,9 +150,9 @@
 
 <a id="node-651"></a>
 
-<p align="center"><kbd><img src="assets/c79502d887309b0174761584efb1f9cbe1ac2515.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d830c258881a33942bda8ee10406c4c292462439.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c79502d887309b0174761584efb1f9cbe1ac2515.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì do **Linearity**, ta đưa √2 ra ngoài để chỉ còn **E|Z|**. Và đến đây **chỉ việc dùng LOTUS**: 
@@ -213,11 +213,11 @@
 
 <a id="node-654"></a>
 
+<p align="center"><kbd><img src="assets/ba5413a4bae50ef98293be6af11f3d98f188a5a4.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/3b944258b5a02bab16d217e1691ebeb7935220a5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f264d6196a168ee4e548dd926bd6d61eb9f433b9.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ba5413a4bae50ef98293be6af11f3d98f188a5a4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo ta sẽ qua một trong hai **Multi-variate distribution** quan trọng là **Multinomial** (cái kia là **Multi-normal**).
@@ -247,9 +247,9 @@
 
 <a id="node-656"></a>
 
-<p align="center"><kbd><img src="assets/dbfc9bbf71cd25874a7fc54c90cc6cbdb101823b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f2792f228aef6a4414387c4b58726dea06f01f07.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dbfc9bbf71cd25874a7fc54c90cc6cbdb101823b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì với **Bin(n, p)** r.v **X chỉ là một NUMBER**, mang giá trị là **số Bern(p) trial success**.
@@ -354,9 +354,9 @@
 
 <a id="node-659"></a>
 
-<p align="center"><kbd><img src="assets/794b8bcacc2a76eaf97960cbddbf93846c5f20db.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cce230cfdd5d7dabab615141a0d8b6d46c333cb1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/794b8bcacc2a76eaf97960cbddbf93846c5f20db.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp sau khi có công thức **Joint PMF**. Ta sẽ thử tìm **Marginal PMF**
@@ -405,9 +405,9 @@
 
 <a id="node-663"></a>
 
-<p align="center"><kbd><img src="assets/5e5e2580ff893e53022d1038d461eee566d3e735.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8c34af239dda8165b1882704c4d180baed2418c3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5e5e2580ff893e53022d1038d461eee566d3e735.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo gs nói về một **Property** khác của **Multinomial**, gs lấy ví dụ **một đất nước** có **10 đảng phái** và ta có **n người dân**, mỗi
@@ -433,9 +433,9 @@
 
 <a id="node-664"></a>
 
-<p align="center"><kbd><img src="assets/a272b5affde3afb5d868f99a9b809c0a6f969cfa.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/934e42ff683e86e600264c5d5242ec4e75d5be3e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a272b5affde3afb5d868f99a9b809c0a6f969cfa.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo là một ví dụ nữa về **property** của **Multinomial distribution.**
@@ -491,9 +491,9 @@
 
 <a id="node-665"></a>
 
-<p align="center"><kbd><img src="assets/16ad75e5616683118f229e46360300573de275f8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/293564d91cb9125a49441d9f70089f6b2ced9bf4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/16ad75e5616683118f229e46360300573de275f8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Bài toán tiếp theo, ta sẽ biết về **Cauchy** **distribution**.
@@ -562,9 +562,9 @@
 
 <a id="node-669"></a>
 
-<p align="center"><kbd><img src="assets/c9a8f5a0685877679495d09e47474a574cb0b434.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0d64c928aba36e91b75ab0bfd15dfe00114c1b50.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c9a8f5a0685877679495d09e47474a574cb0b434.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 19: JOINT, CONDITIONAL AND MARGINAL DISTRIBUTION](untitled.md#node-608)
 
@@ -649,9 +649,9 @@
 
 <a id="node-672"></a>
 
-<p align="center"><kbd><img src="assets/75b54d30ec683e4f2907505f02228d40edba1f36.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d7fddca70e12b692890552455344e66f77decab0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/75b54d30ec683e4f2907505f02228d40edba1f36.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì, thay cái tích phân của x bằng **Φ(t|y|)**. 
@@ -714,9 +714,9 @@
 
 <a id="node-674"></a>
 
-<p align="center"><kbd><img src="assets/667adfa48002f806b6702295ab79eaa28ce485aa.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/84c858fd53b0a1f1a8a0d47b24bf40849f3c3f7c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/667adfa48002f806b6702295ab79eaa28ce485aa.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 22: TRANSFORMATIONS & CONVOLUTION](untitled.md#node-731)
 

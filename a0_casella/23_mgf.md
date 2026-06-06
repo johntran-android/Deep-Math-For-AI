@@ -52,9 +52,9 @@
 
 <a id="node-107"></a>
 
-<p align="center"><kbd><img src="assets/ac0cfe4f18055b3c8a6ded524eeffef755d03d33.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7d8520bce3618ecbbde6252ced58a050f7cf3abe.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ac0cfe4f18055b3c8a6ded524eeffef755d03d33.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta đã biết mean của Expo(λ) là λ. 
@@ -146,9 +146,9 @@
 
 <a id="node-108"></a>
 
-<p align="center"><kbd><img src="assets/a587cf1f983779eda041617a43f8ab9e6d14056a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d286a9122ec89cda31ea46b7b77f6d2818d6abef.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a587cf1f983779eda041617a43f8ab9e6d14056a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp là tính chất của variance, stat110 đã biết. Var(c + X) =
@@ -181,9 +181,9 @@
 
 <a id="node-109"></a>
 
-<p align="center"><kbd><img src="assets/9d5b597fd534388203233d3a13aca466fb2a5692.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9161ee9de020757b2b6b3444cf1916edbebc0e74.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9d5b597fd534388203233d3a13aca466fb2a5692.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thử tính Variance của X ~ Bin(n, p)
@@ -373,9 +373,9 @@
 
 <a id="node-111"></a>
 
-<p align="center"><kbd><img src="assets/47a16ee4e41c525fd03602883ed01b128fea34cf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2791058ec42b6b039e9b94ae4dfcc680c35f364f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/47a16ee4e41c525fd03602883ed01b128fea34cf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo là một theorem đã học trong stat110, đó là đạo hàm cấp n của mgf,
@@ -423,11 +423,11 @@
 
 <a id="node-112"></a>
 
+<p align="center"><kbd><img src="assets/e6de7d8038bdb0516c603179d6c1b031fef8f50e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/7963adeae42d265df60c50a3f555585db442257c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ada56edf9d26fe42d40275871969ae45582479e8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e6de7d8038bdb0516c603179d6c1b031fef8f50e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ví dụ này là cơ hội để ôn lại một cái đã học bên stat110. tính mgf của 
@@ -559,9 +559,9 @@
 
 <a id="node-114"></a>
 
-<p align="center"><kbd><img src="assets/287ab327a9f48e4caaec1f20d0ff037a42b6f077.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3650df334a3f94f69a2406b535471c580bae4182.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/287ab327a9f48e4caaec1f20d0ff037a42b6f077.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ko có gì khó hiểu, đại ý là gs nhắc lại tác dụng chính của mgf không phải chỉ
@@ -630,9 +630,9 @@
 
 <a id="node-117"></a>
 
-<p align="center"><kbd><img src="assets/3bcb322eb60f4bcdd6b19a3b19868c35efe4087f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/73c8088beb95dd8c64790d5264188436f1499f1c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3bcb322eb60f4bcdd6b19a3b19868c35efe4087f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là trong stat110 mình đã nghe gs nói về việc Bin(n, p) khi n lớn và
@@ -745,9 +745,9 @@
 
 <a id="node-118"></a>
 
-<p align="center"><kbd><img src="assets/8a3ba9aee8dfa5aaa74224352f891833452fdd6b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/82c41a7a180266ef7e04216c9e7ef86f4f1b1c80.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8a3ba9aee8dfa5aaa74224352f891833452fdd6b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Phần tiếp theo chính là gs Casella nói về cái công thức limit quan trọng
@@ -760,9 +760,9 @@
 
 <a id="node-119"></a>
 
-<p align="center"><kbd><img src="assets/8d7e47ee9d36d30edd6b316595d99df5972da477.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7d678aaa9d267a2e8e12c928ff73b8fad05ec201.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8d7e47ee9d36d30edd6b316595d99df5972da477.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-410)
 

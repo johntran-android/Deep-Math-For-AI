@@ -131,12 +131,12 @@ def main():
         for note in topic.findall('.//note'):
             if note.text:
                 nodes[node_id]['notes'].append(note.text)
-        for img in topic.findall('.//image'):
-            if img.get('name'):
-                nodes[node_id]['images'].append(img.get('name'))
         for emb_img in topic.findall('.//embedded-image'):
             if emb_img.get('name'):
                 nodes[node_id]['images'].append(emb_img.get('name'))
+        for img in topic.findall('.//image'):
+            if img.get('name'):
+                nodes[node_id]['images'].append(img.get('name'))
 
     root_node = None
     for node_id, node in nodes.items():

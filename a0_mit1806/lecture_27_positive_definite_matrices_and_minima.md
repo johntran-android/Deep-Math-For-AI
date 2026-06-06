@@ -489,9 +489,9 @@
 
 <a id="node-1000"></a>
 
-<p align="center"><kbd><img src="assets/a24d80e4b835a4454f9d5636368338b8cf819899.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b727cce83184559805974714d12a188bb41531a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a24d80e4b835a4454f9d5636368338b8cf819899.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ta sẽ **lần lượt xét các bài test** cho một matrix đủ
@@ -506,9 +506,9 @@
 
 <a id="node-1001"></a>
 
-<p align="center"><kbd><img src="assets/ca3afa56dca5d982313a82255091587e0ffe7ce3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a9a29147503661a280756fc1c798620fc24b7e03.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ca3afa56dca5d982313a82255091587e0ffe7ce3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo là các pivot, **pivot đầu là 2**. 

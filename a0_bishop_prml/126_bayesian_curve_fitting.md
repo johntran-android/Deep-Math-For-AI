@@ -394,9 +394,9 @@
 
 <a id="node-96"></a>
 
-<p align="center"><kbd><img src="assets/96d363db32d22dda02dcc9fd6727a6be040f90f9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c86c10e796f4dd608983e077ff93216ba5d75cf1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/96d363db32d22dda02dcc9fd6727a6be040f90f9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > hình ảnh minh họa predictive distribution.

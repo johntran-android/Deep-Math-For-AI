@@ -569,9 +569,9 @@ Describe the Reformer model
 
 <a id="node-3458"></a>
 
-<p align="center"><kbd><img src="assets/81f02f387877fd3b6e7ee2fb3527b6f401343d52.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/11315ec5e4b68a0f263e821be02ab3f951ddda49.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/81f02f387877fd3b6e7ee2fb3527b6f401343d52.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Starting on the right in the diagram above you see SelfAttention that is a 'traditional'
@@ -735,9 +735,9 @@ Describe the Reformer model
 
 <a id="node-3468"></a>
 
-<p align="center"><kbd><img src="assets/d1c652605faf07ba8db489bd7ce4ad4887fb7fe7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f24483603d02a73bc455d6e613b280fcd79560a9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d1c652605faf07ba8db489bd7ce4ad4887fb7fe7.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1319,9 +1319,9 @@ Describe the Reformer model
 
 <a id="node-3527"></a>
 
-<p align="center"><kbd><img src="assets/10468e030950bbba2c54811b36349c8f15a8c6a2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/42748653270219a3b04ac26c57bb4ed58665abd7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/10468e030950bbba2c54811b36349c8f15a8c6a2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Mỗi key ở trên ví dụ 'SNG0073.json' lại map với một dictionary.
@@ -1720,11 +1720,11 @@ Describe the Reformer model
 
 <a id="node-3563"></a>
 
+<p align="center"><kbd><img src="assets/cbf6fb13d37561760f0c6dfd640d5c3ac2ffa2a3.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/379f92a1f6372e0ac8f23d90ffeb1377099ee33e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6ab531fdb75d4a6778d5ae412c3094f4c4bb7add.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/cbf6fb13d37561760f0c6dfd640d5c3ac2ffa2a3.png" width="100%"></kbd></p>
 
 <br>
 

@@ -104,9 +104,9 @@
 
 <a id="node-61"></a>
 
-<p align="center"><kbd><img src="assets/0ed39cf03d10073ac2cc133ec2991adea0a0c56d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0a4b80ad38227622e6d874376431267777fca0de.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0ed39cf03d10073ac2cc133ec2991adea0a0c56d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một ví dụ, thực hiện thử nghiệm là **tung 3 đồng xu**. Và đặt ra một

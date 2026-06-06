@@ -308,9 +308,9 @@
 
 <a id="node-76"></a>
 
-<p align="center"><kbd><img src="assets/808d21ea2d885d1640dc58263d54a72be758bbb0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/170ec75d2651d78c061fa012f14ef66cd1d7ae67.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/808d21ea2d885d1640dc58263d54a72be758bbb0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Kết quả sau khi nhân lại với A ra I cho thấy đúng là nó

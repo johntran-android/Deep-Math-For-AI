@@ -164,9 +164,9 @@
 
 <a id="node-340"></a>
 
-<p align="center"><kbd><img src="assets/ac11c5c3410b7cb83289304f458dee72d81abb86.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cdcf3000fcc72c1c05ac1e8b6ce0e6620e59041f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ac11c5c3410b7cb83289304f458dee72d81abb86.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ổng nói là làm vậy để hiểu rằng **make giống như
@@ -325,9 +325,9 @@
 
 <a id="node-353"></a>
 
-<p align="center"><kbd><img src="assets/3ad19c1948651742a331fbce63476f354173eddc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93447686d2bd126ca0e95bad36736be7750c4a79.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3ad19c1948651742a331fbce63476f354173eddc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là bước **linking** này sẽ **link mọi machine
@@ -575,11 +575,11 @@
 
 <a id="node-374"></a>
 
+<p align="center"><kbd><img src="assets/3b41a45d51c7453aa0245a127239f922a56c988d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/dfad040e5c5538ff0efcbbd2e1b9c4a1d3e839d4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b7a2ba841f5663988d978bf538d219000b8fa9e0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3b41a45d51c7453aa0245a127239f922a56c988d.png" width="100%"></kbd></p>
 
 <br>
 
@@ -696,9 +696,9 @@
 
 <a id="node-386"></a>
 
-<p align="center"><kbd><img src="assets/4f801029dee3d46b47b631ff51e9ff182407945c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d1e44de38041de861e5e930a081d638f3aac1006.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4f801029dee3d46b47b631ff51e9ff182407945c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là nôm na thể hiện các variable trên memory grid, 
@@ -830,9 +830,9 @@
 
 <a id="node-397"></a>
 
-<p align="center"><kbd><img src="assets/1d3edbce7a176a92d5ec1377aefaa3483ffca70c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/eaedf4fddabd487db218b577ba81a870370a1716.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1d3edbce7a176a92d5ec1377aefaa3483ffca70c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ổng **define một function giúp tính average nhận argument là
@@ -931,9 +931,9 @@
 
 <a id="node-404"></a>
 
-<p align="center"><kbd><img src="assets/c574e1e299a833f6907ab67a7f65e0dfaa801806.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7bb44aa07be81451729406cb6e13c77f3e497caf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c574e1e299a833f6907ab67a7f65e0dfaa801806.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ổng nói tuy define N như vậy là ok, tuy nhiên **để best design**
@@ -951,13 +951,13 @@
 
 <a id="node-406"></a>
 
+<p align="center"><kbd><img src="assets/0b45713136ff4fc167468bc4c579d70fcf93768e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/08f8b63236e7911714f6a4f447c66bf54f4bd918.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/479f4647ec22f6dc3ed31fd162f4bdcf6fc31b7e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ef7d0ad3fda9370d2e59f9d0eaeecefb6bf9e87f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0b45713136ff4fc167468bc4c579d70fcf93768e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Mỗi **char** chiếm **1 byte = 8 bits** bộ nhớ. Nhớ lại, dựa
@@ -1029,9 +1029,9 @@
 
 <a id="node-412"></a>
 
-<p align="center"><kbd><img src="assets/941e0053cb58d267f6bb238769b7b293648b11f6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/15d8da7a76af853ed264f3c6f9818117e90839be.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/941e0053cb58d267f6bb238769b7b293648b11f6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tuy nhiên nó **tự thêm một byte** mang giá trị = 0 (0000000) ở
@@ -1052,11 +1052,11 @@
 
 <a id="node-413"></a>
 
+<p align="center"><kbd><img src="assets/badd44e8877b0f8c56c5edf737f9d7dbc28fd8e9.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/c4f99e6c80ac98a7c39abe12d8779c986aa15d24.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3b5f0aea258f87ab386881d2ea75f8a501d84aca.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/badd44e8877b0f8c56c5edf737f9d7dbc28fd8e9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **"\\0"** gắn với ASCII = **0** = **00000000**
@@ -1138,9 +1138,9 @@
 
 <a id="node-420"></a>
 
-<p align="center"><kbd><img src="assets/51113c29545be8b0bf745372702c24ef805470af.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4edf1774fc17ae1b067f68bd2a15eb283ec1dc9c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/51113c29545be8b0bf745372702c24ef805470af.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1180,9 +1180,9 @@
 
 <a id="node-425"></a>
 
-<p align="center"><kbd><img src="assets/06eb4051ed0e761b7b95f20c4df0e80f7a0e850f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5c6d2d7a723911847ac6a9f0fa6a139d75552bd8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/06eb4051ed0e761b7b95f20c4df0e80f7a0e850f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Trong memory nó sẽ như thế này: 
@@ -1221,9 +1221,9 @@
 
 <a id="node-428"></a>
 
-<p align="center"><kbd><img src="assets/27a2bcaa92badb843b1a73e0b4285cc8be1a106a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/90d36ad4f4428053487b1796559eab6eee4de0ae.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/27a2bcaa92badb843b1a73e0b4285cc8be1a106a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái ổng nói có nhiều người đã
@@ -1251,9 +1251,9 @@
 
 <a id="node-431"></a>
 
-<p align="center"><kbd><img src="assets/665924928caf2cee3fd786504bd478a42c427e6e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e04fd371c6969e355b66fb2a36bf887b62e232c3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/665924928caf2cee3fd786504bd478a42c427e6e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tương tự có thư
@@ -1263,9 +1263,9 @@
 
 <a id="node-432"></a>
 
-<p align="center"><kbd><img src="assets/3b45e995821f0d8a92d5da7f5d06feb46492ae81.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cf146cb7d0041ece14e8d7ee6ee86bc62cdaae53.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3b45e995821f0d8a92d5da7f5d06feb46492ae81.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Khá hay ho
@@ -1294,9 +1294,9 @@
 
 <a id="node-433"></a>
 
-<p align="center"><kbd><img src="assets/e3724c9d930b5af5c078c71ca484354164ec0c29.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/402bbfd4583b3c158a7cf29eedfcb61e06d489d6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e3724c9d930b5af5c078c71ca484354164ec0c29.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ổng nói **<ctype.h>** người ta đã **hỗ trợ các function
@@ -1423,9 +1423,9 @@
 
 <a id="node-442"></a>
 
-<p align="center"><kbd><img src="assets/18ee704325ea2dccc08fd4165259d709d4b654bc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/52424cab8e18dcea86dcd575b0f3d3c27238f4fb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/18ee704325ea2dccc08fd4165259d709d4b654bc.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1466,9 +1466,9 @@
 
 <a id="node-448"></a>
 
-<p align="center"><kbd><img src="assets/762911281b5d5d6a9e728aecc9001dc83642e7be.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1ed153e06e01517a0ab38d0a3f14a0727028b2c3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/762911281b5d5d6a9e728aecc9001dc83642e7be.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cơ bản là **return number của function
@@ -1570,11 +1570,11 @@
 
 <a id="node-459"></a>
 
+<p align="center"><kbd><img src="assets/967424e0e935f4b4f57a445670f8c460ec6c104b.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/97b4d05b235a772b03eacccc94224d6324a1bd3d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/65ff228abecd2570e22260b5a1f890dae1629eff.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/967424e0e935f4b4f57a445670f8c460ec6c104b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và để giải mã ta sẽ làm ngược

@@ -64,9 +64,9 @@
 
 <a id="node-339"></a>
 
-<p align="center"><kbd><img src="assets/c7f5fc17dd96b0f8037dcaef0af45d5d1edf116f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f33e4ceb87919d3e9c62df28d74b29eb30f63c99.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c7f5fc17dd96b0f8037dcaef0af45d5d1edf116f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > VÀ ĐÂY LÀ ĐỊNH NGHĨA CỦA STATISTIC:
@@ -185,9 +185,9 @@
 
 <a id="node-342"></a>
 
-<p align="center"><kbd><img src="assets/4644e46422679cbc36ecf586f0599ccf7b506fb5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e2c0dd89af1833a2646f8923c67e192a2b6dd534.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4644e46422679cbc36ecf586f0599ccf7b506fb5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là bổ đề này nói rằng: Với random sample size n từ một population 
@@ -344,9 +344,9 @@
 
 <a id="node-344"></a>
 
-<p align="center"><kbd><img src="assets/a48ee1f27101f6a2e251de3a8d72488e10de55fc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/98329a135aada7e03abb3f48351d0bbb41301eb6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a48ee1f27101f6a2e251de3a8d72488e10de55fc.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-393)
 
@@ -696,11 +696,11 @@
 
 <a id="node-348"></a>
 
+<p align="center"><kbd><img src="assets/0e35cc9bc6eb3e68d2c7ed16380e491c8f21a06b.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/a4a5478a2d4ca12bf2ae0438fad5cdb22ab26e6d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1d85e5c526738892abdadc7d857b8ae31257c81f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0e35cc9bc6eb3e68d2c7ed16380e491c8f21a06b.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.6 GENERATING RANDOM SAMPLE](56_generating_random_sample.md#node-449)
 
@@ -970,9 +970,9 @@
 
 <a id="node-350"></a>
 
-<p align="center"><kbd><img src="assets/ec512df37acb373f6bd3380f06b2d2446ec2209d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/60f2c2297e7bc499b627cc65dcb607969ef3d3b5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ec512df37acb373f6bd3380f06b2d2446ec2209d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > còn khúc dưới ko có gì khó hiểu, vì ta đã hiểu vì sao có theorem này:
@@ -1164,9 +1164,9 @@
 
 <a id="node-353"></a>
 
-<p align="center"><kbd><img src="assets/37eadfcdbe93151eb07a9bb42eb7be5a65ce21d6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/73e095c64682bb52b8045a18077c9301498b6821.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/37eadfcdbe93151eb07a9bb42eb7be5a65ce21d6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, tiếp. Nhắc lại chút, ta đã ôn lại theorem nói rằng nếu X có pdf  f((x -
@@ -1350,9 +1350,9 @@
 
 <a id="node-354"></a>
 
-<p align="center"><kbd><img src="assets/e3ef9fc285757169fb660196cdd61fa8b2d03065.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9121b0d130e9efdb1d34bf9a707e56a52ab86a15.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e3ef9fc285757169fb660196cdd61fa8b2d03065.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.6 GENERATING RANDOM SAMPLE](56_generating_random_sample.md#node-449)
 

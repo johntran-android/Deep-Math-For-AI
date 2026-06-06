@@ -136,9 +136,9 @@
 
 <a id="node-113"></a>
 
-<p align="center"><kbd><img src="assets/74960f1131a6b64bce152cc6afe2e7190942c360.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f70e435327c1dbf30fa3158df393fa5c1bf3e76b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/74960f1131a6b64bce152cc6afe2e7190942c360.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta cũng làm quen một kí hiệu mới t^, chỉ **tangent unit vector** -

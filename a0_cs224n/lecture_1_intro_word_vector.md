@@ -180,9 +180,9 @@
 
 <a id="node-17"></a>
 
-<p align="center"><kbd><img src="assets/c9c2cd679320c0dae3dd622f69acae5cfa31f700.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f6be88038d9bdf42457ca92267dc7db714d0e88b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c9c2cd679320c0dae3dd622f69acae5cfa31f700.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ở đây ổng giải thích để **có thể hiểu đại khái là ý nghĩa của từng phần
@@ -322,11 +322,11 @@
 
 <a id="node-26"></a>
 
+<p align="center"><kbd><img src="assets/ca0d113a29d77482d5acabefd5b6362d3904db45.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/cd3273ecf24583e168a4e9ad16588339f45daa98.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/64b0282993d9db89f2e9462e813a6d20f856634a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ca0d113a29d77482d5acabefd5b6362d3904db45.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vế sau cũng không khó lắm, chỉ cần dùng chain rule với một số
@@ -352,17 +352,17 @@
 
 <a id="node-27"></a>
 
-<p align="center"><kbd><img src="assets/14b5a0344d057ef2f3a475a695bd2b01d0cdf086.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0023d1e4d11790ce9301789fbfc7aa1fbfdf8f76.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/14b5a0344d057ef2f3a475a695bd2b01d0cdf086.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-28"></a>
 
-<p align="center"><kbd><img src="assets/6b60f7887ed32785d5e5ba7a59ef9aa2602f7c10.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e861489150ec954faca5f9813fad41f89f53d635.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6b60f7887ed32785d5e5ba7a59ef9aa2602f7c10.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tại sao gọi là expectation, nhớ lại khái niệm expectation E f(x). Khi random variable x
@@ -503,9 +503,9 @@
 
 <a id="node-40"></a>
 
-<p align="center"><kbd><img src="assets/2d03553e0d6f9768685cb685c761003c91f01268.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/409e4b6b68c31d0594a22e1b364e8c6277582aef.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2d03553e0d6f9768685cb685c761003c91f01268.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > DLSpec: Đại khái là nói về **một kiến trúc đơn giản trước ra đời trước (skip-gram,

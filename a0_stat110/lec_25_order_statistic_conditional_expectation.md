@@ -102,9 +102,9 @@
 
 <a id="node-774"></a>
 
-<p align="center"><kbd><img src="assets/41e4d991196cb885683cbc07d5e4f8cb5d4c49b9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/727fbe0ebc74395433967920acddc3cd936fd191.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/41e4d991196cb885683cbc07d5e4f8cb5d4c49b9.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 22: TRANSFORMATIONS & CONVOLUTION](untitled.md#node-725)
 
@@ -215,9 +215,9 @@
 
 <a id="node-779"></a>
 
-<p align="center"><kbd><img src="assets/c1ade7a8c824c749dfda032595f95c8d8f42d9ff.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/839df11b58d094554e8a9f6590ad71cabbe79a09.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c1ade7a8c824c749dfda032595f95c8d8f42d9ff.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và cụ thể **distribution của chúng là gì**, thì với **t bằng cách nhân thêm và chia
@@ -321,9 +321,9 @@
 
 <a id="node-783"></a>
 
-<p align="center"><kbd><img src="assets/230e79caedd0d7b63ac731d0fb8340025d0316f1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2a51e5650026fc0f37e505362329e4e8344aed17.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/230e79caedd0d7b63ac731d0fb8340025d0316f1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy kết luận ta đã biết **normalizing** **constant** của **Beta(a,b)** là điều mà theo gs
@@ -465,9 +465,9 @@
 
 <a id="node-789"></a>
 
-<p align="center"><kbd><img src="assets/20d8829ff06427c5800c94e35d47839269deb28d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d93570d1c4325c02a6408b07cd5bcc80615f0514.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/20d8829ff06427c5800c94e35d47839269deb28d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ta qua **ORDER STATISTIC**, cụ thể là tìm hiểu **distribution** của **Order statistic**. Đầu tiên gs review một chút về

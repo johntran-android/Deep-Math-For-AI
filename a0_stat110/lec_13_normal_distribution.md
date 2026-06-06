@@ -155,11 +155,11 @@
 
 <a id="node-387"></a>
 
+<p align="center"><kbd><img src="assets/5e3a66ea8c0785ee12225cf6a184e572b5a90b95.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/a8230b3fd7be8f9015c6451b9e69434815d536d6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b58b481d9b147541aebf9e521c0b568c678ab54e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5e3a66ea8c0785ee12225cf6a184e572b5a90b95.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs quay lại nói rằng cái **Universality theorem** cũng **rất hữu ích**. Ví dụ như ta **có một CDF F(x)** như vầy F(x) = **1 - e^-x** (nó là một distribution quan trọng mà ta sẽ học sau - **Exponential (1)**). Và **ta muốn simulate (kiểu như sampling)**
@@ -213,9 +213,9 @@
 
 <a id="node-390"></a>
 
-<p align="center"><kbd><img src="assets/2cfeb09dc372050024352edf2e5102a8068c312c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fae593566c8e4f38e4a19d750f3506d389f07fe2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2cfeb09dc372050024352edf2e5102a8068c312c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ở đây gs quay lại **chính thức nói về** khái niệm **INDEPENDENT RANDOM VARIABLES**:
@@ -401,9 +401,9 @@
 
 <a id="node-400"></a>
 
-<p align="center"><kbd><img src="assets/3decb8ccad1b4307a0c281ee9fa98a538ed4bb36.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f1b2a638741cff8f1931731294f14ece894f6d8a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3decb8ccad1b4307a0c281ee9fa98a538ed4bb36.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là **tuy rằng không thể tìm được anti-derivative**, nhưng **vẫn có cách tìm tích phân** của bài toán này **không cần anti-derivative**
@@ -515,9 +515,9 @@
 
 <a id="node-405"></a>
 
-<p align="center"><kbd><img src="assets/f2c0e963892692e542038b4a74d8f1d3f418ac31.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d9515ab20d987f74120b63df3c502b55a50b8ccd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f2c0e963892692e542038b4a74d8f1d3f418ac31.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và bài toán bây giờ đã trở nên dễ hơn. Ta sẽ **tính tích phân với r trước**, đặt **u = r^2/2** thì **du = rdr**
@@ -573,13 +573,13 @@
 
 <a id="node-408"></a>
 
+<p align="center"><kbd><img src="assets/8a396365eed93826cf0c2d8e7f8a85bc41e89326.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/aee40de43a5f36474b39c1e46e91c3566a0bf441.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eb3c8f81edb6c563916af53b380bcb76a0d39c21.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/45f98a5107523f0413e60ad3a0c7afd17b16d40b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8a396365eed93826cf0c2d8e7f8a85bc41e89326.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1  - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho ta n'th moment.  - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series  a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]  Nên 1/1-t chính là Tổng n=0:infinity t^n với |t| < 1  Thế thì theo gs, từ đây cho phép ta KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ N LÀM GÌ CHO MỆT, mà chỉ cần ĐỌC NÓ RA THÔI  Cụ thể là ta đã biết ở bài trước rằng, n'th moment = đạo hàm cấp n của M(t) (là coefficient của (t^n / n!) khi expand M(t) theo Taylor series tại 0)  Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ CHÍNH LÀ N'TH MOMENT  Do đó ta sẽ nhân thêm n! và chia n! để có (t^n / n!). Như vậy cái lòi ra làm coefficient của t^n/n! ở đây là n! CHÍNH LÀ N'TH MOMENT.  Từ đó cho phép ta ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!  N'TH MOMENT CỦA EXPO(1) E(X^n) = n!  -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.  Trong khi đó, nếu ta có MGF, để có nth moment, ta CHỈ CẦN TÍNH DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH PHÂN  -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ): E[Y^n] = n! / λ^n  - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0  - MGF CỦA POIS(λ) = e^[λ(e^t-1)]  - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~ Pois(λ+µ)](tóm_tắt_tính_mgf_mt_của_expo1_11_t_t_1_khi_đã_có_mgf_như_bài_trước_ta_đã_biết_các_lí_do_mà_mgf_quan_.md#node-576)
 
@@ -663,9 +663,9 @@
 
 <a id="node-413"></a>
 
-<p align="center"><kbd><img src="assets/177ffb6ad502a4803ce7f7757059c9bb0c0c9f50.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3c0f5e22a2589ecb5b5555fbb664170c432ec6d2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/177ffb6ad502a4803ce7f7757059c9bb0c0c9f50.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  - TÍNH UNIVERSALITY CỦA UNIFORM PART 2:  Nếu X ~ F thì F(X) ~ U(0,1)  -  Cách hiểu đúng về F(X) với F(x) = 1 - e^-x phải là bỏ X vào x ở đây để có F(X) = 1 - e^-X  - Áp dụng vào có thể dùng F(X) để xem thử nó có tuân theo Uniform hay không, nếu không thì có thể có gì đó không đúng  - Áp dụng khác là giúp ta simulating các observed data ~ F, bằng cách sampling từ U(0,1) và bỏ vào function Finv  - Tính chất symmetry của Uniform. Đó là, nếu U ~ Uniform (0,1) thì 1-U cũng ~ Uniform (0,1)  - ĐỊNH NGHĨA CỦA INDEPENDENT R.VS DỰA TRÊN CDF  P(X1 ≤ x1, X2 ≤ x2, ... Xn ≤ xn) = P(X1 ≤ x1)*P(X2 ≤ x2)*..... P(Xn ≤ xn) thì Xj  sẽ independent VỚI MỌI x1, x2,...xn  - Với discrete random variable thì cũng tương tự, nhưng ta sẽ làm với PMF:  Các X1, X2...Xn sẽ gọi là independent nếu:  JOINT PMF P(X1=x1, X2=x2...Xn=xn) = P(X1=x1)*P(X2=x2)*...P(Xn=xn) (tích các PMF)  - Ví dụ để cho thấy tại sao pair-wise independent không đủ để kết luận independent.   Cho X1, X2 là ~ Bern(0.5) và i.i.d và X3 = X1+X2. Xét từng cặp thì biết thằng này không giúp biết thằng kia ⇨ pair-wise independent nhưng xét bộ 3 thì biết X1, X2 biết ngay X3 ⇨ Nếu chỉ dựa vào pair-wise indepedent thì không đủ kết luật cả đám independent  - Standard Normal distribution:  Thường dùng chữ Z để kí hiệu cho Normal distribution r.v  Gs cho rằng ta chỉ cần biết là f(z) có công thức này c*e^(-z^2/2),  - Chứng minh NORMALIZING CONSTANT là c = 1/√2π  - pdf: (1/√2π) e^-z^2/2  - CHỨNG MINH X ~ N(0,1) EX = 0 DỰA VÀO SYMMETRY  - CHỨNG MINH X ~ N(0,1) VarX = 1  - Φ(z) = tích phân từ -infinity tới x của [e^(-t^2/2)dt]](tóm_tắt_tính_universality_của_uniform_part_2_nếu_x_f_thì_fx_u01_cách_hiểu_đúng_về_fx_với_fx_1_e_x_ph.md#node-407)
 

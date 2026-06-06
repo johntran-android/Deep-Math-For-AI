@@ -5,9 +5,9 @@
 ---
 <a id="node-28"></a>
 
-<p align="center"><kbd><img src="assets/31e7c4791d93f23c5221c5a550daa123a54a50e9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/024cb8fc11b57870c027d4aa672b24cfb0268011.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/31e7c4791d93f23c5221c5a550daa123a54a50e9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là nói về **lí do ta phải quan tâm cái này (phương pháp đếm)** là vì
@@ -122,9 +122,9 @@
 
 <a id="node-33"></a>
 
-<p align="center"><kbd><img src="assets/98f3337a0cc93a4af77fe510e104e71b1fffa3c2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2b475e3e2ccc6b4fba262dcb6e5b6e01163e24b6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/98f3337a0cc93a4af77fe510e104e71b1fffa3c2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Trong case cuối, **có hoàn lại** và **không quan tâm thứ tự**. Thì, ta sẽ kiểu như có các

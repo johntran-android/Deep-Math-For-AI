@@ -308,9 +308,9 @@
 
 <a id="node-220"></a>
 
-<p align="center"><kbd><img src="assets/78ac5527d0f8113d6c4259ca5a3f9ad8961c8287.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c73bc064d41be87f898bc7aac2f4a529e6b5ba5e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/78ac5527d0f8113d6c4259ca5a3f9ad8961c8287.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Lấy ví dụ này, f(x) = 3x - x^3. f'(x) dễ thấy là 3-3x^2, ta thấy có thể

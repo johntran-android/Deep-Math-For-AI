@@ -493,9 +493,9 @@
 
 <a id="node-514"></a>
 
-<p align="center"><kbd><img src="assets/0fb514f6eb80392d5682da690b87062d547fbf37.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5949f4029711ebaeb2d3d363af7d389b2f9d6bf1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0fb514f6eb80392d5682da690b87062d547fbf37.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ổng làm cái code nhập tên vào và nó search khi match
@@ -518,9 +518,9 @@
 
 <a id="node-515"></a>
 
-<p align="center"><kbd><img src="assets/15df024813fb12050ee5154e272e33ddbaf71b70.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/01460e40c49717063c3b9b51d32313a099a7f552.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/15df024813fb12050ee5154e272e33ddbaf71b70.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Do đó ổng nói sẽ tốt hơn nếu ta **connect những data liên
@@ -610,11 +610,11 @@
 
 <a id="node-523"></a>
 
+<p align="center"><kbd><img src="assets/3cdd1afcee7103faa7e48a01a1737acce107f6ea.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/89aba0983fd2fdbce36eaf568465cb34ac60b0df.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5b17fbac6aa4b0e6b5ebcb2b9b1700da407c46f3.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3cdd1afcee7103faa7e48a01a1737acce107f6ea.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **Selection Sort**: Rất đơn giản, cho l**oop đến khi sort xong.**
@@ -993,9 +993,9 @@
 
 <a id="node-554"></a>
 
-<p align="center"><kbd><img src="assets/f8c1490a6b7645c2376fe90463a81f3a50f9fedd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2fb0e151eaabd69d2b48550052c9d369abb8fe97.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f8c1490a6b7645c2376fe90463a81f3a50f9fedd.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái ổng v**iết đoạn code để in kim tự tháp**
@@ -1005,9 +1005,9 @@
 
 <a id="node-555"></a>
 
-<p align="center"><kbd><img src="assets/5718cf9ed7cb06f3bb98b60bca0f2758d1f282df.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/05fd45f79918b048cc5ba79c1603244f43a3329e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5718cf9ed7cb06f3bb98b60bca0f2758d1f282df.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Xong ổng viết theo kiểu này, trong function
@@ -1132,21 +1132,21 @@
 
 <a id="node-565"></a>
 
+<p align="center"><kbd><img src="assets/4f512e2cf3d40ac7fd45e75103528d6a2a6bf480.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/e4fa2b73c0cca315a2226125a9d7046660a6c245.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8fc136be091722dea54515fc95bb20b873703de8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/4f512e2cf3d40ac7fd45e75103528d6a2a6bf480.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-566"></a>
 
+<p align="center"><kbd><img src="assets/63f88dc360d4a4f745041c1d1d5032ab0495486a.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/7bf98130174425263b4bccc34f98ac36b47f062a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e10a7ad7bb290da739db31e739e96d0f84fa6585.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/63f88dc360d4a4f745041c1d1d5032ab0495486a.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1221,6 +1221,8 @@
 
 <a id="node-570"></a>
 
+<p align="center"><kbd><img src="assets/b4ebae6b5f6d8812b541fd21b1212451557e30a2.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/e03eeed7a1c13e5dcf556eb94213614e141c1c10.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/112893efc7eca18d8013883991b966100ee5c28c.png" width="100%"></kbd></p>
@@ -1228,8 +1230,6 @@
 <p align="center"><kbd><img src="assets/0be3c2a911870e4e16efb0f163dc7ce2ab8dfd14.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cd3dceb8f2bec71a29c1d1dc2ce5c102deed10ea.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b4ebae6b5f6d8812b541fd21b1212451557e30a2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tương tự

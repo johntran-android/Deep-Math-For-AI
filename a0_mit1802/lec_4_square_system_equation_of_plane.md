@@ -324,9 +324,9 @@
 
 <a id="node-74"></a>
 
-<p align="center"><kbd><img src="assets/787e2f5a5515853d1aeba8d44ece2055dd20fa23.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ea82204a51762e2299c02d6a3a200848b373d052.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/787e2f5a5515853d1aeba8d44ece2055dd20fa23.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ta xét trường hợp A invertible. Khi đó tồn tại Ainv, nên Ax = 0
@@ -349,9 +349,9 @@
 
 <a id="node-75"></a>
 
-<p align="center"><kbd><img src="assets/8c3f08a877d2f68824ad20ecaec1a21e9f68441c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f68225447e9964b1aed239456bf9e47ff2d5e4c7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c3f08a877d2f68824ad20ecaec1a21e9f68441c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gs nói qua khi det = 0, có thể hiểu det A chính là det của matrix của 

@@ -149,9 +149,9 @@
 
 <a id="node-436"></a>
 
-<p align="center"><kbd><img src="assets/71890bebbde9264e9956ff1865234526662580d6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/43d10d188daf3d1699bf9ef7269b6682fa8a22b4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/71890bebbde9264e9956ff1865234526662580d6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại ý là n-gram train rất nhanh so với neural net, và giả sử cần predict từ
@@ -167,9 +167,9 @@
 
 <a id="node-437"></a>
 
-<p align="center"><kbd><img src="assets/1513032b001d32decd206c08d8e8c207f0daf2c7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bf117e69ecc3e54170c179be9247a6ffda4fc315.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1513032b001d32decd206c08d8e8c207f0daf2c7.png" width="100%"></kbd></p>
 
 <br>
 

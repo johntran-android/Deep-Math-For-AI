@@ -286,9 +286,9 @@
 
 <a id="node-18"></a>
 
-<p align="center"><kbd><img src="assets/ea17cfef6723e53c15d586d2fd3bc95d16a9047f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2fd9cd36587bde0c98b3e0ba82d41a31bee52851.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ea17cfef6723e53c15d586d2fd3bc95d16a9047f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, cũng dễ hiểu, như đã nói, mục đích cuối cùng là xây dựng
@@ -383,9 +383,9 @@
 
 <a id="node-21"></a>
 
-<p align="center"><kbd><img src="assets/cc88175fa4d2fe19a567fd13bd90768651bd04ea.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c9bd72bc6662291b33af988cf28e4dd04b512667.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cc88175fa4d2fe19a567fd13bd90768651bd04ea.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, gs nói ta có thể có cái nhiều sâu hơn giúp trả lời thắc mắc vừa rồi
@@ -481,9 +481,9 @@
 
 <a id="node-23"></a>
 
-<p align="center"><kbd><img src="assets/f4f82db746c3bd18c13da28f89164c7030e80e6c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7384d36afec08b97ed38f4637875dbb983b9dcdf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f4f82db746c3bd18c13da28f89164c7030e80e6c.png" width="100%"></kbd></p>
 
 🔗 **Related:** [1.2.5 Curve fitting re-visited.](untitled.md#node-89)
 
@@ -552,9 +552,9 @@
 
 <a id="node-26"></a>
 
-<p align="center"><kbd><img src="assets/a68d6a80dfe07bfd865fdeea5240706702101f18.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/588f12e4f3ce0ee4a66a8f6e7373559e0446e770.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a68d6a80dfe07bfd865fdeea5240706702101f18.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Biểu đồ cho thấy tác động "chống" overfit: λ tăng dần, mô hình đi từ nơi 

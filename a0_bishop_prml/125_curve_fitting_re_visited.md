@@ -60,9 +60,9 @@
 
 <a id="node-83"></a>
 
-<p align="center"><kbd><img src="assets/0ed859c518eee65d39d284ee4ae47c2725f523f7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/58bf94392f8760a644c123ae2588f5c727ff1542.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0ed859c518eee65d39d284ee4ae47c2725f523f7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Như vậy, với góc nhìn này, dựa trên x,
@@ -267,9 +267,9 @@
 
 <a id="node-86"></a>
 
-<p align="center"><kbd><img src="assets/792751aefb4edf3afff1cd4d2ca63b7dfe6d0f4b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6a64887f1ef6e8a8c158b7599424a08ad5ca95e5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/792751aefb4edf3afff1cd4d2ca63b7dfe6d0f4b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > minimize_w (1/2) Σi [ti-y(xi,w)]^2

@@ -55,9 +55,9 @@
 
 <a id="node-100"></a>
 
-<p align="center"><kbd><img src="assets/ffe6dcb6d16d5a822ca6371bf0c72482d12d7247.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b4aae82797392e5f982e13d2d754e3bf5eecc686.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ffe6dcb6d16d5a822ca6371bf0c72482d12d7247.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là nói về bối cảnh mà giả sử ta có quá ít data. Nên nếu chia làm 3 bộ

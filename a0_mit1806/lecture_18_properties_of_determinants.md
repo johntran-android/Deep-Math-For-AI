@@ -232,9 +232,9 @@
 
 <a id="node-586"></a>
 
-<p align="center"><kbd><img src="assets/879f29a47b6443b4198b6f160e52b0f8d00e8c60.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fb075e0a2ec3acf6346775ad7fa7664f863d7021.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/879f29a47b6443b4198b6f160e52b0f8d00e8c60.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gs lấy ví dụ, cho matrix A, và ta sẽ trừ row 2 cho 2 * row 1
@@ -455,9 +455,9 @@
 
 <a id="node-599"></a>
 
-<p align="center"><kbd><img src="assets/671975ad1eb67a8b2c99a2a7c00198f99e272e52.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5c8032349f8fa5ad79291fcfe7f712bffe1a2ac2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/671975ad1eb67a8b2c99a2a7c00198f99e272e52.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và ta có thể thấy lấy ví dụ A là matrix **upper triangular** như

@@ -84,9 +84,9 @@
 
 <a id="node-292"></a>
 
-<p align="center"><kbd><img src="assets/467b107360aac63daac6dd3c3a1d6969b39a8efd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/31420dcfab2b741d85ac1c07c558894d5f9cfcbe.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/467b107360aac63daac6dd3c3a1d6969b39a8efd.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và ta nhớ công thức tích thể tích bể nước V = (1/3)πr^3

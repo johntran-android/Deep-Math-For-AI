@@ -121,9 +121,9 @@
 
 <a id="node-637"></a>
 
-<p align="center"><kbd><img src="assets/dd8e7c83af78b3e4067e2eed6327194e9c5233ac.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/17e5953b8751b880fbcc34403ead80bf37ded99b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dd8e7c83af78b3e4067e2eed6327194e9c5233ac.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Trong phần 2.12 Deep Learning Yoshua Bengio có chứng minh rằng
@@ -242,9 +242,9 @@
 
 <a id="node-641"></a>
 
-<p align="center"><kbd><img src="assets/747df71face636f91bac51bcd3a7935d4974e879.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9d317becb4aa536428acd3329133f6538a0823cd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/747df71face636f91bac51bcd3a7935d4974e879.png" width="100%"></kbd></p>
 
 <br>
 
@@ -383,9 +383,9 @@
 
 <a id="node-651"></a>
 
-<p align="center"><kbd><img src="assets/2cfaab52c3ee2f881d562876924d154bdcfbb7d2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/992c455d6d5a032df557083df00f20d82041ff1d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2cfaab52c3ee2f881d562876924d154bdcfbb7d2.png" width="100%"></kbd></p>
 
 <br>
 
@@ -510,9 +510,9 @@
 
 <a id="node-658"></a>
 
-<p align="center"><kbd><img src="assets/cf2463e588ddb4e1f39955a6b1cbf13c9c67d426.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8d5847f3eb4d7bf733bb37bb44e5fd4f470b4e98.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cf2463e588ddb4e1f39955a6b1cbf13c9c67d426.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > (Xem câu cuối) các independent random variable thì
@@ -558,9 +558,9 @@
 
 <a id="node-661"></a>
 
-<p align="center"><kbd><img src="assets/38989ff65ab346cd00c3d4f2dee12793eadd3bf4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/33462e475f26da273ec2cd707477588600929506.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/38989ff65ab346cd00c3d4f2dee12793eadd3bf4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là ở đây có nhắc tới một phương pháp là **sparse initialization**, cách

@@ -5,9 +5,9 @@
 ---
 <a id="node-75"></a>
 
-<p align="center"><kbd><img src="assets/89ec7a66b5fc4f65bfb011ea3d0e7f89b6194f8a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d43c49bbb90770598f4eb9e2a0a7af309a29f215.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/89ec7a66b5fc4f65bfb011ea3d0e7f89b6194f8a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là pmf và pdf là nói về "**point probability**" ý là **xác xuất tại một điểm**

@@ -125,11 +125,11 @@
 
 <a id="node-182"></a>
 
+<p align="center"><kbd><img src="assets/811151f8cb18ec48f96cab430eddc3163b264b18.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/7ca4c8c2b41318d26522253845656ef9cb2f9c81.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/bc765d48e8f230ac0e07b5b0d70556c2d6332a15.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/811151f8cb18ec48f96cab430eddc3163b264b18.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo gs Bishop nói về việc hàm ln likelihood phụ thuộc vào x1,...xN thông
@@ -283,9 +283,9 @@
 
 <a id="node-183"></a>
 
-<p align="center"><kbd><img src="assets/8074c3de3cf2116989e78d64de1247504af59109.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2e35aeac3b15424d48b46a83eb5a294711e120dd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8074c3de3cf2116989e78d64de1247504af59109.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, thế thì binomial là gì thì stat110, Casella đã quá rành rồi, cái quan
@@ -544,9 +544,9 @@
 
 <a id="node-187"></a>
 
-<p align="center"><kbd><img src="assets/3e21d71d103568eab893de88226869097503c891.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e27e55835ecb957259ff035d26c6e3e9bdda9a31.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3e21d71d103568eab893de88226869097503c891.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > kết quả này nãy mình đã hiểu rồi khi đã cho thấy posterior chính là β(Σxi+a,
@@ -562,11 +562,11 @@
 
 <a id="node-188"></a>
 
+<p align="center"><kbd><img src="assets/031a707acaa3b12b13acac0d8bd9835fb1e0569a.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/55e6cff5fee92d84bd4625bad17617ee0105c769.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eca2ea0689d9ab0a4fea39e1bac2a87c3f6d132a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/031a707acaa3b12b13acac0d8bd9835fb1e0569a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, bắt đầu với prior là β(a,b) để rồi posterior là β(a+số observed success
@@ -731,9 +731,9 @@
 
 <a id="node-191"></a>
 
-<p align="center"><kbd><img src="assets/b80fb0aab768640228bc4a1e1d70a178e6eeb4e7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e6677ee917bd860a6a08bf0a253ba18686471c50.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b80fb0aab768640228bc4a1e1d70a178e6eeb4e7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > kết quả 2.20 chính là mean của posterior, là một β(a+m, b+l) như mình vừa nói
@@ -771,9 +771,9 @@
 
 <a id="node-192"></a>
 
-<p align="center"><kbd><img src="assets/34f0fc43459d8fe47a5b05a5a5bcc242280aca6d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ed8ba0903c9424709b24edd2a2ecaf1f5c3b395a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/34f0fc43459d8fe47a5b05a5a5bcc242280aca6d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, dựa vào hình 2.2, ta có thể thấy khi số lượng quan sát tăng lên,

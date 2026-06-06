@@ -293,9 +293,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1328"></a>
 
-<p align="center"><kbd><img src="assets/7bbfe71a60520b0b0ec7cca22ebed4cfd73aa048.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/929a5471b9abe6745def5bdf69b97ea61190e6fd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7bbfe71a60520b0b0ec7cca22ebed4cfd73aa048.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái nó giống như apply 1 fully connected cho mỗi position của volumn (nhìn hình sẽ hiểu).
@@ -347,11 +347,11 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1332"></a>
 
+<p align="center"><kbd><img src="assets/f0defa5a474b9d605ea2af4e86da678ffc2ea041.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/a4008aacd3ef1bfc8b893131e26c40a954cc1f9e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9990b4ec5ce0f513b4f5252fafab21ea01353e01.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f0defa5a474b9d605ea2af4e86da678ffc2ea041.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tại sao lại nhân 5x5x192 đã hiểu: Mỗi lần convol là nó tính 5x5 phép
@@ -500,11 +500,11 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1344"></a>
 
+<p align="center"><kbd><img src="assets/b5976e3aea5a1458c5c234b6e442f98fa1f9acbb.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/b1b43d9f6c1733849ca5dc6ee387261b2e30fe26.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e5b4d7ed8495a4a44395b014ce2a626240f6ec1c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b5976e3aea5a1458c5c234b6e442f98fa1f9acbb.png" width="100%"></kbd></p>
 
 <br>
 
@@ -534,11 +534,11 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1347"></a>
 
+<p align="center"><kbd><img src="assets/d225263a9f602bf94604c0f75592488fb3e2e00f.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/ef87e00030f0829a38ffbec54b07d55048a97114.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/115f607577c6d2c77df6a9bfab0be51e42a8d707.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d225263a9f602bf94604c0f75592488fb3e2e00f.png" width="100%"></kbd></p>
 
 <br>
 
@@ -985,9 +985,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1388"></a>
 
-<p align="center"><kbd><img src="assets/21d5d98791ebb71143a60694803cd944561c59a3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b7f9dad35b79b6a05bbc3b8cc1512798edc5633b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/21d5d98791ebb71143a60694803cd944561c59a3.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1099,9 +1099,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1404"></a>
 
-<p align="center"><kbd><img src="assets/a4421f160ea60f08721c7cb4f6e80fedd93f7d66.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9f77c74cd70635bb2de1ad40369d698e6e38bfa0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a4421f160ea60f08721c7cb4f6e80fedd93f7d66.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1147,9 +1147,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1411"></a>
 
-<p align="center"><kbd><img src="assets/8d4d2b2b007417ac390513366abe5e99bc03cb4b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9721f24a23668ea42639b6c8b82dcd234c875b1b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8d4d2b2b007417ac390513366abe5e99bc03cb4b.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1185,9 +1185,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1417"></a>
 
-<p align="center"><kbd><img src="assets/e9d411c110740cdf5f8e0964cafc2c01866db0b3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/afdff13b3ea2277c7132392bde6e27d57517e1c9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e9d411c110740cdf5f8e0964cafc2c01866db0b3.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1461,9 +1461,9 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 <a id="node-1451"></a>
 
-<p align="center"><kbd><img src="assets/b1d65288d384ff642a0bf6ec7648a3fdcc9f1d4d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e7bc3da140871fafeffbe725a9c5b4c60963183e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b1d65288d384ff642a0bf6ec7648a3fdcc9f1d4d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là nói lại về MobileNet v2 building block

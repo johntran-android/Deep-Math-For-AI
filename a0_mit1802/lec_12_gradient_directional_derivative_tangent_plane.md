@@ -73,11 +73,11 @@
 
 <a id="node-247"></a>
 
+<p align="center"><kbd><img src="assets/2f34723ce9dbbb7a990546f18a43e39a60560d53.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/15dac8a3aae4840d79f7dda580f8524ea61e33e4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cb5d6e3c27b9f7ebd90624859e86bf3dc09d4a60.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/2f34723ce9dbbb7a990546f18a43e39a60560d53.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 13: LAGRANGE MULTIPLIER](untitled.md#node-281)
 
@@ -123,9 +123,9 @@
 
 <a id="node-249"></a>
 
-<p align="center"><kbd><img src="assets/56d33633c8a39b023bc3cfea40ddcaa8c8e67f2e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/43d47fe824c7f12d6f9556cc9d152dfc89e36a15.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/56d33633c8a39b023bc3cfea40ddcaa8c8e67f2e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ thứ 2, xét hàm 2 biến **w = x^2 + y^2**.
@@ -150,9 +150,9 @@
 
 <a id="node-250"></a>
 
-<p align="center"><kbd><img src="assets/83baad7b5186e5b5742bc98205de60ff15f6059c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a798b4e44f2f730fbcb07e2ef343e1228eee39fb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/83baad7b5186e5b5742bc98205de60ff15f6059c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > hình ảnh trên máy tính cho thấy, gradient vector tại một
@@ -259,9 +259,9 @@
 
 <a id="node-255"></a>
 
-<p align="center"><kbd><img src="assets/6608dba05a1a1bb91225f1cfe66534c6d9a78112.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/dc04bd538631100a8262d3e251eab294e9760498.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6608dba05a1a1bb91225f1cfe66534c6d9a78112.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > minh họa ở đây, **tại một điểm** trong level surface, điều trên **đúng với mọi
@@ -334,9 +334,9 @@
 
 <a id="node-259"></a>
 
-<p align="center"><kbd><img src="assets/9186e952a00b32ec1bd45381cf2b27dc2c48bcb2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bf541226d1f9ed0edf43d47ef6e3dbe3ce01aa2c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9186e952a00b32ec1bd45381cf2b27dc2c48bcb2.png" width="100%"></kbd></p>
 
 🔗 **Related:** [Như vậy ta hiểu là trong 1801 implicit differentiation là ta apply d/dx vào hai vế, mà ý nghĩa CHÍNH LÀ LẤY ĐẠO HÀM THEO X HAI VẾ.   y = f(x) => (d/dx) y = (d/dx) f(x) <=> \\*dy/dx = f'(x)\\*  Còn 18.02 thì implicit differentiation thể hiện bằng cách  LẤY VI PHÂN HAI VẾ  y = f(x) <=> \\*dy = f'(x) dx\\*  Và chúng cùng bản chất, chẳng qua cách thể hiện theo vi phân  sẽ chuẩn bị cho ta bước qua khái niệm VI PHÂN TOÀN PHẦN (TOTAL DIFFERENTIAL)](untitled.md#node-226)
 
@@ -480,9 +480,9 @@
 
 <a id="node-263"></a>
 
-<p align="center"><kbd><img src="assets/758635aeaed883fdb0dc840ff40e14dff11ac1d9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/85268b807c9aa1c7ffd1804c531a58adbbeef965.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/758635aeaed883fdb0dc840ff40e14dff11ac1d9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì, ta có **position vector r** và nó sẽ được tham số hóa theo biến **s** - **distance**: là bởi

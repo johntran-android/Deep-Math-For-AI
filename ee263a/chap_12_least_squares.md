@@ -303,11 +303,11 @@
 
 <a id="node-85"></a>
 
+<p align="center"><kbd><img src="assets/7a8753773f785f0343773748fe6806dd90403736.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/62e2f1691ec92e0a63b17e593c8b7a027cbd14a0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a8fe0f6307d803844cf8e4a6c4d930cac6076820.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7a8753773f785f0343773748fe6806dd90403736.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Phần này đại khái là nói về cách giải least square problem dùng
@@ -493,11 +493,11 @@
 
 <a id="node-87"></a>
 
+<p align="center"><kbd><img src="assets/8b830fe10420f7b6e8a563f0a9dbeade4f3ef414.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/059333815771398e1fb79a53c6c470c3ebc04755.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7e0a14c529b414775fa99cf83f336b971de4582e.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8b830fe10420f7b6e8a563f0a9dbeade4f3ef414.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU
@@ -585,9 +585,9 @@
 
 <a id="node-89"></a>
 
-<p align="center"><kbd><img src="assets/fcd678166df9130ed8b0192cab9117d3f8c1b3e3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/55d7fde9986c8a23853257b6d5aafd87d7874e99.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fcd678166df9130ed8b0192cab9117d3f8c1b3e3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ở đây nói ta sẽ dựa vào QR factorizations để solve
@@ -613,17 +613,17 @@
 
 <a id="node-90"></a>
 
-<p align="center"><kbd><img src="assets/a1eaa5232ccb06fb0f54cc253f852e9ef5ca34d3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/31ada803fae8bc87338674f325535026dab60684.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a1eaa5232ccb06fb0f54cc253f852e9ef5ca34d3.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-91"></a>
 
-<p align="center"><kbd><img src="assets/365e0704c895f3e5909e20807f3f4a497a00c3a4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0997f0bdf7b86cfd16f899424d2516f762952229.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/365e0704c895f3e5909e20807f3f4a497a00c3a4.png" width="100%"></kbd></p>
 
 <br>
 

@@ -288,9 +288,9 @@
 
 <a id="node-22"></a>
 
-<p align="center"><kbd><img src="assets/84a35963d5bd1e6ff82e3b7616ecc29c9b45e2dc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a995f936ad82c99b99a6f8b017220da21d05612a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/84a35963d5bd1e6ff82e3b7616ecc29c9b45e2dc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Phần chứng minh nếu A có distinct eigenvalues thì các
@@ -380,11 +380,11 @@
 
 <a id="node-24"></a>
 
+<p align="center"><kbd><img src="assets/6dd9b3563a23ce8c8cc42c5b137da22b6dedc87c.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/9a37d012e66516a1e3569b5dbc75800b3ec665f4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b4622eeb864b4b04e12f13785e2bfabe35c87b8d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/6dd9b3563a23ce8c8cc42c5b137da22b6dedc87c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, phần này ta gặp lại similar matrix: Theorem nói rằng, xét matrix C (
@@ -514,9 +514,9 @@
 
 <a id="node-31"></a>
 
-<p align="center"><kbd><img src="assets/da97e87c4b02272681d4ab5da57098dbfe876236.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e6ee957291c89927a4d63651eeedff66236b8bf6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/da97e87c4b02272681d4ab5da57098dbfe876236.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Trong sách gs có nói rõ hơn một ý trong bài giảng liên quan đến

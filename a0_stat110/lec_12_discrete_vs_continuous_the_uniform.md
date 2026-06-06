@@ -48,9 +48,9 @@
 
 <a id="node-339"></a>
 
-<p align="center"><kbd><img src="assets/8c8518a9cb3f3ef4277aee43dfdc5f72c6f74da3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d02fe97927922dbff3f16ac8f01acd48bcc2a4aa.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c8518a9cb3f3ef4277aee43dfdc5f72c6f74da3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **Khác biệt** đầu tiên giữa discrete và continuous là. sự xuất hiện của **PDF**
@@ -66,9 +66,9 @@
 
 <a id="node-340"></a>
 
-<p align="center"><kbd><img src="assets/682a4e94cb01e61d84f34c184f72ee104085220a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d44aace4513c50a791d51c8854311a81a0967235.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/682a4e94cb01e61d84f34c184f72ee104085220a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Continuous **cũng có CDF** giống như discrete. Ta nhớ nó là
@@ -168,9 +168,9 @@
 
 <a id="node-347"></a>
 
-<p align="center"><kbd><img src="assets/0acc734406ce2514ce5d3ec221782801d1d0eb52.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b564416e44932359c5ca22809331d7dbb5bf349b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0acc734406ce2514ce5d3ec221782801d1d0eb52.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Như nãy, đã nói ta **có thể coi PDF** như **XÁC SUẤT PER SOMETHING**, ví dụ như **XÁC SUẤT PER
@@ -197,9 +197,9 @@
 
 <a id="node-349"></a>
 
-<p align="center"><kbd><img src="assets/488a42be2005faa3d1aa662b915eebe490c48362.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9a2303cf68c6e40208d49ecc74310b82a0c9f6cd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/488a42be2005faa3d1aa662b915eebe490c48362.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  - TÍNH UNIVERSALITY CỦA UNIFORM PART 2:  Nếu X ~ F thì F(X) ~ U(0,1)  -  Cách hiểu đúng về F(X) với F(x) = 1 - e^-x phải là bỏ X vào x ở đây để có F(X) = 1 - e^-X  - Áp dụng vào có thể dùng F(X) để xem thử nó có tuân theo Uniform hay không, nếu không thì có thể có gì đó không đúng  - Áp dụng khác là giúp ta simulating các observed data ~ F, bằng cách sampling từ U(0,1) và bỏ vào function Finv  - Tính chất symmetry của Uniform. Đó là, nếu U ~ Uniform (0,1) thì 1-U cũng ~ Uniform (0,1)  - ĐỊNH NGHĨA CỦA INDEPENDENT R.VS DỰA TRÊN CDF  P(X1 ≤ x1, X2 ≤ x2, ... Xn ≤ xn) = P(X1 ≤ x1)*P(X2 ≤ x2)*..... P(Xn ≤ xn) thì Xj  sẽ independent VỚI MỌI x1, x2,...xn  - Với discrete random variable thì cũng tương tự, nhưng ta sẽ làm với PMF:  Các X1, X2...Xn sẽ gọi là independent nếu:  JOINT PMF P(X1=x1, X2=x2...Xn=xn) = P(X1=x1)*P(X2=x2)*...P(Xn=xn) (tích các PMF)  - Ví dụ để cho thấy tại sao pair-wise independent không đủ để kết luận independent.   Cho X1, X2 là ~ Bern(0.5) và i.i.d và X3 = X1+X2. Xét từng cặp thì biết thằng này không giúp biết thằng kia ⇨ pair-wise independent nhưng xét bộ 3 thì biết X1, X2 biết ngay X3 ⇨ Nếu chỉ dựa vào pair-wise indepedent thì không đủ kết luật cả đám independent  - Standard Normal distribution:  Thường dùng chữ Z để kí hiệu cho Normal distribution r.v  Gs cho rằng ta chỉ cần biết là f(z) có công thức này c*e^(-z^2/2),  - Chứng minh NORMALIZING CONSTANT là c = 1/√2π  - pdf: (1/√2π) e^-z^2/2  - CHỨNG MINH X ~ N(0,1) EX = 0 DỰA VÀO SYMMETRY  - CHỨNG MINH X ~ N(0,1) VarX = 1  - Φ(z) = tích phân từ -infinity tới x của [e^(-t^2/2)dt]](tóm_tắt_tính_universality_của_uniform_part_2_nếu_x_f_thì_fx_u01_cách_hiểu_đúng_về_fx_với_fx_1_e_x_ph.md#node-414)
 
@@ -687,9 +687,9 @@
 
 <a id="node-376"></a>
 
-<p align="center"><kbd><img src="assets/9d0840978cc454ffac730de3602ef6c8e05fe601.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1b9c6b0d80492cb4e26e5fddd847aab46a92b018.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9d0840978cc454ffac730de3602ef6c8e05fe601.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ **U~Uniform(0,1)** tức **a=0,b=1**
@@ -773,9 +773,9 @@
 
 <a id="node-380"></a>
 
-<p align="center"><kbd><img src="assets/7ebb0a653dcf61d38154906639dd462b3e9637ee.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5d07a13f3ebde0a2469368b1b213c73ddeb6a22f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7ebb0a653dcf61d38154906639dd462b3e9637ee.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Để **chứng minh** đại khái là gs cho rằng **không có gì ghê gớm**, ta chỉ cần **bắt đầu với định nghĩa của CDF**:

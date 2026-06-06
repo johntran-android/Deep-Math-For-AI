@@ -624,11 +624,11 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1522"></a>
 
+<p align="center"><kbd><img src="assets/057d2e49cd4cfec3048d7eb3d2a6c1c0d9669e62.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/5b2fa647274d2c231e8d2a39b3218e8933f956df.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b5cab7206e41b244bc8290ed7bf9e5a693052664.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/057d2e49cd4cfec3048d7eb3d2a6c1c0d9669e62.png" width="100%"></kbd></p>
 
 <br>
 
@@ -811,9 +811,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1532"></a>
 
-<p align="center"><kbd><img src="assets/35ff373bc24145e0fc6a2a66c1671fb72faa0c34.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/97555f0cfdf06d2299e117dce0a6913559ff18a4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/35ff373bc24145e0fc6a2a66c1671fb72faa0c34.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > N.n phải output 1 matrix như này: mỗi pixel
@@ -823,9 +823,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1533"></a>
 
-<p align="center"><kbd><img src="assets/21a50b7b2957fa4e5867dbc14b4434c8f0335444.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c32648b31402366df7631dac6020b1db1fb875c0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/21a50b7b2957fa4e5867dbc14b4434c8f0335444.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là để làm segmentation phải thay mấy cái layer cuối theo kiểu
@@ -868,13 +868,13 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1537"></a>
 
+<p align="center"><kbd><img src="assets/10529b3126312eb57b5a907cdb69c14dbffb9c36.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/8041c0dc0e7a0c2eedef51b884230db45d29a57a.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ddb6628e7dc524f364ed848f5fb8e652b6757e10.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0d7c52835a4bf1533727bbf7b9ac329219e85160.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/10529b3126312eb57b5a907cdb69c14dbffb9c36.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1102,9 +1102,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1564"></a>
 
-<p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8c840e4b7d74dc6edbcce5e28bda5bee8a8bad17.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1f14c71e1f9b5e255de2dc4d40540815e4b69141.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là đi vòng vòng chụp hình, về vẽ **Bounding
@@ -1142,9 +1142,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1569"></a>
 
-<p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/eb2c2dac0233651ae7914de23d8e31e91fc83d73.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ff5fa6630f41e213a74ad99597d8531197083153.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là nếu trong lecture chỉ có 2 anchor box, và 3 class nên 
@@ -1192,9 +1192,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1571"></a>
 
-<p align="center"><kbd><img src="assets/e64208977b28dedcaf2baf5917299fbc823251a1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a28c3fe9b8d19727c9b8810c00ec5c59a464f0d8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e64208977b28dedcaf2baf5917299fbc823251a1.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1270,17 +1270,17 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1577"></a>
 
-<p align="center"><kbd><img src="assets/7cc8e0e1e77dfa7bc2ee8f4608c98cad6a7591c7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ff23d59054c8215e3b60a1d4aba4e17749894c03.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7cc8e0e1e77dfa7bc2ee8f4608c98cad6a7591c7.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1578"></a>
 
-<p align="center"><kbd><img src="assets/435d07acbffe7c8182cf3876f1e4556163cd4a09.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3e1554193fbcd0dd178c6c5d6db4a2c92ede8c06.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/435d07acbffe7c8182cf3876f1e4556163cd4a09.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1393,9 +1393,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1596"></a>
 
-<p align="center"><kbd><img src="assets/0b8ff95e26e04d05d6832022e5dc99645cbcf8f1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fa02d222725a88b0a203a9b15b568120c3e60edb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0b8ff95e26e04d05d6832022e5dc99645cbcf8f1.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1577,9 +1577,9 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1625"></a>
 
-<p align="center"><kbd><img src="assets/30d6677ee348e13e750b69aeef8e865779b9f950.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a9cb8856be1f1d1072d598ff9fb24b74077382e3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/30d6677ee348e13e750b69aeef8e865779b9f950.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1663,17 +1663,17 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1639"></a>
 
-<p align="center"><kbd><img src="assets/9a8b3c8c8677ba3a30cdd07db16906b1edad1035.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/aa2e9d6ed79d9110cef00679842ae5769df77f12.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9a8b3c8c8677ba3a30cdd07db16906b1edad1035.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1640"></a>
 
-<p align="center"><kbd><img src="assets/eee46ead1e0b7fe2953c19fd2f1becfb7d87de0b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9fbc98b8e2ef9598ee563395f22b4bd9a12970f4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eee46ead1e0b7fe2953c19fd2f1becfb7d87de0b.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1739,11 +1739,11 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 
 <a id="node-1651"></a>
 
+<p align="center"><kbd><img src="assets/11137b67fa44db6e8c2919e1d479337cd945ef79.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/860422273ff158cc6d240a54d928d710fdbfc96e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d92d63613f96558e4cda276e34c9a6ea78cdcb56.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/11137b67fa44db6e8c2919e1d479337cd945ef79.png" width="100%"></kbd></p>
 
 <br>
 

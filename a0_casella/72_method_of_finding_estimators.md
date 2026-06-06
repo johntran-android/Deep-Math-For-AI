@@ -25,9 +25,9 @@
 
 <a id="node-557"></a>
 
-<p align="center"><kbd><img src="assets/67d990be0a9e22eec1e7dd00c3718611ae47c34a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/009a67cc8afd2a0d7ca63ec55c687c3399049048.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/67d990be0a9e22eec1e7dd00c3718611ae47c34a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên là METHOD OF MOMENTS, tác giả cho biết, đây là một phương
@@ -183,9 +183,9 @@
 
 <a id="node-559"></a>
 
-<p align="center"><kbd><img src="assets/b7a2070727022cc3faf4b5bbb089dee764a9f8ad.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6296bee0af21c759c7d3faba2520933321039553.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b7a2070727022cc3faf4b5bbb089dee764a9f8ad.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua ví dụ này, X1,...Xn là iid binomial(k,p), như đã biết 
@@ -579,9 +579,9 @@
 
 <a id="node-567"></a>
 
-<p align="center"><kbd><img src="assets/04bea334ea030abd441626e83dc1cbef95cd3b0d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bbdbf6e90af8154a62f40faa43437acb393787d0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/04bea334ea030abd441626e83dc1cbef95cd3b0d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, xét ví dụ này, X1,...Xn là iid n(θ,1) và L(θ|**x**) là likelihood function. Mình
@@ -865,9 +865,9 @@
 
 <a id="node-569"></a>
 
-<p align="center"><kbd><img src="assets/621f572bef48b85aef75a4820c87a92f425e5048.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/aa1d20be116a76e4ce4bb85bdb7780f28fe5b31a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/621f572bef48b85aef75a4820c87a92f425e5048.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đây! Đây chính là gốc rễ của những loss function trong bài toán binary
@@ -1106,9 +1106,9 @@
 
 <a id="node-571"></a>
 
-<p align="center"><kbd><img src="assets/11da2b587ac07e4552db177301fb01937b523536.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/efc5dfa7e7bf7f4b35ab8e4893e5f95aad8023e4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/11da2b587ac07e4552db177301fb01937b523536.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua ví dụ này, Binomial MLE, nhưng tham số chưa biết lại là số lần thử
@@ -1235,9 +1235,9 @@
 
 <a id="node-572"></a>
 
-<p align="center"><kbd><img src="assets/ded51bbb74a5dea88585e9ed7eafca7406469272.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/96acafffe648a60907b825ba185301087f39269b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ded51bbb74a5dea88585e9ed7eafca7406469272.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đoạn này đại khái là, tác giả nói về một tính chất của MLE là tính bất biến
@@ -1414,9 +1414,9 @@
 
 <a id="node-576"></a>
 
-<p align="center"><kbd><img src="assets/3efc2c3a28e71bac740ab22c12082425794310b3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b385a4404953179ead955ff3e9630be1fd5b1e74.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3efc2c3a28e71bac740ab22c12082425794310b3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ví dụ này, ta có X1,..Xn là iid n(θ, σ^2) với cả θ và σ^2 chưa biết.
@@ -1552,9 +1552,9 @@
 
 <a id="node-578"></a>
 
-<p align="center"><kbd><img src="assets/36ccff44af93be68b551de3e51349af447bad937.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0f3c3ab96bb68b594ae4e7cff7dad23902075c94.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/36ccff44af93be68b551de3e51349af447bad937.png" width="100%"></kbd></p>
 
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-604)
 
@@ -1657,9 +1657,9 @@
 
 <a id="node-582"></a>
 
-<p align="center"><kbd><img src="assets/fa7ba1f6dd012166dc28bfc7b1acd261e2386e98.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6f2cd652df379c2b075e9ac4268b35506d3289f6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fa7ba1f6dd012166dc28bfc7b1acd261e2386e98.png" width="100%"></kbd></p>
 
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-661)
 
@@ -2379,9 +2379,9 @@
 
 <a id="node-592"></a>
 
-<p align="center"><kbd><img src="assets/aab0aee00d4f9d750d23ef1c2ce59ddbb6fa0b5e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b6ce5a8ccd8b0865210898384114b9629a0f9644.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/aab0aee00d4f9d750d23ef1c2ce59ddbb6fa0b5e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, đại ý là quay lại tiếp tục ví dụ 7.2.17 trong đó ta đã nói là ta thiếu dữ liệu

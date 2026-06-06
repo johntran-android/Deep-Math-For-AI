@@ -974,9 +974,9 @@ summarizer
 
 <a id="node-3019"></a>
 
-<p align="center"><kbd><img src="assets/1a36ff92dd7715357a69f1925f9ba117acd619cd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/caf23725606edbf0669ceff4115687b2e46e60a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1a36ff92dd7715357a69f1925f9ba117acd619cd.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1024,9 +1024,9 @@ summarizer
 
 <a id="node-3026"></a>
 
-<p align="center"><kbd><img src="assets/de84016ef140734dc7ec717ef702dd5f22fcf267.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/40475220d124e55b0ab5406c15a4d193573ad361.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/de84016ef140734dc7ec717ef702dd5f22fcf267.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **dk** chính là **length của key vector**, nhưng tất nhiên ta hiểu **cũng
@@ -1436,9 +1436,9 @@ summarizer
 
 <a id="node-3058"></a>
 
-<p align="center"><kbd><img src="assets/f7c93e392d9773b6d6bea32bf928b906668bd2a2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4d93163aaef9718b39c56c855a4c0c2ee58674c6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f7c93e392d9773b6d6bea32bf928b906668bd2a2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ghép lại hết để build Transformer language
@@ -1778,9 +1778,9 @@ summarizer
 
 <a id="node-3093"></a>
 
-<p align="center"><kbd><img src="assets/ee36d4c7ca4f1ce3386fbe46bb04fbb5b474a6d9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f535e5f7e87514c73b9499044e02fb57757e6bf3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ee36d4c7ca4f1ce3386fbe46bb04fbb5b474a6d9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > In thử batch thử 2 sẽ thấy nó có
@@ -1790,9 +1790,9 @@ summarizer
 
 <a id="node-3094"></a>
 
-<p align="center"><kbd><img src="assets/806bb4c43ca45354779796bc511ae488570f3f1a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3420ae75d1ef2e51a9017a36909b5e3270c0b581.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/806bb4c43ca45354779796bc511ae488570f3f1a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Như đã nói ở trên, **mask** giúp khi **tính loss**
@@ -1981,9 +1981,9 @@ summarizer
 
 <a id="node-3114"></a>
 
-<p align="center"><kbd><img src="assets/cadedaea9e2e0c7b0f7afd027cf010560e264b05.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0cedae901f7826df4786de474b6974ab769a4da0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cadedaea9e2e0c7b0f7afd027cf010560e264b05.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2001,11 +2001,11 @@ summarizer
 
 <a id="node-3117"></a>
 
+<p align="center"><kbd><img src="assets/bbfacb30a8c9547df67a7719fd49a6c27b03fd59.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/f3a9d6a3c9a28be4116753ed2828f794dc6873ec.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f7ae05a07a2374d070fb75c739d92fdc56c5602d.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/bbfacb30a8c9547df67a7719fd49a6c27b03fd59.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2056,9 +2056,9 @@ summarizer
 
 <a id="node-3124"></a>
 
-<p align="center"><kbd><img src="assets/6f9454801023273d36161cca25863387a4046f0b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a8aa4484d76fe5122b6a8b01e85e54feb6802d92.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6f9454801023273d36161cca25863387a4046f0b.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2088,9 +2088,9 @@ summarizer
 
 <a id="node-3129"></a>
 
-<p align="center"><kbd><img src="assets/1bd4838a88b59088beb11045c6d1e8d698391c7a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/37f804b1d235feecfd02579c1b5a6662356a32a5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1bd4838a88b59088beb11045c6d1e8d698391c7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cái kiểu của Trax nó hơi lạ,
@@ -2112,9 +2112,9 @@ summarizer
 
 <a id="node-3132"></a>
 
-<p align="center"><kbd><img src="assets/3568deeb27dc2bf02b99ac89e6e31d4029478110.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/03884a1c579ae002f2aba1132e872a1f50dbce01.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3568deeb27dc2bf02b99ac89e6e31d4029478110.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2126,9 +2126,9 @@ summarizer
 
 <a id="node-3134"></a>
 
-<p align="center"><kbd><img src="assets/4476d1af000355702cc486c9bfb9294127f0aa00.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f4b0b003837908d26c480ed3aa650af59d4db859.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4476d1af000355702cc486c9bfb9294127f0aa00.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > 1 Chỗ cần chú ý (lần đầu làm sai) là Cái Dense thứ 2
@@ -2181,9 +2181,9 @@ summarizer
 
 <a id="node-3142"></a>
 
-<p align="center"><kbd><img src="assets/f427574588cd27905dd7a1760b26cc8a59b6b25a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d7ebd9311cc2a227fef61d339b5244aa82fefafe.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f427574588cd27905dd7a1760b26cc8a59b6b25a.png" width="100%"></kbd></p>
 
 <br>
 

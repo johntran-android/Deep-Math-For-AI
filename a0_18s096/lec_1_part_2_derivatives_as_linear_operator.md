@@ -328,9 +328,9 @@
 
 <a id="node-35"></a>
 
-<p align="center"><kbd><img src="assets/2e1c4374d2cd98188e40d0a23dc900b7e41e2e75.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cc77583cceddf65b586dd0af0e19ce57c211fa37.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2e1c4374d2cd98188e40d0a23dc900b7e41e2e75.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gradient grad f = (A+AT)x

@@ -62,9 +62,9 @@
 
 <a id="node-493"></a>
 
-<p align="center"><kbd><img src="assets/576591f27fff38b6bde0079a51cb4eecbadeca3f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ca935e7646e7f31f1fec66d225cd63a6e48c252b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/576591f27fff38b6bde0079a51cb4eecbadeca3f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs: correct
@@ -177,9 +177,9 @@
 
 <a id="node-499"></a>
 
-<p align="center"><kbd><img src="assets/b3e8fd2159c607bd99be1bff6d62629d74008fca.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b3a52a121ce9b4bf3bce6caeecf025a54f9518e4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b3e8fd2159c607bd99be1bff6d62629d74008fca.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì gs cho rằng có 2 hình ảnh để ta **nghĩ về error**.
@@ -481,9 +481,9 @@
 
 <a id="node-518"></a>
 
-<p align="center"><kbd><img src="assets/f2ddf85869c9d94a811076b42fb523a7d6bb139b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/dd3f3709b5358b4470f06e45bfc172de943d01a9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f2ddf85869c9d94a811076b42fb523a7d6bb139b.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LECTURE 16: PROJECTION MATRICES AND LEAST SQUARES](untitled.md#node-508)
 

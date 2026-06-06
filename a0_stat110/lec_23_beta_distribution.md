@@ -46,9 +46,9 @@
 
 <a id="node-737"></a>
 
-<p align="center"><kbd><img src="assets/e55ac8f9af881ebf5c63debbce911f4588208801.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/74d9077ff4e3a235842642dcdb5d0f6f42fa8f56.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e55ac8f9af881ebf5c63debbce911f4588208801.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là gs nói qua về **một số ưu điểm** của Beta.
@@ -80,9 +80,9 @@
 
 <a id="node-738"></a>
 
-<p align="center"><kbd><img src="assets/51b32bf1c8c23f8deac910b50dd3130a71b6af44.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/11244eec45dd996bf04207449298fd1cab72c93c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/51b32bf1c8c23f8deac910b50dd3130a71b6af44.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là gs sẽ dùng ví dụ này để ta hiểu tính chất **Conjugate prior for Binomial.**
@@ -244,9 +244,9 @@
 
 <a id="node-742"></a>
 
-<p align="center"><kbd><img src="assets/7cebaf58403fc553012b23cc0e182f07c47676d9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d8170a6a80f2122cada29f9d4f5bcde7b4cdc590.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7cebaf58403fc553012b23cc0e182f07c47676d9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nhưng cách làm của nhà toán học Bayes là **KHÔNG CẦN DÙNG TÍCH PHÂN** (tích phân mà không dùng tích phân)

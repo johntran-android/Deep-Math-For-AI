@@ -144,9 +144,9 @@
 
 <a id="node-17"></a>
 
-<p align="center"><kbd><img src="assets/d7e2341df3c8bebe617f30c16f99c3fcc065be48.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/954cd78ec677b57ec487daf7384e4533b5ff345d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d7e2341df3c8bebe617f30c16f99c3fcc065be48.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì từ ví dụ vừa rồi kiểu như mình sẽ **tự hỏi làm sao để có một cách định

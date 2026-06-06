@@ -181,9 +181,9 @@
 
 <a id="node-750"></a>
 
-<p align="center"><kbd><img src="assets/f1a6df29fff0e8f88d90300ff5773ba5889ba8d1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a8be4fe808e9fd8f4d2381f8e92b175fabbd95a5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f1a6df29fff0e8f88d90300ff5773ba5889ba8d1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ở đây phân tích kĩ hơn vụ (khái niệm) parameter sharing. Như đã
@@ -409,9 +409,9 @@
 
 <a id="node-760"></a>
 
-<p align="center"><kbd><img src="assets/96b888ee138ab26958478fc509e7b6e01b50495b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/725a2871833240c65ae98847d80f5a63ed5dedc1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/96b888ee138ab26958478fc509e7b6e01b50495b.png" width="100%"></kbd></p>
 
 <br>
 

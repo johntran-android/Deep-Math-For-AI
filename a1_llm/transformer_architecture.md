@@ -85,11 +85,11 @@
 
 <a id="node-38"></a>
 
+<p align="center"><kbd><img src="assets/d595d044f69fea32fa414fa7b875c7b2ceee4828.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/584041963fd9ed60464ba8fc554cbe564d7962f3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c3249cbcb11b9b2c5e3293b2154afd7cda5320ee.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/d595d044f69fea32fa414fa7b875c7b2ceee4828.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Bằng cách tính ra các attention-weight kiểu như
@@ -218,9 +218,9 @@
 
 <a id="node-46"></a>
 
-<p align="center"><kbd><img src="assets/5f6033646ccf1576671283d8d5a7f8416a96bcfa.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e9bc9a7d196c792d0d1e90587f96848979287cbb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5f6033646ccf1576671283d8d5a7f8416a96bcfa.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Minh hoạ **embedding vector có độ dài 3** để **plot trong không gian 3D** minh họa việc
@@ -260,9 +260,9 @@
 
 <a id="node-49"></a>
 
-<p align="center"><kbd><img src="assets/3db08b810f885f2ea12e1b77fac54a39a4731fc1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ae576dee0c2d86808bb1cf63b24d41159fc2dccf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3db08b810f885f2ea12e1b77fac54a39a4731fc1.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tới đây **cơ chế Self-Attention** sẽ ra tay để **tính toán xào nấu** sao đó để tạo ra một tạm

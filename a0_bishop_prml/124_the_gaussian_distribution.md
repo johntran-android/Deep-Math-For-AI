@@ -592,9 +592,9 @@
 
 <a id="node-75"></a>
 
-<p align="center"><kbd><img src="assets/fefa582c537cf8c6b724760d5d980da23aebc7ac.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/58401a85c9a2e4609a427687d41190303755c006.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fefa582c537cf8c6b724760d5d980da23aebc7ac.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, thế thì, đã nhắc lại vài lần trong các note trước, trong Casella, ta đã biết
@@ -671,9 +671,9 @@
 
 <a id="node-77"></a>
 
-<p align="center"><kbd><img src="assets/926ec7d1bff90e723f10f4c760d40d06c0e6a8c3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9b2c9ee5dca1531b9b5f445362bff12ed5576bf0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/926ec7d1bff90e723f10f4c760d40d06c0e6a8c3.png" width="100%"></kbd></p>
 
 🔗 **Related:** [1.2.5 Curve fitting re-visited.](untitled.md#node-85)
 
@@ -977,11 +977,11 @@
 
 <a id="node-79"></a>
 
+<p align="center"><kbd><img src="assets/0b0bfd287b66416e61473c3c38a009c221dee665.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/42632cce16689be3b90b2b1325377be9ed34d9b5.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/250e573005abe9efc49f069976a73559dbde4457.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0b0bfd287b66416e61473c3c38a009c221dee665.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Như vừa nói, sumof (1/(n-1))Σi (Xi - Xbar), tức sample variance (theo sách

@@ -212,9 +212,9 @@
 
 <a id="node-169"></a>
 
-<p align="center"><kbd><img src="assets/60528abba8d6844c9380cb6dd7f9a47a51c3c944.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bfb4a0246a3309a122b1c6150c0537176e7f8229.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/60528abba8d6844c9380cb6dd7f9a47a51c3c944.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là, như ta còn nhớ, thuật toán Babylonian về cơ bản là

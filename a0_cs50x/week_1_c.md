@@ -364,25 +364,25 @@
 
 <a id="node-162"></a>
 
-<p align="center"><kbd><img src="assets/ba7cd19e27d5faa8bacb9778b5dcf5f2d1faf70e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c4f41fc080e1c1a2096bf12ed8219d9d596db1bc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ba7cd19e27d5faa8bacb9778b5dcf5f2d1faf70e.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-163"></a>
 
-<p align="center"><kbd><img src="assets/a3b90922a23371af3608d8ec14f4081289a8c1d6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/45a4f9d0c69fb174fe8e6e5e5f6d962c896d9c3f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a3b90922a23371af3608d8ec14f4081289a8c1d6.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-164"></a>
 
-<p align="center"><kbd><img src="assets/8d62816a3aca163dd7aef2e2c521490ebe62206b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8ff8d9b97e388a0cf95b86138439e4ead41cfa6d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8d62816a3aca163dd7aef2e2c521490ebe62206b.png" width="100%"></kbd></p>
 
 <br>
 
@@ -573,9 +573,9 @@
 
 <a id="node-184"></a>
 
-<p align="center"><kbd><img src="assets/36fea090b4accd293ee1bb333f9ce2d162fcfc52.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d491954cf69613f95a42c668a09e8750a6ecc968.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/36fea090b4accd293ee1bb333f9ce2d162fcfc52.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đến đây đại khái có thể **dùng Terminal gọi lệnh code compare.c** để
@@ -1081,9 +1081,9 @@
 
 <a id="node-234"></a>
 
-<p align="center"><kbd><img src="assets/3f23b604e2d17c46178bdbbe9914bedf5a856bf5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/abb61b11b1a0b38f44eab03d626894bfdba0738a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3f23b604e2d17c46178bdbbe9914bedf5a856bf5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp đại khái ổng nói dù code correct nhưng **style
@@ -1249,9 +1249,9 @@
 
 <a id="node-248"></a>
 
-<p align="center"><kbd><img src="assets/a3e9388e9445ed09f9d5b840414521921a1e7d95.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f52493b55b06e2331ee85e0a5a36e0bf4eb0b24d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a3e9388e9445ed09f9d5b840414521921a1e7d95.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và số int lớn nhất có thể represent với **32 bit** đều
@@ -1416,17 +1416,17 @@
 
 <a id="node-263"></a>
 
-<p align="center"><kbd><img src="assets/af530d3cde596e30b0275b224aebc5c93d3ff8b5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1354bc71e8c3b2bf01fe93e990bf5420bf0d093f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/af530d3cde596e30b0275b224aebc5c93d3ff8b5.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-264"></a>
 
-<p align="center"><kbd><img src="assets/6502924e0c5b0dae5d133f1742c2494dd081a891.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9cca02d670e87447c7e2065e538a98ecc1ee9561.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6502924e0c5b0dae5d133f1742c2494dd081a891.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một sự kiện tương tự sẽ xảy ra vào 2038. Đó là hệ thống

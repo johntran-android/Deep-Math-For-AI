@@ -249,13 +249,13 @@
 
 <a id="node-571"></a>
 
+<p align="center"><kbd><img src="assets/ff910cdf4f8715915918577102c0eac477fb9e7c.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/2fbdd6928f50dbc2b090cb6e8ec2174d016bce48.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/df6f3314aba017239e5e535d121edfa1c9c91a03.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ca40bfe3e5e107a217a4a06a5b24f94194b70ec4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ff910cdf4f8715915918577102c0eac477fb9e7c.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 17: MOMENT GENERATING FUNCTIONS](untitled.md#node-534)
 
@@ -537,9 +537,9 @@
 
 <a id="node-583"></a>
 
-<p align="center"><kbd><img src="assets/2bea27c2102f13735785086dc07628b90c3149a5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/71c6a2ae9a3f6bef0f37c41287c6b233a7742c7c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2bea27c2102f13735785086dc07628b90c3149a5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì, b**ỏ e^-λ ra ngoài vì nó không dính tới k**
@@ -579,9 +579,9 @@
 
 <a id="node-585"></a>
 
-<p align="center"><kbd><img src="assets/7eee7f4dc97e1c4f1d0a9f29949825ddcf569760.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6eef8dfe2b8f7599e5219c9609e9aa30cb5e50e7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7eee7f4dc97e1c4f1d0a9f29949825ddcf569760.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 17: MOMENT GENERATING FUNCTIONS](untitled.md#node-536)
 
@@ -620,9 +620,9 @@
 
 <a id="node-587"></a>
 
-<p align="center"><kbd><img src="assets/a77791a5ffb65b92f00197a613e7e6dd89b955d8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/607576b12d5b6f723a16b60061e950cbc809ebf2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a77791a5ffb65b92f00197a613e7e6dd89b955d8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gs nhấn mạnh điều kiện cho phép cái này là X, Y phải **INDEPENDENT**. ông lấy một ví dụ của
@@ -822,9 +822,9 @@
 
 <a id="node-597"></a>
 
-<p align="center"><kbd><img src="assets/ff380366670b5e83fd9094389ec0f1ede7272a5e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/106e5a4d62f6dab7ce07839abfbe7f159154f8e4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ff380366670b5e83fd9094389ec0f1ede7272a5e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Áp dụng vào đây ta tính **marginal PMF**:

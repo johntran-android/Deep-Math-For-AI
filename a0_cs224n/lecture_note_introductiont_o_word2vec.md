@@ -240,11 +240,11 @@
 
 <a id="node-54"></a>
 
+<p align="center"><kbd><img src="assets/877bbec9556c96202e7e2a7b412599af0e7656c7.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/b194f165d95f18528423937dd656caaed2467d99.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b9b95a2dd243eec29914de2d3af2ab1a3058fdab.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/877bbec9556c96202e7e2a7b412599af0e7656c7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì qua đây mới nói sơ sơ cách làm: Đó là chuẩn bị hai matrix U, V đều
@@ -290,9 +290,9 @@
 
 <a id="node-55"></a>
 
-<p align="center"><kbd><img src="assets/5c45396a144254828e86dcfbcbcc7cd612daba38.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0c04913a6c812f3016d4a6a4a42a78731782f080.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5c45396a144254828e86dcfbcbcc7cd612daba38.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đây, triển khai ra cụ thể thì công thức trên là như sau:
@@ -336,9 +336,9 @@
 
 <a id="node-57"></a>
 
-<p align="center"><kbd><img src="assets/1df41756e8da4514755b9070d85ef270f958b713.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ae052d28ba181a7754e3bf109378b5a58e3d0f0f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1df41756e8da4514755b9070d85ef270f958b713.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là để tính L như công thức mới nói vừa rồi yêu cầu phải
@@ -410,9 +410,9 @@
 
 <a id="node-62"></a>
 
-<p align="center"><kbd><img src="assets/190de0c4cd3beb4062f33db6120dc75de70af991.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/533188000e10afdfb2d52a2711e37c61156993bf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/190de0c4cd3beb4062f33db6120dc75de70af991.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nôm na là vầy: Cái công thức (p(o|c) từ đó xây dựng objective và loss

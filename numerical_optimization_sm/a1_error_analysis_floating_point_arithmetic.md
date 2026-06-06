@@ -5,9 +5,9 @@
 ---
 <a id="node-94"></a>
 
-<p align="center"><kbd><img src="assets/da533dc24f4599600a8e4e03bca492c82aa45bab.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/50738d8049d1b9d29452cc7487134322b2e1e652.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/da533dc24f4599600a8e4e03bca492c82aa45bab.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý các algorithm và analysis trong sách này hầu hết đều deal với số thực
@@ -281,9 +281,9 @@
 
 <a id="node-97"></a>
 
-<p align="center"><kbd><img src="assets/3059a42646da6b582a24fedd526e21b738568817.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1d0d761e34f3485dc074541e10e7cd264ecf5f9a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3059a42646da6b582a24fedd526e21b738568817.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, ông nói 2^-t-1 chính là cái gọi là **UNIT ROUND OFF**. kí hiệu là u.

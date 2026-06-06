@@ -382,9 +382,9 @@
 
 <a id="node-127"></a>
 
-<p align="center"><kbd><img src="assets/f3c57ef5b4c5519283b891dc8a653d7c36c85b6d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a5ea631df77dd966601f8d9772a834d0c65b5993.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f3c57ef5b4c5519283b891dc8a653d7c36c85b6d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái cái tỉ số xTATAx / xTx được gọi là Rayleigh quotient của ATA
@@ -533,9 +533,9 @@
 
 <a id="node-130"></a>
 
-<p align="center"><kbd><img src="assets/08f4408306830d7891bfa508c4be3bbb87dd5473.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2bd30abef8394447db4dca7eaa81a1907a124a64.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/08f4408306830d7891bfa508c4be3bbb87dd5473.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Với định nghĩa của condition number thì ta có theorem:

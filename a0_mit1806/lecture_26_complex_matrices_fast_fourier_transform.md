@@ -458,11 +458,11 @@
 
 <a id="node-967"></a>
 
+<p align="center"><kbd><img src="assets/e7edc6e61682a177d1e119837736c8a5d4f6b31e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/59819bb743762651e1aba77b52d9a9bb745c08d9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/58ba575a09fd32a57136d2a163c96d7487e850a3.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e7edc6e61682a177d1e119837736c8a5d4f6b31e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > và điều này giúp ta tiếp tục thay vì tốn

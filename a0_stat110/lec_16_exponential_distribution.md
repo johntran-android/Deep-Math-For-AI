@@ -46,9 +46,9 @@
 
 <a id="node-492"></a>
 
-<p align="center"><kbd><img src="assets/60152cc2ebfabab402d4a37a9b710132d3dedcf7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6d44d43f2c9fba2d398d7023e595d8a121048a0d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/60152cc2ebfabab402d4a37a9b710132d3dedcf7.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1  - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho ta n'th moment.  - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series  a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]  Nên 1/1-t chính là Tổng n=0:infinity t^n với |t| < 1  Thế thì theo gs, từ đây cho phép ta KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ N LÀM GÌ CHO MỆT, mà chỉ cần ĐỌC NÓ RA THÔI  Cụ thể là ta đã biết ở bài trước rằng, n'th moment = đạo hàm cấp n của M(t) (là coefficient của (t^n / n!) khi expand M(t) theo Taylor series tại 0)  Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ CHÍNH LÀ N'TH MOMENT  Do đó ta sẽ nhân thêm n! và chia n! để có (t^n / n!). Như vậy cái lòi ra làm coefficient của t^n/n! ở đây là n! CHÍNH LÀ N'TH MOMENT.  Từ đó cho phép ta ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!  N'TH MOMENT CỦA EXPO(1) E(X^n) = n!  -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.  Trong khi đó, nếu ta có MGF, để có nth moment, ta CHỈ CẦN TÍNH DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH PHÂN  -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ): E[Y^n] = n! / λ^n  - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0  - MGF CỦA POIS(λ) = e^[λ(e^t-1)]  - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~ Pois(λ+µ)](tóm_tắt_tính_mgf_mt_của_expo1_11_t_t_1_khi_đã_có_mgf_như_bài_trước_ta_đã_biết_các_lí_do_mà_mgf_quan_.md#node-566)
 
@@ -105,9 +105,9 @@
 
 <a id="node-494"></a>
 
-<p align="center"><kbd><img src="assets/cc9b90ad08c4eda70e58d87be311e1f74f8aecab.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bbeffdaaf3d300853172e500e0c748fe5de0bc1a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cc9b90ad08c4eda70e58d87be311e1f74f8aecab.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ta sẽ tìm CDF, ta đã biết khi **tích phân -infinity đến x của f(t)dt** thì ta sẽ có CDF F(x)
@@ -209,9 +209,9 @@
 
 <a id="node-498"></a>
 
-<p align="center"><kbd><img src="assets/1905dc0f366179a3ab3533c58bbfdc46223ce039.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8f783520bf405a2804da3c3a09b5898660af0c90.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1905dc0f366179a3ab3533c58bbfdc46223ce039.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta sẽ đi tính **mean** và **variance** của Y. Theo định nghĩa **expected** value của **continuous** random variable, 
@@ -390,9 +390,9 @@
 
 <a id="node-503"></a>
 
-<p align="center"><kbd><img src="assets/b2f6e0495758878899f7fab8c2273b2a4f09ff3a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93b45355e6e2ef260c2533b24c17106b67283c31.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b2f6e0495758878899f7fab8c2273b2a4f09ff3a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và tính chất **Memoryless** nay được thể hiện bởi **equation**:
@@ -421,9 +421,9 @@
 
 <a id="node-504"></a>
 
-<p align="center"><kbd><img src="assets/32cd85134caf46af80580c74772c37c193c28a48.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4dad0842b4173316776bba7f1c276a22e0e42d45.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/32cd85134caf46af80580c74772c37c193c28a48.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 17: MOMENT GENERATING FUNCTIONS](untitled.md#node-518)
 
@@ -457,9 +457,9 @@
 
 <a id="node-505"></a>
 
-<p align="center"><kbd><img src="assets/84a8ce291d6d7d4f3b423f5646b36bce082f2c0f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e1482ef5b5eb1d90281b098fec7cafb91c217a66.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/84a8ce291d6d7d4f3b423f5646b36bce082f2c0f.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  - Tiếp tục Matching problem  - Định nghĩa về hai event độc lập  - Bài toán Newton-Peps  - Định nghĩa của conditional probability và cách hiểu về nó  - Các định lý liên quan](tóm_tắt_tiếp_tục_matching_problem_định_nghĩa_về_hai_event_độc_lập_bài_toán_newton_peps_định_nghĩa_củ.md#node-84)
 

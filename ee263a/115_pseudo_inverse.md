@@ -19,9 +19,9 @@
 
 <a id="node-69"></a>
 
-<p align="center"><kbd><img src="assets/7c9b9f7d0b941ffd909c3319cf0e7760c2cd0b6e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7a40c2f5da3a38eb1ea26a08eacd30a3c2a13916.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7c9b9f7d0b941ffd909c3319cf0e7760c2cd0b6e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì như đã nói hồi nãy. Ta sẽ solve normal equation bằng pseudo
@@ -69,9 +69,9 @@
 
 <a id="node-72"></a>
 
-<p align="center"><kbd><img src="assets/dad3123cc304e9ea410f053adaa82726c871f1e0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0a20b690b9eafc81c69431188a222a069eeff0b4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dad3123cc304e9ea410f053adaa82726c871f1e0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Chỗ này ta sẽ quay lại sau khi xem  về QR factorizations. Nhưng có

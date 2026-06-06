@@ -82,9 +82,9 @@
 
 <a id="node-462"></a>
 
-<p align="center"><kbd><img src="assets/358c397064a72cb43e28cb73bc5b19cd168ced53.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ab305ab4618e61485fbb82ae3c5364023766e554.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/358c397064a72cb43e28cb73bc5b19cd168ced53.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua vector field này, F = -y*i + x*j thì có nghĩa là tại (x,y) ta sẽ tương ứng
@@ -98,11 +98,11 @@
 
 <a id="node-463"></a>
 
+<p align="center"><kbd><img src="assets/c31ef26dd36abdb9ad48ffcd77e9c4ca70ca29b3.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/5016333fa54104444cb9d6daf6a49f5826d98f51.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0875d0b0e0fb9c291af825fd2917454eb7fdf1c4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c31ef26dd36abdb9ad48ffcd77e9c4ca70ca29b3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ta học qua khái niệm CÔNG (WORK) VÀ LINE INTEGRAL. Đại khái gs cho biết
@@ -116,9 +116,9 @@
 
 <a id="node-464"></a>
 
-<p align="center"><kbd><img src="assets/df6e2bebfbf0a3c5d7c00affb24e3f9df646417b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e00ad1aa90c2d54d061051815facf5f8135a969e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/df6e2bebfbf0a3c5d7c00affb24e3f9df646417b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì nếu object di chuyển trên quỹ đạo mà lực F sẽ khác nhau
@@ -305,9 +305,9 @@
 
 <a id="node-477"></a>
 
-<p align="center"><kbd><img src="assets/6c48ff63a9835037a41c79fd3e01aaf8dd8c172f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/82ce556011783a32dc69623793f4f53d326e1810.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6c48ff63a9835037a41c79fd3e01aaf8dd8c172f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì phương pháp ta sẽ làm đó là, thể hiện x, y dưới dạng
@@ -340,9 +340,9 @@
 
 <a id="node-480"></a>
 
-<p align="center"><kbd><img src="assets/853336972c1b9f2253dfca12dd4ee8edbcc26cf2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0b0fb088445d2927685eccb51cc02d12dc8b7e40.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/853336972c1b9f2253dfca12dd4ee8edbcc26cf2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Như vậy phương pháp là cho quỹ đạo c thì ta cần thể hiện x, y theo
@@ -487,9 +487,9 @@
 
 <a id="node-490"></a>
 
-<p align="center"><kbd><img src="assets/c928ef9304326e4695341cff82de8ef1834e034b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7a0e8e527c74a1d3e505a647a85ac2922c72e657.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c928ef9304326e4695341cff82de8ef1834e034b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Do đó tích phân over C của F. T ds trở thành tích phân over c a ds
@@ -505,9 +505,9 @@
 
 <a id="node-491"></a>
 
-<p align="center"><kbd><img src="assets/67c60396d39af106469027f344296d59cb3aba52.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/64dcc8f03001cf6a438e6696c7b906c8ca11493e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/67c60396d39af106469027f344296d59cb3aba52.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Hoặc nếu tính bằng cách '2' đó là thể hiện x, y theo theta  ta sẽ có tích

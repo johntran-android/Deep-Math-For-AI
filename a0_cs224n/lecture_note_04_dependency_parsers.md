@@ -51,9 +51,9 @@
 
 <a id="node-377"></a>
 
-<p align="center"><kbd><img src="assets/0b2f6aed18ff66e0820f09a003fff7ff78d1c1dc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8a9bc7be80781f2a2ea019e709c96322b28c4dd8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0b2f6aed18ff66e0820f09a003fff7ff78d1c1dc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > hai 'bước' của **dependency parsing**.
@@ -115,9 +115,9 @@
 
 <a id="node-380"></a>
 
-<p align="center"><kbd><img src="assets/03a55f7dad2a9e8f2e399e178323be2e7c7d1720.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9c17f72ff3e2173a921e4a79d4e61604d3c4e680.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/03a55f7dad2a9e8f2e399e178323be2e7c7d1720.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > về transitions thì có 3 loại:
@@ -315,9 +315,9 @@
 
 <a id="node-387"></a>
 
-<p align="center"><kbd><img src="assets/8216ff4871261909b9b28fdcff890a09c73705d0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5cd00b5129c9c322b4617d0a608f81363080ee34.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8216ff4871261909b9b28fdcff890a09c73705d0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Hình ảnh cho thấy từ configuration, mô tả trạng thái hiện tại (của stack, buffer,

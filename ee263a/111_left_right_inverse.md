@@ -5,9 +5,9 @@
 ---
 <a id="node-44"></a>
 
-<p align="center"><kbd><img src="assets/3dfed8e53bd3dda2e784684c340203ef7e98851e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6ea41379d924de567eeb8d48e928dbb6b93f0ac4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3dfed8e53bd3dda2e784684c340203ef7e98851e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Khái niệm left inverse đã học từ 1806, là matrix nhân vào bên trái A

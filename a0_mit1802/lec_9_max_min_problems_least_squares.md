@@ -71,9 +71,9 @@
 
 <a id="node-176"></a>
 
-<p align="center"><kbd><img src="assets/19d5398c546c569418553469fc13595c476543fb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/202f7689e0ccef46d74e85d40ab79cc561f2b058.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/19d5398c546c569418553469fc13595c476543fb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > thế thì đại khái là **nếu ta có f_x(x0, y0) = a** ta có **đường tiếp tuyến** nằm t**rong mặt phẳng
@@ -149,9 +149,9 @@
 
 <a id="node-182"></a>
 
-<p align="center"><kbd><img src="assets/ad9d0b95aab7e3569b180c143cab7fccfc8b7d14.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6438ebec92f74fbf75daa112d7138203984dfb13.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ad9d0b95aab7e3569b180c143cab7fccfc8b7d14.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > thế thì gs nói rằng tại l**ocal min hoặc max thì cả fx
@@ -203,9 +203,9 @@
 
 <a id="node-186"></a>
 
-<p align="center"><kbd><img src="assets/676d9c22d79d29815855dba05cd60f74af3e17c7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e101fc4e3fc7d71a77d2bcb8d155d8f5ee2f4333.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/676d9c22d79d29815855dba05cd60f74af3e17c7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Bằng cách **đưa f về tổng các bình phương**, thì **ta xác định f sẽ >= -1**
@@ -288,11 +288,11 @@
 
 <a id="node-193"></a>
 
+<p align="center"><kbd><img src="assets/c5406a42a706873e6408b8a6f3300b48f95d5cdb.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/4565f3bd6590d2202b79018d1c304fa101ff8d17.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/32179e3be2b0c512dcccf0b32c9c7ebb60d129d2.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c5406a42a706873e6408b8a6f3300b48f95d5cdb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, đại khái gs cho một ví dụ khác, trong đó data points

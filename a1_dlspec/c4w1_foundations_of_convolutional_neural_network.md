@@ -158,6 +158,8 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1159"></a>
 
+<p align="center"><kbd><img src="assets/f7c375a74253b8400ee80b9cc67b070062928762.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/f22cbb78254e196bdc52a62ca15f258b1d9d2e33.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e82db01fece002c991c08ed901a9318f7786d698.png" width="100%"></kbd></p>
@@ -165,8 +167,6 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 <p align="center"><kbd><img src="assets/50a33a997d47325fe904083526188b034d8ca3c7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/de7b688317eb94a2aa86451a4c00ff9796759b74.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f7c375a74253b8400ee80b9cc67b070062928762.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Filter or Kernel
@@ -996,9 +996,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1212"></a>
 
-<p align="center"><kbd><img src="assets/992378a79f7bdf4531c4a0566861504b38e37043.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8aadce25a401fb2e4031cdee1dceed540408e44e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/992378a79f7bdf4531c4a0566861504b38e37043.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **Params sharing**: Đại khái là **1 vài weight (trong filter)** có
@@ -1278,9 +1278,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1244"></a>
 
-<p align="center"><kbd><img src="assets/7746486861b98534d0f7de879f89d72ec3af9ccf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/33544c19bb6f48d9903b50717e3dd45a0f7ada2d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7746486861b98534d0f7de879f89d72ec3af9ccf.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1337,15 +1337,17 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1253"></a>
 
+<p align="center"><kbd><img src="assets/eed9b5309399b57c16061b0fbe9970fd48862105.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/094b6c947c6ab9e173524fea4f33769411a01ed6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b77e371092723c7e9d3e44c849a82a377c2e783b.png" width="100%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/eed9b5309399b57c16061b0fbe9970fd48862105.png" width="100%"></kbd></p>
-
 <br>
 
 <a id="node-1254"></a>
+
+<p align="center"><kbd><img src="assets/3b6db46922fc79e3af51d29e41b106b8ac0afd17.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2860e09445b0137226ea276e4a45243c657458df.png" width="100%"></kbd></p>
 
@@ -1358,8 +1360,6 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 <p align="center"><kbd><img src="assets/c5a486d0c321203e7a4ce775e70cf6d99556f39b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c3229015c340b887128f4297ebcd5d5e6ad2ec1b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3b6db46922fc79e3af51d29e41b106b8ac0afd17.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1392,11 +1392,11 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1259"></a>
 
+<p align="center"><kbd><img src="assets/3f71962c197ce5147f743bc6145c49d6250e5c69.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/341ddd14be6263e11b524d3c837299e51f50d258.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0b6f0eb816912e2be7ac3da3e49e6de19eb1fc42.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/3f71962c197ce5147f743bc6145c49d6250e5c69.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1569,9 +1569,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1281"></a>
 
-<p align="center"><kbd><img src="assets/c4243ff9d3316c7733c42fff0d01bb7edaf2b696.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e1e47f157161dde3f65d621c8c629851c8b40a96.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c4243ff9d3316c7733c42fff0d01bb7edaf2b696.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1677,9 +1677,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 <a id="node-1297"></a>
 
-<p align="center"><kbd><img src="assets/a87587c49090ea21a401474f17712929768a5044.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/58d172faa3ab18c0dc86149114823b2e2acb9c90.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a87587c49090ea21a401474f17712929768a5044.png" width="100%"></kbd></p>
 
 <br>
 

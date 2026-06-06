@@ -72,11 +72,11 @@
 
 <a id="node-418"></a>
 
+<p align="center"><kbd><img src="assets/129e111a83e143455a59e5bba39bd97f5b3c51ce.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/cb9a69d2a30be19893baf2c1a40dec9c1c9fd56d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/64fc2263ad5972fc68773a83d9cf812ed93e8f26.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/129e111a83e143455a59e5bba39bd97f5b3c51ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs nhắc lại bài trước ta đã làm quen với **Standard Normal (0,1)**, đã biết **CDF** của nó, kí hiệu là **Φ**, đã chứng minh
@@ -144,9 +144,9 @@
 
 <a id="node-421"></a>
 
-<p align="center"><kbd><img src="assets/a111e09916105aec51cfec2d829f501a99b76ab5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/77126e52ea87308d858170507b9cddcfcb44aa4b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a111e09916105aec51cfec2d829f501a99b76ab5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì ta sẽ qua **general Normal distribution** (**không còn mean 0 variance 1 nữa**). Đó là nếu ta có random
@@ -512,11 +512,11 @@
 
 <a id="node-438"></a>
 
+<p align="center"><kbd><img src="assets/fa6332be567a48db5545286f79348b32e9a52ea9.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/5b69cb850e4f3103374ef9702c468ff6a609a55e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/93c1cbba4f40c125e1e275a6c55b50524e3c2a43.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fa6332be567a48db5545286f79348b32e9a52ea9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, gs nói đại khái là sau này ta sẽ chứng minh điều sau đây sau, giờ ta chỉ biết rằng, nếu ta có các **independent random variables**
@@ -906,9 +906,9 @@
 
 <a id="node-452"></a>
 
-<p align="center"><kbd><img src="assets/aef5b37b3ffc63ede715d36ec6f1e640feee87a5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d586b835c63f2952a61d2791327add7b25181685.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/aef5b37b3ffc63ede715d36ec6f1e640feee87a5.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  Tiếp tục về CDF: Định nghĩa của CDF  Bước nhảy của CDFD là giá trị PMF tại đó  Tính chất của CDF: 1) Non decreasing, 2) right continuous và   3) F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity  - Định nghĩa Independent random variables theo independent event:  X, Y độc lập khi  + Continuous rv: P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y   + Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)  - Expected value: Là con số tóm tắt distribution của r.v  - Hai cách tính average  - E(X) = Σx x*P(X=x)  - X ~ Bern(p) thì E(X) = p  - FUNDAMENTAL BRIDGE: E(X) = P(A), X là indicator rv mang giá trị = 1 khi event A xảy ra và 0 khi ngược lại  - X ~ Bin(n, p):  E(X) = ∑ k=0,1..n [ k * (n choose k)*p^k*q^(n-k)] = ..= np  - TÍNH LINEARITY CỦA AVERAGE  - Tính lại E(X) của Bin(n, p) nhanh hơn bằng linearity, fundamental bridge và E(X) của Bern(p)  - TÍnh E(X) của Hypergeometric Dù các trial không độc lập nhưng dùng Symmetry, linearity, fundamental bridge vẫn tính được  - X ~ Geom(p): P(X=k) = q^k*p  - E(X) = p Σ k=0:infinity [k * q^k]](tóm_tắt_tiếp_tục_về_cdf_định_nghĩa_của_cdf_bước_nhảy_của_cdfd_là_giá_trị_pmf_tại_đó_tính_chất_của_cd.md#node-254)
 

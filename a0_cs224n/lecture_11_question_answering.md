@@ -27,9 +27,9 @@
 
 <a id="node-874"></a>
 
-<p align="center"><kbd><img src="assets/788a1fb174997316d55c83b5ab0f53a3dcd873a8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6b1c356355208cc24d1ce71301e32570b1e9562d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/788a1fb174997316d55c83b5ab0f53a3dcd873a8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > một số ứng dụng
@@ -87,9 +87,9 @@
 
 <a id="node-880"></a>
 
-<p align="center"><kbd><img src="assets/b6cb9af4db334d5e75f65c37b2ab0d363adc40e9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a5c39cfdec61840ad28ac8be2025613fcbd77031.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b6cb9af4db334d5e75f65c37b2ab0d363adc40e9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nói về reading comprehension, gs đưa ra ví dụ về hai câu hỏi, mà tuy
@@ -419,9 +419,9 @@
 
 <a id="node-895"></a>
 
-<p align="center"><kbd><img src="assets/724ac3d59c035232311ceca6649d75879ec8f72a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/55dec48af5601f2c717ccbc85a8822af62ce7ac3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/724ac3d59c035232311ceca6649d75879ec8f72a.png" width="100%"></kbd></p>
 
 <br>
 
@@ -491,9 +491,9 @@
 
 <a id="node-898"></a>
 
-<p align="center"><kbd><img src="assets/182caf49adb16139786f63bfbc3e5e20213eb20c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d73707a094a728f43d97e2d12b2003ffda81d569.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/182caf49adb16139786f63bfbc3e5e20213eb20c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > tiếp, g_i - kết quả sau hai attention mechanism, ứng với context word i,
@@ -769,11 +769,11 @@
 
 <a id="node-915"></a>
 
+<p align="center"><kbd><img src="assets/7c2ac20ba1a4b8fcc019d7ee7f65c9ac15c071f7.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/c76db9f53c3f8d594084aa34081fb0f827a4bbca.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/841d69c2b46fc04ccd2d73c7c57dfd3f59c3a484.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7c2ac20ba1a4b8fcc019d7ee7f65c9ac15c071f7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là vầy, đang nói tác vụ này là open QA, tức là chỉ có câu hỏi 

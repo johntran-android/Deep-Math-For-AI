@@ -655,9 +655,9 @@
 
 <a id="node-904"></a>
 
-<p align="center"><kbd><img src="assets/5e179dfbcc4b445bc47bdd653c80bc44307f2dd9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b54bc6b1027e8e5fe63613e265bbef78a6d14386.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5e179dfbcc4b445bc47bdd653c80bc44307f2dd9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Câu hỏi là **tìm projection matrix** giúp **project lên matrix
@@ -760,9 +760,9 @@
 
 <a id="node-906"></a>
 
-<p align="center"><kbd><img src="assets/3a74a0da42fe30268f3bfd6e0ad8c8726b93658a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bb1ab71e7ccb80a881e00431303d1fb89dc439df.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3a74a0da42fe30268f3bfd6e0ad8c8726b93658a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta có thể tính theo cách của gs là dùng công thức

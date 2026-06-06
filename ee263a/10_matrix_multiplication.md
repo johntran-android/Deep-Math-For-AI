@@ -34,9 +34,9 @@
 
 <a id="node-39"></a>
 
-<p align="center"><kbd><img src="assets/1e0476439b88a2ec2db9f798e93f6a1150f5c5f2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/75131b834ce13ce3f8c7ba2d499d53dd820860e7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1e0476439b88a2ec2db9f798e93f6a1150f5c5f2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo đại khái là gs nói về **3 tính chất** gắn với **orthogonal**

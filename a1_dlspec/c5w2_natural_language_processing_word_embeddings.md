@@ -824,9 +824,9 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2161"></a>
 
-<p align="center"><kbd><img src="assets/dec9a99698dabd663889adf49d40ecc3a1105e47.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d007192f9929f5197017a83fb6761281489f5e3d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dec9a99698dabd663889adf49d40ecc3a1105e47.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1142,9 +1142,9 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2205"></a>
 
-<p align="center"><kbd><img src="assets/f27de3cfb155b26587fa6d83425eb6d00e1ff5b4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4a03ce90e64466930ccb81db1329e2883a25b9dd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f27de3cfb155b26587fa6d83425eb6d00e1ff5b4.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1270,9 +1270,9 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2226"></a>
 
-<p align="center"><kbd><img src="assets/85d91af2870752871d7bb0fabd72555bf92437ec.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/547be59be72a8bceb5c7f74b8f817dccbe2bec0f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/85d91af2870752871d7bb0fabd72555bf92437ec.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1375,9 +1375,9 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 
 <a id="node-2242"></a>
 
-<p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/61255daa96ec221bea707d34df53e7edb34b338d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3f8f46bb66ad26fd72c29dfbc2bd43dc525aef92.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Chưa hiểu Embedding layer lắm (input, output shape) -> Cứ hiểu tạm là nó

@@ -410,9 +410,9 @@
 
 <a id="node-1985"></a>
 
-<p align="center"><kbd><img src="assets/376c4ae01e7d70afb39fea014ac602d8e8695868.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/85996401ce2a872ebe72e079bf8de3dfe3cfe897.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/376c4ae01e7d70afb39fea014ac602d8e8695868.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ta sẽ **nhân tử và mẫu cho 2**, đặng tí nữa sẽ thấy mục đích

@@ -363,11 +363,11 @@
 
 <a id="node-1850"></a>
 
+<p align="center"><kbd><img src="assets/68da13580f5e53ce9b5516858a431353193e11fa.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/87edd76da74597188181cd68dd3470a75d596d72.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4f0e4c6466b27f6ad080bfb8c6f518fc52f9727f.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/68da13580f5e53ce9b5516858a431353193e11fa.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Trước hết, cần chú ý là như bên slide về Early Fusion, ta nói stack các frame theo
@@ -416,9 +416,9 @@
 
 <a id="node-1851"></a>
 
-<p align="center"><kbd><img src="assets/4dac556d0f99c17844f7d8dde4865213b367ebc0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/81a90f0e1962bc027c60ba53d3a186d80f02cf96.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4dac556d0f99c17844f7d8dde4865213b367ebc0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Còn với 3D cnn, thì như đã nói, nó đối xử với temporal dimension như chiều
@@ -627,9 +627,9 @@
 
 <a id="node-1863"></a>
 
-<p align="center"><kbd><img src="assets/2f2f73972a058822c68e71cc59a22c949bc9af1c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/55a3ffd93fdcd8fb932a16623a02a18645d385a9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2f2f73972a058822c68e71cc59a22c949bc9af1c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Giải pháp là dùng RNN: ý tưởng là cũng process từng frame bởi cnn, có
@@ -748,9 +748,9 @@
 
 <a id="node-1872"></a>
 
-<p align="center"><kbd><img src="assets/e9fde218e9319bab58edea2d312ee8fd92c8cfea.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5f8d73086c13df460fb7ce252b8e003be630fdff.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e9fde218e9319bab58edea2d312ee8fd92c8cfea.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > cách làm này Justin cho rằng tuy là một cách làm giúp tổng hợp temporal
@@ -892,9 +892,9 @@
 
 <a id="node-1876"></a>
 
-<p align="center"><kbd><img src="assets/0b78a95ccf957df5340be0972d9835374e8645fc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/73cd6963170e99c4e7da96f80b1e1835c93cfadb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0b78a95ccf957df5340be0972d9835374e8645fc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và thông thường người ta init conv layer cuối (cái conv3D 1x1x1 cuối)
@@ -910,9 +910,9 @@
 
 <a id="node-1877"></a>
 
-<p align="center"><kbd><img src="assets/3fe5db8651938cf989bf9d517135ecded5886cf6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9cc5d656c0332c1f8e4a29004ecfc8c790dc3f18.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3fe5db8651938cf989bf9d517135ecded5886cf6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì đại khái câu trả lời đó là vì ta đã thấy rất nhiều nỗ lực trong việc
@@ -1012,9 +1012,9 @@
 
 <a id="node-1882"></a>
 
-<p align="center"><kbd><img src="assets/8d29264a04ab4747a3e6b7998cfa1153fcc42590.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/41631818e2fd7047fa85633288f02335ef24e9c2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8d29264a04ab4747a3e6b7998cfa1153fcc42590.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Kết quả là với target class là Weightlifting, ta có phần Image có thể
@@ -1025,9 +1025,9 @@
 
 <a id="node-1883"></a>
 
-<p align="center"><kbd><img src="assets/17cd89da9b5bc8162be651cb34170a43216be7a6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1f362ea3a758bfca4e4c8772b39a1743fecdf66a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/17cd89da9b5bc8162be651cb34170a43216be7a6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, tới đây Justin nói qua một mô hình mà trong đó người ta không

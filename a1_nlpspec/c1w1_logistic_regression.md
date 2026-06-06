@@ -1140,13 +1140,13 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <a id="node-122"></a>
 
+<p align="center"><kbd><img src="assets/01ceefd7ec679c103b16c74754905f3a32198640.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/12c025cafbc14a6d685a57ac20d874b412e2dee0.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a80e8286474baff835fec4192b8762c03ed8802c.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1da12dd202b18d37c71e792dbc3fb94e4f3236ea.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/01ceefd7ec679c103b16c74754905f3a32198640.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Trung bình cộng của loss cho từng data sample
@@ -1158,9 +1158,9 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <a id="node-123"></a>
 
-<p align="center"><kbd><img src="assets/243dda1cbe883a7cb0fccdc30c57e056f8ccfc46.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3ecdea347b00addffb969747d3c74a65ee2b7615.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/243dda1cbe883a7cb0fccdc30c57e056f8ccfc46.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ôn lại thôi chứ biết rồi, 2 vế kiểu như sẽ phụ trách cho 2
@@ -1174,9 +1174,9 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <a id="node-124"></a>
 
-<p align="center"><kbd><img src="assets/9d539e66c0f461fa3e4e73722ba25f3306a396cc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c0b3ed45c24b880b2bb4112fa129b878ee03371e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9d539e66c0f461fa3e4e73722ba25f3306a396cc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tương tự khi y = 0
@@ -1275,13 +1275,13 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <a id="node-137"></a>
 
+<p align="center"><kbd><img src="assets/7a5d4fc94a3d85f56c14f2c1dd5e7554d2670acf.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/04077da779de7301a2058030b235fc6e88a74bbd.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fe798005ecbb4182fa259e0ac1724e3b40107987.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ff06551d97d3feb314181c2a5739b4187a801851.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/7a5d4fc94a3d85f56c14f2c1dd5e7554d2670acf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tự triển khai

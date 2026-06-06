@@ -146,9 +146,9 @@
 
 <a id="node-48"></a>
 
-<p align="center"><kbd><img src="assets/8ab96925cc391df46973fbee5c377ad37ff6cece.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cee5d051d8ce59e838f855b9d8e18c04e62dfc68.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8ab96925cc391df46973fbee5c377ad37ff6cece.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs tiếp tục lướt qua joint pdf của nhiều random variables X1,...Xn làm thành
@@ -235,13 +235,13 @@
 
 <a id="node-51"></a>
 
+<p align="center"><kbd><img src="assets/dc9642b96a999a1b7c83a5f0d310665d2864fca9.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/56abd475cf893f6ddfb288b422150c206ba3c754.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9d1bab8a4480eb508462714a3271899d1d88849e.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/32b5e0cb55a7885567dbbfbb4dcc25eddf6f2668.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/dc9642b96a999a1b7c83a5f0d310665d2864fca9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì gs nói nếu ta có N điểm lấy (sampling, giá trị quan sát được x1,...xN) từ

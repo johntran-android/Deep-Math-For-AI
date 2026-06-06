@@ -83,9 +83,9 @@
 
 <a id="node-2438"></a>
 
-<p align="center"><kbd><img src="assets/0408d436c1608f9237e3c7f44070a9c791ac36a7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f96ca4b8be36052adb26a270b20e5110778bb00b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0408d436c1608f9237e3c7f44070a9c791ac36a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta cũng **embedding 1 từ thành 1 embedded vector**
@@ -114,11 +114,11 @@
 
 <a id="node-2439"></a>
 
+<p align="center"><kbd><img src="assets/b511ed7dbe8ab87d29a3ec10a6c06177529a00a7.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/c942dd15fa744499a25c79e620581ac422d7f4ab.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/888159d6f44ca5f2246836de0b9dbf81e8b2c8d7.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b511ed7dbe8ab87d29a3ec10a6c06177529a00a7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Câu hỏi: Ở Africa có gì xảy ra?
@@ -203,9 +203,9 @@
 
 <a id="node-2441"></a>
 
-<p align="center"><kbd><img src="assets/9fa6c7d27aa1f659eed4d9416266157d7e17212b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/37c7bca89c201d17b64633add198a1f50a0b4389.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9fa6c7d27aa1f659eed4d9416266157d7e17212b.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1502,9 +1502,9 @@
 
 <a id="node-2587"></a>
 
-<p align="center"><kbd><img src="assets/3f92cb61d6578190a773fee45cc99713960c0289.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/945cd616a1b5361189798d558783d67ef2551ab3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3f92cb61d6578190a773fee45cc99713960c0289.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1827,9 +1827,9 @@
 
 <a id="node-2630"></a>
 
-<p align="center"><kbd><img src="assets/41362ac407cba26cb5bf08e3ba7f8f05e069282e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/de8644b67becfd5caf4aaa778be660cada19601f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/41362ac407cba26cb5bf08e3ba7f8f05e069282e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > 'd' = **embedding_dimension**
@@ -1902,9 +1902,9 @@
 
 <a id="node-2640"></a>
 
-<p align="center"><kbd><img src="assets/c2da82f859d4c85b51f1f46b0cac1d861c120d62.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/be5229b879446e2db2964335d1b265096f2403d3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c2da82f859d4c85b51f1f46b0cac1d861c120d62.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1942,9 +1942,9 @@
 
 <a id="node-2644"></a>
 
-<p align="center"><kbd><img src="assets/943f11d8062b244d67d3bbe6a5fce3076d06add3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/76178aadeab6416e4b2b727b6716f0cb92eb69d9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/943f11d8062b244d67d3bbe6a5fce3076d06add3.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2029,9 +2029,9 @@
 
 <a id="node-2655"></a>
 
-<p align="center"><kbd><img src="assets/e9ddb5b0d36006fc82e8dc9a8e2be4ee5c8a3acf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d646fb398ccbeae1878c6b539cf193427fa399d4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e9ddb5b0d36006fc82e8dc9a8e2be4ee5c8a3acf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > 1. Tính Q@K.T: Dùng hàm tf.matmul và tf.transpose thôi, đơn giản
@@ -2173,9 +2173,9 @@
 
 <a id="node-2670"></a>
 
-<p align="center"><kbd><img src="assets/ce64c63dfee6390787a513c9153bbc582eaf86a9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7b721fa2a770be232465fa4d740026b70ad635cd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ce64c63dfee6390787a513c9153bbc582eaf86a9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Dù chưa hiểu như đại khái hiểu như vầy để làm cái đoạn **self.mha_output = self.mha(x,x,x,mask) :** 
@@ -2215,9 +2215,9 @@
 
 <a id="node-2671"></a>
 
-<p align="center"><kbd><img src="assets/a5ffe89231af401c211ecb6ab1e7f244e2f011e9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/71f2d83ada7ea349d2b69f5a9eb27bfdc35236ac.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a5ffe89231af401c211ecb6ab1e7f244e2f011e9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Chỗ này mr Andrew
@@ -2337,11 +2337,11 @@
 
 <a id="node-2689"></a>
 
+<p align="center"><kbd><img src="assets/5b7264416e87227662bca4755e4599d9b76caf79.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/87194eb2bf50b6db86a0b73f5d66e5754acc8071.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/838d298f4a7cf7588a4be0ef76866466246a7607.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5b7264416e87227662bca4755e4599d9b76caf79.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2393,11 +2393,11 @@
 
 <a id="node-2697"></a>
 
+<p align="center"><kbd><img src="assets/1e91599484c80ed0eef23a5dabe609c49da0084f.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/78937e204f25a87bb667cc452ee8b438839faa59.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/002b5013a8e6a1edeab3b31b964253829db8f8e1.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1e91599484c80ed0eef23a5dabe609c49da0084f.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2949,9 +2949,9 @@
 
 <a id="node-2764"></a>
 
-<p align="center"><kbd><img src="assets/6c0e8d50478e76997604a2939f4487a267008ba4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/18e5060999cb08a5746c6ff00ee34bdfb99cf711.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6c0e8d50478e76997604a2939f4487a267008ba4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vẽ thử ra xem và chi tiết thì thấy **TRUE LABEL** 1035 cái name, location 116, ,,,,

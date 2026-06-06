@@ -132,9 +132,9 @@
 
 <a id="node-2079"></a>
 
-<p align="center"><kbd><img src="assets/57c27fa29c083ca339df602ec4b55eda00a6c9a0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/80a9560d3c1a425e9859b61d5b554d892786019b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/57c27fa29c083ca339df602ec4b55eda00a6c9a0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là ta có thể suy ngẫm một chút để rồi thắc mắc là có vẻ như

@@ -154,11 +154,11 @@
 
 <a id="node-310"></a>
 
+<p align="center"><kbd><img src="assets/5d18d05a7107b14419b79b06dfb17dbf89ea1aaf.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/ef9d8d4228a34cc37fb22db8ff766c0c07bcd9e8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/aec0d2c43aac01b3009391dba56b3429810897c8.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5d18d05a7107b14419b79b06dfb17dbf89ea1aaf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái với PEFT, **mỗi task kiểu như chỉ tạo thêm một số layers hay weights**.
@@ -469,9 +469,9 @@
 
 <a id="node-330"></a>
 
-<p align="center"><kbd><img src="assets/f73f2a621caeea781d38e0b92737d622bc6b7cde.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8c9c6d4c518e1170b48b3f6f34a508f09c249675.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f73f2a621caeea781d38e0b92737d622bc6b7cde.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ý là với cách này, ta **chỉ có thêm một ít weight cần lưu trữ** (thay vì với **mỗi
@@ -603,11 +603,11 @@
 
 <a id="node-337"></a>
 
+<p align="center"><kbd><img src="assets/70a675ab1049ef931eac6322d8ef49912265699e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/15386edd29b8e33969028f06e0d61c6f1d03de74.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/45333b7a26845ea4ff7bb8a8fbfbea72b4724249.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/70a675ab1049ef931eac6322d8ef49912265699e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > The tokens that represent natural language are hard in the sense that they each correspond
@@ -626,9 +626,9 @@
 
 <a id="node-338"></a>
 
-<p align="center"><kbd><img src="assets/79096ed370c570fdaa48d6db5873a302ce95583e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7ff6f8be21c0bbdd638f2d913a9a5ac77356d796.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/79096ed370c570fdaa48d6db5873a302ce95583e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > In full fine tuning, the training data set consists of **input prompts and output
@@ -1295,9 +1295,9 @@
 
 <a id="node-398"></a>
 
-<p align="center"><kbd><img src="assets/b061c300f7cb26b0c6f6b76aaad9e751568a5b08.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5cbca1974eed66dd4df7d46f6e6ee4f72b3df1c9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b061c300f7cb26b0c6f6b76aaad9e751568a5b08.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Chú ý là ở trên ta chỉ tạo bộ dataset với hai cột mới, còn dataset cũ nó vẫn còn đó.
@@ -1382,9 +1382,9 @@
 
 <a id="node-404"></a>
 
-<p align="center"><kbd><img src="assets/75fcd287ed5360d93cabeb18223aecd7b2df33be.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/24283b905eaa8949c731c7af63600f08e086f684.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/75fcd287ed5360d93cabeb18223aecd7b2df33be.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Check với nhiều câu hơn chứa trong file csv,

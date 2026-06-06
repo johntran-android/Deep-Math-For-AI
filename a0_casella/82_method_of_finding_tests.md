@@ -5,9 +5,9 @@
 ---
 <a id="node-670"></a>
 
-<p align="center"><kbd><img src="assets/72620be67ef638e25468c437039924b65a117ee6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b89e7b20e195f82d96794924368c3204e2866eb9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/72620be67ef638e25468c437039924b65a117ee6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Phần này ta sẽ thảo luận 4 phương pháp để tìm / xây dựng test procedure.
@@ -85,9 +85,9 @@
 
 <a id="node-672"></a>
 
-<p align="center"><kbd><img src="assets/7c03319721cbc3a6ca730b1e4fab0f95c9e7a9cf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ff1d9eef568a95e0eea3db4827e32d8c471d7859.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7c03319721cbc3a6ca730b1e4fab0f95c9e7a9cf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy thì ta có thể hiểu đại khái cái "lí lẽ" của phương thức test này như
@@ -456,9 +456,9 @@
 
 <a id="node-679"></a>
 
-<p align="center"><kbd><img src="assets/1388183b1ce8dee808ec84dac7eca73f023231f9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/269709f150c7c2576eca142be07cf3f1d99e5d03.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1388183b1ce8dee808ec84dac7eca73f023231f9.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-483)
 
@@ -633,9 +633,9 @@
 
 <a id="node-681"></a>
 
-<p align="center"><kbd><img src="assets/9fb4345233d14d2a162a6a168ceff45b12072df1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0ba401813507cfbf3636740fcb052dd399643270.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9fb4345233d14d2a162a6a168ceff45b12072df1.png" width="100%"></kbd></p>
 
 🔗 **Related:** [8.2 METHOD OF FINDING TESTS](82_method_of_finding_tests.md#node-687)
 
@@ -819,9 +819,9 @@
 
 <a id="node-685"></a>
 
-<p align="center"><kbd><img src="assets/541131c8646030a7ec8b0b4382bd41217e865722.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4078a211cf4b3ca3e245bec147a82d9582751aab.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/541131c8646030a7ec8b0b4382bd41217e865722.png" width="100%"></kbd></p>
 
 🔗 **Related:** [7.2 METHOD OF FINDING ESTIMATORS](72_method_of_finding_estimators.md#node-585)
 

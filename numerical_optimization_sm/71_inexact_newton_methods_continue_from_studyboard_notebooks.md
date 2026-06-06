@@ -5,9 +5,9 @@
 ---
 <a id="node-2"></a>
 
-<p align="center"><kbd><img src="assets/531feb622f57c86c0e18f33eab1dd952442ae644.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/1cb644826a3dff805de45c3bf0bf0927ad973f60.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/531feb622f57c86c0e18f33eab1dd952442ae644.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Có lẽ nên ôn lại chút xíu về Trust Region Newton CG:

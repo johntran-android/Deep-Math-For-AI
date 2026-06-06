@@ -1950,9 +1950,9 @@ Learning Objectives
 
 <a id="node-1203"></a>
 
-<p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/87624fce16e142381af2dee42ba980a5a8c23107.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1807fff823ff892bbce719e465ecd8922bb1c42c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Transition probability như nhau nhưng
@@ -2101,11 +2101,11 @@ Learning Objectives
 
 <a id="node-1211"></a>
 
+<p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > π -> t_1 -> w1
@@ -2257,11 +2257,11 @@ Learning Objectives
 
 <a id="node-1223"></a>
 
+<p align="center"><kbd><img src="assets/292466420702095edbad9dd13b074a1f3f8faa9a.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/1c7858f6a334ed10154ee0082c062be253e3fff3.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7ca0a0972c9da5ffb3fea5705c5927835b483876.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/292466420702095edbad9dd13b074a1f3f8faa9a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ tính C1,2 đại khái là chọn **k** làm sao mà 
@@ -2287,9 +2287,9 @@ Learning Objectives
 
 <a id="node-1224"></a>
 
-<p align="center"><kbd><img src="assets/0b5c676da857b82aeed82fc985f90a67c284ffa5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a11334662a3d618638013cae6e4332bbb35576b3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0b5c676da857b82aeed82fc985f90a67c284ffa5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > In each di,j, you simply **save the k** which maximizes the entry
@@ -2387,9 +2387,9 @@ Learning Objectives
 
 <a id="node-1229"></a>
 
-<p align="center"><kbd><img src="assets/882d228353d382732cbef5f6c362d8293f17d9eb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a10ff6972feb4eed8603fb4d7deee7970633a0d9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/882d228353d382732cbef5f6c362d8293f17d9eb.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2877,9 +2877,9 @@ Learning Objectives
 
 <a id="node-1287"></a>
 
-<p align="center"><kbd><img src="assets/b304973180c3f7d044e57da9ff404a199cec1f60.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bd1381accff9bbb4a2f39d0842287e58ec84686f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b304973180c3f7d044e57da9ff404a199cec1f60.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2952,9 +2952,9 @@ Learning Objectives
 
 <a id="node-1298"></a>
 
-<p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d84226d1a8cef4fb58b3ba33dd66ea870942cbfe.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
 
 <br>
 
@@ -2990,9 +2990,9 @@ Learning Objectives
 
 <a id="node-1304"></a>
 
-<p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0799902f0b8b2e844ee67be666a5e126f8baf3db.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
 
 <br>
 
@@ -3057,11 +3057,11 @@ Learning Objectives
 
 <a id="node-1314"></a>
 
+<p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/68188731cbeffd5d40e3e8ef8f1d1829f8b2befc.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e2ba6f5ea6c3b06bbc930e6729bb8619706270ca.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > π -> t_1 -> w1
@@ -3154,9 +3154,9 @@ Learning Objectives
 
 <a id="node-1324"></a>
 
-<p align="center"><kbd><img src="assets/2f08d3a6dc142820d89d8c2f5ffd70c37547d6c4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/44c501d334cb90b6aeae67faddf8afc3e7d404ae.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2f08d3a6dc142820d89d8c2f5ffd70c37547d6c4.png" width="100%"></kbd></p>
 
 <br>
 

@@ -5,11 +5,11 @@
 ---
 <a id="node-712"></a>
 
+<p align="center"><kbd><img src="assets/ef94b983b3ec3220f37d5141c04fb162857d047b.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/964e80d818b42801d62f7098a6bc435bfbbaefb8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e199fc5c2014fa3815485c071b6959286394d3b2.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ef94b983b3ec3220f37d5141c04fb162857d047b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Mở đầu gs review chút xíu và tiếp tục bài toán mà ta đang thảo luận là tính **variance** của **X ~** **Hypergeometric (w, b, n)**
@@ -97,9 +97,9 @@
 
 <a id="node-715"></a>
 
-<p align="center"><kbd><img src="assets/b3a1aef0c204cc82bcf7c79c480ecbc0569dc41b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b3fd368ab761033c5f8a7ddf68086b6b0f636e6e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b3a1aef0c204cc82bcf7c79c480ecbc0569dc41b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ok, **theorem** cho vấn đề này nói rằng: Nếu ta có **X** là (xét continuous case, discrete cũng
@@ -358,9 +358,9 @@
 
 <a id="node-725"></a>
 
-<p align="center"><kbd><img src="assets/05f647249b071bc5b2756945fa587489f024a9c2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a495cb39868817c257e95c8266b25bb067beec6b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/05f647249b071bc5b2756945fa587489f024a9c2.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 25: ORDER STATISTIC & CONDITIONAL EXPECTATION](untitled.md#node-774)
 
@@ -640,11 +640,11 @@
 
 <a id="node-733"></a>
 
+<p align="center"><kbd><img src="assets/f491f3e277347c934b06ebdafa0bf7a44e7dc743.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/2a58e88ae14af6119db5e4629539e9d95e06644d.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/398549ffb0bc337ec87adac94f2ad071a2a546b9.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/f491f3e277347c934b06ebdafa0bf7a44e7dc743.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > bài toán này sẽ làm ví dụ cho Thoerem vừa rồi: Có 100 người, ta tạo 15 nhóm mỗi nhóm 20 người, (mỗi

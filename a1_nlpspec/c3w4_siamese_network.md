@@ -698,9 +698,9 @@ Learning Objectives
 
 <a id="node-2528"></a>
 
-<p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6b0502757d520a8125a7ce34892c7830416d195d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0d7bca2d772bbaee96228da69ea134fcd4da0d46.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Như vậy là thay vì tính toán Triplet loss bằng công thức gốc, trong đó dùng
@@ -887,9 +887,9 @@ Learning Objectives
 
 <a id="node-2544"></a>
 
-<p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bbe53cb20687c397d08dbb040c2d1911e60f050f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **mean_neg** sẽ là **4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là mean negative của hàng
@@ -1604,9 +1604,9 @@ Learning Objectives
 
 <a id="node-2607"></a>
 
-<p align="center"><kbd><img src="assets/dac0dd7c430b28ae507bb0551d24488115c150e5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b57d088d820a080c6b66a55559d9dc7325d586fe.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dac0dd7c430b28ae507bb0551d24488115c150e5.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1765,9 +1765,9 @@ Learning Objectives
 
 <a id="node-2628"></a>
 
-<p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ccce731da9b3769f090d7199c2ddb8ccc95fbd65.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0c6bbde63a3e641792338b5fd2aca5d2570ff57b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Những điểm mấu chốt:
@@ -1950,9 +1950,9 @@ Learning Objectives
 
 <a id="node-2646"></a>
 
-<p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/68e76df915d9a82fe5571b19c0aaae77b0d3d636.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0a02e516a8ac986090cd63a3b19aa7ef78c7df2b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Hai chỗ khó khi làm bị stuck đó là phải dùng
@@ -1987,9 +1987,9 @@ Learning Objectives
 
 <a id="node-2651"></a>
 
-<p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6f68962584d346c12e55a9ab9441d66aa906e35a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8d15c2f32b723508c113053dbbae1b229184808e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Làm theo hint những cũng không khó hiểu. Chỉ có

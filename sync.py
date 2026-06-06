@@ -217,13 +217,13 @@ def process_mindmap(input_dir, output_dir, fallback_name=None):
             if note.text:
                 nodes[node_id]['notes'].append(note.text)
         seen_imgs = set()
-        for img in topic.findall('.//image'):
-            name = img.get('name')
+        for emb_img in topic.findall('.//embedded-image'):
+            name = emb_img.get('name')
             if name and name not in seen_imgs:
                 nodes[node_id]['images'].append(name)
                 seen_imgs.add(name)
-        for emb_img in topic.findall('.//embedded-image'):
-            name = emb_img.get('name')
+        for img in topic.findall('.//image'):
+            name = img.get('name')
             if name and name not in seen_imgs:
                 nodes[node_id]['images'].append(name)
                 seen_imgs.add(name)

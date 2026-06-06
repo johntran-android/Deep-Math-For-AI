@@ -69,9 +69,9 @@
 
 <a id="node-194"></a>
 
-<p align="center"><kbd><img src="assets/3aad05231eab338e11c931d5a662a6e16d7c27d3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2b50af26aa23a9ebc6183650c0e341b05f21e6f3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3aad05231eab338e11c931d5a662a6e16d7c27d3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > vậy ta có **col 2 không có pivot**, nó là **free col**, col 3 có
@@ -208,9 +208,9 @@
 
 <a id="node-202"></a>
 
-<p align="center"><kbd><img src="assets/49e36bfbf8865e8b2f5de365940550ceb8be2cba.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/279df0fd5d31dc11faff934b797347dc7007b402.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/49e36bfbf8865e8b2f5de365940550ceb8be2cba.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì để tìm nullspace thì ta đã biết ở bài trước, nó **chính

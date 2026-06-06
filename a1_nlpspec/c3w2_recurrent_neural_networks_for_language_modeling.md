@@ -231,9 +231,9 @@ Learning Objectives
 
 <a id="node-2169"></a>
 
-<p align="center"><kbd><img src="assets/b73dccae22b198f7133f38b66d1ab99ce4272b7e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/90aec5fb963c0fedd78b8dc28419c6fd7cbc65f0.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b73dccae22b198f7133f38b66d1ab99ce4272b7e.png" width="100%"></kbd></p>
 
 <br>
 
@@ -840,9 +840,9 @@ Learning Objectives
 
 <a id="node-2231"></a>
 
-<p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d88aa660f2f7aeb8408aaee544a13eb515fb5f37.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/51b6746eeb901a8b5b80dc0dd9422b1d5b61fe0d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy thì, nói về **y**, có dạng một **tensor shape:** **m example x số từ
@@ -863,9 +863,9 @@ Learning Objectives
 
 <a id="node-2232"></a>
 
-<p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0662a20519ca0b927bb9f5c8eac4bc84eb305c27.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/10904717a47452dad8f2fab3d540160b0b8bd629.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Khúc này là nói về việc **tính log perplexity** theo công thức đây **rất giống
@@ -1071,9 +1071,9 @@ Learning Objectives
 
 <a id="node-2249"></a>
 
-<p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3bad460a726d4104b6c9b3ada5a2d4e9b28e036a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Giải thích ShiftRight: Tương tự bài toán tạo ra tên khủng long ở DLSpec.
@@ -1092,9 +1092,9 @@ Learning Objectives
 
 <a id="node-2250"></a>
 
-<p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2ac18e55b23eca3560d3ecf46803b32abbd5f922.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Define một GRU network, lí do **Dense layer có n_units = vocab_size**
@@ -1197,9 +1197,9 @@ Learning Objectives
 
 <a id="node-2256"></a>
 
-<p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7f170439cc33a60264f278312857a381fbedbf55.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/28c619663aaf4d17a5a29401ad7489a02e53e987.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì nếu 'làm' ở chiều ngược lại bắt đầu với
@@ -1621,9 +1621,9 @@ Learning Objectives
 
 <a id="node-2308"></a>
 
-<p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3bad460a726d4104b6c9b3ada5a2d4e9b28e036a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/33a5da9dae6e80db2f8900da5ad87a458abf41f3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tương tự bài toán tạo ra tên khủng long ở DLSpec. Nhưng ở đây ta
@@ -1654,9 +1654,9 @@ Learning Objectives
 
 <a id="node-2311"></a>
 
-<p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/61fc1c27327bf23bf025251dadfdcbc7a61dad76.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/96adbf9a5a96954dfb839da3bba2222c0c247937.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Define một GRU network, lí do **Dense layer có n_units = vocab_size**

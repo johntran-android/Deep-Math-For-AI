@@ -33,9 +33,9 @@
 
 <a id="node-939"></a>
 
-<p align="center"><kbd><img src="assets/cce994660bb9079462eb3c46636347d5971d0baf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/394d16de1ee9e780fabae0a58b18444ce9ffbf65.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cce994660bb9079462eb3c46636347d5971d0baf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ở đây, người ta dùng torchvision.transform giúp preprocessing data,
@@ -93,9 +93,9 @@
 
 <a id="node-941"></a>
 
-<p align="center"><kbd><img src="assets/7865d65a8dca95fe0703b2883acfd8e4a1bdbbda.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6b47466fc780e66642ec4ae030f26a8459e8d6c8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7865d65a8dca95fe0703b2883acfd8e4a1bdbbda.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là nói về Pytorch tensor, cái này tương tự numpy array. Sau đó nói về
@@ -123,9 +123,9 @@
 
 <a id="node-943"></a>
 
-<p align="center"><kbd><img src="assets/eeeff1a69a9a02d66636c4c454b8deeb85b44421.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a030526b45075adda3d2e3fadbbc7c64d1b3e9cd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eeeff1a69a9a02d66636c4c454b8deeb85b44421.png" width="100%"></kbd></p>
 
 <br>
 
@@ -185,9 +185,9 @@
 
 <a id="node-947"></a>
 
-<p align="center"><kbd><img src="assets/675858743e2d9e11f889af050b8243b2858db0a2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5b5a670cedc635701e228541b879b5778a9da052.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/675858743e2d9e11f889af050b8243b2858db0a2.png" width="100%"></kbd></p>
 
 <br>
 
@@ -365,9 +365,9 @@
 
 <a id="node-957"></a>
 
-<p align="center"><kbd><img src="assets/125ae47689be7d9a968f5f5aa4609891131f9286.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cb700acb5d7eb2523eea9c487283cfb403166755.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/125ae47689be7d9a968f5f5aa4609891131f9286.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Dễ ko có gì đáng nói, chỉ có một điểm đáng chú ý đó là khi ini

@@ -62,9 +62,9 @@
 
 <a id="node-1161"></a>
 
-<p align="center"><kbd><img src="assets/d5f4da70e40e72cb7346dbb0367be07b7c929ec6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/42bd2fc5d856822e96b1c4bf2487843f33af78df.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d5f4da70e40e72cb7346dbb0367be07b7c929ec6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gs: có thể thấy gì ở matrix này, nó có singular?
@@ -249,9 +249,9 @@
 
 <a id="node-1169"></a>
 
-<p align="center"><kbd><img src="assets/a419e6eb346cb86b2364acf0b04fedd2093e43c3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8b8143dd187f7f3594a399f907f1025cdf344a74.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a419e6eb346cb86b2364acf0b04fedd2093e43c3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > tiếp, hỏi e^At là gì. Trong bài giảng bữa trước, ta đã biết rằng

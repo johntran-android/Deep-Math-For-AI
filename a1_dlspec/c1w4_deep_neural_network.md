@@ -735,9 +735,9 @@
 
 <a id="node-454"></a>
 
-<p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e197566dd83100780a3750df9e640777b3f07f3f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4b508dad8d7d7d1745c3a820fe414194075a57bc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > for l in range(1, L) -> l = 1,2...L-1
@@ -876,9 +876,9 @@
 
 <a id="node-476"></a>
 
-<p align="center"><kbd><img src="assets/de54abb21aae31506c2732164e39e6c1be56aa68.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/95c68374f92bce0ac85254842454e4535ae4be71.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/de54abb21aae31506c2732164e39e6c1be56aa68.png" width="100%"></kbd></p>
 
 <br>
 
@@ -983,9 +983,9 @@
 
 <a id="node-492"></a>
 
-<p align="center"><kbd><img src="assets/67b4ce8e65ef1fe4c90638ab455726a5ddd5664c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d53c62bc02e18e03f04efc2e6b348ef249018bc3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/67b4ce8e65ef1fe4c90638ab455726a5ddd5664c.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1111,9 +1111,9 @@
 
 <a id="node-512"></a>
 
-<p align="center"><kbd><img src="assets/e82877da15919e7d5e768dc77a74745806048a1b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ffd31bb02a8eea78be92a1ab7d1f28f9dbca06d4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e82877da15919e7d5e768dc77a74745806048a1b.png" width="100%"></kbd></p>
 
 <br>
 

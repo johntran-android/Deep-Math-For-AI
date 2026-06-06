@@ -1258,9 +1258,9 @@ Learning Objectives
 
 <a id="node-2449"></a>
 
-<p align="center"><kbd><img src="assets/4304e5e6b6ffb9f14486c892889579b929d6725c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d481884d97ac55e3ad866a7b2c036eb83e466adf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4304e5e6b6ffb9f14486c892889579b929d6725c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì đại khái cái câu lệnh dưới sử dụng utils function get_params đã giúp ta load hai cái
@@ -1274,11 +1274,11 @@ Learning Objectives
 
 <a id="node-2450"></a>
 
+<p align="center"><kbd><img src="assets/561d3301703eb9f6a6604eba6bcb8acba89b306f.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/7427f92a43c90a05fc9c87292f91efc6fc5b8998.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6281b9fcefb476749b952499e23c82bbcf7e16cb.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/561d3301703eb9f6a6604eba6bcb8acba89b306f.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1337,9 +1337,9 @@ Learning Objectives
 
 <a id="node-2454"></a>
 
-<p align="center"><kbd><img src="assets/701dda6cde5038fd2a5bcf863ed6f98ca18d4723.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/432ed14dcfbbd9340fda2e007bc6de42992c300e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/701dda6cde5038fd2a5bcf863ed6f98ca18d4723.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1357,17 +1357,17 @@ Learning Objectives
 
 <a id="node-2457"></a>
 
-<p align="center"><kbd><img src="assets/6b04060b425f74723c10a251383faecb2eb7bd71.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c3640145d4b25d550f18604e0b93f3fc660ee073.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6b04060b425f74723c10a251383faecb2eb7bd71.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-2458"></a>
 
-<p align="center"><kbd><img src="assets/0f1ec9b14851032c4514b971a36d6a463a8e511b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/54ec2b8d6c682cfa3f73fc7a047350e60a1b538e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0f1ec9b14851032c4514b971a36d6a463a8e511b.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1533,9 +1533,9 @@ Learning Objectives
 
 <a id="node-2478"></a>
 
-<p align="center"><kbd><img src="assets/ef8483464fbebbb1472d5d600247cfd730a55c6d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/191fa1fb3f45cf7c22a7c81255ca49e80527f7d3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ef8483464fbebbb1472d5d600247cfd730a55c6d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > 1. Như đã phân tích, ta **cần lấy index của vị trí có giá trị cao nhất trong  probability vector.**

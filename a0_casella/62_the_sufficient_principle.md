@@ -118,9 +118,9 @@
 
 <a id="node-475"></a>
 
-<p align="center"><kbd><img src="assets/337a732617c91d05d9cc8147e18eaf2107c790c5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4d8cdddbad58e38fdf62179b35a22a64abcc194b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/337a732617c91d05d9cc8147e18eaf2107c790c5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi chỗ này phải đọc kĩ: Đầu tiên, như vậy sufficient statistic nắm bắt mọi
@@ -420,9 +420,9 @@
 
 <a id="node-478"></a>
 
-<p align="center"><kbd><img src="assets/d5e28dd45e6bf095bd5c883c7a7c2ac20cc9d06d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0ae36f0129fe0c992f105c00eb3cc942de53513f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d5e28dd45e6bf095bd5c883c7a7c2ac20cc9d06d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Lập luận tiếp theo ở đây là, để **xác nhận** T(**X**) là **sufficient statistic** của / cho
@@ -504,9 +504,9 @@
 
 <a id="node-480"></a>
 
-<p align="center"><kbd><img src="assets/1fb6ae1710dba09fd118cfb6175d328c3640fecb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f16989bae37dcb36176770c631babbcc7143d185.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1fb6ae1710dba09fd118cfb6175d328c3640fecb.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-516)
 
@@ -643,9 +643,9 @@
 
 <a id="node-482"></a>
 
-<p align="center"><kbd><img src="assets/25e1f582b41326016c327e6187865216c6d5df34.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9e8f0c0d5ccac0bb2acc4eebd35d9d497e291233.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/25e1f582b41326016c327e6187865216c6d5df34.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là gs cho rằng ta nếu ta **dùng định nghĩa** của sufficient statistic để
@@ -710,9 +710,9 @@
 
 <a id="node-484"></a>
 
-<p align="center"><kbd><img src="assets/97fd481888094bec67df8c3cbf12020fe289c336.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ab80df6d3a73f14b52015dab642b7a8bffc5575b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/97fd481888094bec67df8c3cbf12020fe289c336.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Để chứng minh chiều về (điều kiện đủ):
@@ -794,9 +794,9 @@
 
 <a id="node-485"></a>
 
-<p align="center"><kbd><img src="assets/bfb4f3ae4d70cf0d0ee7d5482c5109263bf1945d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/07593d7286130eaf7eb7af2bb52bdabb5d573667.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bfb4f3ae4d70cf0d0ee7d5482c5109263bf1945d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đại khái là. Để áp dụng theorem này trong việc tìm ra sufficient statistic của
@@ -1095,9 +1095,9 @@
 
 <a id="node-493"></a>
 
-<p align="center"><kbd><img src="assets/4ddf8bd06ae05cd394e9f824be768d28aea1688a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3f89e01569916abfb9af8d230207542572ea389b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4ddf8bd06ae05cd394e9f824be768d28aea1688a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là những phần vừa qua ta đã tìm ra một sufficient statistic đối với
@@ -1226,9 +1226,9 @@
 
 <a id="node-497"></a>
 
-<p align="center"><kbd><img src="assets/6bb41a9df9103eb053be6acd94ef9ef23bd843cb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d578f726d359730c90b952c56511396bfcc7756c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6bb41a9df9103eb053be6acd94ef9ef23bd843cb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đại khái là, y như định nghĩa của sufficient statistic, nếu như dùng 
@@ -1504,9 +1504,9 @@
 
 <a id="node-504"></a>
 
-<p align="center"><kbd><img src="assets/ac81a8adb0e4ba478790bead45b0757773d2b671.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e886aa98493a43dff49484ab1f279a718dabca3f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ac81a8adb0e4ba478790bead45b0757773d2b671.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.4 ORDER STATISTIC](54_order_statistic.md#node-388)
 
@@ -1884,9 +1884,9 @@
 
 <a id="node-511"></a>
 
-<p align="center"><kbd><img src="assets/cfdbd677b1860f178faeb44db5a615d7c0a86249.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d66f0849987d7403bc13c690e9542e6a85842e8e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cfdbd677b1860f178faeb44db5a615d7c0a86249.png" width="100%"></kbd></p>
 
 🔗 **Related:** [5.4 ORDER STATISTIC](54_order_statistic.md#node-386)
 
@@ -1982,9 +1982,9 @@
 
 <a id="node-512"></a>
 
-<p align="center"><kbd><img src="assets/57c954688469680e2546bfa851eb48ab28c92e49.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e791100944f8aa82fb0a6615fb0cf015ddf0c920.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/57c954688469680e2546bfa851eb48ab28c92e49.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-487)
 
@@ -2219,9 +2219,9 @@
 
 <a id="node-514"></a>
 
-<p align="center"><kbd><img src="assets/95c2d4ef10aee2ffb140660c1eabe5178ed6ad09.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2beef59e068cecc99b79d21ae2aa4ab241ed989e.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/95c2d4ef10aee2ffb140660c1eabe5178ed6ad09.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là Basu theorem sẽ rất hữu ích, và nó cho phép ta chứng minh tính
@@ -2249,9 +2249,9 @@
 
 <a id="node-515"></a>
 
-<p align="center"><kbd><img src="assets/5b1ed6c700563da653def5ccbbc04b2776b7be8c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/450040e8131e0ceb1d8780a9ff1fef7e333caec6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5b1ed6c700563da653def5ccbbc04b2776b7be8c.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-507)
 

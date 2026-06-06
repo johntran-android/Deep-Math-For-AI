@@ -486,9 +486,9 @@
 
 <a id="node-1222"></a>
 
-<p align="center"><kbd><img src="assets/2b2f87afc719099d259dfbb8978fbbbad57d9498.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d9f27e60cbc39bb32d7b2345fe9c113c30e92509.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2b2f87afc719099d259dfbb8978fbbbad57d9498.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gs nói qua việc tìm **pseudo inverse A+**. Thì **có nhiều cách**,

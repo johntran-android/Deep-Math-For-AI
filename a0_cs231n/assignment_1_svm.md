@@ -116,9 +116,9 @@
 
 <a id="node-283"></a>
 
-<p align="center"><kbd><img src="assets/e38652ab9d8a14e0bc9b7eab285f84f413901d36.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0b582135e39be6c42aea85e1ee348d1037c48aab.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e38652ab9d8a14e0bc9b7eab285f84f413901d36.png" width="100%"></kbd></p>
 
 <br>
 
@@ -198,9 +198,9 @@
 
 <a id="node-290"></a>
 
-<p align="center"><kbd><img src="assets/5626178baf5200aa08b3859cef1559881b024885.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b79a286423b9f53a6ff69293fe0fb55ab00da8ec.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5626178baf5200aa08b3859cef1559881b024885.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Giảm xuống còn 1 vòng lặp nhưng chú ý là phải có

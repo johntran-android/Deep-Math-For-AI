@@ -652,9 +652,9 @@
 
 <a id="node-123"></a>
 
-<p align="center"><kbd><img src="assets/6a4f727761e193966992ad775eea3fc532452576.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6bbaf1b0e9ad9dbc55a9ced31f2ca7988056d7c1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6a4f727761e193966992ad775eea3fc532452576.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Sai lầm thứ hai là **LẪN LỘN GIỮA PRIOR PROBABILITY P(A) VÀ

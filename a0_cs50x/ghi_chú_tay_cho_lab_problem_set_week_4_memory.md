@@ -133,9 +133,9 @@
 
 <a id="node-1499"></a>
 
-<p align="center"><kbd><img src="assets/fefa19a80d21dc0d992ea5f91f85e00035bf489b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3e1326b4caca8fe68ec630f3e54129e69510d4eb.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fefa19a80d21dc0d992ea5f91f85e00035bf489b.png" width="100%"></kbd></p>
 
 <br>
 
@@ -500,17 +500,17 @@
 
 <a id="node-1527"></a>
 
-<p align="center"><kbd><img src="assets/15e111a6d2eb767883f500ee0b838d7ac469001c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8088c1ee165a9907d85d33ee012e53fd702031b3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/15e111a6d2eb767883f500ee0b838d7ac469001c.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1528"></a>
 
-<p align="center"><kbd><img src="assets/a18826093f7b0776a83f702dcaddc490f5370142.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2f1189f8245fd9afadbac19bb9595d75b7fd52ad.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a18826093f7b0776a83f702dcaddc490f5370142.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > "002.jpg" = 7 char -> Cần 8 bytes
@@ -855,9 +855,9 @@
 
 <a id="node-1553"></a>
 
-<p align="center"><kbd><img src="assets/a06a96d89408426f8ba31b916088459f5e3f08e5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7aaa4bd6df3ab76975f83ef104266ed9c43a6394.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a06a96d89408426f8ba31b916088459f5e3f08e5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đã check cách 2, vẫn đúng:
@@ -990,9 +990,9 @@
 
 <a id="node-1566"></a>
 
-<p align="center"><kbd><img src="assets/ea5ed3ebf0a3bfb31a279ffdd508003b4030c826.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b2fa5c0594f87fcb3480c696a499ea73aeb03471.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ea5ed3ebf0a3bfb31a279ffdd508003b4030c826.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1071,17 +1071,17 @@
 
 <a id="node-1575"></a>
 
-<p align="center"><kbd><img src="assets/d4434ac04ccdae3a29ef51331061cb0c82679eb8.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4f7cc855f81f33e4646e03708d0525cd2e733be1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d4434ac04ccdae3a29ef51331061cb0c82679eb8.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-1576"></a>
 
-<p align="center"><kbd><img src="assets/c980d91a28f1a56d35a7c97d48e112522a843b89.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/98490877d9074215aac909088eb8ff332913fe79.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c980d91a28f1a56d35a7c97d48e112522a843b89.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tại sao dùng RGBTRIPLE newValue không

@@ -91,9 +91,9 @@
 
 <a id="node-111"></a>
 
-<p align="center"><kbd><img src="assets/af60a5edf2da9b4d0b38aab1a7b46c1763c42bdb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/6b0102d2a5170aba73d05c609609b718a8fb7391.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/af60a5edf2da9b4d0b38aab1a7b46c1763c42bdb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ta thấy nó ghi "

@@ -145,9 +145,9 @@
 
 <a id="node-46"></a>
 
-<p align="center"><kbd><img src="assets/227b502186a251b5a2666d073534ca8e80e6b65c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b1546dbcdbc80814b2c7bb5750cceda1b82e5d88.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/227b502186a251b5a2666d073534ca8e80e6b65c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Khi **B chưa xảy ra**, tức **chỉ xét P(A)** thì nó sẽ là **"tỉ lệ" giữa
@@ -167,9 +167,9 @@
 
 <a id="node-47"></a>
 
-<p align="center"><kbd><img src="assets/126aed6cad86ee371b5da0f34baa2f27120ad860.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fa62218527f86cc2010363320fb6d33f88706da1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/126aed6cad86ee371b5da0f34baa2f27120ad860.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là một ví dụ, đúng hơn là tiếp tục ví dụ tính xác suất của việc bốc được 4 lá
@@ -369,9 +369,9 @@
 
 <a id="node-49"></a>
 
-<p align="center"><kbd><img src="assets/a46dddb17af4ea9f446ed3c7c274bfe80d231b5d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/540bcebc4ee03455fd28572061b6fc51f785f157.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a46dddb17af4ea9f446ed3c7c274bfe80d231b5d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua một ví dụ có thể tóm tắt như vầy: Có ba ông tù nhân A,B,C. Người ta chọn một
@@ -497,9 +497,9 @@
 
 <a id="node-52"></a>
 
-<p align="center"><kbd><img src="assets/eb0951a6fe793eef4346ebbd648f998e0942799b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/3aeaf7de3f9a9b831f63c060f90f062f497623d1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eb0951a6fe793eef4346ebbd648f998e0942799b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Từ **định nghĩa của conditional probability** **P(A|B)=P(A ∩ B) / P(B)**

@@ -173,9 +173,9 @@
 
 <a id="node-578"></a>
 
-<p align="center"><kbd><img src="assets/de83be3720e1598776fc4759fa92def38640ef1e.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/810e57d0745eb8eebbc04c112341b1d62195d897.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/de83be3720e1598776fc4759fa92def38640ef1e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì nếu ta có curl (F) = 0 thì theo Green theorem, tích phân trên
@@ -338,9 +338,9 @@
 
 <a id="node-588"></a>
 
-<p align="center"><kbd><img src="assets/b67b4609d0f7051f9c25f4a70eea9e733b96837c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8a0f6741a570c3e165f62f8e038d0dc76857b49b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b67b4609d0f7051f9c25f4a70eea9e733b96837c.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 22: GREEN'S THEOREM](untitled.md#node-592)
 

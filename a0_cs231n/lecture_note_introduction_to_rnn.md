@@ -80,9 +80,9 @@
 
 <a id="node-1206"></a>
 
-<p align="center"><kbd><img src="assets/e51acd2c9e1d8bb665da870d467e25bd21178a9d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/26efbb4d1faae8f11849f5e9ca6fe01dfcde3d35.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e51acd2c9e1d8bb665da870d467e25bd21178a9d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, công thức là đây, cơ bản như đã nói, chỉ có một bộ param W, b
@@ -186,13 +186,13 @@
 
 <a id="node-1212"></a>
 
+<p align="center"><kbd><img src="assets/34dda8b662720b24bfe4640393bdb36ab1334f1e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d600c0a0d16cb36771549122d010ff6b83070620.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d191b90030ce375869e9aca432b61ef9c0ed5580.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ef11c93e47c8fbcd2126e0d57659118c57cac540.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/34dda8b662720b24bfe4640393bdb36ab1334f1e.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ở đây, có thể hiểu là người ta đang nói về việc update Whh bởi derivative của 

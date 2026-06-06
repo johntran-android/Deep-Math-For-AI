@@ -438,11 +438,11 @@
 
 <a id="node-1721"></a>
 
+<p align="center"><kbd><img src="assets/fe0fa305dcfdb0a6e597a85435812bcefad22688.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/4e9a3eb5325503029529a6307b98cceaa8eda734.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b27bee59a28f3c60cd80e41cb9fa60689e8a1fee.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fe0fa305dcfdb0a6e597a85435812bcefad22688.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là define matrix 'Style' thể hiện style của 1 layer l còn gọi
@@ -707,9 +707,9 @@
 
 <a id="node-1752"></a>
 
-<p align="center"><kbd><img src="assets/1ad088897e947ff79791a5fefe09b6d27fcd2021.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9bfb993abcc56cbe3628dd11824079f0392a99d5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1ad088897e947ff79791a5fefe09b6d27fcd2021.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là làm chơi cho biết chứ do dùng
@@ -873,9 +873,9 @@
 
 <a id="node-1774"></a>
 
-<p align="center"><kbd><img src="assets/5c978fcf3757049e37d6245509e785b1cb632182.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2a3c3ba807eada6e10a38c5e4a897bc1e1c02758.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5c978fcf3757049e37d6245509e785b1cb632182.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1080,9 +1080,9 @@
 
 <a id="node-1804"></a>
 
-<p align="center"><kbd><img src="assets/29a207e234ce7f94f8b3bfa36167657e42d3b751.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7fe8313e7ab857989666cfa6f1ae39303e1144d2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/29a207e234ce7f94f8b3bfa36167657e42d3b751.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1267,9 +1267,9 @@
 
 <a id="node-1832"></a>
 
-<p align="center"><kbd><img src="assets/b0506e384a2061fd2434df6eb3faec892b573e64.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/20050afc9a877ef7b44dcefaca6c4a836cb18c7c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b0506e384a2061fd2434df6eb3faec892b573e64.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > This is a Python function that takes a pre-trained VGG model (vgg) and a

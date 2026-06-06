@@ -5,9 +5,9 @@
 ---
 <a id="node-92"></a>
 
-<p align="center"><kbd><img src="assets/7929b7dc55c371f313d4bb4da8d67a6173bff636.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/99ebd4becbb5ac08bc3289d84bfcffdec1677026.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7929b7dc55c371f313d4bb4da8d67a6173bff636.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên, gs giới thiệu bài toán least-square là bài toán tối ưu mà objective

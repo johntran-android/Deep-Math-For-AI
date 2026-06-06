@@ -19,9 +19,9 @@
 
 <a id="node-34"></a>
 
-<p align="center"><kbd><img src="assets/e87a0de9acfdcd2f2a7abbe451dd7f2e6d307208.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/93514b5d994f0ef8c4554b551c037533e3e2954b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e87a0de9acfdcd2f2a7abbe451dd7f2e6d307208.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Nói sơ về các cách tiếp cận quan trọng nhất, thì cách đầu tiên là Finite
@@ -269,9 +269,9 @@
 
 <a id="node-39"></a>
 
-<p align="center"><kbd><img src="assets/309022cf7b1e81f964816e8472f67b113031e7dd.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ddf39429c37f06936923883b162c107264f3e47b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/309022cf7b1e81f964816e8472f67b113031e7dd.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đoạn này đại ý là, vì sai số khi tính xấp sỉ đạo hàm sẽ nhỏ đi một cách tuyến
@@ -642,9 +642,9 @@
 
 <a id="node-44"></a>
 
-<p align="center"><kbd><img src="assets/ef9aafdb509e541da404d7b315e23e569b262bf3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e4dbe3fd559747725009fafc8e389fdee7e39622.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ef9aafdb509e541da404d7b315e23e569b262bf3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua phần xấp xỉ một Jacobian thưa (spare). Đầu tiên đại ý là gs nhắc lại
@@ -812,13 +812,13 @@
 
 <a id="node-47"></a>
 
+<p align="center"><kbd><img src="assets/e132f8cd0fd655d2976663725b596aca8871ba41.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/92f7644b8a5260cc62c7c010add0d72f107e0fff.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c75c21cf358289648e2c3bf3e511c1d6d00df155.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/50cc00ac0f64c27f921d7fcceb245af51bb6fc9b.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e132f8cd0fd655d2976663725b596aca8871ba41.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo, tuy dài dòng nhưng không có gì khó, cùng nhau tìm hiểu:
@@ -926,11 +926,11 @@
 
 <a id="node-48"></a>
 
+<p align="center"><kbd><img src="assets/ebb45eaca96cc89894b56b4c425b8ec605e98fa0.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/b5e81d62bd82b9014f51267758c36209ad45908b.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ec026e918c59da2ab03e8cf84d2484108db6f2ac.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ebb45eaca96cc89894b56b4c425b8ec605e98fa0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > QUAY LẠI SAU nhưng đại ý là vầy
@@ -963,9 +963,9 @@
 
 <a id="node-49"></a>
 
-<p align="center"><kbd><img src="assets/4b14af7bc8c29bb07eb793a86042843d04e7e361.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e1af2fac3245b0541bf0e0f76689d8d1bd8564f5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4b14af7bc8c29bb07eb793a86042843d04e7e361.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là, ta biết Hessian, là matrix đạo hàm cấp 2 của hàm vector → scalar

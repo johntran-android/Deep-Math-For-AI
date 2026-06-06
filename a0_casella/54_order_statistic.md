@@ -94,9 +94,9 @@
 
 <a id="node-380"></a>
 
-<p align="center"><kbd><img src="assets/00cdd2e0e69e6474862851c25d453ae4442ba96c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c96b8b7735298ba653ec8fe69ae6fa931c3c70fd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/00cdd2e0e69e6474862851c25d453ae4442ba96c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là mean và median tuy liên quan nhưng chúng đo lường hai thứ
@@ -173,9 +173,9 @@
 
 <a id="node-383"></a>
 
-<p align="center"><kbd><img src="assets/5e5f0ebb849fbdfbc4981a7f52c8c4a68e5404ca.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bc216671a0b595b06159d2c52f45422388d94674.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5e5f0ebb849fbdfbc4981a7f52c8c4a68e5404ca.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là order statistic là function của sample (là sao, tức là như đã biết,
@@ -317,9 +317,9 @@
 
 <a id="node-386"></a>
 
-<p align="center"><kbd><img src="assets/ffa5cd6915f102561f654a9c876d3de72d6828d9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b8197db23a11ea5262e0d892e7248244072003a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ffa5cd6915f102561f654a9c876d3de72d6828d9.png" width="100%"></kbd></p>
 
 🔗 **Related:** [6.2 THE SUFFICIENT PRINCIPLE](62_the_sufficient_principle.md#node-511)
 
@@ -445,9 +445,9 @@
 
 <a id="node-389"></a>
 
-<p align="center"><kbd><img src="assets/4d419ae5f700486e0c61a6221ff89621cd9543ee.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7b7104fd8d20b487a30378429e51d97dad5c96d6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4d419ae5f700486e0c61a6221ff89621cd9543ee.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cho X1, ...Xn là random sample iid uniform(0, a) và và X(1), ...X(n) là các 

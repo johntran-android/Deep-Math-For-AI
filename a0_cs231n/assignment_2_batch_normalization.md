@@ -37,9 +37,9 @@
 
 <a id="node-860"></a>
 
-<p align="center"><kbd><img src="assets/ffb7913c0865066de72ce59af511b564e6584119.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e507942f83b8f3c9038c608af7a99e7423014ebf.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ffb7913c0865066de72ce59af511b564e6584119.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > việc dùng keepdims True giúp sau khi mean và var vẫn
@@ -86,13 +86,13 @@
 
 <a id="node-863"></a>
 
+<p align="center"><kbd><img src="assets/71192c572cb0dd2a60c72548045fa7bbef6f1822.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/e02b2753da3a2928a667ed56ca51f789168c6020.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/3a1930c0f7f96ef22e0a0019eca7236267400331.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a0452075f2224996b7903a797224c9f04f8fe8c1.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/71192c572cb0dd2a60c72548045fa7bbef6f1822.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Theo công thức mà áp vô thôi, dout chính là dl/dyi. Tuy
@@ -132,9 +132,9 @@
 
 <a id="node-866"></a>
 
-<p align="center"><kbd><img src="assets/086324373503fb3eff0867da6351f04e0613cc1b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0532411ac6552d550ee8dfea43025563b4076a04.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/086324373503fb3eff0867da6351f04e0613cc1b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > # You should expect losses between 1e-4~1e-10 for W,
@@ -166,11 +166,11 @@
 
 <a id="node-869"></a>
 
+<p align="center"><kbd><img src="assets/9d2e3feebe41a2c03023079a33f198c3350d026d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/df474ebed4790487883524551f9c1c483df41311.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5bc69ad2e9951f3cd5f9333fc78ce36610a61bc4.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/9d2e3feebe41a2c03023079a33f198c3350d026d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đồ thị cho thấy BN converge tốt hơn, cụ thể là nhanh hơn và về loss thấp hơn
@@ -179,19 +179,19 @@
 
 <a id="node-870"></a>
 
-<p align="center"><kbd><img src="assets/f363644f816a2095004b867d93d362b00f0c3645.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/d46e2ed3d71d6a21dd458f9d05a255738537e491.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f363644f816a2095004b867d93d362b00f0c3645.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-871"></a>
 
+<p align="center"><kbd><img src="assets/e43360e1fc84ac15508296b729cde789818aa1db.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/dcb1d78581a7daf3ec8bd73348d7b49a7c9c50e8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/af4cb6b2379059c7fe61edfd69c66beaa712ac41.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/e43360e1fc84ac15508296b729cde789818aa1db.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > biểu đồ ở trên cùng: với model không BN, ws từ rất nhỏ đến nhỏ
@@ -227,11 +227,11 @@
 
 <a id="node-872"></a>
 
+<p align="center"><kbd><img src="assets/b5d19afb62d300198ab24068d168370d5fb256d8.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/fa960657e6ac87f05faaf4bf57900ab9d366b44f.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1baab41a2d871edf14cfcc74fad1f6d2da1a8511.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b5d19afb62d300198ab24068d168370d5fb256d8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > nhận xét đầu tiên là với BN, training với batch size lớn thì tăng hiệu quả.
@@ -251,9 +251,9 @@
 
 <a id="node-874"></a>
 
-<p align="center"><kbd><img src="assets/3f94ac78f836d5bf175f297bda92ddb938a027b5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f67b4b85e775c39359dba7bc71b87a5b893bc8ff.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3f94ac78f836d5bf175f297bda92ddb938a027b5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Theo mô tả, Layer Normalization chỉ khác Batch Normalization ở chỗ nó sẽ

@@ -281,9 +281,9 @@
 
 <a id="node-73"></a>
 
-<p align="center"><kbd><img src="assets/afb961ca7152cde4de4c803dbc0796796e0929cc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7635f4e37ce465eda1003464e44ccc007098a136.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/afb961ca7152cde4de4c803dbc0796796e0929cc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là đây là hình như là lần đầu tiên mình được học về định nghĩa của

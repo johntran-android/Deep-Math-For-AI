@@ -550,9 +550,9 @@
 
 <a id="node-1065"></a>
 
-<p align="center"><kbd><img src="assets/ef2db463cc4004f2130367d6e448dff6d53f8095.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/05fdc7b3a4c08109461046afa2a8172d3b2b2a3f.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ef2db463cc4004f2130367d6e448dff6d53f8095.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > rồi, xét matrix AAT **với ví dụ này** thì thấy nó **hóa ra là
@@ -684,9 +684,9 @@
 
 <a id="node-1071"></a>
 
-<p align="center"><kbd><img src="assets/b162944af64b5042835ecf481d4c9e156a7e8d5a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/168502a53f39b7b40c0636e9fa7f546932768166.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b162944af64b5042835ecf481d4c9e156a7e8d5a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tới đây **gs điền u1 = unit basis của column space** vào
@@ -850,9 +850,9 @@
 
 <a id="node-1074"></a>
 
-<p align="center"><kbd><img src="assets/2b2f87afc719099d259dfbb8978fbbbad57d9498.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f1c687a775c1466098f0d41c9aea45dee3bb2320.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2b2f87afc719099d259dfbb8978fbbbad57d9498.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đây, chính là thầy nhắc lại rằng SVD thật ra **chính là việc

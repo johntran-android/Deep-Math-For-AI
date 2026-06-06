@@ -25,9 +25,9 @@
 
 <a id="node-133"></a>
 
-<p align="center"><kbd><img src="assets/b2ad261e5177fbece34b8277d1c2ae0c18c019de.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b5c9d221d9b2ba4719c169c55dc165e067a83763.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b2ad261e5177fbece34b8277d1c2ae0c18c019de.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Từ **initial guess x1**, ta xây dựng **phương trình tiếp tuyến với đồ thị
@@ -53,9 +53,9 @@
 
 <a id="node-134"></a>
 
-<p align="center"><kbd><img src="assets/71f353215fcf2ae8c67a7a78725e47d09cb12585.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fe42f9b43c952046872c6c3cea5fa17c111820f5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/71f353215fcf2ae8c67a7a78725e47d09cb12585.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Lặp lại quá trình, ta sẽ tìm phương trình tiếp tuyến tại x2:

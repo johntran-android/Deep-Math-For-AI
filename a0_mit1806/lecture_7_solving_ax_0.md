@@ -268,11 +268,11 @@
 
 <a id="node-172"></a>
 
+<p align="center"><kbd><img src="assets/adfb49519b5a45123edeea346df808bccbfc6f30.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d7ad848cdf184c2da0b819501ac9cb49de956358.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c42f18a67ff41207d46b5c9c6928bef7bd83fe79.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/adfb49519b5a45123edeea346df808bccbfc6f30.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là gs chỉ ra rằng các pivot row và col (đương nhiên
@@ -302,9 +302,9 @@
 
 <a id="node-174"></a>
 
-<p align="center"><kbd><img src="assets/894961ae12a0c00e5fd4287820c3e744b6310636.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/89c318158321ec1215fe6491765baea77906fd46.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/894961ae12a0c00e5fd4287820c3e744b6310636.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs nói rằng với dạng typical này, tôi sẽ tìm mọi solution của
@@ -335,9 +335,9 @@
 
 <a id="node-175"></a>
 
-<p align="center"><kbd><img src="assets/fae10554b0de1e44a85f57f935378aa84dee1c3b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/516129ce1a600ee11a5f348f1c5215a29926de8d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fae10554b0de1e44a85f57f935378aa84dee1c3b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đại khái là vì sao lại có thể có matrix nullspace N là như

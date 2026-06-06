@@ -124,9 +124,9 @@
 
 <a id="node-760"></a>
 
-<p align="center"><kbd><img src="assets/2509c4d790581a206e24c73cc3795c65e0acb2c9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/331798b410547a41f8cade3cd31c2eb9d0be722d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2509c4d790581a206e24c73cc3795c65e0acb2c9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Hiểu đại khái là gs nói về mối liên hệ giữa acceptance region trong
@@ -375,9 +375,9 @@
 
 <a id="node-766"></a>
 
-<p align="center"><kbd><img src="assets/ae78649278d30cfd849a10ca367ccf6e752ebb36.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bb03b036c4b57a8a6d1191e6c32a901ad8ed9e9c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ae78649278d30cfd849a10ca367ccf6e752ebb36.png" width="100%"></kbd></p>
 
 🔗 **Related:** [9.3 METHODS OF EVALUATING INTERVAL ESTIMATORS](93_methods_of_evaluating_interval_estimators.md#node-826)
 
@@ -574,11 +574,11 @@
 
 <a id="node-769"></a>
 
+<p align="center"><kbd><img src="assets/69d85af3a5f9726114eff5b9512bfebf1bfc086e.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/935c8c73470dc6ab0ddee9ec2c8f2958d97bb5b4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/499b79caf023b50fe96d6923ee15b7c85aff7138.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/69d85af3a5f9726114eff5b9512bfebf1bfc086e.png" width="100%"></kbd></p>
 
 🔗 **Related:** [4.6 MULTI-VARIATE DISTRIBUTION](46_multi_variate_distribution.md#node-313)
 
@@ -1026,9 +1026,9 @@
 
 <a id="node-777"></a>
 
-<p align="center"><kbd><img src="assets/ea6051718d2ce96338e4b9c1d2594dc1ce44b011.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8adf3957618051c190f72be2a51afec4576eff49.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ea6051718d2ce96338e4b9c1d2594dc1ce44b011.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > hôm qua đến giờ đang ráng hiểu các đoạn rời rạc của bức tranh, chỉ nhớ là ta
@@ -1798,9 +1798,9 @@
 
 <a id="node-788"></a>
 
-<p align="center"><kbd><img src="assets/01e1ff1746abbdef2d88ecb423dcc77299def7d5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/fe358fcb52b4e8f2be62954e552d482ddec799f2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/01e1ff1746abbdef2d88ecb423dcc77299def7d5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái hiểu vầy: Theo lí thuyết Tautology, miễn là ta có A(θ0) là level α
@@ -1932,9 +1932,9 @@
 
 <a id="node-790"></a>
 
-<p align="center"><kbd><img src="assets/82649a3e588ae47c823bbe659b689c8e1a293ccf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e51cfee9283ddc9567cfbd49a1e271c75a1df436.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/82649a3e588ae47c823bbe659b689c8e1a293ccf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên thử chứng minh vì sao gs nói:
@@ -2963,9 +2963,9 @@
 
 <a id="node-803"></a>
 
-<p align="center"><kbd><img src="assets/c3a8019452648c9b65acc704fb21fa740899d5b2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/672a3b797e80ab30518c9e1e13bc426410f93cb5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c3a8019452648c9b65acc704fb21fa740899d5b2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là chỗ này gs nhấn mạnh cần phân biệt ý nghĩa khác nhau của

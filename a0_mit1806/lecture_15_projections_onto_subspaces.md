@@ -419,9 +419,9 @@
 
 <a id="node-472"></a>
 
-<p align="center"><kbd><img src="assets/8c91a2630f07a6ec3ca3333deb6b63f7579fdf88.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c12eb176691f9a732de34f5e9196a14769afd6e6.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c91a2630f07a6ec3ca3333deb6b63f7579fdf88.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gs nhận xét rằng, hồi nãy với 1 dimension, ta có **aTa là

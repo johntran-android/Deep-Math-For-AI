@@ -359,9 +359,9 @@
 
 <a id="node-693"></a>
 
-<p align="center"><kbd><img src="assets/1da253c08b5f988e56615bb0b85d464c580cabc0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e0bf33dfba2fc523f2085f49afa7afa2ce84cd9d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1da253c08b5f988e56615bb0b85d464c580cabc0.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 19: JOINT, CONDITIONAL AND MARGINAL DISTRIBUTION](untitled.md#node-626)
 
@@ -383,9 +383,9 @@
 
 <a id="node-694"></a>
 
-<p align="center"><kbd><img src="assets/5bf63cf4b33eecc933f9255589f66c4bf177a4f4.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cb95d8c12e4ad8e64e912dde9be5f857f9a41108.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5bf63cf4b33eecc933f9255589f66c4bf177a4f4.png" width="100%"></kbd></p>
 
 🔗 **Related:** [TÓM TẮT:  - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1  - Khi đã có MGF, như bài trước ta đã biết các lí do mà MGF quan trọng trong đó có reason #1 đó là ta chỉ cần tính đạo hàm cấp n của nó sẽ cho ta n'th moment.  - Dù ta có thể tính đạo hàm nhiều lần để có 1st, 2nd moment nhưng có cách hay hơn. Bằng cách nhận ra 1/(1-t) liên quan đến Geometric series  a + ar + ar^2 = Tổng k=0:infinity a*r^k với |r| < 1 sẽ converge về a/[1-r]  Nên 1/1-t chính là Tổng n=0:infinity t^n với |t| < 1  Thế thì theo gs, từ đây cho phép ta KHỎI CẦN TÍNH ĐẠO HÀM CẤP N ĐỂ CÓ MOMENT THỨ N LÀM GÌ CHO MỆT, mà chỉ cần ĐỌC NÓ RA THÔI  Cụ thể là ta đã biết ở bài trước rằng, n'th moment = đạo hàm cấp n của M(t) (là coefficient của (t^n / n!) khi expand M(t) theo Taylor series tại 0)  Do đó, bằng cách tạo ra (t^n / n!) thì BẤT CỨ CÁI GÌ GẮN VỚI NÓ CHÍNH LÀ COEFFICIENT, VÀ CHÍNH LÀ N'TH MOMENT  Do đó ta sẽ nhân thêm n! và chia n! để có (t^n / n!). Như vậy cái lòi ra làm coefficient của t^n/n! ở đây là n! CHÍNH LÀ N'TH MOMENT.  Từ đó cho phép ta ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!  N'TH MOMENT CỦA EXPO(1) E(X^n) = n!  -  đây là tính chất RẤT MẠNH CỦA MGF. Vì ví dụ như khi tính n'th moment (E[X^n]) thì nếu dùng LOTUS, ta phải TÍNH TÍCH PHÂN (INTEGRAL) VÀ CÓ THỂ GẶP NHỮNG TÍCH PHÂN RẤT PHỨC TẠP.  Trong khi đó, nếu ta có MGF, để có nth moment, ta CHỈ CẦN TÍNH DERIVATIVE MÀ DERIVATIVE THÌ THƯỜNG DỄ HƠN LÀ TÍNH TÍCH PHÂN  -Từ n'th moment của Expo(1) ta dễ dàng có n'th moment của Y ~ Expo(λ): E[Y^n] = n! / λ^n  - N'TH MOMENT CỦA N(0,1) VỚI N LẺ ĐỀU BẰNG 0  - MGF CỦA POIS(λ) = e^[λ(e^t-1)]  - Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y INDEPENDENT thì X+Y ~ Pois(λ+µ)](tóm_tắt_tính_mgf_mt_của_expo1_11_t_t_1_khi_đã_có_mgf_như_bài_trước_ta_đã_biết_các_lí_do_mà_mgf_quan_.md#node-576)
 
@@ -412,9 +412,9 @@
 
 <a id="node-695"></a>
 
-<p align="center"><kbd><img src="assets/5e7957afd25d09fc405bc003ec5f84c2f0c60920.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/be37a96973bc07dc461fca43d476224f93c73955.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5e7957afd25d09fc405bc003ec5f84c2f0c60920.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 28: INEQUALITIES](untitled.md#node-867)
 
@@ -488,11 +488,11 @@
 
 <a id="node-697"></a>
 
+<p align="center"><kbd><img src="assets/126ffbb46718f89055c15cfa14126e067cb7e46c.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/2c43753345669989bf22209bf13df121722db540.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/355970c48e7a6d8533690be42f28e6c33d6c3921.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/126ffbb46718f89055c15cfa14126e067cb7e46c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo ta đến một **Thereom** rằng **Cov(X, Y)** **chỉ có giá trị trong range [-1:1]**. 
@@ -507,9 +507,9 @@
 
 <a id="node-698"></a>
 
-<p align="center"><kbd><img src="assets/1742f9b5cf8b9b5eb400d5e0742b225dc8d1a40c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/db3dc2fcad22c2450d01fd4062c86f1d9b80da32.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1742f9b5cf8b9b5eb400d5e0742b225dc8d1a40c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Để chứng minh đầu tiên, **ko làm mất tính khái quát** (**WLOG** - viết tắt của **Without loss of Generality**) 
@@ -596,9 +596,9 @@
 
 <a id="node-701"></a>
 
-<p align="center"><kbd><img src="assets/996378194c468d5fc3da15cb647d4b2c0a2effa3.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/96611299525797d30a7740bd8d66b90ec56e7ff1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/996378194c468d5fc3da15cb647d4b2c0a2effa3.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ta **xét i khác j:**  Để cho dễ ta sẽ concrete (**cụ thể hóa**) bằng cách tính

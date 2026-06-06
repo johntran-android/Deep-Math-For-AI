@@ -134,9 +134,9 @@
 
 <a id="node-67"></a>
 
-<p align="center"><kbd><img src="assets/e778d36f32fd22bfd53eb1ec725ec1856f5332ac.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/03162fcc867e60f5030bf75238fd6efb8f6973c2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e778d36f32fd22bfd53eb1ec725ec1856f5332ac.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta có thể x2 lên để có góc 2*theta ứng với cung dài

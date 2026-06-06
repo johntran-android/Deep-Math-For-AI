@@ -15,9 +15,9 @@
 
 <a id="node-943"></a>
 
-<p align="center"><kbd><img src="assets/d2075fffb22377f6c26f5964f61996153e565269.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e9bab78454b3a61f22037f248c0e0edf3bd6e3f4.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d2075fffb22377f6c26f5964f61996153e565269.png" width="100%"></kbd></p>
 
 <br>
 
@@ -29,9 +29,9 @@
 
 <a id="node-945"></a>
 
-<p align="center"><kbd><img src="assets/a4625045ca86c8b09fa369ce3989aba553eb68fc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7a63089858324a7fb48d9e2534e7677b4d58eddc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a4625045ca86c8b09fa369ce3989aba553eb68fc.png" width="100%"></kbd></p>
 
 <br>
 
@@ -94,9 +94,9 @@
 
 <a id="node-952"></a>
 
-<p align="center"><kbd><img src="assets/71c54d05deab1f6e42a5dde05fdc5a3550972da1.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a5828ffe90d34bd39cb45917acf372f49eae67bc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/71c54d05deab1f6e42a5dde05fdc5a3550972da1.png" width="100%"></kbd></p>
 
 <br>
 
@@ -307,9 +307,9 @@
 
 <a id="node-970"></a>
 
-<p align="center"><kbd><img src="assets/178a3656e7b3d8869722c88b9c1e35c85c34519b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8162c64100e8a510f06d824286069bfb6b4991c8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/178a3656e7b3d8869722c88b9c1e35c85c34519b.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là những
@@ -319,11 +319,11 @@
 
 <a id="node-971"></a>
 
+<p align="center"><kbd><img src="assets/05c24f56ad55b8f4477210b6d7eda3f10c3d03b4.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/f3319513dd5632d648e908f5a331d90266c130ff.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/a8a155aae3987c597cffcc7c524a35aeb46e5442.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/05c24f56ad55b8f4477210b6d7eda3f10c3d03b4.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > D: What's changed?
@@ -357,17 +357,17 @@
 
 <a id="node-974"></a>
 
-<p align="center"><kbd><img src="assets/281fa0016160dd367e55da52e46a8ba54d76b90b.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/92042a49989fe1a1db6c9aef7855e588b50a90c9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/281fa0016160dd367e55da52e46a8ba54d76b90b.png" width="100%"></kbd></p>
 
 <br>
 
 <a id="node-975"></a>
 
-<p align="center"><kbd><img src="assets/6c8957c7ff19498c3e18a87502b073664217bce7.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4fea5ee98b892d45ea7f82875e8d550a4e28809b.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6c8957c7ff19498c3e18a87502b073664217bce7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Với **for loop** tương đương cái kiểu này thì trong
@@ -722,9 +722,9 @@
 
 <a id="node-1002"></a>
 
-<p align="center"><kbd><img src="assets/f5363b00ab96892bd7f2815fe18af605a3871b52.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/da8ee504fdd3f51fd1ddfddd837e23a75bd669f3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f5363b00ab96892bd7f2815fe18af605a3871b52.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > D: Correct. Nhưng cái hay ho là **dù n không nằm trong

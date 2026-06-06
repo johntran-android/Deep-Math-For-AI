@@ -14,11 +14,11 @@
 
 <a id="node-138"></a>
 
+<p align="center"><kbd><img src="assets/fd223994b2aeb003ee04028c9238b529c29e4a93.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/14e8dd1a50a0c0157399d78ee4dbc1d59c094c64.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/152e4ed1deae87991f8f2cb88cf8a7de1c8a64b0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fd223994b2aeb003ee04028c9238b529c29e4a93.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên như ta đã biết, rv gọi là discrete nếu như range của nó countable (nó có
@@ -73,9 +73,9 @@
 
 <a id="node-139"></a>
 
-<p align="center"><kbd><img src="assets/5a6a3c4def6c7a7529793e7d9acf012c2273ae7d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/37a76492f87f8befc247da88fe5c7765720bb848.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5a6a3c4def6c7a7529793e7d9acf012c2273ae7d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Mình gặp lại Hypergeometric distribution. Nhớ lại trong stat110, distribution
@@ -142,9 +142,9 @@
 
 <a id="node-140"></a>
 
-<p align="center"><kbd><img src="assets/2a0476aff8ceb5cf0402d90b4de0fb6fddc997b6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/0900fc0408cdc56dcd994f5e3f1fce020e0d8780.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2a0476aff8ceb5cf0402d90b4de0fb6fddc997b6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, đại khái là công thức nhị thức (n choose k) sẽ ngầm giả định n > k
@@ -218,9 +218,9 @@
 
 <a id="node-143"></a>
 
-<p align="center"><kbd><img src="assets/ddf6a4f2516f812616378c114b4fd1fd093031a6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/997a17aa6c001aa33c64d799702bcb16c6ce2665.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ddf6a4f2516f812616378c114b4fd1fd093031a6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Bin(n, p) thì quá rành rồi, và ở đây cũng chỉ nói y như stat110, đó là ta 
@@ -236,9 +236,9 @@
 
 <a id="node-144"></a>
 
-<p align="center"><kbd><img src="assets/cbbbf130b413b85849dd806e8861c786e4ab7eb5.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4daa65faf73aff5c9c58ade7842c9ddefc13ccba.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cbbbf130b413b85849dd806e8861c786e4ab7eb5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ta mới gặp lại cái định lý nhị thức: (x+y)^n = Σi=0:n (n choose i) x^i y^(n-i)
@@ -487,9 +487,9 @@
 
 <a id="node-148"></a>
 
-<p align="center"><kbd><img src="assets/4de581e4dd72422fff88dee1053faf7c4d73a148.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/33dfdc623ef4de18a9c4943be073d93511b144a7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4de581e4dd72422fff88dee1053faf7c4d73a148.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi pmf của Pois P(X = x| λ) = e^-λ λ^x / x! ; x = 0,1...
@@ -578,9 +578,9 @@
 
 <a id="node-150"></a>
 
-<p align="center"><kbd><img src="assets/e2202fb6abc0bf56ce8843350408260b41431cc2.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bd0db9116c219f8c19131237490c8497ea4ea9bc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e2202fb6abc0bf56ce8843350408260b41431cc2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta sẽ có công thức recursion (đệ quy) rất hữu ích khi tính toán
@@ -663,9 +663,9 @@
 
 <a id="node-152"></a>
 
-<p align="center"><kbd><img src="assets/b0e1d3030189edfdf4d946947a4fac679fe9cb7a.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/28cde711a2700e7cee99a3ff04afe2f7bd805707.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/b0e1d3030189edfdf4d946947a4fac679fe9cb7a.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là ta sẽ gặp một distribution cũng đã được học ở stat110, nhưng ở
@@ -786,9 +786,9 @@
 
 <a id="node-153"></a>
 
-<p align="center"><kbd><img src="assets/3bbd1d9d766791f7fd8abbfeaca5df81d3e109fc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/eca4cbb0ab5bf67b747468dde7ab7c8c8f99a8e2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3bbd1d9d766791f7fd8abbfeaca5df81d3e109fc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Phần tính mean và var
@@ -833,9 +833,9 @@
 
 <a id="node-154"></a>
 
-<p align="center"><kbd><img src="assets/08d751d5cd2101841fe537f44a60e28068a1496f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/87cf892e3361dcc1076e31406ddb5021e936d2ec.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/08d751d5cd2101841fe537f44a60e28068a1496f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > một ví dụ đại khái là cho thấy ứng dụng của negative binomial distribution.
@@ -868,9 +868,9 @@
 
 <a id="node-155"></a>
 
-<p align="center"><kbd><img src="assets/ee32f088880eb60e3c156d889a0bb43d6ebf895d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c3c5604039090ed7e5493cf96ccbd007c1d65613.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ee32f088880eb60e3c156d889a0bb43d6ebf895d.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi, với Geometric, ta nhớ stat110 đã học rằng story của nó là tổng số trial

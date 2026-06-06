@@ -98,11 +98,11 @@
 
 <a id="node-56"></a>
 
+<p align="center"><kbd><img src="assets/1cee6b5ac9423b87ff32ee209cbaa3e862595d8c.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/031370399994a483b9350d882550c83b85725c13.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/52a5d500ddf0a0a79367c79ebd9ee214a8c884ae.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1cee6b5ac9423b87ff32ee209cbaa3e862595d8c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gs lấy một ví dụ, ta sẽ xét hàm f(x) = x1x2sin(x3) + e^(x1x2)/x3.
@@ -294,9 +294,9 @@
 
 <a id="node-60"></a>
 
-<p align="center"><kbd><img src="assets/899110a5c2de011a77e947e2c3502ff235c56caf.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/dff40e0b97cddc423af752da271a3338b41a33ad.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/899110a5c2de011a77e947e2c3502ff235c56caf.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > gs làm rõ vài ý:
@@ -383,9 +383,9 @@
 
 <a id="node-64"></a>
 
-<p align="center"><kbd><img src="assets/a16851fb869219ceda7d66fa0deacba132b52366.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/41b72c5346b9903bc05aa58e8206555580e150fc.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a16851fb869219ceda7d66fa0deacba132b52366.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đây, đây chính là cái mà trong deep learning gọi là BACK-PROPAGATION
@@ -596,13 +596,13 @@
 
 <a id="node-70"></a>
 
+<p align="center"><kbd><img src="assets/5f3a0e13b869216a8ce78210d5c240ae216213d8.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/d654e935523de8c1d0daffb8b39dc97ea403dbcf.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/7a63968909cf702ca3c017e7f380578e72f66246.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/2b72a9d05cd34629d13cc9a6aa4326413c5e3bc5.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5f3a0e13b869216a8ce78210d5c240ae216213d8.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs cho một ví dụ. cũng dễ hiểu khi ta đã nắm nguyên lí
@@ -660,9 +660,9 @@
 
 <a id="node-73"></a>
 
-<p align="center"><kbd><img src="assets/f00a9ab0d94f43b5746c37fd3e5ea12721cfba76.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/018ee846b240f2dd44b0aa8e57c6caad0ca197e9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f00a9ab0d94f43b5746c37fd3e5ea12721cfba76.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Qua phần này, gs nói về việc ta sẽ điều chỉnh đề bàn về cách áp dụng
@@ -1166,9 +1166,9 @@
 
 <a id="node-87"></a>
 
-<p align="center"><kbd><img src="assets/93d6983ff0ebb22cc9f402e1d1637ebcf4d3283c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/779119a08f8bfea9ce294a5c6a6f45c234ada589.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/93d6983ff0ebb22cc9f402e1d1637ebcf4d3283c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Hiểu đoạn này một cách đại khái như sau. Bữa giờ khi nói về việc dùng

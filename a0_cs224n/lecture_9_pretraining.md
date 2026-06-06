@@ -176,11 +176,11 @@
 
 <a id="node-706"></a>
 
+<p align="center"><kbd><img src="assets/b677e569407a91aea075b71b47beffe6bfbdfcd5.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/744d26e4fab9d6deaef2a510fe0ee4529d71d4e4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/17122dff91c511fa5edf70b20189139759a44b2a.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/b677e569407a91aea075b71b47beffe6bfbdfcd5.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì qúa trình pretraining dựa trên một giả thuyết đó là: Nếu ta train mô
@@ -195,9 +195,9 @@
 
 <a id="node-707"></a>
 
-<p align="center"><kbd><img src="assets/978647f583b9cd74caa760e685550dbd210bff0c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2dfd0ce364bad1462ced55e9330e0f16c67672c3.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/978647f583b9cd74caa760e685550dbd210bff0c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Để dự đoán đúng được case này, nó phải học được sentiment
@@ -570,11 +570,11 @@
 
 <a id="node-726"></a>
 
+<p align="center"><kbd><img src="assets/84d58abaa942dc14abd849a912f9f153adfa04f2.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/e0b49b68ba0814acd340f69ec7c0141aeb788ecb.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f74db3263f92b15be59f5c93ab68028f5a355620.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/84d58abaa942dc14abd849a912f9f153adfa04f2.png" width="100%"></kbd></p>
 
 <br>
 

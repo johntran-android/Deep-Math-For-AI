@@ -389,9 +389,9 @@
 
 <a id="node-933"></a>
 
-<p align="center"><kbd><img src="assets/c58891fc47d22eb8806afb8020098c52cacdf93d.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/83cdda27c78240f2c520fe4be066cac62ee3373a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c58891fc47d22eb8806afb8020098c52cacdf93d.png" width="100%"></kbd></p>
 
 🔗 **Related:** [LEC 21: COVARIANCE & CORRELATION](untitled.md#node-691)
 

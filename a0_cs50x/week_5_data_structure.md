@@ -275,9 +275,9 @@
 
 <a id="node-821"></a>
 
-<p align="center"><kbd><img src="assets/8c4d79d3f7cec71ccf86be806cc12965a5b5ac85.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/80078a72bb1e918772daa85bfd25e5bee25471c2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8c4d79d3f7cec71ccf86be806cc12965a5b5ac85.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **int *list = malloc(3*sizeof(int))**: máy tính nó sẽ **tìm một dải memory dải 3x(4 bytes) = 12 bytes** 
@@ -354,9 +354,9 @@
 
 <a id="node-825"></a>
 
-<p align="center"><kbd><img src="assets/9120c72ae4547c7bd3e1579b6e0edd13587165c0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9b8ee9e99af5df067222688b1f93c1ac051955ba.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9120c72ae4547c7bd3e1579b6e0edd13587165c0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Xong, nếu **thành công**, máy tính **tìm được 16 bytes**
@@ -581,9 +581,9 @@
 
 <a id="node-837"></a>
 
-<p align="center"><kbd><img src="assets/ce871256a831bebd3436e04e9e147fe063557c44.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/5b61a5c39370e2ff3c85074afb0dc0fd88b451a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ce871256a831bebd3436e04e9e147fe063557c44.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > **Linked list** là một **powerful data structure** mà ta
@@ -701,9 +701,9 @@
 
 <a id="node-847"></a>
 
-<p align="center"><kbd><img src="assets/3585f9b620c391e6a803a5801f73b7213f6340ff.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/8dbc644d315e1ffbeb3ab6747e7ccb354cd461fd.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3585f9b620c391e6a803a5801f73b7213f6340ff.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Là ta đã có một **linked-list**, các int (chính xác hơn đang
@@ -751,9 +751,9 @@
 
 <a id="node-850"></a>
 
-<p align="center"><kbd><img src="assets/c13d56acbd404f79fbd55a126a82e83c61be8519.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/e8cc0645252df2db6a8f362dea8d31e6d28b7dd1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c13d56acbd404f79fbd55a126a82e83c61be8519.png" width="100%"></kbd></p>
 
 <br>
 
@@ -913,9 +913,9 @@
 
 <a id="node-862"></a>
 
-<p align="center"><kbd><img src="assets/ccde4d68f7146895c72637e54d9a302700351084.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/40d45084916327ad68961ffc34d560473e61d883.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ccde4d68f7146895c72637e54d9a302700351084.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì tại đây node đã được máy tính **đã tìm một vùng memory**
@@ -949,9 +949,9 @@
 
 <a id="node-864"></a>
 
-<p align="center"><kbd><img src="assets/06899ad880ec8e08cfa074c670e17edbc9726164.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/daddccc0554684427137ae18546fa1dc34b1358d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/06899ad880ec8e08cfa074c670e17edbc9726164.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Một việc quan trọng phải làm đó là **"clear" the garbage
@@ -1046,9 +1046,9 @@
 
 <a id="node-871"></a>
 
-<p align="center"><kbd><img src="assets/adc53a716d4e4a1902756bb407a6a31197f431fc.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/23daf0b1fad21864cb67a13beab8d84df44d4976.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/adc53a716d4e4a1902756bb407a6a31197f431fc.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Ổng nói bây giờ giả sử tôi vẫn ok với cái list có item 2-1
@@ -1192,9 +1192,9 @@
 
 <a id="node-878"></a>
 
-<p align="center"><kbd><img src="assets/d7bb1945eb026aa72d6514f555e6148a588faafb.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/41602feae0308aaa844b7429a826d5555b2f2745.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d7bb1945eb026aa72d6514f555e6148a588faafb.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tới đây đại khái là ổng **muốn tạo một ptr**
@@ -1204,9 +1204,9 @@
 
 <a id="node-879"></a>
 
-<p align="center"><kbd><img src="assets/56613904aff72146c8731d9a3c06084c468d1c3f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/ab295cd28702042da2a3b9c0d7315f0e312522ec.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/56613904aff72146c8731d9a3c06084c468d1c3f.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đoán thử: 
@@ -1406,11 +1406,11 @@
 
 <a id="node-891"></a>
 
+<p align="center"><kbd><img src="assets/042e823a115d005d9e1a108af99503e2ced6c3a0.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/1b43f4bd31b1955be0fb36e1e829e9a049a5f5b4.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/32231597507b8a877b8b24880726f5cd5e387252.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/042e823a115d005d9e1a108af99503e2ced6c3a0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Rồi nãy giờ insert prepending hay appending thì chính là ta **không
@@ -1478,9 +1478,9 @@
 
 <a id="node-896"></a>
 
-<p align="center"><kbd><img src="assets/60408a21281613f79cbd47647a9bd2e649ca738c.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/2ca92402ff7e26f22a37dfc473762fae410966d8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/60408a21281613f79cbd47647a9bd2e649ca738c.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thì đại khái là giả sử ổng làm **binary search**, bắt đầu bằng
@@ -1687,9 +1687,9 @@
 
 <a id="node-911"></a>
 
-<p align="center"><kbd><img src="assets/f39da3a685697af64246ae0f0c27b9b4c8a25898.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/10acf7f72a012538be5966bad10c78446e680999.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f39da3a685697af64246ae0f0c27b9b4c8a25898.png" width="100%"></kbd></p>
 
 <br>
 

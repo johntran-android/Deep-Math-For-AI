@@ -15,9 +15,9 @@
 
 <a id="node-3"></a>
 
-<p align="center"><kbd><img src="assets/4e8cabf71300c571353f902f0fcbb7c3754ab788.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7b3c1ab82ad88a143df3b22fae2ee53f1561af27.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4e8cabf71300c571353f902f0fcbb7c3754ab788.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại khái là như ta đã học trong cs50 về việc máy tính sẽ lưu

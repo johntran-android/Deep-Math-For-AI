@@ -5,9 +5,9 @@
 ---
 <a id="node-104"></a>
 
-<p align="center"><kbd><img src="assets/f37004afa2e3f22516c37a047afeef7f667d47e9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/66cf5d58c2f65b922b8a9de9dbf3fcf7a8a51b8c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/f37004afa2e3f22516c37a047afeef7f667d47e9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là phần này gs sẽ nói về một thách thức với bài toán pattern
@@ -45,13 +45,13 @@
 
 <a id="node-105"></a>
 
+<p align="center"><kbd><img src="assets/8151166468f34ce4b2e02d8c4e3dadb3aedf84b7.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/acf194b361ddf899ba6a44a2a1e69c01bac572f7.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fc554a2ddc0690db79f1ff4ec14e23bb335506f6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/559b5ef822438b3125419ff7e108ae90bb7ad109.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/8151166468f34ce4b2e02d8c4e3dadb3aedf84b7.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là, ta có thể dựa vào cái trực giác vừa nói để thiết kế nên một thuật toán
@@ -80,9 +80,9 @@
 
 <a id="node-106"></a>
 
-<p align="center"><kbd><img src="assets/6e10c3ff981619712a299a836559917ef8f6d3b6.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/7003ac178977fe50a8c324d1746e24853db1f3a8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6e10c3ff981619712a299a836559917ef8f6d3b6.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Lấy ví dụ bài toán khớp hàm đa thức, giả sử input là đa biến (D biến) thì
@@ -94,9 +94,9 @@
 
 <a id="node-107"></a>
 
-<p align="center"><kbd><img src="assets/46ed7140ae5cc62303bfd7a36177c5984c12a6f9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/c1967dc9d12d2240afedc8c372f51ddcb392e342.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/46ed7140ae5cc62303bfd7a36177c5984c12a6f9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Gs lấy một ví dụ nhằm minh họa rằng: Trong không gian cao chiều, thì 
@@ -120,9 +120,9 @@
 
 <a id="node-108"></a>
 
-<p align="center"><kbd><img src="assets/42ccba39efd9a3775f417185a98668a4cc88d067.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4edbe80bc0efbbe17dd25352fa8b9f2e1261a3a8.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/42ccba39efd9a3775f417185a98668a4cc88d067.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > một ví dụ khác, là hàm Normal trong không gian D chiều, hành vi của nó cũng
@@ -137,11 +137,11 @@
 
 <a id="node-109"></a>
 
+<p align="center"><kbd><img src="assets/c0332ea3820ba87f3bb94211f8e95946338a7995.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/440559d41504dde18a7bcd92a2c698d2ec0ab0c6.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/b69aa79712f95460c5ece94c927d3fecfeb810e0.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/c0332ea3820ba87f3bb94211f8e95946338a7995.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Và cái này được ông Bellman gọi là "lời nguyền của không gian".

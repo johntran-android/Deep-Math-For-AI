@@ -16,9 +16,9 @@
 
 <a id="node-21"></a>
 
-<p align="center"><kbd><img src="assets/e5a4ecaad2a69ecdd04b6774d015ba2cf6b3f6d0.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/052bfc75197ceedc5df69ec1d937c03c26dcae47.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e5a4ecaad2a69ecdd04b6774d015ba2cf6b3f6d0.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Cái này tuy ko có gì phức tạp nhưng cũng đáng để ý, đó là chứng minh

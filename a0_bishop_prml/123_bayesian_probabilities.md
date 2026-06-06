@@ -53,9 +53,9 @@
 
 <a id="node-60"></a>
 
-<p align="center"><kbd><img src="assets/4242b6181815eda7e80a434e6c13fbf51e521619.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/a7a762df67b0e75d1f82f371a5983cdface6b717.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4242b6181815eda7e80a434e6c13fbf51e521619.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Đại ý, gs nói trong lĩnh vực pattern recognition, cũng sẽ là có ích nếu ta có
@@ -219,9 +219,9 @@
 
 <a id="node-63"></a>
 
-<p align="center"><kbd><img src="assets/9d8c397b8f3666070e9a98c7cb5e3b76c5f0e735.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/b2034739a2f09f066b95fee21608d460513a1622.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9d8c397b8f3666070e9a98c7cb5e3b76c5f0e735.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > đây có vẻ là một ý mới mà trong Casella mình chưa nghe. Trong Casella, khi
@@ -577,9 +577,9 @@
 
 <a id="node-68"></a>
 
-<p align="center"><kbd><img src="assets/a2e6da051d049044188eaa265ca5e80b7c96a067.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/cba756125bcd7d501e60f2b56be41ce6c4a742ae.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a2e6da051d049044188eaa265ca5e80b7c96a067.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vài đề cập của tác giả, đến việc sách này sẽ phần lớn là đi theo trường

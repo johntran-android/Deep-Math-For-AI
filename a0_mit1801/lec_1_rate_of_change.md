@@ -155,9 +155,9 @@
 
 <a id="node-16"></a>
 
-<p align="center"><kbd><img src="assets/4a68861c34eb8bf0cad4008047a41ebf74ac3520.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/500ca18943c5f759d536b95289af7edbbb101558.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4a68861c34eb8bf0cad4008047a41ebf74ac3520.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ta sẽ thử giải bài toán này: tìm diện tích của hình tạo bởi

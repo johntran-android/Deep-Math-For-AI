@@ -102,9 +102,9 @@
 
 <a id="node-170"></a>
 
-<p align="center"><kbd><img src="assets/4d568f7722851ecc0a1ecaff8c0b836908afe5c9.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/4ef57cf0c9c531a4a76a2c76dd7b0d44f8f65d23.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4d568f7722851ecc0a1ecaff8c0b836908afe5c9.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Thế thì đại khái là ta cũng có thể áp dụng, và mở rộng cách hiểu này cho phiếm
@@ -193,9 +193,9 @@
 
 <a id="node-171"></a>
 
-<p align="center"><kbd><img src="assets/93340bae007f8c3134cd794c73fa5530a9b79a58.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/bfde4e842d28a2da5e41710db0d62c2868f224da.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/93340bae007f8c3134cd794c73fa5530a9b79a58.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > ok, tiếp tục tìm hiểu đoạn này:

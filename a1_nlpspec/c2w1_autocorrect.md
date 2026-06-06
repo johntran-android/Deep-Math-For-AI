@@ -980,11 +980,11 @@ Learning Objectives
 
 <a id="node-902"></a>
 
+<p align="center"><kbd><img src="assets/fb6eded6a53b2eaabcbb3e112e7c4c8bb0e545c2.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/05503842e5169e4465edc224238b70c0c44233f8.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/dd78f237f8700da81fc55665939b00bbef0f2017.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/fb6eded6a53b2eaabcbb3e112e7c4c8bb0e545c2.png" width="100%"></kbd></p>
 
 > [!NOTE]
 > Vậy để tính ô màu cam biểu thị cost từ P -> S 
@@ -1012,11 +1012,11 @@ Learning Objectives
 
 <a id="node-903"></a>
 
+<p align="center"><kbd><img src="assets/a78ecd4aa6d24372558da37c5d8cfddec0c5697d.png" width="100%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/2c4022414c24a97edcd6afd9e700d64b8d1178e9.png" width="100%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/eb7c3c515e2bbb2d11fcc030a35a10debc173c7c.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/a78ecd4aa6d24372558da37c5d8cfddec0c5697d.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1065,9 +1065,9 @@ Learning Objectives
 
 <a id="node-908"></a>
 
-<p align="center"><kbd><img src="assets/73846be812a9315eff885881316aa8758dfa3890.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/68bd85a1753d0de3ab88c36c85435a178e3c2f21.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/73846be812a9315eff885881316aa8758dfa3890.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1237,9 +1237,9 @@ Learning Objectives
 
 <a id="node-925"></a>
 
-<p align="center"><kbd><img src="assets/56b7f837e6dffec6f520d5148c6b7d520ec28d5f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9bf81bfee3a12e9ae17cd2107e30d0016330f32c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/56b7f837e6dffec6f520d5148c6b7d520ec28d5f.png" width="100%"></kbd></p>
 
 <br>
 
@@ -1257,9 +1257,9 @@ Learning Objectives
 
 <a id="node-928"></a>
 
-<p align="center"><kbd><img src="assets/56b7f837e6dffec6f520d5148c6b7d520ec28d5f.png" width="100%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/9e050a3b83ab11945caa90180ab69aa803543d76.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/56b7f837e6dffec6f520d5148c6b7d520ec28d5f.png" width="100%"></kbd></p>
 
 <br>
 
