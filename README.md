@@ -80,7 +80,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_BISHOP_PRML (📝 175 Notes | 📸 238 Screenshots)
+### 📂 A0_BISHOP_PRML (📝 178 Notes | 📸 242 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
@@ -97,7 +97,7 @@
 - [1.7 Excersices](a0_bishop_prml/17_excersices.md) *(pending)* — `1n / 0i` 
 - [Appendix D. Calculus of Variation](a0_bishop_prml/appendix_d_calculus_of_variation.md) — `5n / 7i` 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
-- [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `12n / 19i`
+- [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `15n / 23i`
 
 ### 📂 A0_CASELLA (📝 895 Notes | 📸 1033 Screenshots)
 

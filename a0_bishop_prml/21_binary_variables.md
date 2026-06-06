@@ -1,6 +1,6 @@
 # 2.1 Binary Variables
 
-📊 **Progress:** `12` Notes | `19` Screenshots
+📊 **Progress:** `15` Notes | `23` Screenshots
 
 ---
 <a id="node-180"></a>
@@ -629,54 +629,65 @@
 <p align="center"><kbd><img src="assets/1eb873c39e85ad8653bb5592333d17a4043c5cc4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, đại khái là gs nói nếu ta phải đưa ra dự đoán cho thử nghiệm
-> tiếp theo dựa trên những gì đã quan sát thấy, ta sẽ cần evaluate predictive
+> Tiếp theo, đại khái là gs nói nếu ta phải đưa ra dự đoán cho thử nghiệm tiếp
+> theo dựa trên những gì đã quan sát thấy, ta sẽ cần evaluate predictive
 > distribution của x, dựa trên D. Là sao ta?
 >
-> Thì thật ra mình đã học cái này trong chap 1 rồi, predictive distribution, lập
-> luận là, với cách tiếp cận Bayesian, ta coi θ (hay ở đây là μ) như random
-> variable, để rồi ta chọn prior distribution cho nó, kí hiệu π(θ) (ví dụ như
-> ta chọn β(a,b) cho làm prior distribution của μ vậy), rồi dùng Bayes rule
-> để xây dựng posterior π(θ|**x**) ∝ f(**x**|θ) π(θ) (ví dụ như ta vừa tìm ra posterior
-> của μ là β(a+m,b+l) đó). Thế thì giờ đặt vấn đề muốn dùng kết quả này
-> để đưa ra dự đoán cho lần thử tiếp theo, cũng đồng nghĩa là dựa trên đó,
-> ta muốn tính xác suất của hai giá trị khả dĩ x=1 và x=0.
+> Thì thật ra mình đã học cái này trong chap 1 rồi, predictive distribution, lập luận
+> là, với cách tiếp cận Bayesian, ta coi θ (hay ở đây là μ) như random variable,
+> để rồi ta chọn prior distribution cho nó, kí hiệu π(θ) (ví dụ như ta chọn β(a,b)
+> cho làm prior distribution của μ vậy), rồi dùng Bayes rule để xây dựng posterior
+> π(θ|**x**) ∝ f(**x**|θ) π(θ) (ví dụ như ta vừa tìm ra posterior của μ là β(a+m,b+l)
+> đó). Thế thì giờ đặt vấn đề muốn dùng kết quả này để đưa ra dự đoán cho lần
+> thử tiếp theo, cũng đồng nghĩa là dựa trên đó, ta muốn tính xác suất của hai
+> giá trị khả dĩ x=1 và x=0.
 >
 > Thế thì thế này, X ~ f(x|θ), hay ở đây là X ~ Bern(μ).
 >
 > Nên f(x|μ)|x=1 = P_μ(X=1) = μ.
 >
-> Nhưng ta đâu có biết μ, ta chỉ vừa mới có posterior của μ: β(a+m,b+l)
-> tức là ta có f(μ|a,b,m,l) = β(μ|a,b,m,l) thôi.
+> Nhưng ta đâu có biết μ, ta chỉ vừa mới có posterior của μ: β(a+m,b+l) tức là ta
+> có f(μ|a,b,m,l) = β(μ|a,b,m,l) thôi.
 >
-> Thế thì, nếu nhớ lại trong sách Casella, khi nói về Bayes estimator, sau
-> khi đã có posterior, thì tùy vào việc ta muốn dùng loss là gì thì ta sẽ dùng
-> mean hoặc median của posterior distribution để làm point estimator cho
-> param θ. Ví dụ, nếu dùng square error loss, thì mean E[θ|**X**] θ ~ π(θ|**x**)
-> chính là Bayes estimator mà minimize Bayes risk, cũng là minimize posterior
-> expected loss, ngược lại nếu dùng absolute error loss, thì Bayes estimator
-> là median của posterior.
+> Thế thì, nếu nhớ lại trong sách Casella, khi nói về Bayes estimator, sau khi đã
+> có posterior, thì tùy vào việc ta muốn dùng loss là gì thì ta sẽ dùng mean hoặc
+> median của posterior distribution để làm point estimator cho param θ. Ví dụ,
+> nếu dùng square error loss, thì mean E[θ|**X**] θ ~ π(θ|**x**) chính là Bayes
+> estimator mà minimize Bayes risk, cũng là minimize posterior expected loss,
+> ngược lại nếu dùng absolute error loss, thì Bayes estimator là median của
+> posterior.
 >
 > Như vậy, theo cách cách làm này, giả sử ta dùng squared error loss, thì
 > E[μ|**x**] với μ ~ β(a+m,b+l), = a+m/(a+m+b+l) sẽ chính là Bayes estimator
-> minimize Bayes risk, và từ đó ta đưa ra dự đoán xác suất trial tiếp theo 
-> ra x=1 sẽ là a+m/(a+m+b+l).
+> minimize Bayes risk, và từ đó ta đưa ra dự đoán xác suất trial tiếp theo  ra x=1
+> sẽ là a+m/(a+m+b+l).
 >
-> Nhưng mà trong sách này, như đã thấy trong chap 1, gs Bishop không
-> làm kiểu đó. Mà thay vào đó, ông average f(x|μ) over mọi possible value
-> của μ với μ ~ posterior: 
+> Nhưng mà trong sách này, như đã thấy trong chap 1 (xem link), gs Bishop
+> không làm kiểu đó. Mà thay vào đó, ông nói rằng vì trong bài toán machine
+> learning, ta care nhiều hơn đến nhiệm vụ prediction, thay vì inference, tức là ta
+> ko cần biết tham số của population distribution, mà chủ yếu là đưa ra dự đoán
+> dựa trên tham số đó. Chính vì vậy, ví dụ như trong bài toán này, ta ko cần biết
+> population parameter μ là bao nhiêu, mà ta cần dự đoán kết quả cho lần trial
+> tiếp theo,  thông qua việc tính xác suất của việc ra X = 1 hay X = 0. Do đó, thay
+> vì dùng một point estimator của μ (ví dụ dùng posterior mean, hay median) ta
+> sẽ lấy trung bình f(x|μ) over mọi possible value của μ với μ ~ posterior
+> π(μ|**x**), để có P(X=x|**x**) gọi là **predictive distribution**
 >
-> P(X=x|**x**) = E[f(x|μ)|**x**] với μ ~ π(μ|**x**), = ∫f(x|μ)π(μ|**x**)dμ 
+> Và hành động này cũng chính marginalizing joint pdf của x, μ: f(x, μ) với mọi giá
+> trị khả dĩ của μ ~ posterior: ∫f(x, μ|**x**) dμ = ∫f(x|μ) π(μ|**x**) dμ
+>
+> P(X=x|**x**) = E[f(x|μ)|**x**] với μ ~ π(μ|**x**), = ∫f(x|μ)π(μ|**x**)dμ
 >
 > và với Bern(μ) thì f(x|μ) = μ^x(1-μ)^(1-x)
 >
 > ⇨ E[f(x|μ)|**x**] = ∫μ^x(1-μ)^(1-x) β(μ|a+m,b+l) dμ
 >
-> Để rồi P(X=x|**x**) = E[f(x|μ)|**x**]|x=1 = ∫μ^1(1-μ)^(1-1) β(μ|a+m,b+l) dμ 
+> Để rồi P(X=x|**x**) = E[f(x|μ)|**x**]|x=1 = ∫μ^1(1-μ)^(1-1) β(μ|a+m,b+l) dμ
 >
-> = ∫ μ β(μ|a+m,b+l) dμ 
+> = ∫ μ β(μ|a+m,b+l) dμ
 >
-> và cái này cũng lại chính là E[μ|**x**] (hay E[μ|\/D\/] tức mean của posterior distribution.
+> và cái này cũng lại chính là E[μ|**x**] (hay E[μ|\/D\/] tức mean của posterior
+> distribution.
 >
 > (chữ D in hoa trong sách Bishop cũng chính là observed data **x** thôi)
 >
@@ -690,30 +701,31 @@
 > của Bernoulli distribution thì P(X=x|μ) = μ..
 >
 > nhưng ở đây ta sẽ nhìn nó dưới góc độ là hàm của μ: f(x|μ) = g(μ) mà trong
-> trường hợp đặc biệt này g(μ) = μ, tức g là identity function, nhưng quan trọng
-> là ta xem f(x|μ) là hàm của μ.
+> trường hợp đặc biệt này g(μ) = μ, tức g là identity function, nhưng quan trọng là
+> ta xem f(x|μ) là hàm của μ.
 >
-> Mà μ là random variable (đây là cái mà trường phái Bayesian khác với Frequentist),
-> nên f(x|μ) là gì: một hàm số của random variable, thì cũng là random variable! 
-> Đây là điều mà gs Joe Blizstein đã nhắc lại nhiều lần trong Stat110.
+> Mà μ là random variable (đây là cái mà trường phái Bayesian khác với
+> Frequentist), nên f(x|μ) là gì: một hàm số của random variable, thì cũng là
+> random variable!  Đây là điều mà gs Joe Blizstein đã nhắc lại nhiều lần trong
+> Stat110.
 >
-> À, như vậy f(x|μ) là một random variable, THÌ DO ĐÓ TA CÓ THỂ NÓI VỀ KÌ 
+> À, như vậy f(x|μ) là một random variable, THÌ DO ĐÓ TA CÓ THỂ NÓI VỀ KÌ
 > VỌNG CỦA NÓ: E[f(x|μ)] (vì chỉ có random variable mới có quyền có kì vọng)
 >
 > (hoặc chặt chẽ hơn thì ghi E[f(x|μ)|**x**])
 >
-> Rồi, tính kì vọng của cái random variable này thế nào? 
+> Rồi, tính kì vọng của cái random variable này thế nào?
 >
-> → LOTUS: Vì nó là hàm của μ, là random variable có distribution posterior π(μ|**x**)
-> nên theo LOTUS, khi một biến Y được tạo thành bởi áp hàm g lên biến X, thì 
-> EY = ∫g(x)f(x)dx.
+> → LOTUS: Vì nó là hàm của μ, là random variable có distribution posterior
+> π(μ|**x**) nên theo LOTUS, khi một biến Y được tạo thành bởi áp hàm g lên
+> biến X, thì  EY = ∫g(x)f(x)dx.
 >
 > Vậy E[f(x|μ)|**x**] = ∫f(x|μ) π(μ|**x**)dμ
 >
-> và trong trường hợp đặc biệt này (trường hợp khác thì chưa chắc) là khi f(x|μ) = μ 
-> thì E[f(x|μ)|**x**] = ∫μ π(μ|**x**)dμ và cái này chính là E[μ|**x**], tức mean của posterior, như
-> đã nói, cũng chính là Bayes esimator của μ khiến minimize Bayes risk với squared
-> error loss function
+> và trong trường hợp đặc biệt này (trường hợp khác thì chưa chắc) là khi f(x|μ)
+> = μ  thì E[f(x|μ)|**x**] = ∫μ π(μ|**x**)dμ và cái này chính là E[μ|**x**], tức mean
+> của posterior, như đã nói, cũng chính là Bayes esimator của μ khiến minimize
+> Bayes risk với squared error loss function.
 
 <br>
 
@@ -742,8 +754,8 @@
 > và gs nói, đây là tính chất mang tính khái quát, khi dataset càng lớn thì kết quả
 > của Bayesian và maximum likelihood sẽ trở nên giống nhau
 >
-> Còn trong một bộ data hữu hạn, thì posterior mean của μ sẽ luôn nằm giữa
-> prior mean và μ_ML
+> Còn trong một bộ data hữu hạn, thì posterior mean của μ sẽ **luôn nằm đâu đó
+> giữa prior mean và μ_ML**
 >
 > Đây là một nhận định mà có vẻ trong sách Casella đã nói, thông qua việc 
 > ông nói rằng Bayes estimator, nhờ có prior, nó sẽ khiến kết luận của Bayes
@@ -754,6 +766,210 @@
 > Với cách hiểu này, mình thấy nó y như vai trò của regularization, mà trong 
 > chap 1 quả thật ta đã thấy việc giải bài toán curve fitting có regularization 
 > theo Bayesian cũng chính là maximize posteriori
+
+<br>
+
+<a id="node-192"></a>
+
+<p align="center"><kbd><img src="assets/34f0fc43459d8fe47a5b05a5a5bcc242280aca6d.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ed8ba0903c9424709b24edd2a2ecaf1f5c3b395a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, dựa vào hình 2.2, ta có thể thấy khi số lượng quan sát tăng lên,
+> thì distribution ngày càng "nhọn" hơn. Là sao?
+>
+> ví dụ với β(1,1), tương đương uniform(0,1), distribution hoàn toàn phẳng.
+>
+> Khi có thêm 3 observed data  với 1 success, 2 failure, thì posterior trở thành
+> β(2,3), bắt đầu có hình quả đồi.
+>
+> (ta nhớ lập luận theo chuỗi (sequential Bayesian) lúc nãy: tại mỗi mắt xích,
+> posterior đóng vai prior, để rồi cùng với likelihood để update lại posterior mới
+> ví dụ prior đang là β(a,b) quan sát thấy m+l observation với m success (X=1)
+> và l failure (X=0) thì posterior mới sẽ là β(a+m, b+l)
+>
+> khi có thêm 7 observation với 6 success, 1 failure thì posterior trở thành β(8,
+> 4), có đỉnh nhọn hơn nữa.
+>
+> Bên cạnh đó công thức variance của β(a,b) (2.16) cũng cho thấy nếu a,b
+> càng lớn thì variance càng nhỏ, cũng giải thích hiện tượng nói trên (đồ thị pdf
+> càng nhọn, thì nó càng ốm → chính là variance càng nhỏ)
+>
+> \-----
+>
+> Thế thì, gs Bishop mới đặt vấn đề là, liệu đây có phải là tính chất khái quát
+> không, **rằng càng có nhiều data thì posteriori** sẽ **ngày càng có variance
+> nhỏ** **lại**, (variance cũng là thể hiện tính uncertainty) hay không?
+
+<br>
+
+<a id="node-193"></a>
+
+<p align="center"><kbd><img src="assets/61083110df9601eeed3d9714f27f892d28dafa21.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì để chứng minh rằng, tính chất vừa nói: khi càng có nhiều data thì độ
+> không chắc chắn (uncertainty) của param μ thể hiện bởi posterior  distribution
+> càng giảm sẽ càng, ta xét bài toán inference khái quát với  θ là population
+> parameter và D là dữ liệu quan sát được (y như trong Casella là **X** - random
+> sample lấy từ distribution).
+>
+> Thế thì trước tiên, mình nhớ lại Stat110 đã học công thức này: Adam's Law:
+>
+> EX = E[E(X|Y)], thử chứng minh lại:
+>
+> E(X|Y) là cái gì, hay nên nhìn nhận nó như thế nào? và vì sao lại lấy kì vọng
+> của cái này, và vì sao khi làm vậy lại ra EX.
+>
+> Đầu tiên, để có thể lấy kì vọng của nó E[E(X|Y)], thì nó phải là một random
+> variable. Vậy thì có phải nó là random variable?
+>
+> Xét E(X|Y), bản chất của cái này là gì, thì trước tiên xét bản chất của EX là gì
+> trước.
+>
+> EX, theo định nghĩa mà thầy Joe trong Stat110 dạy rằng, nó chỉ là giá trị trung
+> bình. Vì X là random variable, vốn có bản chất là một hàm số map từ một
+> possible outcome trong original sample space sang một con số thực. Nên  với
+> các possible outcome khác nhau, ta có các possible value khác nhau của X. Và
+> EX chỉ là trung bình của đám này. Chấm hết. Có điều, khi tính trung bình, ta sẽ
+> gán trọng  số vào các giá trị, sao cho cái nào xuất hiện nhiều thì trọng số lớn,
+> và ngược lại. Và trọng số đó chính là xác suất possible value đó xảy ra, hay
+> pmf của X: P(X=x) Nên EX = Σ{mọi possible value x của X} P(X=x) x, hay viết
+> vầy cho gọn Σi xi f(xi) Với biến liên tục thì nó trở thành ∫xf(x)dx với f(x) là pdf của
+> X
+>
+> Vậy quay lại nói về E(X|Y). Thì hãy cho Y = một possible value y nào đó trước
+> rồi nói tiếp: E(X|Y=y), hay viết gọn là E(X|y), hoàn toàn tương tự theo định
+> nghĩa trên cũng chỉ là giá trị trung bình của X, chấm hết. Chỉ có điều ta cũng
+> gán trọng số, và lần này, trọng số là xác suất mà một possible value x nào đó
+> của X xuất hiện khi đã biết Y=10. Nên:
+>
+> E(X|Y=10) = Σ{mọi possible value x của X} x P(X=x|Y=10), hay viết gọn là Σi xi
+> f(xi|y)
+>
+> Thế thì, kết quả này (E(X|10)) vì mình đã trung bình mọi possible value của X
+> rồi NÊN NÓ KHÔNG PHỤ THUỘC X NỮA, HAY NÓI CÁCH KHÁC, NÓ LÀ
+> MỘT CON SỐ CỐ ĐỊNH.
+>
+> Tuy nhiên, nên nhớ là ta đang tính với Y=10, tức là đã biết giá trị của Y, nên kết
+> quả E(X|10) ra một con số cố định.
+>
+> Chứ nếu thay 10 bằng y, thì bản thân E(X|y) dĩ nhiên sẽ là một  hàm theo y.
+>
+> Vậy thì dừng lại đây, để nhớ một lời dạy khác của gs Joe trong Stat110: Bất kì
+> khi nào ta có hàm g(x), ví dụ g(x) = x^2 + 1. Và ta đem áp vào random variable
+> X: Để có g(X) = X^2 + 1, thì ta sẽ có MỘT RANDOM VARIABLE MỚI. Tức là
+> g(X) là một random variable.
+>
+> Quay lại ý trên, ta đã nói E(X|y) là một hàm số theo biến y, ví dụ gọi là g(y)
+>
+> Ta đem áp hàm số này vào random variable Y, để có g(Y) = E(X|Y), thì như vừa
+> nói, ta sẽ được một random variable mới.
+>
+> Vậy, E(X|Y) chính là random variable có được khi áp hàm g(t) = E(X|y) vào
+> random variable Y. Và vì vậy, dĩ nhiên ta có thể bàn về kì vọng của nó:
+> E[E(X|Y)]
+>
+> Và việc hiểu bản chất này cũng sẽ giúp ta chứng minh vì sao E[E(X|Y)] = EX
+>
+> Cụ thể là: ta vừa kết luận E(X|Y) có bản chất chỉ là g(Y) với g(y) = E[X|y]. và
+> mình muốn tính kì vọng của g(Y). Thì trong Stat110, đã học LOTUS  tức Law Of
+> Unconscious Statistician cho phép ta tính kì vọng của một biến ngẫu nhiên
+> nhiên có được từ việc áp một hàm số lên biến ngẫu nhiên khác như sau:
+>
+> Eg(Y) = Σ{mọi possible value y của Y} g(y)P(Y=y)
+>
+> = Σ{mọi possible value y của Y} E[X|y] P(Y=y)
+>
+> viết gọn lại Σ{mọi y} E[X|y] P(Y=y)
+>
+> Đến đây thay E[X|y] ở trên vào, = Σ{mọi possible value x của X} xP(X=x|Y=y)
+>
+> viết gọn Σ{mọi x} xP(X=x|Y=y)
+>
+> ta có Eg(Y) = E[E[X|Y]] = Σ{mọi y} [Σ{mọi x} xP(X=x|Y=y)] P(Y=y)
+>
+> = Σ{mọi y} P(Y=y) [Σ{mọi x} xP(X=x|Y=y)]
+>
+> Đưa P(Y=y) đang đứng ngoài cái tổng ở trong vào trong cái tổng đó:
+>
+> .. = Σ{mọi y} [ Σ{mọi x} xP(X=x|Y=y)P(Y=y) ]
+>
+> Thay P(X=x|Y=y)P(Y=y) = P(X=x,Y=y), đây là định nghĩa của conditional
+> probability
+>
+> = Σ{mọi y} [ Σ{mọi x} xP(X=x,Y=y)]
+>
+> Đây là tổng của tổng, ta có thể đổi chỗ hai tổng:
+>
+> = Σ{mọi x} [Σ{mọi y}xP(X=x,Y=y)]
+>
+> x ở trong tổng y không phụ thuộc y, đưa ra
+>
+> = Σ{mọi x} x [Σ{mọi y}P(X=x,Y=y)]
+>
+> đến đây, cái tổng ở trong: Σ{mọi y}P(X=x,Y=y) chính là marginalizing joint pmf
+> của X,Y over mọi possible value của Y, ta biết một theorem nói rằng, nó chính là
+> marginal pmf của X, tức P(X=x). Cái này có thể chứng minh dễ dàng bằng
+> LOTP (Định lí xác suất toàn phần)
+>
+> Vậy ta có Σ{mọi x} x P(X=x) và cái này chính là EX theo định nghĩa
+>
+> \-------
+>
+> Như vậy ta đã tự chứng minh lại công thức mà trong Stat110 gs Jow gọi là
+> Adam's Law, áp dụng cho **θ** và D (D tương đương với **X**, tức random
+> sample lấy (draw) từ population distribution trong bối cảnh thống kê dĩ nhiên
+> cũng  là random variable (vector)):
+>
+> E[θ] = E[E[θ|D]] chính là công thức 2.21, mà gs Bishop ghi rõ với chữ D hay θ
+> dưới chân là vì:
+>
+> vì khi tính E[θ|D], dĩ nhiên ta coi θ là random variable cần tính trung bình, nên ta
+> sẽ dùng trọng số là phân phối của θ conditioned on observed  value của D, nên
+> gs Bishop kí hiệu θ dưới chân chữ E thứ 2
+>
+> (y như ở trên ta tính E[X|y] = Σ{x} P(X=x|Y=y)
+>
+> còn với E[E[θ|D]], ta tự hiểu E[θ|D] là random variable cần tính trung bình, nên
+> ta sẽ thông qua LOTUS, tính trung bình các giá trị của nó với phân phối của D,
+> nên  gs Bishop có kí hiệu chữ D ở dưới chữ E thứ nhất là vậy.
+>
+> Và và phân tích bản chất ở trên cũng giúp ta hiểu 2.22 và 2.23:
+>
+> i) 2.22: Y như E(X) = Σ{mọi x} xP(X=x) với biến discrete và ∫xf(x)dx với biến liên
+> tục có pdf f(x), thì ở đây cũng vậy, **θ** là random variable liên tục:
+>
+> E[**θ**] = ∫**θ**f(**θ**)d**θ** 
+>
+> Đúng hơn phải hiểu thêm đây là tích phân đa, vì θ đang kí hiệu chữ đậm, là random
+> vector.
+>
+> ii) 2.23:
+>
+> E[θ|D] thì y như E[X|Y=y] ở trên đã nói = Σ{mọi x} xP(X=x|Y=y)
+>
+> với biến liên tục thì E[X|Y=y] = ∫xf(x|y)dx
+>
+> ⇨ E[**θ**|D] = ∫**θ**f(**θ**|D)d**θ**
+>
+> Và E[E[X|Y]] = Σ{mọi y} P(Y=y) [Σ{mọi x} xP(X=x|Y=y)]
+>
+> với biến liên tục sẽ là ∫ [∫ xf(x|y)dx] f(y) dy
+>
+> ⇨ E[E[**θ**|D]] = ∫ [∫**θ**f(**θ**|D)d**θ**] f(D) dD
+
+<br>
+
+<a id="node-194"></a>
+
+<p align="center"><kbd><img src="assets/c3595db795043a29835466c2bee6fdaa83938ae1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và mục đích của viện dẫn Adam's Law, là gs Bishop muốn nói rằng, nếu ta
+> có posterior mean. (E(**θ**|D=một observed value của D) rồi đem trung bình
+> ở mọi D  thì kết qủa sẽ chính là prior mean E[θ].
 
 <br>
 
