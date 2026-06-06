@@ -53,12 +53,12 @@
 
 ### 📂 numerical_optimization_sm (📝 94 Notes | 📸 120 Screenshots)
 
-- [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 10i` 
 - [8.2 Automatic Differentiation (*extremely Important For Ai)](numerical_optimization_sm/82_automatic_differentiation_extremely_important_for_ai.md) — `35n / 46i` 
+- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [10.1 Least-square Problem](numerical_optimization_sm/101_least_square_problem.md) — `1n / 2i` 
-- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i` 
-- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i`
+- [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
+- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
 ### 📂 A0_18S096 (📝 175 Notes | 📸 176 Screenshots)
 
@@ -80,7 +80,7 @@
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 A0_BISHOP_PRML (📝 167 Notes | 📸 226 Screenshots)
+### 📂 A0_BISHOP_PRML (📝 175 Notes | 📸 238 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
@@ -97,7 +97,7 @@
 - [1.7 Excersices](a0_bishop_prml/17_excersices.md) *(pending)* — `1n / 0i` 
 - [Appendix D. Calculus of Variation](a0_bishop_prml/appendix_d_calculus_of_variation.md) — `5n / 7i` 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
-- [2.1](a0_bishop_prml/21.md) — `4n / 7i`
+- [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `12n / 19i`
 
 ### 📂 A0_CASELLA (📝 895 Notes | 📸 1033 Screenshots)
 
