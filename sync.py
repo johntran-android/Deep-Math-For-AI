@@ -5,6 +5,28 @@ import shutil
 import argparse
 import zipfile
 
+COURSE_DISPLAY_NAMES = {
+    'a0_mit1801': 'MIT 18.01 — Single Variable Calculus',
+    'a0_mit1802': 'MIT 18.02 — Multivariable Calculus',
+    'a0_mit1806': 'MIT 18.06 — Linear Algebra',
+    'a0_mit1806_book': 'MIT 18.06 — Linear Algebra (Book Notes)',
+    'a0_stat110': 'STAT 110 — Probability',
+    'a0_casella': 'Casella & Berger — Statistical Inference',
+    'a0_isl': 'ISL — Introduction to Statistical Learning',
+    'a0_18s096': 'MIT 18.S096 — Matrix Methods for ML',
+    'ee263a': 'EE263A — Linear Dynamical Systems',
+    'a0_ee364a': 'EE364A — Convex Optimization',
+    'numerical_optimization': 'Numerical Optimization — Nocedal & Wright',
+    'numerical_optimization_sm': 'Numerical Optimization — SimpleMind Notes',
+    'a0_bishop_prml': 'Bishop PRML — Pattern Recognition & ML',
+    'a0_cs50x': 'CS50X — Programming Foundations',
+    'a1_dlspec': 'Deep Learning Specialization',
+    'a0_cs231n': 'CS231N — Computer Vision',
+    'a0_cs224n': 'CS224N — NLP with Deep Learning',
+    'a1_nlpspec': 'NLP Specialization',
+    'a1_llm': 'LLM — Large Language Models',
+}
+
 def process_inline_math(line):
     return line
 
@@ -441,6 +463,7 @@ def update_readme(repo_dir, all_courses):
             # Parse các khoá học cũ (Dạng ### 📂 CourseName)
             if len(parts) > 1:
                 body = parts[1]
+                display_to_key = {v.lower(): k for k, v in COURSE_DISPLAY_NAMES.items()}
                 # Regex tìm block của từng Course
                 course_blocks = re.split(r'### 📂 ', body)
                 for block in course_blocks:
@@ -451,7 +474,9 @@ def update_readme(repo_dir, all_courses):
                     c_name_match = re.search(r'^(.*?) \(', header)
                     if c_name_match:
                         c_name = c_name_match.group(1).strip()
-                        existing_courses[c_name] = "### 📂 " + block.strip()
+                        # Normalize: display name or raw name → internal key
+                        internal_key = display_to_key.get(c_name.lower(), c_name.lower())
+                        existing_courses[internal_key] = "### 📂 " + block.strip()
     
     # 2. Chuẩn bị Intro mặc định nếu file mới tinh
     if not intro_text:
@@ -473,16 +498,18 @@ def update_readme(repo_dir, all_courses):
     for course_name, files in all_courses.items():
         total_notes = sum(f.get('notes', 0) for f in files)
         total_images = sum(f.get('images', 0) for f in files)
-        
-        course_md = f"### 📂 {course_name} (📝 {total_notes} Notes | 📸 {total_images} Screenshots)\n\n"
+        internal_key = course_name.lower()
+        display_name = COURSE_DISPLAY_NAMES.get(internal_key, course_name)
+
+        course_md = f"### 📂 {display_name} (📝 {total_notes} Notes | 📸 {total_images} Screenshots)\n\n"
         for file in files:
             # Tag low content chapters
             n_n = file.get('notes', 0)
             n_i = file.get('images', 0)
             tag = " *(pending)*" if (n_n <= 1 and n_i <= 1) else ""
             course_md += f"- [{file['title']}]({file['path']}){tag} — `{n_n}n / {n_i}i` \n"
-        
-        existing_courses[course_name] = course_md.strip()
+
+        existing_courses[internal_key] = course_md.strip()
 
     # 4. Ghi đè lại toàn bộ file
     with open(readme_path, 'w', encoding='utf-8') as f:
@@ -506,7 +533,11 @@ def update_readme(repo_dir, all_courses):
             return COURSE_LAYER_ORDER.get(c_name.lower(), (99, 99))
 
         for c_name in sorted(existing_courses.keys(), key=readme_sort_key):
-            f.write(existing_courses[c_name] + "\n\n")
+            block = existing_courses[c_name]
+            display = COURSE_DISPLAY_NAMES.get(c_name.lower(), c_name)
+            # Rewrite header to use pretty display name (handles old raw-name blocks)
+            block = re.sub(r'^### 📂 .+? \(📝', f'### 📂 {display} (📝', block, count=1)
+            f.write(block + "\n\n")
             
     print("[✓] Đã cập nhật xong README.md (Merging completed)!")
 

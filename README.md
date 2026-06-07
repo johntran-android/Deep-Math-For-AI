@@ -156,7 +156,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 
 ## 📚 Syllabus / Mục lục
 
-### 📂 A0_MIT1801 (📝 322 Notes | 📸 331 Screenshots)
+### 📂 MIT 18.01 — Single Variable Calculus (📝 322 Notes | 📸 331 Screenshots)
 
 - [Lec 1: Rate Of Change](a0_mit1801/lec_1_rate_of_change.md) — `25n / 26i` 
 - [Lec 2: Limits](a0_mit1801/lec_2_limits.md) — `28n / 30i` 
@@ -172,7 +172,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [Lec 13: Newton's Method](a0_mit1801/lec_13_newtons_method.md) — `26n / 28i` 
 - [Lec 14: Mean Value Theorem](a0_mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
 
-### 📂 A0_MIT1802 (📝 567 Notes | 📸 615 Screenshots)
+### 📂 MIT 18.02 — Multivariable Calculus (📝 567 Notes | 📸 615 Screenshots)
 
 - [Lec 1: Dot Products](a0_mit1802/lec_1_dot_products.md) — `0n / 4i` 
 - [Lec 2: Determinant, Cross Product](a0_mit1802/lec_2_determinant_cross_product.md) — `17n / 21i` 
@@ -199,7 +199,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [Lec 23: Flux](a0_mit1802/lec_23_flux.md) *(pending)* — `0n / 0i` 
 - [Lec 24: Simply Connected Region](a0_mit1802/lec_24_simply_connected_region.md) *(pending)* — `0n / 0i`
 
-### 📂 A0_MIT1806 (📝 1260 Notes | 📸 1269 Screenshots)
+### 📂 MIT 18.06 — Linear Algebra (📝 1260 Notes | 📸 1269 Screenshots)
 
 - [Lecture 1: The Geometry Of Linear Equations](a0_mit1806/lecture_1_the_geometry_of_linear_equations.md) — `19n / 20i` 
 - [Lecture 2: Elimination With Matrices](a0_mit1806/lecture_2_elimination_with_matrices.md) — `30n / 31i` 
@@ -238,7 +238,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [Lecture 33: Left And Right Inverse; Pseudoinverse](a0_mit1806/lecture_33_left_and_right_inverse_pseudoinverse.md) — `31n / 33i` 
 - [Lecture 34: Final Course Review](a0_mit1806/lecture_34_final_course_review.md) — `32n / 34i`
 
-### 📂 A0_MIT1806_Book (📝 124 Notes | 📸 138 Screenshots)
+### 📂 MIT 18.06 — Linear Algebra (Book Notes) (📝 124 Notes | 📸 138 Screenshots)
 
 - [7.4 Geometry Of Svd](a0_mit1806_book/74_geometry_of_svd.md) — `24n / 19i` 
 - [3.3 THE COMPLETE SOLUTION TO Ax=b](a0_mit1806_book/33_the_complete_solution_to_axb.md) — `2n / 2i` 
@@ -255,7 +255,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [11.3 Iterative Method & Preconditioner](a0_mit1806_book/113_iterative_method_preconditioner.md) — `4n / 6i` 
 - [7.3 Pca By Svd](a0_mit1806_book/73_pca_by_svd.md) — `8n / 7i`
 
-### 📂 A0_STAT110 (📝 1132 Notes | 📸 1108 Screenshots)
+### 📂 STAT 110 — Probability (📝 1132 Notes | 📸 1108 Screenshots)
 
 - [Lec 1: Probability & Counting](a0_stat110/lec_1_probability_counting.md) — `17n / 17i` 
 - [Lec 2: Story Proofs, Axioms Of Probability](a0_stat110/lec_2_story_proofs_axioms_of_probability.md) — `30n / 23i` 
@@ -311,7 +311,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [Σ Lec 21](a0_stat110/σ_lec_21.md) — `0n / 8i` 
 - [Σ lec 22](a0_stat110/σ_lec_22.md) — `0n / 3i`
 
-### 📂 A0_CASELLA (📝 895 Notes | 📸 1033 Screenshots)
+### 📂 Casella & Berger — Statistical Inference (📝 895 Notes | 📸 1033 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -360,7 +360,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i` 
 - [Chap 10 Asymtotic Evaluation](a0_casella/chap_10_asymtotic_evaluation.md) — `8n / 8i`
 
-### 📂 A0_ISL (📝 95 Notes | 📸 233 Screenshots)
+### 📂 ISL — Introduction to Statistical Learning (📝 95 Notes | 📸 233 Screenshots)
 
 - [Introduction To Regression](a0_isl/introduction_to_regression.md) — `8n / 6i` 
 - [Dimensionality And Structure](a0_isl/dimensionality_and_structure.md) *(pending)* — `0n / 0i` 
@@ -448,7 +448,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [11.8 - Lab: Survival Analysis](a0_isl/118_lab_survival_analysis.md) *(pending)* — `0n / 0i` 
 - [11.9 - Exercise](a0_isl/119_exercise.md) *(pending)* — `0n / 0i`
 
-### 📂 A0_18S096 (📝 175 Notes | 📸 176 Screenshots)
+### 📂 MIT 18.S096 — Matrix Methods for ML (📝 175 Notes | 📸 176 Screenshots)
 
 - [Lec 1 Part 2 Derivatives As Linear Operator](a0_18s096/lec_1_part_2_derivatives_as_linear_operator.md) — `13n / 13i` 
 - [Lec 2 Part 2: Vectorization Of Matrix Function](a0_18s096/lec_2_part_2_vectorization_of_matrix_function.md) — `6n / 3i` 
@@ -468,7 +468,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [Lec 8 P2: Automatic Differentiation On Computational Graph](a0_18s096/lec_8_p2_automatic_differentiation_on_computational_graph.md) *(pending)* — `0n / 0i` 
 - [Problem Sets 1](a0_18s096/problem_sets_1.md) — `1n / 3i`
 
-### 📂 EE263A (📝 84 Notes | 📸 113 Screenshots)
+### 📂 EE263A — Linear Dynamical Systems (📝 84 Notes | 📸 113 Screenshots)
 
 - [Chap 1 Vectors](ee263a/chap_1_vectors.md) — `4n / 6i` 
 - [11.1 Left Right Inverse](ee263a/111_left_right_inverse.md) — `7n / 7i` 
@@ -484,7 +484,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [10. Matrix multiplication](ee263a/10_matrix_multiplication.md) — `4n / 5i` 
 - [Chap 13 Least square data fitting](ee263a/chap_13_least_square_data_fitting.md) — `15n / 20i`
 
-### 📂 a0_ee364a (📝 937 Notes | 📸 1428 Screenshots)
+### 📂 EE364A — Convex Optimization (📝 937 Notes | 📸 1428 Screenshots)
 
 - [Lec 2](a0_ee364a/lec_2.md) — `55n / 71i` 
 - [Appendix C](a0_ee364a/appendix_c.md) — `6n / 7i` 
@@ -511,7 +511,7 @@ Built bottom-up — pure math foundations first, AI/ML after:
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 numerical_optimization (📝 338 Notes | 📸 473 Screenshots)
+### 📂 Numerical Optimization — Nocedal & Wright (📝 338 Notes | 📸 473 Screenshots)
 
 - [📋 Overview](numerical_optimization/_overview.md) *(pending)* — `1n / 1i` 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
@@ -540,7 +540,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [Appendix A](numerical_optimization/appendix_a.md) *(pending)* — `1n / 1i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 numerical_optimization_sm (📝 94 Notes | 📸 120 Screenshots)
+### 📂 Numerical Optimization — SimpleMind Notes (📝 94 Notes | 📸 120 Screenshots)
 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 10i` 
 - [8.2 Automatic Differentiation (*extremely Important For Ai)](numerical_optimization_sm/82_automatic_differentiation_extremely_important_for_ai.md) — `35n / 46i` 
@@ -549,7 +549,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 A0_BISHOP_PRML (📝 179 Notes | 📸 243 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 179 Notes | 📸 243 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
@@ -568,7 +568,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i`
 
-### 📂 A0_CS50X (📝 1259 Notes | 📸 1845 Screenshots)
+### 📂 CS50X — Programming Foundations (📝 1259 Notes | 📸 1845 Screenshots)
 
 - [Week 0: Scratch](a0_cs50x/week_0_scratch.md) — `81n / 121i` 
 - [Week 7: Sql](a0_cs50x/week_7_sql.md) — `129n / 156i` 
@@ -592,7 +592,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [Ghi Chú Tay Cho Lab + Problem Set - Week 2: Array](a0_cs50x/ghi_chú_tay_cho_lab_problem_set_week_2_array.md) *(pending)* — `0n / 1i` 
 - [Week 6: Python](a0_cs50x/week_6_python.md) — `77n / 105i`
 
-### 📂 A1_DLSpec (📝 836 Notes | 📸 1826 Screenshots)
+### 📂 Deep Learning Specialization (📝 836 Notes | 📸 1826 Screenshots)
 
 - [C1w1_introduction To N.n](a1_dlspec/c1w1_introduction_to_nn.md) — `4n / 24i` 
 - [C1w2_n.n Basic](a1_dlspec/c1w2_nn_basic.md) — `64n / 163i` 
@@ -612,7 +612,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [C3w1_machine Learning Strategy 1](a1_dlspec/c3w1_machine_learning_strategy_1.md) — `43n / 47i` 
 - [C3w2_machine Learning Strategy 2](a1_dlspec/c3w2_machine_learning_strategy_2.md) — `39n / 40i`
 
-### 📂 A0_CS231N (📝 1350 Notes | 📸 2073 Screenshots)
+### 📂 CS231N — Computer Vision (📝 1350 Notes | 📸 2073 Screenshots)
 
 - [Lecture 1/16 - Introduction To CNN](a0_cs231n/lecture_116_introduction_to_cnn.md) — `11n / 31i` 
 - [Lecture X: Transformer](a0_cs231n/lecture_x_transformer.md) — `42n / 47i` 
@@ -661,7 +661,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [Lecture 15/16 - Efficient Methods And](a0_cs231n/lecture_1516_efficient_methods_and.md) *(pending)* — `0n / 0i` 
 - [Lecture 16/16 - Adversarial Examples And Adversarial](a0_cs231n/lecture_1616_adversarial_examples_and_adversarial.md) *(pending)* — `0n / 0i`
 
-### 📂 A0_CS224N (📝 665 Notes | 📸 841 Screenshots)
+### 📂 CS224N — NLP with Deep Learning (📝 665 Notes | 📸 841 Screenshots)
 
 - [Lecture 1 - Intro & Word Vector](a0_cs224n/lecture_1_intro_word_vector.md) — `28n / 45i` 
 - [Lecture Note : Introductiont O Word2vec](a0_cs224n/lecture_note_introductiont_o_word2vec.md) — `18n / 21i` 
@@ -710,7 +710,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [Lecture 22: Building Knowledge Representation](a0_cs224n/lecture_22_building_knowledge_representation.md) *(pending)* — `0n / 0i` 
 - [Lecture 23: Scaling Language Model](a0_cs224n/lecture_23_scaling_language_model.md) *(pending)* — `0n / 0i`
 
-### 📂 A1_NLPSpec (📝 1446 Notes | 📸 2284 Screenshots)
+### 📂 NLP Specialization (📝 1446 Notes | 📸 2284 Screenshots)
 
 - [C1w1_logistic Regression](a1_nlpspec/c1w1_logistic_regression.md) — `46n / 113i` 
 - [C1w2 - Naive Bayes](a1_nlpspec/c1w2_naive_bayes.md) — `57n / 112i` 
@@ -729,7 +729,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [C4w3 - Question Answering](a1_nlpspec/c4w3_question_answering.md) — `119n / 187i` 
 - [C4w4_chatbot](a1_nlpspec/c4w4_chatbot.md) — `78n / 113i`
 
-### 📂 A1_LLM (📝 492 Notes | 📸 504 Screenshots)
+### 📂 LLM — Large Language Models (📝 492 Notes | 📸 504 Screenshots)
 
 - [Course Introduction](a1_llm/course_introduction.md) *(pending)* — `0n / 0i` 
 - [Introduction](a1_llm/introduction.md) *(pending)* — `0n / 0i` 
