@@ -511,7 +511,24 @@ def update_readme(repo_dir, all_courses):
 
         existing_courses[internal_key] = course_md.strip()
 
-    # 4. Ghi đè lại toàn bộ file
+    # 4. Auto-calculate total stats và cập nhật stats line trong intro
+    total_notes_all = 0
+    total_images_all = 0
+    for block_md in existing_courses.values():
+        m = re.search(r'📝\s*([\d,]+)\s*Notes.*?📸\s*([\d,]+)\s*Screenshots', block_md)
+        if m:
+            total_notes_all += int(m.group(1).replace(',', ''))
+            total_images_all += int(m.group(2).replace(',', ''))
+    total_courses_all = len(existing_courses)
+
+    stats_line = f"**`~{total_notes_all:,} notes` · `~{total_images_all:,} screenshots` · `{total_courses_all} courses`**"
+    intro_text = re.sub(
+        r'\*\*`~?[\d,]+ notes`.*?`\d+ courses`\*\*',
+        stats_line,
+        intro_text
+    )
+
+    # 5. Ghi đè lại toàn bộ file
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(intro_text.strip() + "\n\n## 📚 Syllabus / Mục lục\n\n")
         # Sort by learning layer: Layer 0 (foundations) → Layer 1 (math for ML) → Layer 2 (AI)
@@ -539,7 +556,7 @@ def update_readme(repo_dir, all_courses):
             block = re.sub(r'^### 📂 .+? \(📝', f'### 📂 {display} (📝', block, count=1)
             f.write(block + "\n\n")
             
-    print("[✓] Đã cập nhật xong README.md (Merging completed)!")
+    print(f"[✓] Đã cập nhật xong README.md! (Tổng: {total_notes_all:,} notes, {total_images_all:,} screenshots, {total_courses_all} courses)")
 
 
 def main():
