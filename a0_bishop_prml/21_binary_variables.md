@@ -978,9 +978,7 @@
 <p align="center"><kbd><img src="assets/4e8b19c3f00e654e17659e4a507e0d28b8a9e082.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Tính chất thứ hai liên quan đến
->
-> một tính chất của variance đã học trong Stat110: Eve's Law
+> Tính chất thứ hai liên quan đến một tính chất của variance đã học trong Stat110: Eve's Law
 >
 > Var(Y) = E[Var(Y|X)] + Var[E(Y|X)]
 >
@@ -1011,7 +1009,8 @@
 > Xét mean của nó E[E[Y|X]], theo Adam's law, chính là bằng EY.
 >
 > vậy E[(E[Y|X] - EY)^2] = E[(E[Y|X] - E[E[Y|X]])^2] nhìn thì rối, nhưng nếu đặt cái random variable E[Y|X] là Z ta sẽ thấy nó là
-> E[(Z - EZ)^2] nên đây chính là Var(Z).
+> E[(Z
+> \- EZ)^2] nên đây chính là Var(Z).
 >
 > Vậy term thứ ba chính là Var[E(Y|X)]
 >
@@ -1058,11 +1057,11 @@
 > Và Var(E(θ|D)) sẽ là variance của random variable này, do đó nó mang ý nghĩa là độ biến động của giá trị posterior mean khi
 > giá trị của D thay đổi, do đó gs Bishop gọi nó là "variance in posterior mean", variance của posterior mean
 >
-> Chú ý, nó hoàn toàn không phải là variance của posterior distribution. Hiểu thế này: E[θ|D=d] là một point estimator của θ
-> với θ ~ π(θ|D=d), tức là, một ước lượng điểm của θ, được tính bởi cách thức dùng mean của posterior distribution để ước
-> lượng. Và vì tùy vào giá trị của D, ta có các posterior khác nhau, nên cái sự ước lượng ) này là một hàm số, hay, E[θ|D]
-> cũng là một biến ngẫu nhiên. Tóm lại E[θ|D] là posterior mean, là một biến ngẫu nhiên và Var của nó là variance của
-> posterior mean.
+> Chú ý, nó hoàn toàn không phải là variance của posterior distribution. Hiểu thế này: E[θ|D=d] là một point estimator của θ với
+> θ ~ π(θ|D=d), tức là, một ước lượng điểm của θ, được tính bởi cách thức dùng mean của posterior distribution để ước
+> lượng. Và vì tùy vào giá trị của D, ta có các posterior khác nhau, nên cái sự ước lượng ) này là một hàm số, hay, E[θ|D] cũng
+> là một biến ngẫu nhiên. Tóm lại E[θ|D] là posterior mean, là một biến ngẫu nhiên và Var của nó là variance của posterior
+> mean.
 >
 > Còn variance của posterior distribution thì phải kí hiệu là Var(θ|D=d), mang ý nghĩa là variance của θ với θ ~ π(θ|D=d).
 >
@@ -1074,11 +1073,11 @@
 >
 > Chốt lại,
 >
-> term thứ nhất, mang ý nghĩa: trung bình / kì vọng của [variance của posterior distribution]
+> term thứ nhất, mang ý nghĩa: **trung bình / kì vọng của [variance của posterior distribution]**
 >
-> term thứ hai mang ý nghĩa: variance / độ biến động của [posterior mean]
+> term thứ hai mang ý nghĩa: **variance / độ biến động của [posterior mean]**
 >
-> Còn bên trái, Var(θ) dĩ nhiên là variance / độ biến động của prior distribution
+> Còn bên trái, Var(θ) dĩ nhiên là **[variance / độ biến động của prior distribution]**
 >
 > mà term thứ hai, (variance / độ biến động của [posterior mean]) dĩ nhiên không âm do variance thì luôn không âm
 >
@@ -1086,7 +1085,21 @@
 >
 > variance / độ biến động của prior distribution = số k0 âm + trung bình / kì vọng của [variance của posterior distribution]
 >
-> ⇨ variance / độ biến động của prior distribution ≥ trung bình / kì vọng của [variance của posterior distribution]
+> ⇨ **variance / độ biến động của prior distribution** ≥ **trung bình / kì vọng của [variance của posterior distribution]** -------
+>
+> Vậy thì cái kết luận vừa rồi cũng chính là (nói bằng lời): nói chung (lấy trung bình trên các bộ dataset D=d khác nhau) thì
+> variance của posterior sẽ nhỏ hơn so với variance của prior. Cũng chính là nói: Khi ta chưa biết gì về D, chưa quan sát thấy
+> data, lúc này chỉ dựa vào prior distribution, thì ta có variance của θ là nhiêu đó, ví dụ = a, thì sau khi có dữ liệu để rồi ta cập
+> nhật lại distribution của θ, để có posterior distribution, thì variance của θ lúc này, ví dụ b, thì b sẽ NHỎ HƠN a Và độ giảm
+> của variance, a - b, dĩ nhiên theo phương trình trên, chính là độ lớn của cái term thứ hai: variance / độ biến động của
+> [posterior mean]
+>
+> Do đó gs Bishop mới nói trong sách rằng, mức độ giảm của variance sẽ càng lớn nếu như variance của posterior mean càng
+> lớn ("The reduction in variance is greater if the variance in the posterior mean is greater").
+>
+> Và điều này nhằm chứng minh cho nhận định mà gs Bishop đặt vấn đề lúc nãy: liệu đây có phải là tính chất khái quát không,
+> rằng càng có nhiều data thì posteriori sẽ ngày càng có variance nhỏ lại, (variance cũng là thể hiện tính uncertainty) hay
+> không?
 
 <br>
 
