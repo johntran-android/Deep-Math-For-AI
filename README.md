@@ -1,12 +1,84 @@
-### 🧠 My Deep Math For AI Journal
+# 🧠 Deep Math For AI — Nhật Ký Tự Học
 
-*Welcome to my personal learning dump.*
+> *"If you can't explain it simply, you don't understand it well enough."* — Richard Feynman
 
-*Đây không phải là một cuốn giáo trình Toán hoàn hảo hay bách khoa toàn thư sửa sai cho tác giả. Đây đơn giản là **nhật ký bóc tách (deconstruction nhật ký)** của một gã đang vật lộn với những khái niệm Toán hạng nặng đằng sau AI (Casella, Numerical Optimization...).*
+**`~12,250 notes` · `~16,653 screenshots` · `19 courses`**
 
-*Cách học của tôi là dùng Feynman Technique đập nát từng định lý, công thức thô cứng trong sách thành "tiếng người" dễ hiểu nhất đối với tôi. Bạn sẽ thấy rất nhiều câu như "Khoan, dừng lại một giây phân tích đoạn này đã...", vì tôi tin rằng không có Blackbox nào không thể mở ra được.*
+---
 
-*Và dĩ nhiên, nó chứa góc nhìn cá nhân nên chắc chắn sẽ có sạn. But hey, it shows my thinking process and sweat!*
+## Đây là gì?
+
+Đây **không phải** một giáo trình hoàn hảo, không phải bách khoa toàn thư, cũng không phải errata để sửa lỗi tác giả.
+
+Đây là **nhật ký bóc tách** *(deconstruction diary)* của một người đang tự học con đường từ Toán nền tảng lên đến AI — viết thô, viết thật, viết theo cách mình hiểu nhất.
+
+Nói cách khác, đây là **public learning lab** của tôi: nơi tôi cố gắng xây lại nền tảng toán học và thống kê phía dưới AI từ first principles.
+
+---
+
+## Vì sao repo này tồn tại?
+
+Tôi không muốn học AI chỉ như một lớp API, tool, prompt, hay framework bề mặt.
+
+Mục tiêu của repo này là xây một nền đủ chắc để có thể:
+
+- đọc sách và paper nghiêm túc hơn;
+- hiểu mô hình thay vì chỉ dùng mô hình;
+- hiểu loss, risk, inference, uncertainty, optimization;
+- nối lý thuyết với implementation;
+- và cuối cùng dùng nền đó để build AI products có chiều sâu hơn một thin wrapper.
+
+---
+
+## ⚙️ Phương pháp: Feynman Technique
+
+Mỗi định lý, mỗi công thức đều được **bóc tách** cho đến khi tôi có thể giải thích nó bằng ngôn ngữ đơn giản nhất.
+
+Bạn sẽ thấy rất nhiều câu kiểu:
+
+> *"Khoan, dừng lại một giây — đoạn này thực ra đang nói gì?"*
+
+vì mục tiêu của tôi là không để công thức nằm như một black box.
+
+Tôi cố gắng mở càng nhiều "black boxes" càng tốt — ít nhất đến mức mình có thể giải thích được cơ chế chính bằng lời của mình.
+
+Góc nhìn trong repo này mang tính cá nhân, đang tiến hóa, và chắc chắn sẽ có sạn.  
+But that is the point: it shows the thinking process, the mistakes, the corrections, and the sweat.
+
+---
+
+## 🗺️ Lộ Trình Tự Học
+
+Curriculum xây từ dưới lên — nền Toán thuần túy trước, AI/ML sau:
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  LAYER 0 — NỀN TẢNG TOÁN THUẦN TÚY                              │
+│                                                                  │
+│  MIT 18.01   Single Variable Calculus                            │
+│  MIT 18.02   Multivariable Calculus                              │
+│  MIT 18.06   Linear Algebra          (Gilbert Strang)            │
+│  STAT 110    Probability             (Harvard / Blitzstein)      │
+├──────────────────────────────────────────────────────────────────┤
+│  LAYER 1 — TOÁN CHO ML                                           │
+│                                                                  │
+│  Casella     Statistical Inference   (rigorous, grad-level)      │
+│  ISL         Intro to Stat. Learning                             │
+│  MIT 18.S096 Matrix Methods for ML                               │
+│  EE364A      Convex Optimization     (Boyd & Vandenberghe)       │
+│  Num. Optim. Numerical Optimization  (Nocedal & Wright)          │
+│  Bishop PRML Pattern Recognition & Machine Learning              │
+├──────────────────────────────────────────────────────────────────┤
+│  LAYER 2 — AI / DEEP LEARNING                                    │
+│                                                                  │
+│  CS50X       Programming Foundations (Harvard)                   │
+│  DL Spec     Deep Learning Specialization                        │
+│  CS231N      Computer Vision         (Stanford)                  │
+│  CS224N      NLP with Deep Learning  (Stanford)                  │
+│  NLP Spec    NLP Specialization                                  │
+│  LLM         Large Language Models                               │
+└──────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
