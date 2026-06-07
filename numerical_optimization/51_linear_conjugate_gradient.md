@@ -2307,7 +2307,7 @@
 >
 > = rkTCinvCinvTrk / pkTCTCinvTACinvCpk
 >
-> (Dùng identity (AB)inv = BinvAinv ⇨ CinvCinvT = (CTC)inv)
+> Dùng identity (AB)inv = BinvAinv ⇨ CinvCinvT = (CTC)inv
 >
 > = rkT(CTC)invrk / pkTApk
 >
