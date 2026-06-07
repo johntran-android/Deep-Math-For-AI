@@ -249,11 +249,27 @@ def process_studyboard(input_dir, output_dir, fallback_name=None):
     # L1 nodes = Chapters (direct children of root)
     l1_nodes = children_map.get(root_node['id'], [])
     l1_ids = set(n['id'] for n in l1_nodes)
-    
+
     if not l1_nodes:
         print("[LỖI] Root node không có children (chapters)")
         return None, None, None
-    
+
+    # Sort chapters by numeric prefix (e.g. "2.1", "8.1", "A.1") instead of visual y-position
+    def chapter_sort_key(node):
+        title = (node.get('title') or '').strip()
+        m = re.match(r'^(\d+)\.(\d+)', title)
+        if m:
+            return (0, int(m.group(1)), int(m.group(2)))
+        m = re.match(r'^([A-Za-z])\.(\d+)', title)
+        if m:
+            return (1, ord(m.group(1).upper()), int(m.group(2)))
+        m = re.match(r'^Appendix\s+([A-Za-z])', title, re.IGNORECASE)
+        if m:
+            return (1, ord(m.group(1).upper()), 0)
+        return (2, 0, 0)
+
+    l1_nodes.sort(key=chapter_sort_key)
+
     print(f"[*] Tìm thấy {len(l1_nodes)} chapters")
     
     generated_files = []
