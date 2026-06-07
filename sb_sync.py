@@ -424,7 +424,7 @@ def update_readme(repo_dir, all_courses):
                     if not block.strip(): continue
                     lines = block.strip().split('\n')
                     header = lines[0]
-                    c_name_match = re.search(r'^(.*?) \(', header)
+                    c_name_match = re.search(r'^(.*?) \(📝', header)
                     if c_name_match:
                         c_name = c_name_match.group(1).strip()
                         # Normalize: display name or raw name → internal key
@@ -450,8 +450,9 @@ def update_readme(repo_dir, all_courses):
         for file in files:
             n_n = file.get('notes', 0)
             n_i = file.get('images', 0)
-            tag = " *(pending)*" if (n_n <= 1 and n_i <= 1) else ""
-            course_md += f"- [{file['title']}]({file['path']}){tag} — `{n_n}n / {n_i}i` \n"
+            if n_n <= 1 and n_i <= 1:
+                continue
+            course_md += f"- [{file['title']}]({file['path']}) — `{n_n}n / {n_i}i` \n"
 
         existing_courses[internal_key] = course_md.strip()
 

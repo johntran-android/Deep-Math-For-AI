@@ -471,7 +471,7 @@ def update_readme(repo_dir, all_courses):
                     lines = block.strip().split('\n')
                     header = lines[0] # "CourseName (stats)"
                     # Lấy tên khoá học sạch (trước dấu ngoặc đơn)
-                    c_name_match = re.search(r'^(.*?) \(', header)
+                    c_name_match = re.search(r'^(.*?) \(📝', header)
                     if c_name_match:
                         c_name = c_name_match.group(1).strip()
                         # Normalize: display name or raw name → internal key
@@ -503,11 +503,11 @@ def update_readme(repo_dir, all_courses):
 
         course_md = f"### 📂 {display_name} (📝 {total_notes} Notes | 📸 {total_images} Screenshots)\n\n"
         for file in files:
-            # Tag low content chapters
             n_n = file.get('notes', 0)
             n_i = file.get('images', 0)
-            tag = " *(pending)*" if (n_n <= 1 and n_i <= 1) else ""
-            course_md += f"- [{file['title']}]({file['path']}){tag} — `{n_n}n / {n_i}i` \n"
+            if n_n <= 1 and n_i <= 1:
+                continue
+            course_md += f"- [{file['title']}]({file['path']}) — `{n_n}n / {n_i}i` \n"
 
         existing_courses[internal_key] = course_md.strip()
 
