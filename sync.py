@@ -487,11 +487,23 @@ def update_readme(repo_dir, all_courses):
     # 4. Ghi đè lại toàn bộ file
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(intro_text.strip() + "\n\n## 📚 Syllabus / Mục lục\n\n")
-        # Sắp xếp: sb_exports (không có prefix A0_/A1_) lên đầu, sm_exports alphabetical sau
+        # Sort by learning layer: Layer 0 (foundations) → Layer 1 (math for ML) → Layer 2 (AI)
+        COURSE_LAYER_ORDER = {
+            # Layer 0 — Pure Math Foundations
+            'a0_mit1801': (0, 0), 'a0_mit1802': (0, 1), 'a0_mit1806': (0, 2),
+            'a0_mit1806_book': (0, 3), 'a0_stat110': (0, 4),
+            # Layer 1 — Math for ML
+            'a0_casella': (1, 0), 'a0_isl': (1, 1), 'a0_18s096': (1, 2),
+            'ee263a': (1, 3), 'a0_ee364a': (1, 4),
+            'numerical_optimization': (1, 5), 'numerical_optimization_sm': (1, 6),
+            'a0_bishop_prml': (1, 7),
+            # Layer 2 — AI / Deep Learning
+            'a0_cs50x': (2, 0), 'a1_dlspec': (2, 1), 'a0_cs231n': (2, 2),
+            'a0_cs224n': (2, 3), 'a1_nlpspec': (2, 4), 'a1_llm': (2, 5),
+        }
+
         def readme_sort_key(c_name):
-            upper = c_name.upper()
-            is_sm = upper.startswith('A0_') or upper.startswith('A1_')
-            return (1 if is_sm else 0, c_name.lower())
+            return COURSE_LAYER_ORDER.get(c_name.lower(), (99, 99))
 
         for c_name in sorted(existing_courses.keys(), key=readme_sort_key):
             f.write(existing_courses[c_name] + "\n\n")

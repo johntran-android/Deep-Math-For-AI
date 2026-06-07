@@ -426,6 +426,24 @@ def update_readme(repo_dir, all_courses):
         
         existing_courses[course_name] = course_md.strip()
 
+    # Layer-based sort order for Syllabus
+    COURSE_LAYER_ORDER = {
+        # Layer 0 — Pure Math Foundations
+        'a0_mit1801': (0, 0), 'a0_mit1802': (0, 1), 'a0_mit1806': (0, 2),
+        'a0_mit1806_book': (0, 3), 'a0_stat110': (0, 4),
+        # Layer 1 — Math for ML
+        'a0_casella': (1, 0), 'a0_isl': (1, 1), 'a0_18s096': (1, 2),
+        'ee263a': (1, 3), 'a0_ee364a': (1, 4),
+        'numerical_optimization': (1, 5), 'numerical_optimization_sm': (1, 6),
+        'a0_bishop_prml': (1, 7),
+        # Layer 2 — AI / Deep Learning
+        'a0_cs50x': (2, 0), 'a1_dlspec': (2, 1), 'a0_cs231n': (2, 2),
+        'a0_cs224n': (2, 3), 'a1_nlpspec': (2, 4), 'a1_llm': (2, 5),
+    }
+
+    def course_sort_key(c_name):
+        return COURSE_LAYER_ORDER.get(c_name.lower(), (99, 99))
+
     # Auto-calculate total stats across ALL courses in the final merged set
     total_notes_all = 0
     total_images_all = 0
@@ -446,7 +464,7 @@ def update_readme(repo_dir, all_courses):
 
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(intro_text.strip() + "\n\n## 📚 Syllabus / Mục lục\n\n")
-        for c_name in sorted(existing_courses.keys()):
+        for c_name in sorted(existing_courses.keys(), key=course_sort_key):
             f.write(existing_courses[c_name] + "\n\n")
 
     print(f"[✓] Đã cập nhật xong README.md! (Tổng: {total_notes_all:,} notes, {total_images_all:,} screenshots, {total_courses_all} courses)")
