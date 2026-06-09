@@ -57,73 +57,113 @@ That is the core of this repo: not polished notes, but visible thinking.
 
 ## 🗺️ Learning Roadmap
 
+**Status legend:**
+
+| Label | Meaning |
+|-------|---------|
+| Core Covered | I have covered the core material needed for my current AI/ML path. May revisit advanced chapters later. Not a claim of mastery. |
+| Active | Currently studying. |
+| Revisiting | Previously covered; returning for deeper understanding or to fill gaps. |
+| Planned | Future study — queued but not started yet. |
+| Reference Later | Important reference, but not a linear target for now. |
+
+---
+
 ### Layer 0 — Mathematical Foundations
 
 | Status | Topic | Source |
 |--------|-------|--------|
-| ✅ Done | Single Variable Calculus | MIT 18.01 |
-| ✅ Done | Multivariable Calculus | MIT 18.02 |
-| ✅ Done | Linear Algebra | MIT 18.06 / Gilbert Strang |
-| ✅ Done | Probability | Harvard STAT 110 / Blitzstein |
-| ✅ Done | Matrix Calculus / Matrix Methods | MIT 18.S096 |
+| Core Covered | Single Variable Calculus | MIT 18.01 |
+| Core Covered | Multivariable Calculus | MIT 18.02 |
+| Core Covered | Linear Algebra | MIT 18.06 / Gilbert Strang |
+| Core Covered | Probability | Harvard STAT 110 / Blitzstein |
+| Core Covered | Matrix Calculus / Matrix Methods | MIT 18.S096 |
 
 ### Layer 1 — Statistics and Optimization for ML
 
-| Status | Topic | Source |
-|--------|-------|--------|
-| ✅ Done / Reviewing | Statistical Inference | Casella & Berger |
-| ✅ Done / Reviewing | Convex Optimization | Boyd & Vandenberghe / EE364A |
-| 🔄 In Progress | Numerical Optimization | Nocedal & Wright |
-| 🔄 In Progress | Pattern Recognition and Machine Learning | Christopher Bishop |
-| 📋 Planned | Elements of Statistical Learning | Hastie, Tibshirani, Friedman |
-| 📋 Planned | Probabilistic Machine Learning | Kevin Murphy |
+| Status | Topic | Source | Note |
+|--------|-------|--------|------|
+| Core Covered | Statistical Inference | Casella & Berger | Ch.1–9 covered; Ch.10–12 planned revisit |
+| Core Covered | Convex Optimization | Boyd & Vandenberghe / EE364A | Core chapters covered |
+| Active | Numerical Optimization | Nocedal & Wright | Currently around Ch.8 |
+| Active | Pattern Recognition and Machine Learning | Christopher Bishop | Currently Ch.2 |
+| Planned | Elements of Statistical Learning | Hastie, Tibshirani, Friedman | After Bishop |
+| Reference Later | Probabilistic Machine Learning | Kevin Murphy | Deeper path, later |
 
 ### Layer 2 — Core Machine Learning and Deep Learning
 
 | Status | Topic | Source |
 |--------|-------|--------|
-| ✅ Done | Machine Learning Foundations | Andrew Ng ML Specialization |
-| ✅ Done | Deep Learning | Deep Learning Specialization |
-| ✅ Done / Reviewing | Computer Vision | Stanford CS231n |
-| ✅ Done / Reviewing | NLP with Deep Learning | Stanford CS224n |
-| 📋 Planned | Machine Learning | Stanford CS229 |
-| 📋 Planned | Deep Learning Textbook | Goodfellow, Bengio, Courville |
-| 📋 Planned | Modern LLM Systems | RAG, agents, evaluation, AI engineering |
+| Core Covered | Machine Learning Foundations | Andrew Ng ML Specialization |
+| Core Covered | Deep Learning | Deep Learning Specialization |
+| Core Covered | Computer Vision | Stanford CS231n |
+| Core Covered | NLP with Deep Learning | Stanford CS224n |
+| Planned | Machine Learning | Stanford CS229 |
+| Planned | Deep Learning Textbook | Goodfellow, Bengio, Courville |
+| Reference Later | Modern LLM Systems | RAG, agents, evaluation, AI engineering |
 
 ### Layer 3 — Implementation Practice
 
 | Status | Project |
 |--------|---------|
-| 📋 Planned | Linear regression from scratch |
-| 📋 Planned | Logistic regression from scratch |
-| 📋 Planned | Backpropagation from scratch |
-| 📋 Planned | CS229-style assignments |
-| 📋 Planned | CS231n-style neural network assignments |
-| 📋 Planned | Optimization algorithms: gradient descent, Newton, conjugate gradient, BFGS |
+| Planned | Linear regression from scratch |
+| Planned | Logistic regression from scratch |
+| Planned | Backpropagation from scratch |
+| Planned | CS229-style assignments |
+| Revisiting / Planned | CS231n-style neural network assignments |
+| Planned | Optimization algorithms: gradient descent, Newton, conjugate gradient, BFGS |
 
-### Layer 4 — Product and Application Layer
+### Layer 4 — Product Layer
 
 | Status | Project |
 |--------|---------|
-| 🔄 In Progress | StudyBoard — AI learning system for active explanation, memory review, and knowledge linking |
-| 📋 Planned | Adaptive review scheduling |
-| 📋 Planned | Concept mastery tracking |
-| 📋 Planned | Cross-notebook knowledge graph |
-| 📋 Planned | Applying ML/AI foundations into real product features |
+| Active | StudyBoard — AI-assisted learning system (see below) |
+| Planned | Adaptive review scheduling |
+| Planned | Concept mastery tracking |
+| Planned | Cross-notebook knowledge graph |
+| Planned | Applying ML/AI foundations into real product features |
 
 ---
 
-## What this repo shows
+## 🛠️ Product Layer: StudyBoard
 
-This repo is meant to show three things:
+StudyBoard is my current product experiment: an AI-assisted learning system built around active explanation, AI feedback, memory review, and knowledge linking.
 
-1. I am willing to study difficult foundations seriously.
-2. I can explain mathematical and AI concepts in my own words.
-3. I am building a bridge from theory → implementation → product.
+It started from the same workflow used in this repo:
 
-The long-term goal is not just to collect notes.
+> study → pause → capture → explain in my own words → get AI feedback → review later
 
-The goal is to become the kind of engineer who can understand AI systems deeply, implement core ideas, and build useful AI products on top of that foundation.
+Current and planned product features:
+- AI Check — feedback on your own explanation of a concept
+- Memory Gym — active recall sessions
+- Review Feed — spaced repetition question bank
+- Cross-notebook knowledge graph
+- Concept mastery tracking
+
+**Live demo:** [studyboard.app](https://the-studying-board.web.app/landing.html)
+*Status: early work-in-progress. Not production-ready. Features and stability are actively being built.*
+
+---
+
+## 📱 Shipped Products Before This AI Path
+
+Before going deep into AI foundations, I worked as a self-taught Android developer and shipped consumer apps with real users.
+
+- [Sentence Master](https://play.google.com/store/apps/details?id=com.hungdaovuong.sentencemaster.en) — 1M+ downloads
+
+This background shapes how I think about this AI path: the goal is not only to understand theory, but to eventually ship AI products that are genuinely useful.
+
+---
+
+## What this repo is meant to show
+
+1. I am willing to study difficult foundations seriously — and I have the notes to prove it.
+2. I can explain mathematical and AI concepts in my own words, not just copy-paste from textbooks.
+3. I am building a bridge: theory → implementation → product.
+
+The long-term goal is not to collect notes.
+
+The goal is to become the kind of engineer who understands AI systems deeply, can implement core ideas, and can build products on top of that foundation.
 
 ---
 
@@ -184,11 +224,32 @@ Bạn sẽ thấy rất nhiều khoảnh khắc kiểu:
 
 ---
 
+## 🛠️ Tầng sản phẩm: StudyBoard
+
+StudyBoard là product experiment hiện tại của mình — một AI learning system xây dựng xung quanh active explanation, AI feedback, memory review, và knowledge linking.
+
+Nó bắt đầu từ đúng workflow mình đang dùng trong repo này:
+
+> học → dừng lại → capture → giải thích bằng lời mình → nhận AI feedback → ôn lại sau
+
+**Live demo:** [studyboard.app](https://the-studying-board.web.app/landing.html)
+*Trạng thái: đang phát triển, chưa production-ready.*
+
+---
+
+## 📱 Sản phẩm đã ship trước khi đi sâu vào AI
+
+Trước khi đi sâu vào nền tảng AI, mình là Android developer tự học và đã ship app có người dùng thật.
+
+- [Sentence Master](https://play.google.com/store/apps/details?id=com.hungdaovuong.sentencemaster.en) — 1M+ lượt tải
+
+Nền tảng đó giúp mình nhìn con đường AI không chỉ là "học cho biết" mà là "học để ship được thứ có giá trị thật."
+
+---
+
 ## Repo này chứng minh điều gì?
 
-Repo này nhằm chứng minh ba điều:
-
-1. Mình thật sự nghiêm túc với nền tảng khó.
+1. Mình thật sự nghiêm túc với nền tảng khó — và có notes để chứng minh.
 2. Mình có thể giải thích lại các khái niệm toán/AI bằng lời của mình.
 3. Mình đang xây cầu nối từ lý thuyết → implementation → sản phẩm.
 
