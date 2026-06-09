@@ -1,156 +1,200 @@
-# 🧠 Deep Math For AI — Nhật Ký Tự Học
+# Deep Math For AI — A Self-Study Learning Lab
 
-> *"If you can't explain it simply, you don't understand it well enough."* — Richard Feynman
+> *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,250 notes` · `~16,653 screenshots` · `19 courses`**
+**`~12,253 notes` · `~16,656 screenshots` · `19 courses`** · work in progress
 
----
-
-## Đây là gì?
-
-Đây **không phải** một giáo trình hoàn hảo, không phải bách khoa toàn thư, cũng không phải errata để sửa lỗi tác giả.
-
-Đây là **nhật ký bóc tách** *(deconstruction diary)* của một người đang tự học con đường từ Toán nền tảng lên đến AI — viết thô, viết thật, viết theo cách mình hiểu nhất.
-
-Nói cách khác, đây là **public learning lab** của tôi: nơi tôi cố gắng xây lại nền tảng toán học và thống kê phía dưới AI từ first principles.
-
----
-
-## Vì sao repo này tồn tại?
-
-Tôi không muốn học AI chỉ như một lớp API, tool, prompt, hay framework bề mặt.
-
-Mục tiêu của repo này là xây một nền đủ chắc để có thể:
-
-- đọc sách và paper nghiêm túc hơn;
-- hiểu mô hình thay vì chỉ dùng mô hình;
-- hiểu loss, risk, inference, uncertainty, optimization;
-- nối lý thuyết với implementation;
-- và cuối cùng dùng nền đó để build AI products có chiều sâu hơn một thin wrapper.
-
----
-
-## ⚙️ Phương pháp: Feynman Technique
-
-Mỗi định lý, mỗi công thức đều được **bóc tách** cho đến khi tôi có thể giải thích nó bằng ngôn ngữ đơn giản nhất.
-
-Bạn sẽ thấy rất nhiều câu kiểu:
-
-> *"Khoan, dừng lại một giây — đoạn này thực ra đang nói gì?"*
-
-vì mục tiêu của tôi là không để công thức nằm như một black box. Tôi cố gắng mở càng nhiều "black boxes" càng tốt — ít nhất đến mức có thể giải thích được cơ chế chính bằng lời của mình.
-
-Góc nhìn trong repo này mang tính cá nhân, đang tiến hóa, và chắc chắn sẽ có sạn.
-
----
-
-## 🗺️ Lộ Trình Tự Học
-
-Curriculum xây từ dưới lên — nền Toán thuần túy trước, AI/ML sau:
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│  LAYER 0 — NỀN TẢNG TOÁN THUẦN TÚY                              │
-│                                                                  │
-│  MIT 18.01   Single Variable Calculus                            │
-│  MIT 18.02   Multivariable Calculus                              │
-│  MIT 18.06   Linear Algebra          (Gilbert Strang)            │
-│  STAT 110    Probability             (Harvard / Blitzstein)      │
-├──────────────────────────────────────────────────────────────────┤
-│  LAYER 1 — TOÁN CHO ML                                           │
-│                                                                  │
-│  Casella     Statistical Inference   (rigorous, grad-level)      │
-│  ISL         Intro to Stat. Learning                             │
-│  MIT 18.S096 Matrix Methods for ML                               │
-│  EE364A      Convex Optimization     (Boyd & Vandenberghe)       │
-│  Num. Optim. Numerical Optimization  (Nocedal & Wright)          │
-│  Bishop PRML Pattern Recognition & Machine Learning              │
-├──────────────────────────────────────────────────────────────────┤
-│  LAYER 2 — AI / DEEP LEARNING                                    │
-│                                                                  │
-│  CS50X       Programming Foundations (Harvard)                   │
-│  DL Spec     Deep Learning Specialization                        │
-│  CS231N      Computer Vision         (Stanford)                  │
-│  CS224N      NLP with Deep Learning  (Stanford)                  │
-│  NLP Spec    NLP Specialization                                  │
-│  LLM         Large Language Models                               │
-└──────────────────────────────────────────────────────────────────┘
-```
-
----
 ---
 
 ## What is this?
 
-This is **not** a perfect textbook, not an encyclopedia, not an errata to correct the authors.
+This is not a perfect textbook, not an encyclopedia, and not an official course.
 
-This is a **deconstruction diary** of someone self-studying the path from mathematical foundations all the way up to AI — written raw, written honest, written in the way I understand things best.
+This is my **public learning lab**: a long-term record of how I am rebuilding the mathematical and statistical foundations beneath AI/ML from first principles.
 
-In other words, this is my **public learning lab**: a place where I attempt to rebuild the mathematical and statistical foundations beneath AI from first principles.
+The notes are raw, personal, evolving, and sometimes imperfect. That is part of the point. This repo shows the learning process: the confusion, the pauses, the explanations, the corrections, and the gradual connection between ideas.
 
 ---
 
 ## Why does this repo exist?
 
-I don't want to learn AI as just a layer of APIs, tools, prompts, or surface-level frameworks.
+I do not want to learn AI only as a layer of APIs, tools, prompts, or surface-level frameworks.
 
-The goal of this repo is to build a solid enough foundation to be able to:
+The goal is to build a foundation strong enough to:
 
-- read textbooks and papers more seriously;
-- understand models instead of just using them;
-- understand loss, risk, inference, uncertainty, optimization;
+- read serious textbooks and papers;
+- understand models instead of only using models;
+- understand loss, risk, inference, uncertainty, optimization, and representation learning;
 - connect theory with implementation;
-- and ultimately use that foundation to build AI products with more depth than a thin wrapper.
+- and eventually build AI products with more depth than a thin wrapper.
+
+This repo is one part of that path: the theory and learning proof-of-work layer.
 
 ---
 
-## ⚙️ Method: Feynman Technique
+## ⚙️ Method: Feynman-style Active Explanation
 
-Every theorem, every formula gets **deconstructed** until I can explain it in the simplest possible language.
+My learning method is based on a Feynman-style loop:
 
-You'll see a lot of moments like:
+1. Study a small piece of material.
+2. Pause.
+3. Capture the source when useful — a screenshot, a formula, a lecture slide, or a PDF excerpt.
+4. Explain the idea again in my own words.
+5. Identify what I still cannot explain clearly.
+6. Revisit, correct, and connect it with earlier knowledge.
 
-> *"Wait, hold on — what is this actually saying?"*
+For math-heavy materials, this often means deconstructing formulas, theorems, and derivations until the core mechanism becomes explainable.
 
-because my goal is to never let a formula sit as an unexplained black box. I try to open as many "black boxes" as possible — at least to the point where I can explain the core mechanism in my own words.
+But the deeper point is not merely to "break down every formula." The deeper point is **active understanding**: forcing myself to teach the idea back, in plain language, instead of passively reading and moving on.
 
-The perspective in this repo is personal, evolving, and certainly imperfect.  
-But that is the point: it shows the thinking process, the mistakes, the corrections, and the sweat.
+You will see many moments like:
+
+> *"Wait — what is this actually saying?"*
+
+That is the core of this repo: not polished notes, but visible thinking.
 
 ---
 
 ## 🗺️ Learning Roadmap
 
-Built bottom-up — pure math foundations first, AI/ML after:
+### Layer 0 — Mathematical Foundations
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│  LAYER 0 — PURE MATH FOUNDATIONS                                 │
-│                                                                  │
-│  MIT 18.01   Single Variable Calculus                            │
-│  MIT 18.02   Multivariable Calculus                              │
-│  MIT 18.06   Linear Algebra          (Gilbert Strang)            │
-│  STAT 110    Probability             (Harvard / Blitzstein)      │
-├──────────────────────────────────────────────────────────────────┤
-│  LAYER 1 — MATH FOR ML                                           │
-│                                                                  │
-│  Casella     Statistical Inference   (rigorous, grad-level)      │
-│  ISL         Intro to Stat. Learning                             │
-│  MIT 18.S096 Matrix Methods for ML                               │
-│  EE364A      Convex Optimization     (Boyd & Vandenberghe)       │
-│  Num. Optim. Numerical Optimization  (Nocedal & Wright)          │
-│  Bishop PRML Pattern Recognition & Machine Learning              │
-├──────────────────────────────────────────────────────────────────┤
-│  LAYER 2 — AI / DEEP LEARNING                                    │
-│                                                                  │
-│  CS50X       Programming Foundations (Harvard)                   │
-│  DL Spec     Deep Learning Specialization                        │
-│  CS231N      Computer Vision         (Stanford)                  │
-│  CS224N      NLP with Deep Learning  (Stanford)                  │
-│  NLP Spec    NLP Specialization                                  │
-│  LLM         Large Language Models                               │
-└──────────────────────────────────────────────────────────────────┘
-```
+| Status | Topic | Source |
+|--------|-------|--------|
+| ✅ Done | Single Variable Calculus | MIT 18.01 |
+| ✅ Done | Multivariable Calculus | MIT 18.02 |
+| ✅ Done | Linear Algebra | MIT 18.06 / Gilbert Strang |
+| ✅ Done | Probability | Harvard STAT 110 / Blitzstein |
+| ✅ Done | Matrix Calculus / Matrix Methods | MIT 18.S096 |
+
+### Layer 1 — Statistics and Optimization for ML
+
+| Status | Topic | Source |
+|--------|-------|--------|
+| ✅ Done / Reviewing | Statistical Inference | Casella & Berger |
+| ✅ Done / Reviewing | Convex Optimization | Boyd & Vandenberghe / EE364A |
+| 🔄 In Progress | Numerical Optimization | Nocedal & Wright |
+| 🔄 In Progress | Pattern Recognition and Machine Learning | Christopher Bishop |
+| 📋 Planned | Elements of Statistical Learning | Hastie, Tibshirani, Friedman |
+| 📋 Planned | Probabilistic Machine Learning | Kevin Murphy |
+
+### Layer 2 — Core Machine Learning and Deep Learning
+
+| Status | Topic | Source |
+|--------|-------|--------|
+| ✅ Done | Machine Learning Foundations | Andrew Ng ML Specialization |
+| ✅ Done | Deep Learning | Deep Learning Specialization |
+| ✅ Done / Reviewing | Computer Vision | Stanford CS231n |
+| ✅ Done / Reviewing | NLP with Deep Learning | Stanford CS224n |
+| 📋 Planned | Machine Learning | Stanford CS229 |
+| 📋 Planned | Deep Learning Textbook | Goodfellow, Bengio, Courville |
+| 📋 Planned | Modern LLM Systems | RAG, agents, evaluation, AI engineering |
+
+### Layer 3 — Implementation Practice
+
+| Status | Project |
+|--------|---------|
+| 📋 Planned | Linear regression from scratch |
+| 📋 Planned | Logistic regression from scratch |
+| 📋 Planned | Backpropagation from scratch |
+| 📋 Planned | CS229-style assignments |
+| 📋 Planned | CS231n-style neural network assignments |
+| 📋 Planned | Optimization algorithms: gradient descent, Newton, conjugate gradient, BFGS |
+
+### Layer 4 — Product and Application Layer
+
+| Status | Project |
+|--------|---------|
+| 🔄 In Progress | StudyBoard — AI learning system for active explanation, memory review, and knowledge linking |
+| 📋 Planned | Adaptive review scheduling |
+| 📋 Planned | Concept mastery tracking |
+| 📋 Planned | Cross-notebook knowledge graph |
+| 📋 Planned | Applying ML/AI foundations into real product features |
+
+---
+
+## What this repo shows
+
+This repo is meant to show three things:
+
+1. I am willing to study difficult foundations seriously.
+2. I can explain mathematical and AI concepts in my own words.
+3. I am building a bridge from theory → implementation → product.
+
+The long-term goal is not just to collect notes.
+
+The goal is to become the kind of engineer who can understand AI systems deeply, implement core ideas, and build useful AI products on top of that foundation.
+
+---
+
+---
+
+# 🧠 Deep Math For AI — Nhật Ký Tự Học
+
+> *Học AI từ nền toán đi lên — bằng cách chủ động giải thích lại, bóc tách công thức, tự triển khai, và cuối cùng áp dụng vào sản phẩm thật.*
+
+---
+
+## Đây là gì?
+
+Đây không phải một giáo trình hoàn hảo, không phải bách khoa toàn thư, cũng không phải tài liệu chính thức của một khóa học.
+
+Đây là **public learning lab** của mình: nơi mình ghi lại quá trình tự xây lại nền tảng toán học, thống kê, tối ưu, và machine learning phía dưới AI.
+
+Các ghi chú trong repo này có thể thô, cá nhân, đang tiến hóa, và chắc chắn không hoàn hảo. Nhưng đó cũng là điểm chính: repo này không chỉ cho thấy kết quả cuối cùng, mà còn cho thấy quá trình suy nghĩ, chỗ vấp, chỗ sửa, và cách các ý tưởng dần được nối lại với nhau.
+
+---
+
+## Vì sao repo này tồn tại?
+
+Mình không muốn học AI chỉ như một lớp API, tool, prompt, hay framework bề mặt.
+
+Mục tiêu của repo này là xây một nền đủ chắc để có thể:
+
+- đọc textbook và paper nghiêm túc hơn;
+- hiểu mô hình thay vì chỉ dùng mô hình;
+- hiểu loss, risk, inference, uncertainty, optimization, và representation learning;
+- nối lý thuyết với implementation;
+- và cuối cùng dùng nền đó để build AI products có chiều sâu hơn một thin wrapper.
+
+Repo này là một phần của con đường đó: tầng lý thuyết và bằng chứng học tập công khai.
+
+---
+
+## ⚙️ Phương pháp: Feynman-style Active Explanation
+
+Cách học của mình dựa trên một vòng lặp kiểu Feynman:
+
+1. Học một mảnh kiến thức nhỏ.
+2. Dừng lại.
+3. Chụp lại nguồn khi cần — screenshot, công thức, slide bài giảng, hoặc một đoạn trong PDF.
+4. Giải thích lại ý tưởng đó bằng lời của mình.
+5. Tự phát hiện chỗ nào mình vẫn chưa giải thích rõ được.
+6. Quay lại sửa, bổ sung, và nối với kiến thức đã học trước đó.
+
+Với các tài liệu nặng về toán, điều này thường dẫn đến việc bóc tách công thức, định lý, và các bước suy luận cho đến khi mình có thể giải thích được cơ chế chính.
+
+Nhưng tinh thần chính không chỉ là "bóc tách mọi công thức." Tinh thần chính là **học chủ động**: buộc bản thân phải dạy lại ý tưởng bằng ngôn ngữ của mình, thay vì chỉ đọc lướt qua rồi tưởng là đã hiểu.
+
+Bạn sẽ thấy rất nhiều khoảnh khắc kiểu:
+
+> *"Khoan — đoạn này thực ra đang nói gì?"*
+
+Đó là tinh thần của repo này: không phải ghi chú bóng bẩy, mà là quá trình suy nghĩ được ghi lại.
+
+---
+
+## Repo này chứng minh điều gì?
+
+Repo này nhằm chứng minh ba điều:
+
+1. Mình thật sự nghiêm túc với nền tảng khó.
+2. Mình có thể giải thích lại các khái niệm toán/AI bằng lời của mình.
+3. Mình đang xây cầu nối từ lý thuyết → implementation → sản phẩm.
+
+Mục tiêu dài hạn không chỉ là gom nhiều note.
+
+Mục tiêu là trở thành một engineer có thể hiểu AI system ở tầng sâu, tự triển khai các ý tưởng cốt lõi, và build sản phẩm AI có giá trị thật trên nền đó.
 
 ---
 
@@ -467,7 +511,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 179 Notes | 📸 243 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 182 Notes | 📸 246 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
@@ -483,7 +527,8 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [1.6 Information Theory](a0_bishop_prml/16_information_theory.md) — `26n / 32i` 
 - [Appendix D. Calculus of Variation](a0_bishop_prml/appendix_d_calculus_of_variation.md) — `5n / 7i` 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
-- [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i`
+- [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
+- [2.2 Multinomial Variables](a0_bishop_prml/22_multinomial_variables.md) — `3n / 3i`
 
 ### 📂 CS50X — Programming Foundations (📝 1259 Notes | 📸 1845 Screenshots)
 
