@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,253 notes` · `~16,656 screenshots` · `19 courses`** · work in progress
+**`~12,255 notes` · `~16,659 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -572,7 +572,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 182 Notes | 📸 246 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 184 Notes | 📸 249 Screenshots)
 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
@@ -589,7 +589,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [Appendix D. Calculus of Variation](a0_bishop_prml/appendix_d_calculus_of_variation.md) — `5n / 7i` 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
-- [2.2 Multinomial Variables](a0_bishop_prml/22_multinomial_variables.md) — `3n / 3i`
+- [2.2 Multinomial Variables](a0_bishop_prml/22_multinomial_variables.md) — `5n / 6i`
 
 ### 📂 CS50X — Programming Foundations (📝 1259 Notes | 📸 1845 Screenshots)
 
