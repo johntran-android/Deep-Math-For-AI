@@ -1,6 +1,6 @@
 # 2.2 Multinomial Variables
 
-📊 **Progress:** `5` Notes | `6` Screenshots
+📊 **Progress:** `7` Notes | `9` Screenshots
 
 ---
 <a id="node-197"></a>
@@ -421,6 +421,104 @@
 > ⇔ P(M1,M2,..MK =m1,m2,...mK), N!/(m1!m2!...mK!) (Πi=1:K μk^mk)
 >
 > là pmf của multinomial distribution
+
+<br>
+
+<a id="node-202"></a>
+
+<p align="center"><kbd><img src="assets/2a8a1285384f82dda2223f7c7986f57fe45164c9.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e493f5f3f9f2bfcd390ec18fff719e8bdcc7b3df.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là phần này sẽ nói về họ các prior distribution của Multinomial
+>
+> Ôn lại tí xíu, ta biết với Binomial thì conjugate prior là Beta, và điều này có
+> nghĩa là khi chọn beta làm prior, thì posterior (xây dựng bằng Bayes
+> theorem) sẽ cũng là Beta. Vậy thì ở trong phần trước ta đã biết pmf của
+> Multinomial:
+>
+> f(**m**|**μ**,N) = P_**μ**(M1,M2,..MK =m1,m2,...mK) = N!/(m1!m2!...mK!)
+> (Πi=1:K μk^mk)
+>
+> bỏ qua phần constant (normalizing constant) thì ta chỉ cần chú ý tới
+> (Πi=1:K μk^mk).
+>
+> Thế thì nhìn vào đó ta thấy để mà posterior có cùng dạng với prior thì
+> prior phải có dạng là tích của các lũy thừa của μ: Πk=1:K μk^(something).
+> Vì khi đó, khi nhân với cái cụm ở trên, để tạo ra kernel của posterior, thì
+> nó cũng sẽ có dạng Πk=1:K μk^(something). Đây là lí do gs Bishop nói
+> p(**μ**|**α**) ∝ Πk=1:K μk^(αk-1) với αk-1 chính là something, dĩ nhiên
+> **α** = (α1, α2,...αK)T là parameter của prior.
+>
+> Thế thì vì sao Σk μk = 1?, à thì là vì đây vẫn là do điều kiện valid của pdf
+> của multinomial thôi. Nên bây giờ do prior là distribution của **μ** tức, là
+> cũng là joint distribution của μ1,...μK
+>
+> Như vậy thì chỗ này mình cần hiểu thế này, giống như là ta có một joint
+> distribution của K random variable X1,X2,....XK với một đặc điểm là
+> X1+X2+... +XK = 1 vậy. Cái điều kiện này khiến cho mình gặp một thứ mà
+> trong các lớp Stat110, Casella chưa hề gặp qua, vì thường thì ta chỉ xét
+> joint của các randomvariable X1,...Xn iid, chứ chưa khi nào gặp ràng
+> buộc Σi Xi = 1. Và gs Bishop cho biết cái này gọi là một **simplex**.
+>
+> Thế thì đại khái là, cái distribution này, gọi là **Dirichlet**, thật ra chỉ là
+> **phiên bản mở rộng của Beta** **distribution**.
+>
+> Còn nhớ beta(α, β) có pdf: f(x|α, β) = C x^(α-1)(1-x)^(β-1) với C là
+> normalizing constant = beta(α, β) (hàm beta, được define là =
+> Γ(α+β)/Γ(α)Γ(b)), thì thật ra cũng có thể coi nó là Dirichlet với K=2:
+>
+> **X** = (X1,X2) ~ f(x1,x2|α,β) = [Γ(α+β)/Γ(α)Γ(b)] x1^(α-1) x2^(β-1) với x1
+> + x2 = 1
+>
+> Từ đó ta có pdf của **X** = (X1,..XK) ~ Dirichlet distribution f(x1,x2...
+> xK|α1,α2,...,αK)
+>
+> = [Γ(α1+...+αK)/ Γ(α1)...Γ(αK)] x1^(α1-1) x2^(α2-1) ...xK^(αK-1)
+>
+> = [Γ(Σk=1:K αk)/ Γ(α1)...Γ(αK)] Πk=1:K xk^(αk-1)
+>
+> = [Γ(α0)/ Γ(α1)...Γ(αK)] Πk=1:K xk^(αk-1)
+>
+> Và cũng qua đó ta có thể hiểu đại khái công thức có vụ -1 là vì đây là một
+> dạng mở rộng của beta.
+
+<br>
+
+<a id="node-203"></a>
+
+<p align="center"><kbd><img src="assets/e7265a7c69a03ae485988d5252cf2366a751d1ba.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì như đã nói, với việc dùng Dirichlet Dir(**α**) làm prior cho **μ**. Thì
+> posterior sẽ có kernel có dạng:
+>
+> π(**μ**|D) = f(D|**μ**) π(**μ**) / f(D) ∝ f(D|**μ**) π(**μ**)
+>
+> = N!/(m1!m2!...mK!) (Πk=1:K μk^mk) [Γ(α0)/ Γ(α1)...Γ(αK)] (Πk=1:K μk^(αk-1))
+>
+> = [N!/(m1!m2!...mK!)] [Γ(α0)/ Γ(α1)...Γ(αK)] (Πk=1:K μk^mk) (Πk=1:K
+> μk^(αk-1))
+>
+> ∝ Πk=1:K μk^αk+mk-1
+>
+> Và cái này lại có dạng kernel của một Dirichlet có tham số là (α1+m1, α2+m2,
+> ....), tức Dir(**α** + **m**) Và dĩ nhiên mình hiểu là tất cả các cụm constant
+> [N!/(m1!m2!...mK!)] [Γ(α0)/ Γ(α1)...Γ(αK)] / f(**μ**) sẽ làm thành normalizing
+> constant của distribution này, nên ta biết chắc nó phải
+>
+> = Γ(Σk αk+Σk mk)/Γ(α1+m1)...Γ(αK+mK)
+>
+> = Γ(α0+N)/Γ(α1+m1)...Γ(αK+mK)
+>
+> Hình 2.5 minh họa pdf của Dir K = 3 với các **α** khác nhau.
+>
+> Ta thấy nó chỉ qủa thật chỉ là dạng mở rộng của beta. Với **α** = (1,1,1) tương
+> ứng với beta(1,1) (cũng là uniform(0,1))
+>
+> Với α=(0.1, 0.1, 0.1) thì nó có dạng 3 đỉnh cao vút lên ở các đỉnh (giống như
+> beta(0.1, 0.1)
 
 <br>
 
