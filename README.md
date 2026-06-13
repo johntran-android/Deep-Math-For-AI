@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,278 notes` · `~16,686 screenshots` · `19 courses`** · work in progress
+**`~12,280 notes` · `~16,688 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -563,14 +563,14 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [10.1 Least-square problem](numerical_optimization/101_least_square_problem.md) — `2n / 2i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Numerical Optimization — SimpleMind Notes (📝 94 Notes | 📸 120 Screenshots)
+### 📂 Numerical Optimization — SimpleMind Notes (📝 96 Notes | 📸 122 Screenshots)
 
+- [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 10i` 
 - [8.2 Automatic Differentiation (*extremely Important For Ai)](numerical_optimization_sm/82_automatic_differentiation_extremely_important_for_ai.md) — `35n / 46i` 
-- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
-- [10.1 Least-square Problem](numerical_optimization_sm/101_least_square_problem.md) — `1n / 2i` 
-- [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
-- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
+- [10.1 Least-square Problem](numerical_optimization_sm/101_least_square_problem.md) — `3n / 4i` 
+- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i` 
+- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i`
 
 ### 📂 Bishop PRML — Pattern Recognition & ML (📝 207 Notes | 📸 276 Screenshots)
 
