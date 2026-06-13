@@ -1,6 +1,6 @@
 # Appendix C - Matrices
 
-📊 **Progress:** `13` Notes | `13` Screenshots
+📊 **Progress:** `19` Notes | `20` Screenshots
 
 ---
 <a id="node-208"></a>
@@ -549,11 +549,10 @@
 > equation: det (A - λI) = 0.
 >
 > Và về bản chất, ta lập luận như sau: Nếu λ, và u là trị riêng vector riêng của A
-> thì Au = λu ⇔ Au - λu = 0 ⇔ (A - λI)u = 0. Và dĩ nhiên ta chỉ xét u là vector
-> khác 0. Như vậy, (A - λI)u = 0 thể hiện rằng u chính là nullspace vector của A -
-> λI. Và điều này đồng nghĩa là matrix này không full-rank / singular và cũng
-> chính là sẽ tồn tại eigenvalue = 0 ⇨ det (A - λI) = 0. Do đó đây là điều kiện để
-> giải tìm λ.
+> thì Au = λu ⇔ Au - λu = 0 ⇔ (A - λI)u = 0. Và dĩ nhiên ta chỉ xét u là vector khác
+> 0. Như vậy, (A - λI)u = 0 thể hiện rằng u chính là nullspace vector của A - λI. Và
+> điều này đồng nghĩa là matrix này không full-rank / singular và cũng chính là sẽ
+> tồn tại eigenvalue = 0 ⇨ det (A - λI) = 0. Do đó đây là điều kiện để giải tìm λ.
 >
 > Còn vì sao lại gọi det (A - λI) là đa thức bậc M của λi?
 >
@@ -573,9 +572,284 @@
 >
 > Cuối cùng, mình cũng đã biết rank matrix chính là số eigenvalue khác 0. Vì
 > sao? Vì một eigenvalue bằng 0 sẽ ứng với một eigenvector (khác 0) bị biến
-> thành 0 bởi matrix A: Au = 0, cũng chính là một nullspace vector. Nên nếu có
-> k eigenvalue = 0, thì ta sẽ có k vector khác 0, tạo thành k basis của nullspace
-> thì rank = n - k cũng chính là số eigenvector khác 0 còn lại.
+> thành 0 bởi matrix A: Au = 0, cũng chính là một nullspace vector. Nên nếu có k
+> eigenvalue = 0, thì ta sẽ có k vector khác 0, tạo thành k basis của nullspace thì
+> rank = n - k cũng chính là số eigenvector khác 0 còn lại.
+>
+> * LƯU Ý TỬ THẦN: Mệnh đề "Rank = Số eigenvalue khác 0" CHỈ luôn luôn
+> đúng với Ma trận có thể chéo hóa (Diagonalizable Matrices), đặc biệt là Ma trận
+> Đối xứng (Symmetric Matrices) - thứ xuất hiện nhan nhản trong ML.
+>
+> * Đối với ma trận bất kỳ, nếu nó bị "khuyết" (Defective), số lượng eigenvector
+> sinh ra từ λ=0 sẽ bị hụt so với số lượng nghiệm đại số của λ=0, dẫn đến công
+> thức tính Rank qua số nghiệm λ≠0 bị sai!
+
+<br>
+
+<a id="node-221"></a>
+
+<p align="center"><kbd><img src="assets/f4b26972684e77123f340e66a1c5ab4e9b7513b8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo, tác giả nói về việc ta sẽ quan tâm chủ yếu tới matrix đối xứng vì rất
+> nhiều matrix xuất hiện trong machine learning là matrix đối xứng.
+>
+> Thế thì đầu tiên nếu A đối xứng thì Ainv cũng đối xứng. Cái này dễ chứng minh:
+>
+> AAinv = I ⇔ (AAinv)T = IT ⇔ AinvTAT = I ⇔ AinvT A = AinvA (thì IT = I, AT=A, và
+> AinvA = I) → AinvT = Ainv ⇨ Ainv đối xứng.
+>
+> Sau đó, gs chứng minh nhanh lại một tính chất đó là, với matrix đối xứng thì
+> eigenvalue sẽ là số thực. Cũng không khó hiểu nhờ đã học qua MIT 18.06
+>
+> Gọi λ, u là eigenvalue và eigenvector của A: Au = λu
+>
+> Có lẽ nên recall lại chút kiến thức conjugate: Đại khái là một số phức sẽ có
+> dạng a + ib với a là phần thực, b là phần ảo (imaginary). Thì khi đó số phức liên
+> hợp của nó sẽ là a - ib. Để rồi nhân chúng với nhau ta sẽ có (a +ib)(a - ib) = a^2
+> \-aib + aib - i^2 b^2 = a^2 - b^2, và kết quả là số thực, không còn là số phức
+> nữa.
+>
+> Như vậy nếu u là vector phức, và gọi u* là vector complex conjugate của nó, tức
+> là mọi phần tử của u* đều là complex conjugate của u. Khi tích vô hướng của
+> chúng, ta sẽ có uTu* = Σi ui*u*i và đây sẽ là một tổng các số thực, nên là số
+> thực.
+>
+> Thế thì Au = λu, nhân bên trái hai vế với u*T: u*TAu = u*Tλu ⇔ u*TAu = λ u*Tu
+> (1)
+>
+> Tiếp, với Au = λu thì (Au)* = (λu)* (vì Au là vector, λu cũng là vector, mà hai
+> thằng này bằng nhau thì complex conjugate của chúng đương nhiên bằng nhau.
+>
+> Tiếp, với complex number thì nó có tính chất: (x+y)* = x* + y*, và (xy)* = x* y*
+>
+> Nên (Au)* = (λu)* ⇔ A*u* = λ*u*.
+>
+> Nhân hai vế với uT: A*u* = λ*u* ⇔ uTA*u* = uT λ*u*
+>
+> ⇔ uTA*u* = λ* uT u*
+>
+> ⇔ uTAu* = λ* uT u* (2) (Vì với matrix A, ta sẽ luôn dùng matrix số thực, nên A* =
+> A)
+>
+> Tới đây (1) ta có u*TAu = λ u*Tu và (2) ta có uTAu* = λ* uT u*
+>
+> Vế trái u*TAu và uTAu* là giống nhau, vì là scalar nên bằng tranpose của chính
+> nó.
+>
+> Suy ra vế phải bằng nhau λ u*Tu = λ* uT u* ⇨ λ = λ*. Và khi một số bằng số
+> phức liên hợp của nó thì thì nó chính là số thực.
+>
+> \----
+>
+> Ngoài ra thì như mình còn nhớ trong MIT 1806 đã học với matrix đối xứng thì ta
+> luôn có đủ n eigenvector độc lập, để có thể tách thành Q Λ QT, với Q là các
+> orthogonal eigenvector, Λ là diagonal matrix các eigenvalue.
+
+<br>
+
+<a id="node-222"></a>
+
+<p align="center"><kbd><img src="assets/3c485a73d76c7389398a76d0ad0a93920058475e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo chính là gs nhắc lại cái điều mình vừa nói ở note trước: Luôn
+> có thể chọn / tồn tại một bộ eigenvector orthogonal. Chứng minh nhanh:
+>
+> Gọi λi, λj (λi khác λj) và ui, uj là eigenvalue / eigenvector của A: A ui = λi
+> ui, A uj = λj uj
+>
+> A ui = λi ui ⇔ ujT A ui = ujT λi ui (nhân hai vế cho ujT (uj tranpose)
+>
+> ⇔ ujT A ui = λi ujT ui
+>
+> ⇔ (ujT A ui)T = λi ujT ui (do vế trái là scalar, với scalar a thì a = aT)
+>
+> ⇔ uiT AT uj = λi ujT ui
+>
+> ⇔ uiT A uj = λi ujT ui (do A đối xứng nên A = AT)
+>
+> Tiếp từ A uj = λj uj ⇔ uiT A uj = uiT λj uj
+>
+> ⇔ uiT A uj = λj uiT uj
+>
+> Trừ vế theo vế (1) và (2): 0 = λi ujT ui - λj uiT uj ⇔ 0 = λi ujT ui - λj ujT ui
+> (do uiTuj = ujTui, cũng là do chúng là scalar)
+>
+> ⇔ 0 = (λi - λj) uiTuj.
+>
+> Tới đây vì λi khác λj nên suy ra uiTuj = 0 ⇨ chúng orthogonal (vuông
+> góc). Và vì ui uj tùy ý, nên mọi có thể kết luận là tồn tại bộ eigenvector
+> vuông góc nhau.
+>
+> Cuối cùng, một tính chất cũng dễ hiểu là nếu ui uj là eigenvector tương
+> ứng với cùng một eigenvalue thì mọi linear combination của chúng cũng
+> là eigenvector: dễ thấy thôi:
+>
+> Scalar hai vế của A ui = λ ui, A uj = λ uj với α, và β bất kì rồi cộng vế
+> theo vế ta có:
+>
+> A α ui + A β uj = α λ ui + β λ uj
+>
+> ⇔ A (α ui + β uj) = λ (α ui + β uj)
+>
+> kết quả này suy ra α ui + β uj cũng là eigenvector với cùng eigenvalue λ
+
+<br>
+
+<a id="node-223"></a>
+
+<p align="center"><kbd><img src="assets/83ac945568e9f17b6c914647f4edaafd4096aa33.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như đã biết từ Mục 18.06, khi có một tập hợp vector trực giao (tức là các
+> vector vuông góc với nhau) và chúng được chuẩn hóa sao cho mỗi vector
+> có chiều dài bằng 1, ta sẽ có một tập hợp vector trực chuẩn
+> (orthonormal). Tuy nhiên, cần lưu ý một điểm quan trọng đã được nhắc
+> đến trong lớp học. Giáo sư Gilbert Strang luôn nhấn mạnh rằng nếu các
+> vector đó được sắp xếp thành các cột của một ma trận, ma trận đó không
+> thể được gọi là ma trận trực giao (orthogonal matrix) trừ khi ta có đủ một
+> bộ N vector trực giao. Điều này có nghĩa là ma trận đó phải là ma trận
+> vuông. Nếu ma trận chỉ có một tập hợp các cột trực chuẩn hoặc trực giao
+> nhưng không đủ số lượng để tạo thành ma trận vuông (tức là số cột ít
+> hơn số hàng), thì nó vẫn chưa được gọi là một ma trận trực giao.
+>
+> Một tập hợp các vector vuông góc với nhau được gọi là tập hợp vector
+> trực giao (orthogonal set of vector). Nếu được chuẩn hóa, nó được gọi là
+> tập hợp vector trực chuẩn (orthonormal set of vector). Tuy nhiên, khi các
+> vector này được đưa vào làm cột của một ma trận, để ma trận đó được
+> gọi là ma trận trực giao, số cột phải đủ, nghĩa là ma trận phải có kích
+> thước vuông. Một điểm khác là nếu có M giá trị riêng (eigenvalue) và các
+> vector riêng tương ứng với chúng trực giao, trong bối cảnh xét một ma
+> trận M x M, điều này ngụ ý rằng ta đã có đủ một cơ sở (basis) cho không
+> gian R^M. Nghĩa là, tập hợp các vector đó tạo thành một bộ cơ sở. Do đó,
+> tập hợp này sẽ trải rộng toàn bộ không gian R^M. Mọi vector trong không
+> gian R^M, hay nói cách khác, mọi vector M chiều, đều có thể được biểu
+> diễn dưới dạng tổ hợp tuyến tính của cơ sở này.
+>
+> Ngoài ra một ý nữa đó là, với matrix orthogonal matrix U thì các rows của
+> chúng cũng orthogonal, chứng minh cũng dễ:
+>
+> UTU = I ⇨ UT = Uinv. ⇨ UUT = UUinv = I. Vậy U UT = I ⇨ các row
+> orthogonal nhau.
+>
+> Cuối cùng, vì UTU = UUT = I ⇨ det (UT U) = det(I) = 1 ⇔ det(UT) det(U) =
+> 1 ⇔ [det(U)]^2 = 1 (vì det(U) = det(UT)) ⇨ det(U) = +/- 1.
+
+<br>
+
+<a id="node-224"></a>
+
+<p align="center"><kbd><img src="assets/0d8ccd5c3551367f7ebaa2950752a616046444e8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, tiếp, C.38 là sao?
+>
+> Gọi u1,..un là các eigenvector của A ứng với eigenvalue λ1, λ2,...thì
+> ta
+>
+> có: Aui = λi ui, i=1,2...n
+>
+> Thế thì bằng cách nhớ lại góc nhìn nhân matrix với matrix thứ 3
+> trong
+>
+> MIT 1806, ta nhớ AB sẽ có bản chất là: cột i của AB là linear
+>
+> combination các cột của A bởi bộ hệ số là cột i của B. Như vậy bằng
+>
+> cách đặt U là matrix có các cột u1,...un, thì và B là matrix có các cột
+> là
+>
+> λ1u1,...λnun. Ta sẽ thấy AU = B chính là cách thể hiện compact của
+> n
+>
+> equation trên. Và B thì có thể tách thành Λ U với Λ là diagonal matrix
+>
+> diag(λ1, λ2,...). Khi đó ta sẽ có AU = UΛ. Và vì U này là orthogonal
+>
+> matrix (dĩ nhiên là full rank) nên A = UΛ Uinv = U Λ UT, hay trong
+> MIT
+>
+> 1806 gs Strang dùng Q: A = Q Λ QT.
+>
+> \-----
+>
+> Ý tiếp theo là nói về vụ transform bởi orthogonal matrix thì giữ
+> nguyên
+>
+> length và angle. nói cách khác nó là phép xoay.
+>
+> Chứng minh dễ ẹt: Ta xét bình phương của norm Ux, ||Ux||^2 = =
+> (Ux)T(Ux) = xTUTUx = xTIx = xTx = ||x||^2. Vậy suy ra ||Ux|| = ||x||.
+>
+> Xét cosine góc của Ux và Uy kí hiệu cos(Ux, Uy).
+>
+> Ta biết công thức uTv = ||u|| ||v|| cos(u,v) ⇨ cos(u,v) = uTv / (||u||
+> ||v||)
+>
+> ⇨ cos(Ux, Uy) = (Ux)T(Uy) / ||Ux|| ||Uy||
+>
+> = xTUTUy / ||x|| ||y|| (dùng kết quả trên: ||Ux|| = ||x||, ||Uy|| = y)
+>
+> = xTy / ||x|| ||y|| = cos(x, y)
+>
+> Vậy qua phép biến đổi U, giữ nguyên góc (x,y)
+
+<br>
+
+<a id="node-225"></a>
+
+<p align="center"><kbd><img src="assets/ed7b0d15d7e95e1077acd51d0afbbbc3e816ff1a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3fcfafc62aa531e7aca31b909b0f1008d6771b6d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, như note trước ta đã biết A = U Λ UT, và cũng là U Λ Uinv. Nhân hai vế
+> cho UT và U: UT A U = Λ. thì cái biểu thức này được gọi là matrix A bị chéo
+> hóa (diagonalized) bởi matrix U.
+>
+> Rồi từ A = U Λ UT, inverse hai vế ta có Ainv = U Λinv UT (cái này dùng các
+> identity như (AB)inv = Binv Ainv là ra, ko có gì khó)
+>
+> Còn cái C.45 / 46?
+>
+> Để hiểu thì chỉ cần góc nhìn nhân matrix với matrix trong MIT 1806 đã học:
+>
+> A = U Λ UT
+>
+> U Λ là gì? Theo góc nhìn thứ hai nhân hai matrix, thì cột j của U Λ chính là
+> linear combination các cột của U với hệ số là cột j của Λ. Vì Λ là diagonal,
+> nên cột j chỉ có phần tử thứ j là khác 0, chính là λj. Nên cột j của U Λ = λj x
+> cột j của U = λj uj
+>
+> Sau đó nhân U Λ với UT: Ta sẽ nhìn theo góc nhìn thứ 4: Tổng j=1:n các
+> rank 1 matrix tạo bởi outer product của một cột j của (U Λ) (chính là λj uj) và
+> hàng j của UT (chính là ujT). Do đó U Λ UT = Σj=1:n λj ujujT.
+>
+> Tương tự vậy với C.46. Chỉ chú ý là Λinv, sẽ có các component đường chéo
+> = nghịch đảo của component đường chéo của Λ. Vì sao?
+>
+> Là vì Λ Λinv = Λinv Λ = I. Gọi α1, α2,.. là diagonal entries của Λinv thì
+>
+> Λ Λinv = Λinv Λ = I ⇔ λi αi = 1, i =1,2... ⇨ αi = 1 / λi
+
+<br>
+
+<a id="node-226"></a>
+
+<p align="center"><kbd><img src="assets/0d828438840eb7ef935ff96ad63d96fa7d8d7b00.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng, một ma trận đối xứng được gọi là ma trận xác định dương (positive
+> definite) nếu dạng toàn phương của nó luôn dương với mọi vector khác không
+> và chỉ bằng không khi vector W bằng không. Trong lớp MIT 18.06, chúng ta đã
+> biết rằng một tính chất của ma trận xác định dương là tất cả các giá trị riêng
+> của nó đều dương.
+>
+> Ngược lại, nếu dạng toàn phương chỉ lớn hơn hoặc bằng không với mọi vector
+> W (nghĩa là vẫn tồn tại vector W khác không làm cho dạng toàn phương bằng
+> không), thì ma trận đó được gọi là ma trận xác định bán dương (positive
+> semi-definite). Trong trường hợp này, các giá trị riêng có thể bằng không.
 
 <br>
 

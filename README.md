@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,272 notes` · `~16,679 screenshots` · `19 courses`** · work in progress
+**`~12,278 notes` · `~16,686 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -572,7 +572,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 201 Notes | 📸 269 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 207 Notes | 📸 276 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -591,7 +591,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [1.5 Decision Theory](a0_bishop_prml/15_decision_theory.md) — `31n / 41i` 
 - [1.6 Information Theory](a0_bishop_prml/16_information_theory.md) — `26n / 32i` 
 - [Appendix D. Calculus of Variation](a0_bishop_prml/appendix_d_calculus_of_variation.md) — `5n / 7i` 
-- [Appendix C - Matrices](a0_bishop_prml/appendix_c_matrices.md) — `13n / 13i`
+- [Appendix C - Matrices](a0_bishop_prml/appendix_c_matrices.md) — `19n / 20i`
 
 ### 📂 CS50X — Programming Foundations (📝 1259 Notes | 📸 1845 Screenshots)
 
