@@ -11,7 +11,7 @@
 
 > [!NOTE]
 > gs nói về một ví dụ: tính số cách **split một team 10 người** thành
-> **team 6** và **team 4**.
+> \**team 6** và **team 4**.
 >
 > Thì câu trả lời đơn giản là **(10 choose 4)**:  Ta có thể tính bằng cách
 > Chia việc đếm thành 2 bước: **Bước 1: ĐẾM SỐ CÁCH CHỌN BỘ 4 NGƯỜI** từ 10 người: Có (10
@@ -108,7 +108,7 @@
 > Đầu tiên là extreme case: **k = 0**. Theo công thức này (n - 1 choose 0) = 1
 >
 > Gs cho rằng ta nên hiểu tại sao (n choose 0) = 1 theo nghĩa là: có n item, thì **để chọn 0 cái** thì dù n là bao nhiêu cũng **chỉ có 1 cách chọn**: ĐÓ LÀ
-> **KHÔNG LÀM GÌ**.
+> \**KHÔNG LÀM GÌ**.
 >
 > Vậy **với simple case** này thì **công thức trên đúng**.
 >
@@ -515,7 +515,7 @@
 > thay vì chứng minh "bằng tính toán".
 >
 > Và ví dụ hồi nãy khi ta dùng lập luận rằng, giả sử **có n item khác nhau**,
-> **mỗi một cách chọn k item** thì **cũng là một cách chọn n-k item còn lại**.
+> \**mỗi một cách chọn k item** thì **cũng là một cách chọn n-k item còn lại**.
 > Nên số cách chọn k item từ n items cũng bằng số cách chọn bộ n-k item
 > từ n items. Do đó (n choose k) = (n choose n-k)
 >
@@ -601,7 +601,7 @@
 > Ví dụ thứ 3 là công thức có tên **Vandermonde**. Được dùng nhiều trong xác
 > suất và các lĩnh vực khác.
 >
-> **(m+n choose k) = Tổng j=0:k (m choose j) * (n choose k-j)**
+> \**(m+n choose k) = Tổng j=0:k (m choose j) * (n choose k-j)**
 >
 > Và ông cho rằng nếu mà phải chứng minh nó bằng tính toán thì sẽ rất rắc rối
 
@@ -682,7 +682,7 @@
 > Vậy thì P(rỗng) ám chỉ **xác suất của "event rỗng"**, mà theo định nghĩa vừa rồi,
 > đó là khi **S_0 thuộc subset rỗng**, mà điều này **đương nhiên là không thể xảy
 > ra vì đã nói subset là rỗng rồi**, thì **dù mọi possible outcome S_0 đều không**
-> **nằm trong subset rỗng.**
+> \**nằm trong subset rỗng.**
 >
 > Do đó **event rỗng không thể xảy ra -> P(rỗng) = 0**
 >

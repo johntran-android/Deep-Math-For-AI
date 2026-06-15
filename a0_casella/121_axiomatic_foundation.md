@@ -41,7 +41,7 @@
 > A1c, A2c**... Và theo ý (c) thì nó **cũng phải chứa A1c** ∪ **A2c ..**∪ **Anc**
 >
 > Và như vậy thì **lại** **theo (b)** thì nó **phải chứa (A1c** ∪ **A2c ..**∪ **Anc)c** và theo
-> **De Morgan theorem** thì cái này chính là **(A1 ∩ A2..∩ An)** và như vậy thì
+> \**De Morgan theorem** thì cái này chính là **(A1 ∩ A2..∩ An)** và như vậy thì
 > hệ quả là **nếu chứa các subset thì phải chứa luôn intersection** (và union
 > theo điều c)
 >
@@ -124,7 +124,7 @@
 >
 > P sao cho: **P({H}) = P({T})** (1)
 >
-> **{H} + {T} = S**, theo axiom 2 P(S) = 1  ta có **P({H} + {T}) = 1** và theo axiom 3
+> \**{H} + {T} = S**, theo axiom 2 P(S) = 1  ta có **P({H} + {T}) = 1** và theo axiom 3
 > ta có **P({H} U {S}) =** **P({H}) + P({T}) = 1** 
 >
 > ⇨ P({H}) = P({T}) = 1/2
@@ -155,9 +155,9 @@
 >
 > Thế thì **một cách đó là**:
 >
-> **Probability function P** sao cho:
+> \**Probability function P** sao cho:
 >
-> **P(A) = ∑ {si** ∈ **A} pi**,
+> \**P(A) = ∑ {si** ∈ **A} pi**,
 >
 > Với **s1, s2...sn** ∈ **S**, với các con số tương ứng (tự hiểu là **xác suất của các
 > possible outcome si**) **ko âm,** có **tổng bằng 1**: **p1, p2. ..pn**.
@@ -173,14 +173,14 @@
 > Axiom 2: **P(**∅**)** theo định nghĩa function này thì sẽ là **∑ pi với si** ∈ ∅, mà **tập
 > rỗng thì chả chứa cái s nào** nên đây là **tổng của 0 hạng tử, nên bằng 0**
 >
-> **P(S) = ∑ pi**, si ∈ S , dựa trên điều đặt ra ban đầu trong định nghĩa function là
+> \**P(S) = ∑ pi**, si ∈ S , dựa trên điều đặt ra ban đầu trong định nghĩa function là
 > p1+p2+...pn=1 nên dễ thấy **P(S) = 1**
 >
 > Axiom 3: Giả sử có **A1, A2, ...An disjoint**:
 >
-> **P(**∪**i=1:n Ai)** thì theo định nghĩa probability function trên nó sẽ bằng:
+> \**P(**∪**i=1:n Ai)** thì theo định nghĩa probability function trên nó sẽ bằng:
 >
-> **∑ pi,** với **si** ∈ **(**∪**i=1:n Ai)**, thế thì dĩ nhiên nó sẽ bằng
+> \**∑ pi,** với **si** ∈ **(**∪**i=1:n Ai)**, thế thì dĩ nhiên nó sẽ bằng
 >
 > ∑ {si ∈ A1} pi + ∑ {si ∈ A2} pi + ...∑ {si ∈ An} pi
 >

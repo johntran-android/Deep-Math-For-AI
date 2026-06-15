@@ -25,7 +25,7 @@
 > Cái hiện tượng trên dc gọi là **internal covariate shift,** thì BN sẽ cố
 > gắng khắc phục bằng cách **normalizing input của mỗi layer** Phương pháp này sẽ đại khái là **tích hợp quá trình normalization
 > thành một phần của model architecture**, và nó sẽ thực hiện
-> **normalization với từng training mini batch.** Kết quả cho thấy nó giúp c**onverge nhanh hơn** vì **có thể dùng
+> \**normalization với từng training mini batch.** Kết quả cho thấy nó giúp c**onverge nhanh hơn** vì **có thể dùng
 > lr lớn hơn và ít cần quan tâm về weight initialization hơn mà không
 > sợ bị exploding/vanishing gradient** như đã biết.
 >
@@ -104,7 +104,7 @@
 > đó rồi thì phải học lại từ đầu.
 >
 > Do đó nếu có thể cố định distribution output của layer 1 sẽ
-> **giúp việc học hiệu quả hơn**
+> \**giúp việc học hiệu quả hơn**
 
 <br>
 
@@ -146,7 +146,7 @@
 > [!NOTE]
 > đoạn này chưa hiểu cụ thể nhưng đại ý là nếu
 > thực hiện whitening output theo cách này thì nó lại
-> **hủy đi tác dụng của gradient descent** khiến
+> \**hủy đi tác dụng của gradient descent** khiến
 > output và loss không đổi.
 >
 > Nôm na là **g.d giúp thay đổi params**, nhưng **bước
@@ -215,7 +215,7 @@
 
 > [!NOTE]
 > Khúc dưới họ nói về việc **tính toán các statistic** cho quá trình
-> **normalization là per-dimension thay vì joint covariance,
+> \**normalization là per-dimension thay vì joint covariance,
 > Chưa hiểu lắm**
 
 <br>
@@ -323,7 +323,7 @@
 > đại khái là, tóm lại để thực thi BN, ta sẽ 'làm' với các batch of
 > activation. Điều này yêu cầu là **phải train với full batch** hoặc
 > SGD (hoặc các cái khác như AdaGrad, Momentum..) nhưng
-> **size của mini batch > 1.**
+> \**size của mini batch > 1.**
 >
 > Khi **training thì dùng running statistic** (trong paper dùng từ
 > moving average) của mini batch.
@@ -332,7 +332,7 @@
 > Var[x] là population statistic** tức là mean và variance tính bởi full
 > training set.
 >
-> *Tuy nhiên trong **assignment** và cả trong DLSpec, cũng đều
+> \*Tuy nhiên trong **assignment** và cả trong DLSpec, cũng đều
 > cho rằng lúc **test time dùng running average, và trong pytorch7** cũng làm vậy
 >
 > Vì lúc này chỉ dùng **'running' statistic là mean và variance**

@@ -228,7 +228,7 @@
 > [!NOTE]
 > So với AlexNet, thì VGG sâu hơn như đã nói, với 16 layer
 > (thì gọi là VGG16) tới 19 layer (VGG19)
-> *nói 16 layer thì chỉ tính các conv và pool layer thôi.không tính input, fc layer
+> \*nói 16 layer thì chỉ tính các conv và pool layer thôi.không tính input, fc layer
 >
 > cái thứ hai đó là nó dùng filter size nhỏ là 3x3, stride 1, pad1, và pooling thì
 > chỉ 2x2, stride 2.

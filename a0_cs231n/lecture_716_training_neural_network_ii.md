@@ -97,14 +97,14 @@
 <p align="center"><kbd><img src="assets/539820ae81f3ea880c42481bece21340900455c9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Learning rate là hp quan trọng nhất**, rồi có thể đến **regularization strength**, 
-> **model size**.
+> \**Learning rate là hp quan trọng nhất**, rồi có thể đến **regularization strength**, 
+> \**model size**.
 >
 > Nên ổng thường chỉ thử 3-4 hp một lúc. Trong đó learning rate là quan trọng
 > nhất
 >
 > Có câu hỏi là có khi nào (hoặc có thường xuyên xảy ra không) khi mình 
-> **thay đổi giá trị của hyper-parameter này mà lại dẫn đến thay đổi giá
+> \**thay đổi giá trị của hyper-parameter này mà lại dẫn đến thay đổi giá
 > trị tối ưu của h.param khác**?
 >
 > \-> Cũng có đôi khi xảy ra như vậy. Nhưng với learning rate thì nếu ta đã **chọn
@@ -154,7 +154,7 @@
 > [!NOTE]
 > đại khái là nhắc lại về quá trình training ml model là bài toán **optimization**
 > với **gradient descent** technique trong đó loss function value cho ta biết
-> **giá trị hiện tại của parameter "tốt cỡ nào"** và ta sẽ **lặp đi lặp lại quá trình
+> \**giá trị hiện tại của parameter "tốt cỡ nào"** và ta sẽ **lặp đi lặp lại quá trình
 > update parameters theo hướng ngược với gradient** để hi vọng loss
 > function có thể converge về global minimum
 >
@@ -254,7 +254,7 @@
 
 > [!NOTE]
 > Đại khái là giải pháp rất đơn giản nhưng tỏ ra rất hiệu quả đó là SGD với
-> **momentum**. Ý tưởng là **thay vì dùng gradient** thì dùng **velocity** (hiểu nôm na
+> \**momentum**. Ý tưởng là **thay vì dùng gradient** thì dùng **velocity** (hiểu nôm na
 > là **quán tính của gradient**) để update.
 >
 > Velocity sẽ được **ini với 0**
@@ -289,7 +289,7 @@
 <p align="center"><kbd><img src="assets/e564219ea1f2a78ffd7895e5867e010813230842.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Nesterov momentum** hơi khác chút xíu. Với SGM momentum bình
+> \**Nesterov momentum** hơi khác chút xíu. Với SGM momentum bình
 > thường thì đại khái giống như ta đi **combine hai hướng (velocity +
 > gradient) lại** và **đi theo hướng đó**.
 >
@@ -405,7 +405,7 @@
 > Nên ta nhìn chung là muốn converge vào một **minima có tính chất flat** giống như
 > một thung lũng phẳng nơi mà kiểu như là các giá trị params dù có thay đổi chút 
 > xíu cũng vẫn có loss nhỏ chứ không phải sensitive như cái vực sâu kia. Vì khi đó
-> **khả năng generalization** sẽ tốt hơn.
+> \**khả năng generalization** sẽ tốt hơn.
 >
 > Thành ra cái này thì **SGD momentum** giống như là **feature** thay vì **bug** khi nó
 > giúp bỏ qua (skip over) những cái "very sharp minima" này
@@ -486,7 +486,7 @@
 > ### Running Sum of Squared Gradients
 >
 > AdaGrad maintains a **cumulative sum of the squares of the gradients for each parameter**. This sum represents the
-> **historical magnitude of the parameter updates** and serves as a basis for **adjusting the learning rate**. Unlike methods
+> \**historical magnitude of the parameter updates** and serves as a basis for **adjusting the learning rate**. Unlike methods
 > that use a momentum (velocity) term to **smooth out updates**, AdaGrad focuses on **scaling the updates based on the
 > past gradients' squared magnitudes**.
 >
@@ -494,7 +494,7 @@
 >
 > By continually **adding the squared gradients** to this cumulative sum (referred to as the "**grad squared term**"),
 > AdaGrad dynamically **adjusts the learning rate for each parameter**. When making parameter updates, the algorithm
-> **divides the gradient by the square root of this accumulated term**, effectively scaling the learning rate.
+> \**divides the gradient by the square root of this accumulated term**, effectively scaling the learning rate.
 >
 > ### Scaling Effect in High Condition Numbers
 >
@@ -502,10 +502,10 @@
 > method**. A high condition number indicates a **large disparity** in the **scaling of the problem's dimensions,** which can
 > make **optimization challenging** due to the **vastly different scales at which parameters** need to be updated.
 >
-> **AdaGrad's scaling mechanism** addresses this issue by:
+> \**AdaGrad's scaling mechanism** addresses this issue by:
 >
 > \- ****Accelerating** Movement in **"Slow" Dimensions****: For dimensions with **consistently small gradients**, the
-> **accumulated squared gradient** sum remains relatively low, resulting in less aggressive scaling down of the learning
+> \**accumulated squared gradient** sum remains relatively low, resulting in less aggressive scaling down of the learning
 > rate. This allows for faster movement along these dimensions, helping to overcome areas of slow progress due to
 > small gradients.
 >
@@ -559,7 +559,7 @@
 > đối với **average weight decay** của gradient ^ 2 với  thay vì gradient^2.
 >
 > Cụ thể là nó sẽ **giảm grad_square với decay_rate** (tương tự friction
-> **rho**, của sgd momentum), combine nó với **bình phương gradient nhân
+> \**rho**, của sgd momentum), combine nó với **bình phương gradient nhân
 > với (1-decay_rate)** để tạo thành **grad_square** dùng grad_square để
 > scale learning rate như adagrad.
 >
@@ -742,7 +742,7 @@
 > (approximate) function như một linear function**.
 >
 > Hay nói cách khác, việc dùng đạo hàm cấp 1 của function f(x) tại x chính là ta
-> **đang "coi như" function f(x) xấp xỉ một linear function** (dù thật sự không phải
+> \**đang "coi như" function f(x) xấp xỉ một linear function** (dù thật sự không phải
 > vậy, nó là phi tuyến, nó có độ cong - curvature). Hình ảnh này đồng nghĩa **ta
 > đang "cho rằng" (một cách bỏ qua sự chính xác) function f chính là đường tiếp
 > tuyến tại x** (đường màu cam tạm gọi là hàm f').
@@ -756,7 +756,7 @@
 > cũ trở nên thiếu chính xác nên phải ước lượng lại.
 >
 > Chính vì điều này mà phải có **learning rate để khống chế "step size"** Ý thứ hai muốn nói khi nhắc tới **Taylor series** là cách ta có thể ước chừng
-> **approximation giá trị của một function f(x) gần một điểm a nào đó** bằng cách
+> \**approximation giá trị của một function f(x) gần một điểm a nào đó** bằng cách
 > dùng **derivative của function tại a.** Theo đó nôm na là ta có thể dùng thêm đạo
 > hàm cấp 2,3,...của f(.) tại a, để approximate chính xác hơn hàm f, thay vì chỉ "coi"
 > nó như linear với việc chỉ dùng gradient (cũng là đạo hàm cấp 1, first order
@@ -781,7 +781,7 @@
 >
 > Do đó, nôm na là ta **có thể cải thiện thêm**, bằng cách **đưa thêm 2-nd order
 > approximation** vào, cụ thể thì ta sẽ dùng **cả gradient** (là đạo hàm cấp 1) và
-> **Hessian** (là đạo hàm cấp 2) để **approximate loss function như một quadratic
+> \**Hessian** (là đạo hàm cấp 2) để **approximate loss function như một quadratic
 > function** (dùng đạo hàm cấp 1 thì chỉ ước lượng như linear function)
 >
 > Từ đó ta có thể cải thiện thêm quá trình optimization. Hiểu nôm na là với việc
@@ -850,7 +850,7 @@
 > [!NOTE]
 > Lướt sơ qua L-BFGS thuộc loại này, tuy nhiên nó có những nhược điểm
 > Khi **không hiệu quả khi training với stochastic GD** và cũng có xu hướng
-> **không work tốt với non-convex problem**
+> \**không work tốt với non-convex problem**
 
 <br>
 
@@ -875,7 +875,7 @@
 > đại khái là nhắc lại rằng dù các **optimization algorithm cải tiến** vừa nói giúp
 > training **converge tốt hơn**, từ đó **tăng training performance** nhưng mục tiêu
 > của ta khi train model là **khả năng generalize tốt,** cụ thể hóa bằng việc
-> **khoảng cách giữa train và validation accuracy phải nhỏ**
+> \**khoảng cách giữa train và validation accuracy phải nhỏ**
 
 <br>
 
@@ -910,7 +910,7 @@
 >
 > Một phương pháp nữa là **training với lr lúc cao lúc thấp trong một learning
 > rate schedule hơi dị** như vầy đại khái được cho rằng giúp model
-> **converge về nhiều vùng khác nhau** và khi dùng tất cả các snapshot này
+> \**converge về nhiều vùng khác nhau** và khi dùng tất cả các snapshot này
 > với ensemble method thì ta sẽ giúp cải thiện performance hơn nữa
 
 <br>
@@ -932,7 +932,7 @@
 > training performance và validation performance như thế nào?
 >
 > Câu trả lời đó là **nếu có khoảng cách lớn** giữa chúng thì đó là dấu hiệu của
-> **overfiting**. Tuy nhiên nếu **không có khoảng cách nào thì chưa chắc đã
+> \**overfiting**. Tuy nhiên nếu **không có khoảng cách nào thì chưa chắc đã
 > tố**t. Cái chúng ta quan tâm đó l**à performance của model trên validation**
 > set đạt mức nào. Nên n**ếu không có "gap" có thể có nghĩa là ta có thể đạt
 > được performance tốt hơn nữa bằng cách cho nó overfit thêm một chút**
@@ -952,7 +952,7 @@
 > [!NOTE]
 > đại ý là có một trick nữa trong đó thay vì dùng giá trị param,
 > quá trình training ta sẽ dùng một bộ giá trị tính toán theo cách
-> **"moving average"** (e.g exponential averaging decay) của
+> \**"moving average"** (e.g exponential averaging decay) của
 > params và dùng nó khi test. Đây gọi là phương pháp **Polyak
 > averaging**, tuy vậy cái này không phổ biến lắm
 
@@ -964,7 +964,7 @@
 
 > [!NOTE]
 > đại ý là dù **ensemble method giúp giảm overfit**, nhưng liệu có cách nào để
-> **giảm overfit trên mỗi single model hay không**. Những bài trước ta đã biết 
+> \**giảm overfit trên mỗi single model hay không**. Những bài trước ta đã biết 
 > về một regularization technique là L2 Regularization. Tuy nhiên trong 
 > bối cảnh của **deep neural network thì cái này không hiệu quả lắm.**
 
@@ -975,7 +975,7 @@
 <p align="center"><kbd><img src="assets/e9119aa5df7cd9c2f7bbe837bda246d85c08a277.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Dropout** regularization: trong quá trình **forward pass**, ta sẽ **randomly set một
+> \**Dropout** regularization: trong quá trình **forward pass**, ta sẽ **randomly set một
 > số** (với tỉ lệ gọi là **dropout rate**, thường dùng **0.5**) activation value = 0 (mang
 > ý nghĩa là ta **tắt các neuron đi**).
 >

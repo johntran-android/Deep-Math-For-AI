@@ -116,7 +116,7 @@
 
 > [!NOTE]
 > đại khái sparsity problem 1 là khi **tử số (nominator) = 0**, khi ví dụ cụm "
-> **students opened their w**" chưa bao giờ xuất hiện trong corpus, và dẫn
+> \**students opened their w**" chưa bao giờ xuất hiện trong corpus, và dẫn
 > đến là count = 0. Từ đó tính (tất nhiên là approximate) xác suất xuất hiện
 > của từ w sau từ "students opened their w" = 0, **mặc dù không phải vậy** (ý
 > nói xác suất **dù nhỏ nhưng vẫn có thể > 0**)
@@ -127,7 +127,7 @@
 > Nếu cả "**students open their**" cũng count = 0 thì có thể dùng technique
 > gọi là **backoff** để đếm số cụm "students open" thôi
 >
-> *Gs nói thêm đại khái đó là **khi mà tăng Markov order lên** thì **sparsity
+> \*Gs nói thêm đại khái đó là **khi mà tăng Markov order lên** thì **sparsity
 > problem càng trở nên tệ** hơn thành ra người ta **chỉ có thể làm với order
 > lớn hơn nếu có nhiều data hơn**. Nên hồi xưa người ta chỉ có **3-gram**,
 > nhưng khi có nhiều data hơn người ta mới làm **5-gram**
@@ -140,7 +140,7 @@
 
 > [!NOTE]
 > đại khái là n-gram model còn bị một vấn đề nữa đó là yêu cầu
-> **storage lớn** khi nó **phải lưu trữ một số lượng rất lớn các kết
+> \**storage lớn** khi nó **phải lưu trữ một số lượng rất lớn các kết
 > quả thống kê** (count for all n-grams). Đó là lí Google Translate
 > lúc trước chỉ có thể được **vận hành trên Cloud còn với neural net
 > thì đại khái là nó có thể nhẹ (về mặt storage) hơn nhiều**
@@ -248,7 +248,7 @@
 > store **word vector và W**
 >
 > Nhưng nhược điểm của nó là vẫn bị giới hạn trong một **fixed window** và
-> **không thể tăng window size lên quá lớn** vì khi đó **weight matrix sẽ lớn không
+> \**không thể tăng window size lên quá lớn** vì khi đó **weight matrix sẽ lớn không
 > kém** đồng thời cũng nói lên một nhược điểm khác đó là mỗi giá trị của
 > params trong W take care một feature riêng biệt, ví dụ w_i1 take care
 > feature x(i)_1, do đó không có khả năng "shared params"

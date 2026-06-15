@@ -21,7 +21,7 @@
 >
 > Như phần trước cũng đã biết, nhiệm vụ này cũng có thể **tương đương** với
 > cách tiếp cận khác đó là ta **chọn một base class** ví dụ như K, và tìm cách
-> **assign một class k** cho sample sao cho **tối đa được log(Pr(Y=k|X=x) /
+> \**assign một class k** cho sample sao cho **tối đa được log(Pr(Y=k|X=x) /
 > Pr(Y=K|X=x)**
 
 <br>
@@ -62,7 +62,7 @@
 >
 > Như đã nói với LDA thì đại khái là người ta **giả định** rằng các **phân phối
 > xác suất của các class đều là Gaussian distributio**n, có **cùng variance** và
-> **khác nhau mean**. Nên thay công thức của Gaussian distribution vào ta có:
+> \**khác nhau mean**. Nên thay công thức của Gaussian distribution vào ta có:
 >
 > M = log[ fk(x) / fK(x)]  ..*triển khai như bên note màu xanh" xong ta có
 >
@@ -151,7 +151,7 @@
 >
 > = (-0.5x.T@Σ.inv@x + 0.5x.T@Σ.inv@x) + (x.T@Σ.inv@μk - x.T@Σ.inv@μK) - 0.5μk.T@Σ.inv@μk] + 0.5μK.T@Σ.inv@μK)
 >
-> **= 0 +  x.T@Σ.inv(μk - μK) - 0.5μk.T@Σ.inv@μk] + 0.5μK.T@Σ.inv@μK)** 
+> \**= 0 +  x.T@Σ.inv(μk - μK) - 0.5μk.T@Σ.inv@μk] + 0.5μK.T@Σ.inv@μK)** 
 > ====== Tiếp, xét N = - 0.5μk.T@Σ.inv@μk] + 0. 5μK.T@Σ.inv@μK)
 >
 > = -0.5 [μk.T@Σ.inv@μk - μK.T@Σ.inv@μK)
@@ -293,7 +293,7 @@
 
 > [!NOTE]
 > Khi triển khái log odd của LDA trong đó thêm vụ
-> **covariance matrix** là **diagonal (biểu hiện các predictor
+> \**covariance matrix** là **diagonal (biểu hiện các predictor
 > độc lập nhau)** thì sẽ thấy nó ra y chang của Naive
 > Bayese. Mũi tên màu xanh ý là cái bk nó ra phần này của
 > Naive Bayes
@@ -410,7 +410,7 @@
 > [!NOTE]
 > Thử nghiệm thứ hai giống cái thứ nhất tức là các sample của các
 > class cũng tuân theo **normal distribution**, **giống variance**,
-> **khác mean**. Chỉ khác là các variable (predictor) **không còn
+> \**khác mean**. Chỉ khác là các variable (predictor) **không còn
 > independent** nữa mà có correlation = -0.5. Do đó các mô hình khác
 > đều giữ nguyên, duy chỉ có **Naive Bayes do dataset không còn
 > thỏa giả định** các predictor độc lập nữa nên nó perform tệ đi
@@ -435,12 +435,12 @@
 > chúng **tệ hơn**
 >
 > Với Naive Bayes, đương nhiên về bản chất là có giả định các 
-> **predictor độc lập**, nhưng ngoài ra như nói lúc đầu là được train 
+> \**predictor độc lập**, nhưng ngoài ra như nói lúc đầu là được train 
 > với giả định là các **predictor tuân theo Gaussian**. Thành ra bây giờ
-> **cả hai đều bị vi phạm khiến error rate của nó tăng vọt**.
+> \**cả hai đều bị vi phạm khiến error rate của nó tăng vọt**.
 >
 > Logistic Regression vẫn không bị ảnh hưởng, vì giả định decision
-> **boundary tuyến tính** vẫn còn được thỏa.
+> \**boundary tuyến tính** vẫn còn được thỏa.
 
 <p align="center"><kbd><img src="assets/cdd3d281c3224072b4d562d17b40d78fdf8a33c1.png" width="100%"></kbd></p>
 
@@ -499,7 +499,7 @@
 
 > [!NOTE]
 > Scenario 6: Dataset được cho cũng **Gaussian** với **diagonal**
-> **covariance** matrix **khác nhau**. Nhưng mỗi class chỉ có 6 sample.
+> \**covariance** matrix **khác nhau**. Nhưng mỗi class chỉ có 6 sample.
 >
 > Vì covariance-matrix là **diagonal** nghĩa là **các predictor
 > independent**, **uncorrelated** nên thỏa **Naive Bayes** assumption
@@ -515,7 +515,7 @@
 > Với **KNN**, thì tuy rằng đáng lẽ nó cũng sẽ có performance tốt vì
 > đang là trường hợp có decision boundary phi tuyến nhưng vì **có ít
 > sample quá** nó cũng **không phát huy khả năng** (bị overfit do
-> **không đủ sample để giảm variance**)
+> \**không đủ sample để giảm variance**)
 
 <p align="center"><kbd><img src="assets/6d78436fd93d231230a1bcd0a1e0f8256576e090.png" width="100%"></kbd></p>
 

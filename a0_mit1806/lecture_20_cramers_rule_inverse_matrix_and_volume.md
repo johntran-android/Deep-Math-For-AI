@@ -74,9 +74,9 @@
 
 > [!NOTE]
 > Gs nhắc lại hồi trước ta **tìm inverse matrix** bằng cách
-> **ghép matrix I vào bên phải matrix A** (gọi là augmented
+> \**ghép matrix I vào bên phải matrix A** (gọi là augmented
 > matrix) và **thực hiện elimination để biến A thành I** thì
-> **khi đó I sẽ trở thành E** và **nó chính là Ainv (đương
+> \**khi đó I sẽ trở thành E** và **nó chính là Ainv (đương
 > nhien với điều kiện matrix A invertible)** Thì bây giờ ta thấy công thức của inverse **dưới dạng
 > công thức** thay vì **algorithm** mô tả ở trên
 
@@ -88,7 +88,7 @@
 
 > [!NOTE]
 > Gs nói tuy vậy ta sẽ **cần chứng minh** lại nó, bằng cách
-> **chứng minh AAinv = I**  thế thì khi ghi ra ta có thể thấy,
+> \**chứng minh AAinv = I**  thế thì khi ghi ra ta có thể thấy,
 > kết qủa A(CT) đương nhiên là matrix nxn. Và hãy nói về
 > phần tử [1,1] của kết qủa. Nó sẽ là **dot product của hàng 1
 > matrix A** [a11, ....a1n] và **cột 1 matrix CT** [c11 c12..c1n]
@@ -190,7 +190,7 @@
 > [!NOTE]
 > Rồi, tiếp theo **ứng dụng thứ hai** khi ta đã có công thức
 > của Ainv đó là ta **dùng nó trong solution của Ax = b** <=>
-> **x = Ainv b = (1/det A) CTb**
+> \**x = Ainv b = (1/det A) CTb**
 >
 > Thế thì gs đề nghị ta **xét hai component x1, x2 trước**.
 >
@@ -210,7 +210,7 @@
 
 > [!NOTE]
 > Thế thì **matrix B1** chính là
-> **matrix A thay cột 1 bởi b**
+> \**matrix A thay cột 1 bởi b**
 
 <br>
 
@@ -225,7 +225,7 @@
 > kí hiệu **C21**.
 >
 > Vậy thì det B1 là dot product của vector **b = [b1 b2....]** và
-> **vector cofactor [C11 C21....]** thì nó **chính là row1 của C**
+> \**vector cofactor [C11 C21....]** thì nó **chính là row1 của C**
 
 <br>
 
@@ -241,7 +241,7 @@
 
 > [!NOTE]
 > Và khái quát **B_j** là **matrix replace cột j của A bởi b**. Và
-> **det B_j chia cho det A chính là x_j
+> \**det B_j chia cho det A chính là x_j
 >
 > (nhắc lại x là solution của Ax = b)**
 
@@ -337,7 +337,7 @@
 
 > [!NOTE]
 > O**rthogonal matrix sẽ có tính chất là QTQ = I**, gs hỏi rằng
-> **tại sao det của nó bằng 1**
+> \**tại sao det của nó bằng 1**
 
 <br>
 

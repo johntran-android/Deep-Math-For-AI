@@ -525,7 +525,7 @@
 > Var(Xi)
 >
 > Và trong sách này, gs Bishop sẽ ghi là Cov(**X**) cho gọn, tự hiểu là Cov(**X**,
-> **X**)
+> \**X**)
 >
 > \-----
 >

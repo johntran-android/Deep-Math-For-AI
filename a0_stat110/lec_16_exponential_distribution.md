@@ -54,7 +54,7 @@
 
 > [!NOTE]
 > Bài này ta sẽ làm quen thêm **một trong những distribution quan trọng nhất** nữa là **Exponential**
-> **distribution**. Nó có một parameters là **λ**, mang ý nghĩa là rate.
+> \**distribution**. Nó có một parameters là **λ**, mang ý nghĩa là rate.
 >
 > PDF của nó là f(x) = **λ e^(-λx)** với **x dương**, còn **nếu x ≤ 0 thì f(x) = 0**
 >
@@ -154,7 +154,7 @@
 
 > [!NOTE]
 > Gs nói về việc tương tự như trong **Normal distribution**, ta có thể
-> **standardization** để **đưa X ~ N(μ, σ)** về **Z ~ N(0, 1)** bằng cách 
+> \**standardization** để **đưa X ~ N(μ, σ)** về **Z ~ N(0, 1)** bằng cách 
 > đặt Z = (X - μ) / σ
 >
 > Thì với X ~ Expo(λ) ta **cũng có thể làm tương tự** vậy
@@ -182,7 +182,7 @@
 >
 > Do đó, ta sẽ **bắt đầu từ CDF,** với định nghĩa của nó:
 >
-> **P(Y ≤ y)**
+> \**P(Y ≤ y)**
 >
 > Thế thì **xét event Y ≤ y**. Thay **Y = λX** ta có Y ≤ y ⇔ λX ≤ y ⇔ X ≤ y/λ
 >
@@ -291,7 +291,7 @@
 >
 > = y^2*[ -e^(-y)] | 0:infinity - tích phân 0:infinity 2y(-e^(-y))dy
 >
-> *Xét vế đầu: y^2*[-e^(-y)] | 0:inf, để tính cái này, ta sẽ **tìm limit** của nó ở **infinity** (tức
+> \*Xét vế đầu: y^2*[-e^(-y)] | 0:inf, để tính cái này, ta sẽ **tìm limit** của nó ở **infinity** (tức
 > là y->infinity, **trừ đi limit** của nó **ở 0** (y->0).
 >
 > lim y^2*[-e^(-y)] khi y->inf, thì **khi y->inf, y^2 cũng đi tới infinity**. Còn -e^-y -> **-e^-inf -> 0**
@@ -314,7 +314,7 @@
 >
 > tích phân 0:infinity 2y(-e^(-y))dy = 2ye^(-y)|0:infinity - tích phân 0:infinity của 2*e^(-y)dy
 >
-> *Xét 2y*e^(-y)|0:infinity, nó bằng 0, tương tự như khi xét y^2*[-e^(-y)] | 0:inf. Đại khái
+> \*Xét 2y*e^(-y)|0:infinity, nó bằng 0, tương tự như khi xét y^2*[-e^(-y)] | 0:inf. Đại khái
 > cũng là **khi y->inf** thì **e^-y -> e^-inf = 0** **nhanh hơn** là **y->inf**, nên **tích đó sẽ -> 0**. Còn
 > khi y->0 thì limit của tích này bằng 0 rồi.
 >
@@ -376,8 +376,8 @@
 > random variable mà ta quan tâm)
 >
 > Thế thì, như đã biết **Geometric** distribution **Geom(p)** đó là **một chuỗi các Bern(p)**
-> **trials** và ta quan tâm **số trial fail cho đến khi có một trial success**. Thì cái này là
-> **discrete**, còn trong bài toán ta đang nói có thể coi như phiên bản **continuous**
+> \**trials** và ta quan tâm **số trial fail cho đến khi có một trial success**. Thì cái này là
+> \**discrete**, còn trong bài toán ta đang nói có thể coi như phiên bản **continuous**
 >
 > Gs nói: "nó giống như ta cứ **reset lại thời gian chờ mỗi một khắc trôi** qua vậy"
 >
@@ -397,17 +397,17 @@
 > [!NOTE]
 > Và tính chất **Memoryless** nay được thể hiện bởi **equation**:
 >
-> **P(X ≥ s+t | X ≥ s) = P(X ≥ t)**
+> \**P(X ≥ s+t | X ≥ s) = P(X ≥ t)**
 >
 > Vế trái mang ý nghĩa là: dựa trên việc [**ta đã chờ s rồi],** tức là [**thời gian chờ X (mà chưa có cuộc gọi
 > tới) đã lớn hơn s] thể hiện bởi** **(X ≥ s)**, thì xác suất [**ta phải chờ s+t**] tức là [**thời gian chờ sẽ
 > lớn hơn s+t**]: (X ≥ s+t)
 >
-> **P(X ≥ s+t | X ≥ s)**
+> \**P(X ≥ s+t | X ≥ s)**
 >
 > Vế phải có ý nghĩa là, ta sẽ **reset lại thời gian chờ**, thì xác suất [**phải chờ thêm t**] sẽ là:
 >
-> **P(X ≥ t)** Để hai vế bằng nhau sẽ có ý nghĩa là:
+> \**P(X ≥ t)** Để hai vế bằng nhau sẽ có ý nghĩa là:
 >
 > Bên phải là (xác suất của việc) đã chờ s phút, chờ thêm t phút **P(X ≥ s+t | X ≥ s)** thì **cũng giống như
 > (dấu =)** việc reset thời gian lại, coi như bắt đầu chờ lại từ đầu thêm t phút **P(X ≥ t)**
@@ -429,7 +429,7 @@
 
 > [!NOTE]
 > Vậy thì ta sẽ **chứng minh** nếu **X ~ Expo(λ)** thì nó sẽ **thỏa mãn equation** này, tức là ta muốn
-> **chứng minh Exponential distribution** có tính chất **Memoryless**
+> \**chứng minh Exponential distribution** có tính chất **Memoryless**
 >
 > Đầu tiên ta xét **P(X ≥ s)**, thì cái này gọi là **Survivor function**, vì ví dụ như cho X là thời gian còn
 > sống cho đến khi chết, thì ý nghĩa của nó sẽ là **xác suất "sống qua khoảng thời gian s"**
@@ -437,7 +437,7 @@
 > Vậy thì ta có thể thể hiện P(X ≥ s) theo complement: **P(X ≥ s) = 1 - P(X ≤ s)** và đương nhiên ta
 > biết **P(X ≤ s) chính là CDF**.
 >
-> *Gs lưu ý có **dấu bằng hay không không quan trọng lắm** vì đây là **continuous random variable**.
+> \*Gs lưu ý có **dấu bằng hay không không quan trọng lắm** vì đây là **continuous random variable**.
 >
 > Thế thì đang nói X là Expo(λ) rv thì CDF của Expo(λ) ta đã chứng minh bằng P(X ≤ x) = **1 - e^(-λx)**
 >
@@ -466,7 +466,7 @@
 > [!NOTE]
 > Bắt đầu chứng minh tính memoryless của Expo(λ): P(X ≥ s+t | X ≥ s) = P(X ≥ t)  Đầu tiên dựa vào **ĐỊNH NGHĨA CỦA CONDITIONAL PROBABILITY P(A|B) = P(A ∩ B) / P(B)** để có: 
 >
-> **P(X ≥ s+t | X ≥ s)** = P(X ≥ s+t, X ≥ s) / P(X ≥ s)
+> \**P(X ≥ s+t | X ≥ s)** = P(X ≥ s+t, X ≥ s) / P(X ≥ s)
 
 > [!NOTE]
 > CHỨNG MINH EXPO(λ) CÓ TÍNH CHẤT MEMORYLESS: 
@@ -483,8 +483,8 @@
 > Thế thì xét joint (intersection) event (X ≥ s+t, X ≥ s) thì gs cho là **(X ≥ s) là
 > dư**, vì với **s, t đều dương** thì **event (X ≥ s+t) đã bao hàm (X ≥ s)**.
 >
-> **Ý nghĩa của event** ta nhớ nó là **subset của sample space**, vậy thì ở đây
-> **mọi possible outcome của (X ≥ s+t)** **đều nằm trong subset (X ≥ s),** đơn
+> \**Ý nghĩa của event** ta nhớ nó là **subset của sample space**, vậy thì ở đây
+> \**mọi possible outcome của (X ≥ s+t)** **đều nằm trong subset (X ≥ s),** đơn
 > giản vì một possible outcome {s} mà đã có label lớn hơn s+t (và do đó nằm
 > trong X ≥ s+t) sẽ đương nhiên cũng lớn hơn s (để rồi sẽ nằm trong (X ≥ s).
 >
@@ -582,7 +582,7 @@
 
 > [!NOTE]
 > Thế thì nhìn vào (**X - a | X > a)** thì ta thấy ý nghĩa là **khi X đã lớn hơn a** thì
-> **X - a** sẽ là một fresh **Expo(λ)** rv vì ý nghĩa là sau khi chờ a, reset lại thể
+> \**X - a** sẽ là một fresh **Expo(λ)** rv vì ý nghĩa là sau khi chờ a, reset lại thể
 > hiện qua X-a, thì X-a | X>a dĩ nhiên lại là một Expo(λ)
 >
 > Nên Expected value này là **1/λ** theo công thức E(X) của X ~ Expo(λ)

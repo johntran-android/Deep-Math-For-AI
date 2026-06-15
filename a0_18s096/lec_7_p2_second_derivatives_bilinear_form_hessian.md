@@ -16,10 +16,10 @@
 >
 > Nên ta có:
 >
-> **df = f(x+dx) - f(x) = f'(x)[dx]**
+> \**df = f(x+dx) - f(x) = f'(x)[dx]**
 >
 > Với định nghĩa đó, hay đúng hơn là việc hiểu **bản chất của đạo hàm f'(x)** là
-> **linear** **operator tác dụng lên dx**.
+> \**linear** **operator tác dụng lên dx**.
 >
 > Thì lấy ví dụ hàm **f(x) R^n -> R (scalar value multivariate function)** thì ta hiểu
 > bản chất của đạo hàm f'(x) là như vầy: Khi thay đổi vector x (thay đổi các
@@ -29,9 +29,9 @@
 > df = f(x+dx) - f(x). Và theo định nghĩa trên, nó sẽ bằng f'(x)[dx]
 >
 > Thế thì, vì f là scalar value function, nên f(x+dx) - f(x) = df là scalar. Trong khi đó
-> **dx là vector**. Dẫn đến ta cần một **linear operation nào đó** mà act on dx **cho ra
+> \**dx là vector**. Dẫn đến ta cần một **linear operation nào đó** mà act on dx **cho ra
 > scalar**. Và linear operator có khả năng này chỉ có thể là phép nhân vô hướng
-> **(dot product) giữa dx và một vector khác**.
+> \**(dot product) giữa dx và một vector khác**.
 >
 > Và vector đó, chính là **GRADIENT** vector **∇f**. Vậy linear operator ở đây, tức
 > first derivative của f, **f'(x)** sẽ là **∇fTdx**: **f'(x)[dx] = ∇fTdx**
@@ -63,7 +63,7 @@
 > thiên **df' = f'(x+dx') - f'(x)**. Thì đạo hàm cấp 1 của f', tức đạo hàm cấp 2 của f, về 
 > bản chất cũng là **LINEAR OPERATOR** act on vi phân dx': f''(x)[dx']
 >
-> **df' = f'(x+dx') - f'(x) = f''(x)[dx']**
+> \**df' = f'(x+dx') - f'(x) = f''(x)[dx']**
 >
 > Thế thì cái linear operator act on dx' này chính là đạo hàm cấp 1 của f', tức
 > cũng là đạo hàm cấp 2 của f.
@@ -79,14 +79,14 @@
 
 > [!NOTE]
 > Và như gs đã nói linear operator có thể được hiểu có tính chất
-> **linearity của** vector space:
+> \**linearity của** vector space:
 >
 > Để rồi gỉa sử ta có hai **linear operator L1, L2**.
 >
 > Thì **L1+L2** **tạo một linear operator mới** mà khi **act on v sẽ cho
 > kết quả**:
 >
-> **(L1+L2)[v] = L1[v] + L2[v]**
+> \**(L1+L2)[v] = L1[v] + L2[v]**
 >
 > Và **L1[αv] = α L1[v]**
 
@@ -99,7 +99,7 @@
 > [!NOTE]
 > Thế thì như đã nói:
 >
-> **df' = f'(x+dx') - f'(x) = f''(x)[dx']**
+> \**df' = f'(x+dx') - f'(x) = f''(x)[dx']**
 >
 > Trong đó f''(x)[dx'] là linear operator act on dx' thì biết rồi.
 >
@@ -129,7 +129,7 @@
 >
 > Khi x thay đổi thành x + dx khiến f(x) thay đổi thành f(x+dx) thì:
 >
-> **df = f(x+dx) - f(x) = f'(x)[dx]** mang ý nghĩa khoảng thay đổi **df** sẽ
+> \**df = f(x+dx) - f(x) = f'(x)[dx]** mang ý nghĩa khoảng thay đổi **df** sẽ
 > được tính bới là **linear operator act on dx**. Và linear operator đó
 > là derivative của f: f'(x)
 >
@@ -147,7 +147,7 @@
 > Thế thì ta mới chú ý vào cái **f''(x)[dx'][dx]**, nó sẽ nhận hai input
 > vector dx' và dx. Nó có tên là **BILINEAR FORM**.
 >
-> **f''(x)[dx'][dx]**
+> \**f''(x)[dx'][dx]**
 >
 > Người ta có thể viết gọn lại thành **f''(x)[dx', dx]**
 >
@@ -160,11 +160,11 @@
 >
 > Thế thì ta nhớ **dx** là **small change của x** khi ta tính derivative:
 >
-> **df = f(x+dx) - f(x) = f'(x)[dx]** 
+> \**df = f(x+dx) - f(x) = f'(x)[dx]** 
 >
 > Còn **dx'** là **small change của x** khi ta tính **derivative của derivative**:
 >
-> **df' = f'(x+dx') - f'(x) = f''(x)[dx']**
+> \**df' = f'(x+dx') - f'(x) = f''(x)[dx']**
 
 <br>
 
@@ -173,7 +173,7 @@
 <p align="center"><kbd><img src="assets/5158723dec182871a13b23113bb482e43b271f73.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **nói chung thì B[u, v] không bằng B[v, u]** 
+> \**nói chung thì B[u, v] không bằng B[v, u]** 
 > Nhưng ở đây **f''(x)[dx', dx] = f''(x)[dx, dx']**
 
 <br>
@@ -187,7 +187,7 @@
 > derivative của hàm f như sau: thay đổi **x -> x + dx** thì hàm f thay đổi
 > df từ **f(x) -> f(x+dx)**
 >
-> **df = f(x+dx) - f(x)** và cái này bằng **f'(x)[dx]** mang ý nghĩa là **linear 
+> \**df = f(x+dx) - f(x)** và cái này bằng **f'(x)[dx]** mang ý nghĩa là **linear 
 > operator act on dx**, do đó đạo hàm **f'(x) có bản chất là linear operator.**
 >
 > dx = f(x+dx) - f(x) = f'(x)[dx]
@@ -195,17 +195,17 @@
 > Thế thì, nếu bây giờ ta **xét f'(x) như function**, và làm tương tự: thay 
 > đổi **x -> x + dx'**, thì **f'(x) -> f'(x+dx')** thì ta cũng có:
 >
-> **df' = f'(x+dx') - f'(x) = f''(x)[dx']**, mang ý nghĩa là, **đạo hàm cấp 1 của 
+> \**df' = f'(x+dx') - f'(x) = f''(x)[dx']**, mang ý nghĩa là, **đạo hàm cấp 1 của 
 > hàm f'** cũng là **linear operator f''(x) act on dx'**:
 >
 > Thế thì:
 >
-> **(f'(x+dx') - f'(x))** là một **linear operator** (tạo thành bởi **hiệu hai linear 
+> \**(f'(x+dx') - f'(x))** là một **linear operator** (tạo thành bởi **hiệu hai linear 
 > operator**)
 >
 > act nó lên [dx]: 
 >
-> **(f'(x+dx') - f'(x))[dx] = f'(x+dx')[dx] - f'(x)[dx]**
+> \**(f'(x+dx') - f'(x))[dx] = f'(x+dx')[dx] - f'(x)[dx]**
 >
 > Dĩ nhiên là **f'(x+dx') - f'(x) = f''(x)[dx']** nên:
 >
@@ -243,7 +243,7 @@
 > [!NOTE]
 > Rồi ông lấy ví dụ hàm **f(x) R^n -> R**. Thì như đã lập luận hồi nãy,
 > f'(x) là **linear operator mà khi act on dx** (**f'(x)[dx]**) sẽ cho ra
-> **df**, là một scalar.
+> \**df**, là một scalar.
 >
 > Và vì **dx là vector** nên **f'(x)[dx]** phải là phép **dot product của
 > một vector với vector dx**. Vector đó chính là **gradient ∇f.**
@@ -268,7 +268,7 @@
 > Lí do là vì, f**''(x)[dx', dx**] (gọi là **bilinear form act on dx', và dx**), như
 > vừa nãy đã nói, nó bằng:
 >
-> **f''(x)[dx', dx]** = **f'(x+dx')[dx] - f'(x)[dx]**
+> \**f''(x)[dx', dx]** = **f'(x+dx')[dx] - f'(x)[dx]**
 >
 > Nên output của **f''(x)[dx', dx]** phải bằng / có dạng **giống output của
 > vế phải**, và do đó phải **"giống" output của f'(x)[dx]**.
@@ -302,11 +302,11 @@
 >
 > Bên cạnh đó, vì yêu cầu bilinear form này phải **đối xứng (symmetry)**:
 >
-> **f''(x)[dx' dx] = f''(x)[dx, dx']**
+> \**f''(x)[dx' dx] = f''(x)[dx, dx']**
 >
 > nên điều này có nghĩa là:
 >
-> **dx'THdx = dxTHdx'** 
+> \**dx'THdx = dxTHdx'** 
 >
 > <=> (dxTHTdx')T = dxTHdx' (vì dx'THdx là scalar nên có thể transpose 
 > tùy ý)
@@ -337,8 +337,8 @@
 > Xét **d(∂f/∂x1)**:
 >
 > Ta có thể **hiểu ∂f/∂x1 là một function**, và function này cũng là 
-> **scalar value** function: R^n -> Rn: Nó **nhận vào vector x**, và
-> **output ra ∂f/∂x1**.
+> \**scalar value** function: R^n -> Rn: Nó **nhận vào vector x**, và
+> \**output ra ∂f/∂x1**.
 >
 > Do đó giống như **df = ∇fTdx** thì đây cũng vậy **d(∂f/∂x1) = ∇(∂f/∂x1)Tdx**
 >
@@ -358,7 +358,7 @@
 > = **( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx )**
 >
 > Thế thì chỗ này phải để ý: **kết quả phải là vector**, bởi vì **gradient ∇f** là 
-> **vector**, nên **d(∇f)** cũng vậy.
+> \**vector**, nên **d(∇f)** cũng vậy.
 >
 > Nên ta đang có **vector** ( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx ), 
 > mà **mỗi phần tử** là **dot product của vector ∇(∂f/∂xi) với vector dx**.
@@ -367,11 +367,11 @@
 > ta **chuyển vector** ( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx )..
 >
 > ..thành một **matrix nhân vector dx**, mà **mỗi hàng của matrix** sẽ là vector 
-> **∇(∂f/∂xi) lật ngang lại (để thành một hàng)**: row i'th = **∇(∂f/∂xi)T.**
+> \**∇(∂f/∂xi) lật ngang lại (để thành một hàng)**: row i'th = **∇(∂f/∂xi)T.**
 >
 > Do đó trong:
 >
-> **( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T ) dx** 
+> \**( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T ) dx** 
 >
 > thì **( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T )** là một **matrix** với hàng i'th là
 >
@@ -379,7 +379,7 @@
 >
 > Và xét các hàng của nó, ví dụ hàng 1:
 >
-> **∇(∂f/∂x1)T** thì các component của nó sẽ là gì?
+> \**∇(∂f/∂x1)T** thì các component của nó sẽ là gì?
 >
 > Thì với hàm f, **gradient vector ∇f** sẽ là **(∂f/∂x1, ∂f/∂x2, ....)**  tức **phần
 > tử thứ i** sẽ là partial derivative của f wrt xi: **∂f/∂xi**, có thể viết là **∂/∂xi (f)**
@@ -446,7 +446,7 @@
 
 > [!NOTE]
 > Thế thì gs nói bài trước ta đã biết cách tính **gradient** của **scalar**
-> **function** này (nhận vào **matrix A**, tính ra **determinant det A**)
+> \**function** này (nhận vào **matrix A**, tính ra **determinant det A**)
 >
 > Bài này thì mình chưa học nên quay lại viết thêm sau
 >
@@ -462,7 +462,7 @@
 > derivative.
 >
 > Nên ở đây, ta đã có **f'(A)[dA] = det A tr(Ainv dA)**, đây dĩ nhiên **chính là**
-> **linear operator act on dA**, nên đây **chính là first derivative f'(A)**
+> \**linear operator act on dA**, nên đây **chính là first derivative f'(A)**
 >
 > (ghi là **f'(A)[dA]** ý là linear operator này act on dA, thì nó chính là det A
 > tr(Ainv dA) đây)
@@ -506,7 +506,7 @@
 >
 > Vậy dĩ nhiên là với **d'(det A)**, ta **thay dA bằng dA'** thì ta có 
 >
-> **d'(det A) =** **det A tr(Ainv dA')**
+> \**d'(det A) =** **det A tr(Ainv dA')**
 >
 > Vậy d'(det A) = det A tr(Ainv dA')
 
@@ -524,7 +524,7 @@
 > det A **d' (tr(Ainv dA)**
 >
 > Xét **d' (tr(Ainv dA):** Gs cho biết **trace** vốn là **linear operator**, nên ta có thể
-> **đưa d vào trong**: (giống như d(Σx) = Σdx vậy
+> \**đưa d vào trong**: (giống như d(Σx) = Σdx vậy
 >
 > d' (tr(Ainv dA) = **tr [d'( Ainv dA)]**
 >
@@ -539,7 +539,7 @@
 >
 > Và như vậy ta đã có **BILINEAR FORM** act on dA', dA
 >
-> **det A tr(Ainv dA') tr(Ainv dA) - det A tr(Ainv dA' Ainv dA)** mà đúng là nó là **linear đối với mỗi thằng dA, dA' tức giữ cái này là fixed
+> \**det A tr(Ainv dA') tr(Ainv dA) - det A tr(Ainv dA' Ainv dA)** mà đúng là nó là **linear đối với mỗi thằng dA, dA' tức giữ cái này là fixed
 > value thì ta có linear function đối với cái kia**
 
 <br>
@@ -550,7 +550,7 @@
 
 > [!NOTE]
 > Và gs nói nó cũng **symmetric**: vì ta có thể **đổi chỗ tr(Ainv dA')** với
-> **tr(Ainv dA)** vì chúng chỉ là **number**
+> \**tr(Ainv dA)** vì chúng chỉ là **number**
 >
 > Và nhờ tính chất của **trace** mà ta cũng có thể **đổi chỗ dA' và dA
 > trong tr(Ainv dA' Ainv dA)**
@@ -570,12 +570,12 @@
 > một hàm số: trong một **khoảng biến thiên rất nhỏ** thì **hàm số
 > perform như hàm tuyến tính**:
 >
-> **f(x + δx) ~= f(x) + f'(x)[δx]** : dễ thấy đây là linear function **f(x) là
+> \**f(x + δx) ~= f(x) + f'(x)[δx]** : dễ thấy đây là linear function **f(x) là
 > constant** còn **f'(x)[δx]** như đã nói, là **linear operator act on δx**
 >
 > Thế thì 2nd derivative cho ta **QUADRATIC APPROXIMATION**:
 >
-> **f(x + δx) ~= f(x) + f'(x)[δx] + (1/2)f''(x)[δx, δx]** 
+> \**f(x + δx) ~= f(x) + f'(x)[δx] + (1/2)f''(x)[δx, δx]** 
 >
 > (**nếu có các o(||δx||^2** tức là các term bậc cao hơn 2 của δx thì ta có
 > dấu  bằng, nhưng bỏ đi thì ta có approximation, dĩ nhiên với điều kiện

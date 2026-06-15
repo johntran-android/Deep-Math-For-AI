@@ -22,7 +22,7 @@
 > throughout the training process.
 >
 > 2. **PEFT** is a method that **updates only a small subset of parameters** during **fine-tuning**,
-> **reducing the memory requirements** significantly compared to full fine-tuning.
+> \**reducing the memory requirements** significantly compared to full fine-tuning.
 >
 > 3. **PEFT** can **freeze most of the model weights**, focusing on fine-tuning **only a subset of existing
 > model** **parameters**, or **add a small number of new parameters or layers** and fine-tune only the new
@@ -67,7 +67,7 @@
 
 > [!NOTE]
 > As you saw in the first week of the course, **training LLMs is computationally intensive**.
-> **Full fine-tuning requires memory** not just to store the **model**, but various **other
+> \**Full fine-tuning requires memory** not just to store the **model**, but various **other
 > parameters** that are required during the training process. Even if your computer can hold
 > the model weights, which are now on the order of **hundreds of gigabytes** for the largest
 > models, you must also be able to allocate memory for **optimizer states, gradients,
@@ -109,7 +109,7 @@
 > [!NOTE]
 > Other techniques **don't touch the original model weights** at all, and
 > instead **add a small number of new parameters or layers** and
-> **fine-tune only the new components**
+> \**fine-tune only the new components**
 
 <br>
 
@@ -124,11 +124,11 @@
 > LLM weights**. This makes the **memory requirements for training much more
 > manageable.** In fact, PEFT can often be performed on a **single GPU**. And
 > because the original LLM is only slightly modified or left unchanged, PEFT is
-> **less prone to the catastrophic forgetting** problems of full fine-tuning
+> \**less prone to the catastrophic forgetting** problems of full fine-tuning
 
 > [!NOTE]
 > Đại khái là nhờ vậy mà **số params phải tune thấp hơn nhiều** nên cũng
-> **giảm gánh nặng bộ nhớ** đòi hỏi đồng thời **giảm thiểu hiện tượng
+> \**giảm gánh nặng bộ nhớ** đòi hỏi đồng thời **giảm thiểu hiện tượng
 > catastrophic forgetting** bởi vì **phần lớn hoặc tất cả các params cũ đều
 > được giữ nguyên**
 
@@ -203,7 +203,7 @@
 <p align="center"><kbd><img src="assets/0f14c8c0b712fae644c89a54035a8c61dd708a12.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Reparameterization** methods also **work with the original LLM parameters**, but r**educe
+> \**Reparameterization** methods also **work with the original LLM parameters**, but r**educe
 > the number of parameters to train** by \_**creating new low rank transformations of the
 > original network weights**\_. A commonly used technique of this type is **LoRA**, which we'll
 > explore in detail in the next video. Lastly, additive methods carry out fine-tuning by
@@ -242,7 +242,7 @@
 
 > [!NOTE]
 > 1. **LoRA** (**Low-rank Adaptation**) is a **parameter-efficient fine-tuning** technique falling into the
-> **re-parameterization category**.
+> \**re-parameterization category**.
 >
 > 2. LoRA **reduces the number of parameters to be trained** during fine-tuning by **introducing
 > low-rank decomposition matrices** alongside the **original weights in self-attention layers** of a
@@ -289,7 +289,7 @@
 
 > [!NOTE]
 > The **input prompt is turned into tokens**, which are then
-> **converted to embedding vectors**
+> \**converted to embedding vectors**
 
 <br>
 
@@ -346,7 +346,7 @@
 <p align="center"><kbd><img src="assets/aaf0466801b0d03a1d1a4fedb34984c610d32580.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **LoRA** is a strategy that **reduces the number of parameter**s to be trained during
+> \**LoRA** is a strategy that **reduces the number of parameter**s to be trained during
 > fine-tuning by **freezing all of the original model parameters** and then \_**injecting a pair of
 > rank decomposition matrices alongside the original weights.**\_
 
@@ -370,7 +370,7 @@
 
 > [!NOTE]
 > The **dimensions of the smaller matrices** are set so that
-> **their product is a matrix** with the **same dimensions as
+> \**their product is a matrix** with the **same dimensions as
 > the weights they're modifying**.
 
 <br>
@@ -396,7 +396,7 @@
 
 > [!NOTE]
 > For inference, the **two low-rank matrices** are
-> **multiplied together** to create a **matrix with the same
+> \**multiplied together** to create a **matrix with the same
 > dimensions as the frozen weights.**
 
 > [!NOTE]
@@ -431,13 +431,13 @@
 > However, **in principle**, you can **also use LoRA on other components like the
 > feed-forward layers.** 
 > But since **most of the parameters of LLMs are in the attention layers**, you get the
-> **biggest savings in trainable parameters by applying LoRA to these weights
+> \**biggest savings in trainable parameters by applying LoRA to these weights
 > matrices.**
 
 > [!NOTE]
 > Thì đại khái là theo nghiên cứu thì c**hỉ cần apply loRA với Self-Attention
 > layer là đủ** vì nó **chứa phần lớn params của model**. Tuy nhiên cũng
-> **không hại gì khi làm luôn cho các component khác** như **Feed Forward
+> \**không hại gì khi làm luôn cho các component khác** như **Feed Forward
 > layers** phía sau Self Attention
 
 <br>
@@ -462,7 +462,7 @@
 > Đại khái là lấy ví dụ từ một layer của b**ase Transformer model** được
 > giới thiệu lần đầu tiên năm **2017** trong nghiên cứu mang tên **Attention
 > is All You Need**. Trong đó với **weight matrix có shape 512x64** sẽ có
-> **32768 params**. Với loRa, số params phải train chỉ còn lại là **512 +
+> \**32768 params**. Với loRa, số params phải train chỉ còn lại là **512 +
 > 4096,** **thấp hơn rất nhiều  - giảm 86%**
 
 <br>
@@ -487,7 +487,7 @@
 
 > [!NOTE]
 > Cho thấy các chỉ số **ROUGE metrics** của LoRA fine-tuning model
-> **không kém bao nhiêu so với full tuning model** nhưng lại **giảm
+> \**không kém bao nhiêu so với full tuning model** nhưng lại **giảm
 > rất nhiều số params phải train.**
 
 <br>
@@ -499,7 +499,7 @@
 > [!NOTE]
 > Câu hỏi về **rank nên chọn** đang được **active research**, theo nghiên cứu
 > mới nhất với các mức Rank khác nhau và các chỉ số **val_loss**, **BLEU** và
-> **ROUGE** scores....cho thấy từ **2-16 là mang lại lợi ích** còn **trở lên nữa
+> \**ROUGE** scores....cho thấy từ **2-16 là mang lại lợi ích** còn **trở lên nữa
 > như ta thấy val_loss không giảm là bao**.
 
 <br>
@@ -557,7 +557,7 @@
 
 > [!NOTE]
 > With **LoRA**, the goal was to **find an efficient way to update the weights** of the model
-> **without having to train every single parameter again**. There are also **additive
+> \**without having to train every single parameter again**. There are also **additive
 > methods** **within PEFT** that aim to improve model performance without changing the
 > weights at all. In this video, you'll explore a **second parameter efficient fine tuning
 > method** called **prompt tuning**.
@@ -588,7 +588,7 @@
 > [!NOTE]
 > With **prompt tuning**, you add **additional trainable tokens** to your prompt
 > and **leave it up to the supervised learning process** to determine their
-> **optimal values**. The set of trainable tokens is called a **soft prompt**, and
+> \**optimal values**. The set of trainable tokens is called a **soft prompt**, and
 > it gets \_**prepended to embedding vectors that represent your input text**\_.
 > The soft prompt vectors have the **same length as the embedding
 > vectors** of the language tokens. And including somewhere between **20
@@ -618,7 +618,7 @@
 
 > [!NOTE]
 > Chưa hiểu lắm nhưng đại khái **không như prompt thông thường** là các **từ cụ thể** thì
-> **soft prompt** sẽ **không phải là một discrete fixed words** **trong ngôn ngữ** kiểu như một
+> \**soft prompt** sẽ **không phải là một discrete fixed words** **trong ngôn ngữ** kiểu như một
 > / những từ cụ thể nào đó, mà nó **là một vector / dãy con số nào đó trong
 > embedding space**.
 
@@ -659,7 +659,7 @@
 > another**. To use them for inference, you **prepend your input prompt with the
 > learned tokens** to switch to another task, you **simply change the soft
 > prompt**. Soft prompts are **very small on disk,** so this kind of fine tuning is
-> **extremely efficient and flexible**
+> \**extremely efficient and flexible**
 
 > [!NOTE]
 > Switch qua lại có nghĩa là **với các task khác
@@ -700,7 +700,7 @@
 > Remember, because the **soft prompt tokens \_can take any value within the continuous
 > embedding vector space**\_. The \_**trained tokens don't correspond to any known
 > token**\_, word, or phrase in the vocabulary of the LLM. However, an analysis of the
-> **nearest neighbor tokens** to the soft prompt location **shows that they form tight
+> \**nearest neighbor tokens** to the soft prompt location **shows that they form tight
 > semantic clusters**. In other words, the **words closest to the soft prompt tokens have
 > similar meanings**. The words identified usually have \_**some meaning related to the
 > task, suggesting that the prompts are learning word like representations**\_
@@ -714,11 +714,11 @@
 > [!NOTE]
 > You explored two PEFT methods in this lesson **LoRA**, which uses **rank
 > decomposition matrices** to update the model parameters in an efficient way. And
-> **Prompt Tuning,** where **trainable tokens are added to your prompt** and the model
+> \**Prompt Tuning,** where **trainable tokens are added to your prompt** and the model
 > weights are left untouched. Both methods **enable you to fine tune model**s with the
 > potential for improved performance on your tasks while using **much less compute
 > than full fine tuning methods**. LoRA is b**roadly used** in practice because of the
-> **comparable performance to full fine tuning** for many tasks and data sets, and you'
+> \**comparable performance to full fine tuning** for many tasks and data sets, and you'
 > ll get to try it out for yourself in this week's lab.
 
 > [!NOTE]
@@ -750,7 +750,7 @@
 >
 > 1. **Lab Introduction and Goals:**
 >    - This week's lab involves **trying out fine-tuning with PEFT and LoRA** to enhance the 
-> **summarization ability** of the **Flan-T5 model.**
+> \**summarization ability** of the **Flan-T5 model.**
 >    - Chris, a colleague, will guide through the lab activities.
 >
 > 2. **Lab 2 Overview and **Hands-On Approach**:**
@@ -775,7 +775,7 @@
 >
 > 6. ****Comparative Evaluation**:**
 >    - **Compare summaries** generated by **original Flan-T5**, **instruction fine-tuned model**, and 
-> **PEFT model**.
+> \**PEFT model**.
 >    - **Qualitative assessment** of sample inputs.
 >    - Quantitative assessment using **ROUGE metrics.** 
 > 7. **Parameter-Efficient Fine-Tuning (**PEFT**):**
@@ -1020,7 +1020,7 @@
 > for **enhanced dialogue summarization**. You will use the **FLAN-T5** model, which provides a **high quality instruction tuned model** and can
 > summarize text out of the box. To improve the inferences, you will
 > explore a **full fine-tuning approac**h and **evaluate the results** with
-> **ROUGE** metrics. Then you will perform **Parameter Efficient
+> \**ROUGE** metrics. Then you will perform **Parameter Efficient
 > Fine-Tuning (PEFT),** evaluate the resulting model and see that the
 > benefits of PEFT outweigh the slightly-lower performance metrics.
 
@@ -1078,7 +1078,7 @@
 
 > [!NOTE]
 > Tiếp tục làm việc với **DialogSum dataset** của **Hugging Face** có
-> **10.000 dialogues** được **labeled với summaries và topics**
+> \**10.000 dialogues** được **labeled với summaries và topics**
 
 <br>
 
@@ -1106,7 +1106,7 @@
 > [!NOTE]
 > Đại khái là ta sẽ load cái **pre-trained LLM là FLAN-T5** và cái **tokenizer**
 > tương ứng từ **HuggingFace** library. Chỉ dùng phiên bản nhỏ của nó, và
-> **set memory type** với câu lệnh **torch_dtype = torch.bfloat16**
+> \**set memory type** với câu lệnh **torch_dtype = torch.bfloat16**
 
 <br>
 
@@ -1118,7 +1118,7 @@
 > Cho một function để xem s**ố lượng trainable parameter của model**.
 >
 > Xem sơ qua thì cơ bản là **loop trong các params của model** bằng function model.
-> **named_parameters**() và xem cái cái có var **requires_grad** = True thì tính cộng thêm
+> \**named_parameters**() và xem cái cái có var **requires_grad** = True thì tính cộng thêm
 > vào số lượng **trainable param**s bằng **param.numel()**
 >
 > Kết quả cho thấy **FLAN-T5** này có 247 triệu trainable params
@@ -1142,7 +1142,7 @@
 <p align="center"><kbd><img src="assets/bbad616b21058ec86eecdebdac5085a51a33adb3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Lấy trong bộ test set,** dùng index=200 lấy ra data sample, lấy cái cột 
+> \**Lấy trong bộ test set,** dùng index=200 lấy ra data sample, lấy cái cột 
 > 'dialogue' sẽ dùng để đưa vào model để predict và 'summary' là summary
 > do người tạo, sẽ dùng để so sánh cũng như là finetuning
 >

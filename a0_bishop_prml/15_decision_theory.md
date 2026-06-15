@@ -139,7 +139,7 @@
 > Thế thì, như vậy việc định ra một cái test, cũng chính là định ra cái rule, để rồi áp
 > dụng cái rule này với mọi **x** ∈ range **X**, nó sẽ chia range **X** thành hai
 > phần, Rejection region R = {**x** ∈ range **X**: reject H0} và Rc = {**x** ∈ range
-> **X**: accept H0}, gọi là Acceptance region.
+> \**X**: accept H0}, gọi là Acceptance region.
 >
 > Để rồi, khi đó, khi bàn tới việc đánh giá một hypothesis test, ta sẽ muốn giảm
 > thiểu hai loại sai sót: Type I error, là khi θ ∈ Θ0 nhưng lại reject H0 (**X** ∈ R), và
@@ -196,7 +196,7 @@
 > là P_θ(θ ∈ Θ0, **X** ∈ R) mà phải define là P_θ(**X** ∈ R) khi θ ∈ Θ0, mang ý
 > nghĩa: Khi giá trị của θ, vốn là fixed và unknown, thật sự là ∈ Θ0 thì P_θ(**X** ∈ R)
 > chính là xác suất mắc Type I error. (vì sao có chữ θ ở dưới P: P_θ(...) thì là vì
-> **X** ~ f(**x**|θ) nên dĩ nhiên xác suất này phụ thuộc θ)
+> \**X** ~ f(**x**|θ) nên dĩ nhiên xác suất này phụ thuộc θ)
 >
 > Tương tự, xác suất mắc Type II error sẽ được định nghĩa là:
 >
@@ -207,7 +207,7 @@
 > (Chú ý, **X** là random vectors, nên trong sách gs Bishop dùng bold font, nhưng
 > như đã nói ông ko theo convention nữa, nên viết chữ thường (vẫn in đậm, nhưng
 > chữ thường **x**) còn mình thì theo convention của Casella, nên in đậm, chữ hoa
-> **X**)
+> \**X**)
 >
 > nên xác suất của event mắc sai lầm sẽ là:
 >
@@ -265,7 +265,7 @@
 > À, như đã biết trong bài toán Hypothesis testing, nói về một cái test, hay test rule,
 > thì bản chất cũng chính là nói về cái rejection region hay acceptance region. Vì một
 > cái rule, sẽ gắn với cái rejection region có được khi áp cái rule đó để mà chia range
-> **X** thành R và Rc.
+> \**X** thành R và Rc.
 >
 > Nên ở đây cũng vậy, bản chất một cái decision rule, chính là thể hiện qua  các
 > decision region R1, R2. Vì tương tự như trên, mỗi một cái decision rule khác nhau
@@ -295,7 +295,7 @@
 > Vậy bài toán tối ưu lúc này là:
 >
 > minimize_R1 {f(C1) - ∫R1 f(C1,**x**)d**x** + ∫R1 f(C2,**x**)d**x**} = {f(C1) + ∫R1 [f(C2,
-> **x**) - f(C1,**x**)]d**x** }
+> \**x**) - f(C1,**x**)]d**x** }
 >
 > Và f(C1) thì ko phụ thuộc R1, nên ta chuyển thành bài toán tương đương:
 >
@@ -412,7 +412,7 @@
 > Rk)
 >
 > ⇨ P("Correct") = P[(T = C1, **X** ∈ R1) U (T = C2, **X** ∈ R2) U...U( T = CK,
-> **X** ∈ Rk)]
+> \**X** ∈ Rk)]
 >
 > tương tự, đây là union của các disjoint events nên theo axiom 2 (hay 3 nếu
 > theo sách Casella)
@@ -420,7 +420,7 @@
 > .. = P[(T = C1, **X** ∈ R1) + P(T = C2, **X** ∈ R2) +...+ P(T = CK, **X** ∈ Rk)]
 >
 > và tương tự như hồi nãy, nó chính là ∫R1 f(C1,**x**)d**x** + ...∫RK f(CK,
-> **x**)d**x**
+> \**x**)d**x**
 >
 > = Σk=1:K ∫Rk f(Ck,**x**)d**x** Và tương tự như khi K = 2, cái decision rule khiến maximize P("correct") có
 > thể đoán được cũng sẽ chính là cái rule này: Assign class Ck nếu joint  pdf
@@ -456,7 +456,7 @@
 > Lại liên hệ nó với hypothesis testing cho vui. Mình đã review lại một ít
 > trong các note trước, rằng trong bài toán này, ta cũng sẽ có hai loại error:
 > Type I error, là khi θ thật sự thuộc Θ0, nhưng lại kết luận là reject H0, hay
-> **X** ∈ R và Type II error là khi θ ∈ Θ0c mà lại kết luận là accept H0: **X**
+> \**X** ∈ R và Type II error là khi θ ∈ Θ0c mà lại kết luận là accept H0: **X**
 > ∈ Rc.
 >
 > Thì còn nhớ, trong sách Casella, ta đã nghe là, trong thực tế, người ta sẽ
@@ -584,7 +584,7 @@
 >
 > Chỗ này cần nói rõ cho dễ hiểu: Định nghĩa của loss, luôn gắn với một action. Với point
 > estimator, loss kí hiệu là L(δ(**X**), θ), để rồi nó là một random variable, mà khi nhận giá trị
-> **X** = **x**, kéo theo δ(**X**) mang giá trị estimate cho θ: δ(**x**) (là một action), kéo theo
+> \**X** = **x**, kéo theo δ(**X**) mang giá trị estimate cho θ: δ(**x**) (là một action), kéo theo
 > phát sinh loss L(δ(**x**), **θ**) từ action này. Và vì L(δ(**X**), θ) là random variable, nên
 > risk = lấy kì vọng, chính là dựa trên distribution của cái thằng L này, và truy nguyên nguòn
 > gốc thì c**ũng chỉ là xuất phát từ distribution của X**: f(**x**|θ), do đó risk mới là hàm phụ
@@ -753,7 +753,7 @@
 >
 > t bằng mấy (C1 hay ...CK), ví dụ là Ck đi)
 >
-> **x** thuộc R mấy (R1, R2 hay RK), ví dụ bằng Rj
+> \**x** thuộc R mấy (R1, R2 hay RK), ví dụ bằng Rj
 >
 > ii) output ra giá trị hàng Lkj
 >
@@ -928,15 +928,15 @@
 >
 > Như vậy, đến đây **bài toán trở thành y như đặt vấn đề là**: 
 >
-> **TRONG SỐ CÁC HÀM INDICATOR** Ij(**x**) j = 1...K thì **CHO CÁI NÀO BẰNG 1 ĐỂ RA KẾT QUẢ NHỎ NHẤT**.
+> \**TRONG SỐ CÁC HÀM INDICATOR** Ij(**x**) j = 1...K thì **CHO CÁI NÀO BẰNG 1 ĐỂ RA KẾT QUẢ NHỎ NHẤT**.
 >
 > Thì cũng chính là đồng nghĩa với: **CHỌN CÁI NÀO ĐỂ CÓ KẾT QUẢ NHỎ NHẤT TRONG ĐÁM {g1(x),...gK(x)**
 >
 > cũng là **CHỌN RA CÁI NÀO NHỎ NHẤT TRONG ĐÁM:** **{Σk=1:K Lk1 f(x, Ck), Σk=1:K Lk2 f(x, Ck), ..Σk=1:K LkK f(x, Ck)}**
 >
-> **VÀ ĐÓ CHÍNH LÀ Ý CỦA GS BISHOP KHI NÓI WE SHOULD MINIMIZE Σk Lkj p(x, Ck)**
+> \**VÀ ĐÓ CHÍNH LÀ Ý CỦA GS BISHOP KHI NÓI WE SHOULD MINIMIZE Σk Lkj p(x, Ck)**
 >
-> **trong câu nói "...which implies that for each x we should minimize Σk Lkj p(x, Ck)"**
+> \**trong câu nói "...which implies that for each x we should minimize Σk Lkj p(x, Ck)"**
 
 <br>
 
@@ -949,14 +949,14 @@
 > [!NOTE]
 > Như vậy đến đây ta đã hiểu là cái optimal decision rule đó là:
 >
-> **CHỌN RA CÁI NÀO NHỎ NHẤT TRONG ĐÁM**: {Σk=1:K Lk1 f(x, Ck), Σk=1:K
+> \**CHỌN RA CÁI NÀO NHỎ NHẤT TRONG ĐÁM**: {Σk=1:K Lk1 f(x, Ck), Σk=1:K
 > Lk2 f(x, Ck), ..Σk=1:K LkK f(x, Ck)} sau đó **LẤY INDEX** ĐỂ GÁN CLASS cho
 > data point **x**.
 >
 > Gọi là j = argmin_{Σk=1:K Lkj f(**x**, Ck)}, mang ý nghĩa là **trong K cục** Σk=1:K
 > Lkj f(x, Ck) j = 1,2..K thì **cục nhỏ nhất ứng với j bằng mấy**
 >
-> **Gán data point x cho Cj**, và **làm vậy với mọi x**.
+> \**Gán data point x cho Cj**, và **làm vậy với mọi x**.
 >
 > (ví dụ trong K cục trên, cái thứ 2 là nhỏ nhất, thì j = 2, decision rule tối ưu sẽ
 > gán data point vào class 2)
@@ -1117,7 +1117,7 @@
 > Mình có thể nhận ra đây chính là Naive Bayes
 >
 > Gs cho biết những cách tiếp cận mà trong đó ta thực hiện bước suy luận về
-> **distribution của input và** output, tức là học ra f(t, **x**) thì gọi là **generative** model.
+> \**distribution của input và** output, tức là học ra f(t, **x**) thì gọi là **generative** model.
 > Vì, nếu ta có distribution của input, ta có thể thực hiện sampling từ đó,
 > để có thể có một dạng dữ liệu synthetic (ý là ví dụ như ảnh do ta tạo ra, 
 > không phải ảnh chụp ở ngoài đời thật, ví dụ mấy mô hình tảo ảnh hiện nay
@@ -1474,7 +1474,7 @@
 > Normal(0, 1/β).
 >
 > Chú ý, cho tới đây, **w**, tham số của polynomial function, vẫn đang được coi như fixed & unknown, nên y(xi,
-> **w**) cũng vậy, fixed & unknown, báo hiệu rằng ta vẫn đang ở trong trường phái cổ điển.
+> \**w**) cũng vậy, fixed & unknown, báo hiệu rằng ta vẫn đang ở trong trường phái cổ điển.
 >
 > Rồi, từ đó, ta mới xây dựng joint distribution của T1,...TM f**T**(**t**). Nhờ tính chất độc lập của các cặp (xi, Ti) ta
 > mới phân tách joint probability bằng tích marginal probability
@@ -1487,16 +1487,16 @@
 > likelihood estimator.
 >
 > Theo định nghĩa θ^_ml(**X**) = argmax_θ L(θ|**X**), là θ giúp giải thích hợp lí nhất cho gía trị quan sát được của
-> **X**. Với hàm likelihood được định nghĩa là L(θ|**x**) = f(**x**|θ) Do đó θ^_ml(X) = argmax_θ f(**x**|θ).
+> \**X**. Với hàm likelihood được định nghĩa là L(θ|**x**) = f(**x**|θ) Do đó θ^_ml(X) = argmax_θ f(**x**|θ).
 >
 > Vậy thì ở đây, để đi tìm **w** (cũng chính là tìm y(xi,**w**), ta cũng có thể đi theo hướng này, đó là, tìm **w** giúp
 > giải thích hợp lí nhất cho giá trị quan sát được t1,t2..tN ứng với x1,..xN (chú ý, chỉ có T là random variable,
 > chứ **X** thì không, nên vector **x** không phải là giá trị quan sát được của vector random variable **X** nào cả.
 >
-> **w**_ML = argmax_**w** L(**w**|**t**)
+> \**w**_ML = argmax_**w** L(**w**|**t**)
 >
 > và likelihood L(**w**|**t**) cũng define bởi f(**t**|**x,w**,β) = Πi=1:N f(ti|xi,**w**,β) với f là pdf của Normal(y(xi,
-> **w**), 1/β)
+> \**w**), 1/β)
 >
 > nên bài toán là: maximize Πi=1:N f(ti|xi,**w**,β)
 >

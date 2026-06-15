@@ -408,12 +408,12 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > classification.
 >
 > 2 Words are classified as **neutral**, **positive**, or **negative** using
-> **conditional probabilities**, and their **ratios** are used for
+> \**conditional probabilities**, and their **ratios** are used for
 > classification.
 >
 > 3 The **ratios** for each word are essential for **Naive Bayes'
 > binary classification**, and a mathematical **trick** using
-> **logarithms** can be used to **prevent numerical underflow.**
+> \**logarithms** can be used to **prevent numerical underflow.**
 >
 > 4 **Lambda** is introduced as the **log of the ratio of the
 > probability that a word is positive** **over the probability that it
@@ -421,7 +421,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > sentiment classification.
 >
 > 5 The video emphasizes the **importance** of the **prior ratio** in
-> **unbalanced data-sets** and how it affects the Naive Bayes'
+> \**unbalanced data-sets** and how it affects the Naive Bayes'
 > formula for binary classification.
 
 <br>
@@ -574,7 +574,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > deep learning.
 >
 > 2 The first step in any supervised machine learning project is to **gather** and
-> **preprocess** data.
+> \**preprocess** data.
 >
 > 3 Preprocessing involves **lowercase** texts, **removing** **punctuation**, **URLs**,
 > handles, **stop words**, **stemming**, and **tokenizing**.
@@ -656,7 +656,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > [!NOTE]
 > In this lab, we will cover an **essential part of data analysis** that has not
 > been included in the lecture videos. As we stated in the previous module,
-> **data visualization** gives **insight** into the **expected performance** of
+> \**data visualization** gives **insight** into the **expected performance** of
 > any model.
 >
 > In the following exercise, you are going to make a **visual inspection** of
@@ -886,7 +886,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > and content** of an email to determine whether it is spam or not.
 >
 > 5 **Information retrieval** can be done using Naive Bayes by calculating the **likelihood** of
-> **documents given a query** and storing them based on their likelihoods.
+> \**documents given a query** and storing them based on their likelihoods.
 >
 > 6 Naive Bayes can be used for **word disambiguation** by **calculating the score of the
 > documents given that a word refers to each possible meaning**, and choosing the one with
@@ -1043,7 +1043,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > 1 **NLP errors** are **inevitable** no matter what method you use
 >
 > 2 Errors in NLP can be caused by **loss of semantic meaning**, **word**
-> **order**, and **language quirks** that are **difficult for machines** to understand
+> \**order**, and **language quirks** that are **difficult for machines** to understand
 >
 > 3 It's important to **analyze processed text** to ensure accurate results,
 > including **checking for punctuation and word removal**
@@ -1209,7 +1209,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > [!NOTE]
 > Welcome to week two of this specialization. You will learn about **Naive
 > Bayes**. Concretely, you will be using Naive Bayes for **sentiment analysis** on
-> **tweets**. Given a tweet, you will decide if it has a positive sentiment or a
+> \**tweets**. Given a tweet, you will decide if it has a positive sentiment or a
 > negative one. Specifically you will:
 >
 > • **Train a naive bayes model** on a **sentiment analysis task**
@@ -1223,7 +1223,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 > • Predict on your own tweet
 >
 > You may already be familiar with Naive Bayes and its justification in terms of
-> **conditional probabilities** and **independence**.
+> \**conditional probabilities** and **independence**.
 >
 > • In this week's lectures and assignments we used the **ratio of probabilities
 > between positive and negative sentiment.**

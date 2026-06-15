@@ -249,7 +249,7 @@
 > hoặc có thể **chia ra để riêng dh1/dWhh gọi là (b2)** (cho giống trong lecture note) thì ta 
 > sẽ có:
 >
-> **(b1): Tích của T-1 cái tanh'(z_t)** với **t = 2..T** với z_t = **Whh * h_t-1 + Wxh * x_t**
+> \**(b1): Tích của T-1 cái tanh'(z_t)** với **t = 2..T** với z_t = **Whh * h_t-1 + Wxh * x_t**
 >
 > (c) Tích của T-1 cái dh_k/dh_k-1, mà mỗi cái dễ thấy nó chính là Whh. 
 > Vậy ta có **Whh**(T-1)** 
@@ -258,19 +258,19 @@
 >
 > Vậy ta có (a)(b1)(b2)(c): 
 >
-> **dLT/dhT** * {**Tích của T-1 cái tanh'(z_t) với t = 2..T**} * {**Wxh * x_t**} * {**Whh**(T-1)**} * **dh1/dWhh** 
+> \**dLT/dhT** * {**Tích của T-1 cái tanh'(z_t) với t = 2..T**} * {**Wxh * x_t**} * {**Whh**(T-1)**} * **dh1/dWhh** 
 
 > [!NOTE]
 > Thế thì, đại khái là ta thấy một tích T-1 cái tanh'(..) và một lũy thừa T-1 cái W,
 >
-> *À ở đây có thể thấy trong công thức người ta ghi dấu ngoặc hơi sai, như triển
+> \*À ở đây có thể thấy trong công thức người ta ghi dấu ngoặc hơi sai, như triển
 > khai lại bên kia đã thấy nó phải là {tích các tanh'} nhân với {W^T-1},
 > Ghi như trong note là sai vì nó nghĩa là tích các {tanh't * W^T-1)
 >
 > Dẫn đến hệ quả: **Do đạo hàm của hàm tanh'() có giá trị nhỏ hơn 1**, lại được
-> **nhân đi nhân lại nhiều lần nên nó khiến gradient vanish**. Điều này có thể hiểu
+> \**nhân đi nhân lại nhiều lần nên nó khiến gradient vanish**. Điều này có thể hiểu
 > được, tuy nhiên chú ý lập luận của họ có thể gây hiểu nhầm khi cho rằng
-> **vì bản thân hàm tanh có range [-1,1]** **NÊN TANH' LUÔN NHỎ HƠN 1**. 
+> \**vì bản thân hàm tanh có range [-1,1]** **NÊN TANH' LUÔN NHỎ HƠN 1**. 
 >
 > Điểm này phải hiểu ý của họ là vầy theo công thức **tanh'(x) = 1 - tanh(x)**2** 
 > cũng cho ta thấy nếu x gần 0 thì tanh'(x) ~ = 1 còn |x| lớn thì tanh(x)**2 ~= 1 

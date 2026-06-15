@@ -18,7 +18,7 @@
 > Lấy điểm x, tại đó hàm **f có giá trị f(x)**. Thế thì khi ta **thay đổi x một
 > khoảng δx** thì f(x + δx) sẽ được tính như sau:
 >
-> **f(x + δx) = f(x) + f'(x)δx + O((δx)^2)**
+> \**f(x + δx) = f(x) + f'(x)δx + O((δx)^2)**
 >
 > Trong đó **f'(x) là độ dốc (rate of change) của tiếp tuyến** với hàm số **tại
 > x**. **O((δx)^2)** chỉ **mọi higher order term của δx** cần thiết để khiến vế
@@ -30,12 +30,12 @@
 > mọi sai khác còn lại.
 >
 > Tuy nhiên nếu δx **RẤT NHỎ**, thì phần **HIGHER** **ORDER** **TERM**
-> **CỦA** δx **TRỞ** **NÊN** **RẤT NHỎ,** **CÓ THỂ COI NHƯ KHÔNG
+> \**CỦA** δx **TRỞ** **NÊN** **RẤT NHỎ,** **CÓ THỂ COI NHƯ KHÔNG
 > ĐÁNG KỂ** (negligible) để rồi khi đó, **CHO PHÉP TA BỎ ĐI NHỮNG
 > PHẦN ĐÓ**, và **XẤP XỈ f(x + δx) CHỈ VỚI f(x) + f'(x)δx**. Thì đó chính là
 > cho ta công  thức của **LINEAR APPROXIMATION**
 >
-> **f(x + δx) ~= f(x) + f'(x)δx** (δx~=0)
+> \**f(x + δx) ~= f(x) + f'(x)δx** (δx~=0)
 >
 > Cần nhấn mạnh giá trị của f(x+δx) **KHÔNG CHÍNH XÁC BẰNG f(x) + f'
 > (x)*δx**, mà **phải có thêm (higher order term of δx),** nhưng với việc các
@@ -92,7 +92,7 @@
 > Từ đó cho phép ta có **df = f'(x)dx**. Và đây chính là **ĐỊNH NGHĨA** của derivative 
 > đó là df/dx chính là limit của δf/δx khi δx -> 0 mà thể hiện theo vi phân thì nó là
 >
-> **df = f'(x)dx**
+> \**df = f'(x)dx**
 >
 > Và df gọi là **vi phân** (**differential**), còn **f'(x)** là **đạo hàm (derivative)** Vậy có thể thấy đây giống như cách lập luận ngược lại với 1801. Nhớ lại trong **1801**, ta bắt đầu
 > với việc **định nghĩa của derivative của f đối với x**, là **rate of change** giữa [khoảng thay đổi của f
@@ -114,9 +114,9 @@
 >
 > Đó chính là ý nghĩa của cái phương trình cuối cùng trong screen:
 >
-> **∆f = (linear operator) ∆x**
+> \**∆f = (linear operator) ∆x**
 >
-> **(linear operator) ∆x** ở đây phải hiểu là cái **operator** sẽ được **áp dụng lên δx**, và operator này
+> \**(linear operator) ∆x** ở đây phải hiểu là cái **operator** sẽ được **áp dụng lên δx**, và operator này
 > là một **LINEAR OPERATOR**
 >
 > Gs sẽ ôn lại về linear operator ở phần sau. Nhưng hiểu đại khái là khi ghi "linear operator x" thì nó
@@ -128,7 +128,7 @@
 > bằng** chứ ko cần phải là ~=
 >
 > Còn nếu từ δf = f'(x) δx + o(δx) và ta cho δx -> dx mang ý nghĩa 
-> **VÔ CÙNG NHỎ**, thì ta có quyền bỏ luôn o(δx) (vẫn dùng dấu bằng), 
+> \**VÔ CÙNG NHỎ**, thì ta có quyền bỏ luôn o(δx) (vẫn dùng dấu bằng), 
 > vì nó trở thành 0 rồi. Khi đó ta có dạng **df = f'(x)dx** 
 >
 > Chính là cách thể hiện vi phân của đạo hàm
@@ -187,7 +187,7 @@
 > OPERATOR**:
 >
 > không thỏa mãn tính chất thứ hai homogeneity: O scalar * v = scalar
-> * O v
+> \* O v
 >
 > Và nó cái tên là **AFFINE** - đây là cái hay gặp trong neural network,
 > nhưng người ta vẫn gọi nó là một linear transformation (nhưng ngầm
@@ -204,7 +204,7 @@
 > của một linear operator.
 >
 > Ở đây ông lấy ví dụ về **vector space** là subspace các
-> **differentiable** / **integral-able** function của function space - như
+> \**differentiable** / **integral-able** function của function space - như
 > đã học 1806 với thầy Strang là tập hợp **các function vẫn đảm bảo
 > tính chất của vector space** khi **tổng và scale hai function vẫn
 > được một function** Phân tích một số ví dụ t**ại sao chúng là linear operator**.
@@ -261,7 +261,7 @@
 > LÀ MỘT ROW VECTOR**, để f'(x) dx **LÀ PHÉP DOT PRODUCT**
 >
 > Và người ta đặt cho nó cái tên là **GRADIENT** **VECTOR** kí hiệu
-> **∇f** và đọc là **grad f** Và như vậy **df là dot product của chúng: ∇fTdx,**
+> \**∇f** và đọc là **grad f** Và như vậy **df là dot product của chúng: ∇fTdx,**
 >
 > Và do đó **f'(x) CHÍNH LÀ (∇f)T**
 
@@ -285,7 +285,7 @@
 
 > [!NOTE]
 > Gs lấy ví dụ scalar function f(x)  = **xTAx**, với A là **constant square**
-> **matrix**.
+> \**matrix**.
 >
 > (không nhất thiết phải symmetric)
 >

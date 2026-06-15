@@ -20,7 +20,7 @@
 >
 > Thế thì ông nói, một vai trò của các distribution sẽ thảo luận là dùng để
 > mô hình hóa một phân phối p(x) của các random variable **X**, cho biết
-> **x1**, ..., **xN** là các giá trị quan sát của chúng. Bài toán này gọi là DENSITY
+> \**x1**, ..., **xN** là các giá trị quan sát của chúng. Bài toán này gọi là DENSITY
 > ESTIMATION. Và ta sẽ giả định tính iid.
 >
 > Dừng lại chút, sau khi đã học Casella, thì mình thấy đây chính là bài 

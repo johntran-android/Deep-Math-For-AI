@@ -467,7 +467,7 @@
 >
 > Vậy Var(X) = E(X - EX|Y)^2 + E(EX|Y - EX)^2
 >
-> **⇔ Var(X) = E[Var(X|Y)] - Var(EX|Y)**
+> \**⇔ Var(X) = E[Var(X|Y)] - Var(EX|Y)**
 
 <br>
 

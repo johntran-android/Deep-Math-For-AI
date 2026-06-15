@@ -42,7 +42,7 @@
 >
 > Image feature: Thì đại ý là **người ta đã extract feature sẵn**, mà như đã nói
 > trong bài giảng, người ta **"đưa image qua" một CNN** để có được một
-> **embedding feature vector**, mang thông tin của bức hình trước khi được
+> \**embedding feature vector**, mang thông tin của bức hình trước khi được
 > chuyển vào RNN để generate caption. Thì ở đây người ta đã làm bước này, với
 > mô hình **VGG16**, và cụ thể là họ dùng **output của cái fully-connection layer
 > fc7**, là một vector có số **dimension là 4096** (dễ hiểu fc7 có **4096** neuron).

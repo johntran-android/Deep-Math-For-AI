@@ -213,7 +213,7 @@
 > Dùng PIL.Image.open('an image path') để "open" content image và style
 > image file path. Dùng **preprocess()** function để preprocess image,
 > trong đó ta thấy họ tạo **torchvision.transform Compose** gồm các bước
-> **resize**, **chuyển thành tensor**, **normalize** với các giá trị **mean và
+> \**resize**, **chuyển thành tensor**, **normalize** với các giá trị **mean và
 > standard deviation của SqueezeNet** (điều này là dễ hiểu khi bước
 > preprocess phải tuân theo những thông số khi train SqueezeNet), cuối
 > cùng là một lambda function làm cái việc **chuyển x thành x[None]** tức

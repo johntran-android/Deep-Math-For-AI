@@ -48,7 +48,7 @@
 > Nên quay lại đây, derivative của function ∇f, kí hiệu (∇f)', sẽ là linear operator
 > act on dx 
 >
-> **d_∇f = ∇f(x+dx) - ∇f(x) = (∇f)'(x)[dx] (1)**
+> \**d_∇f = ∇f(x+dx) - ∇f(x) = (∇f)'(x)[dx] (1)**
 >
 > Và như đã nói, linear operator này, là phép nhân Jacobian matrix với vector
 > dx'

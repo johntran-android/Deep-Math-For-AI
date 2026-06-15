@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > Bài này ta sẽ làm quen với **Beta** distribution. Đại khái là ta đã biết
-> **Uniform** distrib là **cách duy nhất đến giờ** vừa **continuous** vừa **giới
+> \**Uniform** distrib là **cách duy nhất đến giờ** vừa **continuous** vừa **giới
 > hạn trong một đoạn [0,1]**. (những cái khác như **Normal** (-inf:inf), **Expo**
 > (0:inf) đều **không bị giới hạn**
 >
@@ -54,7 +54,7 @@
 > Đại khái là gs nói qua về **một số ưu điểm** của Beta.
 >
 > Beta với **các giá trị tham số khác nhau** có thể **tạo thành một gia đình** nhiều function khác nhau **linh hoạt** để
-> **thể hiện nhiều distribution khác nhau**. Có thể thấy hình ảnh gs minh họa cho thấy điều này.
+> \**thể hiện nhiều distribution khác nhau**. Có thể thấy hình ảnh gs minh họa cho thấy điều này.
 >
 > Ví dụ khi **a=b=1** thì nó **trở thành Uniform**. 
 >
@@ -63,7 +63,7 @@
 > Chính vì vậy mà nó hay **ĐƯỢC CHỌN LÀ DISTRIBUTION CHO PARAMETER** của distribution.
 >
 > Ví dụ như khi làm qua **Laplace** problem, trong đó ta cũng gặp **một Bern(p)** với **p** **chưa biết**. Và ta **COI p** **NHƯ**
-> **MỘT RANDOM VARIABLE** và dùng **distribution của p** để **thể hiện sự không chắc chắn**.
+> \**MỘT RANDOM VARIABLE** và dùng **distribution của p** để **thể hiện sự không chắc chắn**.
 >
 > Thế thì **ban đầu** thì người ta sẽ **chọn một distribution nào đó** để thể hiện **niềm tin ban đầu** nào đó. Thì
 > Beta với **tính flexible** nói trên hay được chọn. Sau đó **dùng Bayes rule** để xây dựng / **update distribution**
@@ -94,14 +94,14 @@
 > bài toán **Laplace succession,** gs cũng có nói rằng **khi "coi" pdf như xác suất** thì ta **có thể áp**
 > dụng **Bayes rules**.
 >
-> **f(p|X=x)** là **POSTERIOR** **distribution của p**, mang ý nghĩa là **khi đã biết giá trị của X**, **thì đây là
+> \**f(p|X=x)** là **POSTERIOR** **distribution của p**, mang ý nghĩa là **khi đã biết giá trị của X**, **thì đây là
 > PDF của p**. (vì p là continuous, nên đương nhiên ta có PDF). Còn như đã nói, **f(p)** là **PRIOR
 > PDF** - **distribution của p khi chưa biết giá trị của X**, mà ta **chọn là Beta(a, b)**
 >
 > Thế thì **theo Bayes rule**: **f(p|X=x)** = **P(X=k|p) * f(p)** / **P(X=k)**
 >
 > Thì trong đây **P(X=k|p)** gs cho biết là **function phụ thuộc p** (vì p chưa biết) nhưng **P(X=k)** thì
-> **đã integrate mọi possible value của p rồi**. Không còn depend on p nữa.
+> \**đã integrate mọi possible value của p rồi**. Không còn depend on p nữa.
 >
 > ===
 >
@@ -117,13 +117,13 @@
 > ===
 >
 > Còn **P(X=k)** gs nói tuy ta **có thể dùng Law of Total Probability** để **conditioned on** **mọi possible**
-> **value** của p như đã làm nhiều lần. 
+> \**value** của p như đã làm nhiều lần. 
 >
 > Đại khái là, để cho dễ lập luận, ta giả sử p là discrete luôn, khi đó  (X=k) = U {mọi p_i} (X=k, p=p_i) 
 > (union mọi p_i là các possible value của p). 
 >
 > Nên P(X=k) = P[U {mọi p_i} (X=k, p=p_i)]. Tiếp, event bên phải là Union của n **Disjoint** events, áp dụng
-> **Axiom** 2: P[U {mọi p_i} (X=k, p=p_i)] = ∑i P(X=k, p=p_i). 
+> \**Axiom** 2: P[U {mọi p_i} (X=k, p=p_i)] = ∑i P(X=k, p=p_i). 
 >
 > Áp dụng conditional event theorem: P(A,B) = P(A|B)P(B): 
 >
@@ -150,7 +150,7 @@
 > = (normalizing constant c) p^(A-1)(1-p)^(B-1)** với parameters là **A = a+k** = **a+X** (vì X=k, k là một possible value của X) và **B = b+n-k = b+n-X**. 
 >
 > Còn n**hững term không liên quan đến p** mà ta bỏ đi khi thay dấu bằng bằng dấu tỉ lệ thuận **sẽ** 
-> **tham gia vào làm vai trò của normalizing constant c**
+> \**tham gia vào làm vai trò của normalizing constant c**
 >
 > ====
 >
@@ -160,7 +160,7 @@
 > Và đây chính là lí do tại sao gọi là **CONJUGATE PRIOR FOR BINOMIAL**: Có nghĩa
 > là **Beta có đặc điểm là:** 
 >
-> **NẾU DÙNG NÓ LÀM PRIOR (DISTRIBUTION) CHO PARAMETER p** (mà ta chưa biết) **của một
+> \**NẾU DÙNG NÓ LÀM PRIOR (DISTRIBUTION) CHO PARAMETER p** (mà ta chưa biết) **của một
 > Binomial (n, p)** thì **sau khi có giá trị của X**, **dùng Bayes rule để update distribution** của p (thể hiện
 > qua posterior pdf) thì **POSTERIOR DISTRIBUTION CỦA p CŨNG SẼ VẪN LÀ MỘT BETA 
 > DISTRIBUTION**
@@ -224,14 +224,14 @@
 
 > [!NOTE]
 > Ok, tiếp theo gs nói rằng ta sẽ **thử tìm normalizing constant,** nhưng ta sẽ
-> **không làm với full case**, mà **chỉ xét một case đặc biệt** là khi **a, b là số
+> \**không làm với full case**, mà **chỉ xét một case đặc biệt** là khi **a, b là số
 > nguyên** (thực tế a, b không cần là số nguyên)
 >
 > Và ông nói ta sẽ tính **thử tích phân từ 0:1 x^k(1-x)^(n-k)dx** (mà gs cho rằng
 > ta sẽ thấy giống giống với PMF của Binomial, nhưng gs ko nói gì thêm) 
 > k là integer từ 0 đến n.
 >
-> **Đại khái** ta hiểu là **nếu tính được tích phân này** thì sẽ **giúp ta tính được tích
+> \**Đại khái** ta hiểu là **nếu tính được tích phân này** thì sẽ **giúp ta tính được tích
 > phân của x^(a-1)*(1-x)^(b-1)** từ đó **tính normalizing constant c**. Bởi như đã
 > nói c giúp tích phân -inf:inf của pdf bằng 1 nên nếu biết tích phân của pdf thì
 > sẽ suy ra c
@@ -262,7 +262,7 @@
 > Như đã hay làm để dễ hiểu, mình **tạm giả sử** **vị trí của bi hồng** mang giá trị **discrete** (mặc dù thực tế nó có giá trị liên
 > tục trong đoạn [0,1].
 >
-> **(X=k) = U {mọi possible value t của p} (X=k, p=t)**. Đây là dựa trên set theory. Và đây là **union** của các **disjoint** event,
+> \**(X=k) = U {mọi possible value t của p} (X=k, p=t)**. Đây là dựa trên set theory. Và đây là **union** của các **disjoint** event,
 > theo **Axiom 2**:
 >
 > P(X=k) = P [U {mọi possible value t của p} (X=k, p=t)] = **∑ t P(X=k, p=t)**
@@ -273,7 +273,7 @@
 >
 > Bây giờ quay lại p là **continuous**, ta có **dạng tương ứng** của điều trên:
 >
-> **P(X=k) = ∫-inf:inf P(X=k | p) f(p)dp với f(p) là PDF của p** Thế thì vì như đã nói, vì khi **ném các bi một cách ngẫu nhiên vào đoạn 0,1** ý nghĩa là vị trí của **bi có thể là bất cứ đâu
+> \**P(X=k) = ∫-inf:inf P(X=k | p) f(p)dp với f(p) là PDF của p** Thế thì vì như đã nói, vì khi **ném các bi một cách ngẫu nhiên vào đoạn 0,1** ý nghĩa là vị trí của **bi có thể là bất cứ đâu
 > với xác suất bằng nhau** hết. Vậy thì đồng nghĩa là **xác suất mà p mang giá trị nào trên đoạn [0, 1] đều bằng nhau**. Thì đây
 > chính là định nghĩa của **Uniform(0,1)**, do đó **p ~ Uniform (0,1)**
 >
@@ -313,7 +313,7 @@
 >
 > Bên cạnh đó, thí nghiệm trên hòan toàn có thể được thực hiện theo cách khác, đó là: **Ném ngẫu nhiên n bi trắng vào đoạn
 > [0,1]** (again, để vị trí mỗi bi nằm đâu trên đoạn này là hoàn toàn như nhau. Sau đó **chọn một bi ngẫu nhiên và sơn hồng**.
-> **Kết quả hoàn toàn giống với cách làm 1**. Do đó, **PMF của X cũng phải bằng kết quả trên**.
+> \**Kết quả hoàn toàn giống với cách làm 1**. Do đó, **PMF của X cũng phải bằng kết quả trên**.
 >
 > Thế thì trong cách làm 2, **vì bi hồng có thể là bất cứ vị trí nào**. Nên lập luận sẽ như sau rất đơn giản: **Vì bi hồng có thể ở
 > bất kì vị trí nào**, do đó **số bi ở bên trái nó có thể là 0,1,.....n**.

@@ -87,7 +87,7 @@
 > [!NOTE]
 > Ví dụ **áp dụng theorem này với Bin(n, p)**:
 >
-> **d/dp w1(p)** với bin(n, p),  w1(p) = **log p/(1-p)**
+> \**d/dp w1(p)** với bin(n, p),  w1(p) = **log p/(1-p)**
 >
 > ⇨ d/dp w1(p) = d/dp log p/(1-p)
 >
@@ -176,7 +176,7 @@
 >
 > ráng nhớ **dạng tổng quát của exponential families**:
 >
-> **h(x) c(θ) exp Σi wi(θ) ti(x)**
+> \**h(x) c(θ) exp Σi wi(θ) ti(x)**
 >
 > ... = 1 * 1/[(√2π)σ] exp [ - (x^2 - 2xμ + μ^2) / 2σ^2 ]   |  khai triển (x - μ)^2 ra thôi
 >
@@ -191,7 +191,7 @@
 >
 > lên trước thôi
 >
-> **= 1 * 1 / [(√2π)σ] exp ( - μ^2 / 2σ^2 ) exp [ (1/σ^2) (-x^2/2) + (μ / σ^2) (x) ]**  ⇨ Có nghĩa
+> \**= 1 * 1 / [(√2π)σ] exp ( - μ^2 / 2σ^2 ) exp [ (1/σ^2) (-x^2/2) + (μ / σ^2) (x) ]**  ⇨ Có nghĩa
 > là đến đây ta đã có thể thấy pdf của normal có dạng của exponential family:
 >
 > Với:

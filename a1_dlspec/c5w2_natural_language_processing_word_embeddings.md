@@ -154,8 +154,8 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > [!NOTE]
 > Tiếp đại khái nói là Transfer Learning chỉ useful khi data A lớn
 > hơn nhiều data B, nên đ/v một số task của NLP như "
-> **named entity recognition**, "**text summarization",** "
-> **co-reference resolution**" thì nó ok, còn đ/v "**translation
+> \**named entity recognition**, "**text summarization",** "
+> \**co-reference resolution**" thì nó ok, còn đ/v "**translation
 > modeling**" nơi mà ta có 1 large dataset cho nó thì không
 
 <br>
@@ -478,7 +478,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > [!NOTE]
 > Transfer learning: Đại khái ổng nói cũng như các vấn
 > để deep learning khác ta có thể download các
-> **pre-trained word-vectors** để dùng.
+> \**pre-trained word-vectors** để dùng.
 
 <br>
 
@@ -759,7 +759,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 > will load a pre-trained set of embeddings. In this notebook you'll try your hand at \\_**loading**\\_,
 > \\_**measuring similarity between**\\_, and \\_**modifying pre-trained embeddings**\\_.
 >
-> **After this assignment you'll be able to**:
+> \**After this assignment you'll be able to**:
 >  • Explain how word embeddings capture relationships between words
 >  • Load pre-trained word vectors
 >  • Measure similarity between word vectors using cosine similarity
@@ -1006,7 +1006,7 @@ of the GloVe algorithm  • Build a sentiment classifier using word embeddings
 ### \\*What you'll build:
 
 > [!NOTE]
-> **What you'll build:**  1 In this exercise, you'll start with a baseline model (Emojifier-V1)
+> \**What you'll build:**  1 In this exercise, you'll start with a baseline model (Emojifier-V1)
 > using word embeddings.
 >
 > 2 Then you will build a more sophisticated model (Emojifier-V2) that

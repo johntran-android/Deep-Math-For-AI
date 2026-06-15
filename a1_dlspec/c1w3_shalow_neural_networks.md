@@ -293,7 +293,7 @@
 <p align="center"><kbd><img src="assets/791ccbe180f6ca565e6842b84444f74678af3797.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **ĐẠI KHÁI LÀ CHỈ CÓ VẬY THÔI, MORE DEEPLY N.N CŨNG CHỈ 
+> \**ĐẠI KHÁI LÀ CHỈ CÓ VẬY THÔI, MORE DEEPLY N.N CŨNG CHỈ 
 > LÀ LẶP LẠI NHIỀU LẦN NHỮNG PHÉP TÍNH KIỂU NÀY.**
 >
 > So this kind of shows that the different layers of a neural network
@@ -369,7 +369,7 @@
 > xuất ra giá trị P trong khoảng (0,1)
 >
 > \- Hidden layer: **Relu, Leaky Relu** or Tanh trong đó:
-> **Cứ default Relu, còn thích cứ thử Leaky Relu** 
+> \**Cứ default Relu, còn thích cứ thử Leaky Relu** 
 >
 > \- Tại sao Relu tốt hơn thì:
 > Đại khái là hàm Relu hay Leaky Relu có **'derivative' ít bị bằng

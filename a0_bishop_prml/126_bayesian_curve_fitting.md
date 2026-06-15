@@ -225,7 +225,7 @@
 >
 > Ti là tổng của một normal(0, 1/β) với y(xi, **W**), lúc này (theo trường phái Bayesian) đã cũng là một
 > random variable khác (được tạo bởi hàm y áp lên random variables **W**) có dạng cụ thể là
-> **W**TΦ(xi) (hay Φ(x)T**W** đều được vì nó là một scalar)
+> \**W**TΦ(xi) (hay Φ(x)T**W** đều được vì nó là một scalar)
 >
 > Rồi, WTΦ(xi) dĩ nhiên có bản chất là linear combination của các phần tử của W bởi hệ số là các phần
 > tử của Φ(xi):
@@ -247,7 +247,7 @@
 > \--------------------
 >
 > Đến đây mới dùng một kiến thức trong Stat110 và Casella đã học: Tổng các normal sẽ là normal. Hay
-> **linear combination các normal cũng là normal** (vì scale một normal rv với α dĩ nhiên cũng ra normal (do
+> \**linear combination các normal cũng là normal** (vì scale một normal rv với α dĩ nhiên cũng ra normal (do
 > location scalar theorem)
 >
 > Như vậy [1 * x^0 + W1 * x^1 + W2 * x^2 + ....WM * x^M] sẽ là một normal:
@@ -320,7 +320,7 @@
 >
 > Còn cái đuôi Σn Φ(xn) tn, chính là **X**T**t** vì sao? Vì **X** là matrix có các hàng là Φ(xn) thì **X**T là
 > matrix có các cột là Φ(xn) ⇨ **X**T**t** theo góc nhìn 18.06, là **linear combination** các cột Φ(xn) của
-> **X**T, với bộ hệ số là các phần tử của vector **t**: Σn Φ(xn) tn
+> \**X**T, với bộ hệ số là các phần tử của vector **t**: Σn Φ(xn) tn
 >
 > Vậy cho thấy βΦ(xi)T (β**X**T**X** + α**I**)inv **X**T**t** **đích thị là dạng compact của công thức 1.70** 
 > \--------------------

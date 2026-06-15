@@ -9,8 +9,8 @@
 
 > [!NOTE]
 > Đại khái là nói về các **lí do** mà ta thường định nghĩa một **RANDOM**
-> **VARIABLE**, có **bản chất** là một **FUNCTION** map giữa một **POSSIBLE**
-> **OUTCOME** **TRONG SAMPLE SPACE** **GỐC** VỚI **MỘT SỐ THỰC
+> \**VARIABLE**, có **bản chất** là một **FUNCTION** map giữa một **POSSIBLE**
+> \**OUTCOME** **TRONG SAMPLE SPACE** **GỐC** VỚI **MỘT SỐ THỰC
 > TRONG SAMPLE SPACE MỚI** 
 > Lí do có thể là vì **trong một experiment** thì ta thường **CHỈ QUAN TÂM MỘT
 > ĐẠI LƯỢNG NÀO ĐÓ**, và việc **LÀM VIỆC VỚI SAMPLE SPACE MỚI** THÌ
@@ -29,7 +29,7 @@
 
 > [!NOTE]
 > Đại khái là **với** việc **định nghĩa** ra **random variable X** là một
-> **function** map **possible outcome trong sample space gốc** với
+> \**function** map **possible outcome trong sample space gốc** với
 > r**eal number** thì **TA CŨNG  CÓ SAMPLE SPACE MỚ**I: **GỌI
 > LÀ RANGE CỦA X**, **CHỨA CÁC POSSIBLE VALUES xi CỦA X**
 >
@@ -43,7 +43,7 @@
 > ta sẽ **ĐỊNH NGHĨA RA MỘT PROBABILITY FUNCTION MỚI P_X**
 > như vầy:
 >
-> **P_X(X=xi) = P({si** ∈ **S: X(si)=xi})** "Dịch ra" là xác suất của event random variable X mang possible
+> \**P_X(X=xi) = P({si** ∈ **S: X(si)=xi})** "Dịch ra" là xác suất của event random variable X mang possible
 > value xi của nó, sẽ được tính bằng xác suất của subset / event các
 > possible outcomes trong sample space gốc S MÀ được map với xi
 > thông qua (function X)"
@@ -65,7 +65,7 @@
 > các possible outcomes đó"
 >
 > Gs đề nghị ta **chứng minh P_X** (và có thể viết tắt là P(X=xi) luôn)
-> **cũng tuân thủ các Axiom**:
+> \**cũng tuân thủ các Axiom**:
 >
 > Axiom 1: **P_X(X=xi)** = **P({si** ∈ **S: X(si)=xi})** mà **vế phải theo
 > axiom 1** đã **không âm** nên **vế trái cũng vậy** ⇨ P_X tuân thủ
@@ -78,7 +78,7 @@
 > map giữa possible outcome trong sample space gốc với trục số thực
 > nên:
 >
-> **X(si)** ∈ **R** ∀**si** => P({si ∈ S: X(si) ∈ R}) = P({si ∈ S})
+> \**X(si)** ∈ **R** ∀**si** => P({si ∈ S: X(si) ∈ R}) = P({si ∈ S})
 >
 > | Cái này là do ∀ si ∈ S: X(s) ∈ R ⇨ {si ∈ S: X(si) ∈ R} = {si: si ∈ S}
 >
@@ -110,7 +110,7 @@
 
 > [!NOTE]
 > Một ví dụ, thực hiện thử nghiệm là **tung 3 đồng xu**. Và đặt ra một
-> **random variable X** "là" **số mặt Head**. Thì từ đó ta có một table cho thấy
+> \**random variable X** "là" **số mặt Head**. Thì từ đó ta có một table cho thấy
 > các **giá trị của X(s)** với các **possible outcomes trong sample space
 > gốc**. Để rồi ta thấy **RANGE của X**, tức **sample space của X** có các
 > possible values **{0,1,2,3}.**
@@ -123,7 +123,7 @@
 >
 > Và theo định nghĩa của I**NDUCED PROBABILITY FUNCTION P_X**, ta có:
 >
-> **P_X(X = 1)** = **P({s** ∈ **S : X(s) = 1})**
+> \**P_X(X = 1)** = **P({s** ∈ **S : X(s) = 1})**
 >
 > Và theo **định nghĩa của Probability function**:
 >
@@ -165,14 +165,14 @@
 >
 > Theo định nghĩa của **INDUCED** PROBABILITY FUNCTION:
 >
-> **P_X(X=k) = P({s** ∈ **S: X(s)=k})**
+> \**P_X(X=k) = P({s** ∈ **S: X(s)=k})**
 >
 > và theo định nghĩa của "**PROBABILITY FUNCTION P**"
 >
-> **= ∑ {s** ∈ **S: X(s)=k} P({s})** 
+> \**= ∑ {s** ∈ **S: X(s)=k} P({s})** 
 >
 > Và như vậy, và vì các possible outcomes trong S cũng equally likely nên
-> **P({s}) = 1/2^50**
+> \**P({s}) = 1/2^50**
 >
 > Nên việc cần làm chỉ là **đếm số possible outcome trong event {s** ∈ **S:
 > X(s)=k}**. Trong một chuỗi 50 số thì để có k số 1 (là một p.o trong event 
@@ -185,9 +185,9 @@
 > =====
 >
 > Cuối cùng là, nếu **sample space** mới (**range** của X) **UNCOUNTABLE** thì
-> **ĐỊNH NGHĨA CỦA INDUCED PROBABILITY FUNCTION** SẼ LÀ:
+> \**ĐỊNH NGHĨA CỦA INDUCED PROBABILITY FUNCTION** SẼ LÀ:
 >
-> **P_X(X** ∈ **A) = P({s** ∈ **S: X(s)** ∈ **A})**
+> \**P_X(X** ∈ **A) = P({s** ∈ **S: X(s)** ∈ **A})**
 >
 > (ý là ở đây vì X uncountable, nên nó có giá trị liên tục, không phải là rời
 > rạc x1,x2...nữa. Nên ta ko định nghĩa P_X(X = x) mà thay vào đó định nghĩa

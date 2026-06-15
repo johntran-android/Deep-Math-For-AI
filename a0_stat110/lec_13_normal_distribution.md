@@ -70,11 +70,11 @@
 > [!NOTE]
 > Tếp nối bài trước, bữa trước ta đã biết **tính chất Universality của Uniform**
 > distribution. Theo đó **nếu ta có một CDF function F** (bất cứ function nào
-> **continuous**, **non-decreasing** (luôn tăng, hoặc đi ngang chứ không giảm) và
-> **có giá trị từ 0 đến 1 khi input từ -inf đến inf**).
+> \**continuous**, **non-decreasing** (luôn tăng, hoặc đi ngang chứ không giảm) và
+> \**có giá trị từ 0 đến 1 khi input từ -inf đến inf**).
 >
 > Gs nói rằng ta **assume** F **strictly increasing** là để cho **dễ** thôi, chứ CDF
-> **đương nhiên có thể có flat region.**
+> \**đương nhiên có thể có flat region.**
 >
 > Khi đó, nếu tìm **F_inverse** và **apply nó vào một Uniform (0,1) random
 > variable** thì ta **sẽ có một random variable X tuân theo distribution có CDF là
@@ -129,7 +129,7 @@
 > Vậy cách **hiểu đúng về F(X)** phải là **bỏ X vào x ở đây để có F(X) = 1 - e^-X**
 >
 > Có nghĩa là ta phải **thể hiện F(x) ở dạng "làm gì đó lên x" và thay X vào x**. Chứ
-> **không phải là thay X vào x trong P(X<=x)**.
+> \**không phải là thay X vào x trong P(X<=x)**.
 >
 > Hiểu nôm na, cái việc **F(x) = P(X<=x) là ý nghĩa của CDF**, nhưng **apply F lên X**
 > thì phải **thay X vào công thức của hàm F** chứ không phải thay X vào x trong
@@ -163,7 +163,7 @@
 
 > [!NOTE]
 > Gs quay lại nói rằng cái **Universality theorem** cũng **rất hữu ích**. Ví dụ như ta **có một CDF F(x)** như vầy F(x) = **1 - e^-x** (nó là một distribution quan trọng mà ta sẽ học sau - **Exponential (1)**). Và **ta muốn simulate (kiểu như sampling)**
-> **các random variable X thuộc distribution có CDF là F**.
+> \**các random variable X thuộc distribution có CDF là F**.
 >
 > Thế thì **Universality theorem cho ta cách làm đơn giản**. Đầu tiên ta sẽ **tìm F_inv**. Đơn giản là **cho y = F(x) = 1-e^x**
 > và **giải ra x = G(y)** thì khi đó **G(y) chính là F_inv**.
@@ -228,7 +228,7 @@
 > Thế thì ở đây ta cũng có thể có định nghĩa independent r.v nhưng dùng **CDF** trong bối cảnh ta đang xét **continuous** r.v
 >
 > Đó là nếu các random variable X1, X2...Xn có tính chất **P(X1 ≤ x1, X2 ≤ x2, ... Xn ≤ xn) = P(X1 ≤ x1)*P(X2 ≤ x2)*..... P(Xn ≤ xn) thì Xj sẽ independent**
-> **VỚI MỌI x1, x2,...xn** 
+> \**VỚI MỌI x1, x2,...xn** 
 >
 > Thì ở đây **(X1 ≤ x1, X2 ≤ x2, ... Xn ≤ xn)** gọi là **JOINT CDF**,  [X1 ≤ x1, X2 ≤ x2, ... Xn ≤ xn] là **JOINT EVENT** (intersection của n event)
 > như đã biết
@@ -263,7 +263,7 @@
 >
 > Các X1, X2...Xn sẽ gọi là independent nếu:
 >
-> **JOINT PMF** P(X1=x1, X2=x2...Xn=xn) = P(X1=x1)*P(X2=x2)*...P(Xn=xn) (tích các
+> \**JOINT PMF** P(X1=x1, X2=x2...Xn=xn) = P(X1=x1)*P(X2=x2)*...P(Xn=xn) (tích các
 > PMF)
 
 <br>
@@ -285,7 +285,7 @@
 
 > [!NOTE]
 > Gs cho **ví dụ** để cho thấy tại sao **pair-wise independent không đủ** để
-> **kết luận independent**. 
+> \**kết luận independent**. 
 >
 > Cho **X1, X2 là ~ Bern(0.5) và i.i.d** và **X3 = X1+X2** 
 >
@@ -377,7 +377,7 @@
 >
 > Thậm chí **có một định lý** gì đó **đã chứng minh không thể** tính tích phân
 > không xác định của f(z) = e^(-z^2/2) (chính là cái ta đang muốn làm) ở dạng
-> **closed-form.**
+> \**closed-form.**
 
 > [!NOTE]
 > Không thể tính tích phân không xác định của f(z) =
@@ -423,12 +423,12 @@
 > [!NOTE]
 > Thì nó **trở thành tích phân kép** như vầy.
 >
-> **∫-inf:inf ∫-inf:inf e^-(x^2+y^2)/2 dxdy**
+> \**∫-inf:inf ∫-inf:inf e^-(x^2+y^2)/2 dxdy**
 >
-> **Gs nói không có gì khác biệt** với cái trên [tích phân f(x)dx]*[tích phân f(y)dy] cả,
+> \**Gs nói không có gì khác biệt** với cái trên [tích phân f(x)dx]*[tích phân f(y)dy] cả,
 > vì đơn giản là:
 >
-> **Khi tính tích phân kép** này, **ta sẽ làm (tích tích phân) với x trước**, khi đó **giữ
+> \**Khi tính tích phân kép** này, **ta sẽ làm (tích tích phân) với x trước**, khi đó **giữ
 > y là constant**. Và và **vì giữ y làm constant** nên **hòan toàn có thể đưa nó ra
 > đằng trước** để trở thành dạng [tích phân f(y)dy]*[tích phân f(x)dx] như trên
 >
@@ -466,7 +466,7 @@
 > 0:infinity**
 >
 > Trong bài 17 của 18.02 ta làm một ví dụ **tính tích phân kép trên area** là một
-> **hình tròn** (**paraboloid** **z = 1 - x^2 - y^2** cắt mặt phẳng **xy** tại **đường
+> \**hình tròn** (**paraboloid** **z = 1 - x^2 - y^2** cắt mặt phẳng **xy** tại **đường
 > tròn** bán **kính 1**, xuất phát từ bài toán tính thể tích của vùng nằm trong giới
 > hạn bởi paraboloid và mặt xy), khi đó vì giới hạn trong area như vậy nên
 > bound của inner integral r (mang ý nghĩa là khi giữ θ fixed thì r có range từ đâu
@@ -509,7 +509,7 @@
 > Và det J = cos(θ)*r*cos(θ) - r*sin(θ)*sin(θ) = r(sin^2(θ) + cos^2(θ)) = **r
 >
 > Và r dương nên |det J| = r. Vậy scaling factor là r nên phải dùng r*dr*dθ** (nói thêm trong đó mình cũng biết ở bối cảnh đởi bíen tích phân thì người ta gọi
-> **det của matrix Jacobian** là **Jacobian** luôn)
+> \**det của matrix Jacobian** là **Jacobian** luôn)
 
 <br>
 
@@ -561,7 +561,7 @@
 > [!NOTE]
 > Và như vậy, ta đã tìm ra c. Để PDF của Normal N(0,1) là:
 >
-> **(1/√2π) e^-z^2/2**
+> \**(1/√2π) e^-z^2/2**
 >
 > Gs nói **nhờ vậy** mà **khi nhìn vào công thức** của **Normal distribution**
 > ta có thể **hiểu chữ pi là từ đâu ra**:
@@ -680,7 +680,7 @@
 >
 > Và ý nghĩa của việc tách z^2 ra là để ta có v'(z) như vậy, **giúp ta có thể tìm đươc v**:
 >
-> **v(z) = -e^(-z^2/2)**. Có thể **check lại** bằng cách lấy **derivative của v** sẽ dễ thấy cho ra: 
+> \**v(z) = -e^(-z^2/2)**. Có thể **check lại** bằng cách lấy **derivative của v** sẽ dễ thấy cho ra: 
 >
 > dv/dz = d[-e^(-z^2/2)] / dz = - [d[e^(-z^2/2)] / d(-z^2/2)] * d(-z^2/2) / dz = - [e^(-z^2/2)] * [-2z/2]
 >
@@ -725,7 +725,7 @@
 
 > [!NOTE]
 > Mấy phút cuối gs nói về **một số notation**: Φ (capital fi) là kí hiệu để chỉ CDF của
-> **Standard normal (Normal(0,1))**
+> \**Standard normal (Normal(0,1))**
 >
 > Như đã biết CDF của continuous random variable là **tích phân từ -infinity tới
 > x của PDF**. Nên ở đây:

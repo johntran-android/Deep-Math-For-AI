@@ -57,7 +57,7 @@
 > là Up = thị trường lên, hoặc Down = thị trường đi xuống).
 >
 > Và các **predictor** có **Lag1, ...Lag5, Volume** đều là **quantitative** variable, còn
-> **Year** là **qualitative** variable.
+> \**Year** là **qualitative** variable.
 >
 > Thì đầu tiên, ta mới xem thử các **predictor** và cả **response**, có tính chất tương
 > quan **correlation** với nhau như thế nào. Đây cũng là một động tác có thể gọi là cơ
@@ -101,7 +101,7 @@
 > Thế thì trong R đại khái là ta sẽ dùng **sm.GLM** để fit các model thuộc **Generalized
 > Linear Model** (bao gồm Linear Regression, Logistic Regression...)
 >
-> **Chỉ định dùng Logistic Regression** bằng argument **family = binomial**.
+> \**Chỉ định dùng Logistic Regression** bằng argument **family = binomial**.
 >
 > Và ta sẽ fit model với **response** là **direction**, **predictors** là **Lag1,2,3,4,5** và **Volume**.
 >
@@ -136,7 +136,7 @@
 > bình của ngày thứ nhất trước Today - tức là hôm qua) **mà có tỉ suất lợi nhuận tăng**
 > thì xác suất direction là Up sẽ giảm.
 >
-> *Trong đây, Up là positive class, Down là negative class. Sở dĩ biết vậy vì gọi function
+> \*Trong đây, Up là positive class, Down là negative class. Sở dĩ biết vậy vì gọi function
 > contrasts(Direction) cho ra Up = 1, Down = 0.
 
 <p align="center"><kbd><img src="assets/827674126437e4d44418113de183d2b976f65707.png" width="100%"></kbd></p>
@@ -166,7 +166,7 @@
 >
 > Sau đó, ta dùng **statsmodel.api.GLM()** để **khởi tạo một Generalized Linear Model**
 > với endog (cứ hiểu là **response) là y,** exog (cứ hiểu là **predictor) là X**, và chỉ định
-> **Binomial** vì đây là binary reponse, cũng có thể gọi là vì đây ta muốn dùng Logistic
+> \**Binomial** vì đây là binary reponse, cũng có thể gọi là vì đây ta muốn dùng Logistic
 > Regression model)
 >
 > Cuối cùng gọi fit() để ..fit - training
@@ -180,11 +180,11 @@
 > [!NOTE]
 > Rồi, thông qua vài động tác, trong đó **dùng function predict**, đại khái là cho cái
 > model vừa fit xong, **dự đoán lại dataset**. Sau đó, dùng lệnh **table()** để giúp tạo ra
-> **confusion matrix**, với input là prediction (predicted reponse, tạo như thế nào  thì nói
+> \**confusion matrix**, với input là prediction (predicted reponse, tạo như thế nào  thì nói
 > dưới đây) và ground truth response (cột = Direction)
 >
 > Trước đó, đại khái là lệnh predict tùy vào argument '**type'** mà nó sẽ trả ra cho mình
-> **logit** hoặc giá trị **xác suất.** Thế thì ví như ta chọn type = '**response**' để nó cho
+> \**logit** hoặc giá trị **xác suất.** Thế thì ví như ta chọn type = '**response**' để nó cho
 > ra xác suất, thì để **chuyển thành predicted class**, ta sẽ **so với threshold 0.5**.
 >
 > (Nói là threshold thật ra là ý tưởng là vậy, còn cách làm cụ thể trong R và Python có
@@ -209,7 +209,7 @@
 > rate thường được gọi là hơi bị **lạc quan quá mức** (**over-optimistic**)
 >
 > Thế là đại khái người ta tách ra, dùng một bộ s**ubset của Smarket ừ 2001-2004** để
-> **train**, và các s**ample của 2005 để test.**
+> \**train**, và các s**ample của 2005 để test.**
 >
 > Các split thì đại khái là họ **dùng cái cột Year**, để rồi dùng cái kiểu (đại loại là) **Year <
 > 2005** để tạo ra **một vector True False** (chứa 1250 giá trị), sau đó thì **dùng vector này
@@ -224,11 +224,11 @@
 >
 > Fit xong, lại dùng **predict** nhưng lần này **bỏ test subset vào**. Kết quả ở dạng xác
 > suất, ta cũng threshold với 0,5 để thành predicted class và pass vào table để có
-> **confusion matrix.**
+> \**confusion matrix.**
 >
 > Thế thì ý chính đó là, kết qủa performance trên test set **cho thấy Logistic Regression
 > chỉ khá hơn đoán bừa tí xíu** khi **error rate** trên test set cỡ **52%, tức là tệ hơn random**
-> **guess**
+> \**guess**
 >
 > Còn tính error rate sao thì biết rồi, cái confusion matrix cho ra 4 chỉ số TP, TN, FP, FN
 > trong đ1o TP, TN là những case model đoán đúng, ta cộng nó lại, chia cho tổng số
@@ -248,7 +248,7 @@
 > giữa predictor và response**. Thì ta có thể nhận định rằng, **các predictor lag3, 4, 5
 > có coefficient rất nhỏ (ý là ~=0)**, và có thể coi chúng **có liên hệ rất yếu ớt tới
 > response**. Do đó ta có thể nghĩ rằng việc đưa chúng vào model không những
-> **không có ích** mà còn **gây hại tới model.**
+> \**không có ích** mà còn **gây hại tới model.**
 >
 > Họ nói vậy là vì, đưa vào model những predictor dư thừa, vô dụng không những **gây lãng phí về tính toán** mà còn tạo **variance** khiến **model dễ overfit** (vì như
 > ta biết càng nhiều predictor, tức là càng nhiều parameters, khiến model tăng
@@ -369,7 +369,7 @@
 > ở đây là LDA trong Python, thực ra ta đang dùng **Linear Discriminant
 > Analysis class** của **scikitLearn**
 >
-> **lda.scaling_** chính là vector **hai coefficient của hai predictor Lag1, Lag2**
+> \**lda.scaling_** chính là vector **hai coefficient của hai predictor Lag1, Lag2**
 > dùng để tính ra linear discriminant function.
 >
 > Vậy thì với một sample với hai giá trị predictor, chỉ việc linear combination
@@ -466,8 +466,8 @@
 > [!NOTE]
 > Ôn lại tí, NB assume các predictor đều independent nhau. Thế thì tuy đặt ra giả định như
 > vậy, thì khi đối diện với một dataset, ta sẽ **giả định thêm** là các predictor tuân theo
-> **loại** **distribution** **nào** nữa. Và trong với Stock dataset, ta giả định chúng là **Gaussian distribution**, cũng giống như LDA và QDA. Nó sẽ giống với QDA hơn, khi các
-> **Gaussian sẽ khác nhau cả mean** và **covariance** matrix, chỉ là các cov matrix ở đây
+> \**loại** **distribution** **nào** nữa. Và trong với Stock dataset, ta giả định chúng là **Gaussian distribution**, cũng giống như LDA và QDA. Nó sẽ giống với QDA hơn, khi các
+> \**Gaussian sẽ khác nhau cả mean** và **covariance** matrix, chỉ là các cov matrix ở đây
 > đều sẽ là **diagonal** matrix.
 >
 > Rồi, rồi sau khi fit ta cũng có thể xem các thông số tính toán. Với GaussianNB của
@@ -498,8 +498,8 @@
 
 > [!NOTE]
 > Phần đầu đại khái là họ dùng knn lib để predict test subset, không cần fit vì đây là
-> **non-parametric model.** Kết quả ra đại khái là **không hơn gì random guess khi K=1**, và chỉ
-> **nhỉn hơn chút khi K=3**.
+> \**non-parametric model.** Kết quả ra đại khái là **không hơn gì random guess khi K=1**, và chỉ
+> \**nhỉn hơn chút khi K=3**.
 
 <p align="center"><kbd><img src="assets/d16d181fdc9babd97e3645dbe6a9f526e5903b36.png" width="100%"></kbd></p>
 
@@ -523,7 +523,7 @@
 > của knn model** (Trước đây ta chỉ biết ảnh hưởng của nó đến gradient descent)
 >
 > Và cũng dễ hình dung, ví dụ như trong không gian 2D, với **hai predictor: X1, X2** thì
-> **distance cuả hai sample A, B, giả sử tính theo L2 distance sẽ là:
+> \**distance cuả hai sample A, B, giả sử tính theo L2 distance sẽ là:
 >
 > sqrt[(X1_A - X1_B)^2 + (X2_A - X2_B)^2].** 
 > Thế thì **dễ thấy range của X1, và X2 sẽ tác động đến kết quả**. Trong sách gs ví dụ X1 là
@@ -538,7 +538,7 @@
 > Thế thì **cách giải quyết cũng đơn giản** là gặp lại người bạn cũ: **standardization**
 > \- **convert** data về **standard Gaussian mean = 0, standard deviation = 1**.
 >
-> **Dùng thư viện** để làm, và **kết quả của model khi đạt error rate ~11%**
+> \**Dùng thư viện** để làm, và **kết quả của model khi đạt error rate ~11%**
 
 <p align="center"><kbd><img src="assets/df7ad2db7e6874a62d2ce536e96eb160142fee6b.png" width="100%"></kbd></p>
 
@@ -645,11 +645,11 @@
 > ta đã biết trong equation Y = beta0 + beta1X1 thì beta0 sẽ là giá trị của response Y khi không
 > có predictor X, và beta1 cho biết mỗi khi predictor tăng 1 đơn vị thì khiến response tăng thêm
 > bao nhiêu (nếu beta1 âm thì tức là khiến Y giảm). Và khi **X1 là dummies variable** thì
-> **beta1** sẽ có nghĩa là, **nếu X1 = 1 thì sẽ khiến response Y tăng thêm bao nhiêu**.
+> \**beta1** sẽ có nghĩa là, **nếu X1 = 1 thì sẽ khiến response Y tăng thêm bao nhiêu**.
 >
 > Vậy, ta có thể hiểu kết quả fitting của linear regression cho **coefficient của mnthFebruary = 6.
 > 845** có nghĩa là,  khi **chuyển từ tháng 1 (January) sang tháng 2 (February)** - tức là khi đó
-> **dummy variable mnthFeb = 1**, thì  sẽ **khiến response tăng thêm 6.845 đơn vị**.
+> \**dummy variable mnthFeb = 1**, thì  sẽ **khiến response tăng thêm 6.845 đơn vị**.
 >
 > Và tương tự **coefficient của** **mnthMarch = 16.551** có nghĩa là khi chuyển từ tháng 1 sang
 > tháng 3, tức là mnthMarch = 1, response Y sẽ tăng thêm 16.551 đơn vị.
@@ -671,20 +671,20 @@
 
 > [!NOTE]
 > Rồi, tiếp theo, đại khái là gs cho biết cái lm model ở trên, cho ra kết quả hơi khác hoặc
-> **cách làm hơi khác** với model lm đã fit cũng trên bộ dataset này **trong phần trước** (trước khi
+> \**cách làm hơi khác** với model lm đã fit cũng trên bộ dataset này **trong phần trước** (trước khi
 > giới thiệu Poisson Regression, họ vẫn fit với lm)
 >
 > Thế thì điểm khác biệt giữa hai lm model đó là: Model 1, là cái vừa mới nói, khi tạo model
 > lm, thì đang **dùng default setting của lm trong đó**, nó sẽ đối xử với các qualitative predictor
 > như month, hour theo cách là nó sẽ **gán cái "loại" đầu tiên làm base hay reference**, để rồi
-> **beta của nó bằng 0**. ví dụ coeff của monthJan = 0, để từ đó, như ta nói ở note trước, coeff
+> \**beta của nó bằng 0**. ví dụ coeff của monthJan = 0, để từ đó, như ta nói ở note trước, coeff
 > của monthFeb sẽ thể hiện **mức chênh lệch của response trong tháng 2 SO VỚI THÁNG 1**,
 > và tương tự, coeff của monthMar sẽ thể hiện mức chênh lệch response trong tháng 3 SO
 > VỚI THÁNG 1
 >
 > Còn khi fit lm model 2, ta để ý họ gọi hai dòng code dùng
 >
-> **contrasts(Bikeshare$hr) = contr.sum(24)** và **contrast(Bikeshare$mnth) = contr.
+> \**contrasts(Bikeshare$hr) = contr.sum(24)** và **contrast(Bikeshare$mnth) = contr.
 > sum(12)**
 >
 > Đại khái là trong R, khi đối xử với categorical predictors, có 2 cách tiếp cận:
@@ -703,9 +703,9 @@
 > chọn tháng 1 và hour = 1 làm reference) sang sum coding.
 >
 > Thành ra, khi model fit, nó sẽ tính coeff cho tháng 1 tới 11, và coeff của tháng 12 thì bằng
-> **TỔNG ÂM CỦA COEFF MẤY THÁNG KIA. Để rồi TỔNG CÁC COEFF BẰNG 0**, giúp khi
+> \**TỔNG ÂM CỦA COEFF MẤY THÁNG KIA. Để rồi TỔNG CÁC COEFF BẰNG 0**, giúp khi
 > giải thích ý nghĩa  của các coeffs các tháng thì đó là mức chênh lệch của tháng đó so với
-> **TRUNG BÌNH CẢ NĂM.**
+> \**TRUNG BÌNH CẢ NĂM.**
 
 <p align="center"><kbd><img src="assets/7c5711c654eafe106ab4489b56f3e178cfc466af.png" width="100%"></kbd></p>
 

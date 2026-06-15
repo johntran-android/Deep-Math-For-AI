@@ -303,7 +303,7 @@
 >
 > \------
 >
-> **TÓM TẮT LẠI**
+> \**TÓM TẮT LẠI**
 >
 > I) 
 >
@@ -437,7 +437,7 @@
 > line search sẽ phải chạy rất nhiều lần để chọn α0.
 >
 > Mình hiểu ý này như vầy: Bản chất trong quasi-Newton method thì cái chính là ta
-> **cập nhật matrix Hk** **qua từng vòng** lặp, bằng cách **cho nó thỏa secant
+> \**cập nhật matrix Hk** **qua từng vòng** lặp, bằng cách **cho nó thỏa secant
 > equation** để Hk ở vòng sau **mang curvature information của hàm số khi đi từ
 > xk-1 → xk**.
 >
@@ -450,7 +450,7 @@
 >
 > Tuy nhiên, với quasi-Newton, pk = - Hk ∇fk, mà **Hk thì chưa có curvature
 > information từ xk → xk+1**. Do đó, rất có thể **pk tính ra quá dài**, và
-> **backtracking line search phải chạy nhiều lần** để thu ngắn step size lại.
+> \**backtracking line search phải chạy nhiều lần** để thu ngắn step size lại.
 >
 > Khi đi từ x0 → x1, dùng H0 = βI thông tin độ cong theo hướng x0 đến x1, chính xác
 > là độ lớn của nó hoàn toàn bị quyết định bởi β. Và  do đó nếu β chọn lớn quá, thì
@@ -638,7 +638,7 @@
 > Rồi line search để tìm αk (với ban đầu = 1 và scale nhỏ dần cho đến khi thỏa Wolfe
 > condition)
 >
-> **Vì sao vẫn phải line search?** À là vì **chưa chắc Hk đã chứa thông tin độ cong theo
+> \**Vì sao vẫn phải line search?** À là vì **chưa chắc Hk đã chứa thông tin độ cong theo
 > hướng pk một cách phù hợp được như Hessian chuẩn**. Nếu là Hessian chuẩn thì
 > khỏi line search, α = 1 là chắc chắn thỏa rồi. Nhưng Hk thì ko, nên có thể pk vẫn dài
 > quá, và phải thu ngắn lại. Nhưng việc khởi tạo cái chính là khiến nó ko quá tệ, line
@@ -825,7 +825,7 @@
 > đem lại nhiều lợi ích)
 >
 > Thế thì, nếu trong BFGS gốc, H0 được initialized kiểu đó, thì **B0** dễ hiểu
-> **cũng sẽ được làm tương tự**: = **(1/β) * I.**
+> \**cũng sẽ được làm tương tự**: = **(1/β) * I.**
 >
 > Rồi, còn nhớ, trong L-BFGS, khi tính Hk, ta sẽ **đắp m cặp si, yi vào Hk_0**.
 > và **Hk_0 được khởi tạo là γk * I** với ideas là cho **độ cong của Hk_0 có
@@ -906,7 +906,7 @@
 > Tính B1Tv: Đây là phép nhân matrix (2m, n) với vector R^n tốn: 2m phép
 > dot product R^n vs R^n vector: tốn n+n-1 = 2n-1 flops. ⇨ tổng cộng:
 > 2m(2n-1) = 4mn - 2m flops. Nhưng nếu chỉ tính multiplication thì tốn
-> **2mn**
+> \**2mn**
 >
 > Tính (B2)inv B1Tv thì chính là giải B2 z = B1Tv tìm z
 >

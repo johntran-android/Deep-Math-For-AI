@@ -26,15 +26,15 @@
 <p align="center"><kbd><img src="assets/9a322c0d3c951c9e71bb9401bd7bdc21fe4e2923.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Chi-Square X^2**(1) đương nhiên là **chỉ có 1 Standard Normal rv**
-> **bình phương** lên. Thì gs cho biết nó **thật ra** chính là một **Gamma(1/2, 1/2)**.
+> \**Chi-Square X^2**(1) đương nhiên là **chỉ có 1 Standard Normal rv**
+> \**bình phương** lên. Thì gs cho biết nó **thật ra** chính là một **Gamma(1/2, 1/2)**.
 >
 > Đại ý là ta có thể **đổi biến** để **chứng minh PDF của nó là Gamma
 > PDF** có điều gs lưu ý là khi **bình phương** ta sẽ **cần để ý function sẽ
 > có lúc tăng, lúc giảm**
 >
 > Vì ta đã **check các properties** của **Gamma** trong bài trước để thấy rằng nó
-> **có nhiều ưu điểm** nên **Chi-Square (1)** cũng vậy
+> \**có nhiều ưu điểm** nên **Chi-Square (1)** cũng vậy
 
 <br>
 
@@ -77,7 +77,7 @@
 
 > [!NOTE]
 > Ta qua một **distribution** có **liên quan đến Normal** cũng nổi tiếng là
-> **Student-t**.
+> \**Student-t**.
 >
 > Đầu tiên gs đại khái là **kể câu chuyện** về **cái tên Student-t**, đại ý là
 > một nhà  **statistician** muốn d**ấu tên** nên gọi distribution này là như
@@ -108,11 +108,11 @@
 <p align="center"><kbd><img src="assets/5437b01619a86b7ecbba8e166c4081e0cb3be4b9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Một số tính chất** của Student-t. đầu tiên là **Symmetric**: 
+> \**Một số tính chất** của Student-t. đầu tiên là **Symmetric**: 
 >
 > Đại khái là vì **T = Z / √(V/n)** thì trong đó: 
 >
-> **Z là N(0,1)** thì ta biết rằng **nó đối xứng**, nên -Z cũng ~ N(0,1). 
+> \**Z là N(0,1)** thì ta biết rằng **nó đối xứng**, nên -Z cũng ~ N(0,1). 
 >
 > Và còn **chia cho √(V/n)** là **số dương** nữa. Nên nó có tính **Symmetric** có
 > nghĩa là nếu **T ~ t_n** thì **-T cũng ~ t_n**
@@ -178,7 +178,7 @@
 
 > [!NOTE]
 > đại khái là gs nhắc lại ta đã từng biết rằng các **even moment** của **Standard**
-> **Normal** tuân theo pattern là **1,1*3, 3*5,...**
+> \**Normal** tuân theo pattern là **1,1*3, 3*5,...**
 >
 > Thế thì bài trước ta đã dùng **MGF** để chứng minh. Nhưng có thể có cách khác
 > đó là, các event moment sẽ có dạng E(Z^2n) với n = 1,2....

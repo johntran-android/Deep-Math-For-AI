@@ -228,9 +228,9 @@
 >
 > zi = λ - μi cũng suy ra dzi = dλ 
 >
-> **total** **differentiation**:
+> \**total** **differentiation**:
 >
-> **df = ∂f/∂z1 dz1 + ...∂f/∂zn dzn**
+> \**df = ∂f/∂z1 dz1 + ...∂f/∂zn dzn**
 >
 > = ∂f/∂z1 dλ + ...∂f/∂zn dλ = (∂f/∂z1 + ...∂f/∂zn)dλ
 >
@@ -252,7 +252,7 @@
 > = Πj (λ - μj) { Σi=1:n 1 / (λ - μi) } **= Πj (λ - μj) { Σi=1:n (λ - μi)^-1 }** Đây chính là kết quả trong slide. Thay lại dùng x thay cho λ, và λi thay
 >  cho μi sẽ thấy:
 >
-> **df/dx = Πj (x - λj) { Σi=1:n (x - λi)^-1 }**
+> \**df/dx = Πj (x - λj) { Σi=1:n (x - λi)^-1 }**
 
 > [!NOTE]
 > Thế thì ta có thể áp dụng công thức gradient của det(A) để tính
@@ -282,7 +282,7 @@
 >
 > Thay lại U = xI - A và dU = dx
 >
-> **df(U) = d(det(xI - A)) = det(xI - A) tr[(xI - A)invTd(xI - A)]
+> \**df(U) = d(det(xI - A)) = det(xI - A) tr[(xI - A)invTd(xI - A)]
 >
 > = det(xI - A) tr[(xI - A)invTdx]** Tiếp, xét tr[(xI - A)invTdx], nó là tr(matrix nhân dx) thì vì **dx là scalar**
 > nên **tr(Mdx) = tr(M) dx**. Chứng minh rất dễ, tr(M α) là **tổng entries
@@ -296,7 +296,7 @@
 >
 > kết quả này cho thấy derivative của det(xI - A) wrt x là 
 >
-> **det(xI - A)tr[(xI - A)invT]** Và với det(xI - A) = Πi (x - λi) và 
+> \**det(xI - A)tr[(xI - A)invT]** Và với det(xI - A) = Πi (x - λi) và 
 >
 > tr[(xI - A)invT] thì cũng là tr[(xI - A)inv)] (vì tr(A) = tr(AT))
 >
@@ -309,7 +309,7 @@
 >
 > Kết quả này cho thấy solution của hai cách là 1:
 >
-> **det(xI - A)tr[(xI - A)invT] = Πi (x - λi) Σj (x - λj)^-1**
+> \**det(xI - A)tr[(xI - A)invT] = Πi (x - λi) Σj (x - λj)^-1**
 
 <br>
 

@@ -59,7 +59,7 @@
 > [!NOTE]
 > ông nói tiếp về **cách giải một vấn đề (trong xác suất)**
 >
-> **Cách thứ nhất** đã nói trước đây, đó là **thử xét các simple case và extreme
+> \**Cách thứ nhất** đã nói trước đây, đó là **thử xét các simple case và extreme
 > case**
 >
 > Và **cách thứ hai** hữu ích cho mọi lĩnh vực khác đó là **chia nhỏ vấn đề** và
@@ -102,7 +102,7 @@
 > ⇔ B = B ∩ (∪i Ai) (do ∪i Ai = S) ⇔ B = ∪i (B ∩ Ai) (distributive law) ⇨ P(B)
 > = P(∪i (B ∩ Ai))
 >
-> **mà A1, A2...An disjoint nên các event (A1,B); (A2,B);...(An,B) cũng disjoint** nên theo Axiom 2 ta có xác suất của union của các disjoint event chính là bằng
+> \**mà A1, A2...An disjoint nên các event (A1,B); (A2,B);...(An,B) cũng disjoint** nên theo Axiom 2 ta có xác suất của union của các disjoint event chính là bằng
 > tổng của xác suất mỗi event: **=> P(P((A1, B) U (A2,B) + ... U (An, B))) = P(A1,B) + P(A2,B) + ...P(An,B)** và do đó **P(B) = P(A1,B) + P(A2,B) + ...P(An,B)**
 
 <br>
@@ -117,11 +117,11 @@
 > Và tiếp P(B ∩ A1) hay P(B, A1) theo **conditional theorem** bữa trước ta
 > đã biết
 >
-> **P(B, A1) = P(B|A1)*P(A1)** (và cũng bằng **P(A1|B)*P(B)**)
+> \**P(B, A1) = P(B|A1)*P(A1)** (và cũng bằng **P(A1|B)*P(B)**)
 >
 > do đó ta có thể ghi tiếp P(B) như vầy.
 >
-> **P(B) = P(B|A1)*P(A1) + P(B|A2)*P(A2) + ....P(B|An)*P(An)**
+> \**P(B) = P(B|A1)*P(A1) + P(B|A2)*P(A2) + ....P(B|An)*P(An)**
 >
 > Và gs cho biết đây chính là **LOTP**: **LAW OF TOTAL PROBABILITY**. Nhưng
 > ông đề nghị **chỉ việc hiểu nó là việc ta chia nhỏ vấn đề** để tính B mà thôi
@@ -179,7 +179,7 @@
 >
 > Câu hỏi là **giả sử đã có một lá xì**, thì **xác suất ta có 2 lá xì là bao nhiêu**.
 >
-> **P(lấy được 2 lá xì | lấy được 1 lá xì) = ?**
+> \**P(lấy được 2 lá xì | lấy được 1 lá xì) = ?**
 >
 > Đây là gs **định nghĩa event bằng lời**, ông cho rằng nếu muốn define bằng
 > kí hiệu thì event B (lấy được 1 lá xì) là **(Lá 1 = xì U Lá 2 là xì) (hoặc / union)** Và như event A, cả hai lá đều xì sẽ là **(Lá 1 là xì, Lá 2 là xì)** (và / intersect) Ta cần tính **P(A|B)**
@@ -215,7 +215,7 @@
 > thuộc tập này. Và một theorem trong sách Casella đã chứng minh nếu A ⊂ B ⇨
 > A ∩ B = A
 >
-> **⇨ both ace** ⊂ **have ace ⇨ (both aces ∩ have ace) = both ace
+> \**⇨ both ace** ⊂ **have ace ⇨ (both aces ∩ have ace) = both ace
 >
 > ⇨ P(both aces, have ace) = P(both aces)**
 >
@@ -424,7 +424,7 @@
 > Thế thì gs cho biết ta sẽ **diễn dịch / interpret con số 95%** là như sau:
 >
 > Nếu một người **thực sự có bệnh (event D đã xảy ra)**, thì xác suất (của event) 
-> **kết quả xét nghiệm dương tính** (event T) sẽ là: 
+> \**kết quả xét nghiệm dương tính** (event T) sẽ là: 
 >
 > P(T|D) = 95%
 >
@@ -448,7 +448,7 @@
 >
 > Trong khi đó, cái **bệnh nhân quan tâm** là:
 >
-> **Xác suất** [**họ có bệnh | kết quả xét nghiệm là dương tính**]: **P(D|T)**
+> \**Xác suất** [**họ có bệnh | kết quả xét nghiệm là dương tính**]: **P(D|T)**
 >
 > Và đây là **SAI LẦM PHỔ BIẾN TRONG STATISTIC LÀ KHÔNG PHÂN
 > BIỆT ĐƯỢC HAI CÁI NÀY P(T|D) VÀ P(D|T)**
@@ -465,7 +465,7 @@
 > P(T|D)*P(D) = P(D|T)*P(T) => **P(D|T) = P(T|D)*P(D)/P(T)**
 >
 > Thế thì trong đó, P(D) ta đã có - chính là **xác suất mắc bệnh trong dân cư**
-> **1%**. Ta **cần tìm** **P(T) - xác suất kết qủa test dương tính**
+> \**1%**. Ta **cần tìm** **P(T) - xác suất kết qủa test dương tính**
 >
 > Thế thì ông nói rằng ta thấy trong nhiều sách ghi về Bayes rule có phần mẫu số
 > phức tạp, ông cho rằng công thức đó là khi đã áp dụng Law of total probability 
@@ -574,7 +574,7 @@
 >
 > và có nghĩa là trong tình huống này, **khả năng kết quả xét nghiệm sai
 > thấp** nhưng **khả năng xuất hiện bệnh cũng rất thấp**. Và hai cái này
-> **compete** nhau.
+> \**compete** nhau.
 
 <br>
 
@@ -668,7 +668,7 @@
 
 > [!NOTE]
 > Gs nói rằng, ví dụ như đề bài cho: **cho rằng sự kiện A đã xảy ra**... Thì nếu ta
-> **dựa vào đó để phán rằng P(A) = 1 là SAI**. Vì điều đó **chỉ thể hiện P(A|A) = 1**
+> \**dựa vào đó để phán rằng P(A) = 1 là SAI**. Vì điều đó **chỉ thể hiện P(A|A) = 1**
 >
 > Mang ý nghĩa là: **cho trước A đã xảy ra**, thì **DỰA VÀO ĐÓ** ta **biết A chắc
 > chắn đã xảy ra** (xác suất bằng 1). Chứ ta **KHÔNG BIẾT GÌ về P(A)** - là xác
@@ -689,7 +689,7 @@
 
 > [!NOTE]
 > Sai lầm phổ biến thứ 3 là LẪN LỘN GIỮA **INDEPENDENCE** VÀ
-> **CONDITIONAL INDEPENDENCE**
+> \**CONDITIONAL INDEPENDENCE**
 
 <br>
 
@@ -702,7 +702,7 @@
 >
 > A, B gọi là **conditionally independent given C** nếu:
 >
-> **P(A ∩ B | C)** = **P(A|C) * P(B|C)**
+> \**P(A ∩ B | C)** = **P(A|C) * P(B|C)**
 >
 > Giống như định nghĩa Independent event. Nhưng **mọi thứ lúc này
 > phải "conditioned on C"**
@@ -741,7 +741,7 @@
 >
 > Có nghĩa là:
 >
-> **DÙ CÁC VÁN TRƯỚC CÓ KẾT QUẢ RA SAO**, THÌ **KHẢ NĂNG MÌNH THẮNG ÔNG
+> \**DÙ CÁC VÁN TRƯỚC CÓ KẾT QUẢ RA SAO**, THÌ **KHẢ NĂNG MÌNH THẮNG ÔNG
 > ĐÓ Ở VÁN NÀY VẪN GIỮ NGUYÊN** NHƯ VẬY.
 >
 > Tức là nếu ổng đánh dở thì (và dẫn tới các ván trước ta đều thắng) thì xác suất mình thắng
@@ -798,7 +798,7 @@
 > bởi VIỆC **CÓ HOẶC KHÔNG XẢY RA C**. Cụ thể là
 >
 > Nếu alarm kêu (A xảy ra), và không có ai nướng bắp (C ko xảy ra,hay Cc) thì
-> **CHẮC CHẮN LÀ CÓ CHÁY**: P(F|A,Cc) = 1
+> \**CHẮC CHẮN LÀ CÓ CHÁY**: P(F|A,Cc) = 1
 >
 > Nhưng nếu alarm kêu (A xảy ra) và có người nướng bắp (C xảy ra) thì **CHƯA
 > CHẮC LÀ CÓ CHÁY**: P(F|A, C) <= 1

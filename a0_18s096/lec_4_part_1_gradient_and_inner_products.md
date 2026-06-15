@@ -111,16 +111,16 @@
 > ON dx**, ĐỂ CHO RA **SCALAR (*) ĐỀU PHẢI CÓ DẠNG LÀ INNER
 > PRODUCT CỦA MỘT VECTOR NÀO ĐÓ VỚI dx**.
 >
-> **f(x) = f'(x)[dx] ⇨ = [some vector] . dx**
+> \**f(x) = f'(x)[dx] ⇨ = [some vector] . dx**
 >
 > Và ta gọi vector đó chính là **gradient ∇f**
 >
 > (*): (và cái **linear operator act on một vector cho ra scalar** người ta gọi là
-> **linear-form**).
+> \**linear-form**).
 >
 > DO ĐÓ, **KHI TA TRIỂN KHAI RA ĐƯỢC** DẠNG:
 >
-> **df = [vector gì đó] . dx** thì vector gì đó **CHÍNH LÀ GRADIENT**
+> \**df = [vector gì đó] . dx** thì vector gì đó **CHÍNH LÀ GRADIENT**
 
 <br>
 
@@ -135,13 +135,13 @@
 > Bên cạnh đó, ở class này ta **được biết thêm** là còn **có các dạng dot
 > product khác**, một trong số đó là **weighted dot product**:
 >
-> **x .w y = Σ wi*xi*yi** với mọi **wi phải dương** (để thỏa rule 3)
+> \**x .w y = Σ wi*xi*yi** với mọi **wi phải dương** (để thỏa rule 3)
 >
 > Cái này gs cho rằng **sẽ hữu ích** với các bài toán như **statistic**, ví dụ
 > như khi ta có các **measurement với độ tin cậy khác nhau** và ta muốn
-> **gắn trọng số nhỏ hơn cho những cái có độ tin cậy thấp**.
+> \**gắn trọng số nhỏ hơn cho những cái có độ tin cậy thấp**.
 >
-> **hoặc** là khi ta có **các unit khác nhau**, thì **wi cũng có thể coi như một
+> \**hoặc** là khi ta có **các unit khác nhau**, thì **wi cũng có thể coi như một
 > các để scale các measurement**
 >
 > Và cái này có thể được **thể hiện theo lối linear algebra**: 
@@ -150,7 +150,7 @@
 >
 > Thế thì có **một dạng khái quát hơn**, khi ta **đặt matrix W bất kì vào**:
 >
-> **x .W y = xTWy**
+> \**x .W y = xTWy**
 >
 > Thì dĩ nhiên để **thỏa rule 1**, **W phải symmetric**. Và để **thỏa rule 3** 
 > thì **xTWx phải ≥ 0** và chỉ bằng 0 khi z = 0 Và MIT 18.06 đã dạy ta 
@@ -363,10 +363,10 @@
 >
 > Đầu tiên ta sẽ nói về tính chất của **trace**: 
 >
-> **Trace của scalar bằng chính nó** (giống như matrix có
+> \**Trace của scalar bằng chính nó** (giống như matrix có
 > một component vậy). Và vì **df là scalar,** nên ta có thể viết:
 >
-> **df = xTdAy = tr(xTdAy)**
+> \**df = xTdAy = tr(xTdAy)**
 >
 > Tính chất thứ hai là **CYCLIC**: Xuất phát từ **tr(AB) = tr(BA)**
 >

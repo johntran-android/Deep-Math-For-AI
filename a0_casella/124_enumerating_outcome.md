@@ -19,19 +19,19 @@
 > Axiom**) trong đó **define xác suất của một event A chứa các possible
 > outcome si, ...**  như sau:
 >
-> **P(A) = ∑ {si** ∈ **A} pi** (dịch ra là **tổng xác suất của các possible
+> \**P(A) = ∑ {si** ∈ **A} pi** (dịch ra là **tổng xác suất của các possible
 > outcome** **chứa** trong subset/event A.
 >
 > Thế thì theo đó P(S) dĩ nhiên sẽ bằng:
 >
-> **P(S) = ∑ {si** ∈ **S} pi.**
+> \**P(S) = ∑ {si** ∈ **S} pi.**
 >
 > Mà theo **Axiom 2, P(S) = 1**, nên:
 >
-> **∑ {si** ∈ **S} pi = 1**
+> \**∑ {si** ∈ **S} pi = 1**
 >
 > Thế thì **nếu** như các possible outcome **equally likely** thì dĩ nhiên ta sẽ có
-> **p1 = p2 =...pn = 1/n**
+> \**p1 = p2 =...pn = 1/n**
 >
 > Tức là **P({si}) = 1/n với mọi i**.
 >
@@ -78,7 +78,7 @@
 > Thế thì, **lẽ thông thường**, nếu **bộ bài được bình thường**, thì việc rút được
 > bộ nào trong (52 choose 5) bộ **đều có khả năng xảy ra như nhau** (equally
 > likely). Do đó x**ác xuất xảy ra của mỗi possible outcome** đều bằng 1/n =
-> **1/(52 choose 5)**
+> \**1/(52 choose 5)**
 >
 > Tiếp theo ta mới xét event **A = (5 lá có 4 lá Ace)**, để rồi áp dụng định nghĩa về
 > hàm xác suất:
@@ -94,7 +94,7 @@
 > Do đó ta sẽ đếm các possible outcome có trong A, hay có bao nhiêu bộ 5 lá mà
 > có chứa 4 lá Ace: Để đếm cái này, ta sẽ thực hiện theo hai bước: Bước 1 **chọn
 > 4 lá ách**: Rõ ràng **chỉ có một cách chọn**, vì bộ bài chỉ có 4 lá ách. Bước 2
-> **chọn 1 lá thứ 5**: Có **52-4=48 cách chọn** (again, chỗ này cũng bị chi phối bởi việc có hoàn lại hay không).
+> \**chọn 1 lá thứ 5**: Có **52-4=48 cách chọn** (again, chỗ này cũng bị chi phối bởi việc có hoàn lại hay không).
 >
 > Và vì hai bước **tuân theo step rule** tức **kết quả của bước trước không ảnh
 > hưởng đến số lựa chọn của bước sau** nên ta sẽ có **1*48=48 cách chọn**.

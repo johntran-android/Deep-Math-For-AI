@@ -284,7 +284,7 @@
 >
 > = Cov(X, X) + 2Cov(X, Y)  + Cov(Y, Y) 
 >
-> **Vậy Var(X +Y) = Var(X) + Var(Y) + 2 Cov(X, Y)
+> \**Vậy Var(X +Y) = Var(X) + Var(Y) + 2 Cov(X, Y)
 >
 > Ta mới dùng tiếp kết quả ở trên là khi X, Y độc lập thì Cov(X, Y) = 0
 >

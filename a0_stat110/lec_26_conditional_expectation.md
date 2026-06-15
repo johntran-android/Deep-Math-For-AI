@@ -11,12 +11,12 @@
 > đại khái là tiếp tục bài toán **Envelop** Paradox. Thế thì bữa trước ta đã nói,
 > khi **tính kì vọng của số tiền** trong **phong bì 2**. Ta tính như sau:
 >
-> **200*P(phong bì 2 chứa 200)** **+ 50*P(phong bì 2 chứa 50)** = **200*0.5 + 50*0.5** 
+> \**200*P(phong bì 2 chứa 200)** **+ 50*P(phong bì 2 chứa 50)** = **200*0.5 + 50*0.5** 
 > = **125**. Số tiền này lớn hơn 100 (là số tiền trong phong bì 1 đã biết). Do đó
 > ta nên đổi qua chọn phong bì 2.
 >
 > Thế thì khái quát lên, ta gọi **X là số tiền trong phong bì 1**. Thì phong bì 2 sẽ có
-> **2 possible value** là **2X** và **X/2** với xác suất xảy ra là **1/2**.
+> \**2 possible value** là **2X** và **X/2** với xác suất xảy ra là **1/2**.
 >
 > Thế thì có **hai lập luận mâu thuẫn nhau** về giá trị **kì vọng của Y.**
 >
@@ -56,10 +56,10 @@
 
 > [!NOTE]
 > Thế thì trong hai argument này **phải có một cái sai**. Và gs cho rằng, cái
-> **argument 1 về tính symmetry** **không có lí do gì mà sai**
+> \**argument 1 về tính symmetry** **không có lí do gì mà sai**
 >
 > Do đó argument 2 sai. Và nó sai ở chỗ, k**hi ta dùng thông tin** **condition** thì
-> **KHÔNG CÓ NGHĨA LÀ TA CÓ QUYỀN BỎ CONDITION** Và đây chính là **sai lầm phổ biến**. Và gs nói thêm nhiều thảo luận nổ ra về
+> \**KHÔNG CÓ NGHĨA LÀ TA CÓ QUYỀN BỎ CONDITION** Và đây chính là **sai lầm phổ biến**. Và gs nói thêm nhiều thảo luận nổ ra về
 > bài toán này. Nhưng ta chỉ cần biết là lập luận trên sai ở chỗ này **Ta chỉ có thể bỏ condition sau khi dùng thông tin của nó nếu CHÚNG 
 > INDEPENDENT. Có điều trong bài toán này ta không có gì để biện minh
 > rằng chúng independent cả. Do đó ta không thể bỏ condition đi được**
@@ -87,7 +87,7 @@
 
 > [!NOTE]
 > Đại khái là **symmetry** cho ta ngay lập tức biết **E(W_TT)** = **E(W_HH)**, và
-> **E(W_HT)** = **E(W_TH)**
+> \**E(W_HT)** = **E(W_TH)**
 >
 > Tuy nhiên nó không cho biết **E(W_HT)** có bằng **E(W_HH)** không (gs cho
 > biết kết quả sẽ là 4 và 6)
@@ -104,7 +104,7 @@
 >
 > Để thấy rằng, **số lần tung cho đến khi có kết quả HT** xuất hiện **luôn có thể
 > tách** thành **tổng của W1 = số lần tung cho đến khi TH xuất** **hiện** và W2 =
-> **số lần tung** cho đến khi **HT xuất hiện**
+> \**số lần tung** cho đến khi **HT xuất hiện**
 >
 > Ví dụ chuỗi kết quả là TTT**TH**HH**HT** thì có có W1 = 5 và W2 = 4 còn nếu
 > chuỗi kết quả là HHH**HT** thì W1 = 0, W2 = 5
@@ -120,17 +120,17 @@
 > E(W2)**
 >
 > Thế rồi, nhớ lại **Geometric** distribution, nếu **X ~ Geom(p)** thì story của X là
-> **số lần Bern(p) trial fail** **cho đến khi success**, và theo **convention** ở class
+> \**số lần Bern(p) trial fail** **cho đến khi success**, và theo **convention** ở class
 > này sẽ **không tính lần success** vào (tức nếu **ngay lần trial đầu tiên đã
 > success** thì X = **0**, nên gọi là **start at 0**)
 >
 > Thế thì, story của **W1** cũng y như vậy, vì story của nó cũng là **số lần T cho
 > đến khi H xảy ra**, với mỗi trial cũng là Bern(p) i.i.d. Do đó **W1** cũng là r.v ~
-> **Geom(p)**. Nhưng vì W1 **có tính lần success** vào. Cho nên ta sẽ nói **W1-1
+> \**Geom(p)**. Nhưng vì W1 **có tính lần success** vào. Cho nên ta sẽ nói **W1-1
 > là một Geom(p)** (để nếu lần đầu đã success ngay thì W1-1 = 0 => W1 = 1)
 >
 > Tương tự câu chuyện của **W2** cũng là giống như vậy, chỉ có điều định nghĩa
-> **success** là **T xảy ra**. Nhưng cùng story, nên **W2-1 cũng là Geom(p) r.v**
+> \**success** là **T xảy ra**. Nhưng cùng story, nên **W2-1 cũng là Geom(p) r.v**
 >
 > Thế thì bữa trước ta đã chứng minh **expected value** của **Geom(p) là p/q**
 >
@@ -148,7 +148,7 @@
 
 > [!NOTE]
 > Rồi, ta tính qua E(**W_HH**). Ta cũng giả sử có chuỗi kết quả như thế này
-> **TTTTHT**.
+> \**TTTTHT**.
 >
 > Thì với W_HT. Ta nhận xét là khi chuỗi TTT sau đó H xảy ra (để có chuỗi
 > TTTTH) kiểu như ta đã đi một nửa đường, bởi vì sau đó dù chuỗi tiếp theo có
@@ -198,7 +198,7 @@
 >
 > Do đó: 
 >
-> **P(X=x) = P(X=x | Y=y1)*P(Y=y1) + P(X=x | Y=y2) * P(Y=y2)
+> \**P(X=x) = P(X=x | Y=y1)*P(Y=y1) + P(X=x | Y=y2) * P(Y=y2)
 >
 > Đây chính là Law of Total Probability** ====
 >
@@ -224,7 +224,7 @@
 > Gs lập luận là, nếu 1st toss ra T, thì coi như ta lãng phí một lần toss, và bài toán
 > vẫn y như vậy, vẫn quay lại ban đầu. Do đó: 
 >
-> **E(W_HH | "1st toss ra T") = 1 + E(W_HH)**
+> \**E(W_HH | "1st toss ra T") = 1 + E(W_HH)**
 
 > [!NOTE]
 > Thực sự chưa
@@ -249,7 +249,7 @@
 > Nếu lần thứ 2 cũng ra H, là ta đã done, tức là đã có HH xảy ra. 
 >
 > Như vậy E(W_HH | 1st toss is H, 2nd toss is H) = 2, với xác suất xảy ra là 1/2: 
-> **2*(1/2)** (vì xác suất cái lần toss thứ 2 ra H là 1/2)
+> \**2*(1/2)** (vì xác suất cái lần toss thứ 2 ra H là 1/2)
 >
 > ii) E(W_HH | 1st toss is H | 2nd toss is T) * P(2nd toss is T) Trường hợp thứ
 > hai là lần thứ 2 ra T, thì như lập luận lúc nãy, ta lãng phí 2  lần toss và vấn
@@ -290,15 +290,15 @@
 
 > [!NOTE]
 > Gs nói qua định nghĩa của **CONDITIONAL EXPECTATION**. Như ta đã biết
-> **expectation** là **mean**, với **discrete** case thì nó là **weighted sum** các
-> **possible** values, với weight là x**ác suất possible value xảy ra**.
+> \**expectation** là **mean**, với **discrete** case thì nó là **weighted sum** các
+> \**possible** values, với weight là x**ác suất possible value xảy ra**.
 >
-> **E(Y) = Σ mọi possible value y: y * P(Y=y)**
+> \**E(Y) = Σ mọi possible value y: y * P(Y=y)**
 >
 > Thế thì với conditional expectation **E(Y|X=x)**, mọi chuyện **vẫn giống vậy**, chỉ
 > khác là **PMF P(Y=y)** sẽ thay bằng **conditional PMF P(Y=y|X=x)**
 >
-> **E(Y|X=x)** = **Σ mọi possible value y: y * P(Y=y|X=x)**
+> \**E(Y|X=x)** = **Σ mọi possible value y: y * P(Y=y|X=x)**
 >
 > P(Y=y|X=x) là **Conditional PMF
 >
@@ -330,7 +330,7 @@
 > [!NOTE]
 > Với **continuous** case, ta sẽ có dạng tương đương là:
 >
-> **E(Y|X=x)** = ∫-inf:inf y***f_Y|X(y|x)** dy
+> \**E(Y|X=x)** = ∫-inf:inf y***f_Y|X(y|x)** dy
 >
 > Với f_Y|X(y|x) là **conditional PDF**. 
 >
@@ -345,12 +345,12 @@
 >
 > thì với PDF:
 >
-> **f_Y|X(y) = f_X,Y(x,y) / f_X(x).** 
+> \**f_Y|X(y) = f_X,Y(x,y) / f_X(x).** 
 >
 > Với **f_X,Y(x,y)** như đã biết là **Joint PDF**, và **f_X(x)** là **Marginal PDF của X**
 >
 > Do đó **E(Y|X=x) =** **∫-inf:inf y * f_X,Y(x, y) / f_X(x) dy** Và nói thêm vì **f_X(x)** là **density function theo x**, nên khi **tích phân theo y**, ta
-> **coi nó như constant** nên có thể **đem bỏ ra ngoài tích phân**
+> \**coi nó như constant** nên có thể **đem bỏ ra ngoài tích phân**
 
 > [!NOTE]
 > CONTINUOUS CASE: E(Y|X=x) = ∫-inf:inf y*f_Y|X(y|x) dy
@@ -366,12 +366,12 @@
 > function theo x, PHỤ THUỘC x.**
 >
 > Ông nói rằng thấy **rất nhiều lần sai sót** của sinh viên khi tính **E(Y|X=x)**
-> **mà lại ra kết quả là function của Y**
+> \**mà lại ra kết quả là function của Y**
 >
 > Bởi lẽ **ý nghĩa của E(Y|X=x)** là **trung bình mọi giá trị của Y**, khi biết X=x
 > do đó, nó **không có lí do gì để phụ thuộc Y**. 
 >
-> **Nếu X,Y independent**, thì **X=x** **không bổ sung gì thông tin** cho việc tính
+> \**Nếu X,Y independent**, thì **X=x** **không bổ sung gì thông tin** cho việc tính
 > mean của Y, khi đó **E(Y|X=x) trở thành E(Y)** và **g(x) không còn phụ thuộc
 > x, tức là nó là hằng số.**
 
@@ -441,7 +441,7 @@
 > Thế thì, đầu tiên ta sẽ biết thêm rằng, **Linearity** vẫn áp dụng bình thường với 
 > conditional expectation: 
 >
-> **E(X+Y|X) = E(X|X) + E(Y|X)**
+> \**E(X+Y|X) = E(X|X) + E(Y|X)**
 
 <br>
 
@@ -455,7 +455,7 @@
 >
 > Bởi lẽ, **E(X)** mang **ý nghĩa** là tuy **không biết chính xác giá trị của X**, vì nó
 > là random variable. Nhưng ta **muốn dự đoán giá trị** của nó, thể hiện qua 
-> **expected value, hay trung bình**.
+> \**expected value, hay trung bình**.
 >
 > Do đó E(X|X) lẽ tự nhiên mang ý nghĩa là cho rằng, **giả dụ biết giá trị của X**
 > rồi thì ta **đoán giá trị của X là bao nhiêu**, thì đương nhiên nó **chính là X** cái
@@ -480,7 +480,7 @@
 > cái mà đã biết giá trị.**
 >
 > Còn tiếp theo vì X,Y **i.i.d** nên **việc biết giá trị của X** **không giúp gì** cho việc
-> **đoán giá trị của Y**. Do đó **E(Y|X) = E(Y)**
+> \**đoán giá trị của Y**. Do đó **E(Y|X) = E(Y)**
 
 <br>
 
@@ -549,7 +549,7 @@
 
 > [!NOTE]
 > Và vì X,Y ~ Pois(λ), nên các **P(Y=n-k)** và **P(X=k)** chỉ việc dùng công thức
-> **PMF** của Pois(λ) ráp vô. Đồng thời, vì X,Y là Pois(λ) nên **tổng của
+> \**PMF** của Pois(λ) ráp vô. Đồng thời, vì X,Y là Pois(λ) nên **tổng của
 > chúng cũng là Pois(λ+λ)** mà ta đã chứng minh bữa trước (theo link)
 >
 > Do đó **P(T=n)** cũng chỉ việc áp dụng **PMF của Pois(2λ)**
@@ -603,7 +603,7 @@
 > [!NOTE]
 > gs cho một cách giải khác. Đó là, vì X,Y **i.i.d**, nên theo **Symmetry**:
 >
-> **E(X|T) = E(Y|T)**
+> \**E(X|T) = E(Y|T)**
 >
 > Mà E(X+Y|T) = E(T|T) = T 
 >

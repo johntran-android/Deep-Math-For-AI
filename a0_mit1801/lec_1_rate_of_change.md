@@ -91,7 +91,7 @@
 
 > [!NOTE]
 > và biểu thức cần tìm limit có tên gọi là
-> **DIFFERENCE QUOTIENT**
+> \**DIFFERENCE QUOTIENT**
 
 <br>
 

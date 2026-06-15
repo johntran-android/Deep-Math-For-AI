@@ -19,7 +19,7 @@
 > components)
 >
 > Câu hỏi là 3 vector này span một subspace của R7 thì
-> **dimension của nó có khả năng là bao nhiêu?**
+> \**dimension của nó có khả năng là bao nhiêu?**
 >
 > \-> Thử trả lời: **3**, vì với 3 vector, thì giả sử không cùng
 > phương thì chúng chỉ có thể span một **3D subspace trong
@@ -39,10 +39,10 @@
 > [!NOTE]
 > Cho matrix 5x3, **có 3 pivot tức rank = 3**.
 >
-> **Nullspace** của nó là gì?
+> \**Nullspace** của nó là gì?
 >
 > Thử trả lời: Rồi, vì matrix có **3 cột**, mà lại có **3 pivot**, tức là
-> **cả 3 cols đều là pivot cols.**
+> \**cả 3 cols đều là pivot cols.**
 >
 > Thế thì để xác định nullspace của U, tức là ta xét đến tập
 > hợp các solution vector của Ux = 0, cũng gọi là những
@@ -72,11 +72,11 @@
 
 > [!NOTE]
 > gs: Lập luận như vậy đúng nhưng cần làm rõ một điểm
-> **nullspace là một vector space, nên ít nhất nó chứa
+> \**nullspace là một vector space, nên ít nhất nó chứa
 > zero vector.**
 >
 > Nên câu trả lời là **dimension của nullspace là 0 là đúng**,
-> **nhưng nullspace vẫn chứa zero vector chứ không phải 
+> \**nhưng nullspace vẫn chứa zero vector chứ không phải 
 > rỗng.**
 
 <br>
@@ -381,7 +381,7 @@
 > nhau thì có  scale chúng thì chúng vẫn không cùng phương.
 >
 > \- Xét việc cộng hai vector độc lập với hai vector độc lập khác, thế thì việc
-> **cộng hai vector thay đổi phương của chúng**. Dẫn đến là kết quả của
+> \**cộng hai vector thay đổi phương của chúng**. Dẫn đến là kết quả của
 > hai việc **cộng hai vector khác phương với hai vector khác  phương
 > khác** **có thể tạo ra hai vector cùng phương** -> không còn  độc lập
 > nhau.
@@ -544,12 +544,12 @@
 > biết, **nullspace của A CHỈ CHỨA ZERO**.
 >
 > (ở đây khi review sau khi đã học **determinant** ta có thể dùng 
-> **cofactor formula** để tính nhanh det của A theo cột 3: + 1 * det
+> \**cofactor formula** để tính nhanh det của A theo cột 3: + 1 * det
 > của matrix [1 1; 0 1] = 1*1 = 1 => khác 0 nên matrix non-singular
 > hay fullrank => nullspace chỉ có zero.
 >
 > Rồi, thế thì kết hợp với ý trên, **để Cx thuộc nullspace của A**,
-> **tức là Cx chỉ có bằng ZERO và như vậy x là solution của
+> \**tức là Cx chỉ có bằng ZERO và như vậy x là solution của
 > Cx = 0** 
 >
 > Vậy, điều này **đồng nghĩa là x là solution của Bx=0** thì **cũng là

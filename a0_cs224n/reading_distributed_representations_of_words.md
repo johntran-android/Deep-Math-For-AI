@@ -42,20 +42,20 @@
 > [!NOTE]
 > 1 Introduction
 >
-> **Distributed representations of words in a vector space** help learning algorithms to
+> \**Distributed representations of words in a vector space** help learning algorithms to
 > achieve better performance in natural language processing tasks by grouping similar
 > words. One of the earliest use of word representations dates back to 1986 due to
 > Rumelhart, Hinton, and Williams [13]. This idea has since been applied to **statistical
 > language modeling** with **considerable success** [1]. The follow up work includes
-> **applications to automatic speech recognition** and **machine translation** [14, 7], and a
-> **wide range of NLP tasks** [2, 20, 15, 3, 18, 19, 9].
+> \**applications to automatic speech recognition** and **machine translation** [14, 7], and a
+> \**wide range of NLP tasks** [2, 20, 15, 3, 18, 19, 9].
 >
 > Recently, **Mikolov** et al. [8] introduced the **Skip-gram model**, an **efficient** method for
 > learning **high quality vector representations** of words from large amounts of
-> **unstructured text data**. Unlike most of the previously used neural network
+> \**unstructured text data**. Unlike most of the previously used neural network
 > architectures for learning word vectors, training of the Skipgram model (see Figure 1)
 > does **not involve dense matrix multiplications**. This makes the training extremely
-> **efficient**: an optimized single-machine implementation can train on **more than** **100
+> \**efficient**: an optimized single-machine implementation can train on **more than** **100
 > billion words in one day.**
 >
 > The **word representations computed using neural networks** are very interesting

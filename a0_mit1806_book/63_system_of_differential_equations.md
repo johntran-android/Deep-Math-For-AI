@@ -37,7 +37,7 @@
 > Nếu u > 0, ln|u| = ln(u), khi đó ln'(u) = 1/u
 >
 > Nếu u < 0, ln|u| = ln(-u), khi đó d ln(-u) / du  = d ln(-u) / d (-u)
-> * d(-u) / du = (1/-u) * -1 = 1/u
+> \* d(-u) / du = (1/-u) * -1 = 1/u
 >
 > Vậy (d/du) ln|u| = 1/u => ∫(1/u)du = ln|u|
 >
@@ -99,7 +99,7 @@
 
 > [!NOTE]
 > Vậy hiểu vầy, với phương trình vi phân, như **du/dt = λu** ta giải ra **u = e^λt**, nên khi
-> **mở rộng ra hệ phương trình vi phân du/dt = Au** mình **đoán nghiệm cũng có dạng
+> \**mở rộng ra hệ phương trình vi phân du/dt = Au** mình **đoán nghiệm cũng có dạng
 > e^(gì đó)*t**, với "gì đó" là thứ không biết, gọi tạm là **λ**, để có **e^λt**. λ ở đây chỉ đang
 > ám chỉ đến một constant nào đó.
 >
@@ -116,7 +116,7 @@
 > đó **đương nhiên cho thấy x, và λ cần tìm chính là eigenvalue và eigenvector của A**.
 >
 > Bên cạnh đó, **vì lý thuyết của ODA**, nói rằng, **vì u là vector trong không gian n**
-> **chiều**, nên **không gian nghiệm sẽ có n vector độc lập**, giống như R^n cần n vector
+> \**chiều**, nên **không gian nghiệm sẽ có n vector độc lập**, giống như R^n cần n vector
 > trong basis vậy, nên **ta cho rằng sẽ có n bộ (λ, x**) và điều này **nếu ta có A là matrix có
 > đủ n eigenvector độc lậ**p thì **hoàn toàn khớp** rằng **mỗi cặp eigenvector / eigenvalue
 > sẽ ứng với một basis vector của solution space.**
@@ -124,7 +124,7 @@
 > Và điều này cũng có nghĩa là ta kì vọng sẽ tìm được n nghiệm **u_i(t) = (e^λ_i*t)*x_i** (i=1,
 > 2..n) để tạo nghiệm tổng quát (general solution):
 >
-> **u(t) = ∑ i=1,2..n ki*ui = ∑ i ki*(e^λ_i*t)x_i**
+> \**u(t) = ∑ i=1,2..n ki*ui = ∑ i ki*(e^λ_i*t)x_i**
 >
 > Đây là ý của gs khi nói ông **kì vọng có n exponent e^λt trong u(t), ứng với n** λ_i mà
 > trong tình huống thuận lợi, ta sẽ có n eigenvalues của A.

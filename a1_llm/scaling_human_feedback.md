@@ -54,7 +54,7 @@
 > the trained reward model in the first place is huge**.
 >
 > The **labeled data** set used to **train the reward model** typically requires
-> **large teams of labelers**, sometimes **many thousands of peopl**e to
+> \**large teams of labelers**, sometimes **many thousands of peopl**e to
 > evaluate many prompts each. This work **requires a lot of time** and **other
 > resources** which can be i**mportant limiting factors**.
 >
@@ -62,10 +62,10 @@
 > limited resource**. Methods to **scale human feedback** are an **active area
 > of research**.
 >
-> **One idea** to overcome these limitations is to **scale through model self
+> \**One idea** to overcome these limitations is to **scale through model self
 > supervision**.
 >
-> **Constitutional AI** is one approach of scale supervision. First proposed in
+> \**Constitutional AI** is one approach of scale supervision. First proposed in
 > 2022 by researchers at Anthropic, Constitutional AI is a method for **training
 > models using a set of rules and principles** that **govern the model's
 > behavior**. Together with a **set of sample prompts**, these **form the
@@ -106,9 +106,9 @@
 <p align="center"><kbd><img src="assets/f4daca3d5bc8c364385a4a3c8a9baae79f8389f5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Providing the model with a set of constitutional principles** can **help the
+> \**Providing the model with a set of constitutional principles** can **help the
 > model balance these competing interests and minimize the harm**. Here are
-> **some example rules** from the research paper that Constitutional AI I asks
+> \**some example rules** from the research paper that Constitutional AI I asks
 > LLMs to follow. For example, you can **tell the model to choose the response
 > that is the most helpful, honest, and harmless.** But you can play some
 > bounds on this, **asking the model to prioritize harmlessnes**s by assessing
@@ -147,7 +147,7 @@
 > Sau đó dựa vào đó bảo nó sửa lại **câu trả lời mới không vi phạm các principle** 
 > Cuối cùng ta sẽ d**ùng bộ data này gồm cái red-team prompt (tạm gọi yêu cầu mang tính dụ dỗ)**
 > và **những câu trả lời đúng các quy tắc chuẩn mực** mà model revise (regenerate) ở trên
-> **dùng để fine-tuning LLM** để **tạo ra 'Fine-tuned LLM'** - Tạm gọi là LLM có các chuẩn đạo
+> \**dùng để fine-tuning LLM** để **tạo ra 'Fine-tuned LLM'** - Tạm gọi là LLM có các chuẩn đạo
 > đức
 
 <br>
@@ -164,7 +164,7 @@
 > helpfulness**.
 >
 > To mitigate this, **you augment the prompt using the harmful completion** and a set of
-> **predefined instructions** that **ask the model to critique its response**.
+> \**predefined instructions** that **ask the model to critique its response**.
 >
 > Using the **rules outlined in the Constitution**, the model **detects the problems in its
 > response**. In this case, it **correctly acknowledges that hacking into someone's WiFi is

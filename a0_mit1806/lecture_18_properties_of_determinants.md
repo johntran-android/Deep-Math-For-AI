@@ -36,10 +36,10 @@
 > nhưng nó CÓ KHẢ NĂNG **CHO BIẾT TÍNH INVERTIBILITY**
 > CỦA MATRIX
 >
-> **DETERMINANT KHÁC 0, MATRIX NONSINGULAR 
+> \**DETERMINANT KHÁC 0, MATRIX NONSINGULAR 
 > / INVERTIBLE**
 >
-> **DETERMINANT BẰNG 0, MATRIX SINGULAR**
+> \**DETERMINANT BẰNG 0, MATRIX SINGULAR**
 > (NON-INVERTIBLE)
 
 <br>
@@ -172,7 +172,7 @@
 
 > [!NOTE]
 > Tức là, gs nhấn mạnh rằng determinant có tính chất
-> **tuyến tính trong mỗi row**.
+> \**tuyến tính trong mỗi row**.
 >
 > Không phải là det(A+B) = det A + det B mà là det A + det
 > B nhưng **chỉ cộng hai hàng nào đó thôi**, ví dụ hàng số 2
@@ -224,7 +224,7 @@
 > làm khi thực hiện elimination đưa A về U.
 >
 > Chính vì vậy mà **det A = det U:** hay quá trình **elimination**
-> **không làm thay đổi determinant**. Tuy nhiên trong quá trình
+> \**không làm thay đổi determinant**. Tuy nhiên trong quá trình
 > có thể cần **dùng đến row exchange, thành ra det có thể
 > đổi dấu.**
 
@@ -272,7 +272,7 @@
 >
 > Thế thì gs cho rằng ta có thể dễ hiểu ngay properties này vì **row
 > = 0 tức là nó chính là một row dependent** (vì nó = một row khác
-> * 0). Thành ra matrix **không thể full rank**, do đó cũng non-invertible 
+> \* 0). Thành ra matrix **không thể full rank**, do đó cũng non-invertible 
 > \-> **det = 0**
 >
 > Thế nhưng để giải thích nó từ các properties trước đó ta sẽ giải
@@ -432,7 +432,7 @@
 > [!NOTE]
 > Property 9: **det AB = (det A)*(det B)**. Gs cho biết đây là tính
 > chất rất tiện lợi, ta không có tính linearity, như nãy đã nói
-> **det A + B không bằng det A + det B**
+> \**det A + B không bằng det A + det B**
 >
 > Nhưng **det AB thì bằng tích hai det.**
 >

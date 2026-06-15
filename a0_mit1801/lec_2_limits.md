@@ -316,7 +316,7 @@
 
 > [!NOTE]
 > Tiếp theo ta sẽ học một Theorem quan trọng nói rằng: Nếu hàm f
-> **differentiable** (khả vi) tại x0 thì đồng nghĩa nó cũng sẽ **continuous**
+> \**differentiable** (khả vi) tại x0 thì đồng nghĩa nó cũng sẽ **continuous**
 > tại x0
 
 <br>
@@ -327,7 +327,7 @@
 
 > [!NOTE]
 > Thế thì để chứng minh theorem này, cái ta chỉ cần chứng minh là
-> **limit của f(x) - f(x0) tại x0 là bằng 0**.
+> \**limit của f(x) - f(x0) tại x0 là bằng 0**.
 >
 > Vì khi đó cũng đồng nghĩa là **limit của  f(x) tại x->x0 là bằng f(x0)(*)**
 > và đây chính là định nghĩa rằng f continuous tại x0

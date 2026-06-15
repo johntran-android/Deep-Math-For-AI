@@ -16,7 +16,7 @@
 > 2. Explaining the technique of **fine-tuning with instructions**, including PEFT methods.
 >
 > 3. Purpose of fine-tuning: **enhancing models' understanding of human-like prompts** for
-> **more natural responses.**
+> \**more natural responses.**
 >
 > 4. **Challenges** of natural-sounding human language, including **models behaving badly**.
 >
@@ -26,13 +26,13 @@
 > harmful or offensive responses.**
 >
 > 7. Introduction of **HHH** (**Helpfulness, Honesty, Harmlessness**) principles guiding
-> **responsible AI** development.
+> \**responsible AI** development.
 >
 > 8. The role of **additional fine-tuning with human feedback** to **align models with human
 > preferences.**
 >
 > 9. Benefits of further training: **improving model responses, reducing toxicity**, and
-> **generating incorrect information**.
+> \**generating incorrect information**.
 >
 > 10. Upcoming lesson focus: learning **how to align models using human feedback**.
 

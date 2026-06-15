@@ -111,7 +111,7 @@
 > dựng một rule, một decision function, giúp đưa ra quyết định reject hoặc 
 > accept H0, dựa trên observed value của random sample. Để xây dựng rule,
 > dựa trên observed value, dĩ nhiên ta sẽ tính toán một function nào đó của
-> **X**, để rồi ra quyết định dựa trên đó, thì đó chính là testing statistic.Tuy nhiên
+> \**X**, để rồi ra quyết định dựa trên đó, thì đó chính là testing statistic.Tuy nhiên
 > sau đó ta phải đặt ra rule để chọn H0 hay H1 dựa trên test statistic. Thế thì
 > ở đây, rule của phép thử đầu tiên: reject H0 khi X = 5. Thì test statistic chính
 > là X (có thể coi như là identity function của X, T(X) = X), và cái rule chính là
@@ -1305,7 +1305,7 @@
 > ⇨ khi (a) xảy ra, β(θ) nhỏ → Xác suất [reject H0], lúc này chính là [**MẮC Type I
 > error] NHỎ → TỐT!**
 >
-> **NHƯNG**, khi (b) xảy ra, thì β(nhỏ), có nghĩa xác suất [reject H0], lúc này chính
+> \**NHƯNG**, khi (b) xảy ra, thì β(nhỏ), có nghĩa xác suất [reject H0], lúc này chính
 > là **[QUYẾT ĐỊNH ĐÚNG], CŨNG NHỎ → KHÔNG TỐT!!!**
 >
 > Lấy ví dụ bệnh nhân: Giả sử ta có cái test thuộc lại size α test, α = 0.01 như trên.
@@ -1540,7 +1540,7 @@
 > Cùng tìm hiểu phần chứng minh, ý a):
 >
 > Đầu tiên, gs lưu ý ta thấy rằng bất kì cái test nào thỏa 8. 3.2 thì chính là
-> **size α test**, cái này thì trong note trước mình đã tự thấy rồi, nói ngắn gọn
+> \**size α test**, cái này thì trong note trước mình đã tự thấy rồi, nói ngắn gọn
 > là vì trong theorem này chỉ đang nói về hypothesis H0: θ = θ0, tức Θ0 chỉ là
 > set có 1 elements: {θ0}. Mà theo định nghĩa của size α test, nó là test mà
 > sup_θ∈Θ0 β(θ) = α, thì ở đây dĩ nhiên sup_θ∈Θ0 β(θ) chính là β(θ0), hay
@@ -1698,7 +1698,7 @@
 > cũng y hệt của Φ, điều này đồng nghĩa indicator function Φ(**x**) = Φ'(**x**)
 > với mọi **x**, có thể cho phép chúng khác nhau trên những giá trị x không
 > thuộc support **X**, tức là những giá trị không thể xảy ra của random sample
-> **X** Thế thì chứng minh như sau: Vì ta đang giả sử Φ' cũng là một UMP level α
+> \**X** Thế thì chứng minh như sau: Vì ta đang giả sử Φ' cũng là một UMP level α
 > test, nên theo định nghĩa của UMP level α test, β'(θ) ≥ β''(θ) ∀ θ ∈ Θ0c với β''
 > là β function của một test bất kì trong level α test class.
 >
@@ -1974,7 +1974,7 @@
 > = 1/2 + 1/4 = 3/4
 >
 > Kết luận, nếu 1/4 < k < 3/4 thì cái test có rule reject H0 nếu x = 1,2 sẽ là 
-> **UMP level 3/4 test.**
+> \**UMP level 3/4 test.**
 >
 >
 >
@@ -2591,7 +2591,7 @@
 >
 > Mà theo định nghĩa của **UMP class C test**: nếu gọi β là power của UMP
 > test, β'  là power của cái test khác bất kì trong class C thì **β(θ) ≥ β'(θ)**
-> **tại mọi điểm θ** ∈ **Θ0c .**
+> \**tại mọi điểm θ** ∈ **Θ0c .**
 >
 > À vậy thì ở đây θ1 < θ0 **chính là một điểm trong Θ0c** (vì Θ0c là {θ: θ <
 > θ0}), và ta đang có cái UMP level α test, nên theo định nghĩa thì β của nó
@@ -2623,7 +2623,7 @@
 > 2) Ngược lại, nếu như **TỒN TẠI** một cái test thỏa 8.3.1 và 8.3.2 thì khi
 > đó.
 >
-> **Bất kì cái test là UMP level α test** thì **sẽ đều có size α** (tức là nó là
+> \**Bất kì cái test là UMP level α test** thì **sẽ đều có size α** (tức là nó là
 > một size α test), và sẽ **đều có cái rule 8.3.1
 >
 > Điều này có một điểm mình có thể chưa để ý:** Theo định nghĩa, UMP level α là cái mà với mọi θ ∈ Θ0c, β(θ) ≥ β'(θ) của
@@ -2777,7 +2777,7 @@
 > NHƯ VẬY **ĐỦ KẾT LUẬN TEST 1 KHÔNG PHẢI LÀ UMP LEVEL α
 > TEST.** 
 >
-> **SUY RA BÀI TOÁN NÀY KHÔNG CÓ UMP LEVEL α TEST.**
+> \**SUY RA BÀI TOÁN NÀY KHÔNG CÓ UMP LEVEL α TEST.**
 
 <br>
 
@@ -3336,7 +3336,7 @@
 > Hiểu sơ về cái cách define này:
 >
 > p(**X**) là một statistic, theo định nghĩa, là một function của random sample
-> **X**. Nên ta hiểu, define p(**X**) là define ra một function. Và đã define một
+> \**X**. Nên ta hiểu, define p(**X**) là define ra một function. Và đã define một
 > function, thì việc cần làm là define xem kết quả của function là gì khi đưa input
 > bất kì vào, tức là ta cần define xem với input **x** ∈ range **X** đưa vô thì
 > p(**x**) trả ra  là cái giống gì.
@@ -4128,7 +4128,7 @@
 >
 > P_θ(p_θ(**X**) ≤ α|S=s) ≤ α với p_θ(**X**) = F_θ,s(W(**X**)) (ii)
 >
-> **NHƯNG!!!**
+> \**NHƯNG!!!**
 >
 > P_θ(p(**X**) ≤ α|S=s) với p(**X**) CÓ CÁI **CÔNG THỨC KHÔNG CÒN DÍNH TỚI θ** NHỜ S
 > THÌ **HOÀN TOÀN CÓ QUYÈN > α**
@@ -4187,7 +4187,7 @@
 > Theo đó thì mình nghĩ S1, S2 chỉ gọi là một random sample size n=2 nếu  n1=n2,
 > p1=p2. vì như vậy mới thỏa "identically distributed"
 >
-> **TUY NHIÊN, FACTORIZATION THEOREM CHỈ YÊU CẦU TA CÓ MỘT SAMPLE X,
+> \**TUY NHIÊN, FACTORIZATION THEOREM CHỈ YÊU CẦU TA CÓ MỘT SAMPLE X,
 > CHỨ KHÔNG CẦN PHẢI LÀ RANDOM SAMPLE X**.
 >
 > Có nghĩa là nếu chỉ ra rằng joint pdf/pmf random variable vector **S** = (S1, S2) có
@@ -4264,7 +4264,7 @@
 > GÍA TRỊ CỦA NÓ LÀ **XÁC SUẤT CỦA SỰ KIỆN S1 ≥ s1 DỰA TRÊN QUAN SÁT** T
 > = s.
 >
-> **giá trị** của xác suất này dĩ nhiên sẽ **phụ thuộc s1 đưa vào**, cũng như là **bản
+> \**giá trị** của xác suất này dĩ nhiên sẽ **phụ thuộc s1 đưa vào**, cũng như là **bản
 > thân phân phối của S1**.
 >
 > Và gs nói dựa trên T = s, thì **phân phối của S1 này  thật sự sẽ là một
@@ -4319,7 +4319,7 @@
 > Đặt δ(**x**) là decision rule nhận vào các giá trị khả dĩ của **X** và trả ra một
 > trong hai output là a0 hoặc a1 (cái này mình hiểu chỉ là cách thể hiện của test
 > rule, vì thực chất cái test cũng chỉ là một decision function, dựa vào giá trị của
-> **X** mà đưa ra kết luận accept hay reject H0)
+> \**X** mà đưa ra kết luận accept hay reject H0)
 >
 > Từ đó, gọi tập {x: δ(**x**) = a0} là acceptance region và {x: δ(**x**) = a1} là
 > rejection  region. (hoàn toàn không có gì mới, vì rejection region mình thấy
@@ -4417,7 +4417,7 @@
 >
 > = cII (1 - P_θ(δ(**X**) = a1))
 >
-> **R(θ, δ) = cII (1 - β(θ))**
+> \**R(θ, δ) = cII (1 - β(θ))**
 
 <br>
 

@@ -23,7 +23,7 @@
 
 > [!NOTE]
 > Đại khái là **tiếp nối** một phần nói về **ứng dụng của dot product**. Đó là cho thấy
-> **thêm một ý nghĩa** của việc **dot product giữa vector a và UNIT vector u^**
+> \**thêm một ý nghĩa** của việc **dot product giữa vector a và UNIT vector u^**
 >
 > Khi tính dot product của vector a và vector u^, nó cho ta **độ lớn của phần hình
 > chiếu của vector a lên vector u^**. Hay nói cách khác, đó chính là **ta chiếu
@@ -63,7 +63,7 @@
 >
 > = bTaaTb = (aTb)^2 vì aTb là scalar, nên aTb = bTa => bTaaTb = (aTb)(aTb)
 >
-> **= (aTb)^2**
+> \**= (aTb)^2**
 >
 > Vậy **độ lớn của p = aTb**
 >
@@ -91,12 +91,12 @@
 >
 > Vậy thì ta có thể dùng công thức bữa trước để tính cos(theta):
 >
-> **cos(theta) = [dot product của A, B] / [length A * length B]**
+> \**cos(theta) = [dot product của A, B] / [length A * length B]**
 >
 > Rồi **từ đó tính ra sin(theta)**
 >
 > Tuy nhiên cách này phức tạp, có thể làm đơn giản hơn với khái niệm
-> **determinant**
+> \**determinant**
 
 <br>
 
@@ -223,7 +223,7 @@
 > tiếp gs nói về determinant trong space (ý là 3D space). Thì det của 3
 > vector A, B, C có công thức như vầy. Từ **18.06** thì ta dễ thấy nó chính
 > là t**ính det của matrix ABC** (3 columns là các vector A, B, C) theo
-> **cofactor formula**: ta có thể chọn một cols hoặc một hàng để tính.
+> \**cofactor formula**: ta có thể chọn một cols hoặc một hàng để tính.
 >
 > Ở đây chọn hàng 1, thì các **entry** sẽ **nhân** với **cofactor** của nó là d**et
 > của matrix nhỏ hơn** được tạo ra bằng cách **bỏ đi hàng và cột của
@@ -284,7 +284,7 @@
 > [!NOTE]
 > Và **ứng dụng của cross product của A, B (kí hiệu là AxB)** chính là:
 >
-> **length của vector** (A x B) chính là **diện tích của hình bình hành tạo
+> \**length của vector** (A x B) chính là **diện tích của hình bình hành tạo
 > bởi 2 vector này trong không gian (3D).**
 >
 > Và vector (A x B) sẽ **vuông góc với plane span bởi hai vector A, B**.

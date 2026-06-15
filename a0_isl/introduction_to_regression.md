@@ -61,7 +61,7 @@
 > tức là trung bình của các Y tại đó.
 >
 > THÌ ĐÓ CHÍNH LÀ **IDEAL FUNCTION** F(X) - VÀ ĐƯỢC GỌI LÀ
-> **REGRESSION FUNCTION**
+> \**REGRESSION FUNCTION**
 
 <br>
 
@@ -75,7 +75,7 @@
 >
 > Thế thì ta có thể chứng minh được rằng: 
 >
-> **IDEAL FUNCTION E[Y|X] CHÍNH LÀ FUNCTION GIÚP MINIMIZE 
+> \**IDEAL FUNCTION E[Y|X] CHÍNH LÀ FUNCTION GIÚP MINIMIZE 
 > E[(Y-g(X))^2 | X=x]** "khi xem xét" mọi function g(x) tại mọi điểm X = x (tạm thời chấp nhận, phần chứng minh sẽ nằm trong **Element of Statistical 
 > Learning**,  ta sẽ học tới khi hoàn thành Stat110)
 >
@@ -87,9 +87,9 @@
 > khai 
 > để thấy:
 >
-> **E[(Y-f^(X))^2 | X=x] = [f(x) - f^(x)]^2 + Var(eps)** Thì trong đó [f(x) - f^(x)]^2 là phần có thể giảm thiểu còn Var(eps) thì không
+> \**E[(Y-f^(X))^2 | X=x] = [f(x) - f^(x)]^2 + Var(eps)** Thì trong đó [f(x) - f^(x)]^2 là phần có thể giảm thiểu còn Var(eps) thì không
 >
-> *ĐỢI STAT110 SẼ QUAY LẠI ĐÂY
+> \*ĐỢI STAT110 SẼ QUAY LẠI ĐÂY
 >
 > Thế thì, câu hỏi đặt ra là **làm sao để estimate f(X), tức tìm f^(X)**
 
@@ -113,7 +113,7 @@
 >
 > Lấy kì vọng **không điều kiện** của eps:
 >
-> **E[eps] = E[E[[eps|X]** = E[0] = 0 **CHỨNG MINH XONG
+> \**E[eps] = E[E[[eps|X]** = E[0] = 0 **CHỨNG MINH XONG
 >
 > (*) Ở ĐÂY TẠM XÀI HAI KIẾN THỨC LIÊN QUAN ĐẾN CONDITIONAL EXPECTATION
 > SẼ HỌC TRONG STAT110: 
@@ -147,7 +147,7 @@
 >
 > Để khắc phục, người ta nghĩ ra cách khác, ta **NỚI LỎNG** ĐỊNH NGHĨA RA,
 > THAY VÌ DÙNG TRUNG BÌNH CỦA Y TẠI **CHÍNH XÁC X= x**, thì người ta dùng
-> **TRUNG BÌNH CỦA Y TẠI MỘT SET LÂN CẬN N(x)**
+> \**TRUNG BÌNH CỦA Y TẠI MỘT SET LÂN CẬN N(x)**
 >
 > Ví dụ để tính f(X=4), thay vì dùng E[Y|X=4], thì ta tính E[Y|X thuộc N(4)] và N(4)
 > chỉ các điểm dữ liệu QUANH MỨC X=4, khi đó, khả năng có điểm dữ liệu sẽ cao

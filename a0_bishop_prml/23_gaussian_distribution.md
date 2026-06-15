@@ -114,7 +114,7 @@
 > = (**x** - **μ**)T [Σinv_sym + Σinv_asym] (**x** - **μ**)
 >
 > = (**x** - **μ**)T Σinv_sym (**x** - **μ**) + (**x** - **μ**)T Σinv_asym (**x** -
-> **μ**)
+> \**μ**)
 >
 > Xét hạng tử thứ hai:
 >
@@ -123,7 +123,7 @@
 > như đã biết, quadratic form thì là một scalar, nên:
 >
 > (**x** - **μ**)T Σinv_asym (**x** - **μ**) = [(**x** - **μ**)T Σinv_asym (**x** -
-> **μ**)]T
+> \**μ**)]T
 >
 > ⇔ (**x** - **μ**)T Σinv_asym (**x** - **μ**) = (**x** - **μ**)T (Σinv_asym)T
 > (**x** - **μ**)
@@ -139,7 +139,7 @@
 > Vậy (**x** - **μ**)T Σinv_asym (**x** - **μ**) = 0
 >
 > ⇨ (**x** - **μ**)T Σinv_sym (**x** - **μ**) + (**x** - **μ**)T Σinv_asym (**x** -
-> **μ**)
+> \**μ**)
 >
 > = (**x** - **μ**)T Σinv_sym (**x** - **μ**)
 >
@@ -234,7 +234,7 @@
 > dot product của **x** - **μ** với u1, y2 là dot product của **x** - **μ** với y2,...thì
 > với việc gs Bishop đặt U là matrix có các hàng là u1, u2,...để rồi UT là matrix
 > có các cột là u1, u2... Thì ta sẽ thấy **y** = (y1, y2...)T chính là U(**x**-**μ**). ⇨
-> **y** = U(**x** - **μ**)
+> \**y** = U(**x** - **μ**)
 >
 > Rồi, chỗ này dùng kiến thức về **change of basis** đã học trong MIT 1806: Ôn
 > lại nhanh:
@@ -311,7 +311,7 @@
 >
 > Xét phép biến đổi identity: T(**v**i) = **v**i. Ta có:
 >
-> **v**i = U[cột i của A], i = 1,..n
+> \**v**i = U[cột i của A], i = 1,..n
 >
 > Gom **v**1, **v**2...**v**n thành các cột của V, thì **v**i = U[cột i của A], i = 1,..
 > n chính là V = UA
@@ -320,7 +320,7 @@
 > basis" / matrix chuyển cơ sở từ cơ sở v's sang cơ sở u's: A = UinvV.
 >
 > Xét một case đặc biệt, khi input basis là standard basis: **v**1, **v**2,... =
-> **e**1, **e**2,...Hay cũng là V = I. Ta sẽ có:
+> \**e**1, **e**2,...Hay cũng là V = I. Ta sẽ có:
 >
 > A = Uinv I = Uinv. Từ đây giúp kết luận, khi có **x là vector có tọa độ trong
 > standard basis**, thì A**x** = Uinv **x**, chính là động tác tính ra tọa độ của nó
@@ -329,7 +329,7 @@
 > Rồi, quay lại công thức y = U(**x**-**μ**):
 >
 > Đầu tiên chú ý là trong phần ôn lại ở trên, mình nói U là vector tạo bởi các
-> **cột** là các basis u's.
+> \**cột** là các basis u's.
 >
 > Còn trong bài này, U ở đây được gs Bishop định nghĩa là là **matrix có các
 > các hàng là các orthogonal eigenvector ui**. Như vậy **UT là orthogonal
@@ -340,7 +340,7 @@
 >
 > Và phần ôn lại ở trên giúp ta hiểu rõ bản chất của cái này chính là:
 >
-> **CHUYỂN TỌA ĐỘ CỦA** **x (SAU KHI SHIFT BỞI μ) TỪ CƠ SỞ CHUẨN
+> \**CHUYỂN TỌA ĐỘ CỦA** **x (SAU KHI SHIFT BỞI μ) TỪ CƠ SỞ CHUẨN
 > (BASIS e's) SANG HỆ TỌA ĐỘ CƠ SỞ LÀ CÁC CỘT CỦA UT, CHÍNH LÀ ui =
 > CÁC EIGENVECTOR CỦA Σ!**
 >

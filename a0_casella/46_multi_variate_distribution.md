@@ -12,7 +12,7 @@
 > một người, thì ta có thể có 4 chỉ số chiều cao, cân năng, nhiệt độ và
 > huyết áp. Nên ta sẽ mở rộng bivariate random vector sang multivariate
 >
-> **X** = (X1, X2, X3, X4)
+> \**X** = (X1, X2, X3, X4)
 
 <br>
 

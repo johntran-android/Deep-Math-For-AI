@@ -39,7 +39,7 @@
 
 > [!NOTE]
 > Thế thì cái ta quan tâm dĩ nhiên là **derivative của a^x** kí hiệu là
-> **(d/dx) a^x.**
+> \**(d/dx) a^x.**
 >
 > Theo **định nghĩa của derivative**, dĩ nhiên đó là **limit** của **delta_f /
 > delta_x** khi **delta_x -> 0**.
@@ -101,7 +101,7 @@
 
 > [!NOTE]
 > Và cụ thể **với a = 2**, thì độ dốc của hàm **y = 2^x** tại
-> **0 là M(2)
+> \**0 là M(2)
 >
 > (again, ta sẽ tìm function M(a) sau)**
 
@@ -126,7 +126,7 @@
 🔗 **Related:** [LEC 6: EXPONENTIAL & LOG](untitled.md#node-156)
 
 > [!NOTE]
-> **Câu hỏi là M(a) là gì?**
+> \**Câu hỏi là M(a) là gì?**
 >
 > Thế thì tới đây ta sẽ dùng một cái **trick** đó là ta sẽ **DEFINE e
 > LÀ MỘT UNIQUE NUMHER SAO CHO  M(e) = 1**
@@ -157,7 +157,7 @@
 > tiên ta sẽ **chứng minh e tồn tại**.
 >
 > Quay lại **hàm f(x) = 2^x**. Và ta đã biết **f'(0) = M(2)**. Thế thì, khi ta
-> **stretch** (kéo giãn) **x** bằng **factor k**.
+> \**stretch** (kéo giãn) **x** bằng **factor k**.
 >
 > Thì **f(kx)** = **2^(kx)**, và áp dụng a^(m*n) = (a^m)^n, ta có nó = **(2^k)^x** 
 >
@@ -183,7 +183,7 @@
 > [!NOTE]
 > Thế thì, **(d/dx) b^x = (d/dx) f(kx)**, và theo chain rule ta biết nó sẽ bằng:
 >
-> **d f(kx) / d(kx)** * **d(kx) / dx** = **f'(kx) * k**
+> \**d f(kx) / d(kx)** * **d(kx) / dx** = **f'(kx) * k**
 >
 > Nên **slope tại x = 0** sẽ là f**'(0)*k** = **k*M(2)**
 >
@@ -207,7 +207,7 @@
 > LOG**. kí hiệu là **ln**
 >
 > Và **w = ln(x)** là **inverse function của e^x**. Có nghĩa là nếu
-> **y = e^x <=>  ln(y) = x**
+> \**y = e^x <=>  ln(y) = x**
 
 <br>
 
@@ -227,7 +227,7 @@
 <p align="center"><kbd><img src="assets/59645a6fcd29da99cabce54049418328debfbbb3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Đồ thị cũa e^x và ln(x)** là như vầy, như đã biết **để vẽ inverse function**
+> \**Đồ thị cũa e^x và ln(x)** là như vầy, như đã biết **để vẽ inverse function**
 > ta sẽ **đổi chỗ x thành y và y thành x**, nên chúng sẽ đ**ối xứng nhau qua
 > diagonal axis y = x**
 >
@@ -263,7 +263,7 @@
 
 > [!NOTE]
 > Từ đó, **apply d/dx vào equation**. Vế phải là **(d/dx) x** cũng chính là 
-> **dx/dx và bằng 1**. Vế trái là (d/dx) e^w. Dùng **chain rule** ta sẽ có:
+> \**dx/dx và bằng 1**. Vế trái là (d/dx) e^w. Dùng **chain rule** ta sẽ có:
 >
 > (d e^w / dw) * (dw / dx) 
 >
@@ -294,7 +294,7 @@
 
 > [!NOTE]
 > Có **hai** phương pháp mà **gs cho là như nhau** thôi. Cách **1** là ta sẽ
-> **chuyển sang base e**:
+> \**chuyển sang base e**:
 >
 > Bằng cách **dùng e^ln(a)** thay cho **a**. Vì **e^ln(a) quả thật chính là a**
 > theo định nghĩa của logarit.
@@ -334,7 +334,7 @@
 >
 > (d/dx) e^(xln(a)) = ln(a) * e^(xln(a)) trở thành: 
 >
-> **(d/dx) a^x = ln(a) * a^x** Và như vậy, nhớ lại **lúc đầu tiên** khi **tìm cách tính (d/dx) a^x** 
+> \**(d/dx) a^x = ln(a) * a^x** Và như vậy, nhớ lại **lúc đầu tiên** khi **tìm cách tính (d/dx) a^x** 
 > ta **ra kết quả là M(a) a^x** và ta bị kẹt vì không biết M(a) là gì
 >
 > Thì bây giờ với kết quả này ta đã biết **M(a) chính là ln(a)**
@@ -367,7 +367,7 @@
 
 > [!NOTE]
 > Method thứ 2, đó là dùng cái gọi là **LOGARITHMIC DIFFERENTIATION** Đại khái là **có khi ta khó tính (d/dx) u**, nhưng **tính (d/dx) ln(u)** thì sẽ 
-> **dễ hơn**.
+> \**dễ hơn**.
 >
 > Dựa vào **chain rule** d ln(u) / dx = **d ln(u) / du** * d**u / dx** 
 >
@@ -389,12 +389,12 @@
 >
 > Và áp dụng **implicit differentiation** (**lấy d/dx hai vế**) ta sẽ có:
 >
-> **(d/dx) ln(u)** = (**d/dx) xln(a)**.
+> \**(d/dx) ln(u)** = (**d/dx) xln(a)**.
 >
 > Mà **vế trái chính là ln'(u)**, và nó bằng **u'/u** ở trên.
 >
-> **Vế phải** **không cần dùng chain rule** vì nó **chỉ là d/dx của c*x** với
-> **c = ln(a)**. Nên đương nhiên sẽ là c*1 = **c**
+> \**Vế phải** **không cần dùng chain rule** vì nó **chỉ là d/dx của c*x** với
+> \**c = ln(a)**. Nên đương nhiên sẽ là c*1 = **c**
 >
 > Vậy ta có u'/u = ln(a) => **u' = ln(a)*u**
 >
@@ -419,7 +419,7 @@
 
 > [!NOTE]
 > Tiếp theo gs sẽ **làm một ví dụ** gọi là "**moving exponents**" (ý là
-> **cơ số không fixed** nữa mà **cũng là variable**: v = **x^x**)
+> \**cơ số không fixed** nữa mà **cũng là variable**: v = **x^x**)
 >
 > Gs cho biết **có thể giải bằng cả hai cách**, nhưng ta sẽ **dùng cách 2
 > logarithmic differentiation**.
@@ -429,7 +429,7 @@
 >
 > Sau đó **dùng implicit differentiation** 
 >
-> **(d/dx) ln(v) = (d/dx) (x*ln(x))**
+> \**(d/dx) ln(v) = (d/dx) (x*ln(x))**
 >
 > Thì **vế phải** cần phải dùng **product rule:** **(uv)' = u'v  +uv**':
 >
@@ -458,7 +458,7 @@
 >
 > Bài toán này, đại khái gs nói là vì **trong limit là một "cái" có
 > moving exponent** (ý nói (..)^n) nên **sẽ hữu ích** nếu ta **dùng**
-> **logarithm** để làm
+> \**logarithm** để làm
 >
 > Do đó ta sẽ **lấy ln()** của nó (1+1/n)^n, để bằng **n*ln(1+1/n)**
 
@@ -517,9 +517,9 @@
 > [!NOTE]
 > Thế thì phải chú ý rằng, cái kết quả 1 vừa rồi là **lim của ln [(1+1/n)^n]** (limit của log) Và **limit của log** bằng **log của limit**:
 >
-> **ln lim ( ln [(1+1/n)^n] ) = lim ln [(1+1/n)^n]** Do đó: 
+> \**ln lim ( ln [(1+1/n)^n] ) = lim ln [(1+1/n)^n]** Do đó: 
 >
-> **apply e^()** hai vế ta có:
+> \**apply e^()** hai vế ta có:
 >
 > lim [(1+1/n)^n] = e^{lim ln [(1+1/n)^n]} và = e^1 = e
 >

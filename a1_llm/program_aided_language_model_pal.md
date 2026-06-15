@@ -66,7 +66,7 @@
 <p align="center"><kbd><img src="assets/b849e82773f1357465becc3e078b38656a8ceb7f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Chain of thought prompting** **chỉ khắc phục phần nào**, với bài toán
+> \**Chain of thought prompting** **chỉ khắc phục phần nào**, với bài toán
 > phức tạp hơn, **yêu cầu chính xác cao hơn thì LLM vẫn fail**. Vì
 > b**ehind the scene** nên nhớ **LLM không thật sự thực hiện việc tính
 > toán**, mà nó chỉ output **probability**

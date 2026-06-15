@@ -58,7 +58,7 @@
 > Thế thì qua Random functions.
 >
 > Gọi X là một r**andom variable value function** map số thực **p** và
-> **X(p) là một random variable. ? 
+> \**X(p) là một random variable. ? 
 >
 > (Chỗ này có vẻ hơi khó hiểu. Theo stat110 và Casella book mình 
 > hiểu random variable là function map giữa một possible outcome

@@ -77,7 +77,7 @@
 > Sau đó dùng function  **np.add.at(gradOutsideVecs, (slice(None), indices), dU_plus)
 > để có kết quả tương tự
 >
-> * Chú ý, cuối cùng phải transpose để dJ/dU về cũng shape với U là (V,D)**
+> \* Chú ý, cuối cùng phải transpose để dJ/dU về cũng shape với U là (V,D)**
 
 <br>
 

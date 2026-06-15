@@ -34,7 +34,7 @@
 > [!NOTE]
 > Loại convergence thứ nhất là **Convergence in probability**: Được định nghĩa
 > đại khái bằng lời là: ta nói X1,X2,...converge về X in probability nếu như
-> **khi n → inf** thì xác suất t**ồn tại khác biệt  giữa Xn và X là bằng 0**, thể hiện
+> \**khi n → inf** thì xác suất t**ồn tại khác biệt  giữa Xn và X là bằng 0**, thể hiện
 > bởi toán học:
 >
 > lim n → inf P(|Xn - X| > ε) = 0 với ε bất kì
@@ -832,7 +832,7 @@
 > Đại khái là, phần trước, là ta quan tâm đến điều kiện khi nào thì một
 > random variable đã chuẩn hóa sẽ có limit normal distribution (ý là,  kiểu
 > như ta được học rằng √n(Xnbar - μ) / σ sẽ → normal(0,1) Nhưng có
-> **nhiều khi ta ko care distribution của random variable, mà care
+> \**nhiều khi ta ko care distribution của random variable, mà care
 > distribution của một function apply lên rv đó cơ.**
 >
 > Thế thì đầu tiên được học khái niệm odd (đã gặp trong ISL), bối cảnh là
@@ -1083,7 +1083,7 @@
 >
 > Thế thì ở đây nói rằng, first order approx. cho ta:
 >
-> **g(X) = g(μ) + g'(μ)(X - μ)**
+> \**g(X) = g(μ) + g'(μ)(X - μ)**
 >
 > (Mình muốn ý kiến một chút, trong giải tích ta biết, cái này chỉ đúng, nếu như
 > X gần μ. Và ko hiểu sao họ dùng dấu bằng, phải là ≈ chứ) 
@@ -1225,7 +1225,7 @@
 > Cho hàm g và
 > giá trị cụ thể của θ, giả thiết g'(θ) tồn tại và khác 0. theorem  này nói rằng:
 >
-> **√n[g(Yn) - g(θ)] → n(0, σ^2[g'(θ)]^2) in distribution**
+> \**√n[g(Yn) - g(θ)] → n(0, σ^2[g'(θ)]^2) in distribution**
 >
 > Chứng minh:
 >
@@ -1292,7 +1292,7 @@
 > mean là μ, population variance là σ^2) và Xnbar là sample mean size
 > n, viết Xbar cho gọn) thì ta có:
 >
-> **√n(Xbar - μ) / σ → n(0,1)** in distribution
+> \**√n(Xbar - μ) / σ → n(0,1)** in distribution
 >
 > Dựa vào Slutsky theorem: 
 >
@@ -1320,7 +1320,7 @@
 >
 > Và có nghĩa là: 
 >
-> **√n(1/Xbar - 1/μ)** →(d) n(0, σ^2 (1/μ^2)^2) = **n(0, σ^2 (1/μ^4))** 
+> \**√n(1/Xbar - 1/μ)** →(d) n(0, σ^2 (1/μ^2)^2) = **n(0, σ^2 (1/μ^4))** 
 > Với σ^2 là population variance, người ta ghi là Var X1 cũng có thể hiểu
 > được
 >
@@ -1359,7 +1359,7 @@
 > distribution thì location cũng là mean và scale cũng là standard deviation.
 > Nên ta kết luận Z / [(1/μ)^4 σ^2] sẽ ~ n(0,1)
 >
-> **Như vậy ta có:** 
+> \**Như vậy ta có:** 
 >
 > [√n(1/Xbar - 1/μ)] / [(1/μ)^4 σ^2]  sẽ → (d) n(0,1)
 >
@@ -1563,7 +1563,7 @@
 > [!NOTE]
 > Áp dụng hai công thức 5.5.8 / 5.5.9 (mình đã tự chứng minh nên đã hiểu rồi, ở đây
 > cứ xài thôi): Thì đại khái 5.5.8 nói rằng Eg(**T**) ≈ g(**θ**), **T** là vector các rv,
-> **θ** là vector các mean θi = EXi
+> \**θ** là vector các mean θi = EXi
 >
 > E(g(X,Y)) = E[X/Y] ≈ g([μX, μY]) = μX/μY
 >
@@ -1603,7 +1603,7 @@
 > là mỗi vector **Xk,** k =1,...n là một random variable vector cũng có p random 
 > variable: (Xk1, Xk2...Xkp). Mà ở đây hình như người ta kí hiệu sẽ là:
 >
-> **X**k = (X1k, X2k,...Xpk)
+> \**X**k = (X1k, X2k,...Xpk)
 >
 > Dĩ nhiên, là như vậy ta sẽ giống như, xét X1k, k = 1,...n. Thì nó giống
 > như random sample size n của population có mean là μ1

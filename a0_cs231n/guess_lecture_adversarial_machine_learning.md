@@ -28,7 +28,7 @@
 > không khiến chúng ta nhầm lẫn thành một object khác. Thì nếu máy tính
 > không làm được như vậy sẽ đặt ra câu hỏi lớn về độ tin cậy của mô hình
 >
-> *Nhưng trong adversarial attack, ta xét sự thay đổi nhỏ đủ để không khiến
+> \*Nhưng trong adversarial attack, ta xét sự thay đổi nhỏ đủ để không khiến
 > human eye nhận ra
 
 <br>

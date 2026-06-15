@@ -61,7 +61,7 @@
 > 2 key ideas là **Self-attention**: Đại khái ví dụ ta có một chuỗi 5 từ thì
 > ta sẽ tính ra representation của 5 từ đó.
 >
-> **Multi-head attention** thì dùng for loop để tìm những version khác
+> \**Multi-head attention** thì dùng for loop để tìm những version khác
 > nhau của những representation này.
 >
 > Và turn out là những **representation này rất giàu thông tin**, có thể dùng
@@ -93,7 +93,7 @@
 > Nhưng thay vì chỉ đơn giản là look up embbeded vector từ
 > Embedded matrix thì bây giờ..
 >
-> **Dựa vào hoàn cảnh**, sẽ chọn / **tính các embedded vector khác nhau
+> \**Dựa vào hoàn cảnh**, sẽ chọn / **tính các embedded vector khác nhau
 > kiểu như tuỳ tình huống phù hợp với từ này trong câu**.
 >
 > Kiểu như Africa là 1 châu lục? Africa là 1 di tích lịch sử? Africa là một địa
@@ -140,8 +140,8 @@
 
 > [!NOTE]
 > "The key advantage of this representation is the word of l'Afrique
-> **isn't some fixed word embedding**. Instead, it lets the
-> **self-attention mechanism realize that l'Afrique is the destination
+> \**isn't some fixed word embedding**. Instead, it lets the
+> \**self-attention mechanism realize that l'Afrique is the destination
 > of a visite**, of a visit, and thus **compute a richer, more useful
 > representation** for this word"
 >
@@ -156,7 +156,7 @@
 > Denominator có dấu sqrt chỉ là để **scale cái dot-product attention**
 >
 > "The term in the denominator is just to scale the dot-product, so it
-> **doesn't explode**. You don' t really need to worry about it. But another
+> \**doesn't explode**. You don' t really need to worry about it. But another
 > name for this type of attention is the **scaled dot-product attention**."
 
 > [!NOTE]
@@ -172,7 +172,7 @@
 
 > [!NOTE]
 > To recap, associated with each of the five words you end up with a
-> **query**, a **key**, and a **value**.
+> \**query**, a **key**, and a **value**.
 >
 > The **query** lets you ask a question about that word, such as what's
 > happening in Africa.
@@ -189,7 +189,7 @@
 > that says this is Africa and someone is visiting Africa**. This is a **much
 > more nuanced, much richer representation** for the word than if you just
 > had to pull up the same fixed word embedding for every single word
-> **without being able to adapt it based on what words are to the left and
+> \**without being able to adapt it based on what words are to the left and
 > to the right of that word**. We've all got to **take into account and in the
 > context**. Now, you have learned about the self-attention mechanism
 
@@ -262,7 +262,7 @@
 
 > [!NOTE]
 > Xong head 1, tính head 2 thì  **W2_Q,K,V**...đại khái biểu thị câu hỏi khác,
-> **khi nào** ở l'Afrique (**When**?) và cũng tính tương tự  để tính ra 1 bộ
+> \**khi nào** ở l'Afrique (**When**?) và cũng tính tương tự  để tính ra 1 bộ
 > representation vector của các từ gọi là head #2
 >
 > Thì head 2 mang trong mình những thông tin hữu ích để trả lời câu hỏi "When"
@@ -299,7 +299,7 @@
 <p align="center"><kbd><img src="assets/6760ccd17cdbf876debe254f2a2399c8f37f863e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> *Tất cả đều chỉ là hiểu đại khái như sau:
+> \*Tất cả đều chỉ là hiểu đại khái như sau:
 >
 > Có vẻ như (trong bài trước mình chưa hiểu rõ lắm) đó là
 > kết quả của bước multi-head attention tính ra representation
@@ -742,7 +742,7 @@
 > [!NOTE]
 > PE vector sẽ có cùng độ dài với word
 > embedding vector là **d-model** = **encoding_size**
-> **embedding_dim** = d = ...
+> \**embedding_dim** = d = ...
 
 <br>
 
@@ -769,12 +769,12 @@
 > input vào model sẽ 'trở thành / embedded & encoded thành': 
 >
 > matrix word embedding và position encoding matrix có shape:
-> **sequence_len** x **embedding_dim**
+> \**sequence_len** x **embedding_dim**
 >
 > Mở rộng hơn do nó sẽ 'handle' không phải một mà là một **batch_size**
 > cái sequence nên input sẽ là: 
 > Block word embedding và block position encoding đều có shape là
-> **batch_size**, **sequence_len**, **embedding_dim** Block hay còn gọi là volume, tensor
+> \**batch_size**, **sequence_len**, **embedding_dim** Block hay còn gọi là volume, tensor
 
 <br>
 
@@ -862,7 +862,7 @@
 > Embedding và Position Encoding) **vào cả ba cửa
 > này** của Attention layer
 >
-> *Gọi Attention layer là layer con (sublayer) của
+> \*Gọi Attention layer là layer con (sublayer) của
 > Encoding layer
 
 <br>
@@ -920,7 +920,7 @@
 > sublayer của Attention (cũng như Attention  là sublayer của Encoding) để tạo
 > ra Q,K,V.
 >
-> **Và điều quan trọng cần hiểu rằng các Linear layer này có các weight
+> \**Và điều quan trọng cần hiểu rằng các Linear layer này có các weight
 > (param) là W_Q, W_K, W_V - sẽ được train cùng với / cũng như các
 > sequence Embedding cũng được train trong quá trình training** Còn train như thế nào / mục đích gì thì nó sẽ liên quan đến 
 > vai trò của Q,K,V. Đại khái là Q,K,V sẽ giúp mục đích cuối cùng là 
@@ -2066,7 +2066,7 @@
 > [!NOTE]
 > Các matrix q,k,v có shape như vậy là sao chưa hiểu luôn
 >
-> ***depth** sẽ chính là **embedding_dim**
+> \***depth** sẽ chính là **embedding_dim**
 
 <br>
 
@@ -2141,8 +2141,8 @@
 > Trong cái ini này thì **embedding_dim** chính là chiều dài của word
 > embedded vector A<1>,A<2>.. Đọc trong doc cũng thấy args (không phải
 > call argument) thì constructor của Multi-head Attention bỏ vào:
-> **num_heads** = Số attention head, trong bài giảng có nói là **"h"**
-> **key_dim** = **Size của each attention head for query and key** Tạm hiểu **"size of each attention head"** đại khái là **chiều dài của
+> \**num_heads** = Số attention head, trong bài giảng có nói là **"h"**
+> \**key_dim** = **Size của each attention head for query and key** Tạm hiểu **"size of each attention head"** đại khái là **chiều dài của
 > word embedding vector**
 
 <br>
@@ -2196,7 +2196,7 @@
 > Mà x nó đã ghi sẵn là tensor of shape: 
 > B - batch size, input_seq_len, fully_connected_dim
 >
-> **Đã nói rõ trong hint là sẽ bỏ Q, K, V vào (cùng với mask) vào 
+> \**Đã nói rõ trong hint là sẽ bỏ Q, K, V vào (cùng với mask) vào 
 > cái multihead attention layer mà nếu là đang compute self-attention
 > thì Q, K, V bằng nhau. Vậy thì là bỏ x,x,x chứ gì nữa.**
 
@@ -2896,7 +2896,7 @@
 
 > [!NOTE]
 > Đại khái là dùng cái Transformer model tên là
-> **TFDistilBertForTokenClassification**
+> \**TFDistilBertForTokenClassification**
 >
 > Và nó cũng là **pre-trained model** luôn (thể hiện bởi **from_pretrained**) -
 > đại khái giống như họ (**HuggingFace library)** có sẵn những pre-trained
@@ -2911,7 +2911,7 @@
 
 > [!NOTE]
 > Đại khái là thử 1 text mới, tokenize nó, rồi bỏ vào model predict thử ở đây cái
-> **model(inputs).logits hình như chỉ số probability** rồi lấy **argmax để lấy ra
+> \**model(inputs).logits hình như chỉ số probability** rồi lấy **argmax để lấy ra
 > prediction**
 
 > [!NOTE]

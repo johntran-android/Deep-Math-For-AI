@@ -187,11 +187,11 @@
 >
 > Cùng với chuỗi binary d1d2...d52 của 52 bit, ta sẽ ráp vào công thức nào dưới đây cũng được:
 >
-> **Theo chuẩn IEEE**: 
+> \**Theo chuẩn IEEE**: 
 >
 > Công thức sẽ là: 
 >
-> **{1 + [lôi cái chuỗi sau dấy-phẩy-đã-dịch-chuyển theo IEEE ra tính với các trọng số 2^-1, 2^-2...,} * 2^e_ieee**
+> \**{1 + [lôi cái chuỗi sau dấy-phẩy-đã-dịch-chuyển theo IEEE ra tính với các trọng số 2^-1, 2^-2...,} * 2^e_ieee**
 >
 > Và vì chuẩn IEEE chuyển dấu phẩy để có 1.**d1d2..d52**, nên chuỗi-sau-dấu-phẩy-đã-dịch chuyển là d1d2..d52: 
 >
@@ -201,11 +201,11 @@
 >
 > (e này là e được dịch chuyển dấu phẩy theo lối IEEE, ta viết là e_ieee)
 >
-> **Theo Nocedal**:  
+> \**Theo Nocedal**:  
 >
 > Công thức là: 
 >
-> **{[lôi cái chuỗi sau dấy phẩy đã dịch chuyển theo IEEE ra tính với các trọng số 2^-1, 2^-2...,]} * 2^e_nocedal**
+> \**{[lôi cái chuỗi sau dấy phẩy đã dịch chuyển theo IEEE ra tính với các trọng số 2^-1, 2^-2...,]} * 2^e_nocedal**
 >
 > Nhưng vì chuẩn Nocedal chuyển dấu phẩy thành 0.**1d1d2...d52** chuỗi-sau-dấu-phẩy-đã-dịch-chuyển sẽ là 1d1..d52 nên:
 >
@@ -242,7 +242,7 @@
 > Và chỗ này phải hiểu vầy:
 >
 > Trong hệ **thập phân**, nhân 0.1423678 với **10^3** tức là **NÓ LÀM ĐỘNG TÁC DỜI DẤU PHẨY SANG BÊN PHẢI**
-> **3** bước để có 142.3678
+> \**3** bước để có 142.3678
 >
 > Thì trong hệ **nhị phân**, nhân 0.10101001 với **2^4** cũng chính là **NÓ LÀM ĐỘNG TÁC DỜI DẤU PHẨY SANG BÊN 
 > PHẢI** **4** bước, để có 1010.1001
@@ -342,7 +342,7 @@
 > Tức là **2^-t * 2^e**
 >
 > Vậy thì sai số **LỚN NHẤT** sẽ xảy ra khi máy tính cần thể hiện con số nào đó mà nó nằm ngay
-> **CHÍNH GIỮA** hai số liền kề có thể lưu trên máy tính, vì đã nói bất kì con số nào nằm giữa đều
+> \**CHÍNH GIỮA** hai số liền kề có thể lưu trên máy tính, vì đã nói bất kì con số nào nằm giữa đều
 > ko thể thể hiện chính xác, cũng đồng nghĩa là phải làm tròn thành cái mốc gần nhất.
 >
 > Ví dụ, mọi thằng trong đám {10.12345671xx..,10.12345672xx..,...10.12345679xx...} sẽ đều bị làm
@@ -414,7 +414,7 @@
 >
 > Khái quát, **với x, có floating point fl(x)** thì 
 >
-> **con số floating point tiếp theo / kế cận nó chính là: fl(x) +/- 2*10^-52 * 2^e (I)**
+> \**con số floating point tiếp theo / kế cận nó chính là: fl(x) +/- 2*10^-52 * 2^e (I)**
 >
 > \-----
 >
@@ -629,7 +629,7 @@
 >
 > = (2 - 2^-52) * 2^1023
 >
-> **≈ 1.79 * 10^308**
+> \**≈ 1.79 * 10^308**
 >
 > Số nhỏ nhất được phép: e = -1021, d1,d2,...d52 = 0
 >
@@ -639,7 +639,7 @@
 >
 > = 2^-1022
 >
-> **≈ 2.2 * 10^-308 (giống ở trên)
+> \**≈ 2.2 * 10^-308 (giống ở trên)
 >
 > Và đây chính là hai con số 2^L và 2^U nói đến trong sách.**
 
@@ -773,7 +773,7 @@
 > fl(B)**
 >
 > Và như đã nói, thì **digit thứ 16 trở đi là vô nghĩa, là rác.**  Nên
-> **a16a17... x 10^-16 và b16b17... x 10^-16 hoàn toàn vô nghĩa**,
+> \**a16a17... x 10^-16 và b16b17... x 10^-16 hoàn toàn vô nghĩa**,
 > mang giá trị **do máy tính bịa ra**  Nên nó chỉ là [hiệu của 2 chuỗi số
 > rác do máy tính bịa ra] * 10^-15
 >
@@ -783,7 +783,7 @@
 >
 > Kết quả trên [hiệu của 2 chuỗi số rác do máy tính bịa ra] * 10^-15
 >
-> **CHỈ CÓ 0 CON SỐ CÓ NGHĨA.
+> \**CHỈ CÓ 0 CON SỐ CÓ NGHĨA.
 >
 > VÀ NGUỒN CƠN CỦA CON SỐ  0 NÀY LÀ VÌ: A, B ĐÃ GIỐNG
 > NHAU Ở 15 CON SỐ ĐẦU TIÊN VÀ NHƯ VẬY NÓ ĐÃ GIỐNG

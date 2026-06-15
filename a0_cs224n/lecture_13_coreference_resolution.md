@@ -170,7 +170,7 @@
 >
 > Đại khái là, ví dụ như trong câu: Barack Obama đi đến nước Anh. .... Obama..
 > . làm gì đó ,..Thì đại khái trong ví dụ này , Barack Obama và Obama là
-> **coreference** cùng chỉ đến ông Obama.
+> \**coreference** cùng chỉ đến ông Obama.
 >
 > Tuy nhiên nếu nói "**Barack Obama** said **he** would sign the bill" thì chữ he và
 > Obama lại quan hệ theo **vừa là coreference** mà **vừa là** **anaphoric
@@ -769,7 +769,7 @@
 > combination các word vector của các từ khác**, **nhiều hay ít tùy thuộc
 > mức độ relevant giữa từ đó với từ đang xét**, và mức độ relevancy này
 > thường được tính bởi mộ**t similarity score** như cách đơn giản nhất là
-> **dot product.** Kết quả mang ý nghĩa là ta có vector mới phản ảnh thêm
+> \**dot product.** Kết quả mang ý nghĩa là ta có vector mới phản ảnh thêm
 > thông tin bối cảnh của các từ xung quanh.
 >
 > Còn ở đây, mục đích chính là ta muốn combine các word vector với mức

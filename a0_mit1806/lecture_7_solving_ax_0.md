@@ -26,7 +26,7 @@
 > kia**
 >
 > Đại khái là, với lần này, ta sẽ làm **elimination** nhưng với một
-> **rectangular matrix** (nhớ bài trước ta làm với square matrix).
+> \**rectangular matrix** (nhớ bài trước ta làm với square matrix).
 > Và gs cho rằng ta sẽ **continue ngay cả khi gặp pivot bằng 0.**
 
 <br>
@@ -133,7 +133,7 @@
 >
 > để có một solution đầu tiên x = [-2, 1, 0, 0].T
 >
-> **Để rồi ta có một vector khác 0 trong null-space.**
+> \**Để rồi ta có một vector khác 0 trong null-space.**
 >
 > Và đương nhiên scale nó với mọi scalar bất kì cũng được
 > một solution, cũng được một vector thuộc nullspace.
@@ -154,12 +154,12 @@
 > Thế vào giải ra x1 = 2, x3 = 1. Và đương nhiên mọi multiple của
 > solution này cũng là solution.
 >
-> **x = d * [2, 0, 1, 1]**
+> \**x = d * [2, 0, 1, 1]**
 >
 > Để rồi ta có **null-space của A** là mọi linear combination
 > của  hai vector solution này:
 >
-> **x = c * [-2, 1, 0, 0].T + d * [2, 0, 1, 1**]
+> \**x = c * [-2, 1, 0, 0].T + d * [2, 0, 1, 1**]
 >
 > Ở đây gs nói rằng đây là algorithm của gs, assign các x gắn
 > với free column lần lượt là 0, 1 và solve các x kia.
@@ -183,7 +183,7 @@
 > LÀ SỐ FREE COLUMN**
 >
 > Nếu matrix (m, n) có **rank r**, thì **số pivot column là r**, thì
-> **số free column sẽ là n-r**.
+> \**số free column sẽ là n-r**.
 >
 > Và như đã nói **MỌI LINEAR COMBINATION CỦA SPECIAL
 > SOLUTION LÀM THÀNH NULL-SPACE**
@@ -215,7 +215,7 @@
 
 > [!NOTE]
 > Để có dạng **REDUCE ROW ECHELON FORM**, ta
-> **MUỐN CÁC VỊ TRÍ Ở TRÊN VÀ DƯỚI PIVOT ĐỀU
+> \**MUỐN CÁC VỊ TRÍ Ở TRÊN VÀ DƯỚI PIVOT ĐỀU
 > BẰNG 0**. Vậy ta sẽ trừ row 1 cho row 2 để có điều này.
 >
 > Có thể tiếp tục clean hơn nữa: **CHO PIVOT BẰNG 1
@@ -296,7 +296,7 @@
 >
 > Gs cho biết một dạng typical của RREF có thể khái quát
 > như vầy. Các **pivot row và col "xuất hiện" trước**,
-> **sau đó là các free row và col**
+> \**sau đó là các free row và col**
 
 <br>
 
@@ -366,7 +366,7 @@
 > Ta thấy col 3 = col 1 + col 2 nên ta **chỉ có 2 col
 > independence**. Do đó **rank r=2**, đồng nghĩa ta sẽ **chỉ có 2
 > pivot variable** ứng với hai independence column. Và
-> **n-r=3-2=1 free columns** hay free variable
+> \**n-r=3-2=1 free columns** hay free variable
 >
 > Và quá trình **elimination sẽ làm rõ cho ta thấy** điều đó, cũng
 > như là nó cũng sẽ **vạch trần các dependence rows**, **bằng
@@ -420,7 +420,7 @@
 
 > [!NOTE]
 > Thế là ta đã có matrix U - mà mình nhớ là viết tắt của
-> **Upper triangular matrix** (số khác 0 ở trên đường chéo)
+> \**Upper triangular matrix** (số khác 0 ở trên đường chéo)
 
 <br>
 
@@ -433,7 +433,7 @@
 > [!NOTE]
 > với col 3 thì vị trí pivot = 0, nhìn xuống dưới cũng 0, nên
 > không làm gì được nữa. Vậy ta **có 2 pivot**. Đồng nghĩa
-> **rank = 2**.
+> \**rank = 2**.
 >
 > Gs hỏi: Vậy nullspace thì sao, **có bao nhiêu special
 > solution**?
@@ -472,7 +472,7 @@
 > Ax theo column view là linear combination của các col
 > của A với các coeff là giá trị của x**
 >
-> **-1** * col 1 **-1** * col 2 + **1** * col 3 = 0
+> \**-1** * col 1 **-1** * col 2 + **1** * col 3 = 0
 >
 > <-> **col 3 = col 1 + col 2**
 
@@ -570,7 +570,7 @@
 > chính là = -F = [-1, -1]
 
 > [!NOTE]
-> **Nullspace matrix** là matrix mà **col chính là
+> \**Nullspace matrix** là matrix mà **col chính là
 > special solution**
 
 <br>

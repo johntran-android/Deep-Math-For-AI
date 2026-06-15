@@ -39,7 +39,7 @@
 
 > [!NOTE]
 > Đầu tiên khái niệm "**Sample space**": là tập hợp **mọi possible outcome** của một
-> **experiment**.
+> \**experiment**.
 >
 > Đại khái là thầy nói bạn học xong lớp này thì **có thể giải những vấn đề mà
 > cách đây 300 năm người ta phải đi hỏi Issac Newton**. thậm chí Newton còn
@@ -133,7 +133,7 @@
 >
 > Thì đây là
 >
-> **SỐ CÁCH LẤY RA MỘT SET CÓ K CÁI, TỪ MỘT BỘ CÓ N CÁI, KHÔNG
+> \**SỐ CÁCH LẤY RA MỘT SET CÓ K CÁI, TỪ MỘT BỘ CÓ N CÁI, KHÔNG
 > QUAN TÂM THỨ TỰ (*)**
 >
 > Và nếu k > n thì quy ước kết quả là 0.
@@ -150,9 +150,9 @@
 > Có n người, để chọn k người, thì **người đầu tiên ta có n cách chọn**,
 > người **thứ 2 có n-1 cách chọn**,...**người thứ k ta có n-k+1** cách chọn.
 >
-> **Và chọn người thứ nhất thì dù có là ai thì người thứ hai ta vẫn có n-1
+> \**Và chọn người thứ nhất thì dù có là ai thì người thứ hai ta vẫn có n-1
 > cách chọn**, và các người sau cũng vậy. Nên theo Product rule ta có
-> **n*(n-1)..(n-k+1)** cách chọn.
+> \**n*(n-1)..(n-k+1)** cách chọn.
 >
 > Và **n*(n-1)..(n-k+1)** chính là = **n! / (n-k)!**
 >
@@ -161,7 +161,7 @@
 >
 > Nhưng ở đây **mình không quan tâm thứ tự** cho nên **ta sẽ chia cho k!** là **số lần
 > trùng lặp**. Ví dụ **với 3 người A,B,C** thì **nếu quan tâm thứ tự sẽ có 3.2.1 = 3!**
-> **bộ** nhưng **nếu không quan tâm thứ tự thì chỉ cần 1.**
+> \**bộ** nhưng **nếu không quan tâm thứ tự thì chỉ cần 1.**
 >
 > Vậy nếu mình có **n*(n-1)..(n-k+1)** bộ **k người có quan tâm thứ tự** thì để
 > tính số **bộ k người không quan tâm thứ tự thì ta chia đi cho k!**
@@ -213,7 +213,7 @@
 > Như đã nói, full house là **3 lá loại này** và **2 lá có loại kia**.
 >
 > Vậy đầu tiên, để tính tổng số lượng của mọi possible outcome, hay kích thước của
-> **SAMPLE SPACE**: ta sẽ **ĐẾM** xem có bao nhiêu cách để **chọn ra 5 lá từ bộ 52 lá**.
+> \**SAMPLE SPACE**: ta sẽ **ĐẾM** xem có bao nhiêu cách để **chọn ra 5 lá từ bộ 52 lá**.
 > Chính là **số cách chọn 5 item từ 52 item khác nhau không care thứ tự** **(52 choose 5)** 
 >
 > ⇨ Vì các possible outcome là equally likely nên xác suất xảy ra một outcome là 
@@ -279,21 +279,21 @@
 🔗 **Related:** [LEC 2: STORY PROOFS, AXIOMS OF PROBABILITY](untitled.md#node-26)
 
 > [!NOTE]
-> **Case 2**: Sampling **KHÔNG replacement** và **KHÔNG quan tâm thứ tự**.
+> \**Case 2**: Sampling **KHÔNG replacement** và **KHÔNG quan tâm thứ tự**.
 >
 > Thế thì trong n cái lấy k cái không quan tâm thứ tự chính là định nghĩa cả **binomial
 > coeff**: Trong n cái, lấy ra k cái, không quan tâm thứ tự. Và trong định nghĩa này thì
 > đã lấy là lấy ra luôn, tức là no replacement. Vậy ở góc này số lượng chính là:
 >
-> **(n choose k)** 
+> \**(n choose k)** 
 >
 > ====
 >
-> **Case 3**: Sampling **KHÔNG replacement" + CÓ quan tâm order**: Case này
+> \**Case 3**: Sampling **KHÔNG replacement" + CÓ quan tâm order**: Case này
 > không replacement nên giống case trên nhưng vì có quan tâm thứ tự nên ta sẽ nhân
 > thêm số  permutation của k item k!
 >
-> **(n choose k)*k! = n!/[(n-k)!k!]*k! = n!/(n-k)! = n*(n-1)..(n-k+1)** ==== **Case 1**: Sampling **CÓ** replacement và **CÓ** quan tâm đến thứ tự:
+> \**(n choose k)*k! = n!/[(n-k)!k!]*k! = n!/(n-k)! = n*(n-1)..(n-k+1)** ==== **Case 1**: Sampling **CÓ** replacement và **CÓ** quan tâm đến thứ tự:
 >
 > Có nghĩa là ĐẾM số possible outcome khi chọn k item từ n item khác nhau, trong đó
 > ta có care thứ tự của các item và thực hiện sampling theo lối có replacement (hoàn

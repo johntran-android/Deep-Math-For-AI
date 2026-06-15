@@ -80,10 +80,10 @@ Learning Objectives
 > leading to the development of a **basic translation program**.
 >
 > 3 Defining the **transformation matrix R** to convert the **English word vector**
-> **space** to the **French word vector space**.
+> \**space** to the **French word vector space**.
 >
 > 4 Training the model to translate English words to French by **comparing** the
-> **translation X times R** with the **actual French word embeddings in Y**, and
+> \**translation X times R** with the **actual French word embeddings in Y**, and
 > gradually **improving matrix R** in a loop.
 >
 > 5 Using the **Frobenius norm** to measure the **magnitude** or the **norm** of a
@@ -150,7 +150,7 @@ Learning Objectives
 >
 > Tính **derivative của Loss w.r.t R**
 >
-> **Update R** với **derivative** với hệ số **lr** alpha.
+> \**Update R** với **derivative** với hệ số **lr** alpha.
 >
 > Có thể **define số iteration** hay **chủ động stop khi loss giảm xuống mức cần thiết**
 
@@ -216,7 +216,7 @@ Learning Objectives
 > [!NOTE]
 > In this lab, you will have the opportunity to practice once
 > again with the NumPy library. This time, we will explore some
-> **advanced operations** with **arrays** and **matrices**.
+> \**advanced operations** with **arrays** and **matrices**.
 >
 > At the end of the previous module, we used **PCA** to **transform**
 > a set of **many variables** into a set of only **two uncorrelated
@@ -224,7 +224,7 @@ Learning Objectives
 > data called **rotation**.
 >
 > In this week's assignment, you will need to find a
-> **transformation matrix** from English to French vector space
+> \**transformation matrix** from English to French vector space
 > embeddings. Such a transformation matrix is nothing else but
 > a **matrix** that **rotates** and **scales** vector spaces.
 >
@@ -233,7 +233,7 @@ Learning Objectives
 
 > [!NOTE]
 > Nói chung đại khái là ở này sẽ giảng về khái niệm '
-> **rotation transformation**' đ.v vector dịch sang tiếng
+> \**rotation transformation**' đ.v vector dịch sang tiếng
 > việt gọi là 'phép xoay vector'
 
 <br>
@@ -413,9 +413,9 @@ Learning Objectives
 >  3 Using a **hash table** to **store word vectors**
 >  4 Creating a **basic hash table code**
 >  5 **Locality-sensitive hashing** and its importance in **assigning items** 
-> **based on location in vector space**
+> \**based on location in vector space**
 >  6 Learning new terms such as **hash values**, **hash functions**, and 
-> **buckets**
+> \**buckets**
 >  7 Future topic: exploring **locality-sensitive hashing** in more detail.
 
 <br>
@@ -497,7 +497,7 @@ Learning Objectives
 > Thì solution là dùng **Locality Sensitive Hashing** - kiểu như **kiểu
 > hashing** mà **quan tâm đến vị trí của word trong vector space**
 > \- để giúp hashing value - thông tin giúp chia các từ vào bucket sao cho
-> **các từ gần nhau nằm trong 1 bucket**
+> \**các từ gần nhau nằm trong 1 bucket**
 >
 > Sensitive is another word for caring. So **locality-sensitive hashing**
 > is a hashing method that **cares very deeply** about assigning
@@ -533,14 +533,14 @@ Learning Objectives
 > the normal vector**, and whether the vector is **above or below** the plane.
 >
 > 6 The f**unction side** of plane takes in a normal vector and a vector, and returns a
-> **plus one if the dot product is positive**, a **negative one if it is negative, and zero if it
+> \**plus one if the dot product is positive**, a **negative one if it is negative, and zero if it
 > is zero.**
 >
 > 7 The **sign of the projection of two vectors** tells you which parts of the line the point
 > lies, such as **above or below** it.
 >
 > 8 In the next video, combining the **concept of multiple planes** will be introduced to
-> **better approximate where a data point might be located.**
+> \**better approximate where a data point might be located.**
 
 <br>
 
@@ -550,7 +550,7 @@ Learning Objectives
 
 > [!NOTE]
 > Instead of the **typical buckets** we have been using, you can think of
-> **clustering the points** by deciding **whether they are above or below the line**.
+> \**clustering the points** by deciding **whether they are above or below the line**.
 > Now as we go to **higher dimensions** (say n-dimensional vectors), you
 > would be using **planes** instead of lines
 >
@@ -576,7 +576,7 @@ Learning Objectives
 > [!NOTE]
 > Và **dot** của vector vơi **normal vector**
 > sẽ giúp xác định nó nằm **trên** hay
-> **dưới** hay **trong** plane
+> \**dưới** hay **trong** plane
 
 <br>
 
@@ -680,7 +680,7 @@ Learning Objectives
 > sau: sign = 1 or 0 thì hash_i = 1, sign = -1 thì hash_i = 0
 >
 > XOng hash sẽ là tính theo công thức với các hash_i value đó
-> **Sum 2^i*hash_i**
+> \**Sum 2^i*hash_i**
 
 <br>
 
@@ -722,9 +722,9 @@ Learning Objectives
 > of the **hash key** or **bucket id** that we **assign for a given entry**. 
 > In this notebook, we will cover:
 >
-> **Basic hash tables**
-> **Multiplanes**
-> **Random planes**
+> \**Basic hash tables**
+> \**Multiplanes**
+> \**Random planes**
 
 <br>
 
@@ -763,7 +763,7 @@ Learning Objectives
 
 > [!NOTE]
 > The hash function is just the **remainder** of the **integer division** between
-> **each element** and the **desired number of buckets**.
+> \**each element** and the **desired number of buckets**.
 
 > [!NOTE]
 > Kiểu hash table đơn giản nhất chỉ là dùng
@@ -829,7 +829,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là ví dụ của 1 cái plane define bởi một vector chỉ hướng -
-> **normal vector** của nó. Plot các **điểm tuỳ tiện** và tính **sign**(**dot**(của các
+> \**normal vector** của nó. Plot các **điểm tuỳ tiện** và tính **sign**(**dot**(của các
 > điểm với normal vector) để **biết nó ở đâu** (**positive** size, **negative** size
 > hay nằm **ngay trên** plane (=0)
 
@@ -926,7 +926,7 @@ Learning Objectives
 
 > [!NOTE]
 > In the following section, we are going to
-> **define a hash function** with a list of **three
+> \**define a hash function** with a list of **three
 > custom planes** in 2D.
 
 > [!NOTE]
@@ -958,7 +958,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khá là **loop trong các plane** (tức các normal vectors), tính
-> **sign** of plane của v với các vector đó để tính hash_i = 1 nếu sign
+> \**sign** of plane của v với các vector đó để tính hash_i = 1 nếu sign
 > >=0, 0 nếu sign < 0 rồi tính hash_value (hash value tổng hợp) theo
 > công thức
 >
@@ -1028,7 +1028,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là define cái **function  tính hash** dựa vào
-> **side_of_plane_matrix**, bỏ vào **1 vector cần tính**, **các plane**.
+> \**side_of_plane_matrix**, bỏ vào **1 vector cần tính**, **các plane**.
 >
 > Nó sẽ tính ra **array chứa các side_of_plane của v đối với các
 > plane trong P.**
@@ -1064,7 +1064,7 @@ Learning Objectives
 
 > [!NOTE]
 > Before we finish this lab, remember that you can
-> **represent a document** as a **vector** by **adding up the word
+> \**represent a document** as a **vector** by **adding up the word
 > vectors for the words inside the document**. In this
 > example, our embedding contains only **three words**, each
 > represented by a 3D array.
@@ -1092,7 +1092,7 @@ Learning Objectives
 
 > [!NOTE]
 > 1 **Locality sensitive hashing** can compute the **k nearest neighbors**
-> **faster** **than** **brute search.**
+> \**faster** **than** **brute search.**
 >
 > 2 **Different sets of random planes** can be used to **divide the vector
 > space** into **multiple independent sets of hash tables**.
@@ -1143,7 +1143,7 @@ Learning Objectives
 >
 > Gọi là **Approximate nearest neighbors** Và c**àng nhiều plane (random) thì càng dần dần đủ (chính xác)
 > các nearest neighbor** nhưng sẽ **lâu hơn** nên mới nói là nó
-> **Hy sinh precision để đổi lấy speed**
+> \**Hy sinh precision để đổi lấy speed**
 
 <br>
 
@@ -1173,7 +1173,7 @@ Learning Objectives
 > pieces of text** in a **collection of documents.**
 >
 > 2 To perform **document search**, documents need to be **represented** as
-> **vectors** instead of just words.
+> \**vectors** instead of just words.
 >
 > 3 **Word vectors** for each individual word can be found and **added together** to
 > create a **document vector.**
@@ -1184,7 +1184,7 @@ Learning Objectives
 > d**ocument embedding** as an **array of zeros.**
 >
 > 6 For each word in a document, the **word vector is obtained**, and if the word
-> **exists** in the dictionary, **it is added to the document embedding**.
+> \**exists** in the dictionary, **it is added to the document embedding**.
 >
 > 7 This method is a very **general** **method** of embedding text into vector spaces
 > so that nearest neighbors refer to text with similar meaning.
@@ -1239,7 +1239,7 @@ Learning Objectives
 > neighbors**.
 >
 > In practice, the **more regions you have**, t**he higher accuracy** will be, but the
-> **slower** your **search** gets, there is always a trade off.
+> \**slower** your **search** gets, there is always a trade off.
 >
 > And this week's programming assignment you'll be learning the **transformation
 > matrix R**. That allows you to find the **mapping** **between words in different
@@ -1249,7 +1249,7 @@ Learning Objectives
 >
 > In this course, you have learned a lot so far, you learned about **logistic
 > regression** and **naive bayes** for **sentiment analysis**, **vector space models**,
-> **PCA** and **locality sensitive hashing**.
+> \**PCA** and **locality sensitive hashing**.
 
 <br>
 
@@ -1334,11 +1334,11 @@ Learning Objectives
 > you will see how **locality sensitive hashing** works. Let's get started by
 > importing the required functions! If you are running this notebook in your
 > local computer, don't forget to download the **twitter samples** and
-> **stopwords** from **nltk**.
+> \**stopwords** from **nltk**.
 >
-> **nltk.download('stopwords')**
+> \**nltk.download('stopwords')**
 >
-> **nltk.download('twitter_samples')**
+> \**nltk.download('twitter_samples')**
 
 <p align="center"><kbd><img src="assets/069535ac0f5290b6dc26827eb8b124a172b3ae94.png" width="100%"></kbd></p>
 
@@ -1707,7 +1707,7 @@ Learning Objectives
 >
 > Tính tổng đúng bao nhiêu trong m (accuracy)
 >
-> *Đó là hiểu như vậy, còn làm thì vectorize tính 1 phát ra các prediction
+> \*Đó là hiểu như vậy, còn làm thì vectorize tính 1 phát ra các prediction
 > của X luôn XR rồi mới loop trong các prediction này ..
 
 <br>

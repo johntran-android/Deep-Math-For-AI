@@ -52,7 +52,7 @@
 > Một định nghĩa quan trọng, đại khái là như vừa nói, **ta có thể mô tả
 > distribution của Y theo distribution của X1, X2,...Xn** theo các technique
 > ở chap 4. Mà, các random variable X1,X2...Xn là random variable của
-> **một random sample**
+> \**một random sample**
 >
 > Do đó, distribution của Y được gọi là **SAMPLING DISTRIBUTION
 >
@@ -419,13 +419,13 @@
 >
 > S^2 như đã biết, là SAMPLE VARIANCE, có công thức là :
 >
-> **S^2 = [1/(n-1)] Σi (Xi - X_bar)^2** Thế thì mình phải hiểu thế này: S^2, chỉ là kí hiệu của SAMPLE VARIANCE,
+> \**S^2 = [1/(n-1)] Σi (Xi - X_bar)^2** Thế thì mình phải hiểu thế này: S^2, chỉ là kí hiệu của SAMPLE VARIANCE,
 > và nó như những bài trước đã biết, là một STATISTIC, có bản chất là việc ta
 > apply một function lên các random variable X1,...Xn Và vì giống như khi apply function g lên random variable X, g(X), thì với các
 > possible value khác nhau của X, thì g(X) sẽ có các possible value khác nhau.
 > Nên g(X) cũng là một random variable.
 >
-> **Nên S^2 cũng là một random variable.
+> \**Nên S^2 cũng là một random variable.
 >
 > Và trong những phần trước giáo sư Casella cũng có nói rằng, ĐÁNG LẼ
 > TA PHẢI / HOẶC LÀ TA PHẢI TỰ HIỂU SAMPLE MEAN, SAMPLE VARIANCE,
@@ -680,7 +680,7 @@
 > tương tự kí hiệu là M_Xbar(t) có bản chất là E[e^tXbar]  Mà Xbar, again lại
 > là function của một đám X1,...Xn: Xbar = (Σi Xi)/n = Y/n E[e^tXbar] = E[e^t[(X1 + X2 + ...Xn)/n]] hay E[e^t[(Y)/n]]
 >
-> **Chuyển 1/n sang cho t, để có E[e^[(t/n)Y]** Đến đây, để không bị lú, ta sẽ lập luận lại:
+> \**Chuyển 1/n sang cho t, để có E[e^[(t/n)Y]** Đến đây, để không bị lú, ta sẽ lập luận lại:
 >
 > MX(t) có bản chất là E[e^tX], là hàm theo t, là mgf của X evaluate tại t,
 >
@@ -690,7 +690,7 @@
 > 1/n)  Do đó M_Xbar(t) = E[e^tXbar]  = E[e^[(t/n)Y] = mgf của Y, evaluate tại
 > t/n,
 >
-> **chính là MY(t/n)** 
+> \**chính là MY(t/n)** 
 
 <br>
 
@@ -735,7 +735,7 @@
 >
 > Ta đã biết từ những chương trước, mgf của normal là **M(t) = e^(μt + σ^2t^2/2)** 
 >
-> **Áp dụng công thức trên MX_bar(t) =  [MX(t/n)]^n** 
+> \**Áp dụng công thức trên MX_bar(t) =  [MX(t/n)]^n** 
 > = [e^ (μ(t/n) + σ^2(t/n)^2/2) ]^n
 >
 > = e^[n(μ(t/n) + σ^2(t/n)^2/2)]   | vì (a^n)^m = a^(mn)
@@ -830,7 +830,7 @@
 > Rồi, theorem này cũng khái quát lên multivariate case:
 >
 > Khi ta có n random variable. U1,U2,.....Un tạo thành random variable vector
-> **U** với Ui = gi(X1,X2,...Xn) i = 1,2...n Và ta biết joint pdf của X1,...Xn. Khi đó
+> \**U** với Ui = gi(X1,X2,...Xn) i = 1,2...n Và ta biết joint pdf của X1,...Xn. Khi đó
 > nếu cũng thỏa yêu cầu 1-1 ta sẽ có thể xây dựng joitn pdf của U1,..Un:
 >
 >

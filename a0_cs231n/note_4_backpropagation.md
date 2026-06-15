@@ -30,7 +30,7 @@
 
 > [!NOTE]
 > Đại khái là chính vì ý nghĩa đạo hàm như vậy nên có thể hiểu nó như
-> **sự nhạy cảm** của function f (khi x thay đổi tác động đến f thay đổi
+> \**sự nhạy cảm** của function f (khi x thay đổi tác động đến f thay đổi
 > nhiều hay ít ra sao)
 >
 > Tiếp theo như đã biết khi f là function của **hai  variable x, y** hay của
@@ -91,7 +91,7 @@
 > đại khái là cái khái niệm **gate (hay node)** ở trên về cơ bản có thể là bất
 > kì một function nào mà **differentiable** nào. Và ta **có thể
 > nhóm các gate lại (hay node)** thành một node bự hơn hoặc
-> **chia nhỏ ra** để thuận tiện
+> \**chia nhỏ ra** để thuận tiện
 >
 > Cung cấp thêm một số công thức tính đạo hàm của các function
 > với vụ **unary gate** ý nói các function f = x + c hay a*x là hàm đơn biến

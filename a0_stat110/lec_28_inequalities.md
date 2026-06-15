@@ -32,7 +32,7 @@
 
 > [!NOTE]
 > đại khái gs cho rằng, ta có thể n**ghĩ đến việc dùng Linearity** để
-> **E(Σj Xj) = Σj E(Xj)** và với Xj có mean μ tức là E(Xj) = μ
+> \**E(Σj Xj) = Σj E(Xj)** và với Xj có mean μ tức là E(Xj) = μ
 > thì kết quả là Nμ
 >
 > Gs hỏi làm vậy **là sai** và đề nghị ta nghĩ xem **tại sao** ta có thể biết
@@ -99,14 +99,14 @@
 > Thế thì, ta đã biết rằng ý nghĩa của **E(X|N=n)** là cho rằng **biết giá trị của
 > N=n**, thì **best prediction của X là bao nhiêu**. Thì vì đã biết giá trị của N, mà
 > lại có điều kiện **các X1,X2.. Xj INDEPENDENT với N**. Thành thử ra, ta có thể
-> **bỏ condition đi.**
+> \**bỏ condition đi.**
 >
 > Cụ thể xét kĩ một chút thì: 
 >
-> **E(X|N) = E(Σ j=1:N Xj | N=n)** **= E(X1+X2+...XN | N=n)** 
+> \**E(X|N) = E(Σ j=1:N Xj | N=n)** **= E(X1+X2+...XN | N=n)** 
 >
 > thế thì giống như trong  bài toán envelop (link xanh) đã nói: Ta chỉ có thể
-> **dùng rồi bỏ đi condition** nếu các rv **INDEPENDENT**. 
+> \**dùng rồi bỏ đi condition** nếu các rv **INDEPENDENT**. 
 >
 > Do đó, với việc N mang giá
 > trị = n  thì **E(X1+X2+...XN | N) = E(X1+X2+...Xn | N=n)** = **E(X1+X2+...Xn)**
@@ -124,7 +124,7 @@
 > [!NOTE]
 > Cách làm thứ 2 gs nói là **Adam's Law**
 >
-> **E(X) = E[E(X|N)]** thì xét **E(X|N)** ta cũng lập luận như vừa rồi rằng: Nếu biết giá
+> \**E(X) = E[E(X|N)]** thì xét **E(X|N)** ta cũng lập luận như vừa rồi rằng: Nếu biết giá
 > trị cụ thể n của N và Xj, N independent thì sử dụng thông tin N thì có thể bỏ
 > condition đi:
 >
@@ -161,7 +161,7 @@
 >
 > Vậy tới đây ta có kết quả như (*): **E(X) = Σn: E(X|N=n)*P(N=n)**
 >
-> *Viết "Σn:" ở đây ý là tổng mọi possible value của n, cũng là n=1,...inf
+> \*Viết "Σn:" ở đây ý là tổng mọi possible value của n, cũng là n=1,...inf
 
 <br>
 
@@ -176,7 +176,7 @@
 > [!NOTE]
 > Tiếp theo tính **Var(X)**, áp dụng **Eve's Law**, ta có công thức **Var(X) = E(Var(X|N)) + Var(E(X|N))** 
 >
-> **Var(X|N)** thì tương tự **E(X|N)**, đó là ta hiểu rằng đã có giá trị cụ thể của N, thì với việc Xj independent 
+> \**Var(X|N)** thì tương tự **E(X|N)**, đó là ta hiểu rằng đã có giá trị cụ thể của N, thì với việc Xj independent 
 > với N thì ta có thể bỏ N. Var(X|N) = Var(X1+X2+...XN|N) = Var(X1+X2+...XN).
 >
 > Áp dụng công thức Var(X1+X2+..) = Var(X1) + Var(X2) + ...Var(XN) + 2*Cov(X1, X2) + 2Cov(Xi, Xj)... 
@@ -210,7 +210,7 @@
 > Ta qua **STATISTIC** **INEQUALITIES**
 >
 > đại khái gs nói là có nhiều lúc ta **dễ nhầm lẫn** giữa **approximation** và
-> **inequality**
+> \**inequality**
 >
 > Ví dụ khi nói **probability trong khoảng 0.39 và 0.36** (tức là **inequality**
 > với **upper** và **lower bound**) thì ta có thể đoán nó là 0**.37 /0.38**
@@ -237,7 +237,7 @@
 > [!NOTE]
 > Bất đẳng thức đầu tiên trong 4 cái quan trọng mà ta sẽ biết là **Cauchy-Schwarz**
 >
-> **|E(XY)| <= √[E(X^2)*E(Y^2)]**.
+> \**|E(XY)| <= √[E(X^2)*E(Y^2)]**.
 >
 > Và **dấu bằng xảy ra khi X,Y uncorrelated E(XY) = EXEY** 
 >
@@ -276,7 +276,7 @@
 > Đại khái không phải là chứng minh bất đẳng thức mà gs nói rằng **nếu ta có
 > X,Y mean zero**. Thì theo công thức của **Correlation** của X,Y: 
 >
-> **Corr(X,Y) = Cov(X,Y) / STD(X)*STD(Y)**
+> \**Corr(X,Y) = Cov(X,Y) / STD(X)*STD(Y)**
 >
 > Cov(X,Y) = E(XY) - EX*EY = EXY vì EX, EY bằng 0
 >
@@ -324,7 +324,7 @@
 >
 > Gs nói một cách để nhớ cái nào lớn hơn cái nào là **dùng sự thật rằng Var(X)
 > thì không âm**. Nên **VarX = E(X^2) - (EX)^2 >= 0** <=> **E(X^2) >= (EX)^2** E(X^2) là E[g(X)] với g(x) = x^2  và (EX)^2 chính là g(EX) đó. Và quả thật
-> **g(x) = x^2** là hàm lồi vì **đạo hàm cấp 2 bằng 2 > 0**
+> \**g(x) = x^2** là hàm lồi vì **đạo hàm cấp 2 bằng 2 > 0**
 
 > [!NOTE]
 > JENSEN'S INEQUALITY: Nếu g là
@@ -385,8 +385,8 @@
 > Đại khái gs chứng minh như vầy:
 >
 > gọi **g** là **convex** function, **theo định nghĩa của convex function** thì với **mọi**
-> **tiếp tuyến** a+bx nào của function **tại các x khác nhau** thì ta đều có 
-> **g(X) ≥ a+bX** (1)
+> \**tiếp tuyến** a+bx nào của function **tại các x khác nhau** thì ta đều có 
+> \**g(X) ≥ a+bX** (1)
 >
 > Cái này sau khi đã học EE364a thì hoàn toàn hiểu được tại sao: Đó là vì đây
 > chính là đang nhắc đến First Condition của convex function:
@@ -421,7 +421,7 @@
 > Chứng minh như sau, ta sẽ dùng **Indicator** rv của event **|X|>=a** để đầu tiên
 > nói về một **sự thật** khỏi cần chứng minh:
 >
-> **a*I_(|X|>=a) <= |X|**
+> \**a*I_(|X|>=a) <= |X|**
 >
 > nó đúng là bởi: khi **|X| < a** thì **I = 0**, đương nhiên vế trái là **a*0 = 0** thì <= vế 
 > phải là **|X|** là giá trị **không âm**
@@ -490,7 +490,7 @@
 >
 > Từ |X-μ|>=a <=> (X-μ)^2 >= a^2 nên 
 >
-> **P(|X-μ|>=a) = P((X-μ)^2 >= a^2)** Áp dụng **Markov** **inequality** vừa biết đó là **P(|Y| >= b) <= E|Y| / b** với **b > 0** 
+> \**P(|X-μ|>=a) = P((X-μ)^2 >= a^2)** Áp dụng **Markov** **inequality** vừa biết đó là **P(|Y| >= b) <= E|Y| / b** với **b > 0** 
 > nên coi Y = (X-μ)^2 và b = a^2 
 >
 > ta có P((X-μ)^2 >= a^2) <= E[(X-μ)^2] / a^2 

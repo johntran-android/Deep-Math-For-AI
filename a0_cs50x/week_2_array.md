@@ -82,7 +82,7 @@
 > Q. a.out là gì 
 >
 > D: Cơ bản nó là **historical name** cho
-> **assembly output, ko quan trọng** 
+> \**assembly output, ko quan trọng** 
 
 <br>
 
@@ -147,7 +147,7 @@
 
 > [!NOTE]
 > Và không riêng gì CS50, những **lib** nào mà bạn dùng mà
-> **không có đi kèm với language** trong thì đều phải dùng **-l
+> \**không có đi kèm với language** trong thì đều phải dùng **-l
 > như vậy**
 
 <br>
@@ -199,7 +199,7 @@
 
 > [!NOTE]
 > Đại khái là nói compiling chứ
-> **thật ra có 4 động tác**
+> \**thật ra có 4 động tác**
 
 <br>
 
@@ -261,8 +261,8 @@
 > Tương tự, với **include <stdio.h>**, là **declaration**
 > cho function **printf**
 >
-> **Ba dấu chấm** mang ý nghĩa là function này có thể
-> **có nhiều argument**
+> \**Ba dấu chấm** mang ý nghĩa là function này có thể
+> \**có nhiều argument**
 
 > [!NOTE]
 > Q: Khi include vậy nó i**nclude chỉ function được
@@ -401,7 +401,7 @@
 
 > [!NOTE]
 > Đại khái ổng nói là **dù trên lý thuyết** có thể **decompile**
-> **machine code ra lại source code**. Nhưng thật ra nôm na
+> \**machine code ra lại source code**. Nhưng thật ra nôm na
 > là **nếu có thể mở cái iphone ra và xem xét, hiểu hết
 > bên trong và làm lại** thì thật ra **sẽ dễ hơn để invent cái mới.**
 >
@@ -477,7 +477,7 @@
 <p align="center"><kbd><img src="assets/97500fc2043ac7cfad4eb1389f96cd5b9e6b1360.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Step over** là **bỏ qua**,  nó sẽ k**hông phân tích implementation
+> \**Step over** là **bỏ qua**,  nó sẽ k**hông phân tích implementation
 > của printf**, còn **nếu dùng nút kế tiếp thì nó sẽ step in**, **đi vào
 > phân tích printf**
 >
@@ -823,7 +823,7 @@
 > Và có thể access tới các item của nó bằng [i]
 >
 > The memory is **contiguous**: Contiguous = **tiếp giáp**. Ý là nó
-> **không thể nằm random ở đâu đó mà vì là array  nên sẽ quy
+> \**không thể nằm random ở đâu đó mà vì là array  nên sẽ quy
 > định các pack nằm gần nhau**, **pack to pack to pack**
 
 <br>
@@ -905,7 +905,7 @@
 > Q: Sao phải include float average(int array[])
 >
 > D: (Thằng này không học bài nè) vì như tuần trước đã nói
-> **C nó đọc từ trên xuống và cần phải declare như vậy cho nó
+> \**C nó đọc từ trên xuống và cần phải declare như vậy cho nó
 > biết có tồn tại function average()**
 
 <br>
@@ -962,7 +962,7 @@
 > [!NOTE]
 > Mỗi **char** chiếm **1 byte = 8 bits** bộ nhớ. Nhớ lại, dựa
 > theo quy ước **ASCII** map **một số với một char**, nên
-> **thật sự nó cũng binary code** của nó (8bit) cũng chỉ là
+> \**thật sự nó cũng binary code** của nó (8bit) cũng chỉ là
 > thể hiện một **con số.**
 >
 > Ví dụ bên dưới (machine code) của H là dãy **8 bits sao
@@ -976,7 +976,7 @@
 >
 > => 73 = **01001001** in machine code
 >
-> *Đừng lầm lẫn khi hồi nãy một int variable được assign
+> \*Đừng lầm lẫn khi hồi nãy một int variable được assign
 > cho giá trị 73 lại chiếm 4 bytes. **Đơn giản là int được cho
 > 4 bytes** = 32 bits. Có nghĩa là **variable mang giá trị 73 đó 
 > sẽ có dạng như sau:** 
@@ -1059,10 +1059,10 @@
 <p align="center"><kbd><img src="assets/3b5f0aea258f87ab386881d2ea75f8a501d84aca.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **"\\0"** gắn với ASCII = **0** = **00000000**
+> \**"\\0"** gắn với ASCII = **0** = **00000000**
 > có tên riêng là kí tự NUL
 >
-> **"0"** (chữ số 0, trong ASCII gắn với **48** = **00110000**
+> \**"0"** (chữ số 0, trong ASCII gắn với **48** = **00110000**
 >
 > 00110000 = 0 + 0 + 32 + 16 + 0 + 0 + 0 + 0
 
@@ -1080,7 +1080,7 @@
 
 > [!NOTE]
 > Xong ổng thử in char như vầy.
-> **%c** là format cho char
+> \**%c** là format cho char
 
 <br>
 
@@ -1090,7 +1090,7 @@
 
 > [!NOTE]
 > Nhưng ổng nói cũng có thể để
-> **%i**, nó sẽ cho ra **số**, **key** mapping
+> \**%i**, nó sẽ cho ra **số**, **key** mapping
 > của char theo **ASCII**
 
 <br>
@@ -1187,7 +1187,7 @@
 > [!NOTE]
 > Trong memory nó sẽ như thế này: 
 >
-> **string array** chứa **2 string** 
+> \**string array** chứa **2 string** 
 >
 > mỗi **string là một array** chứa **4 và 5 char,** mỗi char chiếm **1 byte**
 
@@ -1210,11 +1210,11 @@
 
 > [!NOTE]
 > Đại khái là ổng dùng cách này **while loop**, trong các
-> **char của string để check khi nào gặp '\\0'** để **từ đó
+> \**char của string để check khi nào gặp '\\0'** để **từ đó
 > đếm được số char của string.**
 >
 > Và ổng nói **tuy array không thể đếm length** nhưng vì
-> **string là một array đặc biệt** khi có char **'\\0'** nên **có thể dùng
+> \**string là một array đặc biệt** khi có char **'\\0'** nên **có thể dùng
 > để đếm length of string**
 
 <br>
@@ -1228,7 +1228,7 @@
 > [!NOTE]
 > Đại khái ổng nói có nhiều người đã
 > giải quyết vấn đề này. Nên có một
-> **thư viện hỗ trợ string**
+> \**thư viện hỗ trợ string**
 
 <br>
 
@@ -1283,7 +1283,7 @@
 >
 > Thứ hai, dựa vào bản ASCII, **key value của kí tự viết hoa luôn
 > cách key value của kí tự viết thường 32 số** ví dụ **'a' = 97, 'A' = 65**
-> **'b' = 98, 'B' = 66.**..
+> \**'b' = 98, 'B' = 66.**..
 >
 > Nên bằng việc **in ra s[i] - 32**, nó sẽ in ra **kí tự HOA của kí tự s[i]**
 >
@@ -1373,7 +1373,7 @@
 > main(i**nt argc, string argv[])**
 >
 > Có nghĩa là giờ **main sẽ có argument.** 
-> **argv[]** dễ đoán là viết tắt của **argument value** sẽ là **array string
+> \**argv[]** dễ đoán là viết tắt của **argument value** sẽ là **array string
 > đưa vào** sau $
 >
 > còn **argc** là argument count dùng để **đếm số argument value
@@ -1411,7 +1411,7 @@
 
 > [!NOTE]
 > Và có thể dùng thêm các
-> **argv[1] argv[2].....**.
+> \**argv[1] argv[2].....**.
 
 <br>
 
@@ -1481,7 +1481,7 @@
 <p align="center"><kbd><img src="assets/33b2f34851cb313ddf49e4bc0d63e0e4bbc86fb8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **int** của **main()** là cách C design có
+> \**int** của **main()** là cách C design có
 > nghĩa là main hidden behind **luôn
 > return một int. Default là 0**
 
@@ -1556,7 +1556,7 @@
 
 > [!NOTE]
 > Đại khái là **để mã hoá** hay **giải mã** cần biết
-> **algorithm gì**, và **key gì** ví dụ dùng Ceasar (hoán
+> \**algorithm gì**, và **key gì** ví dụ dùng Ceasar (hoán
 > đổi vị trí, A -> B, B -> C...là Ceasar với key = 1
 > \- tức hoán đổi 1 vị trí)
 

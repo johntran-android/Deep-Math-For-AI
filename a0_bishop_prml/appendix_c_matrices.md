@@ -235,7 +235,7 @@
 > (∂f/∂A)ij , chính là đạo hàm của f đối với phần tử ij của A: ∂f/∂Aij
 >
 > Còn trường hợp ta có vector → vector function **b** → **a**. Thì đạo hàm của
-> **a** đối với **b**, sẽ là matrix mà hàng i sẽ là gradienet vector của ai đối với
+> \**a** đối với **b**, sẽ là matrix mà hàng i sẽ là gradienet vector của ai đối với
 > vector **b**: (∂a/∂b)ij = ∂ai/∂bj và matrix này gọi là Jacobian
 
 <br>
@@ -255,7 +255,7 @@
 > = **a**T**dx** (vì dxTa là scalar, nên transpose tùy ý)
 >
 > Lúc này ta đã có dạng df = f'(x)[dx], tức **a**T**dx** một linear operator act on
-> **dx**. Vì f là scalar, nên df cũng là scalar, còn **x** là vector nên **dx** cũng là
+> \**dx**. Vì f là scalar, nên df cũng là scalar, còn **x** là vector nên **dx** cũng là
 > vector. Vậy thì linear operator act on vector **dx** để cho ra scalar df chỉ có thể là
 > một phép dot product của vector nào đó với vector **dx**. Và vector đó chính là
 > gradient. ⇨ ∇f = **a**
@@ -576,11 +576,11 @@
 > eigenvalue = 0, thì ta sẽ có k vector khác 0, tạo thành k basis của nullspace thì
 > rank = n - k cũng chính là số eigenvector khác 0 còn lại.
 >
-> * LƯU Ý TỬ THẦN: Mệnh đề "Rank = Số eigenvalue khác 0" CHỈ luôn luôn
+> \* LƯU Ý TỬ THẦN: Mệnh đề "Rank = Số eigenvalue khác 0" CHỈ luôn luôn
 > đúng với Ma trận có thể chéo hóa (Diagonalizable Matrices), đặc biệt là Ma trận
 > Đối xứng (Symmetric Matrices) - thứ xuất hiện nhan nhản trong ML.
 >
-> * Đối với ma trận bất kỳ, nếu nó bị "khuyết" (Defective), số lượng eigenvector
+> \* Đối với ma trận bất kỳ, nếu nó bị "khuyết" (Defective), số lượng eigenvector
 > sinh ra từ λ=0 sẽ bị hụt so với số lượng nghiệm đại số của λ=0, dẫn đến công
 > thức tính Rank qua số nghiệm λ≠0 bị sai!
 

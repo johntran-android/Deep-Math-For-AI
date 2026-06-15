@@ -146,7 +146,7 @@
 > ===
 >
 > Sau đó để khắc phục vấn đề này, người ta dùng cách **low rank matrix** Cách này
-> **giống như LoRA (Low Rank fine-tuning trong LLM)**. Đó là thay vì dùng một
+> \**giống như LoRA (Low Rank fine-tuning trong LLM)**. Đó là thay vì dùng một
 > matrix W d2xd1 thì ta **dùng hai matrix U (k,d2) và V (d1,k) với k nhỏ hơn nhiều
 > so với d1, d2 để U.t@D cũng là matrix d2xd1** nhưng tốn ít params hơn.
 >
@@ -170,7 +170,7 @@
 > nhất là average hoặc maximum**,
 >
 > Thì attention cho phép ta **tính một weighted sum các vector đó**, với
-> **weight được tính toán dựa trên một yêu cầu nào đó,** ví dụ như **độ giống
+> \**weight được tính toán dựa trên một yêu cầu nào đó,** ví dụ như **độ giống
 > nhau** giữa value vector (encoder hidden state hi) với query vector (decoder'
 > s hidden state st)
 >

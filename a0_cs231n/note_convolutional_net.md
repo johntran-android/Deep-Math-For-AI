@@ -569,7 +569,7 @@
 > có thể thấy phần chiếm nhiều memory nhất là các conv layer đầu tiên, còn tốn
 > nhiều param nhất là các fc layer ở cuối
 >
-> *đơn vị của memory không phải byte đâu nhé, nó là floating point, tính tổng
+> \*đơn vị của memory không phải byte đâu nhé, nó là floating point, tính tổng
 > số floating point ta sẽ nhân 4 hoặc 8 để ra số byte
 
 <br>

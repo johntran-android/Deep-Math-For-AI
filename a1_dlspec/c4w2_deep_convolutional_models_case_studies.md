@@ -36,7 +36,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > of computer vision
 >
 > 5 Outline of the next few videos: classic networks such as
-> **LeNet**-5, **AlexNet**, and **VGG**; **ResNet**, a deep 152-layer neural
+> \**LeNet**-5, **AlexNet**, and **VGG**; **ResNet**, a deep 152-layer neural
 > network with interesting tricks; and the **Inception** neural network
 >
 > 6 Benefits of learning from these examples, even for those not
@@ -64,7 +64,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > [!NOTE]
 > Xem qua 1 số classic ConvNet
 > Nhận xét chung là nó thường có cấu trúc là 
-> **Conv - Pool - Conv - Pool ...Conv - Pool- FC - FC.. -FC - Sofmax 
+> \**Conv - Pool - Conv - Pool ...Conv - Pool- FC - FC.. -FC - Sofmax 
 > Qua các layer thì nH, nW giảm, nC tăng**
 
 <br>
@@ -78,7 +78,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > Qua các layer:
 > nH, nW giảm, nC tăng
 > Conv - Pool  - Conv - Pool
-> **60k** params
+> \**60k** params
 
 <br>
 
@@ -89,7 +89,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > [!NOTE]
 > Một số nhận xét:
 > Giống như LeNet như bigger
-> **~60 mils** params
+> \**~60 mils** params
 
 <br>
 
@@ -100,7 +100,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > [!NOTE]
 > Một số nhận xét:
 > Giống như Alexnet nhưng bigger
-> **~138 mils** params
+> \**~138 mils** params
 
 <br>
 
@@ -118,11 +118,11 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > Training **very deep** neural networks is difficult due to **vanishing** and **exploding**
 > gradient problems.
 >
-> **Skip connections** are a solution to these problems as they **allow activations from
+> \**Skip connections** are a solution to these problems as they **allow activations from
 > one layer to be fed to another layer much deeper** in the network, allowing the
 > building of **ResNets**.
 >
-> **ResNets** are built from **residual blocks** which consist of a main path of layers and
+> \**ResNets** are built from **residual blocks** which consist of a main path of layers and
 > a shortcut that allows information to flow directly to deeper layers.
 >
 > Adding these residual blocks to a plain network turns it into a ResNet and allows
@@ -157,7 +157,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > [!NOTE]
 > Đại khái là RestNet giúp khắc phục vấn đề **nhiều layer thì
 > performance giảm** do Gradient Vanishing / Exploding từ đó
-> **cho phép train very deep network**
+> \**cho phép train very deep network**
 
 <br>
 
@@ -339,8 +339,8 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > Xong stack lại và để cho máy tính nó **\/tự quyết định sẽ dùng cái nào\/** 
 
 > [!NOTE]
-> *Cái 1x1 ghi là 28x28x64 thì đương nhiên phải hiểu là
-> **xài 64 cái filter có size 28x28x192.** Tương tự 128 cái
+> \*Cái 1x1 ghi là 28x28x64 thì đương nhiên phải hiểu là
+> \**xài 64 cái filter có size 28x28x192.** Tương tự 128 cái
 > filter 3x3x192 32 cái filter 5x5x192
 
 <br>
@@ -493,7 +493,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 <p align="center"><kbd><img src="assets/080541d40529093c23f4dbcdfb456ba758d4eb06.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **DepthWise** đại khái là ở mỗi lần filter convol nó sẽ tính riêng từng
+> \**DepthWise** đại khái là ở mỗi lần filter convol nó sẽ tính riêng từng
 > dimension, và không cộng lại để 'ép' lại thành 1 channel.
 
 <br>
@@ -575,17 +575,17 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 
 > [!NOTE]
 > Main ideas:  1 **MobileNet** is a neural network that uses a **depthwise**
-> **separable** **convolutional operation** to **reduce computational cost.** 
+> \**separable** **convolutional operation** to **reduce computational cost.** 
 > 2 The **MobileNet v1** architecture uses a block comprising a **depthwise
 > convolutional operation** and a **stack** of **13 layers** to make a
-> **classification** prediction.
+> \**classification** prediction.
 >
 > 3 **MobileNet v2** is an **improvement** over the basic MobileNet
 > architecture that **includes a residual connection** and an **expansion
 > layer** before the **depthwise** convolution and the **pointwise** convolution.
 >
 > 4 MobileNet v2 repeats the block **17 times** and uses **pooling**,
-> **fully-connected**, and **softmax layers** to make a classification prediction.
+> \**fully-connected**, and **softmax layers** to make a classification prediction.
 >
 > 5 The MobileNet v2 **bottleneck block** **increases the size** of the
 > representation within the block and **projects it back down to a smaller
@@ -1356,7 +1356,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 > the batch size is set to 32, meaning that 32 images will be processed at a time.
 >
 > • **IMG_SIZE**: It is a tuple containing the height and width of the image. **The images will be**
-> **resized to this size** before being used in the model. Here, the image size is set to (160,
+> \**resized to this size** before being used in the model. Here, the image size is set to (160,
 > 160).
 >
 > • **directory**: It specifies the directory containing the image files.

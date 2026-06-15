@@ -17,7 +17,7 @@
 > resources.
 >
 > 3 **Training**: You can **choose to start with an existing base model** rather than **training from scratch**, although there
-> **may be cases where training your own model is necessary**. Considerations and feasibility for this decision are
+> \**may be cases where training your own model is necessary**. Considerations and feasibility for this decision are
 > covered later in the course.
 >
 > 4 **Assessing and improving model performance**: **Assess the model's performance** and **consider additional
@@ -28,7 +28,7 @@
 > feedback** as an **additional fine-tuning technique** to **ensure the model behaves well** and **aligns with human
 > preferences.** 
 > 6 **Evaluation**: Evaluation is essential to **measure the model's performance** and **alignment with preferences.**
-> **Metrics** and **benchmarks** will be explored in the upcoming week.
+> \**Metrics** and **benchmarks** will be explored in the upcoming week.
 >
 > 7 **Deployment and optimization**: Once you have a model that meets performance requirements and aligns well,
 > it can be d**eployed and integrated into your application**. **Optimization** for deployment is **crucial** to **maximize
@@ -64,14 +64,14 @@
 > accurately and narrowly**. For LLMs, **their capabilities depend on the size and
 > architecture of the model**. You need to **consider the specific function you want** the LLM
 > to have in your application. Is it required to perform **multiple tasks** or just excel at a
-> **specific task**, such as **named entity recognition?**
+> \**specific task**, such as **named entity recognition?**
 >
 > 5 Importance of **specificity**: Being **specific** about the **required functionality** of your LLM
 > can **save time and computational resources.** By **narrowing down** the **tasks** and
-> **capabilities**, you can **optimize the model design and reduce compute costs**.
+> \**capabilities**, you can **optimize the model design and reduce compute costs**.
 >
 > 6 Course objectives: By the end of the course, you should gain **intuition** about the
-> **decisions** you need to make, **anticipate potential challenges**, and **understand the
+> \**decisions** you need to make, **anticipate potential challenges**, and **understand the
 > infrastructure required** to **develop and deploy your LLM-powered application.**
 
 <br>
@@ -132,7 +132,7 @@
 
 > [!NOTE]
 > 1 **Assessing model performance**: After obtaining your trained model, the next step is to
-> **assess its performance** to ensure it **meets the requirements of your application.**
+> \**assess its performance** to ensure it **meets the requirements of your application.**
 >
 > 2 **In-context learning** and **prompt engineering**: **Prompt engineering** can be an **effective
 > approach to improve model performance**. **In-context learning**, where examples suited to
@@ -155,7 +155,7 @@
 >
 > 6 **Iterative process**: The development stage of the application can be **highly iterative**. It
 > may **involve multiple iterations** of **prompt engineering**, **evaluation**, **fine-tuning**, and
-> **re-evaluation** to achieve the **desired model performance**.
+> \**re-evaluation** to achieve the **desired model performance**.
 >
 > The focus is on **continuously adapting and aligning the model to meet performance
 > goals** and **ensure it behaves appropriately in deployment.** This stage involves a
@@ -164,7 +164,7 @@
 
 > [!NOTE]
 > Nói chung là phần này ta sẽ **assess và improve model.** Đầu tiên là với
-> **prompt engineering**, nếu ngay cả với **few-shot prompting** vẫn không đạt
+> \**prompt engineering**, nếu ngay cả với **few-shot prompting** vẫn không đạt
 > yêu cầu thì ta sẽ **Fine-tuning** model - vốn là một quá trình s**upervised
 > training** model với **labeled data** để cải thiện khả năng của model trong vấn
 > đề cụ thể mình đang cần. Và cách thứ 3 là dùng **Reinforcement learning
@@ -185,13 +185,13 @@
 
 > [!NOTE]
 > Finally, when you've **got a model that is meeting your performance needs** and is
-> **well aligned**, you can **deploy** it into your infrastructure and **integrate it with your
+> \**well aligned**, you can **deploy** it into your infrastructure and **integrate it with your
 > application**. At this stage, an important step is to **optimize your model for
 > deployment**. This can ensure that you're **making the best use of your compute
 > resources** and providing the **best possible experience** for the users of your
 > application. The last but very important step is to **consider any additional
 > infrastructure that your application will require to work well**. There are some
-> **fundamental limitations of LLMs** that can be **difficult to overcome through training
+> \**fundamental limitations of LLMs** that can be **difficult to overcome through training
 > alone** like their **tendency to invent information** when they don't know an answer,
 > or their **limited ability to carry out complex reasoning and mathematics**. In the last
 > part of this course, you'll learn some powerful techniques that you can use to

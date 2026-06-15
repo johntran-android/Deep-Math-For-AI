@@ -181,7 +181,7 @@
 >
 > gs review lại với hàm đơn biến thì **derivative** được định nghĩa là:
 >
-> **limit của [f(x+delta_x) - f(x)] /delta_x khi delta_x -> 0**
+> \**limit của [f(x+delta_x) - f(x)] /delta_x khi delta_x -> 0**
 
 <br>
 
@@ -192,9 +192,9 @@
 > [!NOTE]
 > Về mặt **hình học** thì derivative của function là function mang
 > giá trị là **độ dốc của tiếp tuyến** (**tangent** line) của hàm số, nên
-> **f'(x)** là giá trị của **độ dốc của tiếp tuyến tại x**
+> \**f'(x)** là giá trị của **độ dốc của tiếp tuyến tại x**
 >
-> **Không phải function nào cũng có derivative** tại **mọi điểm** nhưng
+> \**Không phải function nào cũng có derivative** tại **mọi điểm** nhưng
 > trong class này ta sẽ k**hông care vấn đề differentiability**
 
 <br>
@@ -209,14 +209,14 @@
 > đó chính là Taylor series
 >
 > Sau khi học bài 9 của 1801, ta đã có thể hiểu đây chính là **LINEAR**
-> **APPROXIMATION**: f(x) ~= f(x0) + f'(x0)(x-x0), xuất phát từ lập luận
+> \**APPROXIMATION**: f(x) ~= f(x0) + f'(x0)(x-x0), xuất phát từ lập luận
 > khi limit delta_x -> 0 của delta_f / delta_x = f'(x)
 >
 > Thì ta có thể cho rằng khi delta_x ~= 0, tức x-x0~=0, hay x~=x0
 > thì delta_f / delta_x ~= f'(x0) từ đó f(x)-f(x0)~=f'(x0)(x-x0)
 > <=> **f(x) ~= f(x0) + f'(x0)(x-x0)** 
 > Còn nếu có thể quadratic term f''(x0)(x-x0)^2/2 thì ta sẽ có 
-> **QUADRATIC** **APPROXIMATION**: 
+> \**QUADRATIC** **APPROXIMATION**: 
 >
 > f(x) ~= f(x0) + f'(x0)(x-x0) + f''(x0)(x-x0)^2/2
 
@@ -229,7 +229,7 @@
 > [!NOTE]
 > Đại khái là gs nói về khái niệm và kí hiệu của **partial derivative.** Đối
 > với **function đa biến** thì nó **không có derivative thông thường** mà
-> **chỉ có partial derivative với mỗi biến**.
+> \**chỉ có partial derivative với mỗi biến**.
 >
 > mang cái tên **partial**: từng phần / một phần là **bởi nó chỉ đối với một
 > biến nào đó,** chứ **không phải toàn bộ**.
@@ -240,7 +240,7 @@
 >
 > Tương tự với partial derivative của f w.r.t y
 >
-> **Nếu hai function này tồn tại thì f gọi là differentiable**
+> \**Nếu hai function này tồn tại thì f gọi là differentiable**
 >
 > Tuy nhiên gs nói **ta sẽ không tính bằng định nghĩa**, mà ta sẽ tính bằng
 > các **phương pháp tính đạo hàm** mà ta đã biét
@@ -256,7 +256,7 @@
 > là:
 >
 > Ta sẽ **giữ y constant**, khi đó giống như ta **dùng plane y = constant** để
-> **cắt** đồ thị của f(x) tại **một đường intersection màu vàng**.
+> \**cắt** đồ thị của f(x) tại **một đường intersection màu vàng**.
 >
 > Và **partial derivative của f w.r.t x** chính là **FUNCTION THỂ HIỆN GIÁ
 > TRỊ CỦA ĐỘ DỐC TIẾP TUYẾN CỦA ĐƯỜNG MÀU VÀNG NÀY**
@@ -275,7 +275,7 @@
 
 > [!NOTE]
 > Vậy **để tính partial derivative**, ví dụ của partial f / partial x, ta sẽ
-> **coi y như constant** và **x là variable** và **tính derivative của f đối với
+> \**coi y như constant** và **x là variable** và **tính derivative của f đối với
 > x như với hàm 1 biến**
 >
 > Ở đây gs nói thêm **partial derivative** của f đối với x có thể được kí hiệu 

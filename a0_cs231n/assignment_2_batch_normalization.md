@@ -15,9 +15,9 @@
 > activation của các layer trước thì không còn tính chất này.**
 >
 > Vấn đề thứ hai là trong quá trình training, param được update khiến
-> **distribution của các activation** thay đổi liên tục (**covariate shift**), điều này
+> \**distribution của các activation** thay đổi liên tục (**covariate shift**), điều này
 > gây **khó khăn cho training.** 
-> **Batch normalization** sẽ tính (ước lượng) **running** mean và variance của
+> \**Batch normalization** sẽ tính (ước lượng) **running** mean và variance của
 > một batch các output từ layer và dùng nó để normalize (zero center và unit
 > variance). Và trong quá trình training nó sẽ cập nhật, **giữ cái running mean và
 > standard dev** này, để mà **normalize cho lúc testing.**
@@ -216,7 +216,7 @@
 >
 > Bởi vì BN đã **khiến output vào activation function trở nên có (phân phối)
 > dạng  tốt hơn**: **không bị nhỏ dần đi để rồi gây vanishing gradient** hoặc
-> **lớn dần để gây exploding gradient** (hoặc là cả vanishing gradient do local
+> \**lớn dần để gây exploding gradient** (hoặc là cả vanishing gradient do local
 > grad của nonlinearity function bị saturate).
 >
 > Bên cạnh đó, BN có **learnable scale param - gamma và shift param beta**,
@@ -257,7 +257,7 @@
 
 > [!NOTE]
 > Theo mô tả, Layer Normalization chỉ khác Batch Normalization ở chỗ nó sẽ
-> **không cần tính statistic của một batch** (vì đây cũng là lí do mà người ta tạo
+> \**không cần tính statistic của một batch** (vì đây cũng là lí do mà người ta tạo
 > ra Layer Normalization vì **muốn không cần phụ thuộc vào / phải dùng statistic
 > của mini-batch mới làm được**)
 >

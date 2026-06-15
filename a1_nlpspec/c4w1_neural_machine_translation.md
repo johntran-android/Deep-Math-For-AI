@@ -39,13 +39,13 @@ quality
 > algorithms, q**uestion-answering models**, and **chatbots**.
 >
 > 3. **Skills Development**: Completing this course equips learners with the **ability to build state-of-the-art NLP**
-> **applications** similar to **those used in large companies in the industry**.
+> \**applications** similar to **those used in large companies in the industry**.
 >
 > 4. Instructors: The instructors for this course are Lukasz and Younes, who are excited about the topics covered
 > in the course.
 >
 > 5. Significance of **Sentiment Analysis**: Sentiment analysis is d**iscussed as a crucial problem**, and it is
-> **highlighted that determining the sentiment of a sentence** is relevant in many applications.
+> \**highlighted that determining the sentiment of a sentence** is relevant in many applications.
 >
 > 6. Building **Models from Scratch**: The course teaches learners how to **build NLP models from scratch**, which
 > represents the **active areas of research in the field**.
@@ -95,19 +95,19 @@ quality
 > 3. **Encoder** and **Decoder Architecture**: The encoder consists of an **embedding layer** and an **LSTM
 > module** with **one or more layers**. The LSTM **receives inputs from the embedding layer** and **previous
 > hidden states**, \\_**returning the final hidden state**\\_ that\\_ **encodes the overall meaning of the sentence**\\_. The
-> **decoder is constructed similarly** with an embedding layer and an LSTM layer.
+> \**decoder is constructed similarly** with an embedding layer and an LSTM layer.
 >
 > 4. **Limitation of Seq2seq Model:** The traditional seq2seq model\\_ **suffers from an information bottleneck**\\_,
-> **particularly with long input sequences**.\\_ **Fixed-length memory**\\_ **restricts the model's ability to compress
+> \**particularly with long input sequences**.\\_ **Fixed-length memory**\\_ **restricts the model's ability to compress
 > longer sequences**, leading to \\_**lower performance as sequence size increases.**\\_
 >
 > 5. Introducing **Attention Mechanism**: To overcome the limitations of seq2seq, **attention** is introduced as a
 > new layer. \\_**Attention allows the model to focus on the most important words at each time step**\\_ during
-> **decoding**.
+> \**decoding**.
 >
 > 6. **Benefits of Attention**: Attention **provides a way to \\_process information specific to each input word**,\\_
 > enabling the model to \\_**focus its attention in the right place during the decoding process**\\_. This results in
-> **improved accuracy and efficiency** for predicting from long sequences.
+> \**improved accuracy and efficiency** for predicting from long sequences.
 >
 > 7. **Conceptual Understanding**: The text emphasizes that **attention is a crucial advancement in NMT,**
 > allowing the model to\\_ **pay attention to relevant parts of the input sequence**\\_ while translating to improve
@@ -137,7 +137,7 @@ quality
 
 > [!NOTE]
 > In **neural machine translation**, you're using an **encoder** and a **decoder** to translate from
-> **one language to another**. For example, you could translate, it's time for tea from English
+> \**one language to another**. For example, you could translate, it's time for tea from English
 > to French, C'est l'heure du the. To do this, you could use a machine translation system
 > that has **LSTMs** for both **encoding** and **decoding**. The traditional **seq2seq** model was
 > introduced by Google in **2014** and it was a revelation at the time. Basically, it works by
@@ -149,7 +149,7 @@ quality
 > translation. Additionally, the **inputs and outputs don't need to have matching lengths,**
 > which is a **desirable feature when translating texts**. Then you might recall the **vanishing
 > and exploding gradients problems from earlier in the specialization**. In **seq2seq** model,
-> **LSTMs and GRUs are typically used to avoid these problems.**
+> \**LSTMs and GRUs are typically used to avoid these problems.**
 
 > [!NOTE]
 > Đại khái là nói về **Seq2Seq model** ra mắt năm 2014 là xịn xò nhất lúc
@@ -179,7 +179,7 @@ quality
 > [!NOTE]
 > Before moving on, let's look closer at the encoder and decoder. The encoder **typically
 > consists of an embedding layer** and an **LSTM module with one or more layers**. The
-> **embedding laye**r transforms **words tokenized first into a vector for input** to the **LSTM**
+> \**embedding laye**r transforms **words tokenized first into a vector for input** to the **LSTM**
 > module. At e**ach step** in the input sequence, the LSTM module receives **inputs from the
 > embedding layer**, as well as the **hidden states from the previous step**. The encoder
 > returns the **hidden states of the final step**, shown here as **h_4**. This final hidden state
@@ -207,7 +207,7 @@ quality
 > the next step and repeat to generate the rest of the sentence l'heure du the.
 
 > [!NOTE]
-> **Decoder** cũng có kiến trúc tương tự, nó sẽ **nhận cái output từ encoder đưa
+> \**Decoder** cũng có kiến trúc tương tự, nó sẽ **nhận cái output từ encoder đưa
 > vào LSTM**, còn **Embedding layer thì bắt đầu với <SOS> token.** Qua từng
 > timestep nó **lấy output của timestep trước đưa vào timestep tiếp theo cho đến
 > khi hết**  - tạo <EOS> token.
@@ -320,7 +320,7 @@ quality
 > encoder** but **with weighted importance on each state**.
 >
 > 5. The attention layer calculates **alignments** between the **decoder and encoder hidden states**,
-> **producing weights** that **represent the importance of each input word for the prediction.**
+> \**producing weights** that **represent the importance of each input word for the prediction.**
 >
 > 6. The **context vector,** obtained by s**umming the encoder states weighted** by their **respective
 > importance scores**, **holds relevant information for the decoder's next prediction**.
@@ -356,8 +356,8 @@ quality
 > beyond that. This is what you should expect. A Seq2Seq models **must store the
 > meaning of the entire input sequence, any single vector**. The models developed in
 > this paper, **RNNSearch30-50**, use **bidirectional encoders and decoders**, but with
-> **attention**. First, t**hese models perform better than the traditional Seq2Seq models**
-> **across all sentence length**. The **RNNSearch50 model has basically no fall off** in
+> \**attention**. First, t**hese models perform better than the traditional Seq2Seq models**
+> \**across all sentence length**. The **RNNSearch50 model has basically no fall off** in
 > performance **as sentence lengths increase**. As you will see, this is because the
 > models are **able to focus on specific inputs to predict words in the output translation**,
 > instead of **having to memorize the entire input sentence.**
@@ -366,9 +366,9 @@ quality
 > Đại khái là đồ thị cho thấy các **Seq2Seq model nguyên bản** chỉ làm tốt khi câu **không dài
 > quá 20-25 từ**. Vượt quá mức đó **performance thể hiện qua BLEU score giảm đi**. Ta có thể
 > dễ dàng hiểu như bữa trước đã biết là do **bottleneck** của Seq2Seq model khi phải
-> **compress toàn bộ thông tin của cả câu trong một vector hidden state của timestep cuối**
+> \**compress toàn bộ thông tin của cả câu trong một vector hidden state của timestep cuối**
 > trước khi pass qua Decoder. Nên câu **dài quá thông tin bị mất dần**. Trong hai cái đó, cái
-> **RNN50** (đường xanh lá cây sáng) đỡ hơn vì được **train với câu dài 50 từ** (cái kia - xanh
+> \**RNN50** (đường xanh lá cây sáng) đỡ hơn vì được **train với câu dài 50 từ** (cái kia - xanh
 > lá cây đậm train với câu 30 từ).
 >
 > Với **Attention** thì ta thấy phiên bản train với 30 từ vẫn tốt hơn đáng kể **thể hiện ở BLEU
@@ -383,12 +383,12 @@ quality
 
 > [!NOTE]
 > Traditional Sed2Seq models, use the **final hidden states of the encoder** as the
-> **initial hidden state of the decoder.** This forces the encoder to \_**store the
+> \**initial hidden state of the decoder.** This forces the encoder to \_**store the
 > meaning of the entire input sequence into this one hidden states.**\_
 
 > [!NOTE]
 > Nhắc lại trong **Sed2Seq nguyên bản**, **hidden state của last time-step** 
-> **chứa thông tin của toàn bộ input sequence** - sẽ được pass cho Decoder.
+> \**chứa thông tin của toàn bộ input sequence** - sẽ được pass cho Decoder.
 
 <br>
 
@@ -404,7 +404,7 @@ quality
 
 > [!NOTE]
 > Tuy nhiên **giới hạn của độ dài vector hidden state** chính là
-> **bottleneck khiến thông tin bị mất đi khi câu quá dài**. Một cách khác
+> \**bottleneck khiến thông tin bị mất đi khi câu quá dài**. Một cách khác
 > là **pass hidden states của mọi time-steps của Encoder qua cho
 > Decoder**, nhưng cũng nhanh chóng nhận ra cách này **không ổn khi
 > phải tốn quá nhiều memory**
@@ -425,7 +425,7 @@ quality
 > [!NOTE]
 > Thay vì **pass tất cả các hidden states của mọi time-step qua cho Decoder**, thì có thể
 > cộng chúng lại (**point-wise addition**) để được một cái gọi là **context vector** rồi
-> **pass qua cho Decoder**.
+> \**pass qua cho Decoder**.
 >
 > Chú ý nó khác với **hidden state của last step** như traditional Seq2Seq, là một **hidden
 > state chứa toàn bộ thông tin của câu**. Còn đây là **phiên bản point-wise addition của tất
@@ -473,7 +473,7 @@ quality
 > [!NOTE]
 > Thì làm sao để **xác định từ nào là quan trọng hơn từ nào khi tính / predict ra từ tiếp theo
 > của Decoder**. Thì ý tưởng là ta sẽ **so sánh cái \_previous hidden state của Decoder** \_-
-> **chứa thông tin về cái từ output translation gần nhất**.
+> \**chứa thông tin về cái từ output translation gần nhất**.
 >
 > Có nghĩa là, ta sẽ **so sánh cái \_decoder's previous hidden state này**\_ với **các encoder
 > states - tức các \_hidden state của các time-step của encoder**\_ để xác định **cái nào là quan
@@ -584,7 +584,7 @@ quality
 >
 > 2. **Transformer Model and Attention Mechanism:**
 >    - The 2017 paper "**Attention Is All You Need**" introduced the **transformer** model and 
-> **attention**.
+> \**attention**.
 >    - Attention is based on **information retrieval with queries, keys, and values.**
 >    - This form of attention is efficient and powerful.
 >    - **Alignment between languages** is a key concept.
@@ -632,11 +632,11 @@ quality
 > context vector** là **weighted sum của các Encoder hidden states**, **passed qua Decoder.**
 >
 > Thì ở đây, để chuẩn bị, người ta nói đến cách **"bố trí"** như thế này với **Query**, **Key** và
-> **Value**. Có thể hiểu hình tượng là Q,K,V như **kiểu một look Up table** - tức là cho một
-> **Query**, **với các Key khác nhau** ta sẽ l**ấy ra các Value tương ứng**.
+> \**Value**. Có thể hiểu hình tượng là Q,K,V như **kiểu một look Up table** - tức là cho một
+> \**Query**, **với các Key khác nhau** ta sẽ l**ấy ra các Value tương ứng**.
 >
 > Ví dụ đưa ra một **Query "I'heure"**, với cách **Key khác nhau** như  **"It's", "time", "for"**, ...sẽ
-> **lấy ra các value khác nhau**.
+> \**lấy ra các value khác nhau**.
 >
 > Nhưng đó là cách hiểu hình tượng cho dễ, chứ nó không phải là từ. Mà **cả query,
 > value và key đều là vector.** 
@@ -666,11 +666,11 @@ quality
 > linear combination of your initial input which is then being fed to the decoder.
 >
 > No, that unlike the **original form of attention**, **scale dot-product  attention** consists of only
-> **two Matrix multiplications and no neural networks**. Since **matrix multiplication is highly
+> \**two Matrix multiplications and no neural networks**. Since **matrix multiplication is highly
 > optimized** in modern deep learning frameworks. This form of attention is much **faster** to
 > compute but this \_**also means that the alignments between the source and target languages
 > must be learned elsewhere.**\_ Typically, **alignment is learned in the input embeddings** or in
-> **other linear layers before the attention layer**. Before moving on, I want to look a bit closer at
+> \**other linear layers before the attention layer**. Before moving on, I want to look a bit closer at
 > alignment. The alignment weights form a matrix with queries, targets words on the roads
 > and keys or source words on the columns.
 
@@ -685,7 +685,7 @@ quality
 > Kết quả chính là các **" relevant scores"** của các keys với queries chỉ có cái là **tính
 > cùng lúc cho nhiều queries**. Bỏ qua **softmax** để **biến thành trọng số** có **sum = 1**.
 > Cuối cùng **nhân các trọng số này cho value V** chính là **embedding** để được
-> **weighted sum** - **Context vector.**
+> \**weighted sum** - **Context vector.**
 >
 > Tức là nó y như ý nghĩa bài trước đã nói, chỉ là đây là cách thức triển khai, với việc **mỗi
 > một từ bên cạnh có embedding** của nó **chính là value** (*) giờ sẽ có thêm **query
@@ -740,7 +740,7 @@ quality
 <p align="center"><kbd><img src="assets/c4c7f722f29ef79f2c6552784c4d3d2a88e9834e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Learning** **alignment** like this is beneficial for translating between **languages** with **different
+> \**Learning** **alignment** like this is beneficial for translating between **languages** with **different
 > grammatical structure**s. Since attention **looks at the entire input** and **target sentences at
 > once** and **calculates alignments based on word pairs**, **weights are assigned appropriately
 > regardless of word order**. For example, In the sentence, "the agreement on the European
@@ -763,8 +763,8 @@ quality
 
 > [!NOTE]
 > Congrats on absorbing all these new concepts. I introduced you to the purpose of an
-> **attention layer**. You saw how it is related with **information retrieval** and I showed you
-> **how well it works** even for **languages with very different structures**. In the next video,
+> \**attention layer**. You saw how it is related with **information retrieval** and I showed you
+> \**how well it works** even for **languages with very different structures**. In the next video,
 > I'll be talking about n**eural machine translation** and show you **what the setup looks
 > like for the system**. I'll show you what the data set looks like and the steps required
 > for **pre processing your data sets**. You have now seen what key square ease and
@@ -862,9 +862,9 @@ quality
 <p align="center"><kbd><img src="assets/3ac440655c39b329af5338380518e67773c3de0c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> *Mấy cái khác nhìn hình vẽ là hiểu
+> \*Mấy cái khác nhìn hình vẽ là hiểu
 >
-> ***Wa và Ua** vì có **cùng shape (n, m)** = **(hidden_size, attention_size)** và 
+> \***Wa và Ua** vì có **cùng shape (n, m)** = **(hidden_size, attention_size)** và 
 > dù sao cũng là trainable cũng cơ bản là ini với random n, m = hidden_size, attention_size
 >
 > Sau đó vertically concat để thành shape (2n, m = (2*hidden_size, attention_size)
@@ -872,7 +872,7 @@ quality
 > Nên ta hiểu là ở đây người ta gọi luôn là layer1 và init randomly với
 > shape là (2n, m) luôn
 >
-> *activations (k,m) . Layer2 (m, 1) cho ra scores = eij (k,1) . Là vector 
+> \*activations (k,m) . Layer2 (m, 1) cho ra scores = eij (k,1) . Là vector 
 > chứa alignment scores cùng len = input_length K với Encoder states. 
 > là các chỉ số thể hiện độ relevant của previous Decoder hidden state
 > s_i-1 với K cái Encoder hidden state h_j.
@@ -1065,10 +1065,10 @@ quality
 > [!NOTE]
 > The 2017 paper \\_Attention Is All You Need  (\\_\\/https://arxiv.org/abs/1706.03762\\/)  introduced
 > the **Transformer model** and **scaled  dot-product attention**, sometimes also called
-> **QKV** (**Q**ueries, **K**eys, **V**alues) attention.  Since then, Transformers have come to
+> \**QKV** (**Q**ueries, **K**eys, **V**alues) attention.  Since then, Transformers have come to
 > dominate **large-scale natural language**  applications. Scaled dot-product attention can be
 > used to improve **seq2seq** models as  well. In this ungraded lab, you'll implement a
-> **simplified version of scaled dot-product  attention** and replicate word alignment between
+> \**simplified version of scaled dot-product  attention** and replicate word alignment between
 > English and French, as shown  in \\_Bhadanau, et al. (2014)\\_. (\\/https://arxiv.org/abs/1409.0473)\\/
 >
 > The Transformer model **learns how to align words in different languages**. You won't be
@@ -1113,7 +1113,7 @@ quality
 >
 > ====
 >
-> **Q.(K.T)** là tính ra **similarity scores giữa các queries và keys**.
+> \**Q.(K.T)** là tính ra **similarity scores giữa các queries và keys**.
 >
 > Nếu là Attention cũ thì Q là hidden state của Decoder, K là hidden state của Encoder 
 > và V là hidden state cũng của Encoder.
@@ -1140,9 +1140,9 @@ quality
 > ở Scaled dot-product attention này việc này chính là bước
 > softmax(QK**T/sqrt(dk)))
 >
-> **dk** là dimension của key vector chính mà như trong Transformer thì nó là length của 
-> **embedding vector** luôn vì các tensor Q,K,V đều có shape là 
-> **(sequence length x embedding dimension)**
+> \**dk** là dimension của key vector chính mà như trong Transformer thì nó là length của 
+> \**embedding vector** luôn vì các tensor Q,K,V đều có shape là 
+> \**(sequence length x embedding dimension)**
 >
 > ====
 >
@@ -1179,7 +1179,7 @@ quality
 >
 > Còn **tử số nominator vẫn là 2D sau khi exponential bằng np.exp()**.
 > Và c**hia 2D cho 1D bị lỗi không broadcast được**, nên phải dùng
-> **expand_dim()** hoặc **reshape()** để biến mẫu số về dạng 2D lại.
+> \**expand_dim()** hoặc **reshape()** để biến mẫu số về dạng 2D lại.
 >
 > =====
 >
@@ -1424,13 +1424,13 @@ quality
 > [!NOTE]
 > Đại khái là:  Như đã biết trong các bài trước, trong bài toán **machine
 > translation**. Encoder sẽ **pass các hidden states ở mọi time-steps**, và
-> **Decoder cũng pass previous hidden state** vào **Attention mechanism**
+> \**Decoder cũng pass previous hidden state** vào **Attention mechanism**
 > để tính ra **Context vector** chứa những **thông tin hữu ích giúp Decoder
 > generate từ tiếp theo.**
 >
 > Tuy nhiên việc **pass previous hidden state của Decoder vào Attention
 > mechanism không dễ** (ý nói cách làm). Do đó người ta chia làm hai bước
-> **Pre Attention Decoder** và **Post Attention Decoder**
+> \**Pre Attention Decoder** và **Post Attention Decoder**
 
 <br>
 
@@ -1439,12 +1439,12 @@ quality
 <p align="center"><kbd><img src="assets/140415496a92fb5f8f3be76048de18038d47cd55.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Encoder's hidden-states** sẽ đóng vai trò là **Keys và Values**.
+> \**Encoder's hidden-states** sẽ đóng vai trò là **Keys và Values**.
 >  **Pre Attention Decoder's hidden-states** sẽ đóng vai trò là 
-> **Queries**.
+> \**Queries**.
 >
-> **Attention mechanism** tính ra **Context vector** và pass qua
-> **Post Attention Decoder** để make prediction.
+> \**Attention mechanism** tính ra **Context vector** và pass qua
+> \**Post Attention Decoder** để make prediction.
 
 > [!NOTE]
 > Teacher Forcing trong Pre-Attention
@@ -1458,7 +1458,7 @@ quality
 
 > [!NOTE]
 > Bước đầu tiên là "**Create copy**" component nơi một bản copy của
-> **input** sẽ được **pass vào Encoder**, một bản **copy của Target** (ground
+> \**input** sẽ được **pass vào Encoder**, một bản **copy của Target** (ground
 > Truth label) được **pass vào Decoder**.
 >
 > Trong Encoder, input tất nhiên cũng là dạng **padded index** của từ trong
@@ -1483,7 +1483,7 @@ quality
 > thành dạng **Keys** và **Values** còn **Pre Attention Decoder's hidden state** sẽ là **Queries**.
 > (nếu như giống trong Transformer thì nó chính là 3 Linear layer với weight WQ, WK, WV)
 >
-> *Như vậy có thể hiểu là Keys, Values hay Queries đều là những tensor có cùng
+> \*Như vậy có thể hiểu là Keys, Values hay Queries đều là những tensor có cùng
 > shape là **(None - hay batch, max_len, hidden state vector dimension)** 
 > Ở tại đây, nó sẽ **dùng một mask function để tạo padding mask** **giúp attention layer
 > biết được cái nào là padding token** để mà ignore chúng đi. Để làm vậy thì ở
@@ -1493,7 +1493,7 @@ quality
 > Context vector** chứa thông tin ngữ nghĩa sao đó mà **mỗi từ sẽ quan tâm nhiều ít
 > đến các từ khác nhau**. 
 >
-> **Context vector** sẽ được **bỏ cái Mask đi** trước khi **pass vào Post Attention Decoder.**
+> \**Context vector** sẽ được **bỏ cái Mask đi** trước khi **pass vào Post Attention Decoder.**
 > Rồi qua **LSTM**, **Dense** và output với **LogSoftmax** để ra **log probabilities - cho từ tiếp
 > theo của Decoder output**
 
@@ -1514,7 +1514,7 @@ quality
 > crucial to **assess its performance** using **appropriate metrics**.
 >
 > 2. **BLEU Score and Its Purpose**: The **BLEU Score** (**Bilingual Evaluation Understudy**) is a metric
-> **specifically designed for evaluating machine translation models**. It addresses challenging issues in
+> \**specifically designed for evaluating machine translation models**. It addresses challenging issues in
 > NLP, such as **machine translation quality**.
 >
 > 3. **BLEU Score Calculation**: The BLEU Score **compares a candidate translation to one or more
@@ -1547,7 +1547,7 @@ quality
 >
 > Overall, the text introduces the BLEU Score as a **common metric** for **evaluating machine translation**
 > models, **explains its calculation**, **discusses its limitations**, and emphasizes the importance of
-> **considering its drawbacks** when **interpreting model performance.** It also hints at the introduction of
+> \**considering its drawbacks** when **interpreting model performance.** It also hints at the introduction of
 > an alternative metric for evaluation.
 
 <br>
@@ -1571,7 +1571,7 @@ quality
 
 > [!NOTE]
 > Để tính BLEU score, ta sẽ **tính số lần một từ trong Candidate**
-> **xuất hiện trong bất cứ câu reference nào**, **chia cho tổng số từ**
+> \**xuất hiện trong bất cứ câu reference nào**, **chia cho tổng số từ**
 > trong candidate
 
 <br>
@@ -1625,7 +1625,7 @@ quality
 
 > [!NOTE]
 > Đại khái là dù nó tốt nhưng vẫn có những **điểm yếu** đó là nó không đếm xỉa đến
-> **Semantic meaning** và **sentence structure.**
+> \**Semantic meaning** và **sentence structure.**
 
 <br>
 
@@ -1643,7 +1643,7 @@ quality
 > In this ungraded lab, we will implement a popular metric for
 > evaluating the quality of machine-translated text: **the BLEU
 > score** proposed by **Kishore Papineni**, et al. in their 2002 paper "
-> **BLEU: a Method for Automatic Evaluation of Machine
+> \**BLEU: a Method for Automatic Evaluation of Machine
 > Translation**", the BLEU score works by **comparing " candidate"
 > text to one or more "reference" translations**. The result is better
 > the closer the **score is to 1**. Let's see how to get this value in the
@@ -1686,11 +1686,11 @@ quality
 >
 > Thì với **i = 1** thì là ta check từ đơn - **unigram**) ta có precision_1 hay p1
 >
-> **Tính thêm với i = 2,3,4** - khi tính **dùng bi-gram, 3-gram và 4-gram**. Để
+> \**Tính thêm với i = 2,3,4** - khi tính **dùng bi-gram, 3-gram và 4-gram**. Để
 > được **p2, p3, p4.**
 >
 > Nhân lại **p1*p2*p3*p4** và l**ấy luỹ thừa 1/4** (căn bậc 4) và nhân thêm với
-> **BP** - là term có mục đích **ngăn model ăn gian chỉ tạo câu ngắn để được
+> \**BP** - là term có mục đích **ngăn model ăn gian chỉ tạo câu ngắn để được
 > điểm cao**
 
 <br>
@@ -1708,7 +1708,7 @@ quality
 > [!NOTE]
 > Đại khái là **cho chiều dài của Ref fix = 1**. Và **Candidate's length giảm dần
 > từ 1.5 về 0.5** Ta thấy khi **câu candidate càng ngắn so với reference**,
-> **Brevity Penalty càng nhỏ** lại **khiến BLEU score cũng nhỏ lại** 
+> \**Brevity Penalty càng nhỏ** lại **khiến BLEU score cũng nhỏ lại** 
 >
 > hiểu nôm na là **án phạt dành cho câu ngắn** - tức là nó có **mục đích là ngăn
 > xu hướng tạo câu ngắn để đạt BLEU score cao của model**
@@ -1849,8 +1849,8 @@ quality
 > The main ideas from this portion of the lecture are:
 >
 > 1. **Introduction to **ROUGE Score****: The lecture introduces the **ROUGE score** as an
-> **alternative performance metric to BLEU** for **evaluating machine translation** systems. It
-> **emphasizes that ROUGE is recall-oriented**, focusing on the **presence of human references
+> \**alternative performance metric to BLEU** for **evaluating machine translation** systems. It
+> \**emphasizes that ROUGE is recall-oriented**, focusing on the **presence of human references
 > in candidate translations.**
 >
 > 2. **ROUGE-N Metric**: Among various versions of the ROUGE score, the lecture
@@ -1863,7 +1863,7 @@ quality
 >
 > 4. **Comparison with BLEU**: The lectur**e contrasts ROUGE-N's recall-oriented nature
 > with BLEU's precision-oriented approach**, and suggests **combining both metrics** to get an
-> **F1 score** for a **more comprehensive evaluation**.
+> \**F1 score** for a **more comprehensive evaluation**.
 >
 > 5. **F1 Score Calculation**: The F1 score is explained as **a combination of precision and
 > recall,** with formulas presented using **modified BLEU and ROUGE-N scores**. An example
@@ -2043,14 +2043,14 @@ quality
 > the decoder** is produced from a dense layer and a **softmax** or **log softmax**
 > operation. The output at each step then is the **probability distribution over all
 > the words and symbols in the target vocabulary**. The final output of the model
-> **depends on how you choose the words using these probability distributions at
+> \**depends on how you choose the words using these probability distributions at
 > each step**.
 
 > [!NOTE]
 > Đại khái như đã qúa hiểu, **output tại mỗi time-step** của Decoder là
 > một **probability distribution cover tất cả các từ và symbol trong bộ
 > vocab**. Và "kết luận" hay từ **được chọn** có thể là **từ có p cao nhất** cũng có thể là r**andom with distribution** như ta đã làm trong bài toán
-> **Dinosaur name.**
+> \**Dinosaur name.**
 
 <br>
 
@@ -2061,7 +2061,7 @@ quality
 > [!NOTE]
 > Greedy decoding is the **simplest** way to decode the model's predictions as it
 > selects the **most probable word** at every step. However, this approach has
-> **limitations**. When you consider the highest probability for each prediction and
+> \**limitations**. When you consider the highest probability for each prediction and
 > concatenate all predicted tokens for the output sequence. As the greedy
 > decoder does, you can end up with a situation where the output instead of, "I
 > am hungry," gives you "I am, am, am" and so forth. You can see how this could
@@ -2082,7 +2082,7 @@ quality
 
 > [!NOTE]
 > Another option is known as r**andom sampling**. What random sampling does is it
-> **provides probabilities for each word and sample accordingly for the next outputs**. One
+> \**provides probabilities for each word and sample accordingly for the next outputs**. One
 > of the problems with this is that it **could be a little bit too random**. A solution for this is
 > to **assign more weight to the words with higher probabilities and less weight to the
 > others.**
@@ -2090,7 +2090,7 @@ quality
 > [!NOTE]
 > Với **Random sampling**, như vấn đề Dinosaur đã biết ta sẽ **lấy
 > random with distribution thay vì là từ có p cao nhất**. Cách này có
-> **ưu điểm là câu trả lời linh hoạt hơn, đa dạng hơn**, nhưng **có
+> \**ưu điểm là câu trả lời linh hoạt hơn, đa dạng hơn**, nhưng **có
 > thể trở nên qúa random**. Do đó người ta có thể **gán weight cao
 > hơn cho p cao, thấp hơn cho p thấp để kiểm soát**
 
@@ -2131,7 +2131,7 @@ quality
 
 > [!NOTE]
 > 1. **Beam Search Technique**: Beam search is used to **identify best sequences** within a
-> **fixed window size**, referred to as the **"beam width."**
+> \**fixed window size**, referred to as the **"beam width."**
 >
 > 2. ****Optimal Sequences****: Unlike **selecting the highest probability output** at each time
 > step, beam search **aims to find sequences with better overall probabilities**.
@@ -2146,10 +2146,10 @@ quality
 > calculated** given the sequences kept so far (based on beam width).
 >
 > 6. ****Iterative Process****: The process **continues iteratively**, **generating new words** and
-> **updating probabilities**.
+> \**updating probabilities**.
 >
 > 7. ****Memory and Computational Cost****: Beam search can be **memory-intensive** and
-> **computationally costly** due to **multiple calculations and sequence storage**.
+> \**computationally costly** due to **multiple calculations and sequence storage**.
 >
 > 8. ****Penalizing Longer Sequences****: Vanilla beam search can **penalize longer sequences**
 > due to the **multiplication of conditional probabilities**.
@@ -2186,7 +2186,7 @@ quality
 > Nhớ lại việc tính probability của sequence đã biết qua course 2. Tuy
 > nhiên bởi vì ta k**hông thể đủ compute expense** nên sẽ **chỉ giữ
 > vài cái sequence có p cao nhất thôi**. Đó là hyperparam gọi là.
-> **Beam width**.
+> \**Beam width**.
 >
 > Làm cho đến khi **câu có probability cao nhất end với <EOS>**
 
@@ -2202,7 +2202,7 @@ quality
 > p cao nhất**.
 >
 > Ở đây B = 2 nên ta chọn I, và am. Bỏ những từ kia và tính
-> **P(sequence) của 2 chuỗi: <SOS> I** và **<SOS> am**
+> \**P(sequence) của 2 chuỗi: <SOS> I** và **<SOS> am**
 
 <br>
 
@@ -2223,7 +2223,7 @@ quality
 >
 > Ví dụ giả sử trong nhánh trên "I hungry" có P cao hơn P của
 > chuỗi "am I" của nhánh dưới thì ta sẽ **bỏ chuỗi "am I"**, và cho đi
-> **tiếp 2 chuỗi I am và I hungry của nhánh trên.**
+> \**tiếp 2 chuỗi I am và I hungry của nhánh trên.**
 >
 > Và vì B = 2 nên ta bỏ hết những từ khác, tiếp tục time-step 3 với
 > 2 chuỗi này, **cho đến khi chuỗi có P cao nhất end với <EOS>**
@@ -2277,7 +2277,7 @@ quality
 
 > [!NOTE]
 > 1. Introduction to a Final Evaluation Technique: The narrator introduces the last technique for
-> **evaluating Neural Machine Translation** (NMT) systems. This technique is simple yet **effective
+> \**evaluating Neural Machine Translation** (NMT) systems. This technique is simple yet **effective
 > compared to others**.
 >
 > 2. **Improving Decoding** with **Multiple Samples**: The narrator discusses the **limitations of random
@@ -2303,7 +2303,7 @@ quality
 > 7. Conclusion and Preview of Next Week: The section concludes by congratulating the viewer on
 > learning about implementing and evaluating machine translation systems. The narrator mentions that
 > the next week's topic will be about the **transformer model,** a **state-of-the-art architecture** that uses an
-> **encoder-decoder framework.**
+> \**encoder-decoder framework.**
 
 <br>
 
@@ -2356,7 +2356,7 @@ quality
 > E'.**
 >
 > Học tới đây thấy đã thấm chữ **argument max**. Khác với
-> **max** (ví dụ **max f(x)** là **tìm giá trị max của f**)
+> \**max** (ví dụ **max f(x)** là **tìm giá trị max của f**)
 >
 > còn **argument max f(x) (** chữ x để dưới) thì sẽ chú ý vào
 > việc **tìm ra x để f(x) max**
@@ -2405,7 +2405,7 @@ quality
 > [!NOTE]
 > In this ungraded lab, we will explain the **stack semantics** in **Trax**. This will
 > help in understanding **how to use layers** like **Select** and **Residual** which
-> **operate on elements in the stack**.
+> \**operate on elements in the stack**.
 >
 > If you've taken a computer science class before, you will recall that a **stack** is a
 > data structure that follows the **Last In, First Out (LIFO)** principle. That is,
@@ -2514,12 +2514,12 @@ quality
 > l**ambda function** expect **nhận 2 input** để trong đó nó **thực hiện phép cộng** và trả
 > kết quả. Tương tự **Multiplication cũng vậy** nhưng là làm **phép nhân**.
 >
-> **Serial** layer define (**Addition(), Multiplication(), Addition()**) và kiểu như quy định input
+> \**Serial** layer define (**Addition(), Multiplication(), Addition()**) và kiểu như quy định input
 > signature có dạng 4 số như vậy (chưa hiểu rõ lắm về signature)
 >
 > Thì nếu không hiểu stack hoạt động ra sao sẽ khó hiểu chỗ này,
 >
-> **Serial** sẽ **thực hiện việc tính toán** theo **lối stack** như ví dụ đầu bài:
+> \**Serial** sẽ **thực hiện việc tính toán** theo **lối stack** như ví dụ đầu bài:
 >
 > Ta **sẽ thấy nó theo đúng như trình tự** của ví dụ trên: **3 4 add 15 mul 3** 
 > ====
@@ -2528,7 +2528,7 @@ quality
 >
 > Kế đến nó push input thứ 2 - Push(4)
 >
-> **Nhận ra đã đủ 2 number trong stack** cho **Addition**, nó **pop hai số này ra,** thực
+> \**Nhận ra đã đủ 2 number trong stack** cho **Addition**, nó **pop hai số này ra,** thực
 > hiện phép **addition**, rồi **bỏ kết quả lại vào stack**. **Lúc này stack có 1 số**, **chưa đủ
 > cho layer thứ 2 là multiplication tính toán**
 >
@@ -2537,9 +2537,9 @@ quality
 > Nhận ra **đủ 2 input trong stack**, **thực hiện Multiplication**, bằng cách cũng **pop hai
 > số ra**, **tính toán rồi push vào lại**. Stack lúc này có 1 số.
 >
-> **Push 3 vào**, **stack đủ 2 số**, **kích hoạt phép tính của Addition**
+> \**Push 3 vào**, **stack đủ 2 số**, **kích hoạt phép tính của Addition**
 >
-> **Đã hết các layer**, **kết thúc trả ra kết quả**
+> \**Đã hết các layer**, **kết thúc trả ra kết quả**
 >
 > Hiểu nôm na là nó work như vậy
 
@@ -2846,10 +2846,10 @@ quality
 
 > [!NOTE]
 > Welcome to the first assignment of Course 4. Here, you will build an **English-to-German** 
-> **neural machine translation (NMT)** model using **Long Short-Term Memory (LSTM)** 
+> \**neural machine translation (NMT)** model using **Long Short-Term Memory (LSTM)** 
 > networks with **attention**. 
 >
-> **Machine translation** is an important task in natural language 
+> \**Machine translation** is an important task in natural language 
 > processing and could be useful not only for translating one language to another but also 
 > for word **sense disambiguation** (e.g. determining whether the word "bank" refers to the 
 > financial bank, or the land alongside a river). 
@@ -2857,7 +2857,7 @@ quality
 > Implementing this using just a **Recurrent 
 > Neural Network (RNN) with LSTMs** can work for **short to medium length sentences** but 
 > can result in **vanishing gradients** for **very long sequences**. To solve this, you will be 
-> **adding an attention mechanism** to allow the decoder to **access all relevant parts of the 
+> \**adding an attention mechanism** to allow the decoder to **access all relevant parts of the 
 > input sentence regardless of its length**. 
 >
 > By completing this assignment, you will:
@@ -2921,9 +2921,9 @@ quality
 
 > [!NOTE]
 > Nhận thấy họ dùng **generator function trax.data.TFDS** take input là
-> **tên dataset (opus/medical)**, **directory path chứa data**, **keys = ('en', '
+> \**tên dataset (opus/medical)**, **directory path chứa data**, **keys = ('en', '
 > de')** có thể hiểu là **chỉ định rằng lấy dữ liệu English và German**,
-> **eval_holdout_size = 0.01** tức là **chia ra thành training và validation
+> \**eval_holdout_size = 0.01** tức là **chia ra thành training và validation
 > set với tỉ lệ 99%-1%**, **train = True cho train_stream** (và **false cho
 > eval_stream**)
 
@@ -2985,7 +2985,7 @@ quality
 
 > [!NOTE]
 > Khởi tạo **trax.data.Tokenize** với input là **tên file chứa bộ subword**, và
-> **directory path** và gọi nó với **train_stream**.
+> \**directory path** và gọi nó với **train_stream**.
 >
 > Nôm na là nó sẽ **sử dụng các subword trong file** để **tokenize dữ liệu
 > trong training set và val set thành dạng token**
@@ -3045,7 +3045,7 @@ quality
 > Những project trước ta cũng **đã làm qua** việc chuẩn bị các bộ dictionary này. Nên
 > ở đây **người ta chuẩn bị sẵn giùm**.
 >
-> **tokenize**() sẽ **convert text sentence thành dạng list các token** (index) và trước
+> \**tokenize**() sẽ **convert text sentence thành dạng list các token** (index) và trước
 > đó là **convert word thành subword luôn**.
 >
 > Còn **detokenize**() thì ngược lại, nó **convert token list khôi phục thành sentence
@@ -3102,7 +3102,7 @@ quality
 
 > [!NOTE]
 > Xem thử:  Ta bỏ **train_input là train data stream** vào **detokenize** để xem thử  nó
-> **detokenize (một mẫu data)** trong đó ra gì cho thấy:
+> \**detokenize (một mẫu data)** trong đó ra gì cho thấy:
 >
 > 'Decreased Appetite'
 >
@@ -3173,7 +3173,7 @@ quality
 
 > [!NOTE]
 > Để làm việc này ta dùng **trax.data.BucketByLength** nhận input là
-> **boundaries** và **batch sizes** tương ứng.
+> \**boundaries** và **batch sizes** tương ứng.
 >
 > Nôm na là ứng **với mỗi boundary value**, nó sẽ **gom các câu có độ
 > dài không qúa số đó thành một batch có số sentence trong batch tương
@@ -3206,7 +3206,7 @@ quality
 > Nhớ rằng c**ác batch khác** có các **batch dimension và cả padded
 > sequence dimension khác nhau** do vụ **bucketize** như đã biết.
 >
-> **Miễn là khi đưa batch data vào model** thì các **sequence trong batch đều
+> \**Miễn là khi đưa batch data vào model** thì các **sequence trong batch đều
 > có length bằng nhau** bằng câu dài nhất trong batch.
 
 <br>
@@ -3281,7 +3281,7 @@ quality
 > [!NOTE]
 > Review lại 'Original Attention':
 >
-> **Mọi hidden states của Encoder** cùng với **current hidden state của
+> \**Mọi hidden states của Encoder** cùng với **current hidden state của
 > Decoder** (hay nói **previous time-step hidden state** cũng được vì ta biết
 > rằng trong quá trình làm, sau mỗi time-step ta sẽ re-assign hidden state vào
 > lại current state để làm input cho việc tính time-step tiếp theo nên nói là
@@ -3344,7 +3344,7 @@ quality
 > [!NOTE]
 > Đầu tiên **input** (batch of **padded sequence of words token**) sẽ đi qua **Embedding layer** để **biến mỗi word token thành embedding vector** 
 >
-> **Chiều dài của embedding vector** sẽ define bởi **d_model** khi construct
+> \**Chiều dài của embedding vector** sẽ define bởi **d_model** khi construct
 > Embedding layer. (*Ta gặp lại d_model, đã từng gây ra sự không hiểu rất lớn
 > ở DLSpec Transformer project).
 >
@@ -3649,7 +3649,7 @@ quality
 >
 > ====
 >
-> *Sau step 4, push 4 cái này vào main stack theo thứ tự (x1 x2 x3 x4) -> [x0] = [x1 x2 x3 x4 x0]
+> \*Sau step 4, push 4 cái này vào main stack theo thứ tự (x1 x2 x3 x4) -> [x0] = [x1 x2 x3 x4 x0]
 > (queries, keys, values, mask) -> [inputs] = **[queries, keys, values, mask, target]** Main stack: **[queries, keys, values, mask, target]**
 
 > [!NOTE]

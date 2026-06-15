@@ -159,7 +159,7 @@
 > Đó là dùng **maximum-likelihood estimation**, với cách tiếp cận này, ta **xây
 > dựng loss function** là **negative log likelihood**:
 >
-> **loss tại mỗi time-step loss_t** là **negative log của likelihood P(y*t | {y*}<t)**.
+> \**loss tại mỗi time-step loss_t** là **negative log của likelihood P(y*t | {y*}<t)**.
 > Công thức hay kí hiệu này không có gì khó hiểu:
 >
 > Tại mỗi time-step ta sẽ **tính ra một probability distribution over vocabulary** như
@@ -167,7 +167,7 @@
 > khác nhau trong vocab sẽ xuất hiện tại vị trí t**.
 >
 > Vậy thì, nếu hiểu theo maximum likelihood, thì ta **muốn tối đa likelihood**, tức
-> **tối đa giá trị của hàm mật độ xác suất tại vị trí có giá trị quan sát được - chính là
+> \**tối đa giá trị của hàm mật độ xác suất tại vị trí có giá trị quan sát được - chính là
 > y*t**, vì **đây "quả thật" là từ thật sự xuất hiện sau tại time-step t**, nên likelihood
 > của observed sample là **p(y*_t|{y*}<t)** 
 >
@@ -177,7 +177,7 @@
 >
 > Và vì cách tiếp cận **Maximum Likelihood Estimation** giả định các t**oken tức
 > các từ hoàn toàn độc lập** (**independent identical distribution dataset**) nên
-> **likelihood của toàn training set** (ví dụ toàn bộ một câu) sẽ là **tích các
+> \**likelihood của toàn training set** (ví dụ toàn bộ một câu) sẽ là **tích các
 > likelihood của từng token**.
 >
 > Để rồi **dựa vào tính chất đồng biến của hàm log**, cho phép ta dùng **log trick**
@@ -200,7 +200,7 @@
 > đoán" từ nào sẽ xuất hiện tại time-step t, gọi là y^t-1** (chú ý, y^t-1 là sự dự đoán
 > của model cho từ y*_t, được lấy bằng cách lấy cái từ ứng với xác suất dự đoán
 > cao nhất trong phân phối xác suất) thì để tính loss cho dự đoán tại time-step t,
-> **ta vẫn coi như model dự đoán đúng ở time-step trước, tức là cho rằng y^_t-1 =
+> \**ta vẫn coi như model dự đoán đúng ở time-step trước, tức là cho rằng y^_t-1 =
 > y*t** (có nghĩa là có thể y^t-1 khác với y*t, tức model đoán sai)
 >
 > Còn khi testing, đương nhiên y^t-1 thế nào thì xài thế đó, gọi là **student forcing.** 
@@ -593,15 +593,15 @@
 > descent
 >
 > Đối với **language model** the likelihood sẽ được xây dựng là một
-> **conditional probability density function** - **khả năng xuất hiện của một
+> \**conditional probability density function** - **khả năng xuất hiện của một
 > từ** **dựa trên một chuỗi từ** trước đó. P(y_t|{y}<t)
 >
 > Và **mấu chốt là**, trong đây, **khi "tính" likelihood function của time-step
 > t** (cũng là để từ đó chuyển thành **loss tại time-step t**, lấy bằng
-> **negative log likelihood của observed token y*t**),..
+> \**negative log likelihood của observed token y*t**),..
 >
 > ..ta đã **cho nó một giả định rằng**, các **từ trước đó đã đúng** bằng cách
-> **đưa vào model chuỗi {y*}<t** là chuỗi từ "target" hay ở đây biết thêm được gọi
+> \**đưa vào model chuỗi {y*}<t** là chuỗi từ "target" hay ở đây biết thêm được gọi
 > là "gold context".
 >
 > Đây là khái niệm **teacher forcing** như đã biết, và điều này có nghĩa là khi
@@ -644,7 +644,7 @@
 > ====
 >
 > Cách thứ hai là dataset aggregation (DAgger): nôm na là người ta sẽ
-> **đưa prediction của model trộn với training sample**, để dùng nó cho
+> \**đưa prediction của model trộn với training sample**, để dùng nó cho
 > training. Giúp **kéo hai distribution của prediction data và training data lại
 > gần nhau** ====
 >

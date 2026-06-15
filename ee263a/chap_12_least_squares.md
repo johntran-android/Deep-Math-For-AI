@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > Đại khái là ta sẽ có hệ các phương trình tuyến tính **Ax=b**. Trong đó
-> **có nhiều phương trình hơn số biến**. Thể hiện bởi A là ma trận cao
+> \**có nhiều phương trình hơn số biến**. Thể hiện bởi A là ma trận cao
 > ốm. (Mà ở đây ta biết thêm là nó gọi là over-determined system - hệ
 > quá định)
 >
@@ -34,7 +34,7 @@
 > tới" được  bởi các basis của C(A)
 >
 > Nên mới nói **thường thường** **b sẽ ko nằm trong C(A)**, khi đó
-> **không thể tìm thấy x solve Ax=b một cách tuyệt đối**.
+> \**không thể tìm thấy x solve Ax=b một cách tuyệt đối**.
 >
 > Khi đó ta có thể muốn **tìm x tốt nhất có thể**. Và tốt nhất ở đây đó
 > là x sao cho **distance giữa Ax và b là nhỏ nhất**, cũng chính là **||Ax-b||** nhỏ nhất.
@@ -52,9 +52,9 @@
 
 > [!NOTE]
 > Đại khái là, gs cho biết "cái mà ta muốn giảm thiểu" được gọi là
-> **objective** **function**. Và ở đây, nó là **residual** (ám chỉ **Ax-b**) norm (tức ||Ax-b||) Thế thì điểm đáng chú ý là, residual r =
+> \**objective** **function**. Và ở đây, nó là **residual** (ám chỉ **Ax-b**) norm (tức ||Ax-b||) Thế thì điểm đáng chú ý là, residual r =
 > Ax-b là một **affine function của x**. Nên đây cụ thể là bài toán
-> **linear** least square. Gợi ý có thể có bài toàn **non linear** least
+> \**linear** least square. Gợi ý có thể có bài toàn **non linear** least
 > square
 >
 > Một điểm đáng lưu ý nữa là gs nói **mọi x^ mà norm Ax-b là nhỏ

@@ -59,7 +59,7 @@
 
 > [!NOTE]
 > Đại ý, gs nói trong lĩnh vực pattern recognition, cũng sẽ là có ích nếu ta có
-> **góc nhìn khái quát hơn về xác suất** (ám chỉ cần có góc nhìn theo Bayes)
+> \**góc nhìn khái quát hơn về xác suất** (ám chỉ cần có góc nhìn theo Bayes)
 >
 > Ông nói đại ý là, lấy ví dụ của bài toán fitting hàm đa thức bữa trước, 
 > thì với các giá trị quan sát tn, thì tính ngẫu nhiên của chúng, ta hoàn toàn
@@ -145,7 +145,7 @@
 >
 > Với hành trang đó của Casella, quay lại đây để xem gs Bishop nói gì. Thì
 > chính là ông coi tham số của mô hình polynomial như θ. Và observed value
-> **X** = **x** chính là D = {t1,...tn}
+> \**X** = **x** chính là D = {t1,...tn}
 >
 > Để rồi, trước khi quan sát / có data D, ta có thể dùng kinh nghiệm để chọn
 > distribution của **w**, tức **prior distribution của** **w**, kí hiệu là p(**w**) (tương ứng
@@ -300,8 +300,8 @@
 > của trường phái Classical / Frequentist, coi θ như fixed, thì tìm θ khiến
 > maximize hàm likelihood L(θ|**x**) mà bản thân hàm này mang ý nghĩa là
 > độ hợp lí của θ khi quan sát thấy **X** = **x**. Nói cách ngắn gọn, khi observed
-> **X** = **x** thì ML estimate θ^_mle(**x**) là cái giá trị θ mà việc xuất hiện giá trị
-> **x** này của **X** là hợp lí nhất.
+> \**X** = **x** thì ML estimate θ^_mle(**x**) là cái giá trị θ mà việc xuất hiện giá trị
+> \**x** này của **X** là hợp lí nhất.
 >
 > Thế thì ở đây, trước tiên phải nhắc lại, **w** là tham số của hàm y(w, **x**) mà 
 > giúp sinh ra giá trị quan sát D.
@@ -354,7 +354,7 @@
 > mô hình)
 >
 > Cách làm đại khái là thực hiện sampling with replacement từ bộ data  gốc
-> **X** = {x1,....xN} L lần, để có L bộ data **X**B. Và dùng nó để đánh giá  chất
+> \**X** = {x1,....xN} L lần, để có L bộ data **X**B. Và dùng nó để đánh giá  chất
 > lượng của parameter estimate bằng cách xem xét sự biến động của
 > prediction giữa các bootstrap data set (Sau này gs sẽ nói rõ hơn)
 

@@ -8,17 +8,17 @@
 <p align="center"><kbd><img src="assets/34042f856def3e5dc1c2be58f07f01aede7aba1f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Thật sự là nó quan trọng tới mức "sống còn" đó fen!** Để tao làm một phép so
+> \**Thật sự là nó quan trọng tới mức "sống còn" đó fen!** Để tao làm một phép so
 > sánh cực kỳ thực dụng giữa cái Chương 7 mày vừa học xong và cái Chương 8
 > mày chuẩn bị đâm đầu vào, mày sẽ thấy tại sao giới khoa học dữ liệu (Data
 > Science) và AI coi đây là "chén thánh":
 >
-> * **Chương 7 (Estimation - Ước lượng):** Trả lời câu hỏi **"Nó là bao nhiêu?"**
-> *(Ví dụ: Mày tính ra model mới tăng độ chính xác lên 1.5%, hoặc đồng xu này có
+> \* **Chương 7 (Estimation - Ước lượng):** Trả lời câu hỏi **"Nó là bao nhiêu?"**
+> \*(Ví dụ: Mày tính ra model mới tăng độ chính xác lên 1.5%, hoặc đồng xu này có
 > xác suất ra ngửa là $p = 0.52$).*
-> * **Chương 8 (Hypothesis Testing - Kiểm định):** Trả lời câu hỏi **"Con số đó CÓ
+> \* **Chương 8 (Hypothesis Testing - Kiểm định):** Trả lời câu hỏi **"Con số đó CÓ
 > Ý NGHĨA CHÓT GÌ KHÔNG, hay chỉ là do ăn may ngẫu nhiên (random noise)?"**
-> *(Ví dụ: 1.5% kia có đủ để tao tốn 100,000 đô tiền server để deploy model mới
+> \*(Ví dụ: 1.5% kia có đủ để tao tốn 100,000 đô tiền server để deploy model mới
 > không? Hay tung đồng xu 100 lần ra 52 lần ngửa thì kết luận đồng xu bị lệch
 > (biased) được chưa, hay chỉ là trùng hợp?)*
 >
@@ -40,7 +40,7 @@
 > ### Nguồn gốc của các "huyền thoại"
 >
 > Mày có biết mấy cái matrix đánh giá model như **False Positive (Báo động giả)**,
-> **False Negative (Bỏ lọt tội phạm)**, **Precision, Recall** hay đường cong **ROC
+> \**False Negative (Bỏ lọt tội phạm)**, **Precision, Recall** hay đường cong **ROC
 > curve** mà dân Deep Learning hay vẽ vợi không? Tất cả bọn chúng đều được đẻ
 > ra từ 2 khái niệm cốt lõi nhất của Chương 8:
 >

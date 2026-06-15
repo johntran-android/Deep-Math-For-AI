@@ -44,7 +44,7 @@ beta1) thì nó đúng được tới cỡ nào.
 > và Y có quan hệ với nhau qua một linear function** (tất nhiên, đã đoán,
 > hay giả định ta có thể đoán sai) thì ta có thể thể hiện là:
 >
-> **Y ~= beta0 + beta1*X**
+> \**Y ~= beta0 + beta1*X**
 >
 > Và ta gọi nó là: "Y được **approximately modeled as (beta0 + beta1*X)**"
 >
@@ -55,7 +55,7 @@ beta1) thì nó đúng được tới cỡ nào.
 >
 > Và trong quá trình dùng training data để tìm ra **ước tính** (đã nói ước
 > tính, thì có thể chính xác hoặc không) của coefficient **beta0** gọi là
-> **beta^0**, ước tính của beta1 gọi là **beta^1** thì ta sẽ có thể **dự đoán
+> \**beta^0**, ước tính của beta1 gọi là **beta^1** thì ta sẽ có thể **dự đoán
 > (ước tính) được Y gọi là Y^**
 >
 > Y^ = beta^0 + beta^1*x
@@ -114,7 +114,7 @@ beta1) thì nó đúng được tới cỡ nào.
 > beta1) thì ta tìm beta0, beta1 sao cho df/dbeta = 0, tương đương
 > df/dbeta0 = 0 và df/dbeta1 = 0
 >
-> *Ta chỉ quan tâm beta (tìm beta để RSS min) nên tuy x cũng tham
+> \*Ta chỉ quan tâm beta (tìm beta để RSS min) nên tuy x cũng tham
 > gia tính  RSS nhưng nó không ảnh hưởng gì đến chuyện tìm beta.
 >
 > Do đó, đầu tiên ta tính df/dbeta0.
@@ -210,7 +210,7 @@ beta1) thì nó đúng được tới cỡ nào.
 ### \\*cố Chấp Cứ Muốn Mô Hình Bộ Dữ
 
 > [!NOTE]
-> **CỐ CHẤP CỨ MUỐN MÔ HÌNH BỘ DỮ
+> \**CỐ CHẤP CỨ MUỐN MÔ HÌNH BỘ DỮ
 > LIỆU BẰNG ĐƯỜNG THẲNG** THÌ **EPSILON CHỨA HẾT CÁC SAI SÓT**
 
 <br>
@@ -261,7 +261,7 @@ beta1) thì nó đúng được tới cỡ nào.
 
 > [!NOTE]
 > Sai khác giữa **estimated beta (beta^)** với
-> **true beta (beta),** lớn hay nhỏ thế nào - đo
+> \**true beta (beta),** lớn hay nhỏ thế nào - đo
 > bằng **standard error of estimated beta
 > SE(beta^)**
 

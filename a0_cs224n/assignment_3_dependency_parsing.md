@@ -149,7 +149,7 @@
 > ở đây ám chỉ first word trong stack, chính là w2 và second word trong
 > stack là w1.
 >
-> ***Gọi left arc vì: ROOT, w1, w2 mà w1 <- w2, vậy là trong hai từ w1,w2
+> \***Gọi left arc vì: ROOT, w1, w2 mà w1 <- w2, vậy là trong hai từ w1,w2
 > thì từ phụ thuộc nằm bên trái.** 
 >
 > RIGHT-ARC: Tương tự nhưng quan hệ ngược lại, từ trước đó phụ thuộc
@@ -250,7 +250,7 @@
 > Thành ra lấy wj ra khỏi stack bằng pop(-1), thì trong stack cái từ wi đương
 > nhiên trở thành top, nên 'lấy' bằng stack[-1].
 >
-> *Trong note, nhớ rằng lấy ra khỏi, ám chỉ việc dùng pop để loại từ ra khỏi
+> \*Trong note, nhớ rằng lấy ra khỏi, ám chỉ việc dùng pop để loại từ ra khỏi
 > list luôn, còn lấy thông thường ý là assign thôi
 
 <br>
@@ -280,7 +280,7 @@
 > nhiều câu, và một model. Để rồi làm theo thuật toán đại khái là 
 > giống như prediction với một batch dữ liệu vậy.
 >
-> **Đại ý thuật toán sẽ là:** 
+> \**Đại ý thuật toán sẽ là:** 
 > Chuẩn bị một list các PartialParses object mới làm ở trên, mỗi cái cho 
 > mỗi câu. Và chuẩn bị một list 'shallow' copy của nó, cái list này
 > mục đích là để theo dõi và kết thúc vòng lặp, vì ta sẽ chạy vòng lặp

@@ -159,7 +159,7 @@
 > language, row[2] = item 3 là problem
 >
 > Dạng dictionary:  **row['Timestamp']** = time-stamp value
-> **row['language'] = language value**
+> \**row['language'] = language value**
 
 <br>
 
@@ -171,7 +171,7 @@
 > Và với kiểu này, ta **không "bị dính" cái header**
 > title 'language' trong đó mà **không cần skip(row)** 
 > Và cho dù có **"move column around"**, thì cũng
-> **không ảnh hưởng gì** cả vì row["language"]
+> \**không ảnh hưởng gì** cả vì row["language"]
 > luôn cho ra cột language
 >
 > không phải như khi dùng csv.reader cho row là
@@ -213,8 +213,8 @@
 > D: Có gì không ổn?
 >
 > A: Việc **gọi cụ thể tên language** như vậy không ổn, ta có thể
-> **không cần care trong đó có gì**. Bằng cách dùng một **set** để
-> **lọc ra trong cột có các kết quả gì**. Sau đó dùng nó để đếm.
+> \**không cần care trong đó có gì**. Bằng cách dùng một **set** để
+> \**lọc ra trong cột có các kết quả gì**. Sau đó dùng nó để đếm.
 > Hoặc có thể dùng dictionary
 > Ví dụ:
 >
@@ -258,7 +258,7 @@
 > Có con nhỏ hỏi liệu Python nó **có automatically
 > tạo 1 cái key** hay không?
 >
-> **Không,** nó sẽ báo error
+> \**Không,** nó sẽ báo error
 
 <br>
 
@@ -289,7 +289,7 @@
 
 > [!NOTE]
 > Rồi, đại khái có thể define thêm key = một function
-> **get_value** như này, để rồi nó sẽ **sort dictionary**
+> \**get_value** như này, để rồi nó sẽ **sort dictionary**
 > theo **giá trị tương ứng của cái key trong dict**
 >
 > Python có value cao nhất -> C > Scratch
@@ -337,7 +337,7 @@
 
 > [!NOTE]
 > Đại khái là làm thêm chút nữa, cho user
-> **nhập loại problem set** họ thích, để **in ra số
+> \**nhập loại problem set** họ thích, để **in ra số
 > vote** cho problem set đó.
 >
 > Kết quả nhập Mario -> 39
@@ -380,13 +380,13 @@
 > [!NOTE]
 > Về cơ bản chỉ có 4 loại hành động CRUD : 
 >
-> **C**reate data (**CREATE**, **INSERT**), 
+> \**C**reate data (**CREATE**, **INSERT**), 
 >
-> **R**eading data (**SELECT**), 
+> \**R**eading data (**SELECT**), 
 >
-> **U**pdate data (**UPDATE**), 
+> \**U**pdate data (**UPDATE**), 
 >
-> **D**elete data (**DELETE**, **DROP**)
+> \**D**elete data (**DELETE**, **DROP**)
 
 <br>
 
@@ -438,7 +438,7 @@
 > [!NOTE]
 > Đại khái hai câu lệnh này sẽ là:
 >
-> **Để chế độ (mode) csv**
+> \**Để chế độ (mode) csv**
 >
 > Và **import csv file** vào thành database
 
@@ -449,13 +449,13 @@
 <p align="center"><kbd><img src="assets/fd62f4813979d2adabe64080b8fa3647633d040a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **.import favorites.csv favorites** 
+> \**.import favorites.csv favorites** 
 >
 > Ra lệnh cho máy tính **import file csv favorite**
 > vào t**hành database có tên favorites**.
 >
 > Và dù **kết quả không có gì** nhưng như thông lệ,
-> **không có gì có nghĩa là tốt**
+> \**không có gì có nghĩa là tốt**
 
 <br>
 
@@ -465,7 +465,7 @@
 
 > [!NOTE]
 > Ổng nói thêm **command** **có dấu chấm** kiểu này là sqlite,
-> **không thật sự là sql**
+> \**không thật sự là sql**
 >
 > Rồi đại khái **.schema** là giúp cho thấy làm cái gì thì ở đây
 > có nghĩa là lệnh import ..ở trên  đã **gọi lệnh sql 
@@ -503,11 +503,11 @@
 > [!NOTE]
 > Ổng nói tôi **muốn chọn cả 3 cột:** 
 >
-> **SELECT** **Timestamp, problem, favorite** **FROM favorites**;
+> \**SELECT** **Timestamp, problem, favorite** **FROM favorites**;
 >
 > Nhưng để chọn hết thì có thể dùng
 >
-> **SELECT * FROM favorites;**
+> \**SELECT * FROM favorites;**
 >
 > Thì nó sẽ kiểu như **chọn tất cả các row thuộc 3 column
 > và in ra**
@@ -536,7 +536,7 @@
 
 > [!NOTE]
 > gọi lại **sqlite3 favorite.db thì** nó sẽ kiểu như là
-> **quay lại làm việc với database favorites.db**
+> \**quay lại làm việc với database favorites.db**
 
 <br>
 
@@ -673,7 +673,7 @@
 <p align="center"><kbd><img src="assets/4f526d85cf3f8ffa398a980ec90ad1b002591d55.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **n** kiểu như một **nick name** và đại khái là có
+> \**n** kiểu như một **nick name** và đại khái là có
 > thể dùng lại được
 
 <br>
@@ -693,7 +693,7 @@
 
 > [!NOTE]
 > SELECT COUNT(*) FROM favorites
-> **WHERE language = 'C';**
+> \**WHERE language = 'C';**
 >
 > Trả về sub-table có 1 column là COUNT(*)
 > có value là **đếm số row mà có language = C**
@@ -723,7 +723,7 @@
 <p align="center"><kbd><img src="assets/64f8f7a8ed0078bac9e72de7a73101c0a3e57408.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **SELECT language, COUNT(*) FROM favorites GROUP 
+> \**SELECT language, COUNT(*) FROM favorites GROUP 
 > BY language;**
 >
 > Tạo sub table có 2 cột: language và COUNT(*) tức là 
@@ -791,7 +791,7 @@
 > VALUES('SQL', 'Fiftyville');
 >
 > \-> Insert thêm 1 row, cột **language** thì là **'SQL'**, cột 
-> **problem** thì là **'Fiftyville'**
+> \**problem** thì là **'Fiftyville'**
 
 <br>
 
@@ -929,7 +929,7 @@
 <p align="center"><kbd><img src="assets/1704f80d41aa0f9cb8241845f47d6d456a65ccc7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **sqlite3 show.db** để bắt đầu làm việc với
+> \**sqlite3 show.db** để bắt đầu làm việc với
 > database này
 
 <br>
@@ -1010,15 +1010,15 @@
 > mà ta hay thấy dùng trên mobile ..) có các **datatype**
 > chính như
 >
-> **BLOB** - Binary Large Object,
+> \**BLOB** - Binary Large Object,
 >
-> **INTEGER** - Integer biết rồi
+> \**INTEGER** - Integer biết rồi
 >
-> **NUMBER** - Ổng nói ví dụ như date-time
+> \**NUMBER** - Ổng nói ví dụ như date-time
 >
-> **REAL** - Như float
+> \**REAL** - Như float
 >
-> **TEXT** - String
+> \**TEXT** - String
 
 <br>
 
@@ -1029,7 +1029,7 @@
 > [!NOTE]
 > Còn hai cái key **NOT NULL** và **UNIQUE** đại khái là
 > để **constraint** rằng **data không được NULL** và phải 
-> **không được trùng lặp.**
+> \**không được trùng lặp.**
 >
 > Ví dụ như hồi nãy ổng insert **SLQ và 'fiftyville'** thì 
 > không có **Time-stamp**, thì **nếu như có NOT NULL**
@@ -1075,7 +1075,7 @@
 
 > [!NOTE]
 > Còn keyword **FOREIGN KEY(show_id) REFERENCES**
-> **shows(id)** ý là **cột show_id chính là cột id của table 'shows'** 
+> \**shows(id)** ý là **cột show_id chính là cột id của table 'shows'** 
 > và **FOREIGN KEY (person_id) REFERENCES people(id)**
 > ý là **cột person_id chính là cột id của table people**
 >
@@ -1099,7 +1099,7 @@
 <p align="center"><kbd><img src="assets/7531b0f5661b47f419b4894c9d86855de1ccf03b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **SELECT * FROM people;** -> Chọn, tạo
+> \**SELECT * FROM people;** -> Chọn, tạo
 > subtable **mọi hàng mọi cột** từ **table people**
 
 <br>
@@ -1109,7 +1109,7 @@
 <p align="center"><kbd><img src="assets/91ff112126fd3b76dddf7757ce8488fb9235569d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **SELECT * FROM people LIMIT 10;**
+> \**SELECT * FROM people LIMIT 10;**
 > \-> **Tạo subtable mọi cột** từ **people**
 > nhưng **limit 10 row**
 
@@ -1633,8 +1633,8 @@
 <p align="center"><kbd><img src="assets/22c951f31d6ff1c58770bc22679b011893e8f383.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Rows** là **list các dictionary**, trong đó **key là tên cột** mà
-> **SELECT** chọn, (nếu *** thì chọn hết**)
+> \**Rows** là **list các dictionary**, trong đó **key là tên cột** mà
+> \**SELECT** chọn, (nếu *** thì chọn hết**)
 
 <br>
 

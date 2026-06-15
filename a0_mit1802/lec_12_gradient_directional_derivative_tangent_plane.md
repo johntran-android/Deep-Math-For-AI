@@ -26,9 +26,9 @@
 
 > [!NOTE]
 > Thế thì cuối bài trước ta đã làm quen khái niệm **GRADIENT**
-> **VECTOR**, là **vector** mà các **component là các partial derivative.** 
+> \**VECTOR**, là **vector** mà các **component là các partial derivative.** 
 >
-> **Grad_f = <w_x, w_y, w_z>**
+> \**Grad_f = <w_x, w_y, w_z>**
 >
 > Thế thì đại khái là **partial derivative sẽ phụ thuộc vị trí x, y, z.**
 >
@@ -109,7 +109,7 @@
 > a3>**
 >
 > Thế thì nói qua **level surface**: Là cái **tập hợp các điểm** khi ta
-> **cho w mang giá trị constant c** nào đó: **a1*x + a2*y + a3*z = c**
+> \**cho w mang giá trị constant c** nào đó: **a1*x + a2*y + a3*z = c**
 >
 > Thế thì a1*x + a2*y + a3*z = c là phương trình của surface này, và
 > nó có dạng là p**hương trình mặt phẳng**.
@@ -170,7 +170,7 @@
 > để **chứng minh** thì lập luận như sau: Xét một **level surface w = c** tức
 > mọi điểm trên đó đều có **w = c** và lấy một curve **r = r(t)** (ý là một quỹ
 > đạo, một tập hợp điểm các vị trí của object di chuyển thể hiện bởi
-> **position vector r(t)**
+> \**position vector r(t)**
 
 <br>
 
@@ -182,7 +182,7 @@
 > Thế thì **velocity vector v = dr/dt** (như đã biết) sẽ luôn **TIẾP
 > TUYẾN VỚI ĐƯỜNG CONG QUỸ ĐẠO (CURVE)** và vì
 >
-> **đường cong quỹ đạo NẰM TRONG level surface**
+> \**đường cong quỹ đạo NẰM TRONG level surface**
 >
 > nên **velocity cũng TIẾP TUYẾN VỚI LEVEL SURFACE luôn**
 
@@ -236,7 +236,7 @@
 > BẤT KÌ.**
 >
 > Nên ta có thể kết luận rằng: Đại khái là **tại một điểm**, nếu ta tìm 
-> **gradient** **vector**, thì **với mọi curve trong level surface** mà **đi qua 
+> \**gradient** **vector**, thì **với mọi curve trong level surface** mà **đi qua 
 > điểm đó**, thì **velocity vector tại đó** **ĐỀU** **vuông góc với gradient
 > vector.** Thế thì **tại một điểm,** thì velocity vector chính là **TRÙNG PHƯƠNG** với vector **TIẾP TUYẾN** của curve đó, mà **tiếp tuyến với curve** thì cũng
 > là **tiếp tuyến với surface**. 
@@ -266,7 +266,7 @@
 > [!NOTE]
 > minh họa ở đây, **tại một điểm** trong level surface, điều trên **đúng với mọi
 > curve đi qua nó**. Do đó **mọi vector v tiếp tuyến** với các curve đó (và
-> **cũng là tiếp tuyến với level surface**) sẽ **đều vuông góc với gradient
+> \**cũng là tiếp tuyến với level surface**) sẽ **đều vuông góc với gradient
 > vector.**
 >
 > Thế thì **mọi vector này sẽ tạo nên tangent plane** tiếp tuyến với level
@@ -313,7 +313,7 @@
 >
 > Do đó phương trình mặt phẳng mà **normal** vector là **grad_w** là:
 >
-> **4x + 2y - 2z = something**
+> \**4x + 2y - 2z = something**
 
 <br>
 
@@ -328,7 +328,7 @@
 > = 8
 >
 > Vậy phương trình mặt phẳng tangent plane tại (2,1,1) là
-> **4x + 2y - 2z = 8**
+> \**4x + 2y - 2z = 8**
 
 <br>
 
@@ -346,7 +346,7 @@
 >
 > Ta xuất phát từ **total differential** equation:
 >
-> **dw =w_x*dx + w_y*dy + w_z*dz**
+> \**dw =w_x*dx + w_y*dy + w_z*dz**
 >
 > mà ta đã biết nó mang ý nghĩa
 >
@@ -354,18 +354,18 @@
 > z)** nhưng ý nghĩa mà gs cho là chính xác hơn đó là
 >
 > 2) đóng vai trò **place holder** để khi **thay các dw, dx, dy, dz** **bằng ∆w, ∆x, ∆y, ∆z** thì ta sẽ có
-> **LINEAR** **APPROXIMATION**
+> \**LINEAR** **APPROXIMATION**
 >
 > (Ôn lại chút, với hàm đơn biến f(x), định nghĩa của derivative của f đối với x đó là limit của **quotient
 > difference** ∆f/∆x khi ∆x->0, hay, tỉ lệ [thay đổi của f, ∆f]  trên [thay đổi của x, ∆x] khi ∆x trở nên vô
 > cùng nhỏ. Thể hiện qua equation:
 >
-> **f'(x) = lim ∆x->0 ∆f/∆x**
+> \**f'(x) = lim ∆x->0 ∆f/∆x**
 >
 > Thế thì từ đó, nếu mà ta **chỉ xét x thay đổi nhỏ** (chứ không vô cùng nhỏ), thì ta có thể **thay định
 > nghĩa trên bằng dấu xấp xỉ**, để trở thành công thức của **linear approximation**
 >
-> **f'(x) ~= ∆f/∆x, x~=x0,** hay **∆f = f'(x)∆x**
+> \**f'(x) ~= ∆f/∆x, x~=x0,** hay **∆f = f'(x)∆x**
 >
 > triển khai ra ta sẽ có dạng: **f'(x0) = [f(x) - f(x0)] / (x-x0)**
 >
@@ -373,7 +373,7 @@
 >
 > Với hàm đa biến cũng tương tự, đó là từ total differentiation:
 >
-> **dw = w_x*dx + w_y*dy + w_z*dz**  w/∂x có định nghĩa là lim ∆x->0 [w(x+∆x,y,z) - w(x,y,z)] / ∆x
+> \**dw = w_x*dx + w_y*dy + w_z*dz**  w/∂x có định nghĩa là lim ∆x->0 [w(x+∆x,y,z) - w(x,y,z)] / ∆x
 >
 > ∂w/∂y có định nghĩa là lim ∆y->0 [w(x,y+∆y,z) - w(x,y,z)] / ∆y
 >
@@ -384,7 +384,7 @@
 >
 > ∆w ~= w_x*∆x + w_y*∆y + w_z*∆z
 >
-> **∆w ~= 2x*∆x + 2y*∆y - 2z*∆z**  Tại (2,1,-1) ta có:
+> \**∆w ~= 2x*∆x + 2y*∆y - 2z*∆z**  Tại (2,1,-1) ta có:
 >
 > ∆w ~= **4*∆x + 2*∆y - 2*∆z**
 >
@@ -423,7 +423,7 @@
 >
 > Từ đó ta sẽ có phương trình thể hiện điều đó
 >
-> **0 = 4*(x-2) + 2*(y-1) - 2*(z+1)**: Và đây chính là phương trình của tangent plane mà ta đã tìm ra
+> \**0 = 4*(x-2) + 2*(y-1) - 2*(z+1)**: Và đây chính là phương trình của tangent plane mà ta đã tìm ra
 > theo cách 1
 
 > [!NOTE]
@@ -486,7 +486,7 @@
 
 > [!NOTE]
 > Thế thì, ta có **position vector r** và nó sẽ được tham số hóa theo biến **s** - **distance**: là bởi
-> **by** **convention** ta cho rằng điểm đang move theo **hướng của u** với **vận tốc đơn vị**, nên
+> \**by** **convention** ta cho rằng điểm đang move theo **hướng của u** với **vận tốc đơn vị**, nên
 > nôm na là khi đó, **vị trí của điểm có thể được xác định bởi khoảng cách s** nên ta mới có r
 > parameterized by s.
 >
@@ -589,7 +589,7 @@
 > của directional derivative dw/ds|u^) trùng với hướng của gradient vector
 > grad_w. Khi đó thì dw/ds|u^ sẽ lớn nhất mang ý nghĩa là khi di chuyển
 > với unit speed theo hướng này thì w sẽ tăng nhanh nhất và độ lớn của
-> **dw/ds|u^=direction(grad_w) = |grad_w|**
+> \**dw/ds|u^=direction(grad_w) = |grad_w|**
 >
 > Và khi theta = 90 độ, tức hướng của directional derivative dw/ds|u^
 > VUÔNG GÓC VỚI GRADIENT VECTOR thì dw/ds|u^ = 0

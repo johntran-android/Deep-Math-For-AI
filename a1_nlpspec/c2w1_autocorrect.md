@@ -62,7 +62,7 @@ Learning Objectives
 >  • Step 3: **Filter** the strings to **identify real words** that are **spelled correctly.**
 >
 >  • Step 4: **Calculate word probabilities** to determine the **likelihood of each word** 
-> **appearing** in the **given context** and **choose the most probable** replacement**.**
+> \**appearing** in the **given context** and **choose the most probable** replacement**.**
 >
 >  3 **Implementing** autocorrect:
 >  • Each step of autocorrect implementation will be discussed in detail in the 
@@ -184,7 +184,7 @@ Learning Objectives
 > [!NOTE]
 > 1 Step 1: **Identify misspelled words:**
 >  • Misspelled words can be identified **by checking** if they are **present** in a 
-> **dictionary**.
+> \**dictionary**.
 >  • Words **not found in the dictionary** are flagged as **potentially misspelled.**
 >  • The focus is on **spelling errors** rather than **contextual errors.**
 >
@@ -269,7 +269,7 @@ Learning Objectives
 > [!NOTE]
 > Bước 3, đã biết, ta sẽ xem trong đó **từ
 > nào có nghĩa** (look up trong từ điển để
-> **xoá bớt những từ vô nghĩa**)
+> \**xoá bớt những từ vô nghĩa**)
 
 <br>
 
@@ -316,7 +316,7 @@ Learning Objectives
 > [!NOTE]
 > Preprocessing
 >
-> **e.findall(r'\\\\w+', text_lowercase)**
+> \**e.findall(r'\\\\w+', text_lowercase)**
 >
 > Giới thiệu một function rất gọn **giúp bẻ 1
 > string thành 1 list các từ** giống nhu
@@ -484,15 +484,15 @@ Learning Objectives
 > [!NOTE]
 > 1 Step 4: **Calculate word probabilities:**
 >  • The **final step** in implementing **auto-correct** is to **calculate the probabilities** of each 
-> **possible correct word**.
+> \**possible correct word**.
 >  • Word **probabilities** are determined based on **their frequency** in a given body of 
 > text, known as a **corpus**.
 >  • The **more common a word is in the corpus**, the **higher its probability.**  • This information helps auto-correct **choose** the **most likely replacement** for a 
-> **misspelled word**.
+> \**misspelled word**.
 >
 >  2 Word **frequency** and **corpus**:
 >  • To calculate word probabilities, you need to **count** the **number of times** each 
-> **word appears in the corpus.**
+> \**word appears in the corpus.**
 >  • The **corpus** can be a **large collection of texts**, such as all **issues of a magazine** 
 > or a **series of books**.
 >  • In the example given, the **corpus is a single sentence for simplicity**.
@@ -501,15 +501,15 @@ Learning Objectives
 >
 >  3 Selecting the replacement word:
 >  • Auto-correct **selects** the word **candidate** with the **highest probability** as the 
-> **replacement for the misspelled word.**  • The word with the **highest probability** is considered the **most likely correct 
+> \**replacement for the misspelled word.**  • The word with the **highest probability** is considered the **most likely correct 
 > word.**
 >
 >  4 **Summary** of the **auto-correct implementation steps:**
 >  • To implement auto-correct, you follow four steps: **identify** the **misspelled** word, 
-> **generate** a list of strings at **edit distances**, **filter** the list to include **only actual words**, and 
-> **calculate** word **probabilities**.
+> \**generate** a list of strings at **edit distances**, **filter** the list to include **only actual words**, and 
+> \**calculate** word **probabilities**.
 >  • The word with the **highest probability** is **chosen** as the auto-correct 
-> **replacement**.
+> \**replacement**.
 >
 >  5 Importance of **understanding** auto-correct implementation:
 >  • Understanding the step-by-step process of auto-correct implementation is 
@@ -519,7 +519,7 @@ Learning Objectives
 >
 >  6 Next topic: **Evaluating similarity** between **strings**:
 >  • The next video will introduce the concept of **evaluating** **similarity between** two 
-> **strings**.
+> \**strings**.
 >  • This is particularly important when **comparing a word** with a **typo** to the **correct 
 > version of the word.**
 >  **• The evaluation of string similarity is a common practice in natural language 
@@ -712,7 +712,7 @@ Learning Objectives
 
 > [!NOTE]
 > 1 **Minimum Edit Distance** (**MED**) has various **applications**, including **spelling**
-> **correction**, **document similarity**, **machine translation**, and **DNA sequencing**.
+> \**correction**, **document similarity**, **machine translation**, and **DNA sequencing**.
 >
 > 2 MED can be used to **evaluate** the **similarity** between **two strings or documents**
 > by **determining the lowest number of operations** required to **transform** one into the
@@ -724,7 +724,7 @@ Learning Objectives
 > 4 Initially, **all edit operations** are considered to have the **same cost (e.g., 1).**
 >
 > 5 **Edit distance** represents the **total cost of edits,** and the **goal is to minimize this**
-> **distance**.
+> \**distance**.
 >
 > 6 **Different costs** are assigned to each type of edit operation: **insert** and **delete**
 > have a cost of **1**, while **replace** has a cost of **2.**
@@ -732,7 +732,7 @@ Learning Objectives
 > 7 The **edit distance** is calculated as the **sum of costs** for the **performed edit**s.
 >
 > 8 The **complexity** of **solving the edit distance problem** using **brute force**  increases
-> **exponentially** with the **length of the strings**.
+> \**exponentially** with the **length of the strings**.
 >
 > 9 A **more efficient approach** is using a **tabular method** and **dynamic programming**
 > to **enumerate all possible strings and edits**.
@@ -810,7 +810,7 @@ Learning Objectives
 >  5 The formula to calculate each element in the distance matrix is based on the 
 > previous calculations and the cost of edit operations (insert, delete, replace).
 >  6 The process starts with the **special case** of transforming an **empty source** 
-> **string** to an **empty target string**, which has an **edit distance of zero.**  7 The edit distance between a letter in the source string and an empty target 
+> \**string** to an **empty target string**, which has an **edit distance of zero.**  7 The edit distance between a letter in the source string and an empty target 
 > string can be computed using an **insert operation** with a **cost of one.**
 >  8 The edit distance between an empty source string and a letter in the target 
 > string can be computed using a delete operation with a cost of one.
@@ -902,7 +902,7 @@ Learning Objectives
 >  6 The **big formula** for calculating the minimum edit distance is introduced, 
 > building upon the previous computations.
 >  7 The formula considers **delete cost, insert cost, and replace cost** based on 
-> **matching** or **mismatching** letters between the source and target words.
+> \**matching** or **mismatching** letters between the source and target words.
 >  8 The **minimum edit distance value**s are determined using the formula and filled 
 > out in the table.
 >  9 The **patterns** in the table, revealed through color coding or a **heat map**, show 
@@ -1094,13 +1094,13 @@ Learning Objectives
 
 > [!NOTE]
 > 1 The video provides an overview of **minimum edit distance** and explains how to
-> **reconstruct** the **path** taken during the edits.
+> \**reconstruct** the **path** taken during the edits.
 >
 > 2 The implementation of minimum edit distance using **insert**, **delete**, and **replace**
 > operations with costs 1, 1, and 2 respectively is known as **Levenshtein distance.**
 >
 > 3 While finding the minimum edit distance is important, **knowing the** **path taken** is also
-> **crucial**, which can be achieved through **backtrace**.
+> \**crucial**, which can be achieved through **backtrace**.
 >
 > 4 **Backtrace** involves **keeping a pointer** in **each cell** of the **table** to **track the path from
 > the top left corner** to the **bottom right corner**, useful in **string alignment problems**.
@@ -1116,7 +1116,7 @@ Learning Objectives
 >
 > 8 A **recap** is provided, highlighting the key topics covered in the **past few lessons,**
 > including **auto-correct**, **string similarity**, and the **tabular algorithmic technique** for
-> **minimum edit distance**.
+> \**minimum edit distance**.
 >
 > 9 The viewer is congratulated on finishing the week and informed about the upcoming
 > topic of the **Viterbi** **algorithm** in the next week, which also **utilizes dynamic
@@ -1170,7 +1170,7 @@ Learning Objectives
 
 > [!NOTE]
 > Good job in learning this week's materials. You now know how
-> **dynamic programming** works and you can see why it is a **very
+> \**dynamic programming** works and you can see why it is a **very
 > powerful algorithm**. Just like how you can use dynamic
 > programming to **find the minimum edit distance** between **two
 > strings**, you can also use it to **find the shortest path** from **point A
@@ -1178,11 +1178,11 @@ Learning Objectives
 > powerful models that you learned**.
 >
 > In this week's programming assignment, you'll be implementing
-> **autocorrect**, and by the end of the assignment, you will be **able to
+> \**autocorrect**, and by the end of the assignment, you will be **able to
 > feed in a typo to your model**, and it will **give you the most likely
 > correction**. **Autocorrect**, these days, **uses a lot of techniques**,
 > but you will get a **good baseline and understand** how the
-> **concepts** work. You will also learn about dynamic programming
+> \**concepts** work. You will also learn about dynamic programming
 > can be assigned. Next week you'll tackle part of **speech tagging.**
 > Good luck in the assignment.
 

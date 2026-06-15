@@ -38,7 +38,7 @@ Learning Objectives
 > can quickly pass and gather information about**. **You can use this information, for
 > example, to do market research about certain topics by scraping the internet**. When
 > implementing NAR for this week, you will be using a **long short-term memory unit** or
-> **LSTM**. LSTM's are **similar to RNNs and GRUs** except they have **other gates that make
+> \**LSTM**. LSTM's are **similar to RNNs and GRUs** except they have **other gates that make
 > them more powerful**. Jonas will show you more about it. &gt;&gt; Yeah, let's get started.
 
 <br>
@@ -58,7 +58,7 @@ Learning Objectives
 > the **problems faced by conventional RNNs**, namely the **vanishing and exploding gradients**.
 >
 > 2 Pros and cons of RNNs: **RNNs** are discussed in terms of their ability to **model sequences**,
-> **capture dependencies**, and their **relatively lightweight nature**. However, they **struggle with
+> \**capture dependencies**, and their **relatively lightweight nature**. However, they **struggle with
 > long-term dependencies** and are **prone to vanishing and exploding gradients**.
 >
 > 3 Description of **information propagation in RNN**s: The **process of propagating information** from
@@ -67,7 +67,7 @@ Learning Objectives
 >
 > 4 **Vanishing** and **exploding gradients**: The consequences of vanishing gradients, where **gradients
 > exponentially decay** as they **propagate backward through time**, and **exploding gradients**, where
-> **gradients grow uncontrollably,** are described. These problems result in the **loss of information from
+> \**gradients grow uncontrollably,** are described. These problems result in the **loss of information from
 > early steps** or **convergence issues** during training.
 >
 > 5 **Solutions for vanishing and exploding gradients**: Some techniques to address these issues are
@@ -98,7 +98,7 @@ Learning Objectives
 > [!NOTE]
 > Nhưng nhược điểm là **không nhớ tốt
 > được long term dependencies** và bị
-> **vanishing / exploding gradient**
+> \**vanishing / exploding gradient**
 
 <br>
 
@@ -115,7 +115,7 @@ Learning Objectives
 > the previously computed values. This process continues for subsequent words in the sequence.
 >
 > 3 Illustration of information propagation: The text describes a visual representation where the
-> **orange area represents the first computed values**, and the **green area represents the second
+> \**orange area represents the first computed values**, and the **green area represents the second
 > word**. The process of computing new values for each word using the previous values is
 > depicted.
 >
@@ -148,7 +148,7 @@ Learning Objectives
 > apply the **chain rule multiple times**. Recall that the weights **W_h** and **W_x** are **the same
 > for each step**. Let's focus on the weights W_h. Noting that everything that I'll present to
 > you also applies to W_x, with the loss being computed at the T step sequence. The
-> **gradient with respect to W_h** would depend on the computations that are made this
+> \**gradient with respect to W_h** would depend on the computations that are made this
 > every step. In fact, it is proportional to the s**um of products** of **hidden states, partial
 > derivatives**. This relationship can be found by **applying the chain rule** and the use of a
 > couple of tricks. But you **don't need to worry about the derivation** as much as the
@@ -191,8 +191,8 @@ Learning Objectives
 > [!NOTE]
 > You can deal with vanishing gradients by **initializing your weights to the identity matrix**,
 > which carries values of **one along the main diagonal** and **zero everywhere else**. Using a
-> **ReLU activation**. What this essentially does is **copy the previous hidden states** and
-> **information** from the current inputs and **replace any negative values with zero**. This has
+> \**ReLU activation**. What this essentially does is **copy the previous hidden states** and
+> \**information** from the current inputs and **replace any negative values with zero**. This has
 > the effect of **encouraging your network to stay close to the values of the identity
 > matrix**, which act like ones during matrix multiplication. This method is referred to
 > unsurprisingly as an **identity RNN**. The identity RNN approach **only works for vanishing
@@ -200,15 +200,15 @@ Learning Objectives
 > To account for **values growing exponentially** you can perform **gradients clipping**. To clip
 > your gradient, **simply choose a relevant value** that you would **clip the gradient** to, say
 > 25. Using this technique, **any value greater than 25 will be clipped to 25**. This serves to
-> **limit the magnitude of the gradient**. Finally **skip connections** provide a **direct connection
+> \**limit the magnitude of the gradient**. Finally **skip connections** provide a **direct connection
 > to the earlier layers**. This effectively skips over the activation functions and adds the
 > value from your initial inputs x to you're outputs or f of x plus x. This way, activations
 > from early layers have more influence over the costs
 
 > [!NOTE]
-> **Một số giải pháp khắc phục** (trước khi có LSTM
+> \**Một số giải pháp khắc phục** (trước khi có LSTM
 > là) **Identity RNN** để **giảm Vanishing gradient**,
-> **Gradient clipping** để **fix vấn đề exploding**
+> \**Gradient clipping** để **fix vấn đề exploding**
 > gradient và **Skip Connection.**
 
 <br>
@@ -323,7 +323,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/14566055909d951e04579d4eb24c2c0cc75b4460.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Partial derivative (P.D) of loss function w.r.t weight matrix Wh** - **dL/dWh** sẽ **tỉ lệ
+> \**Partial derivative (P.D) of loss function w.r.t weight matrix Wh** - **dL/dWh** sẽ **tỉ lệ
 > thuận** (proportional) với **tổng các product** của các **P.D** of **hidden state sau w.r.
 > t hidden state trước** - **dh_i/dh_i-1**. Và ở đây người ta sẽ cho mình thấy **với k
 > lớn** (tức cái chuỗi dài) thì cái **"tổng các product..."** này sẽ **trở nên vô cùng bé
@@ -433,7 +433,7 @@ Learning Objectives
 > [!NOTE]
 > 1 Random Eigenvalues: The line "eig = np.random.rand(5)*4" **generates an array of 5
 > random numbers between 0 and 1** using **np.random.rand(5)**. These numbers are then
-> **multiplied by 4**, resulting in **random eigenvalues that are lower than 4**. The array eig
+> \**multiplied by 4**, resulting in **random eigenvalues that are lower than 4**. The array eig
 > represents the eigenvalues.
 >
 > 2 Random Eigenvectors: The line "Q = np.random.randn(5,5)" creates a 5x5 matrix Q with
@@ -494,13 +494,13 @@ Learning Objectives
 > cho thấy: **contribution của những time-step từ 16 trở về trước hầu
 > như bằng 0**, hệ quả nôm na là :
 >
-> **khi model tính loss và dùng gradient để điều chỉnh weight** **để có
+> \**khi model tính loss và dùng gradient để điều chỉnh weight** **để có
 > thể predict đúng hơn ở một time step k** thì **hầu như gradient chỉ bị
 > ảnh hưởng bởi những time-step gần đó**, **còn ở xa xa hầu như
 > không có**.
 >
 > Cho nên, **ý nghĩa của nó đó là:** **từ được dự đoán ở timestep k**
-> **chỉ phụ thuộc hay dựa trên một số từ gần gần đó thôi**, **không thể
+> \**chỉ phụ thuộc hay dựa trên một số từ gần gần đó thôi**, **không thể
 > có long-range dependency** hay **ảnh hưởng bởi những từ ở đầu câu
 > ở xa**
 
@@ -548,7 +548,7 @@ Learning Objectives
 >
 > Solution One solution is to use RNN architectures **specially designed** to avoid
 > these problems (like GRUs and LSTMs). Other solutions involve
-> **skip-connections or gradient clipping**. But those are both discussions for another
+> \**skip-connections or gradient clipping**. But those are both discussions for another
 > time.
 
 <br>
@@ -708,7 +708,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/20a5d20ef7ef92aa3269b1c378913804496900d4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Input** và **hidden state trước** sẽ được kết hợp để tính **c~<t>** và
+> \**Input** và **hidden state trước** sẽ được kết hợp để tính **c~<t>** và
 > cho qua **Input gate** để quyết định sẽ **sử dụng hay không, nhiều
 > hay ít** trong **cell state.** Và tanh giúp ổn định, kiểm soát giá trị
 > không cho quá cao hay quá thấp, khắc phục tình trạng vanishing &
@@ -763,17 +763,17 @@ Learning Objectives
 > NLP systems use **NER components**.
 >
 > 2 NER systems **locate and extract named entities from text,** which can be anything from **places**,
-> **organizations**, and **people's names** to times and dates.
+> \**organizations**, and **people's names** to times and dates.
 >
 > 3 **NER systems** use **labels** to **classify entities**. Some common classes include **geographical entities,**
-> **organizations, geopolitical entities, time indicators, artifacts, and person names.**
+> \**organizations, geopolitical entities, time indicators, artifacts, and person names.**
 >
 > 4 **NER** is useful for **content classification** and o**ptimizing search engine efficiency** by **quickly scanning large
 > amounts of text** for specific words or entities.
 >
 > 5 Real-world applications of NER systems include **optimizing search engine efficiency**, making
-> **recommendations** based on user history, **matching customers** to appropriate service agents, and even
-> **automatic trading** using sentiment analysis on news articles.
+> \**recommendations** based on user history, **matching customers** to appropriate service agents, and even
+> \**automatic trading** using sentiment analysis on news articles.
 >
 > 6 NER systems have **numerous applications in the field of deep learning**, and **their ability to extract and
 > identify entities** plays a **vital role in various NLP tasks.**
@@ -839,7 +839,7 @@ Learning Objectives
 
 > [!NOTE]
 > 1 To train a **Named Entity Recognition (NER) system**, the first step involves **converting entity classes** and
-> **labeled data** into **arrays of numbers** that correspond to each other.
+> \**labeled data** into **arrays of numbers** that correspond to each other.
 >
 > 2 **Each entity class** is assigned a **unique number**, and **each word in the sentence** is **assigned a number
 > corresponding to its entity class**.
@@ -975,7 +975,7 @@ Learning Objectives
 > nhiều label có thể có**.
 >
 > Thì khi model nó **predict một từ (tại một time-step)** thì nó có dạng
-> **vector các probability** có độ dài là **số label (Entity class)**, thì **thằng
+> \**vector các probability** có độ dài là **số label (Entity class)**, thì **thằng
 > nào có P lớn nhất sẽ được chọn**, và **index** của nó chính là "kết luận"
 > sẽ  đem so với **g.t.label (label của mỗi từ cũng chính là index của một
 > Entity class nào đó)**
@@ -1007,16 +1007,16 @@ Learning Objectives
 > Do đó **trục thứ nhất axis = 0** là **batch size** lấy trong trục này là **lấy một câu nào
 > đó trong batch.**
 >
-> **Trục thứ hai axis = 1** là **số từ Tx** hay đúng hơn là token trong sequence. Loop
+> \**Trục thứ hai axis = 1** là **số từ Tx** hay đúng hơn là token trong sequence. Loop
 > trong đây là **loop trong các từ | time-step trong câu.**
 >
-> **Trục thứ ba, axis = 2** mới là **probability vector**. Vậy để lấy index mà có giá trị p
+> \**Trục thứ ba, axis = 2** mới là **probability vector**. Vậy để lấy index mà có giá trị p
 > max trong từng vector thì phải để axis = 2
 >
 > 2. Cái mask sẽ làm như thế nào cụ thể trong Assignment sẽ note
 >
 > 3.Cái cuối chính là **so sánh output** với **ground-truth label**, mà y sẽ có shape là:
-> **Batch x Tx**: Có batch câu, mỗi câu có Tx từ (có thể sẽ lấy Tx là câu dài  nhất trong
+> \**Batch x Tx**: Có batch câu, mỗi câu có Tx từ (có thể sẽ lấy Tx là câu dài  nhất trong
 > batch) Mỗi từ gắn với index của Entity class
 >
 > \-> shape y: **batch_size x Tx**
@@ -1169,7 +1169,7 @@ Learning Objectives
 
 > [!NOTE]
 > Dataset này sẽ lấy từ **Kaggle**, được **preprocess giùm** để có dạng như sau:
-> **Mỗi data sample** **x sẽ là một sentence**. **Label sẽ là một chuỗi**, **tương
+> \**Mỗi data sample** **x sẽ là một sentence**. **Label sẽ là một chuỗi**, **tương
 > ứng mỗi vị trí của từ trong câu là một tag** ví dụ như **B-geo (geographical
 > entity), B_gpe (geopolitical entity), O (filler word)**.
 >
@@ -1546,10 +1546,10 @@ Learning Objectives
 >
 > Do đó **trục thứ nhất axis = 0** là **batch size** lấy trong trục này là **lấy một câu nào đó trong batch.**
 >
-> **Trục thứ hai axis = 1** là **số từ Tx** hay đúng hơn là token trong sequence. Loop trong đây là **loop
+> \**Trục thứ hai axis = 1** là **số từ Tx** hay đúng hơn là token trong sequence. Loop trong đây là **loop
 > trong các từ | time-step trong câu.**
 >
-> **Trục thứ ba, axis = 2** mới là **probability vector**. Vậy để lấy index mà có giá trị p max trong từng
+> \**Trục thứ ba, axis = 2** mới là **probability vector**. Vậy để lấy index mà có giá trị p max trong từng
 > vector thì phải để axis = 2
 >
 > 2. Cái mask: Vì labels (b,max_len) là tensor chứa g.t. label đã được padded. Nên chỉ việc so sánh (!=)

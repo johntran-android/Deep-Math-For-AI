@@ -70,7 +70,7 @@
 
 > [!NOTE]
 > A popular technique to finetune large language models with human feedback is called
-> **reinforcement learning from human feedback**, or **RLHF** for short.
+> \**reinforcement learning from human feedback**, or **RLHF** for short.
 >
 > As the name suggests, RLHF uses **reinforcement learning**, or RL for short, to **finetune
 > the LLM with human feedback data**, resulting in a model that is **better aligned with
@@ -104,7 +104,7 @@
 >
 > Reinforcement learning is a type of machine learning in which an **agent learns to
 > make decisions related to a specific goal by taking actions in an environment**, with the
-> **objective of maximizing some notion of a cumulative reward**.
+> \**objective of maximizing some notion of a cumulative reward**.
 >
 > In this framework, **the agent continually learns from its experiences by taking
 > actions**, **observing the resulting changes in the environment, and receiving rewards
@@ -134,9 +134,9 @@
 > Its **objective is to win the game**. The **environment is the three by three game board**,
 > and the **state** at any moment, is the current configuration of the board.
 >
-> **The action space comprises all the possible positions a player can choose** based on
+> \**The action space comprises all the possible positions a player can choose** based on
 > the current board state. The agent makes decisions by following a strategy known as the
-> **RL policy**.
+> \**RL policy**.
 >
 > Now, as the agent takes actions, it **collects rewards based on the actions' effectiveness
 > in progressing towards a win**.
@@ -168,14 +168,14 @@
 > language models** with RLHF.
 >
 > In this case, the **agent's policy** that guides the actions is the **LLM**, and its **objective** is to
-> **generate text that is perceived as being aligned with the human preferences**. This could mean that
+> \**generate text that is perceived as being aligned with the human preferences**. This could mean that
 > the text is, for example, **helpful, accurate, and non-toxic**.
 >
 > The **environment** is the **context window** of the model, **the space in which text can be entered via
 > a prompt**.
 >
 > The **state** that the model considers before taking an action is the **current context**. That means
-> **any text currently contained in the context window**.
+> \**any text currently contained in the context window**.
 >
 > The **action** here is the **act of generating text**. This could be a **single word, a sentence, or a
 > longer form text**, depending on the task specified by the user.
@@ -233,7 +233,7 @@
 > and **how it's used** to **classify the language model's outputs** in the reinforcement learning process.
 >
 > The provided text discusses **how to determine rewards for language models** in the context of
-> **human evaluation and reinforcement learning**, using both **human feedback** and a **reward model**
+> \**human evaluation and reinforcement learning**, using both **human feedback** and a **reward model**
 > to guide the model's behavior. It also highlights challenges and solutions related to the practical
 > application of these concepts.
 

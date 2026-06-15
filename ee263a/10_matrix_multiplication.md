@@ -19,7 +19,7 @@
 > có các cột orthonormal. Ta sẽ **vẫn có ATA = I** nhưng I là **I_n**,
 > tức **shape (n, n)**.
 >
-> **Chỉ khi A square**, tức là nó có m cột, và các cột này
+> \**Chỉ khi A square**, tức là nó có m cột, và các cột này
 > orthonormal thì khi đó **ATA = I_m**, và ta nói **A là orthogonal
 > matrix**.
 >
@@ -60,11 +60,11 @@
 
 > [!NOTE]
 > Đại khái là ta có thể **thể hiện G.S algorithm** bằng dạng
-> **compact** (**matrix** x **matrix**)
+> \**compact** (**matrix** x **matrix**)
 >
 > Ta sẽ hiểu vầy: như đã biết về G.S:
 >
-> **q1=a1**, **q'1=q1/||q1||: giữ nguyên cột 1, chỉ normalizing**
+> \**q1=a1**, **q'1=q1/||q1||: giữ nguyên cột 1, chỉ normalizing**
 >
 > ⇨ a1 = **||q1||q'1** = **R11q'1**
 >

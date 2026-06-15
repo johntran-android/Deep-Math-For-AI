@@ -39,8 +39,8 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > detection**, and **neural style transfer**, among others.
 >
 > 4 One of the challenges of computer vision problems is that the
-> **inputs can get really big**, requiring better implementation of the
-> **convolution operatio**n, which is one of the fundamental building
+> \**inputs can get really big**, requiring better implementation of the
+> \**convolution operatio**n, which is one of the fundamental building
 > blocks of convolutional neural networks.
 
 > [!NOTE]
@@ -100,7 +100,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 > [!NOTE]
 > • The **convolution operation** is a fundamental building block of
-> **convolutional neural networks**.
+> \**convolutional neural networks**.
 >
 > • **Edge detection** is one of the many applications of the convolution
 > operation.
@@ -112,10 +112,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > image to produce an output image.
 >
 > • The output of the convolution operation is determined by taking
-> **element-wise products** and **summing** up the resulting values.
+> \**element-wise products** and **summing** up the resulting values.
 >
 > • The **output** of the convolution operation is **smaller** in size than the
-> **input** image.
+> \**input** image.
 
 > [!NOTE]
 > 1 The convolution operation is a fundamental building block of convolutional neural networks (CNNs).
@@ -173,7 +173,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > Ví dụ hình 6x6x1 (gray scale nên x1)
 >
-> * Trong toán học * là phép toán 'Convolution', trong Python thì
+> \* Trong toán học * là phép toán 'Convolution', trong Python thì
 > lại là multiply, element-wised multiply
 
 <br>
@@ -231,10 +231,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > filter**, and the **Scharr** filter.
 >
 > 4 The video highlights the possibility of using **machine learning** to
-> **learn the parameters of an edge detection filter**.
+> \**learn the parameters of an edge detection filter**.
 >
 > 5 The **limitations of edge detection** in **small images** and the
-> **potential for deep learning to improve edge detection in complex
+> \**potential for deep learning to improve edge detection in complex
 > images** are also discussed.
 
 > [!NOTE]
@@ -325,10 +325,10 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > padding.**
 >
 > 7 **Same convolution** is a type of convolution where the **output size** is the
-> **same** as the **input size**.
+> \**same** as the **input size**.
 >
 > 8 The amount of **padding** **required** to achieve the **same** convolution is
-> **(f-1)/2**, where **f is the size of the filter**.
+> \**(f-1)/2**, where **f is the size of the filter**.
 
 > [!NOTE]
 > Sure, I can provide a more detailed answer to your request.
@@ -373,9 +373,9 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 <p align="center"><kbd><img src="assets/9b65acae364cda6eca5714d0a8cce752f947ce86.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Valid padding** là không dùng padding 
+> \**Valid padding** là không dùng padding 
 >
-> **Same padding** là sao cho output dimension bằng với input **p = (f-1)/2** 
+> \**Same padding** là sao cho output dimension bằng với input **p = (f-1)/2** 
 > Conventionally **f thường là số lẻ 3x3, 5x5, 7x7 để padding không bị
 > asymmetric**
 
@@ -561,7 +561,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > [!NOTE]
 > Đại khái là cũng convol từng **'lớp' của filter
 > với từng 'lớp'** của cái image Xong rồi
-> **sum** **kết quả của cả 3 lớp lại**
+> \**sum** **kết quả của cả 3 lớp lại**
 
 <br>
 
@@ -599,7 +599,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 <p align="center"><kbd><img src="assets/6dd989f6cac7db1558f1740e1dd8e69a0c3ca289.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Multiple features detector**: Đại khái là kết hợp nhiều filter sẽ **detect
+> \**Multiple features detector**: Đại khái là kết hợp nhiều filter sẽ **detect
 > dc nhiều features cùng lúc** -> More complex features detector
 >
 > Mỗi filter ra 1 output xong **stack mấy cái output lại** 
@@ -623,7 +623,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 >
 > 2 The resulting outputs are passed through a **bias** and **non-linearity** to
 > produce a **4 by 4 output** **for each filter,** which are then **stacked up** to form a
-> **4 by 4 by 2 output volume.**
+> \**4 by 4 by 2 output volume.**
 >
 > 3 The convolution operation is **similar to a linear operation** in a
 > non-convolutional neural network, where the **filters** play a **role similar to w1**
@@ -724,7 +724,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 
 > [!NOTE]
 > 1 Introduction to a deep convolutional neural network for
-> **image classification.**
+> \**image classification.**
 >
 > 2 Example of a **ConvNet** using small images.
 >
@@ -817,7 +817,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > the s**ize of the regions**.
 >
 > 5 Max pooling helps **preserve features detected anywhere in the filter**, while
-> **suppressing others that aren't detected**.
+> \**suppressing others that aren't detected**.
 >
 > 6 The intuition behind **why max pooling works well** is **not fully understood.**
 >
@@ -951,7 +951,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > in an image.
 >
 > 4 **Training** a convolutional neural network involves using a
-> **labeled training** set to **adjust the weights of the filters** to
+> \**labeled training** set to **adjust the weights of the filters** to
 > produce accurate outputs.
 
 > [!NOTE]
@@ -1001,12 +1001,12 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 <p align="center"><kbd><img src="assets/992378a79f7bdf4531c4a0566861504b38e37043.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Params sharing**: Đại khái là **1 vài weight (trong filter)** có
+> \**Params sharing**: Đại khái là **1 vài weight (trong filter)** có
 > thể giúp **detect feature ở nhiều vị trí khác nhau** trong hình
 > chứ **không nhất thiết phải là mỗi chỗ một cái** -> **Giảm bớt
 > số weight** cần thiết
 >
-> **Sparsity of connections**: Đại khái là:..
+> \**Sparsity of connections**: Đại khái là:..
 >
 > Fully-connected NN thì **mỗi unit của layer trước** sẽ **connect
 > tới mọi unit của layer sau,** cũng như là **mỗi unit của layer sau
@@ -1454,7 +1454,7 @@ mplement the foundational layers of CNNs (pooling, convolutions) and stack them 
 > of Course 4 of the Deep Learning Specialization.
 >
 > In this notebook you will build ConvNets to create a
-> **mood classifier** and **identify sign language digits**,
+> \**mood classifier** and **identify sign language digits**,
 > while gaining familiarity with the **TF Keras Sequential**
 > and **Functional APIs** along the way.
 

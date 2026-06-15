@@ -154,7 +154,7 @@
 > F**, TỨC LÀ KHÔNG PHẢI TẠI ĐÓ F(X,Y) = G(X,Y) MÀ CHỐC NỮA TA
 > SẼ THẤY NÓ THỎA:
 >
-> **GRAD_F = CONSTANT*GRAD_G**
+> \**GRAD_F = CONSTANT*GRAD_G**
 
 <br>
 
@@ -195,7 +195,7 @@
 > Như vậy bài toán từ việc tìm min/max của hàm f(x,y) với constraint g(x,y)
 > = c trở thành bài toán là tìm x,y, lambda sao cho:
 >
-> **Grad_f = lambda* Grad_g** tương đương
+> \**Grad_f = lambda* Grad_g** tương đương
 >
 > system equation (vì grad_f là vector các partial derivative [f_x, g_x]
 > tương tự grad_g là vector các partial derivative [g_x, g_y]
@@ -491,7 +491,7 @@
 
 > [!NOTE]
 > Thế thì, ta biết thể tích hình kim tự tháp tam giác, là 1/3 diện tích đáy
-> * chiều cao.
+> \* chiều cao.
 >
 > Thế thì với đáy cho trước, và thể tích cho trước thì h cũng fixed.
 >

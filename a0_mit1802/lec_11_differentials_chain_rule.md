@@ -38,7 +38,7 @@
 
 > [!NOTE]
 > Một ví dụ là, ta áp dụng công cụ này giúp ta **tính derivative** của  function
-> **sin_inv**(x):
+> \**sin_inv**(x):
 >
 > Ta có **y = sin_inv(x)** thì tương đương **x = sin(y)**.
 >
@@ -48,7 +48,7 @@
 >
 > Áp dụng implicit differentiation:
 >
-> **d/dx (sin(y) = x)) <=> (d/dx) sin(y) = (d/dx) x**
+> \**d/dx (sin(y) = x)) <=> (d/dx) sin(y) = (d/dx) x**
 >
 > <=> d sin(y) / dy * dy / dx = dx/dx (chain rule)
 >
@@ -114,16 +114,16 @@
 > DERIVATIVE**, vì với cái này, nó **include mọi yếu tố ảnh hưởng đến sự
 > thay đổi của function f**.
 >
-> **Total differential theorem** là như sau: **df = f_xdx + f_ydy + f_zdz**
+> \**Total differential theorem** là như sau: **df = f_xdx + f_ydy + f_zdz**
 >
 > Nếu dùng notation khác của f_x là ∂/∂x (f) thì 
 >
-> **df = ∂f/∂x*dx + ∂f/∂y*dy + ∂f/∂z*dz**
+> \**df = ∂f/∂x*dx + ∂f/∂y*dy + ∂f/∂z*dz**
 >
 > Thế thì gs cho biết ta phải hiểu những thứ ở cả hai bên của equation
 > này K**HÔNG PHẢI NUMBER, KHÔNG PHẢI VECTOR, CŨNG KHÔNG
 > PHẢI MATRIX**. CHÚNG GỌI LÀ **DIFFERENTIAL** (VI PHÂN). Và ta phải
-> **học các rule để manipulate chúng.**
+> \**học các rule để manipulate chúng.**
 
 > [!NOTE]
 > TOTAL DIFFERENTIAL: df = f_x*dx + f_y*dy + f_z*dz
@@ -145,7 +145,7 @@
 >
 > Tuy rằng người ta đặt ra nó để **mang ý tưởng** một **khoảng thay đổi
 > vô cùng nhỏ**, nhưng gs cho rằng **cách hiểu đúng hơn** là chúng là các
-> **PLACE HOLDER**, để rồi khi **thay chúng bằng các ∆**, thì ta sẽ **có
+> \**PLACE HOLDER**, để rồi khi **thay chúng bằng các ∆**, thì ta sẽ **có
 > các APPROXIMATION** (ước lượng của khoảng thay đổi của f bằng / từ
 > cac khoang thay đổi cua variable)
 >
@@ -237,7 +237,7 @@
 
 > [!NOTE]
 > đại khái là ta có thể đặt câu hỏi là **liệu công thức Chain-Rule** vừa rồi
-> **có valid không**?
+> \**có valid không**?
 >
 > Nỗ lực thứ nhất để **biện minh** đó là:
 >
@@ -245,20 +245,20 @@
 >
 > thì ta mới nói tiếp là vì x, y, z là function of t. Nên 
 >
-> **dx = x'(t)dt**, 
+> \**dx = x'(t)dt**, 
 >
-> **dy = y'(t)dt** 
+> \**dy = y'(t)dt** 
 >
-> **dz = z'(t)dt**
+> \**dz = z'(t)dt**
 >
 > Lắp vào total differential equation ta có:
 >
-> **df = f_x*x'(t)*dt + f_y*y'(t)*dt + f_z*z'(t)*dt**  
+> \**df = f_x*x'(t)*dt + f_y*y'(t)*dt + f_z*z'(t)*dt**  
 >
 > <=> df = [f_x*x'(t) + f_y*y' (t) + f_z*z'(t)] dt
 >
 > Tới đây k**hi** có thể thể hiện df = [CÁI GÌ ĐÓ] dt thì cái gì đó (TỨC
-> **COEFFICIENT**) CHÍNH LÀ **RATE OF CHANGE** CỦA f BỞI t
+> \**COEFFICIENT**) CHÍNH LÀ **RATE OF CHANGE** CỦA f BỞI t
 >
 > => điều này chứng tỏ rằng f_x*x'(t) + f_y*y' (t) + f_z*z'(t) chính là df/dt
 
@@ -282,7 +282,7 @@
 > thế thì ý chính là, khi ta **chia hai vế cho ∆t**, là việc hoàn toàn bình
 > thường vì ∆t là number, ta sẽ có:
 >
-> **∆f/∆t ~= f_x*∆x/∆t + f_y*∆y/∆t + f_z*∆z/∆t**
+> \**∆f/∆t ~= f_x*∆x/∆t + f_y*∆y/∆t + f_z*∆z/∆t**
 >
 > thì khi ta cho ∆t nhỏ -> 0 thì ∆**f/∆t sẽ trở thành df/dt** tức là derivative.
 >
@@ -291,7 +291,7 @@
 > Khi đó **dấu approx ~= ngày càng trở nên chính xác hơ**n và **dần trở
 > thành dấu "="**. Từ đó ta có công thức
 >
-> **df/dt ~= f_x*dx/dt + f_y*dy/dt + f_z*dz/dt**
+> \**df/dt ~= f_x*dx/dt + f_y*dy/dt + f_z*dz/dt**
 
 <br>
 
@@ -377,9 +377,9 @@
 >
 > dg/dt = g_u*du/dt  + g_v*dv/dt
 >
-> **g_u** (giống như f_x) là partial derivative của g w.r.t u = **1/v**
+> \**g_u** (giống như f_x) là partial derivative của g w.r.t u = **1/v**
 >
-> **g_v** (giống như f_y) là partial derivative của g w.r.t v = u*(-1/v^2) = -u/v^2
+> \**g_v** (giống như f_y) là partial derivative của g w.r.t v = u*(-1/v^2) = -u/v^2
 >
 > Vậy dg/dt = (1/v)*du/dt + (-u/v^2)*dv/dt 
 >
@@ -402,7 +402,7 @@
 
 > [!NOTE]
 > Gs nói qua **chain-rule với nhiều biến hơn**. Ví dụ w là hàm theo x, y:
-> **w(x,y)** Nhưng x, y thay vì là hàm đơn biến x(t), y(t) thì nay nó cũng là
+> \**w(x,y)** Nhưng x, y thay vì là hàm đơn biến x(t), y(t) thì nay nó cũng là
 > hàm đa biến **x(u,v) y(u,v)**
 >
 > Thế thì, một cách đầu tiên đương nhiên là ta **có thể gắn x(u,v) và y(u,
@@ -424,25 +424,25 @@
 > Thế thì ta sẽ bắt đầu từ việc **w là function theo x, y**: **w(x,y)**
 > nên **TOTAL  DIFFERENTIAL** cho ta:
 >
-> **dw = f_x*dx + f_y*dy**
+> \**dw = f_x*dx + f_y*dy**
 >
 > Tiếp, vì **x là function theo u, v** - **x(u,v)**. nên **TOTAL
 > DIFFERENTIAL** sẽ cho ta biết liên hệ giữa dx với du, dv:
 >
-> **dx = x_u*du + x_v*dv**
+> \**dx = x_u*du + x_v*dv**
 >
 > Tương tự, **y cũng là function y(u,v)** nên **TOTAL
 > DIFFERENTIAL** cho ta biết liên hệ giữa dy và du, dv:
 >
-> **dy = y_u*du + y_v*dv**
+> \**dy = y_u*du + y_v*dv**
 >
 > Từ đó ta có thể liên hệ dw với du, dv:
 >
-> **dw = f_x*(x_u*du + x_v*dv) + f_y*(y_u*du + y_v*dv)**
+> \**dw = f_x*(x_u*du + x_v*dv) + f_y*(y_u*du + y_v*dv)**
 >
 > sắp xếp lại (gom du, dv) ta có:
 >
-> **dw = (f_x*x_u + f_y*y_u)du + (f_x*x_v+f_y*y_v)dv**
+> \**dw = (f_x*x_u + f_y*y_u)du + (f_x*x_v+f_y*y_v)dv**
 >
 > Và theo định nghĩa, ở đây chính là có equation liên hệ giữa df và
 > du, dv. Thì cái **coefficient gắn với du chính là partial derivative
@@ -466,13 +466,13 @@
 > [!NOTE]
 > Từ đó ta có thể ghi ra partial derivative của f w.r.t u và v như sau: 
 >
-> **f_u** (hay w_u) = (**f_x*x_u + f_y*y_u**)
+> \**f_u** (hay w_u) = (**f_x*x_u + f_y*y_u**)
 >
-> **f_v** (hay w_v) = **f_x*x_v + f_y*y_v**
+> \**f_v** (hay w_v) = **f_x*x_v + f_y*y_v**
 >
 > Và gs cho rằng ta có thể hiểu như sau:
 >
-> **dw = (f_x*x_u + f_y*y_u)du** +  (f_x*x_v+f_y*y_v)dv
+> \**dw = (f_x*x_u + f_y*y_u)du** +  (f_x*x_v+f_y*y_v)dv
 >
 > Thay đổi u một chút (du), kéo theo x y thay đổi với rate (of change) là
 > x_u, y_u. Nên x sẽ thay đổi dx = x_u*du, y sẽ thay đổi dy = y_u*du
@@ -571,7 +571,7 @@
 > [!NOTE]
 > cuối cùng gs cho biết khái niệm **gradient** vector là **vector**
 >
-> **nabda_f (grad_f) = [f_x, f_y, f_z]**
+> \**nabda_f (grad_f) = [f_x, f_y, f_z]**
 >
 > Bài sau ta sẽ tiếp tục làm quen khái niệm này mà trong ML đã
 > quá quen thuộc

@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > mở đầu đại khái là gs nói về **đôi khi** ta vẫn phải tính tay
-> **(hand-computation) derivative** của một function phức tạp. Lí do là
+> \**(hand-computation) derivative** của một function phức tạp. Lí do là
 > đôi khi **Automatic Differentiation** **không giúp được hết** trong
 > những trường hợp list ra ở đây.
 >
@@ -25,7 +25,7 @@
 > [!NOTE]
 > rồi chỗ này là nơi ta ôn lại những gì học bữa trước: ta đã biết
 > rằng định nghĩa của derivative được xây dựng từ lập luận: khi
-> **variable x thay đổi một khoảng nhỏ** (**finite**, nhưng không
+> \**variable x thay đổi một khoảng nhỏ** (**finite**, nhưng không
 > phải vô cùng nhỏ infinitesimal small) kí hiệu Δx, thì function f(x)
 > sẽ thay đổi một khoảng Δf = f(x + Δx) - f(x)
 >
@@ -34,7 +34,7 @@
 > operator đối với Δx) cộng với một **BIỂU THỨC BẬC CAO** của
 > Δx có tính chất là khi Δx nhỏ thì cái này nhỏ về 0 rất nhanh
 >
-> **f(x+Δx) - f(x) = f'(x)[Δx] + o(||Δx||)** 
+> \**f(x+Δx) - f(x) = f'(x)[Δx] + o(||Δx||)** 
 >
 > ⇔ Δf = f(x + Δx) - f(x) = f'(x)[Δx] + o(||Δx||)
 >
@@ -42,14 +42,14 @@
 >
 > f'(x)[Δx] là **LINEAR OPERATOR ACT ON Δx**
 >
-> **o(||delta_x||)** là chỉ những **term bậc cao của Δx** có giá trị có
+> \**o(||delta_x||)** là chỉ những **term bậc cao của Δx** có giá trị có
 > tính chất **khi Δx giảm về 0** thì chúng **giảm về 0 rất nhanh**,
 > nhanh hơn của Δx
 >
 > Vì vậy, người ta thay Δx bằng dx để chỉ một **khoảng vô cùng
 > nhỏ** thì khi đó cho phép **bỏ o||Δx|| đi**:
 >
-> **df = f'(x)[dx]**
+> \**df = f'(x)[dx]**
 
 <br>
 
@@ -94,7 +94,7 @@
 > differentiation** hoặc dùng f(x) - f(x - Δx) cũng được, gọi là **backward
 > differentiation** 
 > Và gs nhấn mạnh hai cái này **không liên quan** gì đến **forward mode** và
-> **backward mode** trong automatic differentiation bữa trước
+> \**backward mode** trong automatic differentiation bữa trước
 
 <br>
 
@@ -119,7 +119,7 @@
 > Trước hết gs nhắc lại, ta có thể dùng **product rule** để có:
 >
 > df = AdA + dAA và như đã nói bữa trước, cái này không bằng **2AdA** vì
-> **A và dA không commute**: AdA khác dA.A
+> \**A và dA không commute**: AdA khác dA.A
 >
 > Và bài trước ta đã biết cách dùng **Kronecker** product để thể hiện
 > vec(df) = J vec(dA) = ...
@@ -310,13 +310,13 @@
 > chính là cái **f' (x)[dx]** và **finite difference hay numerical gradient**, chính
 > là **f(x + Δx) - f(x)**  và **vì tính relative error**, nên **chia cho f'(x)[dx]**
 >
-> *Với analytic gradient, ví dụ trong trường hợp trên là AdA
+> \*Với analytic gradient, ví dụ trong trường hợp trên là AdA
 > \+ dA.A,  hay giả sử với hàm f = Ax thì analytic gradient là f'(x)dx = Adx
 >
 > Thế thì xét  **f(x + Δx) - f(x), thì lúc "hình thành"** công thức, hay định
 > nghĩa derivative ta đã bắt đầu từ **Taylor series**:
 >
-> **f(x + Δx) = f(x) + f'(x)Δx + (1/2) f''(x)(Δx)^2** + [higher order term of Δx] (1)
+> \**f(x + Δx) = f(x) + f'(x)Δx + (1/2) f''(x)(Δx)^2** + [higher order term of Δx] (1)
 >
 > nhớ lại công thức Taylor expansion: tại x0 = a
 >
@@ -363,7 +363,7 @@
 > đại khái là nói về vụ thứ hai, **relative error tăng lên** lại khi **Δx
 > giảm quá một mức nào đó**. Nguyên nhân nói ngắn gọn là do máy
 > tính **chỉ cho một số bit nhất định** cho một con số, ví dụ **4 bytes** hay
-> **32 bit**, hoặc **8 bytes tương đương 64 bit**. Và từ đó nó **có giới hạn**
+> \**32 bit**, hoặc **8 bytes tương đương 64 bit**. Và từ đó nó **có giới hạn**
 > cho mỗi con số
 >
 > Để rồi khi con số **vượt quá số bit cần thiết** để lưu trữ chính xác giá
@@ -371,7 +371,7 @@
 > tròn về số gần nhất**. Vậy thì đối với số rất nhỏ như error, **ví dụ 0.
 > 00000001** thì đương nhiên giá trị **gần nhất là 0**, nên nó sẽ **làm
 > tròn thành 0**, dẫn đến **những con số quan trọng bị mất** gọi là
-> **significant digit cancel**, và hiện tượng này gọi là **CATASTROPHIC 
+> \**significant digit cancel**, và hiện tượng này gọi là **CATASTROPHIC 
 > CANCELLATION** 
 > Ví dụ dễ thấy ở đây k**hi ta đang quan tâm đến những con số thập
 > phân sau số 0**, vì đây **là những con số rất nhỏ**, thì **việc làm tròn
@@ -456,7 +456,7 @@
 >
 > Thế thì lấy **ví dụ** máy tính chỉ có thể chứa một số sao cho **tổng số digit cho phần nguyên và
 > phần thập phân là 4** (vì nó chỉ có vài bit để chứa thông tin). Hình dung giống như ta CHỈ CÓ
-> **4 CÁI BOX** để chứa 4 số (và 1 cái vách ngăn để phân biệt phần nguyên và phần thập phân)
+> \**4 CÁI BOX** để chứa 4 số (và 1 cái vách ngăn để phân biệt phần nguyên và phần thập phân)
 >
 > Thế thì dễ thấy ta có thể **"có"** số **1.000**, nhưng **không thể "có"** \/1.0001\/, hay \/1.0009\/ (vì cần 5 box)
 > Do đó, **số gần nhất tiếp theo mà lớn hơn 1.000** **CHỈ CÓ THỂ** **1.001.** Và tương tự, số tiếp
@@ -464,14 +464,14 @@
 >
 > Do đó khoảng cách gần nhất **giữa hai số 1.xxx (ví dụ 1.000 và 1.001)** là **0.001**
 >
-> **1.000**    | 1 
+> \**1.000**    | 1 
 > \/1.0001 ... 
 > 1.0009\/\~ 
 > \~**1.001**    | 1 + eps 
 >
 > \/1.0011 ... 
 > 1.0019\/ 
-> **1.002**    | 1 + 2*eps
+> \**1.002**    | 1 + 2*eps
 >
 > Thế thì trong trường hợp này, 0.001 hay 10e-3 **CHÍNH LÀ VÍ DỤ CỦA** **EPS** - Là **giá trị
 > nhỏ nhất còn giúp phân biệt hai số liền kề** - hay định nghĩa chính xác hơn là **số nhỏ nhất
@@ -482,9 +482,9 @@
 > chứa phần nguyên**, chỉ còn 2 box để chứa phần thập phân. Do đó, các con số có thể biểu
 > diễn chỉ là **10.00**, **10.01**, **10.02** ....chứ **không thể biểu diễn \/10.001**\/
 >
-> **10.00** 10.001 ... 
+> \**10.00** 10.001 ... 
 > 10.009 
-> **10.01** | 10 + eps*10 10.011 ... 
+> \**10.01** | 10 + eps*10 10.011 ... 
 > 10.019 **10.002**    | 10 + 2*eps*10  Do đó, dễ hiểu k**hoảng cách gần nhất giữa hai số 10.xx  lúc này chỉ là 0.01** chứ **không
 > còn là 0.001 nữa**.
 >
@@ -495,9 +495,9 @@
 >
 > Để khi: 
 >
-> **x =** **1**.xxx thì significant digit là 1*eps (=**0.001**, **10e-3**),
+> \**x =** **1**.xxx thì significant digit là 1*eps (=**0.001**, **10e-3**),
 >
-> **x = 10.xx** thì significant digit là 10*eps (=**0.01, 10e-2**),
+> \**x = 10.xx** thì significant digit là 10*eps (=**0.01, 10e-2**),
 >  **x = 100.x** thì significant digits là 100*eps (=**0.1, 10e-1**)
 >
 > Do đó ở đây gs ta mới nói "\/for a number x, the number eps|x| is the size of the last
@@ -531,8 +531,8 @@
 > của x** khi x order 1 (1.xxx) hay order 10 (10.xx)
 >
 >
-> **Thì Δx nên lấy lớn hơn con số** này và **rule of thumb** của họ là dùng
-> **x10**. Tức là **nếu eps là 0.001** tức 10e-4 thì **Δx nên dùng
+> \**Thì Δx nên lấy lớn hơn con số** này và **rule of thumb** của họ là dùng
+> \**x10**. Tức là **nếu eps là 0.001** tức 10e-4 thì **Δx nên dùng
 > order GẤP 10 lần. (**tức là cỡ 0.01 khi x = 1.xxx, và 0.1 khi x = 10.xx)
 >
 > Và vì trong máy tính eps thựa ra là biểu diễn bởi base 2, nên việc gấp 10

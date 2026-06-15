@@ -816,7 +816,7 @@
 > Rồi, đại khái là phần b, giáo sư cho là cũng có thể làm tương tự, là ta sẽ
 > tìm joint pdf của random variable vector (U1,..Uk) và (V1,.. Vm) chú ý
 > (joint pdf của hai random variable vector nhé) tức gọi **U** = (U1,...Uk), 
-> **V** = (V1,...Vm). thì joint pdf của chúng: f**U**,**V**(**u**,**v**)  (viết bold hết để thể hiện
+> \**V** = (V1,...Vm). thì joint pdf của chúng: f**U**,**V**(**u**,**v**)  (viết bold hết để thể hiện
 > là vector).
 >
 > Sau đó ta có thể dùng theorem 4.6.11 nói rằng nếu joint pdf của các 

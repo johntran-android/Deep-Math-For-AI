@@ -110,8 +110,8 @@
 >  2 = 00000010 = ...............1*2^1 + 0*2^0 
 >  3 = 00000011 = ...............1*2^1 + 1*2^0
 >  4 = 00000100 = ..................1*2^2 + 0*2^1 + 0*2^0
-> **15** = 0000**1111** = .................1*2^3 + 1*2^2 + 1*2^1 + 1*2^0
-> **255** = **11111111** = 1*2^7 + 1*2^6 + 1*2^5 + 1*2^4 + 1*2^3 + 1*2^2 + 1*2^1 + 1*2^0 
+> \**15** = 0000**1111** = .................1*2^3 + 1*2^2 + 1*2^1 + 1*2^0
+> \**255** = **11111111** = 1*2^7 + 1*2^6 + 1*2^5 + 1*2^4 + 1*2^3 + 1*2^2 + 1*2^1 + 1*2^0 
 > = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255
 >
 > Với base 10:
@@ -137,7 +137,7 @@
 > ...
 > 9 = ................9 = .........................................................0*16^1 + 9*16^0
 > 10 = ..............A = .........................................................0*16^1 + 10*16^0 (hay A*16^0 cũng được A = 10)
-> **15** = ..............**F** = .........................................................0*16^1 + 15*16^0 (hay F*16^0 cũng được F = 15)
+> \**15** = ..............**F** = .........................................................0*16^1 + 15*16^0 (hay F*16^0 cũng được F = 15)
 > 16 = ............10 = .........................................................1*16^1 + 0*16^0
 > 17 = ............11 = .........................................................1*16^1 + 1*16^0
 > 18 = ............12 = .........................................................1*16^1 + 2*16^0
@@ -160,7 +160,7 @@
 > 47 = ............2F = .........................................................2*16^1 + 15*16^0 (hay F*16^0 cũng được F = 15)
 > 48 = ............30 = .........................................................3*16^1 + 00*16^0
 > ..
-> **255** = ............**FF** = .........................................................15*16^1 + 15*16^0
+> \**255** = ............**FF** = .........................................................15*16^1 + 15*16^0
 >
 > Thì ra ff thì ff là 255, nên mã ffffff có nghĩa là red = 255, green = 255, blue = 255
 
@@ -304,7 +304,7 @@
 > Nên cứ **mỗi kí tự (số) của hexadecimal** là máy tính phải **chuẩn
 > bị 4 bit.**
 >
-> **2 kí tự trong hexadecimal** phải chuẩn bị **8 bits** (để nếu nó là
+> \**2 kí tự trong hexadecimal** phải chuẩn bị **8 bits** (để nếu nó là
 > max = FF thì tương đương 11111111)
 
 <br>
@@ -332,7 +332,7 @@
 
 > [!NOTE]
 > Và người ta cũng dùng
-> **base-16** để đánh **index**
+> \**base-16** để đánh **index**
 
 <br>
 
@@ -411,7 +411,7 @@
 <p align="center"><kbd><img src="assets/1b5f64732811d9b0c084a375b104be766ecd321e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **& (ampersand)** sẽ trả về cho ta **address của cái variable** 
+> \**& (ampersand)** sẽ trả về cho ta **address của cái variable** 
 > đó trong memory.
 >
 > Ví dụ **0x123**
@@ -428,8 +428,8 @@
 
 > [!NOTE]
 > Ổng sẽ dùng print với **%p**, **&n** là như đã nói, & sẽ
-> **lấy address của variable n** trong memory. Và vì nó là
-> **address**, một loại datatype khác nên có **format code
+> \**lấy address của variable n** trong memory. Và vì nó là
+> \**address**, một loại datatype khác nên có **format code
 > cho nó là %p,**
 >
 > giống như %i cho int, %s cho string
@@ -441,7 +441,7 @@
 <p align="center"><kbd><img src="assets/03615f7e7970dbeeffe6419d17f93352348f2908.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **0x7ffcc784...4c** chính là **address thật của variable n**,
+> \**0x7ffcc784...4c** chính là **address thật của variable n**,
 > vì máy tính ngày nay có **memory lớn** nên con số " địa
 > chỉ" này là con số rất lớn
 
@@ -469,7 +469,7 @@
 <p align="center"><kbd><img src="assets/acd2757a369e3e8cdc0a555cad5be74a6a69a419.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Pointers** có thể hiểu là **address của some
+> \**Pointers** có thể hiểu là **address của some
 > variable in memory**
 
 <br>
@@ -481,7 +481,7 @@
 > [!NOTE]
 > p là **pointer**, là **address** của variable n in memory.
 >
-> **int** ***p** ý nói **p không phải int variable** mà là **address của 
+> \**int** ***p** ý nói **p không phải int variable** mà là **address của 
 > một int variable** trong memory.
 >
 > Và đương nhiên **address cũng là một con số nào đó,** ví dụ như 0#123 = 291
@@ -524,10 +524,10 @@
 
 > [!NOTE]
 > Đại khái là đáng lý **hồi xưa khi tạo ra C** người ta nên
-> **dùng một type ví dụ như pointer** để **chỉ variable chứa address**
+> \**dùng một type ví dụ như pointer** để **chỉ variable chứa address**
 >
 > Nhưng **int *p** thật ra **chính là ý nghĩa này**, declare **p** là một
-> **variable** và value của nó là **address đến một int variable (n)** Tóm lại: **int *p = &n**: Declare **a variable thuộc loại pointer** = chuyên **chứa
+> \**variable** và value của nó là **address đến một int variable (n)** Tóm lại: **int *p = &n**: Declare **a variable thuộc loại pointer** = chuyên **chứa
 > address trong memory** của một int variable.
 >
 > Và khi **print("%p", p)** thì (p không có * gì), thì chỉ đơn giản là in
@@ -552,8 +552,8 @@
 > Ví dụ ở đây nó 8 bytes này mang giá trị  **0x123** =
 > 1*16^2 + 2*16^1 + 3*16^0 = **291** 
 >
-> **1 0010 0011** (**1*****2^8** + 0*2^7 + **1*2^5** ...+
-> **1*****2^1** + 1***2^0**)  = 256 + 32 + 2 + 1 =291
+> \**1 0010 0011** (**1*****2^8** + 0*2^7 + **1*2^5** ...+
+> \**1*****2^1** + 1***2^0**)  = 256 + 32 + 2 + 1 =291
 >
 > (và tất nhiên như đã nói base-16 chỉ để human gọn hơn
 > chứ bên trong memory nó vẫn là binary)
@@ -663,7 +663,7 @@
 > [!NOTE]
 > Mỗi **char** sẽ có **một address trong memory**, thì sẽ
 > có **một variable loại pointer** mang giá trị là cái
-> **address của char đầu tiên ('H')**
+> \**address của char đầu tiên ('H')**
 
 <br>
 
@@ -678,7 +678,7 @@
 > đầu tiên** trong chuỗi các char
 >
 > Vậy khi **khởi tạo một string ví dụ "hi!"**, thì máy tính nó
-> **assign 4 byte cho mỗi char** và **1 byte extra cho \\0** 
+> \**assign 4 byte cho mỗi char** và **1 byte extra cho \\0** 
 > Và assign thêm **8 byte nữa để cho s** là một **pointer var** 
 > mang **address của 'h'**
 
@@ -707,7 +707,7 @@
 >
 > D: Correct, thật ra là một lời nói dối bấy lâu nay, **không
 > có cái gì gọi là ''string'' trong C** cả mà nó thật ra là
-> **pointer chỉ đến char đầu tiên trong array các char**
+> \**pointer chỉ đến char đầu tiên trong array các char**
 
 <br>
 
@@ -717,14 +717,14 @@
 
 > [!NOTE]
 > Bản chất nó chính là một **pointer**, một var mang giá trị là **address**
-> **của char đầu tiên**
+> \**của char đầu tiên**
 >
 > int n = 50;
 >
 > Có nghĩa là **cho 4 bytes dành cho n**, mang giá trị là 50. 
 > Trong memory nó là **chuỗi 32 số 1, số 0 sao đó mà tính ra bằng 50**
 >
-> **int *p = &n;**
+> \**int *p = &n;**
 >
 > có nghĩa là **cho 8 bytes** dành cho p, để **chứa address của cái int
 > variable n**, cũng là một con số ví dụ 291 (mà ở base-16 là 0x123), 
@@ -743,7 +743,7 @@
 
 > [!NOTE]
 > Đại khái là với syntax như này, ta
-> **define** một **struct** tên là **person**
+> \**define** một **struct** tên là **person**
 
 <br>
 
@@ -753,7 +753,7 @@
 
 > [!NOTE]
 > Thì đại khái ổng nói là tương tự ta có thể
-> **define** một là **int** tên là **integer**
+> \**define** một là **int** tên là **integer**
 
 <br>
 
@@ -791,7 +791,7 @@
 > Ổng quay lại ví dụ với int, như hồi nãy đã hiểu khi
 > define ***p = &n** thì có nghĩa là bảo máy tính: 
 >
-> **Cho tao 8 bytes** để ta **dành cho p** là một **variable 
+> \**Cho tao 8 bytes** để ta **dành cho p** là một **variable 
 > chứa address của int variable n**.
 >
 > Và in ra giá trị của **p** (là address) với format **%p**, thì
@@ -813,11 +813,11 @@
 
 > [!NOTE]
 > Xong ổng nói nếu ta in ra với **%i**, và ***p** thì ý nghĩa sẽ là:
-> **ĐI VÀO / ĐI ĐẾN CÁI ADDRESS MÀ P ĐANG GIỮ XEM
+> \**ĐI VÀO / ĐI ĐẾN CÁI ADDRESS MÀ P ĐANG GIỮ XEM
 > NÓ LÀ GÌ** 
 >
 > Thì đương nhiên nó chính là **n**, ra gía trị **50**, và
-> *p là n, là int nên dùng **format %i** khi in
+> \*p là n, là int nên dùng **format %i** khi in
 
 <br>
 
@@ -919,7 +919,7 @@
 > Q: Sao khi print ko có *s:
 >
 > D: Như mới nói, function printf kiểu nó nó được code để khi gặp
-> **(%s, s)** nó sẽ hiểu rằng **cần phải đi vào address mà s mang**,
+> \**(%s, s)** nó sẽ hiểu rằng **cần phải đi vào address mà s mang**,
 > sẽ **dẫn đến một vùng trong memory chứa char ('H')**. thì sau đó
 > printf sẽ l**ần lượt in các char tiếp theo** (nó được thiết kế như
 > vậy) **cho đến khi gặp '0\\' thì dừng.**
@@ -971,7 +971,7 @@
 > [!NOTE]
 > Và khi in như vầy thì có thể thấy các **address value nó kế tiếp nhau**
 > confirm lại rằng khi define một string, bên trong máy tính nó sẽ
-> **define các byte kế tiếp nhau**, **mỗi byte (8 bit)** mang **chuỗi số 01 sao
+> \**define các byte kế tiếp nhau**, **mỗi byte (8 bit)** mang **chuỗi số 01 sao
 > cho tính ra số** mà **tra vào ascii** sẽ **tương ứng với char** theo quy ước.
 >
 > Và sau đó nó **cho một byte extra** mang (chuỗi **00000000**) thể hiện **'\\0'**
@@ -1092,7 +1092,7 @@
 > [!NOTE]
 > Correct!
 >
-> **s+1** cho máy tính biết là **đi đến cái byte kế tiếp**
+> \**s+1** cho máy tính biết là **đi đến cái byte kế tiếp**
 > (Mỗi char 1 byte nhớ khong)
 
 <br>
@@ -1169,7 +1169,7 @@
 
 > [!NOTE]
 > Và ta có thể làm như thế này *s == *t &&
-> *(s+1) == *(t+1)...để so sánh các char thứ
+> \*(s+1) == *(t+1)...để so sánh các char thứ
 > nhất, thứ hai... với nhau.
 >
 > Và đó là lí do strcmp() tồn tại. nó làm cái việc này
@@ -1212,7 +1212,7 @@
 > [!NOTE]
 > Từ đó minh chứng cho thấy **tuy hai string có content
 > như nhau** nhưng **mỗi thằng nằm một nơi trong memory**,
-> **address** của thằng H trong hai string **khác nhau** ...b0,
+> \**address** của thằng H trong hai string **khác nhau** ...b0,
 > ....f0
 
 <br>
@@ -1265,7 +1265,7 @@
 
 > [!NOTE]
 > Tới đây ổng nói chỗ này có cái không ổn khi ta đang
-> **assume t có ít nhất một character** trong khi **nếu user chỉ
+> \**assume t có ít nhất một character** trong khi **nếu user chỉ
 > enter khi được hỏi** enter string thì sẽ error ta **nên check
 > kiểu này**
 
@@ -1284,15 +1284,15 @@
 <p align="center"><kbd><img src="assets/e53e407ed2ef6cf82c7025f39e574ba05dfe33b4.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Malloc** = **Memory allocation**: Nó cho phép ta **request máy tính
+> \**Malloc** = **Memory allocation**: Nó cho phép ta **request máy tính
 > một số lượng bộ nhớ nào đó** 100 byte, 1GB...máy tính nó sẽ
-> **tìm chỗ trống** và **trả cho ta address của cái byte đầu tiên**. 
+> \**tìm chỗ trống** và **trả cho ta address của cái byte đầu tiên**. 
 >
 > Và không như string khi máy tính tự cho thêm 1 byte chứa \\0 ở
 > cuối để mà từ đó biết được điểm kết thúc thì cái này ta **phải tự 
 > nhớ rằng mình đã request bao nhiêu bytes bộ nhớ.**
 >
-> **free** ngược lại với cái đó: gọi free với address là ta bảo máy tính 
+> \**free** ngược lại với cái đó: gọi free với address là ta bảo máy tính 
 > rằng ta đã làm xong rồi, trả lại cho mày, mày có thể xoá đi
 
 <br>
@@ -1418,7 +1418,7 @@
 
 > [!NOTE]
 > Nhưng mà string.h nó có function
-> **strcpy**() làm giúp việc này
+> \**strcpy**() làm giúp việc này
 
 <br>
 
@@ -1652,10 +1652,10 @@
 > trong bộ nhớ có size của 1 int = 4 bytes và assign address
 > đó cho x.
 >
-> *x = 42 -> máy tính sẽ gán chuỗi binary có trị giá 42 vào 4 byte
+> \*x = 42 -> máy tính sẽ gán chuỗi binary có trị giá 42 vào 4 byte
 > tại address lưu bởi x.
 >
-> *y = 13 -> Máy tính sẽ đi đến phần memory save bởi y và gán 
+> \*y = 13 -> Máy tính sẽ đi đến phần memory save bởi y và gán 
 > chuỗi binary có giá trị 13. Nhưng CHƯA CÓ ADDRESS ĐÓ
 >
 > \-> Correct. Tại y sẽ là GARBAGE, một value nào đó
@@ -1670,7 +1670,7 @@
 > Sửa lại vầy thì ok, y = x đã ra lệnh cho máy tính assign cái
 > address mà x đang giữ cho y.
 >
-> *y = 42 ra lệnh cho máy tính đi tới address của y đang giữ
+> \*y = 42 ra lệnh cho máy tính đi tới address của y đang giữ
 > để đổi thành chuỗi binary có trị giá 42
 
 <br>
@@ -1731,12 +1731,12 @@
 <p align="center"><kbd><img src="assets/69f1e4ae3e31f190bc565dfcf3b2728da6ae50cd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Machine code,** và **globals** là vùng memory
+> \**Machine code,** và **globals** là vùng memory
 > dành cho machine code, và globales 
 >
-> **heap** khi máy tính cần lấy memory
+> \**heap** khi máy tính cần lấy memory
 >
-> **stack** vùng memory dành cho function.
+> \**stack** vùng memory dành cho function.
 >
 > Thì khi stack lấy quá nhiều memory để nó đụng với 
 > heap, hoặc ngược lại thì gây ra lỗi tràn bộ nhớ.
@@ -1905,7 +1905,7 @@
 >
 > Nó dùng một function mới gọi là **scanf**()
 >
-> **scanf**(**"%i", &x**); là built-in function kiểu như là nó sẽ check 
+> \**scanf**(**"%i", &x**); là built-in function kiểu như là nó sẽ check 
 > scan - tìm - dò **tìm keyboard value**, tức là nó **theo dõi xem
 > user enter cái gì**, đặc biệt là nó **cần một integer** (quy định
 > bởi argument "%i")
@@ -2032,12 +2032,12 @@
 > [!NOTE]
 > Giới thiệu về hai function mới giúp **mở** và **save data** vào **file** và đóng lại
 >
-> **FILE *file** = **fopen**("phonebook.csv", "a") giúp mở
+> \**FILE *file** = **fopen**("phonebook.csv", "a") giúp mở
 > file, ***file** thể hiện **file là pointer**, chứa **address tới 
 > FILE.**
 >
-> **fprintf**(file, ...) sẽ **save value vào file** 
-> **fclose**(file) **đóng file lại**
+> \**fprintf**(file, ...) sẽ **save value vào file** 
+> \**fclose**(file) **đóng file lại**
 
 <br>
 

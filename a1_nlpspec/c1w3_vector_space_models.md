@@ -33,7 +33,7 @@ Learning Objectives
 > 2 Representing **word** **vectors** as numerical codes
 >
 > 3 Two methods for **comparing different word vectors**:
-> **Euclidean distance** and **cosine similarity**
+> \**Euclidean distance** and **cosine similarity**
 >
 > 4 **Plotting** high-dimensional word vectors in a **2D
 > plane**
@@ -54,14 +54,14 @@ Learning Objectives
 
 > [!NOTE]
 > 1 Introduction to **vector space** models and their applications in
-> **NLP**.
+> \**NLP**.
 >
 > 2 **Vector space models** can **encode** different **types of information**
 > and **capture word relationships**.
 >
 > 3 Examples of how **vector space** models can be used in question
-> **answering**, **paraphrasing**, **summarization**, **information extraction**,
-> **machine translatio**n, and **chat** programming.
+> \**answering**, **paraphrasing**, **summarization**, **information extraction**,
+> \**machine translatio**n, and **chat** programming.
 >
 > 4 **Representing words** and documents **as vectors** using **context**
 > and **cooccurrence matrices**.
@@ -197,7 +197,7 @@ Learning Objectives
 > Còn cái này thì đại khái cũng tạo vector bằng số lần từ này **xuất
 > hiện trong 1 corpus thuộc lĩnh vực** nào đó. Như từ **data** với véctơ
 > như vậy sẽ dễ thấy nó **liên quan nhiều đến máy tính** còn **film** thì
-> **liên quan nhiều đến giải trí**
+> \**liên quan nhiều đến giải trí**
 
 <br>
 
@@ -253,10 +253,10 @@ Learning Objectives
 
 > [!NOTE]
 > In this lab, you will have the opportunity to remember some
-> **basic concepts** about **linear algebra** and how to use them in
-> **Python**.
+> \**basic concepts** about **linear algebra** and how to use them in
+> \**Python**.
 >
-> **Numpy** is one of the **most used libraries** in Python for **arrays
+> \**Numpy** is one of the **most used libraries** in Python for **arrays
 > manipulation**. It adds to Python a set of functions that allows
 > us to **operate on large multidimensional arrays** with just a few
 > lines. So forget about writing nested loops for adding
@@ -772,7 +772,7 @@ Learning Objectives
 > representations of documents or corpora.
 >
 > 3 Example of how the Euclidean distance can be **problematic** in comparing
-> **different sized corpora.**
+> \**different sized corpora.**
 >
 > 4 The use of **cosine** **similarity** as a **better proxy** for **similarity between vector**
 > representations than Euclidean distance.
@@ -853,7 +853,7 @@ Learning Objectives
 
 > [!NOTE]
 > Ôn lại ha khái niệm
-> **norm** và **dot product**
+> \**norm** và **dot product**
 
 <br>
 
@@ -940,7 +940,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là nếu ta biết  WD là thủ đô USA thì **chiều của vector WD - USA** cho ta biết
-> **mối quan hệ của vector (encoded cho) nước và (encoded vector của) thủ đô phải
+> \**mối quan hệ của vector (encoded cho) nước và (encoded vector của) thủ đô phải
 > như thế nào**
 >
 > Từ đó nếu có encoded vector của nước khác như **Russian** thì ta sẽ **predict** được
@@ -1140,7 +1140,7 @@ Learning Objectives
 
 > [!NOTE]
 > In the lectures, we saw the analogies between words using
-> **algebra** on word embeddings. Let us see how to do it in
+> \**algebra** on word embeddings. Let us see how to do it in
 > Python with Numpy.
 >
 > To start, get the norm of a word in the word embedding.
@@ -1158,7 +1158,7 @@ Learning Objectives
 #### Now, applying v**ector difference** and **addition**, one can create a **vector representation for a new word**. For example, we can say that the **vector difference between 'France' and 'Paris**' represents the **concept of Capital.**  One can move from the city of Madrid in the direction of the concept of Capital, and obtain something close to the corresponding country to which Madrid is the Capital.
 
 > [!NOTE]
-> **Hiệu hai vector France và Paris** sẽ đại diện cho **khái
+> \**Hiệu hai vector France và Paris** sẽ đại diện cho **khái
 > niệm thủ đô**. Thử tìm từ nào mà hợp với Madrid để
 > tạo vector cùng chiều với vector đại diện cho khái
 > niệm thủ đô này
@@ -1248,7 +1248,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là represented vector của 1
-> **sentence** là **sum của các word vector**
+> \**sentence** là **sum của các word vector**
 
 <br>
 
@@ -1285,7 +1285,7 @@ Learning Objectives
 > dimensionality reduction process.
 >
 > 6 Review of the main ideas discussed, including the use of PCA for
-> **visualizing data** and **transforming high-dimensional vectors** into **two
+> \**visualizing data** and **transforming high-dimensional vectors** into **two
 > dimensions** for **plotting**.
 
 <br>
@@ -1367,14 +1367,14 @@ Learning Objectives
 
 > [!NOTE]
 > 1 Introduction to **reducing the dimension of features** using **Eigenvalues** and
-> **Eigenvectors**
+> \**Eigenvectors**
 >
 > 2 Process for dimensionality reduction using **PCA**, including obtaining
-> **uncorrelated features**, **normalizing data**, and performing **singular value
+> \**uncorrelated features**, **normalizing data**, and performing **singular value
 > decomposition**
 >
 > 3 Obtaining **Eigenvectors** and **Eigenvalues** from the **co-variance matrix** of
-> **normalized data** for PCA
+> \**normalized data** for PCA
 >
 > 4 **Projecting data onto a new vector space** using Eigenvectors and Eigenvalue
 >
@@ -1400,14 +1400,14 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/0f4c19bd63f2c2499f45e831c2efa4b18ffc010c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Eigenvector**: the resulting vectors, also known as the **uncorrelated** **features** of
+> \**Eigenvector**: the resulting vectors, also known as the **uncorrelated** **features** of
 > your data
 >
-> **Eigenvalue**: the **amount of information retained by each new feature**. You can
+> \**Eigenvalue**: the **amount of information retained by each new feature**. You can
 > think of it as the **variance** in the eigenvector.
 >
 > Also each **eigenvalue** has a **corresponding eigenvector**. The eigenvalue tells you
-> **how much variance there is in the eigenvector.** Here are the steps required to
+> \**how much variance there is in the eigenvector.** Here are the steps required to
 > compute PCA:
 
 <br>
@@ -1418,7 +1418,7 @@ Learning Objectives
 
 > [!NOTE]
 > Cái này có thể mới hoặc đã học mà ko để ý là **eigenvector** là các
-> **unrelated features** còn **eigenvalue** là phần thông tin **retained** by each
+> \**unrelated features** còn **eigenvalue** là phần thông tin **retained** by each
 > feature
 
 <br>
@@ -1461,7 +1461,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là Eigenvector sẽ đại diện cho các
-> **uncorrelated feature**, kiểu như SVD nó sẽ phân tích
+> \**uncorrelated feature**, kiểu như SVD nó sẽ phân tích
 > bộ data ban đầu với D feature (correlated) để tách
 > thành D cái uncorrelated feature
 
@@ -1566,7 +1566,7 @@ Learning Objectives
 > 2 **Comparing words** using **cosine similarity** and **Euclidean distance**
 >
 > 3 Programming assignment: **manipulating word vectors** to 
-> **find countries from capital cities**
+> \**find countries from capital cities**
 >
 > 4 **Dimensionality reduction** of word vectors and **clustering similar words**
 >
@@ -1663,7 +1663,7 @@ Learning Objectives
 > Welcome to this week's programming assignment of the specialization. In
 > this assignment we will explore word vectors. In natural language
 > processing, we **represent each word as a vector** consisting of numbers.
-> **The vector encodes the meaning of the word**. These numbers (or
+> \**The vector encodes the meaning of the word**. These numbers (or
 > weights) for each word **are learned using various machine learning
 > models**, which we will explore in more detail later in this specialization.
 > Rather than make you code the machine learning models from scratch,
@@ -2051,7 +2051,7 @@ Learning Objectives
 > To start, let us consider a pair of random variables x, y.
 > Consider the base case when **y = n * x**. The x and y
 > variables will be **perfectly correlated to each other** since
-> **y is just a scaling of x**.
+> \**y is just a scaling of x**.
 
 > [!NOTE]
 > Tóm tắt lại cái này, rất đơn giản
@@ -2216,7 +2216,7 @@ Learning Objectives
 > (trong field **eigenvector_** của pcaTr bằng đúng giá trị của Rotation Matrix
 > làm từ góc 45.
 >
-> *Cái điểm muốn mình hiểu ở đây là
+> \*Cái điểm muốn mình hiểu ở đây là
 > 1. PCA nó thực hiện phép xoay bộ data sao đó ...
 > 2. ...
 

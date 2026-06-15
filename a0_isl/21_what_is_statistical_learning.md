@@ -21,7 +21,7 @@
 >
 > thì đầu tiên ta giá trị của response Y sẽ **quan hệ với các predictor X
 > thông qua một hàm số f(X)** nào đó. Và như trong bài giảng, ta đã biết
-> **NGƯỜI TA CHO RẰNG** **SẼ HỢP LÝ KHI CHO RẰNG FUNCTION**
+> \**NGƯỜI TA CHO RẰNG** **SẼ HỢP LÝ KHI CHO RẰNG FUNCTION**
 > f(X) **LÝ  TƯỞNG**  chính là function sao cho tại X = x, f(X) bằng giá trị
 > TRUNG BÌNH  (hay gọi là giá trị kì vọng, có điều kiện) của Y tại X = x
 >
@@ -48,7 +48,7 @@
 ### **Prediction**:
 
 > [!NOTE]
-> **Prediction**:
+> \**Prediction**:
 >
 > Đại khái là trong khía cạnh này người ta **quan tâm đến việc dùng các
 > feature / predictor  để đưa ra những dự báo tương lai** ví dụ việc dùng
@@ -83,7 +83,7 @@
 
 > [!NOTE]
 > Theo 2.1 khi đưa ra phương trình **Y = f(X) + epsilon**, với epsilon là
-> **zero mean random error**, thì ta p**hải hiểu rằng, X ở đây bao hàm
+> \**zero mean random error**, thì ta p**hải hiểu rằng, X ở đây bao hàm
 > toàn bộ các predictor khả dĩ.**
 >
 > Cụ thể hơn, trong bài toán Y=Sale - X1=TV / X2=News / X3=Radio
@@ -102,7 +102,7 @@
 > mô hình.
 >
 > Bởi **rất có thể Y còn bị ảnh hưởng bởi một predictor khác**, khi đó
-> **phần irreducible error không còn zero mean.**
+> \**phần irreducible error không còn zero mean.**
 
 <br>
 
@@ -111,7 +111,7 @@
 ### **Inference**
 
 > [!NOTE]
-> **Inference**
+> \**Inference**
 >
 > Trong khía cạnh này, người ta lại quan tân nhiều hơn đến việc c**hỉ ra sự
 > tương quan giữa các predictor (feature) với outcome** ví dụ như trong **3
@@ -169,7 +169,7 @@
 > Đầu tiên đại khái là nói về **cách kí hiệu bộ training set** sẽ là có **n**
 > data sample  (observation)  x(1),x(2)...x(n) mỗi cái x(i) có **p**
 > predictor làm thành một vector  [x(i)1, x(i)2,.....x(i)p] và một
-> **target** (label) hay ở đây gọi là **response** y(1), y(2)....y(n).
+> \**target** (label) hay ở đây gọi là **response** y(1), y(2)....y(n).
 >
 > Và ta sẽ dùng training set để **tìm ra function f(X)** là function theo
 > p feature X1, X2.. Xp.
@@ -284,7 +284,7 @@
 >
 > Tuy nhiên ở góc độ statistical learning thì người ta **dựa vào loại của outcome
 > / target / response Y**. Theo đó nếu là **quantitative** (số lượng) thì là bài toán
-> **Regression**, còn **qualitative** (chất lượng) thì là **Classification**.
+> \**Regression**, còn **qualitative** (chất lượng) thì là **Classification**.
 >
 > Nhưng có chú ý là **Logistic Regression** tuy là có chữ **Regression** nhưng vì
 > trong đó nó **spit out ra một  con số probability** để từ đó mới kết luận class

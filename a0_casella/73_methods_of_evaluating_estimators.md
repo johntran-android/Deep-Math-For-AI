@@ -225,7 +225,7 @@
 >
 > = [(n-1)/n]^2 Var(S^2)
 >
-> *Var(S^2) = 2σ4/(n-1) Cái này thuộc bài tập trong chương 5
+> \*Var(S^2) = 2σ4/(n-1) Cái này thuộc bài tập trong chương 5
 >
 > .. = [(n-1)/n]^2 . 2σ4/(n-1) = [(n-1)/n]^2 . 2σ4 = [2(n-1)/n^2] σ^4
 >
@@ -713,12 +713,12 @@
 >
 > T(x) estimate p ⇨ 1 - T(x) estimate 1 - p
 >
-> **T(x) estimate p ⇨ gbar(T(x)) estimate gbar(p)**
+> \**T(x) estimate p ⇨ gbar(T(x)) estimate gbar(p)**
 >
 > Đây chính là minh họa cụ thể của phát biểu khái quát của Measurement
 > Principle:
 >
-> **W(x) estimate θ ⇨ gbar(W(x)) estimate gbar(θ) = θ' (I)**
+> \**W(x) estimate θ ⇨ gbar(W(x)) estimate gbar(θ) = θ' (I)**
 >
 > ====
 >
@@ -2223,7 +2223,7 @@
 >
 > Vậy cái cần chứng minh chính là: [E(UV)]^2 ≤ E[U^2]E[V^2] (2)
 >
-> **Tiếp, xét biểu thức (tU + V)^2, đương nhiên cái này luôn ≥ 0
+> \**Tiếp, xét biểu thức (tU + V)^2, đương nhiên cái này luôn ≥ 0
 >
 > nên E[(tU + V)^2] cũng ≥ 0 (*)**
 >
@@ -2436,13 +2436,13 @@
 >
 > ⇔ a[aVar_θ(U) + 2Cov(W, U)] < 0
 >
-> *a > 0 và aVar_θ(U) + 2Cov(W, U) < 0
+> \*a > 0 và aVar_θ(U) + 2Cov(W, U) < 0
 >
 > ⇔ a > 0 và a < -2Cov(W, U) / Var_θ(U)
 >
 > ⇨ a ∈ (0, -2Cov(W, U) / Var_θ(U))
 >
-> *a < 0 và aVar_θ(U) + 2Cov(W, U) > 0
+> \*a < 0 và aVar_θ(U) + 2Cov(W, U) > 0
 >
 > ⇔ a < 0 và a > -2Cov(W, U)/Var_θ(U) → ko thể xảy ra do Cov(W,U) < 0
 >
@@ -2687,7 +2687,7 @@
 > trong đám W(T).  Sở dĩ ta nhắm thẳng vào đám W(T) để tìm kiếm vì **định lý
 > Rao-Blackwell đã "bảo kê"** trước rằng:
 >
-> **Bất kỳ estimator W thô kệch nào ngoài kia**, khi đưa qua phép chiếu Φ(T)
+> \**Bất kỳ estimator W thô kệch nào ngoài kia**, khi đưa qua phép chiếu Φ(T)
 > = E[W|T], **đều sinh ra một phiên bản tinh hoa hơn hoặc bằng nó**.  
 >
 > Kết hợp với tính complete (đảm bảo tính duy nhất), ta chỉ cần mò ra 1 thằng
@@ -3024,7 +3024,7 @@
 > Dừng lại chút phân tích cái này cũng như ôn lại tí xíu: estimator, như đã biết
 > có định nghĩa là 'any function of random sample W(**X**)', bản chất của nó, là
 > một random variable, có được bởi áp hàm W, hay δ lên random sample **X** Rồi, khi ném θ và δ(**X**) vào L(.), ta có gì? Ta sẽ có một function phụ thuộc
-> **X**, và θ, mà nếu coi như θ fix thì ta có một random variable, ví dụ như
+> \**X**, và θ, mà nếu coi như θ fix thì ta có một random variable, ví dụ như
 > squared error loss L(θ, δ(**X**)) = [δ(**X**) - θ]^2
 >
 > Và khi lấy kì vọng, ta sẽ chỉ còn kết quả phụ thuộc θ.  Vậy thì tóm lại R(θ, δ) sẽ là một function theo θ. Và ta sẽ muốn một estimator

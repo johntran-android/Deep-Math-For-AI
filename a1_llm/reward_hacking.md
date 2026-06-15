@@ -12,7 +12,7 @@
 >
 > 1. **RLHF Fine-Tuning Process:**: RLHF **aligns LLMs with human preference**s through a **reward
 > model**. LLM completions are assessed against human preference metrics. Reinforcement learning
-> **(PPO) updates LLM weights based on rewards**. **Multiple iterations** with **various prompt**s **lead to
+> \**(PPO) updates LLM weights based on rewards**. **Multiple iterations** with **various prompt**s **lead to
 > desired alignment.**
 >
 > 2. ****Reward Hacking in RL**:** Reward hacking occurs when the **agent maximizes reward at the
@@ -40,10 +40,10 @@
 >
 > 8. ****Assessing Model Performance**:** After RLHF, **evaluate model's performance**. **Use
 > summarization dataset for toxicity reduction assessment**. Baseline **toxicity score** from original LLM.
-> **Compare scores after RLHF for improved alignment.**
+> \**Compare scores after RLHF for improved alignment.**
 >
 > 9. **Conclusion:** **RLHF refines LLMs using reward models** and **reinforcement learning**. It tackles
-> **reward hacking** through **reference models and KL divergence**. **Assessing alignment** using **toxicity
+> \**reward hacking** through **reference models and KL divergence**. **Assessing alignment** using **toxicity
 > scores** demonstrates success.
 >
 > Feel free to ask if you need further clarification or assistance!
@@ -73,7 +73,7 @@
 <p align="center"><kbd><img src="assets/60dc03bc6fb9070b5e4488534bf4db0a85559489.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Reward hacking** xảy ra khi **LLM output ra sentence
+> \**Reward hacking** xảy ra khi **LLM output ra sentence
 > theo hướng nhằm mục đích nhận được điểm
 > cao** **bất kể có đúng hay không**
 
@@ -95,7 +95,7 @@
 
 > [!NOTE]
 > Khắc phục hiện tượng này bằng cách **dùng bản gốc của LLM** như một
-> **reference model**, trong đó ta sẽ **đưa prompt vào cả Reference model và RL
+> \**reference model**, trong đó ta sẽ **đưa prompt vào cả Reference model và RL
 > updated model** để **lấy completion của cả hai** để tính **KL Divergence Shift
 > Penalty**
 
@@ -106,7 +106,7 @@
 <p align="center"><kbd><img src="assets/141eaaa7891215d58c37b886b63ec3c64006b18b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Add KL Divergence Shift Penalty vào Reward**. Ý tưởng này nên hiểu đại
+> \**Add KL Divergence Shift Penalty vào Reward**. Ý tưởng này nên hiểu đại
 > khái là **khiến / giữ (penalize) cho distribution của output của RL updated
 > LLM không đi xa khỏi distribution của output của model gốc** từ đó **ngăn
 > việc Updated LLM tạo ra những câu trả lời quá không thực tế nhằm mục
@@ -131,7 +131,7 @@
 
 > [!NOTE]
 > Và ta sẽ có cách để **evaluate kết quả của quá trình**, bằng cách
-> **đo chỉ số ví dụ 'toxicity' của model mới so sánh với model cũ**
+> \**đo chỉ số ví dụ 'toxicity' của model mới so sánh với model cũ**
 
 <br>
 

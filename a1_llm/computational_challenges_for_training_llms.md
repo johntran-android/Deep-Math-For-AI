@@ -13,11 +13,11 @@
 > even high-end hardware like **Nvidia A100 GPUs.**
 >
 > 2. ****Quantization** to **Reduce Memory Footprint****: One technique to **reduce memory requirements** is
-> **quantization**. It involves **reducing the precision of model weights from 32-bit floating-point numbers (FP32)** to **lower precision formats like 16-bit floating-point numbers (FP16)** or **8-bit integers (INT8)**. This **reduces the
+> \**quantization**. It involves **reducing the precision of model weights from 32-bit floating-point numbers (FP32)** to **lower precision formats like 16-bit floating-point numbers (FP16)** or **8-bit integers (INT8)**. This **reduces the
 > memory needed to store the model weights, activations, and other parameters.**
 >
 > 3. ****Data Types and Precision****: The data types used in deep learning frameworks are **FP32 for full precision**,
-> **FP16 or Bfloat16** for **half precision**, and **INT8 for eight-bit integers**. Quantization **statistically projects the
+> \**FP16 or Bfloat16** for **half precision**, and **INT8 for eight-bit integers**. Quantization **statistically projects the
 > original 32-bit floating-point numbers** into the **lower precision space** using **scaling factors calculated based on
 > the range of the original numbers.**
 >
@@ -31,7 +31,7 @@
 >
 > 6. ****Scaling Challenges****: As model sizes grow beyond a **few billion parameters**, it becomes **impossible to
 > train them on a single GPU**. Training such large models may **require distributed computing technique**s and
-> **access to hundreds of GPUs**, making it e**xpensive and impractical.**
+> \**access to hundreds of GPUs**, making it e**xpensive and impractical.**
 >
 > 7. ****Fine-Tuning Process****: Fine-tuning, a training process that **comes after pre-training**, also r**equires
 > storing all training parameters in memory**. While it may be challenging to pre-train very large models from scratch,
@@ -41,7 +41,7 @@
 > aspects of training large models across multiple GPUs** and the options available for developers.
 >
 > Overall, the main ideas **focus on the memory limitations in training large language models**, the use of
-> **quantization** to **reduce memory footprint,** the **benefits of BFLOAT16**, and the **challenges of scaling training
+> \**quantization** to **reduce memory footprint,** the **benefits of BFLOAT16**, and the **challenges of scaling training
 > to very large models**.
 
 <br>
@@ -84,14 +84,14 @@
 > [!NOTE]
 > If you want to train the model, you'll have to plan for **additional components** that use
 > GPU memory during training. These include two **Adam optimizer states**, **gradients**,
-> **activations, and temporary variables** needed by your functions. This can easily lead to
-> **20 extra bytes of memory per model parameter**. In fact, to account for all of these
+> \**activations, and temporary variables** needed by your functions. This can easily lead to
+> \**20 extra bytes of memory per model parameter**. In fact, to account for all of these
 > overhead during training, you'll actually **require approximately 20 times the amount of
 > GPU RAM that the model weights alone take up**. To train a one billion parameter
 > model at 32-bit full precision, you'll need **approximately 80 gigabyte of GPU RAM**. This
 > is **definitely too large for consumer hardware**, and even challenging for hardware used
 > in data centers, if you want to train with a single processor. **Eighty gigabyte** is the
-> **memory capacity of a single Nvidia A100 GPU**, a common processor used for machine
+> \**memory capacity of a single Nvidia A100 GPU**, a common processor used for machine
 > learning tasks in the Cloud
 
 <br>
@@ -109,7 +109,7 @@
 > frameworks and libraries are **FP32 for 32-bit full position**, **FP16, or Bfloat16 for 16-bit
 > half precision**, and **int8 eight-bit integers**. The range of numbers you can represent
 > with **FP32** goes from approximately **3*10^-38 to 3*10^38**. **By default**, model **weights**,
-> **activations**, and other model parameters a**re stored in FP32**. Quantization\_ **statistically
+> \**activations**, and other model parameters a**re stored in FP32**. Quantization\_ **statistically
 > projects the original 32-bit floating point numbers into a lower precision space**\_, using
 > s**caling factors** calculated based on the range of the original 32-bit floating point
 > numbers.
@@ -134,10 +134,10 @@
 
 > [!NOTE]
 > Let's look at an example. Suppose you want to store a PI to **six decimal places** in
-> **different positions**. Floating point numbers are stored as **a series of bits zeros** and
-> **ones**. The **32 bits to store numbers in full precision with FP32** consist of **one bit for
+> \**different positions**. Floating point numbers are stored as **a series of bits zeros** and
+> \**ones**. The **32 bits to store numbers in full precision with FP32** consist of **one bit for
 > the sign** where **zero indicates a positive number**, and **one a negative number**. Then
-> **eight bits for the exponent of the number,** and **23 bits representing the fraction of
+> \**eight bits for the exponent of the number,** and **23 bits representing the fraction of
 > the number.** The fraction is also referred to as the **mantissa**, or **significant**. It
 > r**epresents the precision** bits off the number. If you **convert the 32-bit floating point
 > value back to a decimal value**, you notice the slight loss in precision. For reference,
@@ -152,7 +152,7 @@
 > [!NOTE]
 > Đại khái là nếu **giảm xuống dụng 16-bit floating point** gọi là **"còn chính xác một
 > nửa - haft precision"** thì thay vì tốn **4 bytes memory chỉ còn có 2 bytes**. Và độ
-> **chính xác cũng giảm xuống khi chỉ còn 6 số ở phần thập phân thay vì 19 số**.
+> \**chính xác cũng giảm xuống khi chỉ còn 6 số ở phần thập phân thay vì 19 số**.
 > Tuy nhiên điều này có thể c**hấp nhận được khi ta đang cần giảm bộ nhớ**
 
 <br>
@@ -216,9 +216,9 @@
 > [!NOTE]
 > Đại khái là việc nhắc lại **quantization** giúp **giảm nhẹ model** bằng cách thay
 > thế việc dùng **full-precision 32 bit floating point** bằng việc dùng
-> **haft-precision 16 bit floating point** thông qua quá trình **quantization-aware
+> \**haft-precision 16 bit floating point** thông qua quá trình **quantization-aware
 > training** mà ta đã học bên MMOpsSpec. Và hiện tại người ta ưa chuộng
-> **BFloat 16** do nó v**ẫn giữ dynamic range của FP32** nhưng vẫn **reduce
+> \**BFloat 16** do nó v**ẫn giữ dynamic range của FP32** nhưng vẫn **reduce
 > memory xuống còn 1 nửa.** Và nhiều LLM trong đó có **Flan T5** được training
 > với cái này
 
@@ -241,7 +241,7 @@
 
 > [!NOTE]
 > và thay vì **80GB** thì chỉ cần **40 hoặc 20GB** để
-> **train model** (ước lượng tổng số params khi
+> \**train model** (ước lượng tổng số params khi
 > training gấp 20 lần model params).
 
 <br>

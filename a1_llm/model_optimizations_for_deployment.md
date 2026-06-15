@@ -85,7 +85,7 @@
 > model**.
 >
 > The **knowledge distillation** between teacher and student model is achieved by
-> **minimizing a loss function called the distillation loss.** To calculate this loss, distillation uses
+> \**minimizing a loss function called the distillation loss.** To calculate this loss, distillation uses
 > the **probability distribution over tokens that is produced by the teacher model's softmax
 > layer**.
 >
@@ -110,7 +110,7 @@
 > teacher model để lấy completion**. Đồng thời cũng **inference student model
 > để lấy completion**. 
 >
-> **Distillation loss** sẽ được tính dựa trên **teacher model's 
+> \**Distillation loss** sẽ được tính dựa trên **teacher model's 
 > output logits** và **student model's logits** sử dụng các loss function như **cross
 > entropy loss** hoặc **KL Divergence** với t**ham số temperature T.**
 >
@@ -136,7 +136,7 @@
 
 > [!NOTE]
 > In parallel, you train the student model to **generate the correct predictions** based on your
-> **ground truth training data**
+> \**ground truth training data**
 >
 > Here, you **don't vary the temperature setting** and instead use the **standard softmax
 > function**. Distillation refers to the student model outputs as the hard predictions and hard
@@ -155,7 +155,7 @@
 
 > [!NOTE]
 > Song song với quá trình đó là ta cũng **train Student model** với **Ground truth label nữa**, tính loss giữa
-> **student prediction và ground truth label**. Gọi là **hard label** và **hard prediction**.
+> \**student prediction và ground truth label**. Gọi là **hard label** và **hard prediction**.
 >
 > Xong **kết hợp cả distillation loss và student loss** để **update student's weight** thông qua **backprop**.
 >
@@ -186,8 +186,8 @@
 > model is trained, you can perform **post training quantization**, or **PTQ** for short
 > to optimize it for deployment.
 >
-> **PTQ transforms a model's weights to a lower precision representation**, such as
-> **16-bit floating point or 8-bit integer**. To **reduce the model size and memory
+> \**PTQ transforms a model's weights to a lower precision representation**, such as
+> \**16-bit floating point or 8-bit integer**. To **reduce the model size and memory
 > footprint**, as well as the compute resources needed for model serving, quantization
 > can be applied to **just the model weights or to both weights and activation layers**.
 > In general, quantization approaches that include the activations can have a higher
@@ -201,7 +201,7 @@
 > [!NOTE]
 > Phần này bên MLOpsSpec đã học, bài **Quantization**. Đại khái là có thể **quantization aware
 > training (như tuần 1 có nói rồi)** - t**raining nhưng chú ý đến quantization**. Thì ở đây là nói về
-> **quantization sau khi đã train xong.**
+> \**quantization sau khi đã train xong.**
 >
 > Nôm na là nó sẽ **thể hiện model's weight bằng lower precision representation** (giảm độ
 > chính xác xuóng như **16-bit float hay 8-bit int** từ đó sẽ **giảm model size.** Và có thể apply

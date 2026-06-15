@@ -14,7 +14,7 @@
 > Chỉ định một function T(**x**), và **các nguyên lý** sẽ cho biết hay quy định
 > rằng sẽ kết luận gì khi có hai điểm dữ liệu (sample value) **x**, **y** mà
 > T(**x**) = T(**y**): Đó là, với **Sufficient Principle** thì nó nói T(**X**) sẽ là **sufficient statistic**, để rồi thông tin giúp suy luận ra θ chứa trong T(**X**) là
-> **ĐỦ**, không cần xài **X** nữa.
+> \**ĐỦ**, không cần xài **X** nữa.
 >
 > Còn nếu **Likelihood Principle** được dùng, thì,.. Dừng lại đây ôn lại tí về cái
 > này, nó nói rằng: Nếu như ta có hai thử nghiệm E1 = (**X1**, θ, f1(**x**)) và
@@ -63,13 +63,13 @@
 > Loại thứ hai của **equivariance principle**: Gọi là **FORMAL INVARIANCE**: Nó nói
 > rằng đại khái là **nếu ta có hai bài toán suy luận có cùng cấu trúc toán học**
 > (formal structure) hiểu **theo khía cạnh mô hình toán học giống nhau**, thì chúng 
-> **phải được dùng cùng một quy trình suy luận**.
+> \**phải được dùng cùng một quy trình suy luận**.
 >
 > Cụ thể là **các yếu tố cấu thành nên các mô hình toán học phải giống nhau**:
 >
-> **Parameter space** Θ
+> \**Parameter space** Θ
 >
-> **Tập các hàm pdf/pmf** 
+> \**Tập các hàm pdf/pmf** 
 >
 > Và các **cách thức suy luận được cho phép** và **các kết luận từ sự suy luận sai**
 >
@@ -165,9 +165,9 @@
 >
 > ====
 >
-> **CÒN CÁI EQUIVARIANCE PRINCIPLE THỨ HAI**?
+> \**CÒN CÁI EQUIVARIANCE PRINCIPLE THỨ HAI**?
 >
-> **INVARIANCE PRINCIPLE** thì sao? Ôn lại, nó nói đại khái vầy: Nếu như hai 
+> \**INVARIANCE PRINCIPLE** thì sao? Ôn lại, nó nói đại khái vầy: Nếu như hai 
 > thử nhiệm có cấu trúc toán học giống nhau (formal structure), thì quy trình 
 > suy  luận (inference procedure) phải giống nhau. Mà cấu trúc toán học có 
 > nghĩa là mô hình toán học, bao  gồm các cấu phần: param space Θ giống 
@@ -211,9 +211,9 @@
 >
 > Và đây chính là: Với gbar(u) = 1 - u, và g(u) = n - u
 >
-> **T(x) estimate p ⇨ gbar(Tx)) estimate gbar(p)**
+> \**T(x) estimate p ⇨ gbar(Tx)) estimate gbar(p)**
 >
-> **T(x) estimate p ⇨ T(g(x)) estimate gbar(p)** 
+> \**T(x) estimate p ⇨ T(g(x)) estimate gbar(p)** 
 >
 > Và đây là **KHÁI QUÁT CỦA MEASUREMENT EQUIVARIANCE VÀ FORMAL 
 > EQUIVARIANCE mà mình sẽ gặp lại trong 7.3.5**

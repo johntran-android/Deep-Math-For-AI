@@ -63,7 +63,7 @@ Discover and experiment with a variety of different initialization methods, appl
 > And what I've seen is that intuitions from one domain or from one
 > application area often **do not transfer** to other application areas. And the
 > best choices may **depend on the amount of data** you have, the
-> **number of input features** you have through your **computer
+> \**number of input features** you have through your **computer
 > configuration** and whether you're training on **GPUs** **or CPUs**. And if
 > so, exactly what **configuration** of GPUs and CPUs...and many other things.
 
@@ -205,7 +205,7 @@ Discover and experiment with a variety of different initialization methods, appl
 
 > [!NOTE]
 > Đv vấn đề **trade off giữa bias vs variance** thì đại khái là ổng nói
-> **ngày xưa thô**i còn với modern n.n thì nếu có **nhiều data** (fix
+> \**ngày xưa thô**i còn với modern n.n thì nếu có **nhiều data** (fix
 > issue high variance) + dùng **big network** (fix issue high bias) thì
 > không hề có chuyện phải trade of giữa bias và variance. Có
 > chăng là '**computational time**'. Và đây chính là **ưu điểm quan trọng**
@@ -298,7 +298,7 @@ Discover and experiment with a variety of different initialization methods, appl
 > vector W (=[w1,w2..wn])
 >
 > Make weight vector W **sparse** đại khái là **w_j bị set = 0** khiến
-> **vector hay matrix W có nhiều chỗ 0 gọi là sparse**, **còn L2 thì
+> \**vector hay matrix W có nhiều chỗ 0 gọi là sparse**, **còn L2 thì
 > nó chỉ ém w về gần bằng 0 thôi**
 >
 > Weight decay chính là cách gọi khác của L2 regularization
@@ -310,19 +310,19 @@ Discover and experiment with a variety of different initialization methods, appl
 <p align="center"><kbd><img src="assets/980f3c1af311424a63f4152279ba8e7e891b0e5c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **"Frobenius norm"** The Frobenius norm is a matrix norm that defines
+> \**"Frobenius norm"** The Frobenius norm is a matrix norm that defines
 > the magnitude of  a matrix. It is defined as the **square root of the sum
 > of the squares  of all the elements of a matrix**. In other words, it
 > calculates the **L2  norm of a matrix**. It is commonly used in linear
 > algebra and in the  training of machine learning models, particularly in
 > deep learning. In the context of deep learning, the **Frobenius norm** of
 > the weight  matrix of a layer is often used as a **regularization term** to
-> **encourage** the model to have **small weights**, which helps to prevent
-> **overfitting** and improve the **generalization** performance of the model.
+> \**encourage** the model to have **small weights**, which helps to prevent
+> \**overfitting** and improve the **generalization** performance of the model.
 > The Frobenius norm is also used to measure the **similarity between
 > two matrices**, by calculating the distance between the two matrices.
 >
-> **"Weight decay"** Weight decay is a regularization technique used in
+> \**"Weight decay"** Weight decay is a regularization technique used in
 > training machine learning models, especially neural networks, to
 > p**revent overfittin**g  and improve the generalization performance of the
 > model. It works  by **adding a penalty term to the loss function** that is
@@ -379,7 +379,7 @@ Discover and experiment with a variety of different initialization methods, appl
 > [!NOTE]
 > Đại khái là tương tự như tác dụng của Reg đ/v các algorithm
 > khác thì đv N.N cũng vậy nó sẽ **'ÉM' (penalize)** cho các các
-> **params w không thể lớn được thậm chí gần = 0**, từ đó nó
+> \**params w không thể lớn được thậm chí gần = 0**, từ đó nó
 > khiến cho model trở nên **simple** hơn (trong lecture  ổng nói vẽ
 > vậy là có ý như w ở các hidden layer thành gần 0 hết dẫn đến
 > model nó **'dần trở nên như 1 linear regression model'**. Nhưng
@@ -407,7 +407,7 @@ Discover and experiment with a variety of different initialization methods, appl
 >
 > vì thế a = g(z) mà g thường là tanh, sigmoid, hay relu thì **đều
 > có tính chất 'LINEAR' trong đoạn z nhỏ**. Hiểu đại khái là sẽ
-> **khiến toàn bộ hệ thống trở nên linear hơn** -> **tăng độ bias,
+> \**khiến toàn bộ hệ thống trở nên linear hơn** -> **tăng độ bias,
 > giảm tính variance.**
 
 > [!NOTE]
@@ -485,7 +485,7 @@ Discover and experiment with a variety of different initialization methods, appl
 > a3 = **np.multiply(a3, d3)** sẽ bỏ bớt unit (set = 0)
 >
 > Cuối cùng là lấy a3 = **a3 / 0.8** đại khái là để **cho nó lớn lên lại** để nó
-> **'not change the expected value'**
+> \**'not change the expected value'**
 
 <br>
 
@@ -627,13 +627,13 @@ Discover and experiment with a variety of different initialization methods, appl
 <p align="center"><kbd><img src="assets/1d53288b55fd7b427b35a663474d761462193acd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Early stoping:** Pros**: Chỉ chạy G.D rồi quyết định stop để lấy ra W.b
+> \**Early stoping:** Pros**: Chỉ chạy G.D rồi quyết định stop để lấy ra W.b
 > Cons: V**i phạm phương pháp MỖI LẦN 1 VIỆC - 
-> **Orthogonalization**: Tức là Tập trung giảm J hoặc tập trung 
+> \**Orthogonalization**: Tức là Tập trung giảm J hoặc tập trung 
 > giảm Overfitting -> Nó phải hy sinh việc tìm ra W, b sao cho J min 
 > để đánh đổi việc không bị overfitting
 >
-> **L2_Reg** 
+> \**L2_Reg** 
 > Pros Cứ Train cho đã đời mà ko sợ (Overfiting)
 > Cons: là phải chọn **lambda** -> More computational expensive
 
@@ -733,16 +733,16 @@ Discover and experiment with a variety of different initialization methods, appl
 <p align="center"><kbd><img src="assets/5d0b7012fa73bc5216e8ecb3210be504773965f5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Vanishing and Exploding Gradients:**
+> \**Vanishing and Exploding Gradients:**
 > Chữ **gradient** ý muốn nói 'Sự thay đổi của the output of the model
 > do sự thay đổi của tham số' (the change in the output of a model 
 > with respect to a change in its weights)
 >
-> **Vanishing** **gradient** ý nói khi gradient quá nhỏ khiến cho model
+> \**Vanishing** **gradient** ý nói khi gradient quá nhỏ khiến cho model
 > update rất chậm, khiến quá trình training rất chậm thậm chí dừng
 > luôn.
 >
-> **Exploding** **gradient** thì ngược lại, khiến model update quá nhanh, 
+> \**Exploding** **gradient** thì ngược lại, khiến model update quá nhanh, 
 > khiến kết quả không stable.
 >
 > Một số giải pháp là dùng hàm activation khác như **Relu, Tanh** và **initialization**
@@ -948,7 +948,7 @@ Discover and experiment with a variety of different initialization methods, appl
 
 > [!NOTE]
 > Đại khái là dùng '2-side difference approximation' để tính ra vector
-> **d(θ_approx)** rồi so sánh xem nó có **gần bằng** với **d(θ)** 
+> \**d(θ_approx)** rồi so sánh xem nó có **gần bằng** với **d(θ)** 
 > hay không
 >
 > Check bằng công thức trong hình.
@@ -967,12 +967,12 @@ Discover and experiment with a variety of different initialization methods, appl
 > approx** - giá trị approximation của dJ w.r.t từng θ_i,  mỗi cái tính bằng
 > công thức đã biết:
 >
-> **dθ_i = [J(θ_i + epsilon) - J(θ_i - epsilon)] / 2*epsilon**
+> \**dθ_i = [J(θ_i + epsilon) - J(θ_i - epsilon)] / 2*epsilon**
 >
 > Bỏ vào để ra vector **dΘ_approx**
 >
 > So sánh: Không phải là so từng cái mà là so cả vector **dΘ_approx** với
-> **dΘ** (cái này là từ backprop) bằng cách dùng **Euclidean norm** (còn
+> \**dΘ** (cái này là từ backprop) bằng cách dùng **Euclidean norm** (còn
 > gọi là L2 norm) của **hiệu 2 vector này**. 
 >
 > Tức là tính norm của **dΘ_approx - dΘ**
@@ -1034,7 +1034,7 @@ Discover and experiment with a variety of different initialization methods, appl
 > đâu đó chỗ db. Nói chung là nó sẽ giúp **khoanh vùng bug** Nhớ add **Regularization** term khi tính J (tính J để tính 
 > numerical_gradient)
 >
-> **Tắt Dropout** khi làm Gradient Checking vì nó khiến 
+> \**Tắt Dropout** khi làm Gradient Checking vì nó khiến 
 > tính toán J sai. Làm G.C xong thì bật lên lại
 
 > [!NOTE]

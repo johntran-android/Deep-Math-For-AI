@@ -67,7 +67,7 @@
 > rất tốt khi cả 3 pivot đều khác 0**.
 >
 > Và ở trường hợp này, để tính **determinant** chỉ việc
-> **nhân các pivot lại với nhau,** ra bằng 10 
+> \**nhân các pivot lại với nhau,** ra bằng 10 
 >
 > (me: qua bài về determinant ta sẽ có chứng minh tại sao
 > det của triangular matrix là tích các pivot)
@@ -81,7 +81,7 @@
 > [!NOTE]
 > Đại khái là gs nói về **case failure**. Thì có **temporary
 > fail** khi ví dụ **như number tại 1,1 hoặc 2,2 bằng 0**. Thì
-> **ta luôn có thể exchange/switch row để "thoát ra"**.
+> \**ta luôn có thể exchange/switch row để "thoát ra"**.
 >
 > Ví dụ 1,1 bằng 0 mà 2,1 hoặc 3,1 khác 0 thì ta **chỉ việc
 > đổi vị trí các equation**. Rồi lại làm tiếp.
@@ -90,7 +90,7 @@
 > hoặc **tới hàng 3 mà 3,3 = 0** thì sẽ **ko còn row nào mà
 > đổi nữa**.
 >
-> **Khi đó sẽ là failure**, ta sẽ có **non-inversible matrix**
+> \**Khi đó sẽ là failure**, ta sẽ có **non-inversible matrix**
 
 <br>
 
@@ -111,7 +111,7 @@
 > [!NOTE]
 > Và đến đây, chỉ việc **viết lại equation system** gọi nó là **Ux=c**. 
 >
-> **Back substitution**: tính z, thay vào 2 tính y, thay vào 1 tính x
+> \**Back substitution**: tính z, thay vào 2 tính y, thay vào 1 tính x
 
 <br>
 
@@ -134,11 +134,11 @@
 🔗 **Related:** [LECTURE 7: SOLVING AX = 0: PIVOT VARIABLES, SPECIAL SOLUTIONS](untitled.md#node-183)
 
 > [!NOTE]
-> **matrix** A @ **col x** là **linear combination** của các
+> \**matrix** A @ **col x** là **linear combination** của các
 > matrix column, với **coeff là components của x** nên sẽ
-> **được column**
+> \**được column**
 >
-> **row x @ matrix A** thì sẽ là **linear combination của các
+> \**row x @ matrix A** thì sẽ là **linear combination của các
 > row của matrix A** với **coeff là components của x**, nên
 > sẽ **được row.**
 
@@ -212,7 +212,7 @@
 
 > [!NOTE]
 > Câu hỏi đặt ra là **làm sao để check một entry của matrix**
-> **kết quả,** ví dụ **hàng 2, cột 3.**
+> \**kết quả,** ví dụ **hàng 2, cột 3.**
 >
 > Là vầy: Hàng 2 của "matrix kết quả" sẽ đến từ **việc nhân
 > hàng 2** của "matrix đầu" (ví dụ gọi là matrix M) cho matrix A.
@@ -370,7 +370,7 @@
 > khác **matrix nào nhân A để cho ra lại I.**
 >
 > Thế thì đương nhiên quá trình đảo ngược sẽ là **cộng hàng 2 của A**
-> **cho 3 lần hàng 1 của A**. Nên **hàng 2 của matrix cần tìm sẽ là [3 1
+> \**cho 3 lần hàng 1 của A**. Nên **hàng 2 của matrix cần tìm sẽ là [3 1
 > 0]**.
 >
 > Còn hàng 1 và 3 của A và I như nhau nên hàng 1 và 3 của matrix cần

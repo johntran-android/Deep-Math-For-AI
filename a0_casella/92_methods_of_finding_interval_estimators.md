@@ -23,7 +23,7 @@
 
 > [!NOTE]
 > Chiến lược đầu tiên: Đảo ngược một test statistic. Mở đầu gs nói có một sự
-> **TƯƠNG ỨNG RẤT MẠNH GIỮA MỘT HYPOTHESIS TESTING** và **INTERVAL
+> \**TƯƠNG ỨNG RẤT MẠNH GIỮA MỘT HYPOTHESIS TESTING** và **INTERVAL
 > ESTIMATION**. Thậm chí ta có thể nói rằng, nói chung, **MỌI CONFIDENCE SET**
 > đều tương ứng với một **TEST** và ngược lại.
 >
@@ -58,7 +58,7 @@
 > inference được thiết lập: θ ∈ C(**x**)
 >
 > Tiếp, xét cái xác suất P_θ(L(**X**) ≤ θ ≤ U(**X)**), thì cái này được gọi là
-> **COVERAGE PROBABILITY**, nó là hàm theo θ, giúp đánh giá mức tự tin của
+> \**COVERAGE PROBABILITY**, nó là hàm theo θ, giúp đánh giá mức tự tin của
 > một interval estimation, tương tự như power của một test (nhớ lại β(θ) =
 > P_θ(**X** ∈ R), giúp đánh giá xác suất làm đúng việc accept H1 khi θ ∈ Θ0c của
 > test)
@@ -150,7 +150,7 @@
 >
 > Và hai tập này kết nối với nhau qua quan hệ:
 >
-> **x** ∈ A(μ0) ⇔ μ0 ∈ C(**x**)
+> \**x** ∈ A(μ0) ⇔ μ0 ∈ C(**x**)
 >
 > Để rồi đại khái là sau khi đã thiết lập một cái test nào đó ví dụ cái test tốt nhất
 > rồi, nó sẽ cho phép ta:
@@ -172,7 +172,7 @@
 >
 > Còn nếu ta làm ngược lại, **dựa quan sát thấy** **X** = **x***, để có xbar*, thì
 > cái rule này sẽ **giúp xác lập** C(**x***) (hay C(xbar*) cũng được) sẽ là
-> **khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
+> \**khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
 
 <br>
 
@@ -334,7 +334,7 @@
 > Bây giờ ta mới xét cách xây dựng test, chính xác là tập Rc của nó: tập A(θ0) là tập chứa
 > các giá trị **x** ∈ range **X** sao cho C(**x**) chứa θ0. Vì cách xây dựng như vậy cho nên ta có
 > quan hệ: **x** mà thuộc A(θ0) thì có nghĩa là θ0 thuộc C(**x**) và ngược lại, θ0 thuộc C(**x**) thì
-> **x** nằm trong A(θ0): **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
+> \**x** nằm trong A(θ0): **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
 >
 > Như vậy, ta xét event θ0 ∈ C(**X**), event này có bản chất là {**x** ∈ **X**: θ0 ∈ C(**x**)} và vì cái ta có
 > ở trên nên tập này bằng tập {**x** ∈ **X**: x ∈ A(θ0)} = **X** ∈ A(θ0)
@@ -602,7 +602,7 @@
 > Và vì k* là con số để thỏa A(λ0) là một level α acceptance region để rồi
 > C(**X**) theo định nghĩa trên ({λ: (ΣXi/λ)^n e^(-ΣXi/λ) > k*}) là một 1-α
 > confidence interval,  nên giờ yêu cầu L, U thỏa cái (1) cũng chính là nói
-> **cần tìm L,U sao cho khiến C(x)  = [L(x), U(x)] là một 1-α confidence
+> \**cần tìm L,U sao cho khiến C(x)  = [L(x), U(x)] là một 1-α confidence
 > interval
 >
 > Do đó điều (1) viết lại thành: inf_λ P_λ(λ** ∈ **[L(X), U(X)] = 1 - α** 
@@ -867,7 +867,7 @@
 
 > [!NOTE]
 > Rồi, tiếp. gs cho biết để đơn giản hóa, ta sẽ based cái test trên T = ΣiXi thay vì
-> **X**, bởi vì T là sufficient statistic của p. Là sao nhỉ?
+> \**X**, bởi vì T là sufficient statistic của p. Là sao nhỉ?
 >
 > → Có nghĩa là ta sẽ dùng test statistic là T(**X**) = ΣiXi. Cái này thì chưa cần
 > liên quan gì đến tính đủ của T. Vì mình còn nhớ, cái statistic nào cũng có thể
@@ -924,7 +924,7 @@
 > Như vậy, trong bài toán test H0: θ = θ0 vs H1: θ1 (θ1 > θ0) thì test có rule
 > reject H0 khi T > t0 là UMP level α = P_θ0(T > t0)
 >
-> **NHƯNG CÁI TEST RULE NÀY LẠI KHÔNG PHỤ THUỘC θ1. NÊN DÙ θ1
+> \**NHƯNG CÁI TEST RULE NÀY LẠI KHÔNG PHỤ THUỘC θ1. NÊN DÙ θ1
 > BẰNG BAO NHIÊU TRONG (θ0, inf) THÌ TEST T VẪN LÀ UMP LEVEL α CỦA
 > BÀI TOÁN H0: θ = θ0 vs H1: θ1**
 >
@@ -1275,7 +1275,7 @@
 > Và người ta gọi random variable (đóng vai trò tạo thành random interval
 > [L(**X**), U(**X**)]) mà có tính chất như trên là **PIVOTAL QUANTITY**. Và cái
 > nhánh đi xây dựng một confidence set dùng pivotal quantity được gọi là
-> **PIVOTAL INFERENCE**
+> \**PIVOTAL INFERENCE**
 
 <br>
 
@@ -1503,7 +1503,7 @@
 > confidence set có confidence coefficient 1-α:
 >
 > Chuẩn bị hàm tập C(**x**): nhận vào **x**, trả ra tập các θ0 thỏa A(θ0) chứa
-> **x**:
+> \**x**:
 >
 > C(**x**) = {θ0 ∈ Θ: x ∈ A(θ0)} hay (thay dummies variable θ) {θ ∈ Θ: **x** ∈
 > A(θ)}
@@ -1832,7 +1832,7 @@
 >
 > Tính hết pmf tại các possible value **x** của **X**, sau đó, gom những thằng
 > có pmf cao nhất vào một tập, dĩ nhiên khi lần lượt bỏ vào tập thì xác suất
-> **X** thuộc tập đó sẽ cao dần lên, cho đến khi nào vượt 1-α thì thôi. Khi đó ta
+> \**X** thuộc tập đó sẽ cao dần lên, cho đến khi nào vượt 1-α thì thôi. Khi đó ta
 > đã có tập chứa các possible value **x** của **X** mà thỏa P_θ(**X** ∈ tập đó)
 > ≥ 1-α. Đó chính là một level α acceptance region của bài toán testing H0: p =
 > p0. Cái vụ bỏ các **x** vào dần dần theo pmf của chúng đơn giản là cách để
@@ -2764,7 +2764,7 @@
 > NGHĨA CỦA BAYES ESTIMATOR**: θ^_B(**X**) = E[θ|**X**]
 >
 > Vậy quay lại đây, với việc coi θ như random variable thì trường phái
-> **BAYESIAN CHO PHÉP NÓI: XÁC SUẤT θ NẰM TRONG MỘT KHOẢNG
+> \**BAYESIAN CHO PHÉP NÓI: XÁC SUẤT θ NẰM TRONG MỘT KHOẢNG
 > NÀO ĐÓ**. Lúc này, khoảng là cố định, và yếu tố random đến từ θ. Và ví dụ
 > như xét xác suất λ ∈ [.262, 1.184] thì ta sẽ tính nó với xác suất posterior
 > của λ: π(λ|**x**), không phải với prior distribution.
@@ -2844,7 +2844,7 @@
 > nhau tạo thành)
 >
 > Do đó, ta có thể kết luận posterior distribution của λ dựa trên quan sát
-> **X** = **x** sẽ chính là Γ(Σixi+a, [n+1/b]^-1) chính là 9.2.19
+> \**X** = **x** sẽ chính là Γ(Σixi+a, [n+1/b]^-1) chính là 9.2.19
 >
 > Ok, vậy thì đại ý là, để tạo một 1-α CREDIBLE INTERVAL của λ, ta sẽ tìm 
 > set đơn giản như sau: 
@@ -3005,12 +3005,12 @@
 >
 > Thằng Gemini có cái ví von rất hay mình copy của nó:
 >
-> **Frequentist** (Coverage Probability): **Đánh giá sự rủi ro của CÔNG CỤ
+> \**Frequentist** (Coverage Probability): **Đánh giá sự rủi ro của CÔNG CỤ
 > ĐO LƯỜNG** (Sampling procedure). Tham số $\\θ$ là cái **cọc sắt đóng
 > cứng trên đất**. Cái **Interval** là cái vòng. Mày **ném vòng vô số lần**
 > (lấy mẫu $X$ vô số lần), **90% số vòng sẽ trúng cọc.**
 >
-> **Bayesian** (Credible Probability): **Đánh giá sự bất định** của **CHÂN
+> \**Bayesian** (Credible Probability): **Đánh giá sự bất định** của **CHÂN
 > LÝ** (True parameter). Cái Interval là một **cái lồng sắt mày vừa đóng
 > xuống đất** (dựa vào Data **X** đã cố định). Tham số θ là **con chim
 > bay lượn ngẫu nhiên** (dựa trên Prior + Data = Posterior). Mày khẳng
@@ -3074,7 +3074,7 @@
 > interval, ta KHÔNG COI λ LÀ BIẾN SỐ. Mà chỉ coi nó là số cố định,
 > L(**X**), U(**X**) mới là biến số. Nên giờ đây ta lại coi λ là biến số, có
 > distribution thì khi xét xác suất λ nằm trong khoảng này nó giống như là ta
-> **LÀM MỘT ĐẰNG** mà **XÀI MỘT KIỂU** khác vậy,
+> \**LÀM MỘT ĐẰNG** mà **XÀI MỘT KIỂU** khác vậy,
 >
 > Tức là **DÙNG KHÔNG ĐÚNG CÁCH!**, thì dĩ nhiên là ko thể đòi xác suất
 > này luôn = 1 - α được. Dùng đúng **cách phải là tiếp tục coi λ là fixed,
@@ -3101,11 +3101,11 @@
 
 > [!NOTE]
 > Và sau đó,hoàn toàn tương tự, là nếu ta lại lấy **CREDIBLE SET** đem tính
-> **COVERAGE PROBABILITY**, thì again, cũng lại là làm một đằng mà xài
+> \**COVERAGE PROBABILITY**, thì again, cũng lại là làm một đằng mà xài
 > một kiểu: Sai mục đích.
 >
 > Do đó ko có gì đảm bảo mọi chuyện còn đúng nữa, cụ thể, khi thay đổi
-> **λ, giá trị xác suất này cũng có thể trở thành lớn vô cùng** (việc chứng
+> \**λ, giá trị xác suất này cũng có thể trở thành lớn vô cùng** (việc chứng
 > minh cụ thể có thể xem lại sau, nhưng đại ý là vậy) Vì sao "dùng sai mục đích", thì bởi **credible set được thiết kế bằng cách
 > coi λ  là random variable có posterior distribution**, trong khi đó **lúc "xài"
 > lại đem tính coverage probability, tức là lại coi yếu tố random đến từ hai
@@ -3261,17 +3261,17 @@
 > cách, ta sẽ có được cái này bằng cách app một "set function" hay "interval"
 > function c(**x**) như sau: nhận vào **x**, trả ra một tập các θ, hay một đoạn các
 > θ chặn bởi hai  đầu là L(**x**) và U(**x**). Áp cái hàm này vào random sample
-> **X**, ta sẽ có một random set, hay random interval C(**X**) = [L(**X**), C(**X**)]
+> \**X**, ta sẽ có một random set, hay random interval C(**X**) = [L(**X**), C(**X**)]
 > (y như cái logic hay dùng là áp một function g(**x**) lên random variable **X**,
 > sẽ cho ta một random variable mới g(**X**) vậy
 >
 > Thế thì note trước ta đã có [δB(xbar) - z_α/2√Var(θ|xbar), δB(xbar) + z_α/2
 > √Var(θ|xbar)] là một 1-α credible set, mang ý nghĩa là khi coi θ như con chim
 > bay lượn (random variable), thì dù **X** có observed bằng bao nhiêu (để có
-> **x**, và xbar) thì xác suất nó đậu vào khoảng này luôn là 1-α.
+> \**x**, và xbar) thì xác suất nó đậu vào khoảng này luôn là 1-α.
 >
 > Nhưng bây giờ, ta lấy cái khoảng này ra, coi nó như hàm c(**x**), để áp vào
-> **X**, thì nó cũng sẽ cho ta một random interval như vừa mới nói:
+> \**X**, thì nó cũng sẽ cho ta một random interval như vừa mới nói:
 >
 > C(**X**) =  [δB(Xbar) - z_α/2√Var(θ|Xbar), δB(Xbar) + z_α/2 √Var(θ|Xbar)]
 >

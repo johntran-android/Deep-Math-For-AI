@@ -20,7 +20,7 @@
 > (1-p)^(x-1)p** khi x = 1,2... thì đó cũng là pmf của Geom(p).
 >
 > Ý sau khi nhắc đến bước nhảy là vì trong những bài trước ta đã thấy rằng
-> **bước nhảy của cdf tại x** sẽ tương ứng với giá trị của P(X=x). Nên từ đó gs
+> \**bước nhảy của cdf tại x** sẽ tương ứng với giá trị của P(X=x). Nên từ đó gs
 > cho rằng ta có thể dùng pmf để tính xác suất trong một khoảng.
 >
 > Đại khái là vầy giả sử ta cần tính P(X ∈ [a, b]). Thì cái này sẽ bằng P(X ∈
@@ -33,7 +33,7 @@
 >
 > Do đó theo kết quả này ta có:
 >
-> **F_X(b) - F_X(a) = ∑ P(X = x) , x** ∈ **[a, b].**
+> \**F_X(b) - F_X(a) = ∑ P(X = x) , x** ∈ **[a, b].**
 >
 > Vậy áp dụng cho Geom(p) distribution:
 >

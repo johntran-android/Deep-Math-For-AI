@@ -33,10 +33,10 @@
 > contextual dependencies and attend to different parts of the input sequence.**
 >
 > 9 **Multi-headed self-attention** involves **learning multiple sets of self-attention weights in parallel**, with
-> **each head focusing on different aspects of language.**
+> \**each head focusing on different aspects of language.**
 >
 > 10 The **outp**ut of the self-attention layer is **processed through a feed-forward network,** producing
-> **logits** that **represent the probability scores for each token in the tokenizer dictionary.** 
+> \**logits** that **represent the probability scores for each token in the tokenizer dictionary.** 
 >
 > 11 **The logits are normalized using a softmax** layer to **obtain probability scores for each word**, with
 > the **highest scoring token being the most likely prediction**.
@@ -104,7 +104,7 @@
 
 > [!NOTE]
 > To apply **attention weights** to those **relationships** so that the model learns the
-> **relevance of each word to each other words** **no matter where they are** in the input.
+> \**relevance of each word to each other words** **no matter where they are** in the input.
 > This gives the algorithm the ability to learn who has the book, who could have the
 > book, and if it's even relevant to the wider context of the document. These **attention
 > weights** are **learned during LLM training** and you'll learn more about this later this
@@ -136,10 +136,10 @@
 > Here's a simplified diagram of the **transformer architecture** so that you can
 > focus at a **high level** on where these processes are taking place. The
 > transformer architecture is split into **two distinct parts**, the **encoder** and the
-> **decoder**. These components work in conjunction with each other and they
-> **share a number of similarities**. Also, note here, the diagram you see is
+> \**decoder**. These components work in conjunction with each other and they
+> \**share a number of similarities**. Also, note here, the diagram you see is
 > derived from the original attention is all you need paper. Notice how the
-> **inputs to the model are at the bottom** and the **outputs are at the top**, where
+> \**inputs to the model are at the bottom** and the **outputs are at the top**, where
 > possible we'll try to remain faithful to this throughout the course
 
 <br>
@@ -183,14 +183,14 @@
 
 > [!NOTE]
 > Now that your **input is represented as numbers,** you can pass it to the
-> **embedding layer**. This layer is a **trainable vector embedding space**, a
-> **high-dimensional space** where each **token** is represented **as a vector** and
-> **occupies a unique location within that space**. **Each token ID** in the vocabulary is
-> **matched to a multi-dimensional vector**, and the intuition is that these vectors
+> \**embedding layer**. This layer is a **trainable vector embedding space**, a
+> \**high-dimensional space** where each **token** is represented **as a vector** and
+> \**occupies a unique location within that space**. **Each token ID** in the vocabulary is
+> \**matched to a multi-dimensional vector**, and the intuition is that these vectors
 > \_**learn to encode the meaning and context of individual tokens in the input
 > sequence**\_. Embedding vector spaces have **been used** in natural language
 > processing for some time, previous generation language algorithms like
-> **Word2vec** use this concept. Don't worry if you're not familiar with this. You'll see
+> \**Word2vec** use this concept. Don't worry if you're not familiar with this. You'll see
 > examples of this throughout the course, and there are some links to additional
 > resources in the reading exercises at the end of this week
 
@@ -201,7 +201,7 @@
 > toán chính** nó sẽ **học cách tạo ra** (v**à dùng** chúng để phục vụ bài
 > toán chính) **những embedding vector** giúp **nắm bắt ý nghĩa của từ
 > vựng.** Như cách mà **các language model trước** đã dùng như
-> **Word2Vec** hay **CBOW**
+> \**Word2Vec** hay **CBOW**
 
 <br>
 
@@ -212,7 +212,7 @@
 > [!NOTE]
 > Embedding sẽ **map một word index thành một word
 > embedding vector,** Trong original paper tác giả dùng
-> **word embedding có size là 512.**
+> \**word embedding có size là 512.**
 
 <br>
 
@@ -267,7 +267,7 @@
 > [!NOTE]
 > Tới đây **cơ chế Self-Attention** sẽ ra tay để **tính toán xào nấu** sao đó để tạo ra một tạm
 > gọi là "**một Self-attention embedding vector" cho mỗi từ**,  là một embedding vector mới
-> **tính toán từ / chứa đựng / tạo nên từ** **đóng góp của tất cả các từ trong câu** với **trọng
+> \**tính toán từ / chứa đựng / tạo nên từ** **đóng góp của tất cả các từ trong câu** với **trọng
 > số nhiều ít khác nhau** dựa trên **mức độ liên quan của chúng**. Ôn lại ngắn gọn luôn. Đầu
 > tiên là nó sẽ, **với mỗi từ dùng 3 weight matrix WQ, WK, WV** tính ra **cho mỗi từ (i)** **một bộ 3
 > vector q<i>, k<i>, v<i>**. Rồi dùng các giá trị q và v của chúng để tính ra **các trọng số alpha
@@ -294,7 +294,7 @@
 
 > [!NOTE]
 > But this **does not happen just once**, the transformer architecture actually has
-> **multi-headed self-attention**. This means that **multiple sets of self-attention weights**
+> \**multi-headed self-attention**. This means that **multiple sets of self-attention weights**
 > or heads are **learned in parallel independently of each other.** The number of
 > attention heads included in the attention layer varies from model to model, but
 > numbers in the range of **12-100 are common**. The intuition here is that each

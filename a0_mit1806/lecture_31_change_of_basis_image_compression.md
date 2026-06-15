@@ -61,7 +61,7 @@
 
 > [!NOTE]
 > Thế thì nếu trong hoàn cảnh này, ta dùng **standard**
-> **basis** thì ta sẽ có **tới 512^2 = 262144 vector** (vì ta
+> \**basis** thì ta sẽ có **tới 512^2 = 262144 vector** (vì ta
 > đang trong R^(262144), cũng như **R^2 thì có 2
 > standard basis vậy)**
 
@@ -96,8 +96,8 @@
 >
 > Có thể hiểu nôm na thế này, giả sử bức hình có dạng checker
 > board, thì nội **một basis vector có dạng [+1 -1 +1 -1 ...]** đã **đủ**
-> **để thể hiện thông tin bức hình rồi**, nhưng nếu vẫn dùng
-> **standard basis thì ta vẫn sẽ phải dùng 512^512 vector** (thể
+> \**để thể hiện thông tin bức hình rồi**, nhưng nếu vẫn dùng
+> \**standard basis thì ta vẫn sẽ phải dùng 512^512 vector** (thể
 > hiện giá trị của mỗi pixel)
 
 <br>
@@ -123,7 +123,7 @@
 >
 > Cho dễ hiểu đầu tiên hãy nghĩ về vector trong **R^2** (2D
 > plane) thì đương nhiên R^2 với dimension bằng 2 thì sẽ có
-> **2 vector độc lập** để **span R^2**. Cũng đồng nghĩa là **basis của R^2 sẽ có 2 vectors**. Mà standard basis là hai
+> \**2 vector độc lập** để **span R^2**. Cũng đồng nghĩa là **basis của R^2 sẽ có 2 vectors**. Mà standard basis là hai
 > vector (1,0) và (0,1)
 >
 > Thế thì, bây giờ, ta sẽ chia thành block 8x8 để **chứa 64
@@ -263,7 +263,7 @@
 > [!NOTE]
 > Thế thì một cách khái quát giả sử ta có vector p mang giá trị
 > của pixel values = [p1,p2..p8] (block có 8 pixels, ví dụ như
-> **một hàng có 8 pixels**, thay vì chia thành các block 8x8
+> \**một hàng có 8 pixels**, thay vì chia thành các block 8x8
 > như hồi nãy) câu hỏi là **làm sao có represent nó với
 > wavelets basis**
 
@@ -330,7 +330,7 @@
 
 > [!NOTE]
 > Và **Fourier basis tốt chính là vì vậy** (tính nhanh), nhờ có
-> **Fast Fourier Transform**. Và tương tự, với **Wavelet basis**,
+> \**Fast Fourier Transform**. Và tương tự, với **Wavelet basis**,
 > ta cũng có tính chất này, với **Fast Wavelet Transform.**
 
 <br>
@@ -346,7 +346,7 @@
 >
 > Đó là:
 >
-> **Chúng chỉ có 1, 0, -1**.
+> \**Chúng chỉ có 1, 0, -1**.
 >
 > Và các basis vector này **orthogonal** (dot product của
 > chúng đều bằng 0)
@@ -377,7 +377,7 @@
 
 > [!NOTE]
 > Gs: Đúng vậy, nhờ đó **tính Winv rất nhan**h, nó giúp
-> **Wavelets basis pass điều kiện (làm basis tốt) đầu tiên**
+> \**Wavelets basis pass điều kiện (làm basis tốt) đầu tiên**
 
 <br>
 
@@ -405,7 +405,7 @@
 
 > [!NOTE]
 > Đại khái là gs cho biết **JPEG 2000** chính là dùng
-> **Wavelets basis**, hay FBI khi compress image dấu vân
+> \**Wavelets basis**, hay FBI khi compress image dấu vân
 > tay cũng dùng cái này
 
 <br>
@@ -467,7 +467,7 @@
 >
 > II) MỌI **MATRIX ĐỨNG SAU MỘT LINEAR TRANSFORMATION** 
 > (vector x, hay p ở slide trước) CŨNG SẼ THAY ĐỔI. Thể hiện bởi 
-> **B = Minv A M**
+> \**B = Minv A M**
 >
 > Gs nói M có thể chính là W, ý nói, chúng là change of basis matrix
 
@@ -572,13 +572,13 @@
 >
 > T(v_1) = **A*v_1**= **λ1*v1** ta sẽ thể hiện thành:
 >
-> **T(v_1) =  λ1*v1 = λ1***v1 + **0***v2 + ...**0***v8
+> \**T(v_1) =  λ1*v1 = λ1***v1 + **0***v2 + ...**0***v8
 >
 > \-> cột 1 của A là **[λ1, 0, ...0]**
 >
 > Tương tự
 >
-> **T(v_2)** = **λ2*v2** = **0***v1 + **λ2***v2 + ...**0***v8
+> \**T(v_2)** = **λ2*v2** = **0***v1 + **λ2***v2 + ...**0***v8
 >
 > \-> cột 2 của A là **[0, λ2, ...0]**
 >

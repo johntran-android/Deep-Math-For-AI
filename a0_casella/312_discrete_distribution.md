@@ -446,7 +446,7 @@
 >
 > = 1 - P(Y = 0) = 1 - (24 choose 0) (1/36)^0 (1 - 1/36)^24
 >
-> **= 1 - (35/36)^24**
+> \**= 1 - (35/36)^24**
 >
 > Và ý cuối (stat110 cũng đã từng nói nhưng hơi khó hiểu là thầy Blizstein nói
 > đó là bài toán Newton-Perp, nơi ông Pepr gì đó đem bài toán này đi hỏi
@@ -776,7 +776,7 @@
 >
 > (4 choose 2)(1 - p)^2p^3 , hay
 >
-> **P(Y = y) = (r + y - 1 choose y) (1 - p)^y p^r** 
+> \**P(Y = y) = (r + y - 1 choose y) (1 - p)^y p^r** 
 
 > [!NOTE]
 > KHÚC NÓI VỀ CÁI TÊN
@@ -903,7 +903,7 @@
 > Lập luận nhanh: event có x lần fail cho đến khi thất thành công đầu tiên thì
 > chỉ có một cách là chuỗi Bern(p) trial phải chính xác là FFF (x-1 lần) FFS
 > Từ đó P(FFF...FS) = P(F)P(F)...x-1 lần P(F)PS = P(F)^(x-1) P(S) =
-> **p(1-p)^(x-1)** ====
+> \**p(1-p)^(x-1)** ====
 >
 > Tính valid của pmf đến từ việc chuỗi số điều hòa hội tụ về 1 (XEM LẠI VỀ
 > VỤ  NÀY SAU)
@@ -1055,11 +1055,11 @@
 >
 > Và Σp ∈ {p ∈ Ω: X(p) > s + t} ∩ {p ∈ Ω: X(p) > t} P({s}), CHÍNH LÀ:
 >
-> **P(X > s + t ∩ X > t)**
+> \**P(X > s + t ∩ X > t)**
 >
 > Vậy **P(X > s + t | X > t)** = P(X > s + t ∩ X > t) / P(B) 
 >
-> **= P(X > s + t ∩ X > t) / P(X > t)** 
+> \**= P(X > s + t ∩ X > t) / P(X > t)** 
 > ====
 >
 > Tiếp xét một possible outcome p bất kì trong {p ∈ Ω: X(p) > s + t}: tức p thỏa X(p)
@@ -1105,7 +1105,7 @@
 >
 > = (1 - p)^(s+t - t) 
 >
-> **= (1 - p)^s Và đây cũng chính là P(X > s)
+> \**= (1 - p)^s Và đây cũng chính là P(X > s)
 >
 > Vậy chứng minh xong P(X > s + t | X > t) = P(X > s) cho thấy Geometric
 > có tính MEMORYLESS**

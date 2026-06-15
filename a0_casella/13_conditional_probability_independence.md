@@ -11,7 +11,7 @@
 
 > [!NOTE]
 > Có gì đó rất đáng suy nghĩ, giúp ta hiểu sâu hơn bản chất của
-> **CONDITIONAL PROBABILITY** trong ví dụ tính xác suất rút được 4 lá Ách.
+> \**CONDITIONAL PROBABILITY** trong ví dụ tính xác suất rút được 4 lá Ách.
 >
 > Đại khái là ở đây họ t**ính bằng 2 cách**. Cách thứ nhất là với lập luận rằng,
 > nếu (**thử nghiệm là) rút 4 lá bài**, thì trong **sample space có bao nhiêu
@@ -22,7 +22,7 @@
 > Và với việc **rút ngẫu nhiên, và bộ bài bình thường** thì **xác suất xảy ra
 > của mỗi bộ** trong (52 choose 4) bộ này **đều như nhau**. Nói cách khác,
 > sample space có (52 choose 4) possible outcomes, mỗi outcome đều
-> **equally likely**, có **xác suất xuất hiện là 1/(52 choose 4)**
+> \**equally likely**, có **xác suất xuất hiện là 1/(52 choose 4)**
 >
 > Giờ để tính **xác suất của event "4 lá Ách"** thì như đã biết event có bản chất
 > chỉ là **subset của sample space**, chứa các possible outcome. Và **P(A)** chính
@@ -67,7 +67,7 @@
 >
 > P(A1 ∩ A2 ∩ A3 ∩ A4) = P(A1)P(A2|A1)P(A3|A1,A2)P(A4|A1,A2,A3)
 >
-> **P(A1)** là xác suất rút được lá Ách từ bộ 52 lá. Sample space sẽ có 52 possible
+> \**P(A1)** là xác suất rút được lá Ách từ bộ 52 lá. Sample space sẽ có 52 possible
 > outcomes, là 52 lá khác nhau, và xác suất xảy ra lá nào cũng bằng 1/52. Còn
 > event space A1 = {s: s là lá Ách} thì có thể thấy **có 4 possible outcome thuộc
 > event A1**, tức 4 lá thuộc loại Ách. 
@@ -85,7 +85,7 @@
 > Nên **xác suất của A2**, tức là lá thứ 2 rút được lá Ách sẽ **phụ thuộc kết quả của
 > lá thứ 1**. Nên ta sẽ tính theo lập luận sau:
 >
-> **A2 = (A2, A1) + (A2, A1^c)**, đây là dựa vào Set theory, khi A1 với A1^c tạo nên
+> \**A2 = (A2, A1) + (A2, A1^c)**, đây là dựa vào Set theory, khi A1 với A1^c tạo nên
 > cái gọi là **PARTITION** của S, hiểu nôm na là tụi nó **disjoint** nhau nhưng
 > cùng nhau, **union nhau** cover toàn bộ Sample space. Hoặc kĩ hơn thì như vầy:
 > A2 ⊂ S ⇨ A2 ∩ S = A2 ⇔ A2 = A2 ∩ (A1 ∪ A1c) ⇔ A2 = **(A2** ∩ **A1)** ∪ **(A2** ∩ **A1c)**
@@ -95,9 +95,9 @@
 > (A2 ∩ A1) ∪ (A2 ∩ A1^c) là **union** của disjoint event, theo Axiom 2 (Stat110) (ở
 > sách Casella là **Axiom 3**)
 >
-> **P(A2) = P(A2, A1) + P(A2, A1^c)**
+> \**P(A2) = P(A2, A1) + P(A2, A1^c)**
 >
-> **= P(A2|A1)*P(A1) + P(A2|A1^c)*P(A1^c)** 
+> \**= P(A2|A1)*P(A1) + P(A2|A1^c)*P(A1^c)** 
 > P(A1) = 4 * 1/52 = 4/52
 >
 > P(A2|A1): Khi A1 đã xảy ra tức là đã có 1 con Ách được rút.Thì khi rút lá thứ 2
@@ -161,7 +161,7 @@
 > của A có xảy ra hay ko.**
 >
 > Nhưng khi **B xảy ra rồi**, tức là với P(A|B) ta chỉ quan tâm những
-> **possible outcome nằm trong A intersect B có xảy ra hay ko**
+> \**possible outcome nằm trong A intersect B có xảy ra hay ko**
 
 <br>
 
@@ -223,7 +223,7 @@
 > Như theo cách liệt kê như vậy thì để đếm số possible outcome của sample space  ta
 > sẽ quan tâm thứ tự các lá bài (tức phân biệt các bộ cùng lá nhưng xắp sếp khác
 > nhau. Nên tổng số p.o của sample space sẽ là: (52 choose 4) * 4! = (52!/4!/48!)*4! =
-> **52!/48!**. Cái này chính là chỉnh hợp chập 2 của 52: kí hiệu P(52, 2)
+> \**52!/48!**. Cái này chính là chỉnh hợp chập 2 của 52: kí hiệu P(52, 2)
 >
 > Để đếm số p.o trong B: Ta sẽ đếm theo step rule:
 >
@@ -254,7 +254,7 @@
 >
 > = 4!/i!(4-i)! / (52!)/[(52-i)!i!]
 >
-> **= (4 choose i) / (52 choose i).  Đây là kết quả trong sách.
+> \**= (4 choose i) / (52 choose i).  Đây là kết quả trong sách.
 >
 > Tính như trong sách họ sẽ lập luận khác:
 >
@@ -327,7 +327,7 @@
 >
 > Theo định nghĩa conditional probability, vế trái bằng:
 >
-> **P(**⋃**i Ai |B) = P[(**⋃**i Ai) ∩ B] / P(B)** 
+> \**P(**⋃**i Ai |B) = P[(**⋃**i Ai) ∩ B] / P(B)** 
 > Xét (⋃i Ai) ∩ B, theo **luật phân phối**, = ⋃**i (Ai ∩ B)**. Nên:
 >
 > P[(⋃i Ai) ∩ B] / P(B) = **P[**⋃**i (Ai ∩ B)] / P(B)**
@@ -427,7 +427,7 @@
 > Hoặc cũng có thể tính các xác suất của các joint event này bằng cách dùng biểu
 > đồ nhánh như trong stat110 gs Blizstein đã làm (xem hình sau), trong đó ta sẽ
 > thấy P(A ∩ W) = 1/3 * 1/2 = 1/6, P(B ∩ W) = 1/3
-> * 0 = 0, P(C ∩ W) = 1/3 * 1 = 1/3
+> \* 0 = 0, P(C ∩ W) = 1/3 * 1 = 1/3
 >
 > Vậy lắp vào ta có:
 >
@@ -505,19 +505,19 @@
 > Từ **định nghĩa của conditional probability** **P(A|B)=P(A ∩ B) / P(B)**
 > ta dẫn tới **hai theorem** mà stat110 đã học 
 >
-> **P(A ∩ B)=P(A|B)P(B)**
+> \**P(A ∩ B)=P(A|B)P(B)**
 >
 > và **Bayes Rule**:
 >
-> **P(B|A)P(A) = P(A|B)P(B)**
+> \**P(B|A)P(A) = P(A|B)P(B)**
 >
 > Để rồi ta sẽ có thể **có phiên bản khác của B.R**: Nếu ta có một
-> **Partition A1, A2...Ak** (theo định nghĩa A1,A2..Ak partitions là
+> \**Partition A1, A2...Ak** (theo định nghĩa A1,A2..Ak partitions là
 > nếu Ai **disjoint** và ⋃**i Ai = S**)
 >
 > Khi đó dựa vào Bayes's rule:
 >
-> **P(B ∩ Ai) = P(Ai ∩ B)**
+> \**P(B ∩ Ai) = P(Ai ∩ B)**
 >
 > <=> P(B|Ai)P(Ai) = P(Ai|B)P(B)
 >
@@ -537,7 +537,7 @@
 >
 > Từ đó phiên bản Bayes's rule với partition là:
 >
-> **P(Ai|B) = P(B|Ai)P(Ai)/  ∑i P(B|Ai)P(Ai)**
+> \**P(Ai|B) = P(B|Ai)P(Ai)/  ∑i P(B|Ai)P(Ai)**
 
 <br>
 
@@ -549,7 +549,7 @@
 > Đại khái là một ví dụ liên quan tới class **information** **theory**. Cho biết khi **gửi tín
 > hiệu Morse** thì cứ **7 tín hiệu thì 3 cái là dot, 7 cái là dash**. Tức là 
 >
-> **P(dot send)=3/7 và P(dash send) = 4/7**
+> \**P(dot send)=3/7 và P(dash send) = 4/7**
 >
 > Rồi người ta cho biết **tỉ lệ lỗi** khi gửi một tín hiệu (gửi dot mà nhận dash và
 > ngược lại đều là **1/8**), tức **P(dash received | dot send)** = **P(dot received | dash
@@ -561,7 +561,7 @@
 >
 > Thế thì áp dụng **conditional probability definition**
 >
-> **P(dot send | dot received) = P(dot send ∩ dot received) / P(dot received)** 
+> \**P(dot send | dot received) = P(dot send ∩ dot received) / P(dot received)** 
 > Xét P(dot send ∩ dot received)
 >
 > = **P(dot received ∩ dot send)** | P(A ∩ B) = P(B ∩ A)
@@ -608,7 +608,7 @@
 >
 > Và điều này có thể được t**hể hiện bởi cả hai cách**:
 >
-> **P(A|B) = P(A)** 
+> \**P(A|B) = P(A)** 
 >
 > hoặc **P(A ∩ B) = P(A)*P(B)**
 
@@ -656,14 +656,14 @@
 > => P(Ac) = P(⋂i Ai) và vì **Ai độc lập nhau** do **các lần tung xúc sắc không liên
 > quan gì** đến nhau nên **DỰA VÀO** **ĐỊNH NGHĨA CỦA INDEPENDENT EVENTS**:
 >
-> **P(Ac) = Πi P(Ai)**
+> \**P(Ac) = Πi P(Ai)**
 >
 > Và xét Ai, tức "lần tung thứ i không ra 6" thì **experiment** là tung xúc sắc,
-> **sample space có 6 possible outcomes** đều **equally likely**, mỗi p.o có xác suất
-> **1/6**. Còn **subset "không ra 6"** sẽ có **5 possible outcomes**. Do đó P(Ai) theo
+> \**sample space có 6 possible outcomes** đều **equally likely**, mỗi p.o có xác suất
+> \**1/6**. Còn **subset "không ra 6"** sẽ có **5 possible outcomes**. Do đó P(Ai) theo
 > NAIVE DEFINITION sẽ bằng:
 >
-> **P(Ai) = ∑i {si** ∈ **Ai} P({si})**
+> \**P(Ai) = ∑i {si** ∈ **Ai} P({si})**
 >
 > = 5 * 1/6 = 5/6
 >
@@ -710,7 +710,7 @@
 > [!NOTE]
 > Còn hai ví dụ đại khái là minh họa rằng
 > điều kiện **INDEPENDENT** phải là
-> **MUTUAL INDEPENDENT**
+> \**MUTUAL INDEPENDENT**
 
 <br>
 

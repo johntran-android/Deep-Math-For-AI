@@ -8,7 +8,7 @@
 ## **Structured Prompts and Complex Workflows with LLMs**
 
 > [!NOTE]
-> **Structured Prompts and Complex Workflows with LLMs**
+> \**Structured Prompts and Complex Workflows with LLMs**
 >
 > In this lesson, we dive deeper into **enhancing the capabilities of Large Language Models** 
 > (LLMs) in **complex workflows and applications.**
@@ -37,7 +37,7 @@
 >    - A **prompting strategy** combining **reasoning** with **action planning**.
 >    - Proposed by Princeton and Google researchers in 2022.
 >    - **Requires the model** to **reason over multiple sources**, like Wikipedia, and 
-> **decide on a series of actions**.
+> \**decide on a series of actions**.
 
 <br>
 
@@ -77,7 +77,7 @@
 > tune a smaller model for deployment.**
 >
 > In summary, while LLMs have **inherent limitations**, combining them with frameworks like 
-> **PAL** and **ReAct**, and tools like **LangChain**, can **extend their capabilities**, making them 
+> \**PAL** and **ReAct**, and tools like **LangChain**, can **extend their capabilities**, making them 
 > powerful assets in complex applications.
 
 <br>
@@ -136,7 +136,7 @@
 
 > [!NOTE]
 > Cơ bản **React** Prompt là một **'prompt technique'** trong đó
-> **hướng dẫn LLM generate completion** theo kiểu **các bước
+> \**hướng dẫn LLM generate completion** theo kiểu **các bước
 > suy nghĩ và hành động** để rồi từ đó nó (orchestration) sẽ
 > dựa vào đó để mà gọi API
 

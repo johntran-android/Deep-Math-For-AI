@@ -255,11 +255,11 @@
 
 > [!NOTE]
 > Tiếp, đại khái là, ta cần hiểu **mục đích** của những việc cross-validation test là để
-> **ESTIMATE TEST PERFORMANCE**, bởi vì như đã nói, không phải lúc nào ta cũng có
+> \**ESTIMATE TEST PERFORMANCE**, bởi vì như đã nói, không phải lúc nào ta cũng có
 > một test set độc lập để test.
 >
 > Thế thì LÀM SAO BIẾT CROSS VALIDATION TỐT , hay nói cách khác, LÀM SAO ĐỂ
-> **EVALUATE KẾT QỦA CỦA CROSS VALIDATION**
+> \**EVALUATE KẾT QỦA CỦA CROSS VALIDATION**
 >
 > Thì đại khái là **với real data thì ta không biết**, ý là, trong một bài toán thực tế, ta không
 > thể  đánh giá performance của mô hình trên dữ liệu mới nói chung được, kể cả khi ta có
@@ -276,7 +276,7 @@
 > chóng overfit** (test error tăng  vọt)
 >
 > iii) quy luật thực sự của data là **phức tạp**, để khi bắt đầu với simple model bị
-> **underfit** test error rất cao, và **giảm mạnh** khi flexibility tăng lên, đương nhiên tăng
+> \**underfit** test error rất cao, và **giảm mạnh** khi flexibility tăng lên, đương nhiên tăng
 > nữa thì test error cũng bắt đầu tăng
 >
 > ii) trạng thái quy luật của data **phức tạp vừa vừa**, thì lúc bắt đầu với simple model  test
@@ -421,7 +421,7 @@
 > dùng MSE** mà sẽ dùng error metric khác, như **misclassification rate**. Tỉ lệ của
 > misclassification / tổng
 >
-> **I**(y_i khác y^_i) như đã biết là Identify function, bằng 1 nếu điều kiện là đúng, và
+> \**I**(y_i khác y^_i) như đã biết là Identify function, bằng 1 nếu điều kiện là đúng, và
 > bằng 0 nếu ngược lại
 >
 > => **Err_k = I(y_i khác y^_i) / nk** là misclassification error rate trong fold có nk = n / k 
@@ -430,7 +430,7 @@
 > Để rồi, với k-Fold Cross Validation ta sẽ tính cross validation error là **trung bình error
 > của k lần test** (cũng **chia data ra k fold**, **train trên k-1 fold**, **test = tính
 > misclassification rate trên cái hold-out fold**. Như vậy **lần lượt từng fold** được test
-> **để có k error rate: Err_k**, xong **tính trung bình** để có cross validation error)
+> \**để có k error rate: Err_k**, xong **tính trung bình** để có cross validation error)
 
 <p align="center"><kbd><img src="assets/e61328dbfe119069d8e46b1ed06c10b508556fc6.png" width="100%"></kbd></p>
 
@@ -442,7 +442,7 @@
 
 > [!NOTE]
 > Thế thì người ta lấy lại ví dụ trong chapter 4. Một data set có **true pattern** - ám chỉ
-> **decision boundary thật sự**, có tính phi tuyến, và đương nhiên **vì là simulated
+> \**decision boundary thật sự**, có tính phi tuyến, và đương nhiên **vì là simulated
 > data** nên ta **biết Bayesian error rate** và **Bayesian decision boundary** (là những
 > cái mà nếu dựa trên **Bayesian classifier** - là classifier mà có thể coi là **cái tốt nhất
 > mà một classification model** có thể đạt được)
@@ -489,7 +489,7 @@
 >
 > Và khi **mức flexibility bắt đầu vượt quá mức cần thiết**, model **bắt đầu overfit**,
 > khiến **cv và test  error bắt đầu tăng** lên (tạo dạng **chữ U điển hình**), trong khi
-> **training error như dự kiến tiếp tục giảm** dù **không liên tục** (**monotonically**)
+> \**training error như dự kiến tiếp tục giảm** dù **không liên tục** (**monotonically**)
 > (khi như đã biết mức flexible cao giúp model bắt đầu capture những noisy pattern
 > của training data - overfit)
 >
@@ -498,7 +498,7 @@
 > Dù cv curve K**HÔNG SÁT HOÀN TOÀN TEST CURVE**, mà nó **underestimate**,
 > tức là cho ra estimated error thấp hơn so với test error. **NHƯNG NÓ CÓ DẠNG
 > CHỮ U KHÁ TƯƠNG  ỨNG VỚI TEST CURVE**. Điều này giúp cho ta có thể
-> **DÙNG CV ERROR ĐỂ CHỌN RA MỨC FLEXIBILITY PHÙ HỢP** VỚI MỨC
+> \**DÙNG CV ERROR ĐỂ CHỌN RA MỨC FLEXIBILITY PHÙ HỢP** VỚI MỨC
 > FLEXIBILITY CÓ TEST ERROR TỐT NHẤT
 >
 > ĐÂY LÀ MỘT LẦN NỮA GIÚP MÌNH HIỂU SÂU HƠN **TẠI SAO TRONG MACHINE

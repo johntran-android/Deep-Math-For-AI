@@ -12,12 +12,12 @@
 > generative model trước:
 >
 > Thế thì, trong cả **Autoregressive** và **VAE**, ta đều **muốn học** được
-> **probability distribution over x p(x)** **hoặc p(x|z)** để **từ đó**, **sampling
+> \**probability distribution over x p(x)** **hoặc p(x|z)** để **từ đó**, **sampling
 > ra new image x** với hi vọng có được image x có likelihood cao.
 >
 > Vậy thì với **Autoregressive**, ta đặt objective là **maximize likelihood
 > p(x)** còn với **VAE** thì ta **chỉ có thể làm gián tiếp** bằng cách
-> **maximize lower bound** của **p(x|z)** như đã biết.
+> \**maximize lower bound** của **p(x|z)** như đã biết.
 >
 > Nhưng nói chung là ta **đều muốn có một distribution over image x** để từ
 > đó sampling.
@@ -53,7 +53,7 @@
 
 > [!NOTE]
 > Để **bắt đầu** ta cũng sẽ **đưa vào một latent variable z**, được **assume** rằng
-> **tuân theo một phân phối xác suất đơn giản p(z)** có thể là **uniform
+> \**tuân theo một phân phối xác suất đơn giản p(z)** có thể là **uniform
 > distribution** hoặc **diagonal Gaussian distribution** (cái này giống VAE)
 >
 > Và ta sẽ **pass z vào một neural network**, gọi là **Generator network G(z)**.
@@ -78,7 +78,7 @@
 
 > [!NOTE]
 > Để làm vậy ta sẽ **JOINTLY** **train một Discriminator network** - là một
-> **binary** **classifier** - trên cả **sampled (generated) image** và **real
+> \**binary** **classifier** - trên cả **sampled (generated) image** và **real
 > image** với nhiệm vụ là p**hân biệt đâu là real (1), đâu là fake (0)**
 >
 > Vậy lúc training, sẽ kiểu như **hai cái sẽ cạnh tranh nhau**, để rồi **G cố
@@ -86,7 +86,7 @@
 > biệt** được đâu là **thật**, đâu là **giả**.
 >
 > Và ta sẽ kì vọng là, bằng cách huấn luyện như vậy, **Generator**, một cách
-> **NGẦM ẨN** bên trong nó sẽ **học được như thế nào là data distribution**, hay
+> \**NGẦM ẨN** bên trong nó sẽ **học được như thế nào là data distribution**, hay
 > nói cách khác, **p_G ~= p_data**. Và khi đó, các generated image từ G sẽ có
 > thể rất giống như đến từ p_data tức là đến từ "thế giới thực"
 
@@ -97,7 +97,7 @@
 <p align="center"><kbd><img src="assets/997b27158699b6241018701bd16241936c12381b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Objective của GAN** thể hiện qua công thức này:
+> \**Objective của GAN** thể hiện qua công thức này:
 >
 > Đầu tiên cái **vế 1** đại khái là có thể hiểu như sau: nó **nằm trong max
 > D** (...) nên mang ý nghĩa là **Discriminator** sẽ muốn **tối đa hóa giá trị kì
@@ -181,7 +181,7 @@
 > t**ăng objective lê**n (gradient ascent)
 >
 > và sau đó **dùng gradient của objective function w.r.t G** để **update G** sao cho
-> **giảm objective xuống** (gradient descent)
+> \**giảm objective xuống** (gradient descent)
 >
 > Nói chung là nói theo kiểu trên cũng được mà diễn giải theo cách thông
 > thường, bằng cách **tạo discriminator loss và generator loss** cũng được
@@ -219,7 +219,7 @@
 > [!NOTE]
 > Một vấn đề khác của training GAN, đó là, **khi bắt đầu training**, G đương
 > nhiên lúc này "**chưa học được gì**", dẫn đến **G(z) cơ bản là random noise**
-> **image** mà ta có thể nói vui là "**rõ một một là đồ giả**"
+> \**image** mà ta có thể nói vui là "**rõ một một là đồ giả**"
 >
 > Và với D thì **dù ban đầu cũng chưa học được gì**, nhưng **sau vài iteration**,
 > nó **cũng bắt đầu học được chút xíu** thì lúc đó nó cũng **đủ để đưa ra dự
@@ -249,7 +249,7 @@
 >
 > minimize log(1-D(G(z))** ta sẽ 
 >
-> **minimize -log(D(G(z)))**
+> \**minimize -log(D(G(z)))**
 >
 > tương đương **maximize log(D(G(z)))** 
 >
@@ -282,7 +282,7 @@
 > Đầu tiên thay E **z~p(z)** [log(1-D(G(z))] bởi E **x~p_G** [log(1-D(x))]
 >
 > Lí do là bởi như đã nói, ta coi như **ngầm ẩn bên trong**, G đang học
-> **dự đoán p_G(x)** - là nỗ lực ước lượng được phân phối xác suất thực, 
+> \**dự đoán p_G(x)** - là nỗ lực ước lượng được phân phối xác suất thực, 
 > tự nhiên  của image mà ta kí hiệu là  ~= **p_data(x)**, và ta cũng xem 
 > như x=G(z) là một sample sampled từ distribution dự đoán đó p_G
 >
@@ -304,7 +304,7 @@
 > Với **discrete variable X** có các **possible value x1, x2, x3** tuân 
 > theo phân phối xác suất p(X) thì **E X~p(x) [f(X)]** tính bằng 
 >
-> **p(X=x1)*f(X1) + p(X=x2)*f(X2) + p(X=x3)*f(X3)**
+> \**p(X=x1)*f(X1) + p(X=x2)*f(X2) + p(X=x3)*f(X3)**
 >
 > Còn với X là continuous variable thì ta sẽ dùng **tích phân**:
 >
@@ -316,10 +316,10 @@
 >
 > và E x~p_G log(1-D(x)) = tích phân p_G(x)*log(1-D(x))*dx
 >
-> **Gom hai vế trong tích phân** (vì đều theo biến x mà) - không có gì
+> \**Gom hai vế trong tích phân** (vì đều theo biến x mà) - không có gì
 > khó hiểu chỗ này, vì **vế đầu** ta nói image **x được lấy từ real image
 > distribution p_data**. Còn **vế sau** ta cũng đang xét các image x, nhưng
-> **lấy từ một distribution khác là p_G**. Đều là image, đều là x cả.
+> \**lấy từ một distribution khác là p_G**. Đều là image, đều là x cả.
 
 <br>
 
@@ -348,9 +348,9 @@
 >
 > i) p(X=x1)*f(X1) lớn nhất** 
 >
-> **ii) p(X=x2)*f(X2) lớn nhất**
+> \**ii) p(X=x2)*f(X2) lớn nhất**
 >
-> **iii) p(X=x3)*f(X3) cũng lớn nhất**
+> \**iii) p(X=x3)*f(X3) cũng lớn nhất**
 >
 > Do đó, sẽ bằng: (**đưa max vào trong tích phân**)
 >
@@ -380,9 +380,9 @@
 >
 > Để từ đó ta có:
 >
-> **D*(x) = p_data(x) / [p_data(x) + p_G(x)]**
+> \**D*(x) = p_data(x) / [p_data(x) + p_G(x)]**
 >
-> *Justin chú ý là ta có công thức D* nhưng không tính được vì cả p_data và
+> \*Justin chú ý là ta có công thức D* nhưng không tính được vì cả p_data và
 > p_G ta đều không biết
 
 <br>
@@ -432,15 +432,15 @@
 > Rồi, ta sẽ **thấy nó có dạng của hai cái KL Divergence** (cái này là gì thì gặp
 > nhiều rồi, đã học bên DLYo và CS224n) của hai cặp phân phối xác suất:
 >
-> **p_data(x)** đóng vai **p(x)** trong công thức
+> \**p_data(x)** đóng vai **p(x)** trong công thức
 >
-> **[p_data(x) + p_G(x)]/2** đóng vai **q(x)**
+> \**[p_data(x) + p_G(x)]/2** đóng vai **q(x)**
 >
 > và 
 >
-> **p_G(x)** đóng vai **p(x)** trong công thức
+> \**p_G(x)** đóng vai **p(x)** trong công thức
 >
-> **[p_data(x) + p_G(x)]/2** đóng vai **q(x)**
+> \**[p_data(x) + p_G(x)]/2** đóng vai **q(x)**
 
 <br>
 
@@ -507,14 +507,14 @@
 > không**.
 >
 > Để hiểu ý này mình nhớ lại trong bài về neural net architecture design của
-> **DLYo** khi nói đến UAT - **Universal Approximation Theorem**,  trong đó người
+> \**DLYo** khi nói đến UAT - **Universal Approximation Theorem**,  trong đó người
 > ta nói rằng **một MLP với một hidden layer có thể ước  lượng xấp sỉ một
 > function phức tạp cỡ nào cũng được**, **miễn là có đủ  hidden unit**. Tuy
 > nhiên, **không biết bao nhiêu là đủ**, và người ta có những nghiên cứu cho
 > thấy để **tăng khả represent của neural network thì số  unit phải tăng
 > exponentially**, nói tóm lại là **theo lí thuyết là có thể** nhưng **thực tế thì không
 > chắc**. Và dù ta có dùng nhiều layer hơn để giảm số unit cần thiết thì cũng
-> **không có gì chắc chắc rằng ta sẽ luôn có thể thiết kế được kiến trúc của D
+> \**không có gì chắc chắc rằng ta sẽ luôn có thể thiết kế được kiến trúc của D
 > sao cho đủ để represent D***
 >
 > Và ta còn nhớ (cũng trong bài về neural net architecture design của DLYo)

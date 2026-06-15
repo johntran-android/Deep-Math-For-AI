@@ -24,8 +24,8 @@
 >
 > Integer Range -2^31 -> 2^31-1 là sao?
 >
-> **3 bits**: 111 = 2**2 + 2**1 + 2**0 = 4 + 2 + 1 = 7 = 8 - 1 = **2**3-1**
-> **4 bits**: 1111 =2**3 + 2**2 + 2**1 + 2**0 = 8 + 4 + 2 + 1 = 15 = 16 - 1 = **2**4 - 1
+> \**3 bits**: 111 = 2**2 + 2**1 + 2**0 = 4 + 2 + 1 = 7 = 8 - 1 = **2**3-1**
+> \**4 bits**: 1111 =2**3 + 2**2 + 2**1 + 2**0 = 8 + 4 + 2 + 1 = 15 = 16 - 1 = **2**4 - 1
 > n bits**: .....**2^n - 1**
 >
 > Với 32 bits, **trừ 1 bit dành cho 'dấu' (dương hay âm)** thì ta **còn 31 bits**. 
@@ -55,7 +55,7 @@
 
 > [!NOTE]
 > Cái dạng **unsigned int** này nó sẽ cho phép **represent integer** ở
-> **range lớn hơn bằng cách hi sinh phần negative bằng cách xài luôn cái
+> \**range lớn hơn bằng cách hi sinh phần negative bằng cách xài luôn cái
 > bit dành cho dấu**  cộng hay trừ (tức là khi cần integer lớn hơn 2 tỉ và biết
 > rằng không mang giá trị âm thì có thể dùng cái này.
 >
@@ -70,7 +70,7 @@
 <p align="center"><kbd><img src="assets/d8400e4f828c74552229c7ec21f22d47b3695a8f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **char data type** dùng để store một **character**. Chiếm **1 byte = 8 bits.**
+> \**char data type** dùng để store một **character**. Chiếm **1 byte = 8 bits.**
 >
 > Với **8 bits** thì và có support số âm thì dùng 1 bit cho sign, còn lại 7 bits. Tương tự ở
 > slide trước, số dương lớn nhất là 2^7-1 = 128-1 = 127 số âm nhỏ nhất là -127-1 =
@@ -87,7 +87,7 @@
 > [!NOTE]
 > float dùng **32 bits** để represent **real number**.  Như đã nói bên **LLM**, nó
 > tổ chức theo kiểu **1 bit đầu dành cho sign**,  **8 bits tiếp dành cho exponent**,
-> **23 bits tiếp theo dành cho fraction.** Và vì bị giới hạn bởi chỉ có 32 bits, trong khi phần fraction - thập phân là chuỗi
+> \**23 bits tiếp theo dành cho fraction.** Và vì bị giới hạn bởi chỉ có 32 bits, trong khi phần fraction - thập phân là chuỗi
 > vô hạn nên float bị vấn đề **precision - tức là không thể nào represent chính xác
 > tuyệt đối.**
 
@@ -217,9 +217,9 @@
 <p align="center"><kbd><img src="assets/07675c7c9c4eb0f7a27a03e3aeb755a50686c45a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **cd .. :**để change directory về parent's directory
+> \**cd .. :**để change directory về parent's directory
 >
-> **pwd = print working directory** để in ra directory path hiện tại
+> \**pwd = print working directory** để in ra directory path hiện tại
 
 <br>
 
@@ -295,7 +295,7 @@
 <p align="center"><kbd><img src="assets/9ffa0d952873f83ee8531850fa81c882fa5a31d9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **rm -f file name** 
+> \**rm -f file name** 
 > sẽ delete ngay lập tức và
 > không có cách nào undo
 
@@ -306,7 +306,7 @@
 <p align="center"><kbd><img src="assets/f1ee05b956ce307368333053b31cebde0b2be373.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **rm -r** folder_name
+> \**rm -r** folder_name
 >
 > (again, -r có nghĩa là recursively
 > \- delete toàn bộ thư mục)
@@ -331,7 +331,7 @@
 
 > [!NOTE]
 > mv: move file/
-> **change name**
+> \**change name**
 
 <br>
 

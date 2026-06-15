@@ -72,7 +72,7 @@ Learning Objectives
 >
 > Tags
 > are also used for coreference resolution. If you have the two sentences, the
-> **Eiffel Tower** is located in Paris, **it** is 324 meters high, you can use part-of-speech
+> \**Eiffel Tower** is located in Paris, **it** is 324 meters high, you can use part-of-speech
 > tagging to infer that **it refers in this context to the Eiffel Tower.** 
 >
 > Another
@@ -252,7 +252,7 @@ Learning Objectives
 > Giờ ta đã biết list comprehension trong Python thì cái
 > này tương đương như sau:
 >
-> **words = [] 
+> \**words = [] 
 > for line in lines:  
 >     words.append(line.split('\\t')[0])**
 
@@ -263,7 +263,7 @@ Learning Objectives
 > created like this:
 >
 > Đại khái không có gì khó hiểu cả, vì **ta đã biết** **nó có dạng**
-> **word + tab + tag** thì ta **split nó bằng tab** character rồi **lấy
+> \**word + tab + tag** thì ta **split nó bằng tab** character rồi **lấy
 > thằng đầu** sẽ cho ra word
 
 <br>
@@ -351,7 +351,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là vậy là ta đã có **1 bộ vocabulary** với **word - count** 
 > trong corpus để xài. Thì ổng nói **thông thường** ta sẽ
-> **save nó vào file để mà xài** sau này nhưng ở đây không làm
+> \**save nó vào file để mà xài** sau này nhưng ở đây không làm
 > nhưng muốn làm cũng dễ gợi ý là nó rất giống với đoạn
 > code read the file
 
@@ -524,7 +524,7 @@ Learning Objectives
 > question you want to answer is **whether the following word in the sentence is a
 > noun, a verb, or some other parts of speech**. If you're familiar with the English
 > language, you might guess that if you see a **verb** in the sentence, the
-> **following** word is **more likely to be a noun**. Rather than another verb.
+> \**following** word is **more likely to be a noun**. Rather than another verb.
 >
 > \/**So the idea here, is that the likelihood of the next words part of speech tag in
 > a sentence tends to depend on the part of speech tag of the previous word**\/.
@@ -532,7 +532,7 @@ Learning Objectives
 
 > [!NOTE]
 > So the idea here, is that the **likelihood** of the **next words's**
-> **part of speech tag** in a sentence **tends** to **depend** on
+> \**part of speech tag** in a sentence **tends** to **depend** on
 > the **part of speech tag of the previous word** Đại khái là trong một câu, khả năng / **xác suất của một từ là
 > loại từ** **gì** sẽ d**epend vào loại từ của từ trước đó**.
 
@@ -556,9 +556,9 @@ Learning Objectives
 
 > [!NOTE]
 > So what's our Markov chains? They're a type of **stochastic model** that describes a
-> **sequence of possible events.** To get the **probability for each event**, it needs only
+> \**sequence of possible events.** To get the **probability for each event**, it needs only
 > the **states of the previous events**. The word **stochastic** just means random or
-> **randomness**. So a stochastic model, incorporates and models processes does have
+> \**randomness**. So a stochastic model, incorporates and models processes does have
 > a random component to them.
 
 > [!NOTE]
@@ -576,7 +576,7 @@ Learning Objectives
 > [!NOTE]
 > A **Markov chain**, can be **depicted** as a **directed graph**. So in the context of **Computer
 > Science**, a graph is a **kind of data structure** that is visually represented, as a set of
-> **circles connected by lines**. When the lines that connect the circles have **arrows** that
+> \**circles connected by lines**. When the lines that connect the circles have **arrows** that
 > indicates a certain **direction**, this is called a **directed graph**. The **circles** of the graph,
 > represents **states of our model**. A state refers to a **certain condition of the present
 > moment**. For example, if you are using a graph to model whether **water** is in a **frozen**
@@ -591,7 +591,7 @@ Learning Objectives
 > Đại khái là nói qua về khái niệm **Markov chain** trong **Computer Science.**
 >
 > Đại khái là vẽ circle với **q1, q2, q3** là **các trạng thái (state)** có thể có, thì các
-> **directed line** sẽ thể hiện sự **thay đổi trạng thái từ này sang trạng thái khái**.
+> \**directed line** sẽ thể hiện sự **thay đổi trạng thái từ này sang trạng thái khái**.
 >
 > Thì đại khái Markov dùng identify khả năng của từ kế tiếp sẽ là POS tag loại gì tính từ
 > hay danh từ
@@ -618,7 +618,7 @@ Learning Objectives
 > 1 Introduction to **parts of speech tags** and **transition probabilities**
 >
 > 2 Representation of **sentences** as **graphs** with **part of speech tags** as
-> **events**
+> \**events**
 >
 > 3 **Markov property** in modeling **transition probabilities**
 >
@@ -648,18 +648,18 @@ Learning Objectives
 > [!NOTE]
 > Now, you know what **states** are. In this video, we're going to introduce **parts of
 > speech tags**. In other words, you will see how you can **go from one state** to
-> **another state**. In doing so, we will define a term that we call **transition
+> \**another state**. In doing so, we will define a term that we call **transition
 > probabilities**. These transition probabilities tell you about **the chances of going
 > from one POS tag to another**. If you think about a sentence as a sequence of
 > words with associated part of speech tags. You can **represent that sequence
 > with a graph**. Where the **parts of speech tags are events that can occur.**
 > Depicted by the state of our model graph. In this example, **NN** is for a noun,
-> **VB** is for verbs. And **other**, stands for all other tags.
+> \**VB** is for verbs. And **other**, stands for all other tags.
 
 > [!NOTE]
 > If you think about a **sentence as a sequence of words with
 > associated part of speech tags**. You can represent that
-> **sequence** with a **graph**
+> \**sequence** with a **graph**
 >
 > Coi mỗi **POS của từ trong câu** là một **state**, thì **cái câu là
 > sequence các state transition sang state khác** có thể vẽ
@@ -681,7 +681,7 @@ Learning Objectives
 > them. Which defined the **probability of going from one state to another**.
 >
 > There is one less important property that's Markov chains possess. The so called
-> **Markov property.** Which states that the **probability of the next event only depends on
+> \**Markov property.** Which states that the **probability of the next event only depends on
 > the current event.** The Markov property helps keep the model simple. By saying, **all
 > you need to determine the next state is the current states**. **It doesn't need information
 > from any of the previous states.**
@@ -833,7 +833,7 @@ Learning Objectives
 >
 >  2 **Transition probabilities** in Markov models and HMMs:
 >  • **Markov chain model** and **HMM** have t**ransition probabilities** represented by 
-> **matrix A**.
+> \**matrix A**.
 >  • A is of dimensions (**NxN)**, where **N is the number of hidden states**.
 >  • **Hidden states** represent **parts of speech**, such as **noun, verb**, or others.
 >
@@ -907,7 +907,7 @@ Learning Objectives
 > [!NOTE]
 > Thì đại khái là một **hidden Markov model** cũng sẽ **giống như
 > Markov model**, sẽ có **transition probabilities**, thể hiện bởi
-> **table (transition table)** hay **matrix A (transition matrix) có
+> \**table (transition table)** hay **matrix A (transition matrix) có
 > shape: NxN N là số hidden states**
 
 <br>
@@ -918,12 +918,12 @@ Learning Objectives
 
 > [!NOTE]
 > The Hidden Markov model also has **additional probabilities** known as
-> **emission probabilities.** These describe the **transition from the hidden
+> \**emission probabilities.** These describe the **transition from the hidden
 > states of your Hidden Markov model,** which are parts of speech seen
 > here as circles for noun, verb, and the other, **to the observables** or the
 > words of your corpus shown here inside **rectangles**. Here, for example,
 > are the **observables** for the **hidden states VB**, which are the words; **going**,
-> **to**, **eat**.
+> \**to**, **eat**.
 
 > [!NOTE]
 > Và một mô hình Markov còn có thêm các thông số xác
@@ -940,7 +940,7 @@ Learning Objectives
 
 > [!NOTE]
 > The emission probability from the hidden states, verb to the observable, eat, is 0.5.
-> **This means when the model is currently at the hidden state for a "verb", there is a 50
+> \**This means when the model is currently at the hidden state for a "verb", there is a 50
 > percent chance that the observable the model will emit is the word, "eat"**. Here's an
 > equivalent representation of the emission probabilities in the form of a table. Each row
 > is designated for one of the hidden states. A column is designated for each of the
@@ -959,7 +959,7 @@ Learning Objectives
 > column là Observable state
 >
 > Và hiểu thêm ý nghĩa của nó trong câu quan trọng sau:
-> **Emission matrix sẽ thể hiện xác suất của hidden state có thể
+> \**Emission matrix sẽ thể hiện xác suất của hidden state có thể
 > chuyển thành các từ cụ thể trong corpus**
 
 <br>
@@ -1038,7 +1038,7 @@ Learning Objectives
 > the Markov model.
 >
 > 3 Calculating Transition Probabilities: Transition probabilities are calculated based on the
-> **occurrences of tag combinations** in the **training corpus.**
+> \**occurrences of tag combinations** in the **training corpus.**
 >
 > 4 Counting Tag Pairs: The function **C(t_i-1, t_i)** counts the **occurrences of tag pair (t_i-1, t_i)**
 > in the corpus.
@@ -1047,7 +1047,7 @@ Learning Objectives
 > divided by the **sum of occurrences of tag t_i-1 with all other tags t_j.**
 >
 > 6 Haiku Example: Training a **model for haiku** using a **provided corpus** and making
-> **necessary modifications**.
+> \**necessary modifications**.
 >
 > 7 **Corpus** **Preparation**: Adding **start tokens** to each line, **converting words to lowercase**, and
 > preserving punctuation.
@@ -1056,7 +1056,7 @@ Learning Objectives
 > transition matrix.**
 >
 > 9 Importance of Probabilities: **Probabilities** allow for the **representation of transitions**
-> **between states** in the Markov model.
+> \**between states** in the Markov model.
 
 <br>
 
@@ -1091,7 +1091,7 @@ Learning Objectives
 
 > [!NOTE]
 > Do đó ta nói probability một ô xanh dương biến thành ô tím hay 
-> **xác suất một ô tím xuất hiện sau khi một ô xanh dương đã xuất hiện** 
+> \**xác suất một ô tím xuất hiện sau khi một ô xanh dương đã xuất hiện** 
 >
 > P(tím | xanh dương) = 2/3
 
@@ -1104,7 +1104,7 @@ Learning Objectives
 > [!NOTE]
 > More formally, in order to calculate all the **transition probabilities** of your
 > Markov model, you'd first have to count **all occurrences of tag pairs** in your
-> **training corpus**. I'll define this as the **function C** of the tags t_i minus 1 comma
+> \**training corpus**. I'll define this as the **function C** of the tags t_i minus 1 comma
 > t_i which returns the counts for the tag t_i minus 1 followed by the tag t_i in
 > your training corpus. Next, you calculate the probability of a tag t_i following
 > another tag, t_i minus 1 as P of t_i given t_i minus 1. This counts of t_i minus
@@ -1186,7 +1186,7 @@ Learning Objectives
 > programming assignments, all calculations must be performed.
 >
 > 4 Transition Matrix Calculation: Once the counts are obtained, **divide each count** by the
-> **corresponding row sum** to calculate **transition probabilities.**
+> \**corresponding row sum** to calculate **transition probabilities.**
 >
 > 5 Row Sum Interpretation: **Row sums represent all pairs of words where the current state
 > is a specific part of speech, and the next state can be any part of speech.**
@@ -1198,7 +1198,7 @@ Learning Objectives
 > times Epsilon to the divisor for smoothin**g.
 >
 > 8 Smoothing Benefits: **Smoothing** **eliminates zero value** entries and allows the model to
-> **generalize** to other examples.
+> \**generalize** to other examples.
 >
 > 9 Transition Matrix After Smoothing: A transition matrix example after applying smoothing
 > with Epsilon (0.001).
@@ -1256,7 +1256,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/a1fd943804afbaee863bcce8fb5175f36e7f5de0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Tương tự như vậy đến hết table**. Ta sẽ viết code để làm việc này
+> \**Tương tự như vậy đến hết table**. Ta sẽ viết code để làm việc này
 > trong P. A
 >
 > In the last line, you have to take into account the tagged words on
@@ -1299,7 +1299,7 @@ Learning Objectives
 
 > [!NOTE]
 > Cách giải quyết là **Smoothing**, đã từng học ở phần trước, là
-> **cộng tử cho 1 số epsilon** và **mẫu cho N*epsilon** để **tổng P vẫn
+> \**cộng tử cho 1 số epsilon** và **mẫu cho N*epsilon** để **tổng P vẫn
 > = 1**, và giải quyết được vấn đề trên
 
 <br>
@@ -1317,7 +1317,7 @@ Learning Objectives
 >
 > One more thing before you go, and a real-world example, you might
 > not want to apply smoothing to the **initial probabilities in the first row** of the
-> **transition matrix**. That's because if you apply smoothing to that row by adding a
+> \**transition matrix**. That's because if you apply smoothing to that row by adding a
 > small value to possibly zeroed valued entries. You'll effectively allow a sentence
 > to start with any parts of speech tag, including punctuation
 
@@ -1356,10 +1356,10 @@ Learning Objectives
 
 > [!NOTE]
 > 1 Introduction: Introduction to the need for a new matrix to incorporate
-> **word probabilities** into the equation.
+> \**word probabilities** into the equation.
 >
 > 2 **Emission** Matrix: Introduction to the emission matrix, which provides
-> **probabilities of** \\/**transitioning from a word to a part of speech tag**\\/.
+> \**probabilities of** \\/**transitioning from a word to a part of speech tag**\\/.
 >
 > 3 Counting **Co-Occurrences**: Counting the co-occurrences of part of
 > speech tags with specific words in the corpus to **populate the emission
@@ -1415,14 +1415,14 @@ Learning Objectives
 
 > [!NOTE]
 > Hiểu cái kia rồi thì cái này cũng tương tự, Khả năng / Xác suất một
-> **trạng thái** **t_i** (t kí hiệu cho tag, POS tag, 1 **hidden** state) trở
+> \**trạng thái** **t_i** (t kí hiệu cho tag, POS tag, 1 **hidden** state) trở
 > thành hay  kế tiếp một **trạng thái w_i** (w kí hiệu cho word, cùng
 > là i vì ở cùng 1 vị  trí, 1 cái là ẩn 1 cái là **observable**), sẽ được
 > tính bằng
 >
 > tổng số lần mà **t_i -> w_i**  kí hiệu là C(t_i, w_i)
 >
-> **Chia** cho **tổng số sự kiện t_i chuyển sang từ bất kì**  
+> \**Chia** cho **tổng số sự kiện t_i chuyển sang từ bất kì**  
 > Σ j=1:N C(t_i, w_j) 
 >
 > và **cũng chính là tổng số lần t_i xuất hiện C(t_i)**
@@ -1553,7 +1553,7 @@ Learning Objectives
 
 > [!NOTE]
 > Before filling this matrix with the values of the
-> **transition_counts** dictionary you should **sort the tags** so
+> \**transition_counts** dictionary you should **sort the tags** so
 > that **their placement** in the matrix is **consistent**:
 
 <br>
@@ -1832,7 +1832,7 @@ Learning Objectives
 > states.
 >
 > 8 Iterative process of **traversing the model graph** and **making optimal choices** for
-> **hidden states.**
+> \**hidden states.**
 >
 > 9 Computation of **multiple paths simultaneously** to **find the most likely sequence.**
 >
@@ -1853,7 +1853,7 @@ Learning Objectives
 >
 > Cho trước một câu (**sequence of words**) và một model
 > (**Markov model**) với **transition probability matrix** và
-> **emission probability matrix**
+> \**emission probability matrix**
 >
 > Bài toán đặt ra là **tìm xác suất cao nhất của một chuỗi các
 > POS** sử dụng Viterbi algorithm
@@ -1898,7 +1898,7 @@ Learning Objectives
 > loại từ** khác nhau lúc thì verb lúc thì noun..
 >
 > Thì đây, người ta giới thiệu **Viterbi algorithm** có thể dùng giúp
-> **tìm ra xác suất cao nhất của các POS tag cho một câu như thế
+> \**tìm ra xác suất cao nhất của các POS tag cho một câu như thế
 > này.**
 
 <br>
@@ -1913,7 +1913,7 @@ Learning Objectives
 > words, until you get the probability of an entire sequence.
 
 > [!NOTE]
-> **Cho trước các emission / transition probability matrix**, giờ có
+> \**Cho trước các emission / transition probability matrix**, giờ có
 > một câu **"I love to learn"**. **Yêu cầu** là ta **tìm ra các POS tag của chúng**
 >
 > Thì đại khái là ổng **GIẢ SỬ ĐÃ CÓ MỘT CÁI MODEL** như hình
@@ -2002,11 +2002,11 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/bb78b3f38c8711327c23ee5068bd1772e432b396.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Sequence probability** sẽ tính bằng cách lấy **probability của tất cả
+> \**Sequence probability** sẽ tính bằng cách lấy **probability của tất cả
 > step nhân lại (product)**
 >
 > Thực tế Viterbi algorithm nó sẽ **thử nhiều path** (step) khác nhau để
-> **chọn cái nào có sequence probability cao nhất**.
+> \**chọn cái nào có sequence probability cao nhất**.
 
 <br>
 
@@ -2069,8 +2069,8 @@ Learning Objectives
 >  **1 Initialization Step**: The initialization step involves populating the **first
 > column** of the **auxiliary** matrices C and D.  **2 Matrix C Initialization**: In matrix C, the first column represents the
 > probability of transitioning from the **start states (π)** to the **first tag (t_i)** and
-> **word (w_1)**. The entries in the first column (**c_1,1**) are calculated as the
-> **product of** the transition probability **A(1,i)** from the initial states and the
+> \**word (w_1)**. The entries in the first column (**c_1,1**) are calculated as the
+> \**product of** the transition probability **A(1,i)** from the initial states and the
 > corresponding emission probability (b) for the word.  **3 Matrix D Initialization**: In matrix D, the first column stores the labels
 > representing the different states traversed while finding the most likely
 > sequence of parts of speech tags. In the first column, all entries are set to zero
@@ -2112,13 +2112,13 @@ Learning Objectives
 > π-> t_2 -> w1
 > π -> t_3 -> w1
 >
-> *π->t_i (i=1,2,3)
+> \*π->t_i (i=1,2,3)
 >
 > Tính Probs π -> t_i (i=1,2,3) chính là **hàng đầu tiên** của 
-> **Transition matrix** (A) (ví dụ π->NN, π->VB, π->O)
+> \**Transition matrix** (A) (ví dụ π->NN, π->VB, π->O)
 >
 >
-> *t_i (i=1,2,3) -> w_1
+> \*t_i (i=1,2,3) -> w_1
 >
 > Tính Probs t_i->w_1 chính là **1 cột của Emission matrix (B)** với 
 > cái cội tương ứng với **index của từ w_1 nên** 
@@ -2267,17 +2267,17 @@ Learning Objectives
 > Ví dụ tính C1,2 đại khái là chọn **k** làm sao mà 
 > maximize **Ck,1 * ak,1 * b1,cindex(w2)**
 >
-> **b1,cindex(w2)**: is simply the emission probability from 
+> \**b1,cindex(w2)**: is simply the emission probability from 
 > tag t1 towards w2. Cái này fix rồi
 >
 > \-> Đơn giản đó là emission prob từ tag t_1 thành từ w_2.
 >
-> **ak,1**, which is the **transition** probability from the 
+> \**ak,1**, which is the **transition** probability from the 
 > part of speech tag **t_k** to the current tag **t_1**
 >
 > \-> Là transition probs từ các trạng thái t_k đến t_1. vk = 1,2,..t_N
 >
-> **Ck,1** là represent of probability the preceding path you traversed
+> \**Ck,1** là represent of probability the preceding path you traversed
 > Đại khái hiểu là probability từ đầu cho đến trạng thái t_1
 >
 > You **choose the k** which **maximizes the entire formula**. 
@@ -2347,18 +2347,18 @@ Learning Objectives
 > Đơn giản tóm gọn:
 >
 > Bắt đầu bằng cách xem trong cái **cột cuối** cùng của C thằng nào
-> **to nhất** thì lấy index của nó. Gán cho **s** *Ở đây: theo bảng C này, ở cột cuối, cái ô ở hàng đầu (index = 1) to
+> \**to nhất** thì lấy index của nó. Gán cho **s** *Ở đây: theo bảng C này, ở cột cuối, cái ô ở hàng đầu (index = 1) to
 > nhất **nên s = 1.** Giả dụ t1, t2, t3.. là hidden state là POS tag Verb,
 > Noun, Adj..  tạm gọi là **loại từ** cho gần gũi.
 >
 > Và w_K.. là observable state là 'eat' thì khả năng cao nhất của một
-> **loại từ** biến thành **' eat'**  chính là **verb** - cái **loại từ** tương
+> \**loại từ** biến thành **' eat'**  chính là **verb** - cái **loại từ** tương
 > ứng với **t1.**
 >
 > Qua bảng D, cột cuối, xem với index **s** đó, là ô nào, thì đánh dấu
 > màu xanh vào ô đó.
 >
-> *Ở đây, s = 1, thì qua D đánh dấu màu xanh vào ô số 1.
+> \*Ở đây, s = 1, thì qua D đánh dấu màu xanh vào ô số 1.
 >
 > Sau đó từ ô đó mang số bao nhiêu thì nó sẽ thể hiện cái ô trước
 > đó. Ví dụ 3 thì cái ô trước đó - tức là của cái cột trước sẽ là ô thứ 3
@@ -2861,7 +2861,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là sơ khởi, ta sẽ gán POS cho từ một ví dụ 'back' một cách ngây thơ là cứ dùng POS nào mà
-> **POS-'back'** có **giá trị cao nhất trong Emission count dict**. Có nghĩa ta coi trong training, **loại từ
+> \**POS-'back'** có **giá trị cao nhất trong Emission count dict**. Có nghĩa ta coi trong training, **loại từ
 > (POS) của từ 'back' chính loại từ mà gắn với 'back' nhiều nhất** trong **training corpus** 
 >
 > Ta sẽ dùng cách này để predict tag của các từ trong test corpus, cụ thể là **prep** - cái list từ đã extract và
@@ -3068,13 +3068,13 @@ Learning Objectives
 > π-> t_2 -> w1
 > π -> t_3 -> w1
 >
-> *π->t_i (i=1,2,3)
+> \*π->t_i (i=1,2,3)
 >
 > Tính Probs π -> t_i (i=1,2,3) chính là **hàng đầu tiên** của 
-> **Transition matrix** (A) (ví dụ π->NN, π->VB, π->O)
+> \**Transition matrix** (A) (ví dụ π->NN, π->VB, π->O)
 >
 >
-> *t_i (i=1,2,3) -> w_1
+> \*t_i (i=1,2,3) -> w_1
 >
 > Tính Probs t_i->w_1 chính là **1 cột của Emission matrix (B)** với 
 > cái cội tương ứng với **index của từ w_1 nên** 

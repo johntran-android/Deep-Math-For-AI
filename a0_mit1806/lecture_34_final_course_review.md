@@ -140,7 +140,7 @@
 >
 > Vậy kết luận: Tồn tại vector khác 0 khiến ATx = 0 tức là tồn tại
 > vector khác 0 khiến quadratic form của AAT bằng 0, suy ra nó
-> **KHÔNG POSITIVE DEFINITE.**
+> \**KHÔNG POSITIVE DEFINITE.**
 
 <br>
 
@@ -482,7 +482,7 @@
 >
 > p = Ax = A(ATA inv)ATb = Pb 
 >
-> **=> P = A(ATA inv)AT**
+> \**=> P = A(ATA inv)AT**
 
 <br>
 

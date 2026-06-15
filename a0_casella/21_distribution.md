@@ -10,7 +10,7 @@
 > [!NOTE]
 > Đại khái là thế này: giả sử ta có một **random variable X**, thì như đã
 > biết từ Stat110, khi **apply một function g lên X**, ta sẽ có một
-> **random variable** mới. Nói cách khác, gọi **Y = g(X)**, thì **Y là một
+> \**random variable** mới. Nói cách khác, gọi **Y = g(X)**, thì **Y là một
 > rv**
 >
 > Thế thì đại ý là, dễ thấy rằng ta có thể **mô tả hành vi của Y** **dựa
@@ -33,18 +33,18 @@
 > variable mang giá trị bằng 1 sau khi thực hiện experiment. Diễn đạt
 > chuẩn theo toán học:
 >
-> **P_X(X = x) = P({s** ∈ **S: X(s) = x})**
+> \**P_X(X = x) = P({s** ∈ **S: X(s) = x})**
 >
 > Vế phải **P là probability function** gắn với **original** **sample**
-> **space**. Còn **P_X là induced probability function** gắn với **"new"
+> \**space**. Còn **P_X là induced probability function** gắn với **"new"
 > sample space là space các possible values của X**. Cho nên có thể
 > ghi:
 >
-> **P_X(X=x1) = P({s1,s2})**
+> \**P_X(X=x1) = P({s1,s2})**
 >
 > Rồi, tiếp theo ta ôn lại khái niệm **event**, thì event chẳng qua là một
-> **SUBSET** các possible outcome của SAMPLE SPACE. Ví dụ như
-> **X = x1** là một event trong sample space của X (mình gọi là ΩX) nó
+> \**SUBSET** các possible outcome của SAMPLE SPACE. Ví dụ như
+> \**X = x1** là một event trong sample space của X (mình gọi là ΩX) nó
 > sẽ chứa chứa possible value x1, và cũng có thể được định nghĩa bởi
 > các p.o trong original sample space;
 >
@@ -116,7 +116,7 @@
 >
 > Và như vậy:
 >
-> **P(Y** ∈ **A)** = P({x ∈ ΩX: g(x) ∈ A}) 
+> \**P(Y** ∈ **A)** = P({x ∈ ΩX: g(x) ∈ A}) 
 >
 > = P({x ∈ ΩX: x ∈ g_inv(A)}) 
 >

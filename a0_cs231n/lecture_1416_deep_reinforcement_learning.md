@@ -274,7 +274,7 @@
 > p(s0)**. sau đó, iteratively thực hiện các bước:
 >
 > Agent sẽ **chọn (sampling) một hành động a_t** từ **policy distribution**
-> **pi(a|s_t)** đây có thể hiểu là **phân phối xác suất quy định giá trị của
+> \**pi(a|s_t)** đây có thể hiểu là **phân phối xác suất quy định giá trị của
 > hành động a dựa trên giá trị hiện tại của state s_t**
 >
 > Environment sẽ **sampling reward r_t từ distribution R(r|s_t, a_t)**
@@ -319,7 +319,7 @@
 > Công thức có thể hiểu rằng: Ta sẽ **tìm một policy pi** (là phân phối xác
 > suất quy định với một state s thì action a sẽ là gì), sao cho, **khi làm các
 > bước hồi nãy**, thì t**ổng reward** (sau khi đã nhân với hệ số discount)
-> **sẽ có giá trị kì vọng lớn nhất.**
+> \**sẽ có giá trị kì vọng lớn nhất.**
 
 <br>
 
@@ -331,7 +331,7 @@
 > Nói về **value function** và **q function**.
 >
 > Value function của s - **V_pi(s)** cho biết **khi bắt đầu với state s** và
-> **tuân theo policy pi**, thì sau này, **giá trị kì vọng của tổng discounted
+> \**tuân theo policy pi**, thì sau này, **giá trị kì vọng của tổng discounted
 > reward là bao nhiêu**
 >
 > Nôm na là, nó cho biết **với một state s nào đó**, thì ta **có thể kì vọng có
@@ -366,7 +366,7 @@
 > và thực hiện action a**, và **nhận một reward r**, để rồi **state mới là s'** , và sau đó **nếu ta tiếp tục hành động theo cách tối ưu với policy pi***
 > thì khi đó, ta sẽ có phương trình Bellman cho biết:
 >
-> **reward tốt nhất mà ta có được khi bắt đầu với state s và action a - thể
+> \**reward tốt nhất mà ta có được khi bắt đầu với state s và action a - thể
 > hiện bằng Q*(s, a)** sẽ cũng bằng kì vọng của [ r + reward lớn nhất mà
 > ta có được khi thực hiện action a' khi từ state s' theo optimal policy pi* ]
 

@@ -95,7 +95,7 @@
 
 > [!NOTE]
 > X = **seq(1:10)** hay chỉ cần gõ
-> **1:10** cho ra 1,2,3...10
+> \**1:10** cho ra 1,2,3...10
 
 <br>
 
@@ -107,7 +107,7 @@
 > x = seq(-pi, pi, length = 50)
 > y = x
 > f = outer(x, y, function(x,y) cos(y) / (1 + x^2))
-> **contour**(x, y, f)
+> \**contour**(x, y, f)
 
 <br>
 
@@ -267,7 +267,7 @@
 
 > [!NOTE]
 > Auto = **read.table**("~/Desktop/Learn ML/****STAT/Auto.data", **header** = T, 
-> **na.strings** = "?", **stringsAsFactors** = T)
+> \**na.strings** = "?", **stringsAsFactors** = T)
 >
 > View(Auto)
 >
@@ -275,7 +275,7 @@
 > header.**
 >
 > Còn **na.strings = "?"** giúp R biết k**hi nào nó gặp kí tự này** thì nó biết đó là
-> **chỗ bị miss data.**
+> \**chỗ bị miss data.**
 >
 > Còn **stringssAsFactors** = True sẽ cho R biết **chỗ nào là string** thì treat
 > nó như factor = category hay ở trong đây gọi là **quantitative variable**
@@ -310,7 +310,7 @@
 ### **plot**(Auto$**cylinders**, Auto$**mpg**, col = 'red')
 
 > [!NOTE]
-> **plot**(Auto$**cylinders**, Auto$**mpg**, col = 'red')
+> \**plot**(Auto$**cylinders**, Auto$**mpg**, col = 'red')
 >
 > Để access feature của table thì dùng $
 >

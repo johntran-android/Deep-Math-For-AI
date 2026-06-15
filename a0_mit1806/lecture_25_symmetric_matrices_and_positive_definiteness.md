@@ -156,7 +156,7 @@
 
 > [!NOTE]
 > Và như ta đã biết với orthogonal matrix, **Q inverse** chính là
-> **Q transpose (*)**, Từ đó ta có **A = QΛQT**
+> \**Q transpose (*)**, Từ đó ta có **A = QΛQT**
 >
 > gs cho rằng đây chính là **công thức nổi tiếng** của Linear
 > Algebra
@@ -172,7 +172,7 @@
 > ===
 >
 > (*): Ôn lại nhanh, là vì với Q, các columns **orthogonal** và
-> **length bằng 1**. Nên **QTQ = QQT = I** (các columns dot
+> \**length bằng 1**. Nên **QTQ = QQT = I** (các columns dot
 > product với chính nó thì bằng norm = 1, còn dot product với
 > khác nó thì thành 0 do perpendicular) => **QT chính là Q_inv**
 
@@ -341,11 +341,11 @@
 
 > [!NOTE]
 > Thế thì ta sẽ xem xét **x_barTx**: Nhắc lại **x_bar** là
-> **vector** mà **mỗi component** là **conjugate của các
+> \**vector** mà **mỗi component** là **conjugate của các
 > phần tử** tương ứng **của** **x**
 >
 > (**conjugate** là khái niệm nhắc lại lần nữa, nếu một
-> **complex number** n = a + b*i thì conjugate của nó là
+> \**complex number** n = a + b*i thì conjugate của nó là
 > n_bar = a - b*i, tức là nó **đổi dấu của phần ảo, và cũng
 > dễ hiểu với số thực, tức không có phần ảo thì lấy gì đổi
 > dấu, thì conjugate của số thực cũng là chính nó**)
@@ -413,7 +413,7 @@
 > [!NOTE]
 > tiếp theo, gs viết lại điều ta có hồi nãy nhờ A symmetric: 
 >
-> **A = QΛQT**
+> \**A = QΛQT**
 >
 > Và ta nhớ Q chính là S - matrix các **eigenvectors**, chẳng
 > qua khi A symmetric, **các eigenvectors trở nên orthogonal** và unit norm, khiến cho S trở thành orthogonal matrix Q.
@@ -440,7 +440,7 @@
 > thứ 1 của ΛQT sẽ là λ1q1T
 >
 > Tương tự row thứ 2 của Λ khi nhân với QT, sẽ có kết quả là nó sẽ
-> **CHỈ LẤY ROW 2** của **QT, CHÍNH LÀ EIGENVECTOR THỨ 2 CỦA
+> \**CHỈ LẤY ROW 2** của **QT, CHÍNH LÀ EIGENVECTOR THỨ 2 CỦA
 > A**, và **SCALE NÓ BỞI λ2** để hàng thứ 2 của ΛQT sẽ  là λ2q2T
 >
 > Và các row vector tiếp theo (của matrix Λ) cũng tạo nên các linear
@@ -468,7 +468,7 @@
 
 > [!NOTE]
 > Thế thì gs nhắc ta nhớ rằng, matrix **q1q1T** **CHÍNH LÀ**
-> **PROJECTION MATRIX** giúp **project lên vector q1**
+> \**PROJECTION MATRIX** giúp **project lên vector q1**
 >
 > Ta nhớ lại công thức của projection matrix lên vector a
 > là P = aaT/aTa (lập luận nhanh: aTe = 0 <=> aT(b-p) =
@@ -548,7 +548,7 @@
 >
 > Nhưng ta sẽ biết một sự thật rất hữu ích đó là **DẤU
 > CỦA PIVOT, SẼ** **CÙNG DẤU CỦA EIGENVALUE** Hay nói cách khác, từ các pivot (là eigenvalue của U),
-> **ta sẽ biết có bao nhiêu eigenvalue của A là dương và
+> \**ta sẽ biết có bao nhiêu eigenvalue của A là dương và
 > bao nhiêu là âm**. Từ đó **thu hẹp phạm vi tìm kiếm** các
 > eigenvalue
 
@@ -595,7 +595,7 @@
 
 > [!NOTE]
 > Thế thì gs cho rằng nếu ta đã nói **SYMMETRIC** matrix là
-> **GOOD** matrix, thì **POSITIVE DEFINITE SYMMETRIC**
+> \**GOOD** matrix, thì **POSITIVE DEFINITE SYMMETRIC**
 > matrix thì là **EXCELLENT** matrix
 
 <br>

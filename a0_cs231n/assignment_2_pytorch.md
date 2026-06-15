@@ -372,7 +372,7 @@
 > [!NOTE]
 > Dễ ko có gì đáng nói, chỉ có một điểm đáng chú ý đó là khi ini
 > cho fc layer cuối, phải dùng kaiming: Nhớ rằng vấn đề là do
-> **layer trước xài nên layer này phải dùng kaiming. Chứ đừng
+> \**layer trước xài nên layer này phải dùng kaiming. Chứ đừng
 > nhầm lẫn là layer đó xài relu nên nó phải dùng kaiming. Ko
 > phải, mà là do relu ở layer trước khi layer sau phải dùng
 > kaiming**

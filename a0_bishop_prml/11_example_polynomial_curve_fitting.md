@@ -450,7 +450,7 @@
 >
 > W(**x**) = argmax_θ L(θ|**x**), với L(θ|**x**) là likelihood function, là
 > function theo θ, define bởi L(θ|**x**) = f(**x**|θ), là joint pdf/pmf của sample
-> **X** tại observed value **x**. mang ý nghĩa là độ hợp lí của θ khi quan sát
+> \**X** tại observed value **x**. mang ý nghĩa là độ hợp lí của θ khi quan sát
 > thấy **X** = **x.**  Và ta sẽ maximize L(θ|**x**) over θ ∈ Θ: tìm θ khiến độ
 > hợp lí khi quan sát thấy  **X** = **x** là lớn nhất. Và đó chính là ML
 > estimate of θ: δ^_mle(**x**)

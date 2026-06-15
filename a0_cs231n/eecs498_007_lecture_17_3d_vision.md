@@ -182,7 +182,7 @@
 >
 > ===
 >
-> *Lưu ý là chỉ input là có giá trị binary, còn các filter thì mang giá trị real value
+> \*Lưu ý là chỉ input là có giá trị binary, còn các filter thì mang giá trị real value
 > bình thường (dù điều này ta thấy là đương nhiên nhưng có bạn hỏi chỗ này)
 
 <br>

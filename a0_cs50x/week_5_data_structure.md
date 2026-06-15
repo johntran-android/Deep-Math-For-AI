@@ -21,7 +21,7 @@
 
 > [!NOTE]
 > Với **pointer**, ta sẽ có thể
-> **structure our data in memory**
+> \**structure our data in memory**
 
 <br>
 
@@ -51,10 +51,10 @@
 <p align="center"><kbd><img src="assets/c26a19a9ff6fc9028017b50a82ef25875d61bfe2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **enqueue**: **thêm một ông vào line** (chờ check in trong
+> \**enqueue**: **thêm một ông vào line** (chờ check in trong
 > sân bay)
 >
-> **dequeue**: khi ông đứng đầu line được **ra khỏi line** để
+> \**dequeue**: khi ông đứng đầu line được **ra khỏi line** để
 > vào check in
 
 <br>
@@ -64,7 +64,7 @@
 <p align="center"><kbd><img src="assets/d44081e2dfded02a051fcfe3190fa4a49fb51281.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Stack** thì như chồng đĩa, cái nào ở **bỏ vào trên cùng**
+> \**Stack** thì như chồng đĩa, cái nào ở **bỏ vào trên cùng**
 > thì sẽ được **lấy ra đầu tiên**. Thì cái này nó lại theo
 > nguyên tác **LIFO - Last In First Out**
 
@@ -81,7 +81,7 @@
 <p align="center"><kbd><img src="assets/aabe655e97d34b1d8d21880cb0d5fa48bb49502d.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Gmail** chính là 1 **stack**
+> \**Gmail** chính là 1 **stack**
 
 <br>
 
@@ -103,10 +103,10 @@
 <p align="center"><kbd><img src="assets/055bef6261ad35d314cff94c8f71724ecd09a971.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **push**: **bỏ cái mới vào** stack - để nó trở thành **nằm 
+> \**push**: **bỏ cái mới vào** stack - để nó trở thành **nằm 
 > trên cùng**
 >
-> **pop**: **lấy cái trên cùng ra**
+> \**pop**: **lấy cái trên cùng ra**
 
 <br>
 
@@ -162,7 +162,7 @@
 
 > [!NOTE]
 > Vấn đề là define kiểu này nó **FINITE** = cố định sẵn, khi ta
-> **define size nó = 50**
+> \**define size nó = 50**
 >
 > Đúng là ta **có thể có dung lượng lớn hơn** bằng cách cho
 > 500, 5000...Nhưng **vì sao làm thế thì không ổn?**
@@ -206,7 +206,7 @@
 <p align="center"><kbd><img src="assets/bfbee5561b2bbb1c43da400d8bdfef8ebebcf46f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Array** như nhớ lại nó chỉ là **dãy các element
+> \**Array** như nhớ lại nó chỉ là **dãy các element
 > được store trong memory pack to pack to pack** (kế tiếp nhau)
 
 <br>
@@ -246,7 +246,7 @@
 >
 > (Cách này có thể hình dung là **dùng malloc** để máy tính nó **tìm
 > vùng bộ nhớ có size cần thiết = 4 byte** mà còn **available** và
-> **trả address (byte đầu tiên) về cho mình**. Và rồi mình copy value
+> \**trả address (byte đầu tiên) về cho mình**. Và rồi mình copy value
 > qua)
 >
 > D: Cách làm này **có gì k ổn?**
@@ -280,7 +280,7 @@
 <p align="center"><kbd><img src="assets/8c4d79d3f7cec71ccf86be806cc12965a5b5ac85.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **int *list = malloc(3*sizeof(int))**: máy tính nó sẽ **tìm một dải memory dải 3x(4 bytes) = 12 bytes** 
+> \**int *list = malloc(3*sizeof(int))**: máy tính nó sẽ **tìm một dải memory dải 3x(4 bytes) = 12 bytes** 
 > và **trả ADDRESS của byte đầu tiên** cho list (và thực chất là **tạo vùng 8 bytes** để set **giá trị là chuỗi
 > binary** mà khi dịch ra **base-16 thì nó là address của byte đầu tiên**)
 >
@@ -292,9 +292,9 @@
 >
 > TỪ ADDRESS ĐÓ, ĐI **TỚI CÁC ADDRESS KẾ TIẾP**
 >
-> **list[0]** cũng chính là ***list**: ĐI **TỚI ADDRESS hold bởi list**
-> **list[1]** cũng chính là ***(list+1)**: ĐI **TỚI ADDRESS hold bởi list** và đi **thêm 1x(đoạn 4 byte)**
-> **list[2]** cũng chính là ***(list+2)**: ĐI **TỚI ADDRESS hold bởi list** và đi **thêm 2x(đoạn 4 byte)**
+> \**list[0]** cũng chính là ***list**: ĐI **TỚI ADDRESS hold bởi list**
+> \**list[1]** cũng chính là ***(list+1)**: ĐI **TỚI ADDRESS hold bởi list** và đi **thêm 1x(đoạn 4 byte)**
+> \**list[2]** cũng chính là ***(list+2)**: ĐI **TỚI ADDRESS hold bởi list** và đi **thêm 2x(đoạn 4 byte)**
 >
 > vì **int *list** có nghĩa là **list là int pointer**, nên máy tính sẽ hiểu **đi đến address đó** thì 
 > sẽ gặp **int**, và việc **đi đến các address kế tiếp** sẽ đi theo **bước 4 byte là sizeof(int)**
@@ -313,7 +313,7 @@
 >
 > Thành ra bất cứ cái nào là pointer, ta đều có thể dùng p[0], p[1]....để thể hiện rằng
 >
-> **TỪ ADDRESS ĐÓ, ĐI TỚI CÁC ADDRESS KẾ TIẾP**
+> \**TỪ ADDRESS ĐÓ, ĐI TỚI CÁC ADDRESS KẾ TIẾP**
 
 <br>
 
@@ -416,7 +416,7 @@
 >
 > Nói thêm **nếu không dùng temp**, mà ở trên ta lại **list  =
 > malloc(4*sizeof(int))** thì nó sẽ gây **memory leak** khi
-> **vùng 12 bytes trước mất dấu** (dù vẫn còn data, vì chưa
+> \**vùng 12 bytes trước mất dấu** (dù vẫn còn data, vì chưa
 > được giải phóng), không còn biết address  của nó ở đâu nữa.
 >
 > Và nói thêm cuối cùng ta cũng sẽ free(list) giúp **giải phóng
@@ -449,7 +449,7 @@
 >
 > D: **Correct**, vì temp và list **đều chứa address của vùng
 > 16 bytes này**, nên free cái nào cũng  sẽ có hiệu ứng là
-> **giải phóng memory vùng đó**
+> \**giải phóng memory vùng đó**
 >
 > Nhớ là nó sẽ **giải phóng memory vùng đó**, chứ  **không
 > phải chỉ là delete address value** chứa trong tmp hay list
@@ -461,11 +461,11 @@
 <p align="center"><kbd><img src="assets/35fb08b3e51f6fc491b691f4d6e6a97785b18066.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **realloc(list, 4 * sizeof(int))**: Giới thiệu function
-> **realloc** = **re-allocate** sẽ giúp **làm cái việc copy ở
+> \**realloc(list, 4 * sizeof(int))**: Giới thiệu function
+> \**realloc** = **re-allocate** sẽ giúp **làm cái việc copy ở
 > trên**, nó sẽ **tìm vùng không gian 16 bytes** và nếu có
 > sẽ **tự động copy value của list qua** và tất nhiên cũng
-> **trả về address của byte đầu tiên** của vùng đó
+> \**trả về address của byte đầu tiên** của vùng đó
 >
 > Thì ổng nói dù rằng cũng **chẳng more efficient** vì cái
 > cách này **vẫn là manually request** nó tìm vùng bộ nhớ
@@ -484,14 +484,14 @@
 > D: Good question. Đúng là **nếu mọi chuyện êm đẹp**, tôi chỉ cần làm
 > vầy:
 >
-> **list = realloc(list, 4 * sizeof(int))**: Nó sẽ **tìm vùng 16 byte**, **copy từ
+> \**list = realloc(list, 4 * sizeof(int))**: Nó sẽ **tìm vùng 16 byte**, **copy từ
 > data từ vùng 12 bytes address đang giữ bởi list sang** và **reassign
 > address vùng mới này cho list**.
 >
 > Nhưng **nếu nó không tìm được thì sao**, nó sẽ **trả về NULL**, lúc này
 > cái **address của vùng 12 bytes sẽ bị mất** (khác với việc được free
 > nhé) vì **list bây giờ giữ  address = 0 (NULL)**. Gây ra hiện tượng
-> **memory leak**, và sẽ không có cách nào tìm lại vùng 12 bytes kia.
+> \**memory leak**, và sẽ không có cách nào tìm lại vùng 12 bytes kia.
 >
 > Do đó sẽ **an toàn hơn khi dùng temp và check chắc chắn**
 
@@ -507,7 +507,7 @@
 >
 > D: **Correct**, do đó khi realloc thành công và **trả về address
 > vùng 16 bit mới** (với data đã copy) cho temp thì thật ra
-> **vùng 12 byte cũ đã được giải phóng**
+> \**vùng 12 byte cũ đã được giải phóng**
 >
 > Ta chỉ việc cho **list = tmp** để list bây giờ trỏ về vùng mới
 >
@@ -515,7 +515,7 @@
 >
 > Và ổng nói realloc **còn thông minh hơn** một chút khi giả sử
 > mình **cần 16 bytes** nhưng ở phía sau cái vùng 12 bytes cũ
-> **vẫn có 4 bytes trống** (chứa garbage chứ không phải value
+> \**vẫn có 4 bytes trống** (chứa garbage chứ không phải value
 > của var nào đó đang xài) thì nó **sẽ trả về address của
 > chính vùng 12 bytes đó** (Đúng hơn thì address của cái byte
 > đầu tiên) nhưng lúc này ta có thể **an tâm xài cái vùng 4
@@ -529,8 +529,8 @@
 
 > [!NOTE]
 > Đại khái với các **công cụ mạnh mẽ malloc và realloc**, và
-> **free**, ta có thể tạo các **data structure** như **queue**,
-> **stack** mà có thể **dynamically resize**.
+> \**free**, ta có thể tạo các **data structure** như **queue**,
+> \**stack** mà có thể **dynamically resize**.
 >
 > Ví dụ **khi cần thêm memory, ta có thể realloc**... **chứ không
 > cần phải pre-define một kích thước có sẵn** nữa
@@ -544,12 +544,12 @@
 > [!NOTE]
 > Nhắc lại ba syntax: 
 >
-> **struct**, 
+> \**struct**, 
 >
 > dot "**.**" để **đi vào variable của
 > struct** (như person**.name**, person**.age** vậy) và 
 >
-> ***** **để đi vào vùng memory từ address** hold bởi pointer
+> \***** **để đi vào vùng memory từ address** hold bởi pointer
 
 <br>
 
@@ -586,7 +586,7 @@
 <p align="center"><kbd><img src="assets/ce871256a831bebd3436e04e9e147fe063557c44.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Linked list** là một **powerful data structure** mà ta
+> \**Linked list** là một **powerful data structure** mà ta
 > hưởng lợi rất nhiều từ nó.
 >
 > Ổng chưa nói gì nhiều nhưng đại khái là nó cho phép
@@ -621,7 +621,7 @@
 > Thì ổng nói là **nếu bằng các nào đó** ta có thể **string
 > them together** (nối lại) để làm sao **từ 1 tôi có thể đi tới
 > 2**, **từ 2 tới 3** thì ta sẽ **có được một list thôi** mà
-> **chẳng cần chúng phải nằm contiguous** (liền kề nhau)
+> \**chẳng cần chúng phải nằm contiguous** (liền kề nhau)
 > thực tế trên memory
 
 <br>
@@ -679,7 +679,7 @@
 > [!NOTE]
 > Correct, **NULL** hay cũng chính là **byte 0x0** - **byte đầu
 > tiên trong memory**, được **đặc dụng như một signal**, chứ
-> **không dược dùng để chứa value**.
+> \**không dược dùng để chứa value**.
 
 <br>
 
@@ -689,7 +689,7 @@
 
 > [!NOTE]
 > Và cuối cùng **chỉ "xin" thêm một (8 byte) pointer** nữa
-> **chứa address của cái integer đầu tiên** là hoàn thành
+> \**chứa address của cái integer đầu tiên** là hoàn thành
 
 <br>
 
@@ -790,7 +790,7 @@
 
 > [!NOTE]
 > Đại khái khúc này **có chút vướng mắc** khi ta
-> **define node** mà **trong đó lại có var loại node**
+> \**define node** mà **trong đó lại có var loại node**
 
 <br>
 
@@ -810,7 +810,7 @@
 
 > [!NOTE]
 > D: Với cái này ta đã giải quyết được vấn đề gì?
-> **Upsize** của nó là gì?
+> \**Upsize** của nó là gì?
 >
 > D: **Ta không cần phải có các contiguous chunk** trong
 > memory để **chứa một list nữa**.
@@ -829,7 +829,7 @@
 > D: Ok correct, vậy **downsize** là gì
 >
 > S: **Phải dùng nhiều memory hơn.**  D: Correct! Quả thật
-> **mỗi int cần có 4 byte (hay như ở đây xài  uint8_t tốn có 1
+> \**mỗi int cần có 4 byte (hay như ở đây xài  uint8_t tốn có 1
 > byte)**, bây giờ **phải có thêm 8 byte cho pointer** cho mỗi
 > cái nữa.
 >
@@ -846,7 +846,7 @@
 > D: Còn **downsize gì khác?**
 >
 > A: Đó là rõ ràng **muốn lấy value của thằng thứ 3**, 
-> **phải đi từ thằng thứ 2** (vì nó mới có address của thằng thứ 3)
+> \**phải đi từ thằng thứ 2** (vì nó mới có address của thằng thứ 3)
 > và tiếp tục **muốn lấy value của thằng 2** thì p**hải đi từ thằng 1**
 >
 > D: **Correct**, ta **không còn square bracket indexing được nữa**
@@ -867,7 +867,7 @@
 > Đại khái là ổng giải thích visually những gì xảy ra trong
 > memory
 >
-> **node *list**; máy tính sẽ **tạo một vùng 8 bytes cho list** - là
+> \**node *list**; máy tính sẽ **tạo một vùng 8 bytes cho list** - là
 > một var loại **pointer-tới-node.**
 >
 > Và vì **chưa set address** là gì cả nên nó là **garbage value**
@@ -904,7 +904,7 @@
 > 1. Tính **toán ra một node thì cần bao nhiêu byte** 
 >
 > 2. **Kiếm một vùng memory available có kích thước**
-> **bằng số byte trên** 
+> \**bằng số byte trên** 
 > 3. **Dành 8 bytes** để dành cho **node-pointer n** chứa **address
 > của một node**, và đồng thời **gán luôn address của cái vùng
 > memory ở trên vào**
@@ -921,7 +921,7 @@
 > Thì tại đây node đã được máy tính **đã tìm một vùng memory**
 > nhưng vùng đó **chỉ đang chứa garbage**
 >
-> **(*n).number = 1**; tức là ra lệnh cho máy tính **ĐI TỚI ADDRESS 
+> \**(*n).number = 1**; tức là ra lệnh cho máy tính **ĐI TỚI ADDRESS 
 > hold bởi n** (đi tới vùng memory có address giữ bởi n). 
 >
 > Tại đó ta sẽ tìm thấy một struct, có hai variable là **number** và **next**.
@@ -958,7 +958,7 @@
 > value đang nằm trong next** - là một node-pointer
 > như đã biết (define struct ở trên)
 >
-> **Phòng khi ta quên thì nó sẽ bị sai**. Nên phải **sét cho nó
+> \**Phòng khi ta quên thì nó sẽ bị sai**. Nên phải **sét cho nó
 > bằng NULL luôn**
 >
 > Again có thể dùng **(*n).next = NULL** hay **n -> next = NUL**L
@@ -971,7 +971,7 @@
 <p align="center"><kbd><img src="assets/d4703b8f0c848d96fda3229d52cb2d314418b21b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **list = n**: máy tính sẽ **lấy cái address hold bởi
+> \**list = n**: máy tính sẽ **lấy cái address hold bởi
 > n**, **set cho cái list** - cũng là b tạo hồi nãy
 
 <br>
@@ -1005,7 +1005,7 @@
 > [!NOTE]
 > node *n = malloc(sizeof(node));
 >
-> **node *n** sẽ yêu cầu máy tính **kíếm giùm 8
+> \**node *n** sẽ yêu cầu máy tính **kíếm giùm 8
 > byte để dành cho node-pointer n**
 >
 > Rồi **malloc(sizeof(node))** sẽ kêu máy tính **kiếm giùm
@@ -1117,7 +1117,7 @@
 
 > [!NOTE]
 > Sắp tới ổng **muốn làm một function có thể command line**
-> **argument** như **list 1 2 3** là nó có thể  **tạo một linked list**
+> \**argument** như **list 1 2 3** là nó có thể  **tạo một linked list**
 
 <br>
 
@@ -1348,9 +1348,9 @@
 
 > [!NOTE]
 > Ổng nói thêm là có thể thích thì làm
-> **for loop kiểu này cũng được**
+> \**for loop kiểu này cũng được**
 >
-> **for (node *p = list; ptr != NULL; ptr = ptr -> next)**
+> \**for (node *p = list; ptr != NULL; ptr = ptr -> next)**
 
 <br>
 
@@ -1484,7 +1484,7 @@
 
 > [!NOTE]
 > Thì đại khái là giả sử ổng làm **binary search**, bắt đầu bằng
-> **pick ô giữa để chia làm 2 phần**), rối **tiếp tục pick ô giữa 
+> \**pick ô giữa để chia làm 2 phần**), rối **tiếp tục pick ô giữa 
 > của mỗi phần để chia làm 2 phần tiếp**.
 >
 > Thì ổng nói **có vẻ như có một cái pattern gì đó**. Nên thử **đẩy
@@ -1519,7 +1519,7 @@
 
 > [!NOTE]
 > Và đại khái là với kiểu này ta có thể lại làm Binary Search
-> **ví dụ tìm số 5**, ta cũng sẽ **bắt đầu với một  ROOF
+> \**ví dụ tìm số 5**, ta cũng sẽ **bắt đầu với một  ROOF
 > NODE**. Rồi **so sánh vói 4** để biết nó **thuộc NHÁNH
 > nào** (thay vì "phần" nào như trước)
 >
@@ -1546,7 +1546,7 @@
 > [!NOTE]
 > Với ý tưởng đó ta sẽ **sửa lại cái struct node** để thay vì
 > chỉ có **node-pointer next** thì giờ có **hai node-pointer** là
-> **node *left** và **node *right**
+> \**node *left** và **node *right**
 
 <br>
 
@@ -1559,7 +1559,7 @@
 >
 > bool **search**(node *tree, int number){
 >
-> **// Base case:**
+> \**// Base case:**
 > if(tree = NULL)
 > {
 > return false;
@@ -1569,17 +1569,17 @@
 > // then go to left node
 > if (**(tree -> number) > number)** //hay **(*tree).number** > number
 > {
-> **search(tree -> left, number)** // hay search**((*tree).left** , number)
+> \**search(tree -> left, number)** // hay search**((*tree).left** , number)
 > }
 > // else go to right node
 > else if (**(tree -> number) < number**)
 > {
-> **search(tree -> right, number)** // hay search(**(*tree).right**, number)
+> \**search(tree -> right, number)** // hay search(**(*tree).right**, number)
 > }
 > // else return true **(Found value!)**
 > else
 > {
-> **return true;**
+> \**return true;**
 > }
 
 <br>
@@ -1669,7 +1669,7 @@
 <p align="center"><kbd><img src="assets/d44f86b545bca0a71bd1a8053a432fa6476cbc5c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **O() nào là lý tưởng nhất?** ví dụ khi **searching**
+> \**O() nào là lý tưởng nhất?** ví dụ khi **searching**
 >
 > A: **O(1) 1 phát ra ngay**
 
@@ -1864,7 +1864,7 @@
 > bucket.
 >
 > Và ví dụ một **bucket nào đó không có cái tên nào**, thì
-> **pointer đơn giản là = NULL**
+> \**pointer đơn giản là = NULL**
 
 <br>
 
@@ -1874,7 +1874,7 @@
 
 > [!NOTE]
 > Và **hash function** cơ bản chỉ là **nhận cái tên**, và
-> **trả ra bucket id** (b) của nó
+> \**trả ra bucket id** (b) của nó
 
 <br>
 
@@ -2031,7 +2031,7 @@
 > [!NOTE]
 > Đại khái ổng nói về cái **luật là trade-off giữa time và
 > space**. Muốn **giảm time thì phải tốn space** và muốn
-> **giảm space thì tốn time**
+> \**giảm space thì tốn time**
 >
 > Và bạn là người **phải decide cái nào quan trọng trong
 > trường hợp cụ thể**
@@ -2043,11 +2043,11 @@
 <p align="center"><kbd><img src="assets/558760d12c6e394af0017c6927b8f3f749df4188.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **number** là **char pointer là hợp lý** chứ **không thể lưu số
+> \**number** là **char pointer là hợp lý** chứ **không thể lưu số
 > phone bằng int được**, vì số phone nó có thể có dạng **(+01)
 > \- 001 ...**
 >
-> **string** cũng được nhưng **cơ bản nó cũng là char pointer thôi**
+> \**string** cũng được nhưng **cơ bản nó cũng là char pointer thôi**
 >
 > Và **node này cũng không cần save name** vì **bản thân quá 
 > trình di chuyển từ node này qua node khác** từ các address
@@ -2109,7 +2109,7 @@
 > D: Cái này chính là gì?
 >
 > A: Để coi, để bắt đầu (ví dỵ search 1 cuốn sách) ta sẽ 
-> **start với chữ cái tương ứng để tìm bucket** 
+> \**start với chữ cái tương ứng để tìm bucket** 
 > Sau đó là **iterate qua từng cái trong bucket**
 >
 > Nên đây chính là **hash-table**

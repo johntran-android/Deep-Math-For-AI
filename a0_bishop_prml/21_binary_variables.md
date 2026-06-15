@@ -91,7 +91,7 @@
 >
 > = Σn=1:N [xn ln μ] + Σn=1:N [(1-xn) ln (1-μ)]
 >
-> **Vì sao phải nhắc đến Frequentist** (hay trong Casella gọi là Classical, trường phái thống
+> \**Vì sao phải nhắc đến Frequentist** (hay trong Casella gọi là Classical, trường phái thống
 > kê cổ điển) là vì trong cách tiếp cận này, ta coi θ (hay ở đây là μ) là fixed và unknown, chứ
 > không phải là biến ngẫu nhiên). Trong Casella, ngay sau khi học về ML estimator ta học về
 > Bayes estimator, thì chính là làm theo trường phái Bayesian, nơi ta coi θ là random
@@ -153,9 +153,9 @@
 > T(**X**) có tính chất đó là khiến f(**x**|T(**X**) = T(**x**)) không còn là hàm phụ
 > thuộc θ, thì nó chính là sufficient statistic. Trong sách Casella, với định nghĩa
 > này, ta mới đi chứng minh cho thấy rằng, giả sử có hai ông A, và B, ông A biết
-> **X** = **x**, và T(**X**) = T(**x**), còn ông B chỉ biết T(**X**) = T(**x**). Sau đó
+> \**X** = **x**, và T(**X**) = T(**x**), còn ông B chỉ biết T(**X**) = T(**x**). Sau đó
 > ông A dựa vào T(**X**) = T(**x**), generate các giá trị của **Y** sao cho P(**Y** =
-> **y** | T(**X**) = T(**x**)) = P(**X** = **y** | T(**X**) = T(**x**)) thì ta chứng minh
+> \**y** | T(**X**) = T(**x**)) = P(**X** = **y** | T(**X**) = T(**x**)) thì ta chứng minh
 > được cái random variable **Y** này qủa thật chính là ~ marginal pmf của **X**:
 > f(**x**|θ) (hay P(**X**=**y**) = P(**Y**=**y**) ∀**y**) Điều này giúp kết luận là chỉ
 > cần dựa trên T(**x**) cũng đủ để xây dựng hiểu biết của ta về θ
@@ -164,7 +164,7 @@
 > statistic: **Factorization**, nói rằng, miễn f(**x**|θ) có thể được factor thành
 > g(T(**x**)|θ)h(**x**) tức là tích của hàm h(**x**) chỉ phụ thuộc **x** và hàm g phụ
 > thuộc  cả **x** lẫn θ nhưng chỉ phụ thuộc **x** thông qua T(**x**), thì khi đó T
-> **chính là  sufficient statistic**.
+> \**chính là  sufficient statistic**.
 >
 > Nhờ theorem này, ta có cách tìm sufficient statistic: tìm các factor f(**x**|θ)
 > thành dạng trên thì cái cụm nào chứa **x** trong g(T(**x**)|θ) chính là sufficient

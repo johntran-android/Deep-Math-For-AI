@@ -51,7 +51,7 @@
 > outcome mà **SỐ CÁCH SẮP CỦA N LÁ BÀI SAO CHO lá thứ 1 có label 1, lá
 > thứ 2 có label 2... lá thứ k có label k**. Thì dễ thấy số lượng của outcome này
 > này chỉ còn là **số hoán vị của  những lá từ thứ k+1 đến thứ n (có n-k lá)** =>
-> **(n-k)!**
+> \**(n-k)!**
 >
 > Còn sample space thì đương nhiên là **tất cả cách sắp xếp của n lá bài**: n!
 >
@@ -129,7 +129,7 @@
 > [!NOTE]
 > tiếp ta sẽ qua định nghĩa về 2 event độc lập:
 >
-> **Hai event A, B độc lập nếu như P(A ∩ B) = P(A)*P(B)**
+> \**Hai event A, B độc lập nếu như P(A ∩ B) = P(A)*P(B)**
 >
 > Và gs chú ý rằng nó **hoàn toàn khác** với khái niệm **disjointness**
 > vốn có nghĩa là khi "event **A xảy ra** thì event **B không thể xảy
@@ -147,10 +147,10 @@
 > [!NOTE]
 > Thế thì với 3 event A, B, C. Ta gọi chúng là independent event nếu
 >
-> **i) Các cặp event independent**: tức P(A ∩ B) = P(A)*P(B), P(A ∩ C) =
+> \**i) Các cặp event independent**: tức P(A ∩ B) = P(A)*P(B), P(A ∩ C) =
 > P(A)*P(C) P(B ∩ C) = P(B)*P(C)
 >
-> *Ở đây gs nói rằng ta có thể dùng **dấu phẩy** để thể hiện intersection - sự
+> \*Ở đây gs nói rằng ta có thể dùng **dấu phẩy** để thể hiện intersection - sự
 > kiện các event cùng xảy ra. **P(A ∩ B) ghi là P(A, B) cũng được**
 >
 > Tuy nhiên, define như vậy chưa đủ, vì **mới chỉ xét sự độc lập giữa các cặp
@@ -158,7 +158,7 @@
 >
 > nên ta cần thêm:
 >
-> **ii)** **P(A, B, C) = P(A)*P(B)*P(C)**
+> \**ii)** **P(A, B, C) = P(A)*P(B)*P(C)**
 >
 > Và CHÚ Ý RẰNG TA **CẦN CẢ HAI** i) và ii)
 >
@@ -185,13 +185,13 @@
 > [!NOTE]
 > gs lấy ví dụ cho cái này. Đó là bài toán **Newton-Peps**. Đại khái là ông
 > Peps muốn Newton giải giùm bài toán trong đó cần xác định rằng trong 
-> **xác suất của 3 event sau đây, cái nào cao hơn**.
+> \**xác suất của 3 event sau đây, cái nào cao hơn**.
 >
 > A: có ít nhất 1 lần ra 6 nút khi tung 6 xí ngầu 
 > B: có ít nhất 2 lần ra 6 nút khi tung 12 xí ngầu
 > C: có ít nhất 3 lần ra 6 nút khi tung 18 xí ngầu
 >
-> *Tung 6 xí ngầu hay tung 1 xí ngầu 6 lần thì cũng như nhau (đã nói về
+> \*Tung 6 xí ngầu hay tung 1 xí ngầu 6 lần thì cũng như nhau (đã nói về
 > cái này rồi)
 >
 > Đoán: C
@@ -225,12 +225,12 @@
 > chất EQUALLY LIKELY và các xí ngầu **INDEPENDENT** nhau, tức là **xí ngầu này ra
 > mấy nút không ảnh hưởng gì đến xí ngầu kia ra mấy** **nút.** Nếu gọi event "X1!=6" là event "xí ngầu thứ nhất không ra 6", "X2!=6" là event "xí ngầu
 > thứ 2 không ra sáu", tương tự như vậy. Thì **vì nhận định các xí ngầu Independent**,
-> **nên các event X1!=6, X2!=6,**...**X6!=6** đều **INDEPENDENT**
+> \**nên các event X1!=6, X2!=6,**...**X6!=6** đều **INDEPENDENT**
 >
 > Do đó ta **có thể ÁP DỤNG ĐỊNH NGHĨA CÁC EVENT ĐỘC LẬP** như sau:
 >
 > P[xí ngầu 1 không ra 6 nút, xí ngầu 2 không ra 6 nút, ....xí ngầu 6 không ra 6 nút] =
-> **P(X1!=6, X2!=6, ...X6!=6)**
+> \**P(X1!=6, X2!=6, ...X6!=6)**
 >
 > hay nói gọn là P(A_c) =  P[ko có xí ngầu nào ra 6 nút]
 >
@@ -253,7 +253,7 @@
 > Vì xí ngầu nào cũng vậy nên ta sẽ có P[không có xí ngầu nào ra 6 nút] = (5/6)*(5/6)...
 > (5/6) (6 lần)
 >
-> **= (5/6)^6**
+> \**= (5/6)^6**
 >
 > Vậy **P[có ít nhất 1 xí ngầu ra 6 nút] = P(A) = 1 - P(Ac) = 1 - (5/6)^6 ~ 0.665**
 
@@ -303,7 +303,7 @@
 >
 > Event B_c2 = [Chỉ ra con 6 MỘT lần trong 12 lần tung] là **union của các event**
 >
-> **B_c2 = (K1** ∪ **K2** ∪ **...**∪ **K12)**
+> \**B_c2 = (K1** ∪ **K2** ∪ **...**∪ **K12)**
 >
 > Với: 
 >
@@ -337,11 +337,11 @@
 >
 > Và vì 12 sự kiện này K1, K2...K12 **DISJOINT** nên theo **Axiom 2** của xác suất ta có 
 >
-> **P(B_c2)** = P(K1 u K2 ...u K12) = P(K1) + P(K2) + ...P(K12) 
+> \**P(B_c2)** = P(K1 u K2 ...u K12) = P(K1) + P(K2) + ...P(K12) 
 >
 > = (1/6)*(5/6)^11 + ...(12 lần) + (1/6)*(5/6)^11
 >
-> **= 12 * (1/6)*(5/6)^11
+> \**= 12 * (1/6)*(5/6)^11
 >
 > Vậy P(B) = 1 - P(B_c) 
 >
@@ -438,7 +438,7 @@
 
 > [!NOTE]
 > Và gs B cho biết (18 choose k) * (1/6)^k * (5/6)^(18-k) cũng chính là
-> **BINOMIAL PROBABILITY
+> \**BINOMIAL PROBABILITY
 >
 > Cho thấy A chính là event có xác suất cao nhất** Điểm thú vị là Newton tuy tính đúng, nhưng khi ông cố gắng lập luận thì ông
 > đã mắc sai lầm. Gs cho biết phần lập luận của Newton rất khó hiểu, và **một
@@ -514,7 +514,7 @@
 > Gs nói về cách hiểu cái này như sau:
 >
 > Gỉa sử ta có sample space S, với 9 viên sỏi (pepble) đại diện do 9
-> **possible outcome**. Tổng khối lượng của chúng là 1 (mỗi viên có thể có
+> \**possible outcome**. Tổng khối lượng của chúng là 1 (mỗi viên có thể có
 > pass = 1/9 theo như naive definition, nhưng cũng có thể không có P
 > khác nhau theo non-naive definition).
 >
@@ -542,7 +542,7 @@
 
 > [!NOTE]
 > Và gỉa sử A là subset có 4 possible outcome này, thì **sau khi có B**, (và từ đó
-> **bỏ đi các possible outcome không thuộc B**) thì **A chỉ còn có một possible
+> \**bỏ đi các possible outcome không thuộc B**) thì **A chỉ còn có một possible
 > outcome có thể xảy ra**
 >
 > Suy ngẫm 1 chút. Trước khi biết B xảy ra, thì có 4 possible outcome của A có
@@ -622,7 +622,7 @@
 >
 > Ta **nhân 2 vế cho P(B)** là có ngay:
 >
-> **P(A,B) = P(B)*P(A|B)**
+> \**P(A,B) = P(B)*P(A|B)**
 >
 > Và gs nói rằng đó cũng cũng là chứng minh theorem
 
@@ -651,7 +651,7 @@
 > Và như vậy khi A, B độc lập thì P(A|B) = P(A) mang ý nghĩa là **khi A, B
 > independent** thì **việc B xảy ra không cung cấp thêm thông tin gì** **về xác
 > suất của A**. Để rồi **xác suất A xảy ra khi B đã xảy ra** **vẫn y nguyên** là
-> **xác xuất của A riêng lẻ** (không biết B xảy ra hay không)
+> \**xác xuất của A riêng lẻ** (không biết B xảy ra hay không)
 
 > [!NOTE]
 > THEOREM: P(A)*P(B|A) = P(B)*P(A|B)

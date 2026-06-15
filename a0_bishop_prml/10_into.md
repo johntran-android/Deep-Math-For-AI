@@ -76,7 +76,7 @@
 > set)
 >
 > Với kiến thức Nocedal, mình hiểu đây **chính là quá trình**
-> **preconditioning**: Đổi biến, để **chuyển bài toán về một hệ tọa độ** /
+> \**preconditioning**: Đổi biến, để **chuyển bài toán về một hệ tọa độ** /
 > không gian mới mà trong đó **có những thuận lợi hơn cho thuật toán tối
 > ưu** hội tụ nhanh hơn.
 >

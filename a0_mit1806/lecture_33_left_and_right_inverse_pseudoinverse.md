@@ -31,7 +31,7 @@
 >
 > me: Thì như bữa giờ đã học, nếu matrix **full-rank**, hay **invertible**
 > hay **non-singular**. Thì nó sẽ **mọi columns đều independent**, 
-> **mọi row cũng independent**, như vậy, nó sẽ phải **square** (vì nếu
+> \**mọi row cũng independent**, như vậy, nó sẽ phải **square** (vì nếu
 > không square, như m > n, thì chắc chắn sẽ có dependent row)
 >
 > Tóm lại: với invertible matrix: **r = m = n**
@@ -100,7 +100,7 @@
 
 > [!NOTE]
 > và nói thêm là, như ta đã biết **Ax=b** sẽ có **general**
-> **solution** là **x_particular** + **x_null**. Và vì nullspace
+> \**solution** là **x_particular** + **x_null**. Và vì nullspace
 > empty, nên **nếu có x_particular**, (khi b thuộc column
 > space của A thì sẽ tồn tại một linear combination các A's
 > columns tạo ra b, và đó là x_particular) thì **Ax=b có
@@ -111,7 +111,7 @@
 > column space (với chỉ n independent columns, nó chỉ có
 > thể span được một n-D subspace trong Rm, nên hoàn
 > tòan có thể tồn tại b nằm ngoài subspace này) khi đó,
-> **không thể có linear combination nào của các columns
+> \**không thể có linear combination nào của các columns
 > để tạo ra b** -> không có x_particular -> Ax = b **no
 > solution.**
 
@@ -125,17 +125,17 @@
 > ok, thế thì lúc này **ATA** như thế nào?
 >
 > me: Có thể nhớ rằng ta đã cùng nhau chứng minh rằng
-> **khi A có full-column rank**, tức có **mọi column đều
+> \**khi A có full-column rank**, tức có **mọi column đều
 > độc lập** thì khi đó, **ATA sẽ full-rank.**
 >
 > Có thể lập luận như sau: Xét ATAx = 0, **nhân  hai vế
 > cho xT** ta có **xTATAx** = 0 <=> **(Ax)T(Ax)** = 0, mà
 > vế trái là **square norm của vector u = Ax**. Nên nó
-> **bằng 0 chỉ khi u = Ax = 0**.
+> \**bằng 0 chỉ khi u = Ax = 0**.
 >
 > Thế mà, với điều kiện ban đầu rằng vì A full-column rank
 > nên N(A) = {0} => Ax=0 chỉ có zero là solution duy nhất
-> **nên x = 0 cũng là giá trị duy nhất khiến Ax = 0 và ATAx
+> \**nên x = 0 cũng là giá trị duy nhất khiến Ax = 0 và ATAx
 > = 0**
 >
 > Vậy **ATAx = 0 chỉ có thể có một solution là x = 0**, nên
@@ -191,7 +191,7 @@
 > me: Lập luận thế này, vì **r = m < n** nên **chắc chắn có  free
 > columns** hay Ax = 0 có free variables, từ đó **có  special
 > solutions** và **có vector trong basis** của nullspace Vậy
-> **nullspace** **KHÔNG CHỈ CÓ ZERO** hay dim N(A) > 0
+> \**nullspace** **KHÔNG CHỈ CÓ ZERO** hay dim N(A) > 0
 >
 > Trong bối cảnh này, nếu tồn tại x_particular, tương đương với
 > việc b nằm trong column space. Thế mà b thuộc R^m, mà
@@ -259,7 +259,7 @@
 > và gs nói về nullspace trong 4 trường hợp:
 >
 > i) **full rank** m = n = r: cả **nullspace mất** (dim = n - r = 0) và
-> **left nullspace mất** (dim = m - r = 0) (chỉ có zero)
+> \**left nullspace mất** (dim = m - r = 0) (chỉ có zero)
 >
 > ii) **full column rank** n = r < m: **nullspace mất** (dim = n - r = 0),
 > còn left nullspace (dim = m-r > 0)
@@ -360,7 +360,7 @@
 > 0. Nên **luôn có thể đảo ngược lại quá trình từ Ax -> x**, thể
 > hiện qua việc dùng matrix **A_left inverse** = (ATA)invAT
 >
-> **A_left_inverse Ax = x: (ATA)invATAx = Ix = x**
+> \**A_left_inverse Ax = x: (ATA)invATAx = Ix = x**
 
 <br>
 
@@ -517,11 +517,11 @@
 > với Identity**.
 >
 > Và như nãy có nói, Σ thuộc dạng **không full rank**, nên nó sẽ
-> **kill nullspace** (map nullspace vector thành zero) và **map row
+> \**kill nullspace** (map nullspace vector thành zero) và **map row
 > space về column space**
 >
 > Ngược lại Σ+ sẽ **map vector left nullspace thành zero**, và
-> **map vector trong column space về row space**.
+> \**map vector trong column space về row space**.
 
 <br>
 
@@ -548,7 +548,7 @@
 
 > [!NOTE]
 > và theo gs đại khái **đây là giải pháp khi least square fail** vì
-> **ATA không full rank (khi các columns không independent)**
+> \**ATA không full rank (khi các columns không independent)**
 
 <br>
 

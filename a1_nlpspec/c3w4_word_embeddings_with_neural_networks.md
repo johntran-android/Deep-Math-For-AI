@@ -59,8 +59,8 @@ Learning Objectives
 > 1 Introduction to **word vectors** and **training them from scratch**.
 >
 > 2 The **significance of word vectors** in **NLP applications** and their use in tasks such as
-> **semantic analogies**, **similarity calculations**, **sentiment analysis**, **machine translation**,
-> **information extraction**, and **question answering**.
+> \**semantic analogies**, **similarity calculations**, **sentiment analysis**, **machine translation**,
+> \**information extraction**, and **question answering**.
 >
 > 3 Learning objectives for the week, including **understanding word representations**
 > and **their numeric representation**, **generating word embeddings**, and **preparing text
@@ -134,7 +134,7 @@ Learning Objectives
 > 6 **Mapping between integers and one hot vectors** for easy conversion.
 >
 > 7 **Advantages** of one hot vectors in terms of representing **categorical variables**
-> **without implying relationships between words.**
+> \**without implying relationships between words.**
 >
 > 8 **Limitations** of one hot vectors, including their l**arge size for complex vocabularies**
 > and the **lack of capturing word meaning or semantic similarity.**
@@ -162,8 +162,8 @@ Learning Objectives
 
 > [!NOTE]
 > Cách này thì **đơn giản**, tuy nhiên vấn đề là với cách này thì
-> **quan hệ dựa trên thứ tự abc của chúng không giúp ích gì** vì nó
-> **vô nghĩa,** **không biểu trưng bất cứ quan hệ ngữ nghĩa** thực
+> \**quan hệ dựa trên thứ tự abc của chúng không giúp ích gì** vì nó
+> \**vô nghĩa,** **không biểu trưng bất cứ quan hệ ngữ nghĩa** thực
 > nào của các từ với nhau. **không có lí do gì để zebra lớn hơn
 > happy và happy lớn hơn hand cả**
 
@@ -202,7 +202,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là one-hot vectors có ưu điểm là **simple**, và **không có cái vụ
 > thứ tự** như cách đánh số thứ tự theo alphabet. Nhưng nhược điểm là vì
-> **độ dài của vector bằng số lượng từ trong vocab** nên nếu khi encode bộ
+> \**độ dài của vector bằng số lượng từ trong vocab** nên nếu khi encode bộ
 > vocab thật thường chứa cả **triệu từ** thì **size sẽ rất lớn** khiến tăng yêu
 > cầu về tính toán. Và cuối cùng là nó **không chứa đựng những ý nghĩa
 > quan hệ ngữ nghĩa**. Mỗi vector **chỉ là thể hiện yes or no có phải là một
@@ -239,7 +239,7 @@ Learning Objectives
 > answering and translation.
 >
 > 7 Objectives of the module, focusing on **creating word embeddings** through
-> **simpler to more advanced methods**.
+> \**simpler to more advanced methods**.
 >
 > 8 **Terminology clarification** regarding word vectors and word embeddings.
 >
@@ -292,7 +292,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là nói các **ưu điểm của word embedding** là nó giúp
-> **condense feature** thành **dense vector** với **ít dimension hơn**, ví
+> \**condense feature** thành **dense vector** với **ít dimension hơn**, ví
 > dụ chỉ khoảng 100-1000 thay vì cả triệu nếu là one-hot vector. Và cái
 > quan trọng nhất chính là nó **capture được các semantic meaning** của
 > các từ ví dụ như **những từ thật sự có nghĩa gần nhau sẽ được
@@ -353,7 +353,7 @@ Learning Objectives
 >
 > 4 **A simple vocabulary list** of common words is **not sufficient for creating embeddings**. The
 > corpus should consist of comprehensive sets of documents, such as **Wikipedia articles** or
-> **domain-specific texts like legal contracts** for specific NLP use cases.
+> \**domain-specific texts like legal contracts** for specific NLP use cases.
 >
 > 5 The **embedding method** is responsible for **generating the word embeddings from the corpus**.
 > Modern methods based on **machine learning models** are commonly used for this purpose.
@@ -372,10 +372,10 @@ Learning Objectives
 >
 > 9 **Before feeding** the corpus into the machine learning model, the t**ext contents need to be
 > transformed into a suitable mathematical representation**, such as i**nteger-based indices** or
-> **one-hot vectors**, depending on the **specific model requirements.**
+> \**one-hot vectors**, depending on the **specific model requirements.**
 >
 > 10 The next step involves introducing v**arious word embedding  methods**, including the
-> **continuous bag of words approach**, which will be implemented in the assignment for the week.
+> \**continuous bag of words approach**, which will be implemented in the assignment for the week.
 
 <br>
 
@@ -399,10 +399,10 @@ Learning Objectives
 > nó sẽ **gây nhiễu qua hệ ngữ nghĩa vốn có** của từ.
 >
 > 3. **Embedding method khác nhau** - dựa trên **model có main task khác nhau** thì
-> **embedding word sẽ khác**. Chưa rõ lắm
+> \**embedding word sẽ khác**. Chưa rõ lắm
 >
 > 4. Bài toán này gọi là **Self-supervised** vì tuy corpus **không có label gì cả**, nhưng
-> **bản thân nó đã chứa những thông tin ngữ nghĩa của từ vựng rồ**i, chỉ cần khai thác / **extract ra thôi.**
+> \**bản thân nó đã chứa những thông tin ngữ nghĩa của từ vựng rồ**i, chỉ cần khai thác / **extract ra thôi.**
 >
 > 5. Có thể có **h.p để control** như word vector **size**, **dài thì chưa đựng nhiều thông
 > tin** hơn nhưng **tính toán nhiều hơn**.
@@ -485,10 +485,10 @@ Learning Objectives
 > [!NOTE]
 > Đại hái có mấy pp sau:
 >
-> **word2Vec** - **Continuous bag of words** thì (train model) điền
+> \**word2Vec** - **Continuous bag of words** thì (train model) điền
 > vào chỗ trống - tức **predict từ dựa vào các từ xung quanh**.
 >
-> **word2Vec** - **Negative sampling** hay **skip-gram**: thì **cho trước
+> \**word2Vec** - **Negative sampling** hay **skip-gram**: thì **cho trước
 > context word**, và lấy các từ **gần nó** cũng như **các từ random**
 > để tạo **cặp label 1 - 0** và train bài toán **classification**. Ví dụ
 > chọn context word c, 1 từ gần nó t thì c-t có label 1, một từ
@@ -496,11 +496,11 @@ Learning Objectives
 >
 > Kiến thức này là từ DLSpec
 >
-> **Glovec**: Đại khái là hơi khó giải thích nhưng **nôm na là xây
+> \**Glovec**: Đại khái là hơi khó giải thích nhưng **nôm na là xây
 > dựng  optimization objective sao cho nếu từ xuất hiện gần
 > nhau nhiều thì word embedding của chúng càng gần nhau**
 >
-> **fastText** thì kiểu như **tính đến characters luôn** để từ đó có
+> \**fastText** thì kiểu như **tính đến characters luôn** để từ đó có
 > thể **handle OOV words**
 
 <br>
@@ -569,12 +569,12 @@ Learning Objectives
 > [!NOTE]
 > 1 **Overall process** for **machine learning model-based word embeddings**: To create word
 > embeddings, you need a **corpus** (a collection of text) and a **machine learning model** that
-> **performs a learning task**. The model **learns from the corpus** and **generates a set of word
+> \**performs a learning task**. The model **learns from the corpus** and **generates a set of word
 > embeddings** as a **byproduct**. You also need to **transform the corpus into a representation
 > suitable** for the machine learning model.
 >
 > 2 **Continuous Bag-of-Words (CBOW)** model instantiation: The CBOW model's **objective** is to
-> **predict a missing word based on the surrounding words** in a sentence. The **assumption** is that
+> \**predict a missing word based on the surrounding words** in a sentence. The **assumption** is that
 > \\/**words with similar contexts are semantically related**\\/. For example, given the sentence "The little
 > something is barking," the model can learn that the missing word is related to dogs, such as "dog," "
 > puppy," "hound," etc. The model l\\/**earns the meaning of words based on their contexts**\\/.
@@ -594,7 +594,7 @@ Learning Objectives
 > continues for the entire corpus.**  
 >
 > 5 Model architecture: The **CBOW** model architecture involves
-> **using the context words as inputs** and **predicting the center word as the output**. The \\/**original
+> \**using the context words as inputs** and **predicting the center word as the output**. The \\/**original
 > paper on CBOW describes this architecture**\\/, where the model learns to associate the context words
 > with the center word.
 >
@@ -604,7 +604,7 @@ Learning Objectives
 > model**.
 >
 > In summary, the **CBOW model predicts the center word using the surrounding context words**. By
-> **training the model on a corpu**s**, word embeddings are obtained as a byproduct**. The **training
+> \**training the model on a corpu**s**, word embeddings are obtained as a byproduct**. The **training
 > data** consists of **examples with context words** and **corresponding center word**s. The **CBOW
 > model architecture** takes **context words as inputs and aims to predict the center word**.
 
@@ -647,7 +647,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là '**bố trí / sắp xếp' bài toán** như thế nào: Thì đầu tiên **chọn một
 > từ gọi là center word**. Sau đó c**họn 2 từ trước nó và 2 từ sau** nó để làm
-> **context words**, các **window chứa 5 từ gọi là window size = 5**
+> \**context words**, các **window chứa 5 từ gọi là window size = 5**
 >
 > Nếu **chọn 2 từ thì gọi là context haft-size = 2**, và có thể chọn **3,4 từ gì đó**,
 > và đây sẽ là một **h.param**.
@@ -708,10 +708,10 @@ Learning Objectives
 > 1 **Cleaning** and **tokenization** are important steps in processing a corpus.
 >
 > 2 Consider the words of the corpus as **case** **insensitive** by converting it to either **all lowercase** or
-> **all uppercase**.
+> \**all uppercase**.
 >
 > 3 Handle **punctuation** by representing **interrupting punctuation marks** as a **single special word**,
-> **ignoring non-interrupting punctuation marks**, and collapsing multi-sign marks into a single mark.
+> \**ignoring non-interrupting punctuation marks**, and collapsing multi-sign marks into a single mark.
 >
 > 4 Decide how to handle **numbers** based on t**heir relevance to the use case.** Numbers **without
 > important meaning** can be **dropped**, while **significant numbers** can be **kept or replaced with a
@@ -722,11 +722,11 @@ Learning Objectives
 >
 > 6 When working with **modern corpora** that include user inputs like **tweets** or **consumer reviews**,
 > handle **special words** such as **emojis** and **hashtags** based on the **intended meaning**. Consider
-> **treating each emoji or hashtag** as an **individual word**.
+> \**treating each emoji or hashtag** as an **individual word**.
 >
 > 7 A **Python example** **demonstrates** some of these **recommendations**, including **collapsing
 > interrupting punctuation**, **tokenizing using NLTK library**, and keeping **lowercase** tokens that are
-> **alphabetical, full stops, or emojis**.
+> \**alphabetical, full stops, or emojis**.
 >
 > 8 The next part of the **continuous bag-of-words model** is the **sliding window**, which involves a
 > window moving over the text corpus.
@@ -744,13 +744,13 @@ Learning Objectives
 > corpus to either **all lowercase** or **all uppercase is recommended**.
 >
 > 3 Handling **punctuation** involves representing **interrupting punctuation marks** (e.g., full
-> **stops**, **commas**, **question** marks) as a **single special word** and **ignoring non-interrupting
+> \**stops**, **commas**, **question** marks) as a **single special word** and **ignoring non-interrupting
 > punctuation marks** (e.g., quotation marks).
 >
 > 4 Dealing with **numbers** **depends** on their relevance to the use case. Numbers **without
 > important meaning** can be **dropped**, while **significant numbers** should be **kept** in the
 > corpus. For **numerous unique numbers**, replacing them with a special token like "
-> **<NUMBER>**" can be beneficial.
+> \**<NUMBER>**" can be beneficial.
 >
 > 5 **Special characters** such as **mathematical** symbols, **currency** symbols, and **online
 > markup signs** can generally be **dropped** from the corpus.
@@ -763,14 +763,14 @@ Learning Objectives
 > [!NOTE]
 > Nên chuyển thành **lowercase hoặc uppercase hết**
 >
-> **Interrupting mark thì giữ lại**, biến thành **'.'** hết, còn **non-interrupting mark
+> \**Interrupting mark thì giữ lại**, biến thành **'.'** hết, còn **non-interrupting mark
 > như ','/';' thì bỏ đi**
 >
 > Đối với number thì **number nào không quan trọng thì bỏ đi**, **quan trọng
 > thì giữ lại**. Nếu có **nhiều unique number** nhưng giá trị của nó thì không
 > cần phải phân định rõ thì thay bằng **<NUMBER>**
 >
-> **Special char** như $ ..nên **bỏ**
+> \**Special char** như $ ..nên **bỏ**
 >
 > Còn các **emoji, hashtag** thì tuỳ vào **intended meaning** mà có thể giữ
 
@@ -838,7 +838,7 @@ Learning Objectives
 
 > [!NOTE]
 > 1 Introduction to **context words** and **center words**: The transcript mentions the importance of
-> **context words** and **center words** for training a **continuous bag-of-words model.**
+> \**context words** and **center words** for training a **continuous bag-of-words model.**
 >
 > 2 Extraction of context words and center words: The **get_windows** function in. Python is
 > introduced, which **takes a corpus of words** and the **context size** as arguments. It initializes a
@@ -846,7 +846,7 @@ Learning Objectives
 > context words**.
 >
 > 3 Function explanation: The transcript provides a **step-by-step explanation** of the **get_windows**
-> **function**, including how it **identifies the first usable center word**, loops through the corpus, **creates arrays of context words**, and **uses the yield keyword** to return values.
+> \**function**, including how it **identifies the first usable center word**, loops through the corpus, **creates arrays of context words**, and **uses the yield keyword** to return values.
 >
 > 4 Usage of the **get_windows** function: The transcript demonstrates how to **use the get_windows
 > function in a loop to obtain tuples of context words and center words**. It shows the output for the
@@ -874,11 +874,11 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/1341f9a792e3c0925b69b36ee5aef6352da5bbb8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Cách 'làm' sliding window of words**: **C stand for context**, là **số từ
+> \**Cách 'làm' sliding window of words**: **C stand for context**, là **số từ
 > ta lấy trước và sau mỗi target word**. Ví dụ **2** thì lấy **2 từ trước** và
-> **2 từ sau** một từ để **predict từ đó**.
+> \**2 từ sau** một từ để **predict từ đó**.
 >
-> **Loop i** trong range mà có thể có **valid context**, ở đây mình thấy
+> \**Loop i** trong range mà có thể có **valid context**, ở đây mình thấy
 > nó cho **i = C trước**, và loop **i đến khi nào nó bằng len(words) - C**.
 >
 > Thì đại khái **từ đầu tiên có thể có đủ C từ trước nó** để lấy làm
@@ -902,7 +902,7 @@ Learning Objectives
 
 > [!NOTE]
 > Cái chính đáng chú ý là xem function
-> **get_windows**() với **yield keyword** giống như function
+> \**get_windows**() với **yield keyword** giống như function
 > cung **cấp từng batch data** từng chút vậy
 
 <br>
@@ -931,7 +931,7 @@ Learning Objectives
 >
 > 4 **Encoding context words**: The transcript explains that a **single vector is created to represent the
 > context words**. This is done by taking the **average of the one-hot vectors of each context word**. The
-> **resulting vector is the representation of the entire context.**
+> \**resulting vector is the representation of the entire context.**
 >
 > 5 Example of vector representation: The transcript provides an example of encoding context words and
 > central word using one-hot vectors. It shows the **vocabulary** and the **corresponding one-hot vectors for
@@ -953,7 +953,7 @@ Learning Objectives
 
 > [!NOTE]
 > Transform **center word** thành dạng
-> **one-hot encoding vector.**
+> \**one-hot encoding vector.**
 
 <br>
 
@@ -963,7 +963,7 @@ Learning Objectives
 
 > [!NOTE]
 > Còn **một bộ các context words** của **mỗi center word** thì encode thành
-> **vector** nhưng bằng cách **tính trung bình các one-hot vector** của các
+> \**vector** nhưng bằng cách **tính trung bình các one-hot vector** của các
 > context words. Ví dụ context vector của center word 'happy'
 
 <br>
@@ -1069,8 +1069,8 @@ Learning Objectives
 
 > [!NOTE]
 > Kế đến, **filter** các token để **loại bỏ number**. Ta thấy họ dùng
-> **list comprehension** rất gọn, dùng **ch.isalpha()** để check xem
-> **có phải string start with chữ** hay không và dùng **emoji library**
+> \**list comprehension** rất gọn, dùng **ch.isalpha()** để check xem
+> \**có phải string start with chữ** hay không và dùng **emoji library**
 > để check **emoji character**
 
 <br>
@@ -1100,7 +1100,7 @@ Learning Objectives
 > index và end index** sao cho có thể **lấy C từ trước nó** và **C từ sau
 > nó** để làm **context words**. Rồi nó dùng keyword **yield** giúp **trả
 > về kết quả từng chút từng chút.** Để ý output được in ra thấy nó
-> **return từng bộ tuple (context words list, target word)**
+> \**return từng bộ tuple (context words list, target word)**
 
 <br>
 
@@ -1128,7 +1128,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là ta sẽ **cần tạo one-hot encoding cho target word**, và cả
-> **context words** rồi tính **trung bình cộng** lại để tạo **vector của cả
+> \**context words** rồi tính **trung bình cộng** lại để tạo **vector của cả
 > đám context words**. Thì trước hết phải có cách để **tính ra index của từ
 > trong vocab** thì mới tạo one-hot vector được, Thì ở đây ổng cho sẵn
 > function **get_dict(bộ corpus)** để cho ra 2 cái **dict từ-> id, và id-> từ**
@@ -1186,7 +1186,7 @@ Learning Objectives
 
 > [!NOTE]
 > Kế tiếp đại khái là tạo dùng **list comprehension** và function
-> **word_to_one_hot_vector** để **tạo bộ one-hot vector của các từ
+> \**word_to_one_hot_vector** để **tạo bộ one-hot vector của các từ
 > context**. Sau đó ta dùng **mean(dim=1)** để tạo **average vector** -
 > đại diện cho **cả bộ các từ context**. Nhớ lại cách hiểu để biết axis =
 > mấy: mỗi vector của từ là một hàng, ta cần tính sum / hay mean của
@@ -1219,8 +1219,8 @@ Learning Objectives
 > [!NOTE]
 > Combine **get_windows** và các function **context_words_to_vector**
 > và **word_to_one_hot_vector**, ta có thể dễ dàng 'slide' cái window
-> **đi hết bộ text corpus** và **với mỗi bộ context words, target word**
-> **tạo ra vector của chúng**.
+> \**đi hết bộ text corpus** và **với mỗi bộ context words, target word**
+> \**tạo ra vector của chúng**.
 
 <br>
 
@@ -1231,7 +1231,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là dùng **yield** keyword. Viết một function trong đó **mỗi lần slide
 > window**, **tính bộ vector xong** thì **'yield' kết quả về**, như vậy function
-> **get_training_example** nó sẽ có cái kiểu **trả kết quả từng chút từng chút
+> \**get_training_example** nó sẽ có cái kiểu **trả kết quả từng chút từng chút
 > (từng bộ một)** chứ không phải nó chạy xong hết nó trả 1 cục ra
 
 <br>
@@ -1658,7 +1658,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là để tính **matrix multiplication** thì **các shape
 > của W,x phải tương thích**, **W sẽ là matrix = 2D** array thì
-> **x cũng phải vậy**, (cái b - bias chỉ là phép cộng, nó sẽ
+> \**x cũng phải vậy**, (cái b - bias chỉ là phép cộng, nó sẽ
 > được numpy broadcast)
 
 <br>
@@ -1669,7 +1669,7 @@ Learning Objectives
 
 > [!NOTE]
 > Thì để **biến 1D thành 2D** ta dùng
-> **reshape** cũng được hoặc ở đây nó dùng
+> \**reshape** cũng được hoặc ở đây nó dùng
 > cách **set shape attribute**
 
 <br>
@@ -1700,7 +1700,7 @@ Learning Objectives
 > values**.
 >
 > 4 The loss function measures the **difference between the prediction and the true value** for a
-> **single training example** in the continuous bag of words model.
+> \**single training example** in the continuous bag of words model.
 >
 > 5 The **parameters being adjusted** in the continuous bag of words model are the weight matrices
 > (W1 and W2) and the bias factors (B1 and B2).
@@ -1779,7 +1779,7 @@ Learning Objectives
 > central word "happy."**
 >
 > 5 The vectors **Y and Ŷ** are provided, representing the **actual values** and the
-> **predicted values**, respectively.
+> \**predicted values**, respectively.
 >
 > 6 The **cross entropy loss** is calculated by taking the **logarithm of Ŷ** and **multiplying
 > each element by the corresponding element of Y.**
@@ -1791,7 +1791,7 @@ Learning Objectives
 
 > [!NOTE]
 > Các step ví dụ **tính ra loss** cho một trường hợp
-> **predict đúng**. Từ đúng là 'happy' và nó predict y^
+> \**predict đúng**. Từ đúng là 'happy' và nó predict y^
 > có P tại vị trí tương ứng với 'happy' là cao nhất **0.611.** 
 >
 > Tính loss cho ra J = 0.49
@@ -1862,7 +1862,7 @@ Learning Objectives
 > through the network** and obtain the **output matrix Ŷ.**
 >
 > 4 **Cost** is an **extension of loss to support a batch of training examples**, and it is calculated based on the
-> **cross-entropy loss function.**
+> \**cross-entropy loss function.**
 >
 > 5 The terms **"loss" and "cost" are used interchangeably**, with **"loss" referring to a single example and "cost"
 > to a batch of examples.**
@@ -1927,10 +1927,10 @@ Learning Objectives
 > provided.
 >
 > 6 The **formulas for updating the weights and biases using Gradient Descent** are given, including the
-> **learning rate (alpha) as a hyperparameter.**
+> \**learning rate (alpha) as a hyperparameter.**
 >
 > 7 The **learning rate determines the size of the step taken during each parameter update**, with a
-> **smaller** value leading to **more gradual updates** and a **larger** value allowing for **faster updates**.
+> \**smaller** value leading to **more gradual updates** and a **larger** value allowing for **faster updates**.
 >
 > 8 The **updated weights** and **biases** are obtained by **subtracting alpha times their respective
 > gradients from their original values**.
@@ -1950,7 +1950,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/75ff4f3c7167429e6f35ce4ff5cef6ad46177cbd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Backprop**: Cơ bản như ta đã biết là tính đạo
+> \**Backprop**: Cơ bản như ta đã biết là tính đạo
 > hàm (**partial derivative**) của cost function **w.r.t
 > weights**. Và **Gradient Descent** update weights
 > với **partial derivative** đó
@@ -2038,14 +2038,14 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/6684dbcb59a000a445a0df283f629bb60cf1b8a6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **N là số unit của hiden layers** và **cũng sẽ là số item của embedding
+> \**N là số unit của hiden layers** và **cũng sẽ là số item của embedding
 > layer**. Là một **h. param** ta set nó bằng 3.
 >
 > Còn số **V chính là số feature của input vector** và chính là **số từ của
 > vocab size**
 >
 > (ôn lại nhanh: **context word sẽ dc one-hot encoded** - thành vector có
-> **len = vocab size**, từ đó tính **ra vector của một group context words**
+> \**len = vocab size**, từ đó tính **ra vector của một group context words**
 > (của một target word)  bằng cách tính **trung bình các từ** thì cũng là
 > vector len = vocab size và đó chính là i**nput của N.N**
 
@@ -2352,7 +2352,7 @@ Learning Objectives
 > [!NOTE]
 > In previous lecture notebooks you saw all the steps needed to
 > train the CBOW model. This notebook will walk you through
-> **how to extract the word embedding vectors** from a model.
+> \**how to extract the word embedding vectors** from a model.
 >
 > Let's dive into it!
 
@@ -2429,7 +2429,7 @@ Learning Objectives
 > quality of the clusters** by **comparing them to a human-made reference**, like a **thesaurus**.
 >
 > 4 It is important to note that **in some cases, there may be multiple correct answers** or instances where
-> **word embeddings fail to capture certain relationships accurately.**
+> \**word embeddings fail to capture certain relationships accurately.**
 >
 > 5 **Visualization** of word embedding vectors can **be a part of intrinsic evaluation**, allowing for a **basic
 > assessment of the embeddings using human judgment**.
@@ -2451,7 +2451,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là đánh giá bằng **khả năng embedding chứa đựng
 > những Semantic analogies** (ý nghĩa về ngữ nghĩa của từ) và
-> **Syntactic analogies** kiểu như **thì, dạng từ .**...
+> \**Syntactic analogies** kiểu như **thì, dạng từ .**...
 
 <br>
 
@@ -2502,7 +2502,7 @@ Learning Objectives
 > embeddings by using the performance metric of the external task** as **a proxy for the quality of the embeddings**.
 >
 > 2 Examples of useful **word-level tasks for extrinsic evaluation** include **named entity recognition** and
-> **parts-of-speech tagging**. Named entity recognition involves i**dentifying and categorizing named entities in a
+> \**parts-of-speech tagging**. Named entity recognition involves i**dentifying and categorizing named entities in a
 > sentence**, such as **identifying persons, organizations, locations,** etc.
 >
 > 3 To perform **extrinsic evaluation**, you **train a model using word embeddings** and **evaluate its performance on a
@@ -2518,7 +2518,7 @@ Learning Objectives
 > 5 Extrinsic evaluation is **more challenging** to **troubleshoot** compared to intrinsic evaluation.
 >
 > 6 The text suggests referring to a **comprehensive** and **readable paper** on **evaluating word embeddings** for
-> **further exploration** of the topic.
+> \**further exploration** of the topic.
 >
 > 7 The summary emphasizes that **extrinsic evaluation** evaluates the **actual usefulness of word embeddings** but
 > acknowledges that it is **more time-consuming** and **difficult to troubleshoot** compared to intrinsic evaluation.
@@ -2538,7 +2538,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là đánh giá nó t**hông qua các downstream task** như
 > named entity recognition, sentiment classification, translation
-> **nôm na là những bài toán thật sự**, **những vấn đề cụ thể mà
+> \**nôm na là những bài toán thật sự**, **những vấn đề cụ thể mà
 > ta cần có những thông tin semantic/syntactic của từ để giải
 > quyết tốt**. Thì **nếu những downstream task đó mà work ok thì
 > cũng đồng nghĩa là word embedding ok**
@@ -2747,7 +2747,7 @@ Learning Objectives
 > Còn đối với các **context words của một target words**, cũng dùng
 > function trên để **tạo one-hot vector của mỗi từ**, sau đó **average**.
 > Ta dùng **np.mean()**. Và vì m**ỗi one-hot vector là một row (1xn)** nên
-> **mean là sum của các row**, index tương ứng với row là 0, nên
+> \**mean là sum của các row**, index tương ứng với row là 0, nên
 > argument **axis = 0.**
 
 <br>
@@ -3146,14 +3146,14 @@ Learning Objectives
 
 > [!NOTE]
 > 1 Word **embeddings** are vectors that **capture the meaning of words** and can be used in various
-> **NLP applications**.
+> \**NLP applications**.
 >
 > 2 The week's focus was on **word embeddings** and **their applications in NLP.**
 >
 > 3 The covered topics include **training word embeddings from scratch**, **tokenizing a corpus** to **build
 > a vocabulary**, **converting words to indices** and **one-hot vectors**, creating **word representations**
 > using continuous bag of words model, **training neural networks** for word embeddings, and
-> **visualizing** word embedding vectors.
+> \**visualizing** word embedding vectors.
 >
 > 4 The final assignment allows practicing all the learned skills, including **data preparation**, **building
 > a vocabulary**, **training word embeddings, and evaluating them through visualization.**
@@ -3278,7 +3278,7 @@ Learning Objectives
 > analysis.**
 >
 > • To implement sentiment analysis, you can g**o beyond counting the number of  positive words** and
-> **negative words.**
+> \**negative words.**
 >
 > • You can find a way to **represent each word numerically**, by a **vector**.
 >
@@ -3294,7 +3294,7 @@ Learning Objectives
 > vectors**.
 >
 > Knowing how to train these models will **give you a better understanding of word vectors**,  which are
-> **building blocks to many applications** in **natural language processing.**
+> \**building blocks to many applications** in **natural language processing.**
 
 <br>
 
@@ -3387,7 +3387,7 @@ Learning Objectives
 > [!NOTE]
 > Như đã gặp ở lab, cho sẵn function **get_dict**() để
 > mình **tạo ra 2 cái dictionary** map giữa **word-index** và
-> **index-word** **word2Ind** và **Ind2Word** để tiện sử dụng
+> \**index-word** **word2Ind** và **Ind2Word** để tiện sử dụng
 > trong việc **tạo các one-hot vector**
 
 <br>
@@ -3451,7 +3451,7 @@ Learning Objectives
 > [!NOTE]
 > Vì softmax sẽ apply cho **output layer có V (vocab's size) unit** - mỗi
 > unit ví dụ **unit thứ i** cho ra **một con số (z_i)** gọi là **logit** của
-> **class tương ứng - từ thứ i trong vocab** , bỏ vào **softmax**
+> \**class tương ứng - từ thứ i trong vocab** , bỏ vào **softmax**
 > activation function để **chuyển** các con số này thành **Probability
 > p(i)** - \/**Xác suất của việc cái từ đang tìm là cái từ thứ i**\/ \/**trong
 > vocab** \/Ở đây mỗi training sample khi input vào model là một vector cột
@@ -3552,7 +3552,7 @@ Learning Objectives
 >
 > nên tính **ylog(y^)** là **np.multiply() để tính element-wised multiplication**
 > Sau đó **tính sum (bằng np.sum)** rồi **chia cho batch_size** ra
-> **mean**. Dòng cuối **np.squeeze là để biến array thành scaler** (số thực)
+> \**mean**. Dòng cuối **np.squeeze là để biến array thành scaler** (số thực)
 
 <br>
 

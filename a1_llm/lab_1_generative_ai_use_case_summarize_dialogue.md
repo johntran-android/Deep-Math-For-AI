@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > In this lab, you will do the **dialogue summarization task using generative AI**. You will 
-> **explore how the input text affects the output of the model**, and **perform prompt 
+> \**explore how the input text affects the output of the model**, and **perform prompt 
 > engineering** to **direct it towards the task you need**. By comparing **zero shot, one shot, and 
 > few shot inferences**, you will t**ake the first step towards prompt engineering** and see how 
 > it can enhance the generative output of Large Language Models.  

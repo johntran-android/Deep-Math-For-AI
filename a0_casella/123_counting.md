@@ -11,7 +11,7 @@
 
 > [!NOTE]
 > đại khái là nói về **lí do ta phải quan tâm cái này (phương pháp đếm)** là vì
-> **lấy ví dụ vé số có 6 số**, **mỗi số có thể mang giá trị từ 1 đến 44**. Thì ta **cần biết có bao nhiêu bộ 6 số có thể có**, từ đó mới tính đến **xác suất của
+> \**lấy ví dụ vé số có 6 số**, **mỗi số có thể mang giá trị từ 1 đến 44**. Thì ta **cần biết có bao nhiêu bộ 6 số có thể có**, từ đó mới tính đến **xác suất của
 > một bộ nào đó xảy ra là bao nhiêu**.
 >
 > Thế thì **luật đếm nói chung là phức tạ**p, nên ta sẽ **dựa vào một số quy tắc**
@@ -34,7 +34,7 @@
 > Có điều, phải cân nhắc **Ordered** vs **Unordered** và **With Replacement /
 > Without Replacement**
 >
-> **Bởi vì** đại khái là **tùy thuộc xem cái luật xổ số ra sao**, ví dụ **các số trên
+> \**Bởi vì** đại khái là **tùy thuộc xem cái luật xổ số ra sao**, ví dụ **các số trên
 > tấm vé số có phải khác nhau không** ý là các bộ số trên các tấm vé
 > được tạo bằng cách sampling có hay hoàn lại hay không. **Nếu có** hoàn
 > lại, thì kiểu như ta **có thể có bộ số 1 3 3 8 8** (Tức là mỗi số có thể được
@@ -132,14 +132,14 @@
 >
 > (lấy ví dụ k=5, n=10 (các con số để chọn từ 0 đến 9)
 >
-> **14531** (a) (**có hoàn lại** nên **có thể xuất hiện số 1 nhiều lần**)
+> \**14531** (a) (**có hoàn lại** nên **có thể xuất hiện số 1 nhiều lần**)
 >
 > Và kết quả trên sẽ **COI NHƯ GIỐNG với 11453** (vì ko care thứ tự nên **chỉ tính là một**)
 >
 > Và nó **sẽ chỉ phân biệt với một bộ số khác** (nói **bộ số** là **ám chỉ ta không quan tâm
 > thứ tự**) ví dụ như:
 >
-> **11145** (b), hay **12237** (c)
+> \**11145** (b), hay **12237** (c)
 >
 > Vậy để hiểu minh họa trong sách ra sẽ xem **(a), (b), (c)** có thể được thể hiện như thế
 > nào:
@@ -164,7 +164,7 @@
 >
 > Thế thì **để đếm cái này**, ta sẽ nhận xét tiếp rằng:
 >
-> **MỘT CÁCH "RẢI" CỤ THỂ K QUẢ BANH VÀO N HỘP...**
+> \**MỘT CÁCH "RẢI" CỤ THỂ K QUẢ BANH VÀO N HỘP...**
 >
 > ..**THẬT RA CHỈ LÀ MỘT CÁCH SẮP XẾP CỤ THỂ CỦA K QUẢ BANH VÀ MẤY CÁI
 > VÁCH NGĂN GIỮA CÁC HỘP**.
@@ -172,16 +172,16 @@
 > Lấy ví dụ có **n=3, k=2** cho dễ hình dung: thì khi đó: **"hộp 1 có 1 banh, hộp 2 có 0 banh,
 > hộp 3 có 1 banh"** thì cũng giống như cách sắp xếp của các vách và banh như sau:
 >
-> **v b v v b v**
+> \**v b v v b v**
 >
 > Lấy ví dụ khác: **"hộp 1 có 0 banh, hộp 2 có 0 banh, hộp 3 có 2 banh"** thì cũng giống như
 > cách sắp xếp các vách và banh như sau:
 >
-> **v v v b b v**
+> \**v v v b b v**
 >
 > Lấy ví dụ khác: "**hộp 1 có 0 banh, hộp 2 có 2 banh, hộp 3 có 0 banh**":
 >
-> **v v b b v v**
+> \**v v b b v v**
 >
 > Thế thì đến đây ta có thể nhận xét rằng **hai cái vách ở ngoài cùng ko cần thiết** (trong
 > việc thể hiện một cách chọn). Ví dụ 1 có thể chỉ cần ghi: (**b v v b**) là "biết" "**hộp 1 và
@@ -206,7 +206,7 @@
 >
 > Kết luận lại kết quả sẽ ra là:
 >
-> **(n-1+k)!/(n-1)!k!** 
+> \**(n-1+k)!/(n-1)!k!** 
 >
 > Và chính là **(n-1+k choose k)**
 

@@ -30,7 +30,7 @@
 > completions** to **establish agreement** and **mitigate the influence of outlier
 > evaluators**.
 >
-> **Providing clear and comprehensive instructions** to evaluators is **crucial**, as it
+> \**Providing clear and comprehensive instructions** to evaluators is **crucial**, as it
 > directly **impacts the quality and consistency of the collected feedback**. The
 > instructions encompass factors like **response accuracy, informativeness, handling
 > tied rankings, and addressing low-quality responses.** 
@@ -38,8 +38,8 @@
 > involves **translating the human assessments into a format suitable** for
 > reinforcement learning.
 >
-> **The rankings** are transformed into a system of **pairwise comparisons**, involving
-> **scores of 0 or 1** for **each possible pair of completions**. The responses that
+> \**The rankings** are transformed into a system of **pairwise comparisons**, involving
+> \**scores of 0 or 1** for **each possible pair of completions**. The responses that
 > were **favored receive a reward score of 1**, while the l**ess favored ones receive a
 > score of 0**.
 >
@@ -69,7 +69,7 @@
 > summarization, question answering or something else. In general, you may find it
 > easier to **start with an instruct model that has already been fine tuned** across **many
 > tasks and has some general capabilities**. You'll then use this LLM along with a
-> **prompt data** set to **generate a number of different responses** for each prompt. The
+> \**prompt data** set to **generate a number of different responses** for each prompt. The
 > prompt dataset is comprised of **multiple prompts**, each of which gets processed by
 > the LLM to p**roduce a set of completions.**
 
@@ -83,15 +83,15 @@
 > Để **collect human feedback**, đầu tiên là phải **tạo bộ dữ liệu cho việc training reward
 > model**: Thì việc này là dùng **human labeler**. Nôm na ngắn gọn là ta **dùng các prompt trong
 > prompt dataset** nói ở trên **vào LLM để lấy các prediction** của nó (gọi là **completion**). Sau đó
-> **đưa cho human labeler để họ đánh giá, xếp hạng** các completion từ **cao tới thấp** theo một
-> **tiêu chí nào đó** 
+> \**đưa cho human labeler để họ đánh giá, xếp hạng** các completion từ **cao tới thấp** theo một
+> \**tiêu chí nào đó** 
 >
-> **Nhiều người sẽ cùng label cùng một sample data** để lấy **sự đồng thuận** (phương pháp này đã nói ở Course 2) và **giảm thiểu rủi ro ông nào đó làm sai**. Nói chung là
+> \**Nhiều người sẽ cùng label cùng một sample data** để lấy **sự đồng thuận** (phương pháp này đã nói ở Course 2) và **giảm thiểu rủi ro ông nào đó làm sai**. Nói chung là
 > bộ data này sẽ **dùng để  train Reward model** bằng **Supervised Learning**, để sau đó **dùng nó
 > đóng vai trò con người trong việc give feedback cho LLM trong quá trình fine-tuning LLM
 > bằng RLHB** 
-> **Bước đầu là define alignment criterion** - tiêu chí là gì. Sau đó bắt đầu inference LLM với
-> **prompt dataset** để nó generate output. Kế đến, dùng **human** labeler để **đánh giá theo
+> \**Bước đầu là define alignment criterion** - tiêu chí là gì. Sau đó bắt đầu inference LLM với
+> \**prompt dataset** để nó generate output. Kế đến, dùng **human** labeler để **đánh giá theo
 > kiểu là xếp hạng output từ cao đến thấp  theo tiêu chí đã đặt ra.**
 >
 > Và thay vì một, s**ẽ dùng một group nhiều labeled để lấy kết quả đồng thuận** nhằm hạn

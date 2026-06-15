@@ -145,7 +145,7 @@
 >
 > Từ đó, tích phân kép trên vùng R của x . theta . dA =
 >
-> **Tích phân kép trên vùng R của x . dA = x_bar * Diện tích vùng R**
+> \**Tích phân kép trên vùng R của x . dA = x_bar * Diện tích vùng R**
 
 <br>
 

@@ -30,7 +30,7 @@
 > phải là tổng các column thành vector [1 1 ..] nhé)
 >
 > Và gs cho biết hai tính chất này sẽ **giữ nguyên** khi ta
-> **bình phương matrix lên**, nên **A^2 cũng là Markov matrix**
+> \**bình phương matrix lên**, nên **A^2 cũng là Markov matrix**
 
 <br>
 
@@ -43,9 +43,9 @@
 > [!NOTE]
 > Đại khái là gs nhắc lại bữa trước đã làm qua một ví dụ
 > về phương trình vi phân mà có hai eigenvalue, trong đó
-> **một eigenvalue = 0** giúp **e^0 = 1** khiến cho u(t) có
+> \**một eigenvalue = 0** giúp **e^0 = 1** khiến cho u(t) có
 > một term **mang giá trị hằng số**, và một term còn lại thì
-> **lambda âm** khiến khi t lớn lên thì exponential của cái
+> \**lambda âm** khiến khi t lớn lên thì exponential của cái
 > đó sẽ -> e^[trừ vô cùng] = 0
 >
 > Do đó **để có trạng thái steady state** (hàm số theo t có
@@ -130,14 +130,14 @@
 > Và vì Λ Là **diagonal matrix** (các item trên đường chéo
 > là eigenvalue của A). Do đó (Λ^k)c sẽ là vector như sau:
 >
-> **[c1*λ1^k, c2*λ2^k......cn*λn^k].T**
+> \**[c1*λ1^k, c2*λ2^k......cn*λn^k].T**
 >
 > Và do đó u(k) = S[c1*λ1^k, c2*λ2^k......cn*λn^k]T
 >
 > sẽ là linear combination các columns của S (các vector x1, x2.. 
 > ) với các coefficients là c1*λ1^k, c2*λ2^k......cn*λn^k: 
 >
-> **c1*λ1^k*x1 + c2*λ2^k*x2......+cn*λn^k*xn**
+> \**c1*λ1^k*x1 + c2*λ2^k*x2......+cn*λn^k*xn**
 
 <br>
 
@@ -205,7 +205,7 @@
 > [!NOTE]
 > Tiếp theo, ta sẽ xem xét tại sao, với **Markov** **matrix**, khi
 > các **item trong cols có tổng bằng 1** thì lại khiến ta có
-> **eigenvalue = 1?**
+> \**eigenvalue = 1?**
 
 <br>
 
@@ -237,7 +237,7 @@
 
 > [!NOTE]
 > Thế thì gs nói rằng ta có thể nhận xét thấy matrix này có
-> **TỔNG CÁC ROWS = 0** (tí nữa có thể ta sẽ giải thích tại
+> \**TỔNG CÁC ROWS = 0** (tí nữa có thể ta sẽ giải thích tại
 > sao sau), thì tại sao từ đó cho ta được phép kết luận A - I
 > SINGULAR?
 >
@@ -270,14 +270,14 @@
 > cho thấy (1,1,1) là solution của (A-I)Ty = 0 => đó chính là một
 > basis vector của left nullspace của (A-I) 
 >
-> **Mà việc nullspace hay left nullspace có vector khác 0
+> \**Mà việc nullspace hay left nullspace có vector khác 0
 > giúp suy ra ngay matrix này SINGULAR**
 >
 > Vì sao, vì ta đã nghe gs nói về khái niệm **singular** là khi
 > matrix **BIẾN MỘT NON-ZERO VECTOR THÀNH 0**, thể
 > hiện bởi việc **tồn tại vector khác 0** trong nullspace, hoặc
 > left nullspace. Nên matrix non-singular, invertible chỉ khi
-> **không có non-zero vector nào bị biến thành 0 bởi A** (tức
+> \**không có non-zero vector nào bị biến thành 0 bởi A** (tức
 > Ax=0) **hoặc AT** (tức ATy = 0). 
 >
 > Nên nếu gọi u = (1,1,1) thì (AT-I)u = 0 <=> ATu-u = 0 
@@ -296,7 +296,7 @@
 > [!NOTE]
 > Gs hỏi tiếp, ta đã biết (1,1,1) là **nằm trong nullspace of
 > AT-I** và là eigenvector của AT (với eigenvalue = 1) thế thì
-> **cái gì trong nullspace của A - I**
+> \**cái gì trong nullspace của A - I**
 >
 > Thì có thể lập luận thế này: Vì (A-I)T SINGULAR, nên dĩ
 > nhiên A-I cũng SINGULAR nên cũng tồn tại non-zero vector
@@ -365,7 +365,7 @@
 
 > [!NOTE]
 > Và vì ta đã biết **1 là eigenvalue của A**T với
-> **eigenvector u = (1,1,1)**
+> \**eigenvector u = (1,1,1)**
 >
 > Nên suy ra **1** **CŨNG LÀ EIGENVALUE CỦA A** (*)
 > nhưng đương nhiên **eigenvector sẽ khác**, không phải là
@@ -462,7 +462,7 @@
 > nó chính là eigenvector gắn với eigenvalue = 1
 >
 > Từ đó, như lúc nãy cũng đã phân tích, eigenvector gắn với
-> **eigenvalue = 1** này chính là cái tham gia **trở thành steady state**.
+> \**eigenvalue = 1** này chính là cái tham gia **trở thành steady state**.
 > (u(t) sẽ converge về chỉ còn c1x1)
 >
 > Tất nhiên sẽ **cần tìm thêm coefficient c1** nữa để c1x1 là **steady
@@ -474,14 +474,14 @@
 >
 > Nhưng dù gì, **c1x1** sẽ quy định rằng tỉ lệ trong 1000 bao nhiêu
 > sẽ ở Cali, bao nhiêu sẽ ở Massachuset và nó chính là cho ta biết
-> **khi k = [lớn vô cùng] thì giá trị sẽ là bao nhiêu**.
+> \**khi k = [lớn vô cùng] thì giá trị sẽ là bao nhiêu**.
 >
 > Còn về việc tại sao u_k lại bằng c1*λ1^kx1 + c2*λ2^k*x2... thì
 > ôn nhanh thế này: 
 >
 > Đầu tiên ta biểu diễn **u_0** thuộc **Rn** là **linear combination 
 > của các eigenvectors basis** (vì nếu thỏa điều kiện matrix A có
-> **đủ n independent eigenvectors** thì nó sẽ tạo một **basis span toàn bộ
+> \**đủ n independent eigenvectors** thì nó sẽ tạo một **basis span toàn bộ
 > Rn**):
 >
 > u_0 = c1x1 + c2x2 + ... = Sc
@@ -501,7 +501,7 @@
 
 > [!NOTE]
 > Vậy như đã nói **c1x1** cho ta biết khi **k lớn vô cùng**
-> **u_infinity**
+> \**u_infinity**
 >
 > Còn để **tìm u_100** thì ta **vẫn cần tìm eigenvector (vì
 > khi đó k chưa đủ lớn để "cái phần tham gia của x2" bị
@@ -534,7 +534,7 @@
 
 > [!NOTE]
 > Gs cho biết **một số trường hợp** ta có thể thấy họ
-> **dùng Markow matrix mà row cộng lại thành 1** thay
+> \**dùng Markow matrix mà row cộng lại thành 1** thay
 > vì cols.
 
 <br>
@@ -559,11 +559,11 @@
 > scalar không phải như hồi nãy là chỉ các eigenvector) này, 
 > mang ý nghĩa là: 
 >
-> **PROJECT vector v VÀO SPACE Rn** 
+> \**PROJECT vector v VÀO SPACE Rn** 
 >
 > nhưng **cũng có thể hiểu theo nghĩa** là: 
 >
-> **EXPAND VECTOR v THÀNH CÁC PHẦN ỨNG VỚI CÁC 
+> \**EXPAND VECTOR v THÀNH CÁC PHẦN ỨNG VỚI CÁC 
 > BASIS VECTOR q1, q2...qn** v = x1q1 + x2q2 + ...xnqn (nhắc lại, x1,x2 chưa biết, đang tìm)
 
 > [!NOTE]
@@ -583,7 +583,7 @@
 > có các cols orthonormal).
 >
 > Nhưng kiểu như gs muốn **add thêm comment** vào
-> **trường hợp đặc biệt** này, khi ta có một **subspace
+> \**trường hợp đặc biệt** này, khi ta có một **subspace
 > span bởi một bộ orthonormal** và **"ĐẦY ĐỦ"** (ý nói **đủ
 > vector để span hết Rn**)
 >
@@ -639,10 +639,10 @@
 > ta muốn **biểu diễn một function** ở dạng:
 >
 > bắt đầu bằng một **initial term a_0**, sau đó là **a1*cos(x)**
-> **+ b1*sin(x)**  **+ a2*cos(2x) + a2*sin(2x)....**
+> \**+ b1*sin(x)**  **+ a2*cos(2x) + a2*sin(2x)....**
 >
 > Vậy thì đại khái là, **ông Fourier** nhận ra rằng, ta có thể
-> **áp** **dụng phép chiếu** **với orthonormal basis** nói trên
+> \**áp** **dụng phép chiếu** **với orthonormal basis** nói trên
 > với một vector nhưng **vector bây giờ là function**.
 >
 > Như ta cũng đã biết, **function space** vẫn **thỏa mãn các
@@ -688,12 +688,12 @@
 >
 > Thì thể hiện điều này chính là **f(x)*g(x)** và  thể hiện việc
 > "cộng lại với mọi x" với x có giá trị liên tục thì chính là bằng
-> **TÍCH PHÂN (integration)**
+> \**TÍCH PHÂN (integration)**
 >
 > Và dẫn đến ta **phải xác định giới hạn cuả tích phân**. Ở
 > đây ta đang xét / dùng các function **sin(x) cos(x)** có tính
 > cách là lặp lại sau mỗi c**hu kì 2pi (periodic)**. Nên ta dùng
-> **giới hạn là 0 - 2*pi** (tạm hiểu, chấp nhận logic chỗ này)
+> \**giới hạn là 0 - 2*pi** (tạm hiểu, chấp nhận logic chỗ này)
 >
 > T**ừ đó ta có định nghĩa phép dot product** của hai 
 > "function vector": 
@@ -708,7 +708,7 @@
 
 > [!NOTE]
 > và ta có thể **thử tính dot product của sin(x) và cos(x)** =
-> **tích phân từ 0->2*pi sin(x)*cos(x)dx** sẽ được **0,** từ đó
+> \**tích phân từ 0->2*pi sin(x)*cos(x)dx** sẽ được **0,** từ đó
 > cho thấy thỏa yêu cầu các basis "vector" orthogonal nhau.
 >
 > Và như vậy **ta có một bộ các orthonormal basis "vector"**  của một function space.
@@ -739,7 +739,7 @@
 > rồi lấy tích phân.** 
 >
 > Thế thì gs cho rằng **ta sẽ có phần lớn thành 0**, chỉ còn
-> **một term khác 0**, đó là **tích phân từ 0-> 2pi cos(x)^2 dx**, và
+> \**một term khác 0**, đó là **tích phân từ 0-> 2pi cos(x)^2 dx**, và
 > ta sẽ tính ra được giá trị của nó **chính là pi**.
 >
 > Từ đó **a1 chính là bằng vế trái chia pi**

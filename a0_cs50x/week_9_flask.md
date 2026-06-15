@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > Đại khái tuần trước ta đã dùng **http-server** này, được
-> **cài sẵn trong cs50** cho phép **serve cái webpage**
+> \**cài sẵn trong cs50** cho phép **serve cái webpage**
 > của mình. Thì đại khái là nó chỉ là một trong các
 > tools như vậy
 
@@ -66,8 +66,8 @@
 <p align="center"><kbd><img src="assets/b333516e84a4eb23cc7dfc8007c20652c4f2b8e5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Flask** là framework cho phép ta kiểu như
-> **kết dính các ngôn ngữ khác như html, css,
+> \**Flask** là framework cho phép ta kiểu như
+> \**kết dính các ngôn ngữ khác như html, css,
 > sql, js lại**
 
 <br>
@@ -77,7 +77,7 @@
 <p align="center"><kbd><img src="assets/14ab539e3c78a546843f0aed9a84b4f48e77a1f6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Jinja** không phải là programming language mà
+> \**Jinja** không phải là programming language mà
 > là c**ollection các syntax.**
 >
 > Và ổng **cũng phổ biến** khi một **framework này
@@ -91,10 +91,10 @@
 <p align="center"><kbd><img src="assets/7ee6d066707f5013efe759567f4be83915f3a3f9.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Bootstrap** là lib **giúp làm
+> \**Bootstrap** là lib **giúp làm
 > webpage nhanh hơn dễ hơn**
 > thì **flask** sẽ giúp trong việc tạo
-> **web server**
+> \**web server**
 
 <br>
 
@@ -105,7 +105,7 @@
 > [!NOTE]
 > Và để build một cái google.com với
 > flask thì đây là convention, ta cần
-> **app.py** và **templates**
+> \**app.py** và **templates**
 
 <br>
 
@@ -128,11 +128,11 @@
 
 > [!NOTE]
 > Đại khái ổng nói đây, đoạn code này là cách để ta 
-> **implement và serve một web application** sao cho **khi 
+> \**implement và serve một web application** sao cho **khi 
 > có ai đó truy cập** sẽ in ra chữ hello world
 >
 > Nhìn qua có thể thấy bắt đầu với việc **import Flask,** 
-> **render_template**
+> \**render_template**
 >
 > Xong để mấy dòng sau sẽ giải thích sau nhưng có cái
 > quen quen đó là **index.html**
@@ -206,7 +206,7 @@
 <p align="center"><kbd><img src="assets/3fbce217405368184eb25f6f3a4d3036e386a8a3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **@app.route()** ổng nói là gọi là Python **decorator**
+> \**@app.route()** ổng nói là gọi là Python **decorator**
 >
 > Và **@app.route("/")** sẽ thể hiện là đây là đoạn
 > code mà ta muốn nó **execute khi nhận
@@ -255,7 +255,7 @@
 > [!NOTE]
 > Và kết quả cũng chỉ là dòng chỉ **hello, world** nhưng
 > inspect sẽ thấy nó (response) là cái **html code** ở trong
-> **index.html chứ không phải text khơi khơi**
+> \**index.html chứ không phải text khơi khơi**
 
 <br>
 
@@ -265,9 +265,9 @@
 
 > [!NOTE]
 > Kế tới ổng muốn làm cái mà tuần trước với
-> **http-servers không thể giúp** được đó là làm sao
+> \**http-servers không thể giúp** được đó là làm sao
 > để user khi visit url **.../?name=David** thì nó serve
-> **"Hello, David"**
+> \**"Hello, David"**
 
 <br>
 
@@ -277,7 +277,7 @@
 
 > [!NOTE]
 > Thì muốn vậy phải dùng cái **request**: cụ thể là
-> **request.args** sẽ mang **argument** gửi lên với
+> \**request.args** sẽ mang **argument** gửi lên với
 > request
 
 <br>
@@ -288,7 +288,7 @@
 
 > [!NOTE]
 > Thì dùng như vầy, ổng **check xem 'name' có trong** 
-> **request.args** không có thì lấy ra (**request.args['name']**)
+> \**request.args** không có thì lấy ra (**request.args['name']**)
 > không thì cho name = 'world'
 >
 > Thì question là dựa vào đây thử đoán cái request.args
@@ -304,7 +304,7 @@
 
 > [!NOTE]
 > Xong ổng nói chuyện gì sẽ xảy ra khi tui cứ **blindly** 
-> **lấy cái value của key name** ?
+> \**lấy cái value của key name** ?
 >
 > A: **Nếu dictionary không có key name**, thì nó sẽ bị **lỗi
 > không tìm thấy key
@@ -368,7 +368,7 @@
 > Xong ổng nói để **place_holder** không ổn vì **không thể hiện
 > được ý nghĩa**, và sẽ **có thể có nhiều place holder khác**,
 > nên ổng đổi về lại **name**, và ta sẽ phải chấp nhận dù nhìn
-> **có vẻ hơi stupid** trong code **name=name**. Nhưng đó là
+> \**có vẻ hơi stupid** trong code **name=name**. Nhưng đó là
 > the norm, là **thông thường người ta cũng làm vậy**
 
 <br>
@@ -397,7 +397,7 @@
 > [!NOTE]
 > Kế tiếp ổng đổi thành thế này, tạo cái **form** với các
 > attribute như bữa trước đã biết qua như **autocomplete**,
-> **autofocus** **placeholder**
+> \**autofocus** **placeholder**
 >
 > Sau đó ổng nói tui sẽ **vừa làm front end vừa làm back
 > end**, với cái này: **action="greet"** **method="get"**.
@@ -504,7 +504,7 @@
 > Tương tự như vậy đối với file **greet.html**
 >
 > Chú ý rằng, trong **app.py** vẫn là **serve hai file**,
-> **index.html** và **greet.html**, chẳng qua, nội dung
+> \**index.html** và **greet.html**, chẳng qua, nội dung
 > hai file thay vì bị duplicate nhiều chỗ giống nhau
 > như header,...thì giờ sẽ được khắc phục bằng
 > việc **cùng lấy phần đầu và đít từ file layout.html**
@@ -626,7 +626,7 @@
 
 > [!NOTE]
 > Đại khái ổng cho xem lại cái **payload** của
-> **Inspection** khi click Submit **để thấy cái tên David
+> \**Inspection** khi click Submit **để thấy cái tên David
 > được gửi lên.** 
 > Và nói là bạn **có toàn quyền access tới các thông
 > tin mà browser gửi tới cho bạn.**
@@ -670,7 +670,7 @@
 > [!NOTE]
 > (Thật ra là cái bug, đáng lẽ phải hello David mà ổng
 > cũng không để ý, sửa lại dùng **request.form** thay vì
-> **request.arg** thì sẽ được)
+> \**request.arg** thì sẽ được)
 
 <br>
 
@@ -698,7 +698,7 @@
 > Xong để sửa cái bug là submit với David mà nó vẫn hiện
 > hello world, thì mới nói qua là **với POST**, thì cái argument (ở
 > đây là name enter vào) phải lấy từ **request.form** thay vì
-> **request.arg - vốn chỉ dùng cho GET**
+> \**request.arg - vốn chỉ dùng cho GET**
 
 <br>
 
@@ -734,7 +734,7 @@
 
 > [!NOTE]
 > File index thì có cái **form** như hay làm thôi  với các
-> **argument**, **action="/register"** phương thức **post**.
+> \**argument**, **action="/register"** phương thức **post**.
 >
 > Như đã biết có nghĩa là khi **submit** nó sẽ gọi **url: .../register**, 
 > với method **POST, và gửi thông tin name lên.** Chú ý là ở đây mình để **name = "password"** thì trong 
@@ -777,7 +777,7 @@
 
 > [!NOTE]
 > Bằng cách là ổng **thêm một option tên** là **Sport** để dạng
-> **disabled**, và **chọn sẵn (selected)**
+> \**disabled**, và **chọn sẵn (selected)**
 
 <br>
 
@@ -894,7 +894,7 @@
 
 > [!NOTE]
 > Tạo thêm một cái route: **/registrants**, response về cái 
-> **registrants.html** với **registrants** data. Và again, dù 
+> \**registrants.html** với **registrants** data. Và again, dù 
 > nhìn có vẻ stupid (**registrants=registrants**) nhưng đó
 > là bình thường
 
@@ -971,7 +971,7 @@
 > D: Thiếu cái gì? mà nó lại không show ra tên sport
 >
 > A: Thì **khi submit Register** thì nó **chỉ post cái name lên**, còn
-> **chưa thấy chỗ nào gửi sport lên**
+> \**chưa thấy chỗ nào gửi sport lên**
 >
 > D: Correct
 
@@ -1005,7 +1005,7 @@
 > [!NOTE]
 > Đại khái là giả sử **có kẻ muốn phá phách** muốn
 > submit một cái sport không có trong líst ví dụ
-> **volleyball**. Thì họ có thể **inspect, vào và change
+> \**volleyball**. Thì họ có thể **inspect, vào và change
 > value của trong đó**. Và **submit**, thì **nó hoàn toàn có
 > thể submit volleyball**
 
@@ -1064,7 +1064,7 @@
 
 > [!NOTE]
 > Và **thêm checking việc name không trống** và
-> **sport có trong SPORTS** thì **mới return
+> \**sport có trong SPORTS** thì **mới return
 > success**
 
 <br>
@@ -1112,7 +1112,7 @@
 > file app.py được không**
 >
 > D: Trên **lý thuyết là không**, tuy nhiên khi code ta
-> **sẽ tránh để username, password trong code** mà để
+> \**sẽ tránh để username, password trong code** mà để
 > trong **variable**, **save vào trong memory** để tránh
 > trường hợp nào đó người ta vào code được
 
@@ -1188,7 +1188,7 @@
 
 > [!NOTE]
 > Xong ổng run **flask run** để chạy cái server. Và với phiên bản
-> **froshims4** thì có cải tiến chút là **thay vì dùng menu thì dùng 
+> \**froshims4** thì có cải tiến chút là **thay vì dùng menu thì dùng 
 > radio button.**
 
 <br>
@@ -1227,7 +1227,7 @@
 > cái **python code loop trong các sports** để **add các
 > input có type là "radio" để nó dạng radio button**
 >
-> **Nói thêm name="sport"** thì ổng nói để khi **chọn cái
+> \**Nói thêm name="sport"** thì ổng nói để khi **chọn cái
 > này thì nó unselect cái kia.**
 
 <br>
@@ -1280,11 +1280,11 @@
 > Xong để xem cái **Deregister** làm gì, ổng cho ta **coi cái
 > Inspect code trước**, (tí mới nói cách làm), đó là nó có 
 > cái dạng là cái **form**, với input với **name="id"**, value, 
-> **type = "hidden"** -> nó sẽ hidden, không show ra, vậy
+> \**type = "hidden"** -> nó sẽ hidden, không show ra, vậy
 > thôi.
 >
 > Và khi submit, nó sẽ POST cái id có value như vậy lên 
-> **url: ..../deregister**
+> \**url: ..../deregister**
 
 <br>
 
@@ -1362,7 +1362,7 @@
 > [!NOTE]
 > Và khi máy tính, hay ta "vào lại" thì ta **gửi cho server cái
 > envelope như này** trong đó **có chứa cookie: session=value.** 
-> **Gmail nó sẽ  dựa vào đó mà "cho ta vào"**, cũng như **phân
+> \**Gmail nó sẽ  dựa vào đó mà "cho ta vào"**, cũng như **phân
 > biệt ta là ai** mà show gmail cho đúng. Nôm na là vậy
 
 <br>
@@ -1377,9 +1377,9 @@
 > đầu có session
 >
 > Thì ổng nói **Flask nó sẽ handle mọi thứ**: **set cookie**,
-> **check cookie**. Và nó có cái **session**: kiểu như cái
-> **dictionary**, trong đó khi ta **set key-value vào trong đó** thì
-> **nó vẫn còn y nguyên miễn là cùng một user.**
+> \**check cookie**. Và nó có cái **session**: kiểu như cái
+> \**dictionary**, trong đó khi ta **set key-value vào trong đó** thì
+> \**nó vẫn còn y nguyên miễn là cùng một user.**
 >
 > Và **Flash nó sẽ đảm bảo là khi David visit website**, thì nó
 > sẽ **dùng cái session của David**. Còn khi **Carter visit website
@@ -1514,7 +1514,7 @@
 
 > [!NOTE]
 > Với default path "/" show các cuốn sách thì đơn giản là
-> **Query từ SQL**, rồi **truyền vào books.html**
+> \**Query từ SQL**, rồi **truyền vào books.html**
 
 <br>
 
@@ -1547,17 +1547,17 @@
 > nó accept cả hai method **GET và POST**.
 >
 > Thì đầu tiên nó **check trong session có (cái key) "cart"**
-> **hay chưa** nếu chưa thì **tạo một cái mang value là empty list**
+> \**hay chưa** nếu chưa thì **tạo một cái mang value là empty list**
 >
 > Xong nếu là **POST**, nó **lấy id truyền lên** (từ request.form.get("id"))
 > và **check nếu id not empty thì nó bỏ vào cái cart list** trong session
-> **session["cart"].append(id)**
+> \**session["cart"].append(id)**
 >
 > Và **return và redirect tới /cart,** (cái việc redirect tới cart này nó sẽ
 > "dùng" default value là GET)
 >
 > Và ở dưới chính là **handle khi GET**, nó thực hiện SQL query
-> **db.query(SELECT * FROM books WHERE id IN (?)", session["cart"])**
+> \**db.query(SELECT * FROM books WHERE id IN (?)", session["cart"])**
 > nhớ lại (?) chính là SQL placeholder, nó sẽ **truyền các id trong list
 > session["cart"]** vào và từ đó **kết quả của sql query return là list
 > các books có id như vậy.**
@@ -1702,7 +1702,7 @@
 > [!NOTE]
 > Thì với ví dụ này ta không thấy button submit nữa.
 > Thì cơ bản ổng nói ta **dùng AJAX** nôm na là dùng
-> **javascript** để **listen event**, và khi **user gõ thì nó thực
+> \**javascript** để **listen event**, và khi **user gõ thì nó thực
 > hiện hành động query** và trả về kết quả
 
 <br>
@@ -1751,7 +1751,7 @@
 > Xem thử cái **search.html** thì thấy lần này nó **không extend layout.**
 > html nữa. Thì cơ bản ổng nói là để **giới thiệu khái niệm API**, đó là ví
 > dụ khi gọi api ..**./search?q="Office"** nó sẽ không trả cho bạn html mà
-> **chỉ là data thôi và bạn sẽ tự display**
+> \**chỉ là data thôi và bạn sẽ tự display**
 
 <br>
 
@@ -1780,7 +1780,7 @@
 > như hồi nãy đã biết nó **trả về các bộ phim** (có title chứa q's value) mỗi 
 > cái một **<li> tag.**
 >
-> **Await** ý là **chờ cho khi nó trả về** thì **mới lấy ra (response.text()**) và 
+> \**Await** ý là **chờ cho khi nó trả về** thì **mới lấy ra (response.text()**) và 
 > S**et nó vào innerHTML của 'ul'**
 
 <br>

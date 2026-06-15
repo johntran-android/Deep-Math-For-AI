@@ -45,7 +45,7 @@
 > applications; this list is intended to pique your interest, not to be
 > exhaustive:
 >
-> **Machine translation**. Perhaps one of the earliest and most successful
+> \**Machine translation**. Perhaps one of the earliest and most successful
 > applications and driving uses of natural language processing, MT
 > systems learn to translate between languages and are ubiquitous
 > in the digital world. Still, failures of these systems for most of the
@@ -53,7 +53,7 @@
 > ensuring contextual correctness of translations make this still a
 > fruitful field of research
 >
-> **Question answering** and **information retrieval.** The concept of “question
+> \**Question answering** and **information retrieval.** The concept of “question
 > answering” should seem overly broad—can’t we express any
 > problem as question answering?—but in NLP, question answering
 > has tended to be related to information-seeking questions (“Who is
@@ -170,7 +170,7 @@
 
 > [!NOTE]
 > Nói về **một nhận định quan trọng bậc nhất trong NLP** đó là
-> **một từ sẽ có ý nghĩa được xác định bởi những từ vây quanh nó**
+> \**một từ sẽ có ý nghĩa được xác định bởi những từ vây quanh nó**
 > gọi là **distribution hypothesis**
 >
 > Ví dụ như tea sẽ là "đun" "tách" "nóng", "ô long", "pha"....và từ đó
@@ -281,7 +281,7 @@
 > như hồi nãy nói có thể average để thành embedding vector của một từ)
 > thì ta có thể đặt loss objective (function) là:
 >
-> **minimize w.r.t param U,V Expectation với o, c lấy từ distribution O, V,
+> \**minimize w.r.t param U,V Expectation với o, c lấy từ distribution O, V,
 > giá trị là negative log probability của việc o xuất hiện khi đã có c** 
 > Nói nôm na là bây giờ thay đổi giá trị của U, V sao đó, để cho với mọi từ
 > c trong vocab và o là từ ở gần nó thì phải giảm thiểu - log p(o|c)
@@ -299,7 +299,7 @@
 >
 > Với một từ, giả sử là **wi**, là **từ thứ i trong document**, thì ta sẽ 
 > một từ **w i-j** nào đó **trong khoảng k từ gần đó**, ta sẽ tính
-> **-log p(w i-j | w i)**. Và v**ới mọi từ context của w_j** ta tính p như vậy
+> \**-log p(w i-j | w i)**. Và v**ới mọi từ context của w_j** ta tính p như vậy
 > và **cộng lại.** 
 > Rồi **với mọi từ wi trong document** ta đều làm vậy và **cộng lại.**
 >
@@ -327,10 +327,10 @@
 > ngược lại thì sẽ giảm dần hàm f.
 >
 > Tiếp họ nói U (V cũng tương tự) sẽ được **initialize randomly** với
-> **Normal** **distribution với zero mean và standard deviation nhỏ** kí hiệu
+> \**Normal** **distribution với zero mean và standard deviation nhỏ** kí hiệu
 > là
 >
-> **U ~ N (0,0.0001) |V|xd**
+> \**U ~ N (0,0.0001) |V|xd**
 
 <br>
 
@@ -423,7 +423,7 @@
 >
 > Thì đại khái là làm vậy thì ok, là chuẩn, **có điều việc tính toán cái mẫu số
 > với toàn bộ vocab thì rất tốn kém** (compute expense). Thành ra người ta
-> **sửa lại một chút, thiết kế lại function sao** cho vẫn giúp ép u0_T.vc lên
+> \**sửa lại một chút, thiết kế lại function sao** cho vẫn giúp ép u0_T.vc lên
 > nhưng chỉ ép một số lượng các từ ư lấy random trong vocab. Thì ý là mỗi
 > lần training iteration thì **"nâng từ cần nâng" lên chút xíu** và **ép random
 > vài từ cần giảm xuống**, thì qua nhiều lần vẫn đạt **hiệu quả tương

@@ -81,7 +81,7 @@
 > learning** như ta đã biết ở week 1)
 >
 > Nhưng sửa lại thay vì chỉ để A: The answer is 11 thì bây giờ
-> **diễn giải thành từng bước việc tính toán các bước trung
+> \**diễn giải thành từng bước việc tính toán các bước trung
 > gian diễn ra như thế nào.** 
 >
 > Kết quả với điều này LLM đã có thể trả lời đúng
@@ -95,7 +95,7 @@
 > [!NOTE]
 > Không những toán, mà các câu hỏi reasoning
 > như vật lý cũng có thể được thực hiện tốt với
-> **chain of thought prompting**
+> \**chain of thought prompting**
 
 <br>
 

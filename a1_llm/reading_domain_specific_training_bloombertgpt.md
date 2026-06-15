@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > Như đã biết **những đường chéo** là **đường tối ưu** của c**ompute budget - model size** và
-> **compute budget - data size** theo các nghiên cứu của **Chinchilla** với **các version khác
+> \**compute budget - data size** theo các nghiên cứu của **Chinchilla** với **các version khác
 > nhau**. Thì **Bloomberg** được **pretrained** **cố gắng theo sát nguyên tắc Chinchilla**, thể
 > hiện trên biểu đồ. Tuy nhiên **ở khía cạnh data** thì **không đạt** vì thứ nhất là **không có
 > data** (chỉ có 700B thay vì tối ưu là 1400B và **thứ hai là technique Early Stopping**

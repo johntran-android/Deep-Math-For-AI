@@ -22,7 +22,7 @@
 > sẽ dần trở nên giống Binomial (Đây là điều mà ở slide sau gs sẽ nói)
 >
 > Thì như đã quen thuộc ta có thể biểu diễn nó ở dạng **tổng của n indicator random variables Xj** trong đó mỗi **Xj** **gắn với** 
-> **event Aj** là lần bốc thứ j có ra bi trắng hay không (Tức **Xj=1 khi Aj occur** và **Xj=0 khi Aj không occur**) 
+> \**event Aj** là lần bốc thứ j có ra bi trắng hay không (Tức **Xj=1 khi Aj occur** và **Xj=0 khi Aj không occur**) 
 >
 > Vậy thì **Var(X)** là **Var(∑ j Xj)**. Theo property (7), ta biết nó sẽ là: **Var(∑ j Xj)** = **∑ j Var(Xj) + 2*∑ i<j Cov(Xi, Xj)**
 >
@@ -52,7 +52,7 @@
 
 > [!NOTE]
 > Và kết quả sau khi rút gọn các kiểu là **(N-n)/(N-1) npq**. Thế thì cái term **npq** nó 
-> **chính là Variance của Binomial(n, p)**.
+> \**chính là Variance của Binomial(n, p)**.
 >
 > Và (N-n)/(N-1) (N là w+b, là tổng số ball, n là số lần lấy)
 >
@@ -60,14 +60,14 @@
 >
 > Với n = 1, thì cái này bằng 1. Và hoàn toàn dễ hiểu rằng, nếu chỉ **bốc 1 trái**
 > banh thì sẽ k**hông khác gì giữa có hay không hoàn lại** (replacement). Khi đó
-> **Hypergeometric giống y như Binomial** 
+> \**Hypergeometric giống y như Binomial** 
 > Với N lớn hớn rất nhiều lần so với n, thì khi đó tỉ lệ sẽ -> 1. Với ý nghĩa hoàn 
 > toàn dễ hiểu rằng khi số lượng banh rất lớn so với số lần rút thì sẽ khó mà có việc
 > một banh bị bốc hai lần trong Hypergeometric. Nên lúc này **Hgeom cũng gần như
 > là giống Binomial**
 
 > [!NOTE]
-> **VARIANCE CỦA HYPERGEOMETRIC: (N-n/N-1) npq
+> \**VARIANCE CỦA HYPERGEOMETRIC: (N-n/N-1) npq
 >
 > FINITE POPULATION CORRECTION = (N-n/N-1)**: KHI BỐC 1 TRÁI HOẶC KHI
 > SỐ BANH RẤT NHIỀU THÌ CÓ HOÀN LẠI HAY KHÔNG HOÀN LẠI
@@ -111,7 +111,7 @@
 >
 > Thì khi đó, **PDF của Y** sẽ được xác định là:
 >
-> **f_Y(y) = f_X(x)dx/dy**.
+> \**f_Y(y) = f_X(x)dx/dy**.
 >
 > Vì assumption như trên nên **có thể tìm g_inverse()** của g() để từ **y = g(x)** <=> **x = g_inv(y)**
 > (apply g_inv() để đảo ngược lại từ y->x)
@@ -164,7 +164,7 @@
 > để **lấy derivative để có PDF.**
 >
 > CDF của Y, như đã biết chính là **P(Y ≤ y)** với Y = g(X), thì nó bằng
-> **P(g(X) ≤ y)**
+> \**P(g(X) ≤ y)**
 >
 > Tới đây, **g(X) ≤ y** sẽ tương đương (**apply g_inv()** cho hai vế, dựa trên
 > cơ sở là vì g() strictly increasing thì g_inv() **cũng vậy - strictly increasing**.
@@ -219,7 +219,7 @@
 >
 > Nên **P(X ≤ g_inv(y))** chính là **CDF** của X **evaluate tại g_inv(y)**, hay:
 >
-> **F_X(g_inv(y))**
+> \**F_X(g_inv(y))**
 >
 > Và với **x = g_inv(y)** thì **F_X(g_inv(y))** = **F_X(x)**
 
@@ -234,7 +234,7 @@
 
 > [!NOTE]
 > Và tới đây, ta sau khi đã có CDF của Y là **F_X(g_inv(y))** (thể hiện theo biến y) hoặc
-> **F_X(x)** (thể hiện theo biến x):
+> \**F_X(x)** (thể hiện theo biến x):
 >
 > F_Y(y) = F_X(g_inv(y))
 >
@@ -244,7 +244,7 @@
 >
 > PDF của Y là **đạo hàm của F_X(g_inv(y)) đối với y**: 
 >
-> **f_Y(y) =** **d/dy F_X(g_inv(y))**
+> \**f_Y(y) =** **d/dy F_X(g_inv(y))**
 >
 > Theo **chain rule** nó sẽ là: d [F_X(g_inv(y))] / d [g_inv(y)] * d [g_inv(y)] / dy
 >
@@ -265,7 +265,7 @@
 > Với **CDF**, và **PDF** cũng có **quan hệ tương tự**: cho rằng r.v **X có pdf là f_X**. Thì
 > CDF của X, evaluate tại x được định nghĩa là :
 >
-> **F_X(x) =** **∫-inf:x f_X(t)dt** 
+> \**F_X(x) =** **∫-inf:x f_X(t)dt** 
 >
 > Thành ra **F là nguyên hàm của f** và theo FTC ta có **F_X'(x) = f_X(x)**  
 >
@@ -280,7 +280,7 @@
 > F_Y'(y) = f_Y(y) hay d/dy [ F_Y(y)] = f_Y(y) 
 >
 > Và dùng chain rule để làm bằng cách đặt **x = g_inv(y)** thì đạo hàm theo y sẽ là tích của
-> **[đạo hàm của F_X theo x]** (part1) * **[đạo hàm của x theo y]** (part 2)
+> \**[đạo hàm của F_X theo x]** (part1) * **[đạo hàm của x theo y]** (part 2)
 >
 > Part1: Thế thì **F_X vốn là CDF của x**, nên **lấy đạo hàm theo x** thì nó thì đương nhiên
 > ta có  **PDF của X tức f_X(x)**.
@@ -313,7 +313,7 @@
 
 > [!NOTE]
 > Thế thì đầu tiên ta nhận xét **g(Z) = e^Z** là một function **liên tục** và **strictly**
-> **increasing**. Nên ta **được phép dùng** Theorem Transformation
+> \**increasing**. Nên ta **được phép dùng** Theorem Transformation
 >
 > Đó là **f_Y(y) = f_Z(z) dz/dy** có điều như gs đã nói là ta phải thay **z = g_inv(y)** vì
 > đang xây dựng **f_Y(y) là hàm theo y.**
@@ -321,7 +321,7 @@
 > Thế thì Y = e^Z thì **Z = ln(Y)**. 
 >
 > Và **f_Z(z)** là PDF của Z là một **Standard Normal N(0,1)** ta đã biết pdf của nó 
-> **f_Z(z) = (1/√2π) e^(-z^2/2)**
+> \**f_Z(z) = (1/√2π) e^(-z^2/2)**
 >
 > Thay z = ln(y) ta có f_Z(g_inv(y)) = **(1/√2π) e^[(-ln(y^2)/2]**
 
@@ -350,7 +350,7 @@
 > [!NOTE]
 > gs nói thêm là **để mà nhớ là phải nhân dx/dy hay dy/dx** thì ta có thể nhớ
 >
-> **f_Y(y)dy = f_X(x)dx** dù việc **tách dy, dx kiểu này không được phép**
+> \**f_Y(y)dy = f_X(x)dx** dù việc **tách dy, dx kiểu này không được phép**
 > nhưng **miễn là ta hiểu** là mình đang dùng nó như cách để dễ nhớ là
 > được
 
@@ -366,14 +366,14 @@
 
 > [!NOTE]
 > Tiếp theo là ta sẽ đại khái là mở rộng với **n dimensions**. cho vector **Y = g(X)** với **Y, X** là **n-dimensional**
-> **vector**.
+> \**vector**.
 >
 > X **= [X1, ...Xn]** với các **Xj là continuous r.v**. Như đã biết, ta sẽ có **JOINT** distribution của **n random variable**
-> **Xj** tức là có **Joint PDF của vector X**.
+> \**Xj** tức là có **Joint PDF của vector X**.
 >
 > Thế thì ta cần, **tìm JOINT PDF của vector Y**. Thì hoàn toàn tương tự, **theorem** **transformation** cho phép:
 >
-> **f_Y(y) = f_X(x) |dx/dy|** với x, y là Rn vector
+> \**f_Y(y) = f_X(x) |dx/dy|** với x, y là Rn vector
 >
 > Ở đây gs lưu ý ta là nếu như hàm g **không strictly decreasing**, thì ta sẽ **lấy giá trị tuyệt đối của
 > dx/dy**. Vì khi đó, dy/dx âm, tức dx/dy cũng âm. Và vì ta đang tính PDF nên không thể âm được
@@ -384,11 +384,11 @@
 >
 > Và thế thì sẽ **không make sense** khi **tự nhiên lại nhét một cái matrix ở đây**. Nên ở đây, chính là **GÍA TRỊ
 > TUYỆT ĐỐI CỦA DETERMINANT** của matrix **J**. Gs nói ta **có một matrix** thì cách để **compress** nó thành
-> **một number** là dùng **det**. Có nghĩa là mình phải hiểu có hai dấu **||... ||**, một cái là để nói về **det**, và cái kia là
+> \**một number** là dùng **det**. Có nghĩa là mình phải hiểu có hai dấu **||... ||**, một cái là để nói về **det**, và cái kia là
 > dấu **trị tuyệt đối**
 >
 > Và y như việc ta có thể dùng dx/dy hoặc (dy/dx)^-1 thì ở đây cũng vậy. Ta **cũng có thể lấy matrix Jacobian**
-> **dy/dx** là **tính det** và lấy ^-1 (reciprocal)
+> \**dy/dx** là **tính det** và lấy ^-1 (reciprocal)
 >
 > Nhớ lại 1806 một chút: det(I) = det(AinvA) = det(A)det(Ainv) = 1 => **det(Ainv) = 1/det(A)**
 
@@ -408,7 +408,7 @@
 > của nó là **nếu X, Y independent thì MGF của (X+Y)** bằng **tích của MGF của
 > từng cái:** 
 >
-> **M_(X+Y)(t) = M_X(t) * M_Y(t)** 
+> \**M_(X+Y)(t) = M_X(t) * M_Y(t)** 
 >
 > để rồi giúp ta **tìm distribution của sum X+Y**
 >
@@ -431,7 +431,7 @@
 > Thì **PMF của T**: ta lập luận như sau: Có thể coi như, mà thật ra chính là
 > dùng **Law of Total Probability** mà bản chất vẫn là từ lập luận sau:
 >
-> **T = t** tức **X+Y = t.**
+> \**T = t** tức **X+Y = t.**
 >
 > Event này là **Union của (X=x, Y=t-x) với mọi x**. Có nghĩa  là với mỗi
 > possible value của X, ta có event (X=x, Y=t-x) thì chúng là các **disjoint**
@@ -454,7 +454,7 @@
 >
 > = ∪ mọi x (Y = t - X, X = x)
 >
-> **P(T=t)** = **P(Union của (X=x, Y = t-x)** với mọi x) (vì hai event này là 1)
+> \**P(T=t)** = **P(Union của (X=x, Y = t-x)** với mọi x) (vì hai event này là 1)
 >
 > Vì ta có Union của các Disjoint event nên theo Axiom 2:
 >
@@ -463,7 +463,7 @@
 > Mà **X và Y independent** nên **(X=x) và (Y=t-x) là các event độc lập** nên theo
 > conditional probability theorem:
 >
-> **P(X=x, Y=t-x) = P(X=x) * P(Y=t-x)**
+> \**P(X=x, Y=t-x) = P(X=x) * P(Y=t-x)**
 >
 > Vậy **P(T=t) = ∑ x P(X=x) * P(Y=t-x)**
 
@@ -479,7 +479,7 @@
 > Thế thì **nếu X,Y continuous** ta có thể viết phiên bản continuous tương
 > đương của discrete case, để có PDF của T f_T(t)
 >
-> **f_T(t) = ∫-inf:inf của f_X(x)f_Y(t-x)dx**
+> \**f_T(t) = ∫-inf:inf của f_X(x)f_Y(t-x)dx**
 
 <br>
 
@@ -493,25 +493,25 @@
 >
 > Vậy thì ta sẽ **chứng minh nó như sau**. Cũng **đi từ CDF của t**:
 >
-> **F_T(t) = P(T<=t)** 
+> \**F_T(t) = P(T<=t)** 
 >
 > <=> F_T(t) = **P(X+Y<=t)** (trên bảng gs viết sai là F_Y(t) lúc sau có sửa lại)
 >
 > Ta cũng lập luận từ gốc như vừa rồi: Đầu tiên quay lại **giả sử X,Y discrete**
 >
-> **(X+Y<=t) = Union của (X+Y<=t, X=x) với mọi possible value x** của X
+> \**(X+Y<=t) = Union của (X+Y<=t, X=x) với mọi possible value x** của X
 >
 > Và đây là Union của các **Disjoint** event, nên theo **axiom 2** ta cũng có:
 >
-> **P(X+Y<=t) = ∑ x P(X+Y<=t, X=x)**
+> \**P(X+Y<=t) = ∑ x P(X+Y<=t, X=x)**
 >
 > Theo conditional probability theorem: P(X+Y<=t, X=x) = P(X+Y<=t | X=x)*P(X=x)
 >
-> **P(X+Y<=t) = ∑ mọi x P(X+Y<=t | X=x)*P(X=x)**
+> \**P(X+Y<=t) = ∑ mọi x P(X+Y<=t | X=x)*P(X=x)**
 >
 > Thì phiên bản tương đương khi X, Y continuous là:
 >
-> **P(X+Y<=t)** = **∫-inf:inf P(X+Y<=t | X=x) f_X(x)dx (1)** (Cũng là dùng phiên bản discrete để công nhận / suy ra phiên bản continuous, 
+> \**P(X+Y<=t)** = **∫-inf:inf P(X+Y<=t | X=x) f_X(x)dx (1)** (Cũng là dùng phiên bản discrete để công nhận / suy ra phiên bản continuous, 
 > nhưng ở đây là ta chỉ đang làm với P(X+Y <= t), ý là ta có công thức của nó 
 > trong discrete case nên có thể suy ra trong continous case. Còn ở trên, thì 
 > không thể dùng discrete case, tức PMF để chứng minh / suy ra PDF được)
@@ -533,7 +533,7 @@
 >
 > Nên với **X=x**, ta có thể **thay vào X+Y ≤ t** để có (**x+Y ≤ t | X=x**) 
 >
-> **P((X+Y ≤ t | X=x) = P(x+Y ≤ t | X=x)**
+> \**P((X+Y ≤ t | X=x) = P(x+Y ≤ t | X=x)**
 >
 > Giải thích theo sample space gốc là thấy dễ hiểu
 >
@@ -553,21 +553,21 @@
 >
 > để trở thành **P(x+Y ≤ t)** với ý nghĩa là: 
 >
-> **nếu chưa biết X** thì **X+Y ≤ t còn phụ thuộc X**, còn **khi đã biết X rồi**, và v**ì Y 
+> \**nếu chưa biết X** thì **X+Y ≤ t còn phụ thuộc X**, còn **khi đã biết X rồi**, và v**ì Y 
 > cũng không phụ thuộc X** nên **x+Y ≤ t không còn phụ thuộc X** nữa
 >
 > ===
 >
 > Tóm lại là ta có P(x+Y ≤ t | X=x) = P(x+Y ≤ t)
 >
-> **= P(Y ≤ t-x)** 
+> \**= P(Y ≤ t-x)** 
 >
 > Theo định nghĩa của **CDF** thì **P(Y ≤ t-x)** chính là hàm **CDF của Y evaluate tại t-x**
 > tức **F_Y(t-x)**
 >
 > Đến đây ta sẽ **thay P(X+Y ≤ t | X=x) = F_Y(t-x) vào (1)** ta có: 
 >
-> **P(X+Y ≤ t) = ∫-inf:inf F_Y(t-x) * f_X(x)dx**
+> \**P(X+Y ≤ t) = ∫-inf:inf F_Y(t-x) * f_X(x)dx**
 
 <br>
 
@@ -581,7 +581,7 @@
 > Và đến đây ta sẽ **lấy derivative** của cái này **theo t** để có **PDF của T**.
 >
 > Thì như đã biết với một số điều kiện một **function well behave** (**continuous**,
-> **differentiable**, xem link xanh) thì **đạo hàm của tích phân** có thể **đưa đạo hàm
+> \**differentiable**, xem link xanh) thì **đạo hàm của tích phân** có thể **đưa đạo hàm
 > vào tích phân**
 >
 > Khi đó vế trái lấy đạo hàm theo t của F_T(t) ta sẽ có PDF của T: 
@@ -607,7 +607,7 @@
 > Vì theo FTC part 1: cho f là hàm liên tục trên [a, b] thì nếu định nghĩa 
 > F(x) = ∫a:x f(t)dt = F(x) với mọi x thuộc [a, b] thì khi đó: 
 >
-> **F'(x) = f(x)** với mọi x, và cái này tương đương **d F(x) / dx = f(x)** 
+> \**F'(x) = f(x)** với mọi x, và cái này tương đương **d F(x) / dx = f(x)** 
 >
 > Thế thì theo định nghĩa CDF: CDF của r.v Y **F_Y(a)** với ý nghĩa là **P(Y<=a)** 
 > sẽ là **∫-inf:a f_Y(t)dt**.

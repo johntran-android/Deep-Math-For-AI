@@ -119,7 +119,7 @@
 > ⇨ k'th sample moment là = Σ_i=1:n Xi^k / n
 >
 > Còn population moment, thì như đã nói là EX^k, thì nó sẽ là function của
-> **θ tức là vector các param**, (θ1, ...θk)
+> \**θ tức là vector các param**, (θ1, ...θk)
 >
 > m1 = μ'1 (θ1, ...θk)
 >
@@ -469,7 +469,7 @@
 > sample thì output là gía trị cụ thể của một ước lượng (estimate).
 >
 > Thế rồi ôn lại khái niệm likelihood function, nó được định nghĩa là hàm số theo
-> **θ** (vector parameter) mà giá trị tính bởi f(**x**|**θ**), tức joint pdf/pmf của random
+> \**θ** (vector parameter) mà giá trị tính bởi f(**x**|**θ**), tức joint pdf/pmf của random
 > variable X1,...Xn của random sample.
 >
 > Chỗ này có thể khó hiểu với vài người: Chỉ cần nhớ, à, cái hàm likelihood L(**θ**|**x**)
@@ -524,7 +524,7 @@
 >
 > Ý sau nói là, về cơ bản, là MLE là một lựa chọn hợp lí cho một estimator,
 > MLEstimate là giá trị hợp lí nhất của parameter θ giúp tạo ra giá trị quan sát
-> **X** = **x**.
+> \**X** = **x**.
 >
 > Đoạn sau bàn về hai nhược điểm của MLE: Và vốn dĩ, xuất phát từ bản chất
 > là ta phải giải bài toán tối ưu: 
@@ -592,7 +592,7 @@
 >
 > Rồi, như đã biết Likelihood function L(**θ**|**x**) được định nghĩa là giá trị của joint
 > pmf/pdf của random variable vector **X** evaluate tại giá trị quan sát được  **X** =
-> **x** f**X**(**x**|**θ**), và vì tính iid của Xi, nên nó trở thành Πi f(xi|θ) với fXi(xi|θ)
+> \**x** f**X**(**x**|**θ**), và vì tính iid của Xi, nên nó trở thành Πi f(xi|θ) với fXi(xi|θ)
 > bây giờ đều là marginal pdf của n(θ,1). Chỗ này nếu ko hiểu chắc sẽ thấy  bối rối:
 > Theo quy định (ý là theo định nghĩa của likelihood function) thì ta phải tính
 > f**X**(**x**|**θ**). Nhưng vì định nghĩa của random sample quy định tính chất iid,
@@ -791,7 +791,7 @@
 > vi này, thì Hessian tại **x*** + α**d** vẫn xác định âm, bởi lẽ hàm liên tục nên λmax cũng
 > liên tục, mà λmax âm thì không thể nào nó ngay lập tức biến thành dương được.
 > Vậy phải trong khoảng đó, Hessian vẫn xác định âm khiến cho cái quadratic term
-> **d**T∇^2f(**x*** + α**d**)**d** âm → f(**x*** + t**d**) nhỏ hơn f(**x***). Cho thấy **x*** là local maximum.
+> \**d**T∇^2f(**x*** + α**d**)**d** âm → f(**x*** + t**d**) nhỏ hơn f(**x***). Cho thấy **x*** là local maximum.
 
 <br>
 
@@ -1580,7 +1580,7 @@
 > là nếu như observed value có biến động nhỏ do sai số, ví dụ như lần quan sát
 > đầu tiên cho ra **X** = **x**, rồi giải bài toàn tối ưu ta có **θ**_mle1. Sau đó vì lí
 > do gì đó lần quan sát thứ hai ta có **X** = **x** + **ε**. giải bài toán tối ưu ta có
-> **θ**_mle2 Câu hỏi là, hai mle có gần nhau hay ko, nếu **ε** chỉ nhỏ thôi.
+> \**θ**_mle2 Câu hỏi là, hai mle có gần nhau hay ko, nếu **ε** chỉ nhỏ thôi.
 >
 > Câu trả lời, gs cho biết ko phải lúc nào cũng vậy (đây sẽ lót nền cho việc check
 > hay evaluate các estimator, mà hình như mình đã biết, đây là nói về tính
@@ -1943,7 +1943,7 @@
 >
 > tức là trong expo(..) sẽ có dạng:
 >
-> **-x^2[1/2Variance] + 2x Mean/2Variance - Mean^2/(2Variance)**
+> \**-x^2[1/2Variance] + 2x Mean/2Variance - Mean^2/(2Variance)**
 >
 > Vậy ta sẽ khớp với (1) để tìm Mean và Variance của posterior distribution, nếu
 > thành công có thể chứng tỏ nó cũng là normal
@@ -1970,7 +1970,7 @@
 >
 > = τ^2x / (τ^2 + σ^2) + σ^2μ / (τ^2 + σ^2) 
 >
-> **⇨ Mean** = **[τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ**
+> \**⇨ Mean** = **[τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ**
 >
 > Và như vậy **posterior distribution của θ là n(mean, variance)** 
 > với mean và variance như trên.
@@ -2354,7 +2354,7 @@
 > [!NOTE]
 > Định nghĩa khái quát (cho cả pmf/pdf). Đó là nếu ta có 
 >
-> **Y** = (Y1,...Yn) là incomplete data 
+> \**Y** = (Y1,...Yn) là incomplete data 
 >
 > và **X** = (X1, ...Xm) là augmented data. 
 >
@@ -2477,7 +2477,7 @@
 > Nên vế trái ta sẽ vẫn có E[log L(θ|**y**) | y, θ') = E log L(θ|**y**)  Còn
 > vế phải, cứ hiểu  tương tự, là hiện tại ta có một random variable tạo ra
 > bởi áp cái function sau đây  lên **X**: log L(θ|**y**,**x**) - log k(**x**|θ,
-> **y**) h(**X**) = log L(θ|**y**, **X**) - log k(**X**|θ,**y**)
+> \**y**) h(**X**) = log L(θ|**y**, **X**) - log k(**X**|θ,**y**)
 >
 > và để tính E h(**X**), theo lotus ta có E h(**X**) = ∫ [log L(θ|**y**, **x**) -
 > log k(**X**|θ,y)] f**X**(**x**) dx
@@ -2492,7 +2492,7 @@
 > (hay của cái random variable  h(X)) theo x nhưng vẫn phụ  thuộc y và
 > θ.   **nên mới thể hiện với kí hiệu là:** E[h(**X**|θ, **y**)] = **∫** log L(θ|**y**, **x**) k(**x**|θ, **y**) d**x - ∫**log
 > k(**x**|θ,**y**)] k(**x**|θ, **y**) dx hay E[log L(θ|**y**, **X**)|θ, **y**] = ∫ log L(θ|**y**, **x**) k(**x**|θ, **y**)d**x - ∫**log k(**x**|θ, **y**)] k(**x**|θ, **y**) d**x** thì có thể thấy term 1 là hàm theo θ, nhưng để tính là cần k(**x**|θ,
-> **y**), lại là hàm  dựa vào θ.
+> \**y**), lại là hàm  dựa vào θ.
 >
 > Điều này y như ta tính f(x) mà x = g(x) vậy).
 >
@@ -2514,7 +2514,7 @@
 > Hỏi ngu: Vì sao lại maximize: Thì là vì ta đang muốn maximize vế trái,
 > nên cũng ta sẽ maximize  vế phải. Và vế phải thì chỉ có term 1 là hàm
 > theo θ thôi (ý là có dạng Q(θ|θ'), còn term 2 thì  với θ' thì ∫log k(**x**|θ',
-> **y**)] k(**x**|θ', y) dx ra  fixed value rồi. nên ta chỉ cần maximize over θ
+> \**y**)] k(**x**|θ', y) dx ra  fixed value rồi. nên ta chỉ cần maximize over θ
 > term 1.
 >
 > Và bước 1, tính  E[log L(θ|**y**, **X**)|θ', **y**] gọi là E-Step
@@ -2802,7 +2802,7 @@
 >
 > Viết lại cái (I) xuống đây để so sánh:
 >
-> **Σi=1:n [-βτi + yi (log β + log τi)] + Σi=2:n (-τi + xi log τi)
+> \**Σi=1:n [-βτi + yi (log β + log τi)] + Σi=2:n (-τi + xi log τi)
 >
 > \+ [-τ1 + \/τ1r\/ log τ1]** (I)
 >

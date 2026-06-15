@@ -17,14 +17,14 @@
 > time and effort required for each.**
 >
 > 3. Acknowledgment that pre-training a large language model can be a **complex** and
-> **resource-intensive process** due to **architectural decisions, data requirements, and
+> \**resource-intensive process** due to **architectural decisions, data requirements, and
 > expertise**.
 >
 > 4. Emphasizing that **starting with an existing foundation model** can significantly **simplify the
 > development process.**
 >
 > 5. Mention of **assessing the model's performance through prompt engineering**, which
-> **requires less technical expertise** and **no additional model training**.
+> \**requires less technical expertise** and **no additional model training**.
 >
 > 6. Discussion of **prompt tuning** and **fine-tuning** as methods to **improve model performance**,
 > with **consideration of the use case, performance goals, and compute budget.**
@@ -36,7 +36,7 @@
 > and the **potential use of existing reward models** or **creating new ones.**
 >
 > 9. Reference to optimization techniques, which typically fall in the middle in terms of
-> **complexity** and **effort** but can **proceed quickly if they don't significantly impact model
+> \**complexity** and **effort** but can **proceed quickly if they don't significantly impact model
 > performance**.
 >
 > 10. The hope that, after completing all these steps, a **well-trained and tuned generative

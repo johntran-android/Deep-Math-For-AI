@@ -217,7 +217,7 @@
 > Thế thì nếu trong hai phép tính này nếu ta thấy có trường hợp x "thắng" thì 
 > chứng tỏ có sự "cross the kink". Ví dụ:
 >
-> *Ví dụ trường hợp xảy ra "cross the kink":
+> \*Ví dụ trường hợp xảy ra "cross the kink":
 >
 > x = -1e-6, h = 2e-6 (là ví dụ ở trên)
 >
@@ -227,7 +227,7 @@
 > vậy thì khỏi cần xét max(0, x-h) việc đổi ngôi winner này từ 0 sang bên x (x+h) 
 > là dấu hiệu của việc "cross the kink"
 >
-> *Ví dụ không xảy ra "cross the kink":
+> \*Ví dụ không xảy ra "cross the kink":
 >
 > x = -3e-6, h = 2e-6 thế thì max (0,x) 0 là winner
 > Nhưng max(0, x + h) thì 0 vẫn là winner vì x + h vẫn chưa lớn hơn 0 nên
@@ -474,7 +474,7 @@
 > Do đó đương nhiên cũng phải tắt regularization đi vì dễ hiểu là nó sẽ
 > ngăn model bị overfit.
 >
-> *Tuy nhiên cũng có chú ý là ngay cả khi thấy model bị overfit thì cũng còn
+> \*Tuy nhiên cũng có chú ý là ngay cả khi thấy model bị overfit thì cũng còn
 > khả năng là có lỗi trong số ít dữ liệu đó
 
 <br>
@@ -625,7 +625,7 @@
 > (particle) khi nó lăn xuống
 >
 > Vậy liên hệ **độ dốc (gradient) sẽ tỉ lệ với lực (force),** hình dung là
-> **độ dốc lớn thì kiểu như lực kéo tác động lên viên bi sẽ lớn** dẫn đến
+> \**độ dốc lớn thì kiểu như lực kéo tác động lên viên bi sẽ lớn** dẫn đến
 > tạo ra gia tốc, tức tăng vận tốc của viên bi về hướng đó. Đây là cách
 > nói đồng nghĩa với việc thay đổi vị trí của viên bi theo hướng của
 > gradient
@@ -657,7 +657,7 @@
 > hướng tạm gọi là **vector quán tính.** Và mỗi lần, **ta giảm nó lại một
 > chút bằng friction rate mu** đồng thời **cộng thêm cái hướng của
 > Vector gradient** để mang ý nghĩa là à, **điều chỉnh lại** một chút bằng cách
-> **giảm lại ở hướng đang có** và **kết hợp (bẻ lái) một chút qua hướng
+> \**giảm lại ở hướng đang có** và **kết hợp (bẻ lái) một chút qua hướng
 > dựa vào gradient**
 
 > [!NOTE]
@@ -681,7 +681,7 @@
 > Với vanilla GD. Hình ảnh sẽ là **vector này sẽ trực tiếp "dẫn dắt" viên bi**.
 > Nên sẽ xảy ra tình huống **gradient bằng 0** (như khi gặp vùng bằng, phẳng
 > hoặc ở local minima) thì **viên bi sẽ dừng lăn**. Cũng như là nếu gradient
-> **độ dốc đều đều thì viên bi sẽ vẫn chỉ lăn đều đều (chứ không có chuyện**
+> \**độ dốc đều đều thì viên bi sẽ vẫn chỉ lăn đều đều (chứ không có chuyện**
 > lăn nhanh dần)
 >
 > Với momentum, ngay sau khi bi lăn do gradient kéo đi, ví dụ hiểu nôm na là

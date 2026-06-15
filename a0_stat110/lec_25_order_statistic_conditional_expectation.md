@@ -29,7 +29,7 @@
 > đến khi nhận email thứ n**, có thể coi là **TỔNG CỦA n r.v Expo(λ)**
 >
 > Và ta **đã chứng minh ở bài trước** trong Gamma-Expo connection rằng,
-> **TỔNG n CÁC Expo(λ) CHÍNH LÀ MỘT Gamma(n, λ) r.v.**
+> \**TỔNG n CÁC Expo(λ) CHÍNH LÀ MỘT Gamma(n, λ) r.v.**
 >
 > Thì ở đây việc **xếp hàng để đợi phục vụ** cũng giống giống như vậy, **các
 > khoảng thời gian giữa những lần được phục vụ** cũng là Expo(λ). Và **thời
@@ -63,7 +63,7 @@
 >
 > Thế thì, nếu **a, b là integer**. Thì ngay lập tức ta có thể **dùng story proof** với lập
 > luận rằng, như vừa nói, khi đó có thể **coi X là tổng của a i.i.d Expo(λ)** và
-> **Y là tổng của b i.i.d Expo(λ)**.
+> \**Y là tổng của b i.i.d Expo(λ)**.
 >
 > Nên **T = X+Y** đương nhiên là **tổng của (a+b) i.i.d Expo(λ) r.v**
 >
@@ -73,7 +73,7 @@
 >
 > Bên cạnh đó, gs nói **nếu a không phải integer**, ta cũng có thể **dễ dàng dùng
 > MGF để chứng minh T là Gamma(a+b, λ)** vì X, Y **independent**. Mà
-> **MGF của Gamma thì ta đã chứng minh rồi**
+> \**MGF của Gamma thì ta đã chứng minh rồi**
 
 > [!NOTE]
 > Bằng story proof chứng minh tổng
@@ -88,7 +88,7 @@
 
 > [!NOTE]
 > Tuy nhiên bài toán này ta còn **quan tâm** **tỉ lệ giữa thời gian chờ ở nhà**
-> **băng** (X) với **tổng thời gian (X+Y)**. Đặt là **W = X / (X+Y)**
+> \**băng** (X) với **tổng thời gian (X+Y)**. Đặt là **W = X / (X+Y)**
 >
 > Đúng hơn là ta **muốn tìm một Joint PDF của W và T**. Và như ta đã vừa nói,
 > ta **đã biết distribution của T**, nó cũng là **marginal pdf của T**.
@@ -113,7 +113,7 @@
 > bữa trước ta đã học về Transformation theorem cho phép ta tìm PDF của Y = g(X), khi biết PDF
 > của X, g_X(x)
 >
-> **f_Y(y) = f_X(x) dx/dy**
+> \**f_Y(y) = f_X(x) dx/dy**
 >
 > Thế thì **mở rộng qua Rn**. Khi ta có **vector X = [X1,...Xn]**, và **PDF của X** (thì bấy giờ **đương nhiên**
 > PDF của X là **JOINT PDF f_Xj(x) của mọi Xj**)
@@ -123,14 +123,14 @@
 >
 > Thì ta sẽ có:
 >
-> **f_Y(y) = f_X(x) |dx/dy|** với |dx/dy| là **TRỊ TUYỆT ĐỐI CỦA DETERMINANT** của **Jacobian** matrix.
+> \**f_Y(y) = f_X(x) |dx/dy|** với |dx/dy| là **TRỊ TUYỆT ĐỐI CỦA DETERMINANT** của **Jacobian** matrix.
 >
 > ====
 >
 > Vậy thì ở đây, **áp dụng điều này**, ta sẽ có thể **tính Joint PDF của T, W** (có thể hiểu là ta có vector
 > U = [T, W] và vector N = [X,Y] cũng vậy thôi)
 >
-> **f_T,W(t,w) = f_X,Y(x,y) |∂(x,y)/∂(t,w)|** Đương nhiên ta hiểu **f_T,W(t,w)** là J**OINT PDF của T và W**. 
+> \**f_T,W(t,w) = f_X,Y(x,y) |∂(x,y)/∂(t,w)|** Đương nhiên ta hiểu **f_T,W(t,w)** là J**OINT PDF của T và W**. 
 >
 > Giống như **f_[X1,X2....Xn] là PDF của VECTOR X**, DĨ NHIÊN LÀ **JOINT PDF CỦA CÁC X1, X2...Xn**
 >
@@ -147,7 +147,7 @@
 > về định nghĩa của **Independent** random variable liên quan đến **Joint và Marginal
 > distribution** cho phép:
 >
-> **Joint PDF** của X,Y bằng **tích của PDF của từng cái**, tức là **tích của các Marginal
+> \**Joint PDF** của X,Y bằng **tích của PDF của từng cái**, tức là **tích của các Marginal
 > PDF**
 >
 > Và **X ~ Gamma(a, 1)** => **f_X(x) = [1/Gamma(a)]** **x^a e^-x / x**
@@ -156,7 +156,7 @@
 >
 > Nên ta có:
 >
-> **f_W,T(w,t)** = **[1/Gamma(a)1/Gamma(b)]** **x^a e^-x y^b e^-y / xy**  * **|Jacobian|**
+> \**f_W,T(w,t)** = **[1/Gamma(a)1/Gamma(b)]** **x^a e^-x y^b e^-y / xy**  * **|Jacobian|**
 
 <br>
 
@@ -171,7 +171,7 @@
 > Thì nó là matrix **[∂x/∂t, ∂x/∂w; ∂y/∂t ∂y/∂w]**
 >
 > Vậy thì **dễ dàng tính được những partial derivative này** bằng cách đầu tiên là
-> **thể hiện x, y là hàm của w, t**. Rồi **lấy đạo hàm từng phần** rất đơn giản.
+> \**thể hiện x, y là hàm của w, t**. Rồi **lấy đạo hàm từng phần** rất đơn giản.
 >
 > x = tw => [∂x/∂t, ∂x/∂w] = [w t]
 >
@@ -247,14 +247,14 @@
 > Và đương nhiên các **event (X=x, Y=y) với các y khác nhau** là các **disjoint**
 > event Từ đó theo **axiom 2** of proability:
 >
-> **P[Tổng y (X=x, Y=y)] = Tổng y P(X=x, Y=y)**
+> \**P[Tổng y (X=x, Y=y)] = Tổng y P(X=x, Y=y)**
 >
 > Vậy P(X=x) = Tổng y P(X=x, Y=y) Thì **P(X=x) chính là Marginal PMF của X**
 > và **P(X=x, Y=y) là Joint PMF**
 >
 > Phiên bản continuous sẽ tương đương:
 >
-> **f_X(x) = ∫-inf:inf f_X,Y(x,y) dy** Và kết quả trên cho thấy marginal pdf của X được tính bằng cách integrate
+> \**f_X(x) = ∫-inf:inf f_X,Y(x,y) dy** Và kết quả trên cho thấy marginal pdf của X được tính bằng cách integrate
 > joint pdf over mọi possible value của y
 >
 > ===
@@ -262,7 +262,7 @@
 > Thế thì ở đây để có marginal pdf của T, ta sẽ integrate joint pdf của W, T trên
 > mọi possible value của t: 
 >
-> **f_W(w) = tích phân -inf:inf f_T,W(t,w) dt**
+> \**f_W(w) = tích phân -inf:inf f_T,W(t,w) dt**
 
 <br>
 
@@ -279,7 +279,7 @@
 > = ∫-inf:inf { **Γ(a+b) / [Γ(a) Γ(b)] w^(a-1) [(1-w)^(b-1)]** *  [1/Γ(a+b)] * t^(a+b) * e^-t 1/t } dt
 >
 > vì cái **phần chỉ liên quan đến w ko liên quan đến t**, không phụ thuộc t, nên ta có thể 
-> **bưng ra ngòai tích phân**
+> \**bưng ra ngòai tích phân**
 >
 > = Γ(a+b) / [Γ(a) Γ(b)] w^(a-1) [(1-w)^(b-1)] * **∫-inf:inf { [1/Γ(a+b)]  * t^(a+b) * e^-t 1/t } dt** Còn lại **∫-inf:inf { [1/Γ(a+b)]  * t^(a+b) * e^-t 1/ t } dt** thì như đã nói **chính là** 
 > ∫-inf:inf của PDF của Gamma(a+b,1) nên **nó phải bằng 1**
@@ -297,7 +297,7 @@
 >
 > Bữa trước ta đang học dở về **Beta(a,b)** distribution có pdf là: 
 >
-> **c*x^(a-1)*(1-x)^(b-1)**
+> \**c*x^(a-1)*(1-x)^(b-1)**
 >
 > Và **c là normalizing constant**, mà bữa trước gs nói ta sẽ tìm hiểu nó sau.
 >
@@ -307,7 +307,7 @@
 >
 > thì điều này **cũng chứng  minh rằng:** 
 >
-> **Γ(a+b)/[Γ(a) Γ(b)] CHÍNH LÀ CÔNG THỨC CỦA NORMALIZING CONSTANT 
+> \**Γ(a+b)/[Γ(a) Γ(b)] CHÍNH LÀ CÔNG THỨC CỦA NORMALIZING CONSTANT 
 > CỦA Beta(a,b)**
 >
 > Ở đây là lí do tại sao gs đang dạy về Beta nhưng chuyển sang Gamma, bởi lẽ
@@ -327,7 +327,7 @@
 
 > [!NOTE]
 > Vậy kết luận ta đã biết **normalizing** **constant** của **Beta(a,b)** là điều mà theo gs
-> **nếu ta tìm một cách trực tiếp**, ta sẽ **đối mặt với một tích phân rất khó**.
+> \**nếu ta tìm một cách trực tiếp**, ta sẽ **đối mặt với một tích phân rất khó**.
 >
 > Ngoài ra như đã nói, ta cũng biết **T là Gamma(a+b,1)** và **W là Beta(a,b)**
 >
@@ -369,7 +369,7 @@
 > thì bên trong **lại có dạng của PDF của Βeta(n+a, b)**
 >
 > Và vì bây giờ ta đã biết công thức của normalizing constant Βeta(a,b) = Γ(a+b)/Γ(a)Γ(b) 
-> **nên normalizing constant** của Beta(a+n, b) là **Γ(a+n+b) / Γ(n+a)Γ(b)** 
+> \**nên normalizing constant** của Beta(a+n, b) là **Γ(a+n+b) / Γ(n+a)Γ(b)** 
 >
 > Cho nên bằng cách n**hân thêm và chia bớt cho normalizing constant** này, thì ta có:
 >
@@ -377,7 +377,7 @@
 > ∫-inf:inf [Γ(a+n+b)/Γ(a+n)Γ(b)] * x^(n+a-1) * [(1-x)^(b-1)] dx
 >
 > Thế thì ∫-inf:inf [Γ(a+n+b)/Γ(a)Γ(b)] * x^(n+a-1) * [(1-x)^(b-1)] dx chính là 
-> **∫-inf:inf của pdf của Gamma(n+a, b), do đó nó** sẽ bằng 1. 
+> \**∫-inf:inf của pdf của Gamma(n+a, b), do đó nó** sẽ bằng 1. 
 >
 > Để lại **những gì còn lại chính là của E[X^n]:**
 >
@@ -418,8 +418,8 @@
 > Nhưng trong trường hợp này, vì ta **đã chứng minh W, T independent.**
 >
 > Mà trong bài trước, ta đã chứng minh rằng **nếu X, Y independent** thì 
-> **E(XY) = EX*EY**. Và sau khi học về khái niệm covariance, ta có công thức:
-> **Cov(X,Y) = EXY - EXEY**
+> \**E(XY) = EX*EY**. Và sau khi học về khái niệm covariance, ta có công thức:
+> \**Cov(X,Y) = EXY - EXEY**
 >
 > Review: Cov(X,Y)  = E[(X-EX)(Y-EY)] = E[XY+EXEY-XEY-YEX]
 >
@@ -430,7 +430,7 @@
 > Vậy thì khi X,Y INDEPENDENT dẫn tới E(XY) = EXEY. 
 >
 > Thì Cov(X,Y) = E(XY) - EXEY = EXEY - EXEY = 0. Khi đó chúng gọi là 
-> **UNCORRELATED** Bởi vậy ta mới có theorem: **INDEPENDENT => UNCORRELATED**
+> \**UNCORRELATED** Bởi vậy ta mới có theorem: **INDEPENDENT => UNCORRELATED**
 >
 > ====
 >
@@ -530,7 +530,7 @@
 
 > [!NOTE]
 > rồi, thế thì nói "**ít nhất có j cái Xi <= x**", thì **số lượng chính xác** (các Xi đứng trước x) có thể có các giá trị là
-> **từ** **j trở lên** và **max là n**. Hay nói cách khác, **số lượng chính xác của các Xi đứng trước x** có các **possible
+> \**từ** **j trở lên** và **max là n**. Hay nói cách khác, **số lượng chính xác của các Xi đứng trước x** có các **possible
 > value** là **j, j+1,....n**
 >
 > Gọi **số lượng chính xác** này là **k**. Như vừa nói, nó có thể có các **possible value từ j đến n**.
@@ -549,7 +549,7 @@
 >
 > = P("có j cái Xi <= x") + P("có j+1 cái Xi <=x") + ....P("có n cái Xi <= x")
 >
-> **P("ít nhất có j cái Xi <= x")** = **Tổng k=j:n P("có k cái Xi <= x") (1)** Tiếp, xét **P("có k cái Xi <= x")**: 
+> \**P("ít nhất có j cái Xi <= x")** = **Tổng k=j:n P("có k cái Xi <= x") (1)** Tiếp, xét **P("có k cái Xi <= x")**: 
 >
 > Ta có thể định nghĩa **việc ở bên trái x**, tức **<= x** là **success** còn ngược lại là **failure**. 
 > Để rồi event "**có k cái Xi <= x**" tương đương event "**số cái success = k**"
@@ -557,10 +557,10 @@
 > Như vậy ta có thể thấy câu chuyện giống như là, ta có **n i.i.d Bern trial**. Mỗi trial đều có **xác suất success
 > là giống nhau** vì **X1,X2...Xn ban đầu i.i.d** nên khi define **success** là event **Xi<=x** thì mọi event Xi<=0 đều có xác
 > suất xảy ra như nhau. Gọi xác suất success là p, thì có thể thấy nó như ta có **n Bern(p) trials i.i.d**, và ta
-> **đang quan tâm số trial success**, gọi nó là T đi thì ta có thể thấy T là một **Binomial(n, p) r.v.**
+> \**đang quan tâm số trial success**, gọi nó là T đi thì ta có thể thấy T là một **Binomial(n, p) r.v.**
 >
 > Khi đó event ("**có k cái Xi <= x**") tương đương với event (**T=k**). Để rồi  **P("có k cái Xi <= x")** chính là bằng
-> **P(T=k)** và như vậy việc **tìm P(T=k)** chính là tìm **PMF của T**. 
+> \**P(T=k)** và như vậy việc **tìm P(T=k)** chính là tìm **PMF của T**. 
 >
 > Mà PMF của T ~ Bin(n,p), như đã biết có công thức là :
 >
@@ -592,7 +592,7 @@
 >
 > Thế thì, như đã từng nói, PDF là probabilty **density**, **không phải probability**
 > nhưng nếu ta **nhân với một khoảng vô cùng nhỏ dx** thì ta có thể coi đó là
-> **xác suất mà X(j) rơi vào vùng dx này.**
+> \**xác suất mà X(j) rơi vào vùng dx này.**
 
 <br>
 
@@ -624,7 +624,7 @@
 > Đương nhiên những cái còn lại sẽ cho nằm bên phải. Chỉ có **1 cách**.
 >
 > Vì kết quả của bước này không ảnh hưởng đến số cách chọn của bước sau nên theo **step**
-> **rule**: ta có **n*(n-1 choose j-1)** cách chọn, cũng có nghĩa là ta **có n*(n-1 choose j-1) event A**
+> \**rule**: ta có **n*(n-1 choose j-1)** cách chọn, cũng có nghĩa là ta **có n*(n-1 choose j-1) event A**
 >
 > Và event A [Có j-1 Xi nhỏ hơn x] intersect [một trong số n cái Xi nằm trong vùng này]
 > sẽ là UNION của các event Ak này với k = 1,2...n*(n-1 choose j-1)
@@ -670,7 +670,7 @@
 > (với uniform, xác suất X<=x tức nằm trong đoạn [0,x] tỉ lệ thuận với chiều dài
 > của đoạn [0,x], chính là x). Do đó
 >
-> **f_U(j)(x)** = **n (n-1 choose j-1)** **x^(j-1)** **(1-x)^(n-j)**
+> \**f_U(j)(x)** = **n (n-1 choose j-1)** **x^(j-1)** **(1-x)^(n-j)**
 >
 > Thế thì gs **chỉ ra** rằng **x^(j-1) (1-x)^(n-j)** chính là dạng của **Beta**. ta nhớ nếu
 > X~Beta(a,b) thì PDF của x = **c*x^a-1 (1-x)^b-1**
@@ -700,7 +700,7 @@
 > cái này nó **khá là intuitively** (đại khái là dễ hiểu) bởi trên cơ sở ta **đã biết về
 > conditional probability**.
 >
-> **E(X|A)** là **mean của X** **given A** và ta chỉ việc thay các probability bằng conditional
+> \**E(X|A)** là **mean của X** **given A** và ta chỉ việc thay các probability bằng conditional
 > probability.
 >
 > Nên với discrete case, theo định nghĩa EX = Σx xP(X=x), thì bây giờ ta sẽ có:
@@ -761,7 +761,7 @@
 > thể là 50** hoặc **200**. Với **xác suất mỗi possible value đều là 0.5.**
 >
 > Vậy ta có thể tính **expected value của số tiền trong phong bì** đó là
-> **0.5*50+0.5*200** để ra **125**. Từ đó **kì vọng này lớn hơn 100** nên
+> \**0.5*50+0.5*200** để ra **125**. Từ đó **kì vọng này lớn hơn 100** nên
 > ta **luôn nên đổi.**
 >
 > Bữa sau gs sẽ nói tiếp

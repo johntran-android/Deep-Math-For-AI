@@ -8,34 +8,34 @@
 ## ****Training the Reward Model****: At this stage, you possess all the necessary elements
 
 > [!NOTE]
-> ****Training the Reward Model****: At this stage, you possess all the necessary elements
+> \****Training the Reward Model****: At this stage, you possess all the necessary elements
 > to train the reward model. Although significant human effort has been invested up to
 > this point, you **won't need further human involvement once the reward model is
 > trained**. Instead, the reward model **takes over from human labelers and autonomously
 > selects the preferred completion** during the **Reinforcement Learning from Human
 > Feedback** (RLHF) process.
 >
-> ****Reward Model Characteristics****: The reward model, typically another **language
+> \****Reward Model Characteristics****: The reward model, typically another **language
 > model**, functions as a **binary classifier**. It's trained using **supervised learning**
 > techniques on the **pairwise comparison data** created from **human labelers'
 > assessments of prompts**. The reward model **learns to favor the human-preferred
 > completion** while **minimizing the difference in rewards**, represented as the reward
 > difference, **r_j - r_k.**
 >
-> ****Using the Reward Model****: **The human-preferred completion**, labeled as **y_j**, is
-> **consistently the first option**. Once trained on **prompt-completion pairs ranked by
+> \****Using the Reward Model****: **The human-preferred completion**, labeled as **y_j**, is
+> \**consistently the first option**. Once trained on **prompt-completion pairs ranked by
 > humans**, the reward model is **utilized as a binary classifier.** It generates **logits**, which
 > are **unnormalized model outputs** before activation functions are applied. For example,
 > if you aim to filter out hate speech from your language model, the reward model
 > distinguishes between the positive class (non-hateful completion) and the negative
 > class (hateful completion).
 >
-> ****Reward Value and Softmax****: In RLHF, the **largest value from the positive class
+> \****Reward Value and Softmax****: In RLHF, the **largest value from the positive class
 > becomes the reward value**. Applying a Softmax function to the logits yields
 > probabilities. **The process involves assigning a good reward to non-toxic completions
 > and a bad reward to toxic ones**.
 >
-> **Leveraging the Reward Model**: While this lesson has covered a substantial
+> \**Leveraging the Reward Model**: While this lesson has covered a substantial
 > amount of information, you now possess a potent tool in the form of the reward model
 > for aligning your language model. The forthcoming step entails exploring **how the
 > reward model is integrated into the reinforcement learning process**, facilitating the
@@ -56,7 +56,7 @@
 > in the loop.
 >
 > Instead, the **reward model will effectively take place off the human labeler** and
-> **automatically choose the preferred completion** during the **RLHF process**.
+> \**automatically choose the preferred completion** during the **RLHF process**.
 >
 > This reward model is usually also **a language model**. For example, a **BERT** that
 > is **trained using supervised learning methods** on the **pairwise comparison data**
@@ -70,12 +70,12 @@
 
 > [!NOTE]
 > Rồi, với **bộ data đã nói ở trên**, ta sẽ **train reward model** với phương pháp
-> **Supervised Learning**. Nói thêm rằng **nó vốn cũng là language model**, ví dụ
+> \**Supervised Learning**. Nói thêm rằng **nó vốn cũng là language model**, ví dụ
 > như BERT.
 >
 > Quá trình training sẽ là **model nhận input** là các cặp **(prompt x - completion y_j)** là
 > cái **preferred** (cái good, mà human rate cao), và cặp **(prompt x - completion y_k)** với
-> **label** tương ứng của hai cặp là **rj và rk** **(ta biết rj > rk),** 
+> \**label** tương ứng của hai cặp là **rj và rk** **(ta biết rj > rk),** 
 >
 > và model **phải học được cách cho điểm cặp đầu cao hơn cặp sau** thông qua việc **giảm thiểu loss function là log(sigmoid(rj-rk))**
 
@@ -86,11 +86,11 @@
 <p align="center"><kbd><img src="assets/a481007d9c54937dc15310fc2cff9339b8d40941.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Once the model has been trained** on the **human rank prompt-completion pairs**, you
+> \**Once the model has been trained** on the **human rank prompt-completion pairs**, you
 > can **use the reward model as a binary classifier** to **provide a set of logics across the
 > positive and negative classes**.
 >
-> **Logits** are the **unnormalized model outputs** **before applying any activation
+> \**Logits** are the **unnormalized model outputs** **before applying any activation
 > function**.
 >
 > Let's say you want to **detoxify your LLM**, and the **reward model needs to identify if

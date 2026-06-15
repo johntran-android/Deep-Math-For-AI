@@ -21,11 +21,11 @@
 >
 > Tức là linear approximation đối với bivariate function f(x, y) là:
 >
-> **∆f ~= f_x*∆x + f_y*∆y** 
+> \**∆f ~= f_x*∆x + f_y*∆y** 
 >
 > So sánh với hàm một biến: 
 >
-> **∆f ~= f'*∆x** (hay f(x) - f(x0) ~= f'(x0)(x-x0) 
+> \**∆f ~= f'*∆x** (hay f(x) - f(x0) ~= f'(x0)(x-x0) 
 >
 > <=> **f(x) ~= f(x0) + f'(x)(x-x0)**
 >
@@ -33,7 +33,7 @@
 > khoảng bằng **delta_x** **nhân** với **rate of change f_x**: **f_x*delta_x**
 >
 > khi **y thay đổi delta_y** nó khiến function **thay đổi một khoảng delta_y**
-> **nhân** với **rate of change f_y**: **f_y*delta_y**.
+> \**nhân** với **rate of change f_y**: **f_y*delta_y**.
 >
 > Thế thì khi thay đổi cả x, y ta **xấp xỉ** khoảng thay đổi của f bằng **tổng
 > hai khoảng thay đổi** do y và do x
@@ -49,7 +49,7 @@
 >
 > Đó là ta sẽ **giữ y = y0 fixed**, để rồi điều này **giống như ta sẽ cắt đồ
 > thị hàm f với plane song song với xz plane**, khi đó ta có
-> **intersection** là đồ thị của **hàm số f(x, y0)**.
+> \**intersection** là đồ thị của **hàm số f(x, y0)**.
 >
 > Thì hàm số mang giá trị là **độ dốc của f(x, y0)** chính là **derivative
 > của f(x, y0)**, và nó chính là **partial derivative của f đối với x:
@@ -94,7 +94,7 @@
 
 > [!NOTE]
 > thế thì **L1, L2 đều là tiếp tuyến của đồ thị hàm z = f(x,y)**. Chúng
-> **TẠO THÀNH MỘT PLANE** plane **z = z0 + a(x-x0) + b(y-y0)**
+> \**TẠO THÀNH MỘT PLANE** plane **z = z0 + a(x-x0) + b(y-y0)**
 >
 > Thì đây là phương trình mặt phẳng với x*constant + y*constant +
 > constant và nếu giữ y, thay đổi x ta có phương trình của tangent line
@@ -168,7 +168,7 @@
 
 > [!NOTE]
 > và ta có cái tên cho điểm mà tại đó mọi partial derivative đều bằng 0:
-> **CRITICAL POINT (cực trị)**.
+> \**CRITICAL POINT (cực trị)**.
 >
 > Gs cho biết nó **chưa thỏa điều kiện đủ** để xác định là **max hoặc
 > min** vì **có những điểm khác mà mọi partial derivative cũng bằng
@@ -196,8 +196,8 @@
 
 > [!NOTE]
 > Thế thì có **3 khả năng như vậy**, như vừa nói **bữa sau** ta sẽ dùng
-> **đạo hàm cấp hai để xác định**. Còn ở đây ta sẽ dùng phương pháp
-> **COMPLETING THE SQUARE** 
+> \**đạo hàm cấp hai để xác định**. Còn ở đây ta sẽ dùng phương pháp
+> \**COMPLETING THE SQUARE** 
 
 <br>
 
@@ -247,7 +247,7 @@
 
 > [!NOTE]
 > như đã nói bài toán **Least Square**, ta sẽ tìm cách **minimize** D =
-> **Tổng bình phương của residual** (difference giữa "predicted value"
+> \**Tổng bình phương của residual** (difference giữa "predicted value"
 > ax_i + b và y_i)
 
 <br>
@@ -261,7 +261,7 @@
 > các equation**: **Partial derivative của D w.r.t a và b bằng 0**.
 >
 > Việc **tính partial derivative** khá **đơn giản**. Với việc dùng
-> **chain rule**
+> \**chain rule**
 
 <br>
 
@@ -270,7 +270,7 @@
 <p align="center"><kbd><img src="assets/8cd1a66d58c231497c736f7dece62d36e0179cde.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Simplify** một chút ta có như vầy, gs lưu ý rằng ta có thể
+> \**Simplify** một chút ta có như vầy, gs lưu ý rằng ta có thể
 > thấy đây **vẫn là các linear equation of a, b**
 
 <br>

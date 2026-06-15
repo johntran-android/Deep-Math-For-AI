@@ -47,7 +47,7 @@
 > đó **X có thể là +√a hoặc -√a**.
 >
 > Thế mà, vì **X~N(0,1)** nên nó có tính chất **đối xứng qua mean = 0**. Do đó, hai possible values này đều
-> **equally** **likely**. Cho nên khi ta **average hai giá trị với xác suất bằng nhau** này thì ta **sẽ được 0**.
+> \**equally** **likely**. Cho nên khi ta **average hai giá trị với xác suất bằng nhau** này thì ta **sẽ được 0**.
 >
 > Nên **nếu tính toán theo định nghĩa** bằng cách ∫-inf:inf x*conditional pdf, ta **cũng sẽ được 0**
 
@@ -77,17 +77,17 @@
 > Câu hỏi là tìm **E(Y|X)**.
 >
 > Lập luận tương tự nãy h, **E(Y|X)** có ý nghĩa là **gỉa dụ biết giá trị của X**, thì 
-> **best prediction cho Y là bao nhiêu**.
+> \**best prediction cho Y là bao nhiêu**.
 >
 > Thế thì ta có thể **chuyển nó vể dạng conditioned on event**, bằng việc **cho rằng
 > biết giá trị của X là x**: tức event **X=x** occur.
 >
 > Khi đó, ta chuyển thành tìm **E(Y|X=x)**. Thế thì, khi đó, **Y|X=x** là một rv của **Unif(0,x)**
 > nên expected value là **x/2** vì ta đã chứng minh **mean của một r.v ~ Unif(a,b)** là
-> **(a+b)/2**
+> \**(a+b)/2**
 >
 > Thế thì nhắc lại bữa trước gs nói **E(Y|X=x) là function of x**, gọi là **g(x)**. Để rồi
-> **E(Y|X)** là random variable, và **là function of X: g(X)**
+> \**E(Y|X)** là random variable, và **là function of X: g(X)**
 >
 > Do đó **chuyển về conditioned on r.v E(Y|X)** ta chỉ việc **thay x bằng X**: **E(Y|X) = X/2**
 
@@ -105,7 +105,7 @@
 >
 > Và ông nhắc lại bữa trước ta đã tuyên bố rằng (dù chưa chứng minh) là:
 >
-> **E[E(Y|X)] = E[Y].**
+> \**E[E(Y|X)] = E[Y].**
 >
 > Do đó **E[Y] = 1/4**. Để rồi có thể thấy kết quả này **rất intuitive** vì **khi ta bẻ
 > thanh gỗ 2 lần** thì **rất hợp lí để expect rằng ta có đoạn bằng 1/4** thanh ban
@@ -154,16 +154,16 @@
 🔗 **Related:** [LEC 26 CONDITIONAL EXPECTATION](untitled.md#node-814)
 
 > [!NOTE]
-> **Tính chất thứ 2** mà ta cũng đã từng gặp là **E(Y|X) = E(Y)** **nếu X, Y
+> \**Tính chất thứ 2** mà ta cũng đã từng gặp là **E(Y|X) = E(Y)** **nếu X, Y
 > INDEPENDENT.**
 >
 > Tính chất này gs nói rằng **chỉ dựa trên trực tiếp từ định nghĩa của
 > conditional expectation**, mà trong đó có liên quan đến **conditional**
-> **distribution PMF/PDF.** Thế thì từ đó, **dựa trên định nghĩa của independent variable** thì,
-> **conditional PMF/PDF** = chính là bằng **unconditional PMF/PDF**
+> \**distribution PMF/PDF.** Thế thì từ đó, **dựa trên định nghĩa của independent variable** thì,
+> \**conditional PMF/PDF** = chính là bằng **unconditional PMF/PDF**
 >
 > (sâu xa hơn nữa thì vì **conditional PMF/PDF** = **Joint PMF/PDF**
-> **chia** **Marginal PMF/PDF** Thì khi **independent,** **Joint PMF là tích của các Marginal PMF**, dẫn
+> \**chia** **Marginal PMF/PDF** Thì khi **independent,** **Joint PMF là tích của các Marginal PMF**, dẫn
 > đến **kết quả còn lại chỉ là Marginal (Unconditional) PMF/PDF)** Ta có thể ví dụ X, Y là discrete r.v
 >
 > E(Y|X) mang ý nghĩa là giả sử biết giá trị của X (ví dụ = x) thì best
@@ -229,7 +229,7 @@
 
 > [!NOTE]
 > Property 4: **E[ (Y-E[Y|X]) h(X) ] = 0**. Với **Y-E[Y|X]** được gọi là **RESIDUAL** trong statistic. Và **h(X)** là
-> **function bất kì của X**
+> \**function bất kì của X**
 >
 > Ta hiểu như vầy, **E[Y|X]**, như đã biết mang ý nghĩa là "**cho biết giá trị của X**,  thì **best prediction cho Y** là
 > bao nhiêu".
@@ -262,7 +262,7 @@
 > [!NOTE]
 > Tiếp gs nói về **ý nghĩa hình học** của việc này. Gs nói về **vector space**. Như thầy
 > Strang đã nói, vector space có thể là **space** of **function**, miễn là nó thỏa tính chất:
-> **cộng hai vector** hay **scale vecto**r vẫn **ra vector trong space**
+> \**cộng hai vector** hay **scale vecto**r vẫn **ra vector trong space**
 >
 > Thế thì gs mô tả **giả dụ ông có vector space** là **mọi function của X**. Ta hiểu ngay
 > vì mọi function của X thỏa mãn tính chất của vector space: cộng hai function của
@@ -278,7 +278,7 @@
 > function of X.
 >
 > Gs có nhắc đến khái niệm **INNER PRODUCT <X,Y>**, mà ông cho là nó chỉ là
-> **giống như dot product thì nó chính là E(XY)**
+> \**giống như dot product thì nó chính là E(XY)**
 
 <br>
 
@@ -291,7 +291,7 @@
 >
 > E[(Y-E[Y|H])h(X)]
 >
-> **nhân phân phối** vào = E[Y*h(X)-E[Y|X]*h(X)]
+> \**nhân phân phối** vào = E[Y*h(X)-E[Y|X]*h(X)]
 >
 > sau đó theo **linearity** =  E[Y*h(X)]   -  E(Y|X)*h(X)
 >
@@ -322,7 +322,7 @@
 > Thế thì như đã biết **E(Y|X) là function của X**, gọi nó là **g(X)**.
 >
 > Vậy **E(E[Y|X)]** = **E[g(X)]**. Áp dụng **LOTUS** và định nghĩa của
-> **expectation** ta có
+> \**expectation** ta có
 >
 > E[g(X)] = **Σ {các possible value x} [ g(x) * P(X=x) ]**.
 >
@@ -358,7 +358,7 @@
 > [!NOTE]
 > Thế thì, tới đây ta sẽ dùng **định nghĩa conditional expectation** để có 
 >
-> **E(Y|X=x)** = **Σy y*P(Y=y|X=x)**
+> \**E(Y|X=x)** = **Σy y*P(Y=y|X=x)**
 >
 > Để rồi **E[g(X)]** = **Σx [Σy y*P(Y=y|X=x)]*P(X=x) ]**
 
@@ -406,7 +406,7 @@
 
 > [!NOTE]
 > gs nói thêm **cái trick** **đổi chỗ giữa sum x** và
-> **sum y** là một trick rất hữu ích mà ta hay dùng
+> \**sum y** là một trick rất hữu ích mà ta hay dùng
 
 <br>
 
@@ -424,7 +424,7 @@
 >
 > Thì với conditional expectation, ta có: 
 >
-> **Var(Y|X) = E(Y^2|X) - (E(Y|X))^2**
+> \**Var(Y|X) = E(Y^2|X) - (E(Y|X))^2**
 
 > [!NOTE]
 > Var(Y|X) = E(Y^2|X) - [E(Y|X)]^2
@@ -520,10 +520,10 @@
 > Thì ở đây ta **có các city**, trong **mỗi city cũng có variation** nhưng **giữa các city cũng có variation**.
 >
 > Thế thì ta sẽ **giả định về distribution của Q** và ta sẽ dùng **Beta(a,b)** vì **tính chất flexible** mà ta đã nói
-> **với a,b khác nhau** nó có thể **represent nhiều kiểu distribution khác nhau**, do đó nó là lựa chọn phổ biến
+> \**với a,b khác nhau** nó có thể **represent nhiều kiểu distribution khác nhau**, do đó nó là lựa chọn phổ biến
 >
 > Điều này cũng giống như bữa trước ta cũng có bài toán mà ta **không biết p của Bern(p)** và ta dùng
-> **Beta(a,b) làm prior distribution** cho nó để rồi nhờ tính chất **Conjugate prior** **with Binomial** mà **sau khi ta
+> \**Beta(a,b) làm prior distribution** cho nó để rồi nhờ tính chất **Conjugate prior** **with Binomial** mà **sau khi ta
 > tìm posterior distribution** của p thì **nó cũng là Beta với param khác thôi.**
 
 <br>
@@ -539,17 +539,17 @@
 > là một Binomial(n, Q) r.v**
 >
 > Thêm nữa, gs nói sẽ tốt hơn nếu ta **assume X là Hypergeometric** tức là
-> **sampling không hoàn lại**. Tuy nhiên như đã biết, **nếu số lượng nhỏ so với
+> \**sampling không hoàn lại**. Tuy nhiên như đã biết, **nếu số lượng nhỏ so với
 > số lượng population size** thì sampling **có hoàn lại** (trong Binomial) **cũng
 > giống như sampling không hoàn lại** do đó ta **cho rằng X là Binomial.**
 >
 > Nhắc lại **X là số người bệnh khi test một population trong một city**, thì **kết
 > quả test của mỗi người là một Bern trial**.
 >
-> **Ôn lại** story của hai distribution này để hiểu **tại sao gs nói là sẽ tốt hơn
+> \**Ôn lại** story của hai distribution này để hiểu **tại sao gs nói là sẽ tốt hơn
 > nếu dùng Hypergeometric.**
 >
-> **X~Hgeom (w,b,n)** là **số banh trắng** khi bốc **n trái** từ lọ có **w trắng, b đen**
+> \**X~Hgeom (w,b,n)** là **số banh trắng** khi bốc **n trái** từ lọ có **w trắng, b đen**
 > kết qủa của mỗi lần bốc có story cũng là các Bern trial. 
 >
 > Có điều khi **bốc xong thì lấy ra luôn** (**sampling without replacement**)
@@ -569,7 +569,7 @@
 > là Binomial** 
 > Và cuối cùng, như đã nói, vì ta **assume X là Binomial**, nên d**ùng Beta để
 > làm prior distribution của Q** cũng là hợp lí nhờ tính chất **conjugate** **prior** to
-> **Binomial của Beta**
+> \**Binomial của Beta**
 
 <br>
 
@@ -581,7 +581,7 @@
 
 > [!NOTE]
 > Rồi để tính **EX** ta dùng **Adam's Law** (cái property mà tương đương với LOTP):
-> **EX = E[E(X|Q)]
+> \**EX = E[E(X|Q)]
 >
 > Lập nhanh lại để ôn lại: E[E(Y|X)] = E[Y]** Câu hỏi đầu tiên có thể đặt ra đó là E(Y|X) là gì, hay, mang ý nghĩa gì. Thế thì
 > đầu tiên ta có thể nói về expectation EY. Ý nghĩa của nó, chính là trung bình

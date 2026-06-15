@@ -84,7 +84,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 > components**, each of which has a **specific
 > responsibility**, and ensuring that 
 >
-> **changes to one component do not have unintended
+> \**changes to one component do not have unintended
 > consequences for other components**. This
 > makes it easier to develop, debug, and
 > maintain complex machine learning systems.
@@ -213,7 +213,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 
 > [!NOTE]
 > So, having dev and test sets from different distributions is like 
-> **setting a target**, having your team **spend months trying to 
+> \**setting a target**, having your team **spend months trying to 
 > aim closer** and closer to bull's eye, only to realize after 
 > months of work that, you'll say, "Oh wait, **to test it, I'm going 
 > to move target over here**." And, the team might say, 
@@ -251,7 +251,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 > it into both your dev set and your test set.**\/
 
 > [!NOTE]
-> **""And, whatever that data is, put
+> \**""And, whatever that data is, put
 > it into both your dev set and your test set."**
 
 <br>
@@ -349,7 +349,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 > [!NOTE]
 > For the purpose of this video, don't worry too much about the
 > details of how we define a new error metric, the point is that
-> **if you're not satisfied with your old error metric then don't
+> \**if you're not satisfied with your old error metric then don't
 > keep coasting with an error metric you're unsatisfied with,
 > instead try to define a new one that you think better
 > captures your preferences in terms of what's actually a better
@@ -378,7 +378,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 > Step 2 là ta **làm sao để cải thiện metric này**.
 >
 > Đó đại khái hai bước độc lập, phù hợp với nguyên tắc
-> **Mỗi lúc một việc hay mỗi núm 1 chức năng độc lập**
+> \**Mỗi lúc một việc hay mỗi núm 1 chức năng độc lập**
 
 > [!NOTE]
 > In machine learning, "orthogonalization"
@@ -391,7 +391,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 > components**, each of which has a **specific
 > responsibility**, and ensuring that 
 >
-> **changes to one component do not have unintended
+> \**changes to one component do not have unintended
 > consequences for other components**. This
 > makes it easier to develop, debug, and
 > maintain complex machine learning systems.
@@ -498,7 +498,7 @@ Streamline and optimize your ML production workflow by implementing strategic gu
 > thể giảm bằng những phương cách giảm vấn đề High variance
 > như (Regularization, more data,,,)
 >
-> **Tuỳ trường hợp cái nào lớn giữa Avoidable Bias và. Variance 
+> \**Tuỳ trường hợp cái nào lớn giữa Avoidable Bias và. Variance 
 > mà ta sẽ focus vô improve cái bias hay variance.**
 
 <br>

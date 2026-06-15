@@ -43,7 +43,7 @@
 > Ta có thể thấy có thể chuyển nó thành **bài toán tương tự**: Ta có **k viên bi
 > đánh** **số**, và muốn **xếp nó vào 365 cái hộp B1, B2...B365** (tượng trưng
 > cho 365 ngày trong năm). Thì **mỗi một bộ ngày sinh của đám người đó**,
-> **chính là một cách bỏ k viên bi có số vào các hộp**. Và xác suất có người
+> \**chính là một cách bỏ k viên bi có số vào các hộp**. Và xác suất có người
 > trùng ngày sinh chính là **xác suất có hộp chứa 2 viên bi.**
 >
 > Vậy thì, dựa vào logic thông thường cũng dễ thấy **nếu có nhiều bi hơn số
@@ -64,7 +64,7 @@
 > 365**.
 >
 > gs lưu ý rằng **luôn nhớ rằng ta có các công cụ** như **complement**,
-> **union**, **intersection**.. để dùng giúp việc tính xác suất của một event dễ
+> \**union**, **intersection**.. để dùng giúp việc tính xác suất của một event dễ
 > hơn. Cụ thể **sẽ dễ hơn để tính P(no match)**, khi đó **P(match) = 1 - P(no
 > match)**
 >
@@ -139,7 +139,7 @@
 > 253**, ý là **tuy 23 người có vẻ không nhiều** nhưng **từ 23 người đó có thể tạo 
 > ra rất nhiều cặp**, và số cặp sẽ tăng lên rất nhanh khi k tăng lên
 >
-> **Càng nhiều cặp**, ta có thể hiểu **đại khái được là sẽ càng dễ xảy ra cặp trùng
+> \**Càng nhiều cặp**, ta có thể hiểu **đại khái được là sẽ càng dễ xảy ra cặp trùng
 > ngày sinh**. Nhờ vậy có thể giúp ta "hiểu hiểu" được
 
 <br>
@@ -203,22 +203,22 @@
 > [!NOTE]
 > từ hai tiên đề ta có **tính chất thứ nhất** của **(non-naive) xác suất**:
 >
-> **P(A^c) = 1 - P(A)**
+> \**P(A^c) = 1 - P(A)**
 >
 > cái này gs cho biết là **ta đã xài** từ những bài trước rồi, vì **nó cũng đúng
 > với naive probability**.
 >
-> **Chứng minh** nó cũng đơn giản:
+> \**Chứng minh** nó cũng đơn giản:
 >
-> **B ắt đầu với tiên đề 1: P(S) = 1**. Và S đương nhiên là **bao gồm những
+> \**B ắt đầu với tiên đề 1: P(S) = 1**. Và S đương nhiên là **bao gồm những
 > gì thuộc A** **và những gì không thuộc A** (tức A^c). Nên:
 >
-> **S = A** ∪ **A^c** => **P(S) = P(A union A^c) = 1 (1)**
+> \**S = A** ∪ **A^c** => **P(S) = P(A union A^c) = 1 (1)**
 >
 > Thế mà **A và A^c không chồng lấn** (disjoint, kí hiệu là A intersect A^c =
 > rỗng) vì định nghĩa của complement. Do đó theo axiom 2:
 >
-> **P(A union A^c) = P(A) + P(A^c)** **(2)**
+> \**P(A union A^c) = P(A) + P(A^c)** **(2)**
 >
 > Vậy từ (1) và (2): ta có P(A) + P(A^c) = 1 => **P(A) = 1 - P(A^c)**
 
@@ -241,12 +241,12 @@
 > Ta **chia B làm 2 phần**: **A** và **những gì thuộc B mà ở ngoài A** thì cái này chính
 > là **intersection của B và A^c**:
 >
-> **B = A + (B intersect A^c)**
+> \**B = A + (B intersect A^c)**
 >
 > Mà vì định nghĩa như vậy nên **A** và **(những phần ngoài A mà vẫn thuộc B)**
-> **đương nhiên disjoint nhau**. Theo axiom 2 ta có: 
+> \**đương nhiên disjoint nhau**. Theo axiom 2 ta có: 
 >
-> **P[A + (B intersect A^c)] = P(A) + P(B intersect A^c)**
+> \**P[A + (B intersect A^c)] = P(A) + P(B intersect A^c)**
 >
 > Tiếp, theo định nghĩa, xác suất là giá trị **không** **âm** nên:
 >
@@ -276,7 +276,7 @@
 <p align="center"><kbd><img src="assets/c80fdb6e57be7b7d5e54018fbbf0a67a87128d2b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Property #3** đó là **P(A union B) = P(A) + P(B) - P(A intersect B)**
+> \**Property #3** đó là **P(A union B) = P(A) + P(B) - P(A intersect B)**
 >
 > Đại khái là, thực tế **không phải lúc nào ta cũng có các disjoint events**.
 > Ở đây cũng vậy **A và B không disjoint**, tức **A intersect B KHÁC rỗng**.
@@ -287,12 +287,12 @@
 > Cụ thể **(A union B)** có thể được coi như là **A union [những gì ngoài
 > A nhưng thuộc B]**, tương tự như hồi nãy:
 >
-> **(A union B) = [A union (A^c intersect B)]**
+> \**(A union B) = [A union (A^c intersect B)]**
 >
 > Và vì định nghĩa complement nên đương nhiên A và (A^c intersect B)
 > disjoint. Do đó ta có thể **áp dụng axiom 2**:
 >
-> **P[A union (A^c intersect B)] = P(A) + P(A^c intersect B)**
+> \**P[A union (A^c intersect B)] = P(A) + P(A^c intersect B)**
 >
 > Vậy P(A union B) = P(A) + **P(A^c intersect B)** 
 > Tiếp theo ta lập luận rằng, muốn chứng minh 
@@ -352,19 +352,19 @@
 <p align="center"><kbd><img src="assets/81a10003d177d6fd5ca0d115608086edac860594.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> **Công thức tổng quát của P(A1 u A2 ....u An)** là vầy, thấy có vẻ dài nhưng ý
+> \**Công thức tổng quát của P(A1 u A2 ....u An)** là vầy, thấy có vẻ dài nhưng ý
 > tưởng thì tương tự P( A u B u C) thôi đó là
 >
-> **Cộng hết các n cái P(A_j)**, các vùng **overlap giữa các cặp A_i, A_j** bị **đếm
+> \**Cộng hết các n cái P(A_j)**, các vùng **overlap giữa các cặp A_i, A_j** bị **đếm
 > dư**.
 >
-> **Trừ** hết các cùng overlap P(A_i ∩ A_j), các vùng overlap giữa A_i, A_j,
+> \**Trừ** hết các cùng overlap P(A_i ∩ A_j), các vùng overlap giữa A_i, A_j,
 > A_k bị mất
 >
-> **Cộng** các vùng overlap P(A_i ∩ A_j ∩ A_k), các vùng overlap giữa A_,
+> \**Cộng** các vùng overlap P(A_i ∩ A_j ∩ A_k), các vùng overlap giữa A_,
 > A_j, A_k, A_l bị đếm dư
 >
-> **Trừ** đi các vùng overlap P(A_i ∩ A_j ∩ A_k ∩ A_l)
+> \**Trừ** đi các vùng overlap P(A_i ∩ A_j ∩ A_k ∩ A_l)
 >
 > cứ thế..
 >
@@ -464,7 +464,7 @@
 >
 > Gs tính theo naive definition:
 >
-> **Sample space là mọi hoán vị của n lá bài: ta có n!.**
+> \**Sample space là mọi hoán vị của n lá bài: ta có n!.**
 >
 > Và event space: Ta sẽ đếm **số cách sắp n lá sao thỏa event A1 intersect
 > A2**: lá thứ 1 có label 1, lá thứ 2 là label 2.
@@ -530,7 +530,7 @@
 >
 > Và mỗi cái đều có P = 1/[n(n-1)] như đã tính. Do đó ta có:
 >
-> **-** (n choose 2) * 1/[n(n-1)] = **- [n*(n-1)/2] * 1/[n(n-1)]**
+> \**-** (n choose 2) * 1/[n(n-1)] = **- [n*(n-1)/2] * 1/[n(n-1)]**
 
 <br>
 
@@ -544,7 +544,7 @@
 >
 > Và hoàn toàn dễ hiểu, ta có (n choose 3) bộ 3 như vậy. Mỗi cái có P là
 >
-> **(n-3)!/n! = 1/[n(n-1)(n-2)]** Nên:  **+ (n choose 3) * 1/[n(n-1)(n-2)]
+> \**(n-3)!/n! = 1/[n(n-1)(n-2)]** Nên:  **+ (n choose 3) * 1/[n(n-1)(n-2)]
 >
 > = + [n*(n-1)*(n-2)/3!] * 1/[n(n-1)(n-2)]**
 
@@ -557,7 +557,7 @@
 > [!NOTE]
 > và các term **cancel out** hết để ta còn lại dãy số này:
 >
-> **1 - 1/2! + 1/3! - 1/4! + ... + (-1)^(n+1) / n!**
+> \**1 - 1/2! + 1/3! - 1/4! + ... + (-1)^(n+1) / n!**
 
 <br>
 
@@ -582,13 +582,13 @@
 >
 > [1-1/e^0] + f'(0)*(x-0)^1 / 1! + f''(0)*(x-0)^2 / 2! + f'''(0)*(x-0)^3 / 3! + ....
 >
-> **= 0 + 1 + (-1)*x^2/2 + (+1)*x^3/3! - ...**
+> \**= 0 + 1 + (-1)*x^2/2 + (+1)*x^3/3! - ...**
 >
 > Vậy thì với x = 1, ta có
 >
 > 1 - e^(-x) = 1 - e^(-1) = 1 - 1/e = = 0 + 1 + (-1)*1^2/2 + (+1)*1^3/3! - ...
 >
-> **= 1 - 1/2! + 1/3! - 1/4! .... CHỨNG MINH XONG**
+> \**= 1 - 1/2! + 1/3! - 1/4! .... CHỨNG MINH XONG**
 
 <br>
 

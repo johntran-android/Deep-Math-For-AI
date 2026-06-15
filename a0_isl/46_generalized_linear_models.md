@@ -172,7 +172,7 @@
 > Đầu tiên đại ý là nói về **Poisson Distribution:**
 >
 > Nó sẽ có tính chất đó là: variable có **giá trị trung bình** **càng lớn** thì
-> **variance của nó cũng càng lớn** mà đặc biệt là **hai cái bằng nhau luôn**.
+> \**variance của nó cũng càng lớn** mà đặc biệt là **hai cái bằng nhau luôn**.
 >
 > Ví dụ như đang xét response variable (Ta nhớ response cũng là variable,
 > có điều nó depend vào predictor X, nên có thể gọi là dependent variable
@@ -207,14 +207,14 @@
 > luôn, đó là ta g**iả định rằng các observation data** (training set) có tính
 > chất **i.i.d** = **independent identical distribution** (tạm hiểu là các sự
 > kiện quan sát thấy, đều độc lập nhau). Và ta sẽ cho rằng, đó là một
-> **distribution thực nghiệm p_empirical**, **xấp xỉ hay đại diện cho một
+> \**distribution thực nghiệm p_empirical**, **xấp xỉ hay đại diện cho một
 > phân phối xác suất thực p_data** đứng sau nó.
 >
 > Thế thì khi ta xây dựng mô hình thì ta sẽ **xây dựng công thức để dự
 > đoán phân phối xác suất này dựa trên model's parameters** và nhiệm vụ
 > (objective) sẽ là tìm, học, **điều chỉnh model params sao cho likelihood
 > của observed data là tối đa** - mang ý nghĩa sâu xa là ta sẽ cố gắng
-> **kéo phân phối xác suất dự đoán bởi model p_model và phân phối xác
+> \**kéo phân phối xác suất dự đoán bởi model p_model và phân phối xác
 > suất thực nghiệm gần lại**.
 >
 > Vậy thì vì đã **giả định các sample độc lập nhau**, nên việc **likelihood
@@ -261,9 +261,9 @@
 >
 > Như đã nói, **việc dùng Poisson Regression, là ta đã ngầm giả định
 > (implicitly assume**) dữ liệu, cụ thể là **response** Y (số lượng thuê xe đạp)
-> **có "quy luật" phân phối xác suất Poisson** - trong đó:
+> \**có "quy luật" phân phối xác suất Poisson** - trong đó:
 >
-> **Giá trị trung bình** của response cũng **bằng variance** của nó.
+> \**Giá trị trung bình** của response cũng **bằng variance** của nó.
 >
 > Ôn lại chút, **sở dĩ ta chọn Poisson Regression**, hay sở dĩ ta chấp nhận
 > giả định như vậy là **bởi khi kiểm tra phân phối của dữ liệu** dựa theo các
@@ -271,7 +271,7 @@
 > đổi thì variance cũng thay đổi theo**.
 >
 > Và đây chính là điều khiến cho **nếu muốn dùng linear regression** thì ta
-> **phải thay Y bằng log Y hay sqrt Y**, nhưng làm vậy có nhiều **bất tiện
+> \**phải thay Y bằng log Y hay sqrt Y**, nhưng làm vậy có nhiều **bất tiện
 > trong việc giải thích các kết quả** sau khi fit, như đã nói.
 >
 > Thành thử ra, hiện tượng **variance của (dependent) variable Y thay đổi**
@@ -316,7 +316,7 @@
 > e^(beta0 + beta1X1 + beta1 + ...betapXp) / e^(beta0 + beta1X1 +...
 > betapXp)
 >
-> **= e^beta1**
+> \**= e^beta1**
 >
 > (triển khai ra e^(a+b) = e^a*e^b, ta sẽ triệt tiêu hết tử và mẫu, chỉ còn
 > e^beta1)
@@ -371,13 +371,13 @@
 >
 > Thì có thể người ta chưa nói, hay nói rồi mà không để ý, về một điểm khá quan trọng
 > khi xây các mô hình này. Đó là **mỗi mô hình được xây dựng dựa trên các giả định**
-> **về phân phối xác suất của response** (dependent) variable Y **dựa trên predictor
+> \**về phân phối xác suất của response** (dependent) variable Y **dựa trên predictor
 > X**, tức là **giả định về dạng của p(Y|X)**
 >
 > Cụ thể là trong **Linear Regression**, khi dùng phương trình **Y = beta_0 +
 > beta_1*X1
 > \+ ..beta_p*Xp + epsilon**, ta **đang giả định P(Y|X) là Gaussian distribution:**  có
-> **variance var(Y) không đổi**, chỉ có **mean E[Y], thay đổi phụ thuộc X**.
+> \**variance var(Y) không đổi**, chỉ có **mean E[Y], thay đổi phụ thuộc X**.
 >
 > Với **Logistic Regression** thì ta **giả định P(Y|X) là Bernoulli distribution**, có mean
 > hay expectation **E[Y] là sigmoid(beta_0 + beta_1*X1 + ..beta_p*Xp)**
@@ -404,18 +404,18 @@
 >
 > Và eta η(), được gọi là **link function**, sẽ là:
 >
-> *Với Linear regression, nó là **identity function** tức η(z) = z, bởi vậy ta có:
+> \*Với Linear regression, nó là **identity function** tức η(z) = z, bởi vậy ta có:
 >
 > E[Y] = beta_0 + beta_1*X1 + .. beta_p*Xp
 >
-> *Với Logistic regression, nó là **logit function** (ngược với sigmoid: logit(sigmoid(z)) =
+> \*Với Logistic regression, nó là **logit function** (ngược với sigmoid: logit(sigmoid(z)) =
 > z) để rồi :
 >
 > logit(E[Y]) = logit(sigmoid(beta_0 + beta_1*X1 + .. beta_p*Xp)
 >
 > = beta_0 + beta_1*X1 + .. beta_p*Xp
 >
-> *Với Poisson regression, nó là l**og()**, để rồi:
+> \*Với Poisson regression, nó là l**og()**, để rồi:
 >
 > log (E[Y]) = log(e^(beta_0 + beta_1*X1 + .. beta_p*Xp))
 >
