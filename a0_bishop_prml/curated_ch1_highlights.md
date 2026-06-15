@@ -2,18 +2,17 @@
 
 Đây không phải bản tóm tắt textbook.
 
-Đây là 7 đoạn ghi chú được chọn từ hơn 60 notes tôi viết khi học Bishop Chapter 1 theo kiểu Feynman — nghĩa là đọc từng phần, dừng lại, chụp source, rồi giải thích lại bằng lời của mình cho đến khi thực sự hiểu.
-
-Mỗi đoạn đều có screenshot từ note gốc, trích dẫn thật, và link đến note đầy đủ để ai muốn đọc thêm context.
+Đây là 7 đoạn được chọn từ hơn 60 notes tôi viết khi học Bishop Chapter 1 theo kiểu Feynman — đọc từng phần, dừng lại, chụp source, rồi giải thích lại bằng lời của mình cho đến khi thực sự hiểu. Một số đoạn là derivation sạch. Một số là tôi đang bị confuse và tự gỡ ra live. Tôi chia sẻ cả hai loại vì thường thì loại sau mới hữu ích hơn.
 
 ---
 
 ## 1. Least Squares thật ra là phép chiếu hình học
 
+Đây là đoạn làm tôi thấy MIT 18.06 không hề nằm ngoài ML — nó đang nằm ngay trong Bishop Ch.1.
+
 <p align="center"><kbd><img src="assets/f197074d310ac2e32fd03ff6a898c535b11ec684.png" width="80%"></kbd></p>
 
-**Vì sao đoạn này đáng chọn:**
-Sau khi derive closed-form solution w* = (H^TH)^{-1}H^Tt, tôi nhận ra đây không chỉ là "đáp án" của bài toán tối ưu — nó chính là phép chiếu vector target **t** lên column space của design matrix H. Bài toán least squares không phải bài toán đại số, nó là bài toán hình học.
+Sau khi derive closed-form solution w\* = (H^TH)^{-1}H^Tt, tôi có thể dừng lại và ghi "xong" — nhưng tôi nhìn vào cái tích H(HTH)^{-1}HTt và tự hỏi: cái này là gì? Rồi nhớ ra.
 
 **Trích từ note gốc:**
 
@@ -21,19 +20,17 @@ Sau khi derive closed-form solution w* = (H^TH)^{-1}H^Tt, tôi nhận ra đây k
 
 <p align="center"><kbd><img src="assets/e46e65e467652db9ead01d8ae9f94c035ab99e84.png" width="80%"></kbd></p>
 
-**Tôi hiểu ra:**
-Bài toán curve fitting với least squares, sau khi đẩy hết toán ra, thực chất là: *tìm điểm trong không gian đầu ra mà model có thể tạo ra (C(H)) gần nhất với vector target **t** quan sát được.* Cái "optimal weights" chỉ là hệ số của phép chiếu đó. Kiến thức từ Strang (MIT 18.06) không phải bối cảnh khác — nó chính là cơ chế đằng sau Bishop Ch.1.
+Lúc đó tôi mới thấy: bài toán curve fitting với least squares, sau khi đẩy hết toán ra, thực chất là *tìm điểm trong không gian đầu ra mà model có thể tạo ra (C(H)) gần nhất với vector target **t** quan sát được.* Cái "optimal weights" chỉ là hệ số của phép chiếu đó. Bài toán không phải bài toán đại số — nó là bài toán hình học trong R^N.
 
 **→ Note đầy đủ:** [1.1 Example: Polynomial Curve Fitting](11_example_polynomial_curve_fitting.md#node-15)
 
 ---
 
-## 2. Overfitting không phải mô hình "cố gắng quá" — mà là quá nhiều tự do
+## 2. Overfitting không phải model "cố gắng quá" — mà là quá nhiều tự do
 
 <p align="center"><kbd><img src="assets/2fd9cd36587bde0c98b3e0ba82d41a31bee52851.png" width="80%"></kbd></p>
 
-**Vì sao đoạn này đáng chọn:**
-Khi M=9, training error = 0 nhưng test error vọt lên. Cái cần giải thích không phải là "tại sao model fit tốt training set?" mà là "tại sao fit tốt training set lại là vấn đề?"
+Khi M=9, training error = 0 nhưng test error vọt lên. Giải thích thường thấy là "model học cả noise". Đúng, nhưng chưa đủ. Tôi cố tìm cách nhìn sâu hơn: vì sao có *vô số* cách đi qua các điểm data, và vì sao điều đó lại là vấn đề?
 
 **Trích từ note gốc:**
 
@@ -41,8 +38,7 @@ Khi M=9, training error = 0 nhưng test error vọt lên. Cái cần giải thí
 
 <p align="center"><kbd><img src="assets/ea17cfef6723e53c15d586d2fd3bc95d16a9047f.png" width="80%"></kbd></p>
 
-**Tôi hiểu ra:**
-Khi model quá flexible, nó không chỉ học được signal — nó học được cả noise cụ thể của training set. Mà noise của test set là khác. Đây không phải lỗi của model, mà là hệ quả trực tiếp của việc có quá nhiều bậc tự do. Metaphor "cuộn dây" là của tôi: với đủ độ linh hoạt, hàm đa thức đi qua mọi điểm theo vô số cách, và xác suất nó chọn đúng cái path sin(2πx) là cực kỳ nhỏ.
+Metaphor "cuộn dây" là của tôi: khi model đủ flexible, nó có thể đi qua mọi điểm data theo vô số cách. Xác suất nó tình cờ chọn đúng cái path sin(2πx) là cực kỳ nhỏ. Đây không phải lỗi của model — nó đã làm đúng nhiệm vụ (minimize training error). Vấn đề là nhiệm vụ đó không phải nhiệm vụ ta thật sự muốn.
 
 **→ Note đầy đủ:** [1.1 Example: Polynomial Curve Fitting](11_example_polynomial_curve_fitting.md#node-18)
 
@@ -50,10 +46,9 @@ Khi model quá flexible, nó không chỉ học được signal — nó học đ
 
 ## 3. Regularization = Ridge Regression = MAP — cùng một bài toán
 
-<p align="center"><kbd><img src="assets/5ba7677cb963297622bb27bb53d76b3e9728de23.png" width="80%"></kbd></p>
+Lúc đầu regularization nhìn giống một mẹo thực hành để chống overfit. Rồi khi tôi derive MAP estimate ở section 1.2.5, term λ||**w**||² lại xuất hiện — không phải bị đặt vào từ ngoài, mà rơi ra tự nhiên từ log Gaussian prior.
 
-**Vì sao đoạn này đáng chọn:**
-Bishop giới thiệu regularization ở section 1.1 như một *kỹ thuật thực hành* để chống overfit: thêm λ||**w**||² vào loss. Rồi ở section 1.2.5, sau khi có probabilistic framework, ông derive MAP estimate. Khi tôi đẩy hết toán ra, tôi thấy hai bài toán đó là một.
+<p align="center"><kbd><img src="assets/5ba7677cb963297622bb27bb53d76b3e9728de23.png" width="80%"></kbd></p>
 
 **Trích từ note gốc:**
 
@@ -63,19 +58,17 @@ Bishop giới thiệu regularization ở section 1.1 như một *kỹ thuật th
 >
 > Từ đó giúp mình hiểu được rằng: Khi ta giải bài toán curve fitting bằng cách minimize error function dùng sum squared error có regularizer là quadratic function của param thì thật ra ta đang giải bài toán maximizing posterior distribution với prior được chọn là Normal.
 
-**Tôi hiểu ra:**
-Cái "trick" thêm λ||**w**||² ở section 1.1 không phải là trick — nó là kết quả của việc maximize log-posterior với prior Gaussian trên **w**. Term regularization xuất hiện tự nhiên từ log của prior. Hyperparameter λ chính xác là tỉ số α/β (precision của prior / precision của noise). Một "kỹ thuật thực hành" hóa ra là Bayes reasoning được ngụy trang.
+Hyperparameter λ chính xác là tỉ số α/β — precision của prior chia precision của noise. Ridge regression là cách nói frequentist/practical của cùng một cấu trúc Bayesian. Cái "trick" ở section 1.1 hóa ra là principled reasoning được ngụy trang.
 
 **→ Note đầy đủ:** [1.2.5 Curve fitting re-visited](125_curve_fitting_re_visited.md#node-89)
 
 ---
 
-## 4. Tung đồng xu 3 lần — MLE vs Bayes estimator
+## 4. Tung đồng xu 3 lần — MLE vs Bayes
+
+Ví dụ này Bishop viết rất ngắn. Tôi làm lại từ đầu hoàn toàn, không nhảy qua bước nào.
 
 <p align="center"><kbd><img src="assets/61c48316dcd90bd8e4d8160be153a76ef9b3736a.png" width="80%"></kbd></p>
-
-**Vì sao đoạn này đáng chọn:**
-Đây là ví dụ Bishop viết rất ngắn trong sách, nhưng tôi tự làm đầy đủ từ đầu. Kết quả làm tôi hiểu "prior mạnh" thực sự có nghĩa là gì.
 
 **Trích từ note gốc:**
 
@@ -85,19 +78,17 @@ Cái "trick" thêm λ||**w**||² ở section 1.1 không phải là trick — nó
 >
 > Nói thêm tí xíu, việc chọn prior là β(a=100, b=100)... thì nó sẽ phản ánh niềm tin ban đầu rằng, θ = 0.5 một cách mãnh liệt hơn. Cụ thể là khi ta tính mean của β(Σixi+a, n−Σixi+b) với a = b = 100 thì nó sẽ là: (3+100) / (3+100+3−3+100) = 0.507.
 
-**Tôi hiểu ra:**
-MLE với 3 head → θ̂ = 1: tuyên bố chắc chắn tuyệt đối từ 3 điểm dữ liệu. Bayes với Beta(1,1) → 0.8: vẫn bị kéo về phía dữ liệu nhưng không cực đoan. Bayes với Beta(100,100) → 0.507: prior tin mạnh rằng đồng xu là fair, 3 lần head không đủ để lung lay. "Prior mạnh" là prior mà bạn cần rất nhiều dữ liệu mới override được nó.
+MLE với 3 head → θ̂ = 1: tuyên bố chắc chắn tuyệt đối từ 3 điểm. Bayes với Beta(1,1) → 0.8: vẫn bị kéo về phía dữ liệu nhưng không cực đoan. Bayes với Beta(100,100) → 0.507: prior tin rất mạnh đồng xu là fair, và 3 lần head không đủ để thay đổi niềm tin đó. Đây là lúc tôi hiểu "prior mạnh" không phải là prior "đúng" hay "sai" — nó là prior mà bạn cần rất nhiều dữ liệu mới override được.
 
 **→ Note đầy đủ:** [1.2.3 Bayesian probabilities](123_bayesian_probabilities.md#node-66)
 
 ---
 
-## 5. Bayesian curve fitting: hai nguồn uncertainty, không phải một
+## 5. Bayesian curve fitting: phát sinh thêm một loại uncertainty mà MLE không có
 
 <p align="center"><kbd><img src="assets/7cd800cddcb3cdf601853c9eebe8e4cebe0913c3.png" width="80%"></kbd></p>
 
-**Vì sao đoạn này đáng chọn:**
-Sau khi derive predictive distribution trong Bayesian curve fitting, tôi dừng lại ở công thức variance và cố tách từng term ra để hiểu nó là gì.
+Sau khi derive predictive distribution trong full Bayesian treatment, tôi dừng lại ở công thức variance và cố tách từng term ra xem nó là gì. Một term thì quen. Một term thì mới hoàn toàn.
 
 **Trích từ note gốc:**
 
@@ -105,19 +96,17 @@ Sau khi derive predictive distribution trong Bayesian curve fitting, tôi dừng
 >
 > Var(Ti) = Φ(x)^T (βX^TX + αI)^{-1} Φ(x) + 1/β
 
-**Tôi hiểu ra:**
-Term 1/β là noise — nó sẽ tồn tại kể cả khi ta biết **w** chính xác. Term Φ(x)^T S Φ(x) là thứ mới: uncertainty về chính **w** của mình, được truyền qua hàm số vào dự đoán. MLE chỉ cho ta loại uncertainty thứ nhất. Bayesian inference đầy đủ cho ta cả hai. Term thứ hai *thu nhỏ lại* khi có thêm dữ liệu — posterior về **w** tự hẹp lại. Đây là lúc cụm từ "uncertainty trong tham số" không còn là trừu tượng nữa.
+Term 1/β là noise — nó tồn tại kể cả khi ta biết **w** chính xác. Term Φ(x)^T S Φ(x) là uncertainty về chính **w** của mình, được truyền qua model vào dự đoán. MLE chỉ cho ta loại thứ nhất. Full Bayesian cho ta cả hai. Term thứ hai *thu nhỏ lại* khi có thêm data vì posterior về **w** tự hẹp lại. Đây là lúc cụm từ "uncertainty trong tham số" không còn là trừu tượng nữa với tôi.
 
 **→ Note đầy đủ:** [1.2.6 Bayesian curve fitting](126_bayesian_curve_fitting.md#node-92)
 
 ---
 
-## 6. Quy tắc phân loại tối ưu là kết quả của bài toán tối ưu hóa
+## 6. Quy tắc phân loại tối ưu — tôi muốn tự derive nó, không chỉ đọc
+
+Bishop phát biểu optimal decision rule gần như là hiển nhiên. Tôi không muốn chấp nhận như vậy — tôi muốn formulate nó thành bài toán tối ưu và xem quy tắc đó rơi ra từ đâu.
 
 <p align="center"><kbd><img src="assets/44a744c064d80aaa0be07268a91e3428cac5cb32.png" width="80%"></kbd></p>
-
-**Vì sao đoạn này đáng chọn:**
-Bishop phát biểu optimal decision rule gần như là hiển nhiên. Tôi muốn *derive* nó — tức là formulate nó như bài toán tối ưu, rồi xem quy tắc đó xuất hiện từ đâu.
 
 **Trích từ note gốc:**
 
@@ -129,19 +118,17 @@ Bishop phát biểu optimal decision rule gần như là hiển nhiên. Tôi mu�
 
 <p align="center"><kbd><img src="assets/27282d92b172c007966374349361c82a4db14bbe.png" width="80%"></kbd></p>
 
-**Tôi hiểu ra:**
-Biến quyết định là các decision regions R1, R2. Minimize misclassification probability là formulate nó thành integral trên các "wrong regions". Giải bài toán tối ưu hóa đó ra, ta thấy: với mỗi điểm **x**, R1 nên chứa nó khi và chỉ khi f(C2,**x**) < f(C1,**x**). Quy tắc "gán class có posterior cao hơn" không phải heuristic — đó là nghiệm của bài toán tối ưu minimizing misclassification. Kết nối với Bayesian inference đóng vòng.
+Biến quyết định là các decision regions R1, R2. Minimize misclassification probability là viết nó thành integral trên các "wrong regions". Giải ra, ta thấy: với mỗi điểm **x**, R1 nên chứa nó khi và chỉ khi f(C2,**x**) < f(C1,**x**). Quy tắc "gán class có posterior cao hơn" không phải heuristic — đó là nghiệm của bài toán tối ưu. Cái kết nối ngược lại về Bayesian inference đóng vòng lại rất gọn.
 
 **→ Note đầy đủ:** [1.5 Decision Theory](15_decision_theory.md#node-114)
 
 ---
 
-## 7. Entropy từ hai góc nhìn, cùng một công thức
+## 7. Entropy từ hai góc nhìn, hội tụ về cùng một công thức
+
+Hôm trước tôi vừa được học entropy theo góc nhìn vật lý thống kê. Hôm sau đọc Bishop, ông derive nó từ information theory. Tôi dừng lại để tự kiểm tra xem hai con đường đó có thực sự ra cùng một công thức không.
 
 <p align="center"><kbd><img src="assets/6673b61b88cd80d212481922991b1b57bd20dc37.png" width="80%"></kbd></p>
-
-**Vì sao đoạn này đáng chọn:**
-Bishop giới thiệu entropy từ góc nhìn information theory. Nhưng hôm trước đó tôi vừa được học entropy từ góc nhìn vật lý thống kê (statistical mechanics). Tôi muốn thấy cả hai con đường hội tụ về cùng một công thức.
 
 **Trích từ note gốc:**
 
@@ -151,8 +138,7 @@ Bishop giới thiệu entropy từ góc nhìn information theory. Nhưng hôm tr
 
 <p align="center"><kbd><img src="assets/28216963e6d8d2b26805b72fe053df945adac616.png" width="80%"></kbd></p>
 
-**Tôi hiểu ra:**
-Con đường thứ nhất: entropy là *số bits trung bình cần để truyền giá trị của một random variable*, và ta derive nó từ tính chất logarithm + tính additivity của thông tin. Con đường thứ hai: entropy là *logarithm của số microstates tương thích với một macrostate*, derive từ Stirling approximation ở N → ∞. Cả hai ra −Σ p_i log p_i. Khi đó tôi cũng hiểu vì sao uniform distribution maximize entropy: mỗi outcome mang lượng thông tin như nhau, trung bình là tối đa. Khi probability tập trung vào một outcome, cái đó gần như không có thông tin, còn các outcome hiếm thì gần như không có trọng số — tích cực phủ nhau về 0.
+Con đường thứ nhất: entropy là số bits trung bình cần để truyền một random variable, derive từ tính additive của thông tin và logarithm. Con đường thứ hai: entropy là log số microstates tương thích với một macrostate, derive từ Stirling approximation ở N → ∞. Cả hai ra −Σ p_i log p_i. Tôi cũng tự verify luôn tại sao uniform distribution maximize entropy: khi mỗi outcome có xác suất như nhau thì lượng thông tin của mỗi outcome cũng như nhau, và trung bình là tối đa. Khi probability tập trung vào một outcome, cái đó gần như không có thông tin, còn các outcome hiếm thì gần như không có trọng số — hai phía triệt nhau và entropy về 0.
 
 **→ Note đầy đủ:** [1.6 Information Theory](16_information_theory.md#node-142)
 
@@ -162,6 +148,6 @@ Con đường thứ nhất: entropy là *số bits trung bình cần để truy�
 
 Chapter 1 của Bishop có 13 sections. Tôi mất khoảng 2–3 tuần cho nó, với hơn 60 notes, khoảng 80 screenshots, và nhiều chỗ phải derive lại từ đầu thay vì tin vào kết quả trong sách.
 
-7 đoạn này không phải 7 "điểm quan trọng nhất của Chapter 1." Chúng là 7 khoảnh khắc mà tôi thực sự dừng lại và nói: *ồ, cái này kết nối với cái kia* — với Strang, với Casella, với Boyd, với Stat110. Bishop Ch.1 thật ra không dạy gì mới. Nó cho thấy mọi thứ đã học trước đó đều là cùng một ý tưởng.
+7 đoạn này không phải "7 điểm quan trọng nhất của Chapter 1." Chúng là 7 khoảnh khắc mà tôi thực sự dừng lại và thấy: *cái này kết nối với cái kia* — với Strang, với Casella, với Boyd, với Stat110. Bishop Ch.1 thật ra không dạy thứ gì hoàn toàn mới. Nó cho thấy mọi thứ đã học trước đó đều đang nói về cùng một ý tưởng ở những ngôn ngữ khác nhau.
 
 Đó là điểm đáng giá nhất.
