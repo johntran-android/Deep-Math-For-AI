@@ -259,6 +259,16 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 
 ---
 
+## ✍️ Curated Write-ups
+
+Selected Feynman-style notes, written to be read — not just raw captures. One per chapter, for chapters where something genuinely clicked.
+
+| Source | Write-up |
+|--------|----------|
+| Bishop PRML Ch.1 | [7 Highlights from Chapter 1](a0_bishop_prml/curated_ch1_highlights.md) — least squares as projection, regularization=MAP, Bayesian variance decomposition, and more |
+
+---
+
 ## 📚 Syllabus / Mục lục
 
 ### 📂 MIT 18.01 — Single Variable Calculus (📝 322 Notes | 📸 331 Screenshots)
