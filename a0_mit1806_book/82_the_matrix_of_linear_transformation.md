@@ -763,7 +763,7 @@
 >
 > U, V là matrix m x m, n x n, các cột là orthogonal basis của columns
 > space
-> + left nullspace và row space + nullspace của A.
+> \+ left nullspace và row space + nullspace của A.
 >
 > Thế thì xét quan hệ A = U Σ VT, nó tương đương:
 >

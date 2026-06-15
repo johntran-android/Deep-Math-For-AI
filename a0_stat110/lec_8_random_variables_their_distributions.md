@@ -353,7 +353,7 @@
 > X+Y=k) cũng là các disjoint events. Do đó sử dụng Axiom 2 xác suất ta có:
 >
 > P((X=0, X+Y=k) U (X=1, X+Y=k) U ...(X=k, X+Y=k)) = P(X=0, X+Y=k)
-> + P(X=1, X+Y=k) + ... P(X=k, X+Y=k) (2)
+> \+ P(X=1, X+Y=k) + ... P(X=k, X+Y=k) (2)
 >
 > Dùng conditional theorem P(A,B) = P(A|B)*P(B), ta có:
 >

@@ -339,7 +339,7 @@
 > component của p1.
 >
 > Thành ra, nếu P có giá trị như hiện tại, p1x sẽ = 1*x1 + 0*x2
-> +.. 0*xn và kết qủa là x1, mang ý nghĩa là "P giữ nguyên,
+> \+.. 0*xn và kết qủa là x1, mang ý nghĩa là "P giữ nguyên,
 > không động tới x1"
 >
 > Nhưng qua hàng 2 của P, gọi là p2, nó có giá trị theo thầy

@@ -50,8 +50,9 @@ def process_text_block(text):
     return text
 
 def escape_note_line(l):
-    # Prevent markdown from rendering leading '-' as a bullet point inside callout blocks
-    if l.startswith('-'):
+    # Prevent markdown from rendering leading '-' or '+' as bullet points inside callout blocks
+    # '+' is always a math operator in these notes, never a list delimiter
+    if l.startswith('-') or l.startswith('+'):
         return '\\' + l
     return l
 

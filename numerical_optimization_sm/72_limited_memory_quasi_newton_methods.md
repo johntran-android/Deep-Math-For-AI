@@ -172,10 +172,10 @@
 > ρ7s7s7T
 >
 > = V7TV6TV5TH5V5V6V7 + V7TV6Tρ5s5s5TV6V7 + V7Tρ6s6s6TV7
-> + ρ7s7s7T
+> \+ ρ7s7s7T
 >
 > = V7TV6TV5TH5V5V6V7 + ρ5 V7TV6Ts5s5TV6V7 + ρ6 V7Ts6s6TV7
-> + ρ7s7s7T
+> \+ ρ7s7s7T
 >
 > Và đây chính là công thức 7.19 với k=8, m=3 (Vk-m = V5)
 >
@@ -190,22 +190,22 @@
 >
 > = [V7TV6TV5TH5V5V6V7 + ρ5 V7TV6Ts5s5TV6V7 
 >
-> + ρ6 V7Ts6s6TV7 + ρ7s7s7T] ∇f8
+> \+ ρ6 V7Ts6s6TV7 + ρ7s7s7T] ∇f8
 >
 > = V7TV6TV5TH5V5V6V7∇f8 
 >
-> + ρ5 V7TV6Ts5s5TV6V7∇f8
+> \+ ρ5 V7TV6Ts5s5TV6V7∇f8
 >
-> + ρ6V7Ts6s6TV7∇f8 + ρ7s7s7T∇f8
+> \+ ρ6V7Ts6s6TV7∇f8 + ρ7s7s7T∇f8
 >
 >
 > = V7TV6TV5TH5V5**V6V7∇f8** 
 >
-> +  V7TV6Ts5ρ5s5T**V6V7∇f8**
+> \+  V7TV6Ts5ρ5s5T**V6V7∇f8**
 >
-> + V7Ts6ρ6s6T**V7∇f8** 
+> \+ V7Ts6ρ6s6T**V7∇f8** 
 >
-> + s7ρ7**s7T∇f8**
+> \+ s7ρ7**s7T∇f8**
 >
 > Nếu tính tay và để cho tiết kiệm phép tính, ta sẽ tính như sau
 >
@@ -243,21 +243,21 @@
 >
 > = V7TV6TV5T**H5V5V6V7∇f8** 
 >
-> +  V7TV6Ts5**ρ5s5TV6V7∇f8**
+> \+  V7TV6Ts5**ρ5s5TV6V7∇f8**
 >
-> + V7Ts6**ρ6s6TV7∇f8** 
+> \+ V7Ts6**ρ6s6TV7∇f8** 
 >
-> + s7**ρ7s7T∇f8**
+> \+ s7**ρ7s7T∇f8**
 >
 > Những chỗ in đậm là những cái đã có.
 >
 > = V7TV6TV5T**r**
 >
-> +  V7TV6Ts5**α5**
+> \+  V7TV6Ts5**α5**
 >
-> + V7Ts6**α6**
+> \+ V7Ts6**α6**
 >
-> + s7**α7**
+> \+ s7**α7**
 >
 > Gom lại để thấy cách tính:
 >

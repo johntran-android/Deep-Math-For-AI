@@ -805,7 +805,7 @@
 > Có thể là bài toán **3 classes classification** để dự đoán Shift | Right-Arc |
 > Left-Arc hoặc predict cụ thể loại quan hệ trong R khả năng (Relation - R)
 > thì sẽ có 2*|R|
-> + 1 classes.
+> \+ 1 classes.
 >
 > Với **feature là top các stack word, POS (Part of Speech),..**.
 >

@@ -1045,7 +1045,7 @@
 >
 > Giống như lấy ví dụ đơn giản khi ta muốn tính kì vọng của hàm f(z) với z
 > theo Bernouilly distribution có param = phi. Thì **expectation của f = f(1)*p(Z=1)
-> + f(0)*p(Z=0)** chính là giá trị của f có phản ánh sự không chắc chắn của z.
+> \+ f(0)*p(Z=0)** chính là giá trị của f có phản ánh sự không chắc chắn của z.
 
 <br>
 

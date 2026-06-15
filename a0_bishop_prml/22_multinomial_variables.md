@@ -470,7 +470,7 @@
 > Γ(α+β)/Γ(α)Γ(b)), thì thật ra cũng có thể coi nó là Dirichlet với K=2:
 >
 > **X** = (X1,X2) ~ f(x1,x2|α,β) = [Γ(α+β)/Γ(α)Γ(b)] x1^(α-1) x2^(β-1) với x1
-> + x2 = 1
+> \+ x2 = 1
 >
 > Từ đó ta có pdf của **X** = (X1,..XK) ~ Dirichlet distribution f(x1,x2...
 > xK|α1,α2,...,αK)

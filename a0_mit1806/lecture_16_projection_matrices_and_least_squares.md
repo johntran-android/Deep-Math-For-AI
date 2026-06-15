@@ -44,7 +44,7 @@
 >
 > Me:
 >
-> + Khi b thuộc column space của A, đương nhiên có thể ghi
+> \+ Khi b thuộc column space của A, đương nhiên có thể ghi
 > là b = Ax (x là vector chứa các coefficient của linear
 > combination các A's columns)
 >
@@ -52,7 +52,7 @@
 > (cái ATAinv và ATA nhân nhau thành I. Thành ra kết quả vẫn
 > là b
 >
-> + khi b vuông góc với C(A) thì như đã biết nó sẽ thuộc
+> \+ khi b vuông góc với C(A) thì như đã biết nó sẽ thuộc
 > nullspace của AT (solution của ATy=0). Vậy **ATb = 0**
 >
 > Thành ra Pb = A(ATA)invATb =  A(ATA)inv 0 = 0 -> kết quả
@@ -379,7 +379,7 @@
 > Dễ thấy df/dC = 2(C+D-1) + 2(C+2D-2) + 2(C+3D-2)
 > =2C+2D-2+2C+4D-4+2C+6D-4=6C+12D-10 nên df/dC = 0
 > <=> 6C+12D-10=0<=>**3C+6D=5** và tương tự df/dD = 0 cũng cho ta phương trình thứ 2 **6C
-> + 14D = 11**
+> \+ 14D = 11**
 
 <br>
 

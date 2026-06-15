@@ -138,7 +138,7 @@
 > Y (tức là ta sẽ mô hình bằng log Y = beta0 + betaX.
 >
 > Tuy nhiên nếu **Y có thể mang giá trị 0** thì không dùng log Y được (log Y =
-> +infi) đồng thời nó cũng tạo ra khó khăn tròn khả năng interpretation
+> \+infi) đồng thời nó cũng tạo ra khó khăn tròn khả năng interpretation
 > model result. Do đó ta sẽ dùng một mô hình phù hợp một cách tự nhiên
 > hơn với bài toán có đặc điểm như ở đây - tức là response có giá trị là số
 > đếm (count, khác với giá trị định lượng quantitative nhưng liên tục), và
@@ -376,7 +376,7 @@
 >
 > Cụ thể là trong **Linear Regression**, khi dùng phương trình **Y = beta_0 +
 > beta_1*X1
-> + ..beta_p*Xp + epsilon**, ta **đang giả định P(Y|X) là Gaussian distribution:**  có
+> \+ ..beta_p*Xp + epsilon**, ta **đang giả định P(Y|X) là Gaussian distribution:**  có
 > **variance var(Y) không đổi**, chỉ có **mean E[Y], thay đổi phụ thuộc X**.
 >
 > Với **Logistic Regression** thì ta **giả định P(Y|X) là Bernoulli distribution**, có mean

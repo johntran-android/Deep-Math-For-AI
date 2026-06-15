@@ -290,7 +290,7 @@
 >
 > \-> **3**, vì đã nói **dim của nullspace N(A) là 1**. Bữa trước
 > đã biết (**rank / dim cols space C(A) / dim row space C(AT))**
-> + dims của nullspace N(A) = số cột n
+> \+ dims của nullspace N(A) = số cột n
 >
 > Nên dimension của cols space hay rank = 4 - 1 = 3.
 >

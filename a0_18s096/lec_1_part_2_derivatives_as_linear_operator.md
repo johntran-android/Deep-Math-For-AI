@@ -100,7 +100,7 @@
 > theo Newton) = **lim ∆x->0 δf/δx** Thế rồi sau đó, bằng cách cho rằng **miễn là δx đủ nhỏ**, thì ta **có thể xấp xỉ f'(x) bằng δf/δx** để
 > có công thức linear approximation: **f'(x) ~= δf/δx** (không còn cần kí hiệu limit nữa, những phải dùng
 > dấu xấp xỉ) Vậy thì f'(x) ~= δf/δx có nghĩa là, ví dụ tại x0, thì f'(x0) ~= (f(x) - f(x0)) / (x - x0)  <=> f(x) ~= f(x0)
-> + f'(x0)(x-x0) Tại đây, nếu muốn chuyển thành dấu bằng, thì ta sẽ phải tính vào các higher order term của ∆x. ===== Vậy ngẫm lại một chút, một khái niệm mà ta tưởng chừng là đơn giản và thực sự cũng đơn giản
+> \+ f'(x0)(x-x0) Tại đây, nếu muốn chuyển thành dấu bằng, thì ta sẽ phải tính vào các higher order term của ∆x. ===== Vậy ngẫm lại một chút, một khái niệm mà ta tưởng chừng là đơn giản và thực sự cũng đơn giản
 > nhưng ta đôi khi chưa thật sự triệt để hiểu nó:
 >
 > \- Cần phải hiểu rằng, trong phương trình **δf = f'(x)δx** thì **biến số là δx**, **f'(x) LÀ HÀM TUYẾN

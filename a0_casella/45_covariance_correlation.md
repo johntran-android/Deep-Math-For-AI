@@ -450,7 +450,7 @@
 > Với giá trị đã biết x của X, thì:
 >
 > Y = Z + x, nên conditional distribution của Y given X = x  là distribution của (Z
-> + x) | x
+> \+ x) | x
 >
 > cũng sẽ là [condition distribution của Z] + x: Z|x + x
 >

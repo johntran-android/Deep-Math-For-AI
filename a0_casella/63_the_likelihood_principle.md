@@ -138,7 +138,7 @@
 > và vế phải là unionn của các disjoint event nên theo Axiom 3:
 >
 > = P{s ∈ Ω: Kết quả có dạng SFSFFFS} + P{s ∈ Ω: Kết quả có dạng SSFFFFS}
-> + ....
+> \+ ....
 >
 > Và mỗi hạng tử đều là p^3(1-p)^4
 >

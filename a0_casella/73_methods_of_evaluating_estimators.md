@@ -610,7 +610,7 @@
 >
 > = (n - n2p) / (α + β + n)^2 
 >
-> + [(np + α) / (α + β + n) - p] { d/dp [(np + α) / (α + β + n) - d/dp p]}
+> \+ [(np + α) / (α + β + n) - p] { d/dp [(np + α) / (α + β + n) - d/dp p]}
 >
 > = (n - n2p) / (α + β + n)^2 + [(np + α) / (α + β + n) - p] { n / (α + β + n) - 1}
 >
@@ -3699,7 +3699,7 @@
 > Rồi, ví dụ cuối. Đại ý là ta có X1...Xn là random sample iid ~ Bern(p) và xét
 > Y = Σi Xi. Cho rằng prior của p là β (α, β). Trong ví dụ 7.2.14 (theo link) ta
 > đã tìm ra posterior distribution của θ: π(p|y) và nó là pdf của β(y + α, n - y
-> + β)
+> \+ β)
 >
 > Ôn lại một chút: Trong những phần trước, khi học về Bayes estimator,
 > mình đã biết một cái gọi là prior conjugate, mà đại ý là, có những family of

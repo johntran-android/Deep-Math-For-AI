@@ -512,7 +512,7 @@
 > [!NOTE]
 > Hoặc nếu tính bằng cách '2' đó là thể hiện x, y theo theta  ta sẽ có tích
 > phân over c -ydx + xdy = tích phân từ 0 đến 2pi của a^2(sin^2 theta
-> +cos^2 theta) dtheta = a^2 tích phân 0:2pi dtheta = a^2 2pi
+> \+cos^2 theta) dtheta = a^2 tích phân 0:2pi dtheta = a^2 2pi
 
 <br>
 

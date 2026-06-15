@@ -147,7 +147,7 @@
 >
 > P[A thắng step đầu] ∩ [A thắng chung cuộc từ i+1]
 >
-> + P[A thua step đầu] ∩ [A thắng chung cuộc từ i-1]
+> \+ P[A thua step đầu] ∩ [A thắng chung cuộc từ i-1]
 >
 > Và vì [A thắng step đầu] và [A thắng chung cuộc từ i+1] là hai event **INDEPENDENT**
 > nên **theo định nghĩa của independent events**: 
@@ -166,7 +166,7 @@
 >
 > = P[A thắng step đầu] * P[A thắng chung cuộc từ i+1] 
 >
-> + P[A thua step đầu] * P[A thắng chung cuộc từ i-1]
+> \+ P[A thua step đầu] * P[A thắng chung cuộc từ i-1]
 >
 > **P_i = p* P_(i+1)  + q* P_(i-1)**
 

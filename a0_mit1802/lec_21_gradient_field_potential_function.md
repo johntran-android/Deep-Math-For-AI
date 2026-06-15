@@ -293,7 +293,7 @@
 
 > [!NOTE]
 > Và gắn g(y) vào f tìm ra từ (1) ta có f = (4/3)x^3 + 4x^2y + y^3
-> + c và again gs nói c là optional (có thể khỏi cần, ứng với c = 0, vì
+> \+ c và again gs nói c là optional (có thể khỏi cần, ứng với c = 0, vì
 > yêu cầu chỉ là tìm potential function chứ không phải tìm mọi
 > potential function)
 >

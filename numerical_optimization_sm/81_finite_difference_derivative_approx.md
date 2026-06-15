@@ -407,7 +407,7 @@
 > phải gọi là sai số làm tròn, đừng nhầm với sai số cắt cụt)
 >
 > Thế thì giờ đây, như đã nói, trong máy tính f(x + εei), f(x) sẽ trở thành comp(f(x
-> + εei)),  comp(f(x)), là giá trị floating point, máy tính là tròn số. Điều này sẽ lại phát sinh
+> \+ εei)),  comp(f(x)), là giá trị floating point, máy tính là tròn số. Điều này sẽ lại phát sinh
 > round off error
 >
 > Do đó so với giá trị đạo hàm chính xác ∂f(x)/∂xi, thì giá trị đạo hàm xấp xỉ mà máy tính

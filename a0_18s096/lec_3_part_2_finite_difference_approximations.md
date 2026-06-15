@@ -311,7 +311,7 @@
 > là **f(x + Δx) - f(x)**  và **vì tính relative error**, nên **chia cho f'(x)[dx]**
 >
 > *Với analytic gradient, ví dụ trong trường hợp trên là AdA
-> + dA.A,  hay giả sử với hàm f = Ax thì analytic gradient là f'(x)dx = Adx
+> \+ dA.A,  hay giả sử với hàm f = Ax thì analytic gradient là f'(x)dx = Adx
 >
 > Thế thì xét  **f(x + Δx) - f(x), thì lúc "hình thành"** công thức, hay định
 > nghĩa derivative ta đã bắt đầu từ **Taylor series**:

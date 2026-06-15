@@ -283,7 +283,7 @@
 > plane trong không gian 4D**.
 >
 > Thành ra tập hợp mọi nghiệm sẽ là: vector (tức điểm) x_p
-> + một vector bất kì của cái 2D plane của nullspace, thì sẽ
+> \+ một vector bất kì của cái 2D plane của nullspace, thì sẽ
 > thành ra là một **CÁI 2D PLANE CÓ ĐI QUA X_P:** Nói rõ
 > hơn là, nullspace (mọi linear combination của special solution)
 > là một 2D plane (đương nhiên có đi qua O) và x_p là một điểm

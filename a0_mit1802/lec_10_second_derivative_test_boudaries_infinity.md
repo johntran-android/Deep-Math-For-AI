@@ -82,7 +82,7 @@
 > [!NOTE]
 > Thế thì nhớ như bữa trước, ta có thể làm cách khác bằng cách
 > **completing the square**, như ở đây, trong ví dụ cụ thể w = x^2 + 2xy
-> + 3y^2 này thì k**ết quả nó là (x+y)^2 + 2y^2** nên nó sẽ **luôn >=0**.
+> \+ 3y^2 này thì k**ết quả nó là (x+y)^2 + 2y^2** nên nó sẽ **luôn >=0**.
 > Và **chỉ bằng 0 khi x = y = 0**.
 >
 > Vậy critical point (x=0, y=0) đó chính là **minimum**
@@ -334,7 +334,7 @@
 > [!NOTE]
 > Thế thì gs đề nghị ta kiểm tra lại cái này / cách làm này (second
 > derivative test) ở trường hợp đặc biệt mà ta có hàm **w = ax^2 + bxy
-> + cy^2** nơi mà lúc nãy, dùng phương thức "**complete the square**"
+> \+ cy^2** nơi mà lúc nãy, dùng phương thức "**complete the square**"
 > ta đã kết luận rằng với các trường hơp sau:
 >
 > **4ac - b^2 < 0** thì ta có **saddle point tại** 

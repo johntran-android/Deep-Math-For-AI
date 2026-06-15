@@ -334,7 +334,7 @@
 > ĐẠO NÀY TRONG PHẠM VI HÀNG RÀO.
 >
 > Do đó, nếu điểm cuối của hành trình (τ = 2) vẫn trong hàng rào, thì p~* = pU
-> + (2-1)(pB - pU) = pB (tức là ta sẽ rất đẹp, lấy luôn Newton step)
+> \+ (2-1)(pB - pU) = pB (tức là ta sẽ rất đẹp, lấy luôn Newton step)
 >
 > còn không thì giải tìm giao điểm của quỹ đạo với hàng rào.
 >
@@ -745,7 +745,7 @@
 > Thì ở đây khi dùng D để đổi biến p^ = D p, ta cũng sẽ chuyển từ việc deal với bài
 > toán minimize mk(p) = (1/2)pTBkp + ∇fkTp  sang bài toán minimize mk^(p^) =
 > (1/2)p^TBk^p^
-> + ∇fk^Tp^
+> \+ ∇fk^Tp^
 >
 > Với Bk^p = DinvT Bk Dinv, ∇fk^ = DinvT ∇fk
 >

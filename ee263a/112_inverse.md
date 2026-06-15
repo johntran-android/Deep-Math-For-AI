@@ -58,7 +58,7 @@
 
 > [!NOTE]
 > Nói thêm về hệ Ax=b với A mập lùn, có vô số nghiệm x_particular
-> +c*x_null
+> \+c*x_null
 >
 > Mình muốn lập luận để thấy rõ hơn là x_particular là vector trong
 > rowspace, là projection của x_complete lên rowspace của A.

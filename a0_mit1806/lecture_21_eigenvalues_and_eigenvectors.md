@@ -561,7 +561,7 @@
 >
 > Và gs cho biết **matrix Q** dù là có **giá trị thực** nhưng
 > **eigenvalue** của nó có **giá trị phức**. Vẫn thõa mãn: λ1
-> + λ2 = 0 và λ1*λ2 = 1
+> \+ λ2 = 0 và λ1*λ2 = 1
 
 <br>
 

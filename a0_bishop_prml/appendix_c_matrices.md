@@ -357,17 +357,17 @@
 >
 > λ^n
 >
-> + [λ^(n-1)](Σi λi(M))
+> \+ [λ^(n-1)](Σi λi(M))
 >
-> + [λ^(n-2)](Σ của các tích của các cặp λi(M)) ) → cái này là [λ^(n-2)] tr(M)
+> \+ [λ^(n-2)](Σ của các tích của các cặp λi(M)) ) → cái này là [λ^(n-2)] tr(M)
 >
-> + [λ^(n-3)](Σ của các tích của các bộ ba λi(M))
+> \+ [λ^(n-3)](Σ của các tích của các bộ ba λi(M))
 >
 > ....
 >
-> + [λ^1](Σ của các tích của bộ n-1 cái λi(M))
+> \+ [λ^1](Σ của các tích của bộ n-1 cái λi(M))
 >
-> + [λ^0](một term có dạng tích của n cái λi(M)) → cái này chính là det M
+> \+ [λ^0](một term có dạng tích của n cái λi(M)) → cái này chính là det M
 >
 > Thế thì, giả sử trị riêng của M rất nhỏ, thì ta có thể xấp xỉ bằng cách bỏ đi các hạng tử còn lại
 > (những cái có dạng tổng của tích các trị riêng của M). Để chỉ còn: det (λI + M) = λ^n + λ^(n-1)

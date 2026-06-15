@@ -701,7 +701,7 @@
 >
 > Đơn giản thôi, giả sử một hàm f(x) có thể được thể hiện bởi tổng n hàm f1(x), ...
 > fn(x) mà mỗi hàm chỉ là hàm của vài phần tử của x. Ví dụ f(x) = x1^2 + x1e^x2
-> + x1/x3. Thì tức là f(x) = f1(x) + f2(x) + f2(x) với f1(x) = x1^2, f2(x) = x1e^x2, f3(x)
+> \+ x1/x3. Thì tức là f(x) = f1(x) + f2(x) + f2(x) với f1(x) = x1^2, f2(x) = x1e^x2, f3(x)
 > = x1/x3. Mỗi hàm chỉ phụ thuộc vài component của vector input x.
 >
 > (trong sách này ta tự hiểu x là vector, ko cần viết đậm như trong xác suất)

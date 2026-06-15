@@ -22,9 +22,9 @@
 >
 > X, Y độc lập khi
 >
-> + Continuous rv: P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y 
+> \+ Continuous rv: P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y 
 >
-> + Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)
+> \+ Discrete rv: P(X=x,Y=y) = P(X=x)*P(Y=y)
 >
 > \- Expected value: Là con số tóm tắt distribution của r.v
 >
@@ -194,11 +194,11 @@
 > [!NOTE]
 > TÍNH CHẤT CỦA CDF:
 >
-> + NON-DECREASING
+> \+ NON-DECREASING
 >
-> + RIGHT CONTINUOUS
+> \+ RIGHT CONTINUOUS
 >
-> + F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity
+> \+ F(x) -> 0 khi x -> -infinity, F(x) -> 1 khi x -> -infinity
 
 <br>
 

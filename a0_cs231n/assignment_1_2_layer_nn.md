@@ -159,7 +159,7 @@
 > với **correct class thì nó sum lại từ số nhánh** (trong C - 1 nhánh) có tham
 > gia. Nên ta **phải xem có bao nhiêu nhánh tham gia**, bằng cách **check
 > số margin thỏa điều kiện correct_s < incorrect score
-> + 1.** Chú ý là với correct score thì phải nhân -1
+> \+ 1.** Chú ý là với correct score thì phải nhân -1
 >
 > Vậy ta chỉ cần **xem margin nào thỏa correct_s < x + 1** như đã có sẵn lúc
 > tính loss. Lúc này ta đã có một matrix 1 / 0, gán cho dx.

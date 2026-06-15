@@ -724,7 +724,7 @@
 >
 > Và khi khởi tạo, vì như nói ở trên layer chỉ có nhiệm vụ tính ra phần dư,
 > nên ban đầu nó được initialize để output của nó chỉ việc bằng 0, và cả layer
-> + skip connection làm việc như một Identity function f(x) = x. Thì điều này
+> \+ skip connection làm việc như một Identity function f(x) = x. Thì điều này
 > khiến ban đầu gradient chỉ "flow" qua một cách rất dễ dàng không gặp vấn
 > đề gì
 >

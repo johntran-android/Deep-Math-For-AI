@@ -348,7 +348,7 @@
 > Thì ghi là **∑j Var(Xj) + ∑i!=j Cov(Xi, Xj) cũng được** Ví dụ 
 >
 > Var(X1+X2+X3) = Var(X1) + Var(X2) + Var(X3) + Cov(X1,X2) + Cov(X2,X1)
-> + Cov(X1,X3) + Cov(X3,X1) + Cov(X2,X3) + Cov(X3,X2) 
+> \+ Cov(X1,X3) + Cov(X3,X1) + Cov(X2,X3) + Cov(X3,X2) 
 >
 > = Var(X1) + Var(X2) + Var(X3) + 2Cov(X1,X2) + 2Cov(X2,X3) + 2Cov(X1,X3)
 

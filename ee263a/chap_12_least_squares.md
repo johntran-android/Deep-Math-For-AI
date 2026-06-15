@@ -184,7 +184,7 @@
 >
 > = x0TATAx0 - 2bTAx0 + bTb + 2[(ATA)x0 - ATb]Tδx
 >
-> + (1/2) δxT2ATAδx
+> \+ (1/2) δxT2ATAδx
 >
 > = x0TATAx0 - 2bTAx0 + bTb + 2[x0T(ATA) - bTA]δx + δxTATAδx
 >

@@ -294,7 +294,7 @@
 > [!NOTE]
 > Và gs nói mọi chuyện sẽ tương tự tiếp tục như vậy để ta có thể
 > tiếp tục chứng minh e^x > 1 + x + x^2/2
-> + x^3/(3*2) + x^4/(4*3*2)....
+> \+ x^3/(3*2) + x^4/(4*3*2)....
 >
 > và ông nói vế phải khi kéo dài tới vô cùng số hạng thì cuối cùng
 > sẽ bằng vế trái e^x

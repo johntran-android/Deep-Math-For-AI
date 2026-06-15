@@ -483,8 +483,8 @@
 >  (partial A / partial theta )_a
 >
 > = A_theta * (partial theta / partial theta)_a 
-> + A_a * (partial a / partial theta)_a 
-> + A_b * (partial b / partial theta)_a
+> \+ A_a * (partial a / partial theta)_a 
+> \+ A_b * (partial b / partial theta)_a
 >
 > THế thì (partial theta / partial theta) = 1.
 >

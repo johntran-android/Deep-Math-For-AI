@@ -52,7 +52,7 @@
 > dA^3 - A^3
 >
 > = **dA.A^2** + **A.dA.A** + \/dA^2.A\/ + **A^2.dA** + \/dA.A.dA\/ +\/ A.dA^2\/
-> + \/dA^3\/
+> \+ \/dA^3\/
 >
 > Và ta sẽ **bỏ đi các higher order term**
 >

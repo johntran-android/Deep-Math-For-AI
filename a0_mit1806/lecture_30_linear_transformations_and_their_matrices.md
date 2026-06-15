@@ -89,7 +89,7 @@
 > không?
 >
 > Me: thử lập luận như sau: (u+v)+v0 không bằng (u+v0)
-> + (v+v0) thành ra ko thỏa yêu cầu T(cu+dv) = cT(u) +
+> \+ (v+v0) thành ra ko thỏa yêu cầu T(cu+dv) = cT(u) +
 > dT(v) -> **Không** phải linear transformation
 
 <br>
@@ -190,7 +190,7 @@
 
 > [!NOTE]
 > Và **check hai điều kiện** T(c*u) = cT(u), và T(c*u
-> + d*v) = c*T(u) + d*T(v) thì thấy nó thỏa:
+> \+ d*v) = c*T(u) + d*T(v) thì thấy nó thỏa:
 >
 > T(cv+du) = A(c*v+d*u) = A*c*v + A*d*u = c*Av + d*Au
 > và cái này chính là c*T(v) + d*T(u)
@@ -202,7 +202,7 @@
 > learning** **Wx là linear transformation.**
 >
 > Nhưng bài này cũng giúp mình hiểu rằng **T(v) = Av
-> + b** **KHÔNG PHẢI LÀ LINEAR TRANSFORMATION**.
+> \+ b** **KHÔNG PHẢI LÀ LINEAR TRANSFORMATION**.
 >
 > Vì:
 >

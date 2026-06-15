@@ -645,7 +645,7 @@
 >
 > = (1500 choose 0) (1/500)^0 (1 - 1/500)^1500
 >
-> + (1500 choose 1) (1/500)^1 (1 - 1/500)^1499
+> \+ (1500 choose 1) (1/500)^1 (1 - 1/500)^1499
 >
 > tính ra sẽ là 0.423
 >
@@ -718,7 +718,7 @@
 >
 > Xét event Y = y thì bản chất nó là {s ∈ Ω: s có dạng là chuỗi có y failure, và r
 > success và quan trọng là cái cuối cùng là success event và chuỗi y
-> + r -1 trước đó có r success và y failure ta không care thứ tự của chúng
+> \+ r -1 trước đó có r success và y failure ta không care thứ tự của chúng
 >
 > Ví dụ với r = 3, thì Y = 2 thì nó là set {s ∈ Ω: s = FFSSS or FSSFS or ...}
 >

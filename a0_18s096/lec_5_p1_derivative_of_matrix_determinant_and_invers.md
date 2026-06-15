@@ -137,19 +137,19 @@
 >
 > Từ đó gom lại các term này theo bậc của λ ta sẽ dễ thấy như sau:
 >
-> +) λ^n sẽ chỉ có một term, đó là tích của n thừa số mà mỗi cái đều là λ
+> \+) λ^n sẽ chỉ có một term, đó là tích của n thừa số mà mỗi cái đều là λ
 >
-> +) λ^n-1 sẽ là những term mà gồm tích của n-1 λ và một cái là (μi). 
+> \+) λ^n-1 sẽ là những term mà gồm tích của n-1 λ và một cái là (μi). 
 > Có n μi do đó có n term như vậy: λ^n-1(μ1) + λ^n-1(μ2) + ...λ^n-1(μn)
 >
 > = λ^n-1(Σi μi). Và Σi μi chính là tr(M) Vậy ta có hạng tử thứ 2 là: tr(M) λ^n-1
 >
-> + λ^n-2 sẽ là những term bởi tích của n-2 λ và hai cái (μi), (μj). Vậy hạng
+> \+ λ^n-2 sẽ là những term bởi tích của n-2 λ và hai cái (μi), (μj). Vậy hạng
 > tử thứ 3 là: λ^n-2 * Σi<j (μiμj)  
 >
 > ....
 >
-> + λ^0 sẽ là những term chỉ gồm n μi, và dễ thấy cũng chỉ có 1 term như vậy:
+> \+ λ^0 sẽ là những term chỉ gồm n μi, và dễ thấy cũng chỉ có 1 term như vậy:
 > do đó nó tạo thành hạng tử cuối: Πi (-μi), đây chính là +/- det(M) (cộng hay trừ
 > thì tùy vào n chẵn hay lẻ), tức (-1)^n
 >

@@ -88,7 +88,7 @@
 >
 > 3) Dời dấu phẩy:
 >
-> + Theo chuẩn IEEE: Dời cho đến khi đứng trước dấu phẩy là số 1: có dạng **1.d1d2....d52** 
+> \+ Theo chuẩn IEEE: Dời cho đến khi đứng trước dấu phẩy là số 1: có dạng **1.d1d2....d52** 
 >
 > (d1...d52 chính là sẽ được vào 52 bit của MANTISSA)
 >
@@ -100,7 +100,7 @@
 >
 > Nếu đang là 100.001 thì dời qua trái thành 1.00001, tính e = **2**, d1d2..d52 = 00001[--47 số 0--]
 >
-> + Theo Nocedal: Dời cho khi có dạng 0.1d1d2...d52 (và ta cũng sẽ lưu d1...d52 vào ram)
+> \+ Theo Nocedal: Dời cho khi có dạng 0.1d1d2...d52 (và ta cũng sẽ lưu d1...d52 vào ram)
 >
 > Ví dụ trên:
 >

@@ -376,7 +376,7 @@
 > tổng, và sử dụng công thức đạo hàm log'(x) = 1/x.
 >
 > Do đó, tương tự ta cũng cũng có thể tính ra D khiến f(D) =  p_data(x)*log D(x)
-> + p_G(x)*log(1-D(x)) lớn nhất, kí hiệu là D*
+> \+ p_G(x)*log(1-D(x)) lớn nhất, kí hiệu là D*
 >
 > Để từ đó ta có:
 >

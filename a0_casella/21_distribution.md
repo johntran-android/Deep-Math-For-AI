@@ -624,7 +624,7 @@
 >
 > Vậy, tổng hợp lại, kết quả là** Σ{i:gi đồng biến} fX(gi_inv(y)) d/dy gi_inv(y) 
 >
-> + Σ{j: gj nghịch biến} [-fX(gi_inv(y)) d/dy gi_inv(y)] = Σi fX(gi_inv(y)) | d/dy gi_inv(y) |
+> \+ Σ{j: gj nghịch biến} [-fX(gi_inv(y)) d/dy gi_inv(y)] = Σi fX(gi_inv(y)) | d/dy gi_inv(y) |
 >
 > ====
 >

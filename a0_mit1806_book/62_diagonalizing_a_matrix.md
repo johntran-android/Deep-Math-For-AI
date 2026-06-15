@@ -304,10 +304,10 @@
 > coi là độc lập nếu cách duy nhất để linearly combine chúng
 > để tạo thành zero vector đó là các coefficients đều bằng 0.
 > Vậy xét linear combination của x1, x2 với hệ số c1, c2: c1x1
-> + c2x2 = 0 (1) ta sẽ chứng minh c1 = c2 = 0.
+> \+ c2x2 = 0 (1) ta sẽ chứng minh c1 = c2 = 0.
 >
 > Nhân hai vế cho λ1, (1) <=> λ1(c1x1 + c2x2) = 0 <=> λ1c1x1
-> + λ1c2x2)  (2)
+> \+ λ1c2x2)  (2)
 >
 > Nhân hai vế cho A (1) <=> A(c1x1 + c2x2) = 0 <=> Ac1x1 +
 > Ac2x2 = 0

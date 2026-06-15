@@ -101,7 +101,7 @@
 > luận rằng:
 >
 > **X+Y cũng là ~ Normal distribution** với mean là μ = μ1 + μ2    và variance σ^2 = σ1^2
-> + σ2^2.
+> \+ σ2^2.
 >
 > Bởi vì như đã biết, MGF cũng có **công dụng tương tự PDF, CDF đó là giúp xác định
 > distribution.**

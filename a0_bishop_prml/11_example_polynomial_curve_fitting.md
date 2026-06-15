@@ -351,7 +351,7 @@
 >
 > Tuy nhiên, test error sẽ tăng lên, vì đơn giản là: test data là data bởi hàm
 > gốc
-> + một loại nhiễu khác, có pattern khác (dĩ nhiên là pattern gì thì hoàn toàn
+> \+ một loại nhiễu khác, có pattern khác (dĩ nhiên là pattern gì thì hoàn toàn
 > là random) so với training set, nên cái quy luật data + nhiễu mà nó học
 > trong trainig set là trật lất với test set ⇨ test error TĂNG VỌT.
 >

@@ -108,7 +108,7 @@
 > Và đây là **union** của các **disjoint events** nên theo **Axiom 2:**
 >
 > P((T=t, X=x1) U (T=t, X=x2) U ....(T=t, X=xn)) = **P(T=t, X=x1)
-> + P(T=t, X=x2)** + ....
+> \+ P(T=t, X=x2)** + ....
 >
 > Và sử dụng **conditional probability theorem**:
 >
@@ -262,7 +262,7 @@
 > function (X+Y) apply lên s. Trong đó function T = X+Y là một **FUNCTION
 > MỚI** tạo bởi **TỔNG CỦA HAI FUNCTION X và Y** Thế rồi ta mới **DÙNG TÍNH CHẤT POINT-WISE ADDITION CỦA
 > FUNCTION hiểu nôm na là định nghĩa của việc cộng hai hàm số (f+g)(x) = f(x)
-> + g(x)**. Hay từ 1806 gs Strang cũng đã nói function có tính chất linear, thể
+> \+ g(x)**. Hay từ 1806 gs Strang cũng đã nói function có tính chất linear, thể
 > hiện bởi **[c*f+d*g](x) =c*f(x)** + d*g(x). Nhưng có thể
 >
 > Nên **(X+Y)(s) = X(s) + Y(s)**

@@ -2654,7 +2654,7 @@
 >
 >  Σi=1:n [-βτi + yi (log β + log τi) - log yi!] + Σi=2:n [-τi + xi log τi - log xi!]
 >
-> + (-τ1+ x1 log τ1 - log x1!)
+> \+ (-τ1+ x1 log τ1 - log x1!)
 >
 > rồi thì tiếp theo là lấy kì vọng theo X1:
 >
@@ -2676,19 +2676,19 @@
 >
 > Tách tiếp thành:
 >
-> + Σ{x1=0:inf} (-τ1) e^-(τ1r (τ1r)^x1 / x1!)  (hay, nó chính là E(-τ1))
+> \+ Σ{x1=0:inf} (-τ1) e^-(τ1r (τ1r)^x1 / x1!)  (hay, nó chính là E(-τ1))
 >
-> + Σ{x1=0:inf} (x1 log τ1) e^-(τ1r (τ1r)^x1 / x1!)  (cũng là E[X1 log τ1])
+> \+ Σ{x1=0:inf} (x1 log τ1) e^-(τ1r (τ1r)^x1 / x1!)  (cũng là E[X1 log τ1])
 >
-> + Σ{x1=0:inf} (- log x1!) e^-(τ1r (τ1r)^x1 / x1!) (cũng là E[-log X1!])
+> \+ Σ{x1=0:inf} (- log x1!) e^-(τ1r (τ1r)^x1 / x1!) (cũng là E[-log X1!])
 >
 > = 
 >
 > \-τ1 
 >
-> + log τ1 Σ{x1=0:inf} (x1 e^-(τ1r (τ1r)^x1 / x1!) 
+> \+ log τ1 Σ{x1=0:inf} (x1 e^-(τ1r (τ1r)^x1 / x1!) 
 >
-> + E[-log X1!] 
+> \+ E[-log X1!] 
 >
 > (**)
 >
@@ -2702,9 +2702,9 @@
 >
 > \-τ1 
 >
-> + log τ1 Σ{x1=0:inf} (x1 e^-(τ1r (τ1r)^x1 / x1!) 
+> \+ log τ1 Σ{x1=0:inf} (x1 e^-(τ1r (τ1r)^x1 / x1!) 
 >
-> + E[-log X1!] 
+> \+ E[-log X1!] 
 >
 > Và ta sẽ maximize cái này over β, τ1,..τn nên nhưng gì ko dính tham số
 > thì bỏ đi. Nên chỉ còn: 
@@ -2725,7 +2725,7 @@
 >
 > = Σi=1:n [-βτi + yi (log β + log τi)] + Σi=2:n (-τi + xi log τi)
 >
-> + Σ{x1=0:inf} [-τ1 + x1 log(τ1)] e^-(τ1r (τ1r)^x1 / x1!) 
+> \+ Σ{x1=0:inf} [-τ1 + x1 log(τ1)] e^-(τ1r (τ1r)^x1 / x1!) 
 >
 > ĐÂY CHÍNH LÀ CÁI CÔNG THỨC ĐÓNG KHUNG MÀU ĐỎ. TRONG SÁCH
 > CÓ HAI CHỖ IN SAI
@@ -2744,7 +2744,7 @@
 >
 > Σi=1:n [-βτi + yi (log β + log τi)] + Σi=2:n (-τi + xi log τi)
 >
-> + Σ{x1=0:inf} [-τ1 + x1 log(τ1)] e^-(τ1r (τ1r)^x1 / x1!)
+> \+ Σ{x1=0:inf} [-τ1 + x1 log(τ1)] e^-(τ1r (τ1r)^x1 / x1!)
 >
 > Xét cái tổng vô hạn thứ 3.
 >
@@ -2764,7 +2764,7 @@
 >
 > ⇨ **Σi=1:n [-βτi + yi (log β + log τi)] + Σi=2:n (-τi + xi log τi)
 >
-> + [-τ1 + τ1r log τ1] (I)**
+> \+ [-τ1 + τ1r log τ1] (I)**
 >
 > Và bây giờ, hãy lôi cái log likelihood của cái trường hợp mà thật sự ta có đủ data:
 >
@@ -2796,7 +2796,7 @@
 >
 > = **Σi=1:n {- βτi + yi (log β + log τi)} + Σi=2:n {- τi + xi log τi} 
 >
-> + {- τ1 + \/x1\/ log τ1}**
+> \+ {- τ1 + \/x1\/ log τ1}**
 >
 > (II)
 >
@@ -2804,7 +2804,7 @@
 >
 > **Σi=1:n [-βτi + yi (log β + log τi)] + Σi=2:n (-τi + xi log τi)
 >
-> + [-τ1 + \/τ1r\/ log τ1]** (I)
+> \+ [-τ1 + \/τ1r\/ log τ1]** (I)
 >
 > Rõ ràng ta thấy nó CHỈ KHÁC CHỖ THAY x1 bởi τ1r.
 >

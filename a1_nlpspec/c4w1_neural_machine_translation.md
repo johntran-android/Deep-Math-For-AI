@@ -1121,7 +1121,7 @@ quality
 > ====
 >
 > Trong đó theo như DLSpec **Transformer**: Các embedding (chính xác là semantic embedding
-> + positional encoding) sẽ được qua 3 cổng Query, Key, Value là các Linear layer với các
+> \+ positional encoding) sẽ được qua 3 cổng Query, Key, Value là các Linear layer với các
 > learnable weight matrix W_Q, W_K, W_V.
 >
 > Nếu là Self-Attention (Encoder hoặc Decoder) thì input vào Query và Key và Value đều 

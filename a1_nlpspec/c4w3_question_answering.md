@@ -2415,7 +2415,7 @@ Learning Objectives
 > ====
 >
 > Chạy tiếp qua từ **"working"**, 
-> + Ở đây pass random check, nhưng prev_no_mask đang là **False**, nên không pass điều kiện 
+> \+ Ở đây pass random check, nhưng prev_no_mask đang là **False**, nên không pass điều kiện 
 > prev_no_mask, nó sẽ đi xuống add token = "working"(t) vào targets
 >
 > Inputs: ["Younese"(t) "and"(t) "Lukasz"(t) **31999**] ~> [Younese and Lokasz **Z**]

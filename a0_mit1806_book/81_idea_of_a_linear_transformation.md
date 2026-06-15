@@ -364,7 +364,7 @@
 > là T(u) = Ainv u
 >
 > Dĩ nhiên là vì nó vẫn thỏa T(αu + βv) = Ainv (αu + βv) = α Ainv u 
-> + β Ainv v = α T(u) + β T(v)
+> \+ β Ainv v = α T(u) + β T(v)
 >
 > Có điều ta nói thêm rằng cái linear transformation này nó sẽ đảo
 > ngược quá trình transformation bởi T(v) = Av

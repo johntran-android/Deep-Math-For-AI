@@ -411,10 +411,10 @@
 > Như vậy nếu nó "thấy" mask và target là "went" nó sẽ học được rằng, à  chỗ
 > này dù mình không có thông tin gì nhưng đúng phải là "went"
 >
-> + Còn nếu nó "thấy" "pizza" và target là "went" thì nó sẽ học được rằng, à chỗ
+> \+ Còn nếu nó "thấy" "pizza" và target là "went" thì nó sẽ học được rằng, à chỗ
 > này từ pizza là sai, từ đúng phải là "went", phải sửa lại.
 >
-> + Còn nếu nó thấy "went" và target là "went" thì nó sẽ học được rằng, à chỗ
+> \+ Còn nếu nó thấy "went" và target là "went" thì nó sẽ học được rằng, à chỗ
 > này "went" là đúng rồi, nếu không cần sửa lại
 >
 > Ý tưởng là những điều này sẽ giúp  mô hình phát triển được khả năng

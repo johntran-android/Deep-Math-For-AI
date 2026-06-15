@@ -243,7 +243,7 @@
 > mọi beta. Đây cũng tương đương với việc chọn x5=beta, x2=0, giải tìm pivot var
 >
 > Và đương nhiên các linear combination của hai special solution: **alpha*(a,1,b,c,0)
-> + beta*(m,0,n,l,1) cũng thuộc nullspace, với mọi** alpha, beta.
+> \+ beta*(m,0,n,l,1) cũng thuộc nullspace, với mọi** alpha, beta.
 >
 > ======
 >
@@ -338,7 +338,7 @@
 > cuả nullspace của A.T là m-r
 >
 > Và có thể thấy **nó cũng tuân theo cùng một rule: dim C(A.T)
-> + dim N(A.T) = r + m - r = m = số columns của A.T**
+> \+ dim N(A.T) = r + m - r = m = số columns của A.T**
 
 <br>
 

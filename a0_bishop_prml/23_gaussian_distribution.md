@@ -241,7 +241,7 @@
 >
 > Trong MIT 1806, bài linear transformation, đại khái là mình đã học rằng, một
 > phép biến đổi T(.) được gọi là linear transformation là khi nó thỏa mãn: T(c**u**
-> + d**v**) = cT(**u**) + dT(**v**) (c, d là scalar, u, v là vector) Và vì A(c**u** +
+> \+ d**v**) = cT(**u**) + dT(**v**) (c, d là scalar, u, v là vector) Và vì A(c**u** +
 > d**v**) = cA**u** + dA**v**, nên quả thật việc nhân A với vector **x**, chính là
 > một phép biến đổi tuyến tính. T(**x**) = A**x**.
 >
@@ -401,7 +401,7 @@
 > chuyển từ basis e's về basis eigenvector u's thì ((UT)inv)inv = UT sẽ
 > chuyển ngược lại: đương nhiên UT**0** (ý là U tranpose nhân vector
 > zero **O**) cũng bằng **0**, Nhưng sau đó ta sẽ phải shift lại: + **μ**: 0
-> + **μ** = **μ** Vậy, tâm của ellipse chính là tại **x** = **μ** trong hệ tọa
+> \+ **μ** = **μ** Vậy, tâm của ellipse chính là tại **x** = **μ** trong hệ tọa
 > độ ban đầu.
 >
 > Còn trục của ellipse? Như đã nói, chính là hai vector u1, u2.

@@ -208,7 +208,7 @@
 > Có nghĩa giống như đây là **áp dụng LOTP với expectation**. 
 >
 > E(W_HH) = E(W_HH | "1st toss ra H") * P("1st toss ra H") 
-> + E(W_HH | "1st toss ra T") * P("1st toss ra T")
+> \+ E(W_HH | "1st toss ra T") * P("1st toss ra T")
 >
 > = **E(W_HH | "1st toss ra H") * (1/2) + E(W_HH | "1st toss ra T") * (1/2)**
 
@@ -242,7 +242,7 @@
 > Thì có thể coi nó tiếp tục chia ra là:
 >
 > E(W_HH | 1st toss is H , 2nd toss is H) * P(2nd toss is H | 1st toss is H)
-> + E(W_HH | 1st toss is H , 2nd toss is T) * P(2nd toss is T  | 1st toss is H)
+> \+ E(W_HH | 1st toss is H , 2nd toss is T) * P(2nd toss is T  | 1st toss is H)
 >
 > i) E(W_HH | 1st toss is H, 2nd toss is H) * P(2nd toss is H | 1st toss is H): 
 >

@@ -398,11 +398,11 @@
 >
 > = (n choose j) Σk=j:n {[d/d(FX(x))  [FX(x)]^k . d/dx FX(x)] [1 - FX(x)]^(n-k)
 >
-> + [FX(x)]^k [d/d[1 - FX(x)] [1 - FX(x)]^(n-k)] d/dx [1-FX(x)]}
+> \+ [FX(x)]^k [d/d[1 - FX(x)] [1 - FX(x)]^(n-k)] d/dx [1-FX(x)]}
 >
 > = (n choose j) Σk=j:n {[ k[FX(x)]^(k-1) . fX(x)] [1 - FX(x)]^(n-k)
 >
-> + [FX(x)]^k (n-k) [1 - FX(x)]^(n-k-1) [-fX(x)] }
+> \+ [FX(x)]^k (n-k) [1 - FX(x)]^(n-k-1) [-fX(x)] }
 >
 > = (n choose j) Σk=j:n fX(x) { k[FX(x)]^(k-1) [1 - FX(x)]^(n-k) - (n-k)  [FX(x)]^k [1 - FX(x)]^(n-k-1) }
 >

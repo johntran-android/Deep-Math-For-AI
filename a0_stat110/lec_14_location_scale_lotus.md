@@ -21,15 +21,15 @@
 >
 > \- PROPERTIES CỦA VAR(X):
 >
-> + Var(X + c) = Var(X)
+> \+ Var(X + c) = Var(X)
 >
-> + Var(cX) = c^2*Var(X)
+> \+ Var(cX) = c^2*Var(X)
 >
-> + Var(X) luôn không âm, và nó chỉ bằng 0 nếu X là constant
+> \+ Var(X) luôn không âm, và nó chỉ bằng 0 nếu X là constant
 >
-> + Variance KHÔNG CÓ TÍNH LINEARITY:
+> \+ Variance KHÔNG CÓ TÍNH LINEARITY:
 >
-> + Var(X+Y) không bằng Var(X) + Var(Y) TRỪ KHI X, Y INDEPENDENT
+> \+ Var(X+Y) không bằng Var(X) + Var(Y) TRỪ KHI X, Y INDEPENDENT
 >
 > X không i.i.d với chính nó X, mà nó EXTREMELY DEPENDENT với chính nó. Do đó bất
 > cứ khi nào ta ÁP DỤNG CÔNG  THỨC NÀO ĐÓ MÀ CẦN CÁC RANDOM VARIABLE

@@ -413,7 +413,7 @@
 > thấy ta sẽ có A Δx = Δb
 >
 > Và nếu A invertible, để solution ban đầu là x = Ainvb sẽ chuyển thành x
-> + Δx = x + Ainv Δb
+> \+ Δx = x + Ainv Δb
 >
 > Cái chính là xét quan hệ Δx = Ainv Δb để thấy rằng khi mà b bị thay đổi
 > chút xíu, thì nó sẽ được khuếch đại lên bởi A như thế nào - ý là nó kéo

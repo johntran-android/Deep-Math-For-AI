@@ -1149,7 +1149,7 @@
 > Tạo prompt theo dạng: 
 >
 > "Summarize the ...: 
-> + dialog +
+> \+ dialog +
 > Summary:"
 >
 >

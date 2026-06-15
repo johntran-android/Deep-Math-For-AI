@@ -230,16 +230,16 @@
 > việc đếm theo các step sau, trong đó **LỰA CHỌN CỦA STEP TRƯỚC KHÔNG THAY ĐỔI
 > SỐ LỰA CHỌN CỦA STEP SAU
 >
-> + Step 1:** Chọn "số điểm" của bộ 3 lá, ta có 13 cách chọn.
+> \+ Step 1:** Chọn "số điểm" của bộ 3 lá, ta có 13 cách chọn.
 >
-> + **Step 2: Với mỗi "số điểm", ta đều có 4 lá. Và ta cần** chọn 3 lá trong 4 lá khác nhau
+> \+ **Step 2: Với mỗi "số điểm", ta đều có 4 lá. Và ta cần** chọn 3 lá trong 4 lá khác nhau
 > không care thứ tự. Dễ thấy đây chính là ta có **(4 choose 3)** cách chọn.
 >
-> + **Step 3:** Tiếp, ta chọn "số điểm" của bộ 2 lá, vì nó phải khác "số điểm" của bộ 3 lá, nên ta
+> \+ **Step 3:** Tiếp, ta chọn "số điểm" của bộ 2 lá, vì nó phải khác "số điểm" của bộ 3 lá, nên ta
 > có 12 cách chọn, nhưng vẫn tuân theo step rule vì dù lá trước, chọn ra lá gì thì lá này ta vẫn
 > có **12** cách chọn.
 >
-> + **Step 4:** Và với số điểm bao nhiêu chọn được trong step 3 thì vẫn có 4 lá, và ta cần chọn
+> \+ **Step 4:** Và với số điểm bao nhiêu chọn được trong step 3 thì vẫn có 4 lá, và ta cần chọn
 > 2 trong 4 lá khác nhau không care thứ tự, ta có **(4 choose 2)** cách chọn.
 >
 > Cuối cùng, vì kết quả của bước nào trong 4 bước thì cũng sẽ không thay đổi số possible

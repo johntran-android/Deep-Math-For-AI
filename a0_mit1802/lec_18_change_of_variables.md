@@ -11,10 +11,10 @@
 > Đại khái là ta sẽ học về **Change variables** trong bài toán **tính double
 > integral**. Đầu tiên là ví dụ 1, ta cần dùng double integral để t**ính diện
 > tích của hình elip** có hai t**ham số a,b**. Phương trình của elip là **(x/a)^2
-> + (y/b)^2 = 1**
+> \+ (y/b)^2 = 1**
 >
 > Điều này cũng có nghĩa là **những điểm bên trong elip** sẽ có **(x/a)^2
-> + (y/b)^2 < 1**
+> \+ (y/b)^2 < 1**
 
 <br>
 

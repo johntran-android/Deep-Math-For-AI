@@ -633,7 +633,7 @@
 >
 > ai1br1(X1 - μ1)^2 + ai2br2(X2 - μ2)^2 + ...
 >
-> + 2ai1br2(X1 - μ1)(X2 - μ2) + ... (các cross term)
+> \+ 2ai1br2(X1 - μ1)(X2 - μ2) + ... (các cross term)
 >
 > ]
 >
@@ -738,7 +738,7 @@
 > ====
 >
 > Áp dụng vào bài toán này, nhắc lại, ta cần chứng minh Ui và Vr độc lập với Ui = Σj=1:2 aijXj tức, = ai1X1
-> + ai2X2 và Vr = Σj=1:2 brj Xj = br1X1 + br2X2
+> \+ ai2X2 và Vr = Σj=1:2 brj Xj = br1X1 + br2X2
 >
 > Cho i = 1,r = 1, tức là ta sẽ chứng minh U1, V1 độc lập, và cho gọn ta gọi là U, V với U = a1X1 + a2X2, V
 > = b1X1 + b2X2 và "thành lập" random variable vector (U, V) (để mà ta sẽ chứng minh joint pdf của U, V

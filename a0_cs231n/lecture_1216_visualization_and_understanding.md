@@ -422,7 +422,7 @@
 > tensor).
 >
 > Đặng dùng gradient đó để tăng giảm giá trị của image tensor 1 chút (cũng cái kiểu
-> += gradient*learning rate). (Dấu += vì đây là Gradient Ascent, đi Theo hướng
+> \+= gradient*learning rate). (Dấu += vì đây là Gradient Ascent, đi Theo hướng
 > gradient để neuron value tăng lên, với Gradient Descent ta thật ra là đi ngược
 > hướng gradient để giảm loss xuống như đã biết)
 

@@ -210,7 +210,7 @@
 > (Coi như ta có n hộp => n + 1 vách ngăn, trừ đi 2 cái vách ngăn ở ngoài cùng
 > còn n - 1 vách ngăn.
 >
-> + k marker = n - 1 + r items và ta muốn tính số hoán vị của nó => (n-1+r)!
+> \+ k marker = n - 1 + r items và ta muốn tính số hoán vị của nó => (n-1+r)!
 >
 > Với mỗi cách sắp xếp của r marker, vì ta không care thứ tự nên sẽ bị dư r!
 > cách: Nên chia bớt đi r!

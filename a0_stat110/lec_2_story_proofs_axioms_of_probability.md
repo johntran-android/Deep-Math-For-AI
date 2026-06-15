@@ -175,9 +175,9 @@
 >
 > Thế thì ông đề nghị ta hình dung là **CHO HAI VIÊN BI ĐƯỢC ĐÁNH SỐ p1, p2** ta chuẩn bị:
 >
-> + **2 CÁI HỘP** **CÓ ĐÁNH SỐ** B1, B2.
+> \+ **2 CÁI HỘP** **CÓ ĐÁNH SỐ** B1, B2.
 >
-> + **K QUẢ BANH TRẮNG GIỐNG NHAU**, **KHÔNG CẦN ĐÁNH SỐ** ĐỂ PHÂN BIỆT.
+> \+ **K QUẢ BANH TRẮNG GIỐNG NHAU**, **KHÔNG CẦN ĐÁNH SỐ** ĐỂ PHÂN BIỆT.
 >
 > Để rồi trong k lần, **mỗi lần chọn viên bi nào (ví dụ bi p1) (rồi bỏ vào lại of course) thì LẤY MỘT
 > QUẢ BANH TRẮNG BỎ VÀO HỘP B1** (để theo dõi mỗi viên bi được chọn mấy lần).
@@ -317,10 +317,10 @@
 >
 > (A) Không hoàn lại + có care thứ tự
 >
-> + Vì là không hoàn lại nên ta sẽ có các ví dụ 13567, 54678, KHÔNG THỂ CÓ
+> \+ Vì là không hoàn lại nên ta sẽ có các ví dụ 13567, 54678, KHÔNG THỂ CÓ
 > có 12233).
 >
-> + Có care thứ tự nên coi 13567 và 15376 là HAI CÁI KHÁC NHAU.
+> \+ Có care thứ tự nên coi 13567 và 15376 là HAI CÁI KHÁC NHAU.
 >
 > Do đó, ta làm theo 2 bước:
 >
@@ -390,12 +390,12 @@
 >
 > D) Có hoàn lại + không care thứ tự
 >
-> +) Giờ có hoàn lại, nên có thể có kết quả 22331; 12132, thậm chí 88888 
+> \+) Giờ có hoàn lại, nên có thể có kết quả 22331; 12132, thậm chí 88888 
 > (có thể gặp lại nhiều lần một banh nào đó)
 >
-> +) Nếu có care thứ tự (C) thì 22331 sẽ coi như khác với 23231, và 33221
+> \+) Nếu có care thứ tự (C) thì 22331 sẽ coi như khác với 23231, và 33221
 >
-> +) Nếu không care thứ tự (D), thì 22331 sẽ coi như giống 23231, và 33221
+> \+) Nếu không care thứ tự (D), thì 22331 sẽ coi như giống 23231, và 33221
 >
 > Tính case C:
 >

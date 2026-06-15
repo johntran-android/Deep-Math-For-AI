@@ -11,7 +11,7 @@
 > Bài này ta sẽ thảo luận về **IMPLICIT DIFFERENTIATION**
 >
 > Gs nhắc lại các bài trước ta đã biết derivative của x^a với a = 0,
-> +/-1,  +/-2.....
+> \+/-1,  +/-2.....
 >
 > Và bài này ta sẽ xem xét a = m/n với m là số nguyên.
 >
