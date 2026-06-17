@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,285 notes` · `~16,695 screenshots` · `19 courses`** · work in progress
+**`~12,291 notes` · `~16,701 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -563,21 +563,21 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [10.1 Least-square problem](numerical_optimization/101_least_square_problem.md) — `2n / 2i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Numerical Optimization — SimpleMind Notes (📝 96 Notes | 📸 122 Screenshots)
+### 📂 Numerical Optimization — SimpleMind Notes (📝 98 Notes | 📸 124 Screenshots)
 
 - [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 10i` 
 - [8.2 Automatic Differentiation (*extremely Important For Ai)](numerical_optimization_sm/82_automatic_differentiation_extremely_important_for_ai.md) — `35n / 46i` 
-- [10.1 Least-square Problem](numerical_optimization_sm/101_least_square_problem.md) — `3n / 4i` 
+- [10.1 Least-square Problem](numerical_optimization_sm/101_least_square_problem.md) — `5n / 6i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i` 
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 212 Notes | 📸 283 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 216 Notes | 📸 287 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
 - [2.2 Multinomial Variables](a0_bishop_prml/22_multinomial_variables.md) — `7n / 9i` 
-- [2.3 Gaussian Distribution](a0_bishop_prml/23_gaussian_distribution.md) — `7n / 11i` 
+- [2.3 Gaussian Distribution](a0_bishop_prml/23_gaussian_distribution.md) — `11n / 15i` 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
 - [1.2.0 Probability theory](a0_bishop_prml/120_probability_theory.md) — `13n / 21i` 

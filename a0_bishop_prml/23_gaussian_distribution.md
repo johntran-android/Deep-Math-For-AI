@@ -1,6 +1,6 @@
 # 2.3 Gaussian Distribution
 
-📊 **Progress:** `7` Notes | `11` Screenshots
+📊 **Progress:** `11` Notes | `15` Screenshots
 
 ---
 <a id="node-205"></a>
@@ -429,6 +429,416 @@
 >
 > và ông vẽ cái đường màu đỏ chính là hình ellipse với a = λ1/2, b =
 > λ2/2
+
+<br>
+
+<a id="node-212"></a>
+
+<p align="center"><kbd><img src="assets/1a853b7e95944c1e33a58e664f59113cdf6176dc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, đại ý là, covariance matrix của phân phối multivarate Normal, tức Σ có một
+> đặc điểm nhằm đảm bảo rằng phân phối này được define đúng (**well
+> defined**). Đó là **mọi eigenvalues của Σ đều dương.**
+>
+> \**Vì sao**? Ở đây có một ý rất hay mà gs Bishop không nói kĩ: Như trong note
+> trước, ta đã hiểu cái level set (đường đồng mức của hàm 2D Gaussian là một
+> đường ellipse) ứng với exp(-1/2) có tâm tại **μ** và có trục ellipse theo phương
+> của các eigenvector với độ dài bán trục là λ1/2 và λ2/2.
+>
+> Thì như vậy ta sẽ nhận thấy một sự thật rằng: λi chính là phản ánh **mức độ
+> phân tán** (**spreading**) **của pdf theo phương eigenvector** **u**i, và đó
+> chính là gì: và như vậy, nó phản ánh **variance theo phương u**i.
+>
+> HIểu nôm na về mặt hình học là vậy, còn ta sẽ **lập luận lại từ định nghĩa của
+> Covariance matrix**:
+>
+> Ở đây tạm quay lại kí hiệu chuẩn toán với việc dùng **X viết hoa** để chỉ
+> random variable vector **X**. (**μ**, hay **u** thì cũng là vector như là vector
+> fixed value, không phải random variable)
+>
+> Theo định nghĩa, Σ = Cov(**X**, **X**) = E[(**x** - **μ**)(**x** - **μ**)T]
+>
+> (covariance của hai random variable X, Y: Cov(X,Y) = E[(X-EX)(Y-EY)])
+>
+> Thế thì ta gọi λ và **u** là eigenvalue và eigenvector của Σ, ta có Σ**u** = λ**u**.
+>
+> ⇔ **u**TΣ**u** = **u**Tλ**u** (nhân trái hai vế cho **u**T (**u** transpose))
+>
+> ⇔ **u**TΣ**u** = λ**u**T**u** (λ là scalar, move tự do)
+>
+> ⇔ **u**TΣ**u** = λ (vì ta đang luôn làm việc với bộ eigenvector orthogonal và
+> unit norm → **u**T**u** = ||**u**||^2 = 1)
+>
+> ⇔ **u**T E[(**X**-**μ**)(**X**-**μ**)T] **u** = λ
+>
+> Thế thì E[...] là kì vọng là liên quan đến random variable vector **X**, nên **u**
+> chỉ là vector fixed value, hay constant, đưa vào kì vọng nhờ tính linearity: E[cX]
+> = cE[X]
+>
+> ⇔ E[**u**T(**X**-**μ**)(**X**-**μ**)T**u**] = λ
+>
+> Tới đây, ta đặt Z = (**X** - **μ**)T**u ⇨** E[ZTZ] = E[Z^2] = λ
+>
+> Vậy λ = E[Z^2] Và từ đây suy ra hai thứ:
+>
+> Nhưng trước tiên cần hiểu Z **cũng là một random variable** (scalar, ko phải
+> random vector). Z = (**X**-μ)T**u**, chính là áp hàm g(**x**) = (x-μ)Tu lên
+> random variable vector **X**, đương nhiên, theo Stat110, thầy Joe đã luôn nhắc
+> ta khi áp một hàm số lên một random variable (vector) ta luôn được một random
+> variable (vector) mới), do đó ta có được random variable scalar Z. Sở dĩ phải
+> nói vậy là vì nhờ đó mới bàn tới kì vọng / trung bình của Z: E[Z^2], chứ nếu Z ko
+> phải random variable, thì điều này vô nghĩa. Và dĩ nhiên Z^2 cũng lại là một
+> random variable, có giá trị không âm
+>
+> i) Như vậy λ là **trung bình / kì vọng của một biến ngẫu nhiên không âm** nên
+> sẽ luôn **không âm**.
+>
+> ii) Ý thứ hai quan trọng hơn nhiều: λ = E[Z^2], mà Z = (**X** - **μ**)T**u** có bản
+> chất hình học là gì?
+>
+> → Ta biết trong đại số tuyến tính phép tích vô hướng aTb chính là ||a|| ||b||
+> cos(a,b), và nếu b là unit vector q, thì aTq chính là hình chiếu của a lên q, có giá
+> trị là tọa độ của a theo trục q. Như vậy ở đây u là unit vector. Chính là **hình
+> chiếu** của (**x**-**μ**) lên trục tọa độ là **eigenvector** **u**.
+>
+> Và thật ra ta đã có cùng kết luận này từ trong note trước, khi ta làm phân tích
+> cái quadratic form (**x**-**μ**) Σinv (**x**-**μ**) = Σi (yiTyi/λi) = Σi yi^2/λi với yi =
+> uiT(**x**-**μ**), cũng là vector **y** = U(**x**-**μ**). Thì ta đã hiểu ý nghĩa của cái
+> này chính là chuyển tọa độ **x** bằng cách dời hệ trục về gốc tại **μ**, sau đó
+> xoay hệ trục để trùng với các eigenvector ui. Nên y1, y2,...chính là tọa độ của x
+> trong hệ trục mới: tâm tại mu, trục trùng với eigenvector **u1**, **u2**,..Mà điều
+> này dĩ nhiên có nghĩa là y1 chính là hình chiếu của vector **X** - **μ** lên trục
+> \**u1**, y2 là hình chiếu của vector **X** - **μ** lên trục **u2**,...Cùng chính là
+> cùng kết luận ở trên.
+>
+> Xét tiếp EZ = E[(**X**-μ)T**u**] = E[**X**-μ]T**u** = (E**X**-E**μ**)T**u** =
+> (**μ**-**μ**)T**u** = **0**T**u** = 0.
+>
+> Như vậy E[Z^2] thật ra chính là E[Z^2 - (EZ)^2] và đây chính là **VARIANCE**
+> của **Z:** Var(**Z**). Và với ý nghĩa của Z là hình chiếu của (**X** - **μ**) lên trục
+> eigenvector **u**, thì như vậy ta có thể hiểu vì sao E[Z^2], **CŨNG LÀ**
+> \**EIGENVALUE** **λ**, **CHÍNH LÀ PHƯƠNG SAI CỦA DISTRIBUTION THEO
+> PHƯƠNG EIGENVECTOR** **u**, và dĩ nhiên, again, phương sai thì không âm
+> cũng giúp khẳng định lại λ phải không âm.
+>
+> Rồi, ở trên ta đã hiểu λi của Σ chính là phương sai của distribution theo phương
+> eigenvector ui, và do đó nó phải không âm. Nhưng thậm chí nó phải dương
+> luôn. Lí do có thể tạm hiểu nhanh là vì trong công thức pdf của Normal, Σ xuất
+> hiện ở dạng inverse Σinv. Mà để invertible, thì Σ phải non-singular / full-rank. Do
+> đó mọi eigenvalue phải khác 0.
+>
+> Và như vậy, từ MIT 1806 (cũng như phần Appendix C đã nhắc lại), mọi
+> eigenvalues dương là một trong những cách để check điều kiện matrix là một
+> positive definite matrix (bên cạnh các cách khác như check quadratic form,..)
+>
+> Gs cũng nói trong chap 12 ta sẽ làm việc với một phân phối Normal có
+> covariance không đảm bảo mọi eigenvalue đều dương, mà chỉ không âm thôi,
+> khi đó chỉ là positive semi definite. Và, nếu có eigenvalue = 0, thì matrix Σ sẽ
+> singular. Vì sao singular, singular là sao?
+>
+> Ôn lại kiến thức trong MIT 18.06: singular là khi matrix tồn tại nonzero vector
+> trong nullspace hoặc left nullspace. Khi đó vector khác 0 đó sẽ bị biến thành 0
+> bởi matrix. Thế thì, nếu tồn tại eigenvalue bằng 0, thì như đã biết, nếu λ và u là
+> eigenvalue và eigenvector tương ứng, thì ta có Au = λu, vậy nếu λ = 0, thì u
+> chính là vector bị biến thành 0 bởi A: Au = 0u = 0. Nên nó chính là non-zero
+> vector trong nullspace, như vậy nullspace có dimension khác 0, cũng đồng
+> nghĩa các cột của A không độc lập, cũng đồng nghĩa luôn là rank của A nhỏ hơn
+> số hàng số cột, và matrix A không full-rank, không invertible, hay và gọi là matrix
+> suy biến (singular).
+
+<br>
+
+<a id="node-213"></a>
+
+<p align="center"><kbd><img src="assets/b8dfc5ea493c66b54c4fd51c4e882552dc1f976a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì tiếp theo gs nói là ta sẽ xem xét dạng của Gaussian trong hệ trục tọa độ
+> mới. Là sao?
+>
+> Có nghĩa là, như đã hiểu khi ta ôn lại kiến thức change of basis matrix trong MIT
+> 1806 ở note trước, việc ta đặt **y** = U(**x**-**μ**) chính là = (UT)inv(**x**-**μ**), có
+> bản chất là ta đã chuyển hệ trục tọa độ về gốc tọa độ mới là **μ** và trục tọa độ bây
+> giờ là các eigenvector, và một điểm có tọa độ **x** trong hệ trục gốc (tức basis **e**'
+> s) bây giờ sẽ có tọa độ **y** trong basis **u**'s.
+>
+> Và trong bối cảnh ở đây là hàm pdf, thì ta lại liên hệ với kiến thức đã học trong
+> Stat110: **Change of variable**: Ôn lại nhanh: Khi ta có random variable X ~ fX(x), và
+> áp dụng hàm g(x) lên nó để có một random variable mới: Y = g(X) sao cho ta có
+> mapping 1-1 giữa x belong range X và y belong range Y, đồng nghĩa nếu y = g(x) ⇔
+> x = ginv(y), thì ta sẽ có theorem cho phép xây dựng pdf của Y: 
+>
+> fY(y) = fX(x) |dx/dy| = fX(ginv(y) |d/dy ginv(y)|.
+>
+> Sau đó, tương tự, khái quát lên cho random variable **VECTOR**: **X**, và **Y** =
+> g(**X**) thì f**Y**(**y**) = f**X**(**x**) |d**x**/d**y**| = f**X**(**x**) |d/d**y** ginv(**x**)|.
+>
+> Lúc này với việc **y** = g(**x**) và ginv(**y**) là vector → vector function, nên đạo
+> hàm của ginv(y) đối với y sẽ là gì: Theo kiến thức đã học trong MIT 18s096, đó sẽ là
+> một matrix, có mỗi hàng là một gradient vector: hàng i sẽ là vector các partial
+> derivative của xi = ginv(y)_i (phần tử thứ i của vector **x**) đối với vector **y:**
+> (∂xi/∂y1, ∂xi/∂y2,....).
+>
+> Và matrix này gọi là Jacobian matrix, nên với case này thì change of variable
+> theorem, ta có: f**Y**(**y**) = f**X**(**x**) |J| (thật ra là | |J| |, hay |det(J)| với ý nghĩa:
+> giá trị tuyệt đối của determinant của matrix Jacobian).
+>
+> Thế thì quay lại đây (sách Bishop), chính là ta đang đối mặt với bài toán đổi biến
+> (change of variables), khi ta có **X** (hay gs Bishop viết thường **x**, như nói nhiều
+> lần, gs Bishop viết thường đối với tên biến có thể gây lú lẫn), có pdf là hàm
+> Gaussian pdf f**X**(**x**|**μ**, Σ) = (công thức 2.43). Và nay ta có random variable
+> vector **Y có được bằng cách áp hàm g(x) lên X, với g(x) =** U(**x**-**μ**), tức là
+> \**Y** = U(**X** - **μ**). Vậy thì áp dụng điều trên ta sẽ có pdf của **Y**:
+>
+> fY(y) = f**X**(**x**|**μ**,Σ) |J|
+>
+> Vậy J, trong trường hợp này, cụ thể nó sẽ là thế nào: Ta có thể theo định nghĩa đã
+> nói trên, đi tìm Jij, là ∂xi/∂yj. Nhưng MIT 18s096 cho ta một cách làm dễ hơn nhiều -
+> tìm đạo hàm theo lối hoslistically:
+>
+> Ta có hàm **y** = U(**x** - **μ**) ⇨ **x** = Uinv**y** + **μ**, = g(**y**) nếu có thể chỉ ra
+> dg(**y**) = một linear operator của d**y**, thì ta sẽ thấy ngay công thức đạo hàm.
+> Làm như sau:
+>
+> dg = g(**y**+d**y**) - g(**y**) = Uinv(**y** + d**y** + **μ**) - Uinv(**y** + **μ**) =
+> Uinvd**y**. Và đây chính là linear operator act on d**y**, nên đơn giản ta kết luận
+> ngay d/dy g(**y**), chính là Jacobian = Uinv.
+>
+> Vậy J = Uinv Nên det J = det Uinv, mà U là matrix gì, còn nhớ, gs Bishop, đã define
+> U là matrix mà các hàng là các eigenvector ui của Σ, nên UT là matrix tạo bởi các
+> cột là các eigenvector ui, và đám này lại orthogonal, và unit norm. Đồng thời mình
+> trong note trước cũng cũng đã nói, với orthogonal matrix thì transpose của nó cũng
+> vậy. Như vậy UT là orthogonal matrix, thì U cũng vậy. Và như vậy Uinv = UT (tính
+> chất của orthogonal matrix)
+>
+> Như vậy Jacobian **J chính là UT**, đây chính là **giải thích cho công thức 2.53**: Jij
+> = Uji (chú ý thứ tự ij ngược nhau, vì Uji thực chất chính là (UT)ij, nên chính là ông
+> đang nói J = UT)
+>
+> Rồi, thế thì tới đây nếu ta còn nhớ kiến thức trong MIT 1806 sau đây thì có thể kết
+> luận luôn |det J| = |det UT| = 1: determinant, hay tiếng việt là định thức, có ý nghĩa là
+> gì? là tỉ lệ của thể tích của một khối lập phương cạnh bằng 1 sau khi bị linear
+> transform bởi matrix J so với thể tích ban đầu của nó (= 1). Hay trong 2D, thì nó là tỉ
+> lệ của diện tích của hình vuông cạnh = 1 sau khi bị tranform bởi J. Thế thì, ta vừa
+> nói J (chính là UT) là orthogonal matrix, nên **phép biến đổi tuyến tính bởi J chỉ là
+> PHÉP XOAY, nó bảo tồn diện tích**. Thành ra tỉ lệ này dĩ nhiên là 1. ⇨ det J = det
+> UT = 1.
+>
+> Còn trong sách, gs tính det J^2 trước, (det J)^2 = (det UT)^2
+>
+> = (det UT)(det UT)
+>
+> = (det UT)(det U) (do det A = det AT)
+>
+> = det(UT U) (det (AB) = det A) (det B))
+>
+> = det (I) (do U orthogonal → UTU = I)
+>
+> = 1.
+>
+> Vậy (det J)^2 = 1 ⇨ det J = +/-1. Nhưng trong công thức change of variable nói trên,
+> như đã nói, thật ra ta lấy trị tuyệt đối của det, nên kết quả là 1.
+>
+> Như vậy ta hiểu rõ hai công thức 2.53, và 2.54 cũng như đoạn này nói gì.
+
+<br>
+
+<a id="node-214"></a>
+
+<p align="center"><kbd><img src="assets/451973f2796c7d22146e3ebc4a60ef3909661930.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, thử xem vì sao gs nói |Σ| có thể thể hiện bởi tích các eigenvalues?
+>
+> Là vì đơn giản đây là công thức của det thôi: det A = tích các eigenvalue của nó. Và vì các eigenvalue của Σ như vừa nói, đều dương nên ta có
+> |det Σ| = det Σ = Πi λi.
+>
+> ⇨ √[det Σ] (hay |Σ|^(1/2) = √[Πi λi] = (Πi λi)^1/2 = Πi λi^1/2
+>
+> Rồi, như vậy ta đã có đủ nguyên liệu để ráp vào công thức đổi biến để có pdf của **Y** = U(**X** - **μ**):
+>
+> f**Y**(**y**) = f**X**(**x**|**μ**,Σ) |J| với:
+>
+> |J| = 1
+>
+> f**X**(**x**|**μ**,Σ) = công thức 2.43 = [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-1/2(**x**-**μ**)T Σinv(**x**-**μ**)]
+>
+> = [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-1/2(Uinv**y**+**μ**-**μ**)T Σinv(Uinv**y**+**μ**-**μ**)]
+>
+> = [1/(2π)^(D/2)] 1/[Πi λi^1/2] exp[-1/2(UT**y**)T Σinv(UT**y**)]
+>
+> = [1/(2π)^(D/2)] 1/[Πi λi^1/2] exp[-(1/2)**y**TU Σinv UT**y**]
+>
+> Xét cụm này: (1/2)**y**TU Σinv UT**y** (bữa trước ta đã phân tích, gọi nó là Δ^2, và thu gọn nó là thành Σj (yj^2/λj)
+>
+> Ghi lại đoạn đó: "Thay Σinv = Σj=1:D ujujT/λj vào (**x** - **μ**)T Σinv (**x** - **μ**) ta có:
+>
+> = (**x** - **μ**)T [Σj ujujT/λj] (**x** - **μ**)
+>
+> = Σj [(**x** - **μ**)TujujT(**x** - **μ**)/λj] | đưa (**x** - **μ**)T và (**x** - **μ**) vào trong tổng.
+>
+> Đặt yj = (**x** - **μ**)Tuj (cũng là ujT(**x** - **μ**) vì cái này là scalar), ta có:
+>
+> = Σj (yjTyj/λj) = Σj (yj^2/λj) → 2.51"
+>
+> Nhưng ở đây mình có thể làm theo cách khác cũng ra: Xét **y**TU Σinv UT**y**, ta phân tách trị riêng (eigenvalue decomposition) đối với Σinv =
+> Q H QT với Q là orthogonal matrix có các cột là eigenvector của Σinv, và như đã biết, Σ và Σinv có chung bộ eigenvector : tức là nếu λ, u là
+> eigenvalue, eigenvector của Σ thì 1/λ, u cũng là eigenvalue, eigenvector của Σinv. Nên Q chính là UT. Còn H là diagonal matrix có đường chéo là
+> các eigenvalue của Σinv. Vậy thì vì ta đang gọi λ1, λ2,... là các eigenvalue của Σ nên eigenvalue của Σinv là 1/λ1, 1/λ2,. ... ⇨ H chính là
+> diag(1/λ1, 1/λ2,...,1/λD). Vậy ta có Σinv = Q H QT = UT diag(1/λ1, 1/λ2,...,1/λD) U.
+>
+> Thay vào **y**TU Σinv UT**y** = **y**TU UT diag(1/λ1, 1/λ2,...,1/λD) U UT **y**
+>
+> với U thì ta đã biết UT = Uinv nên biểu thức trên = **y**T diag(1/λ1, 1/λ2,...,1/λD) **y**,
+>
+> và cái này chính là Σi=1:D yi^2/λi.
+>
+> Vậy tóm lại, f**Y**(**y**) (trong sách gs Bishop ghi là p(**y**)) là:
+>
+> [1/(2π)^(D/2)] 1/[Πi=1:D λi^1/2] exp[-(1/2)Σi=1:D yi^2/λi]
+>
+> = [Πi=1:D[1/(2π)^(1/2)] 1/[Πi=1:D λi^1/2] exp[-(1/2)Σi=1:D yi^2/λi]
+>
+> = Πi=1:D [1/(2πλi)^(1/2)] exp[-Σi=1:D yi^2/2λi]
+>
+> = Πi=1:D { [1/(2πλi)^(1/2)] exp[-yi^2/2λi] } (cái tổng trong exp(), tách ra thành tích các exp luôn: e^(a+b) = e^a e^b)
+>
+> → **Và** **đây chính là 2.56**
+>
+> Và nhận xét quan trọng đó là: xét một thừa số trong tích:
+>
+> 1/(2πλi)^(1/2)] exp[-yi^2/2λi]
+>
+> Có thể thấy, nó chính là công thức pdf của Normal(0, λi), nhớ ko, với normal(μ, σ^2) thì pdf là [1/√(2πσ^2)] exp[-(x-μ)/2σ].
+>
+> Đến đây ta lập luận như sau: Dùng kiến thức của Stat110 đã học: Xét joint pdf của các random variable X1,X2,...Xn. f**X**(x1,x2,..), nếu có thể
+> factor nó thành tích các marginal pdf: fX1(x1)fX2(x2)...fXn(xn). Thì có thể suy ra các random variable X1,X2,...Xn **ĐỘC LẬP**. (independent)
+>
+> Vậy ở đây, f**Y**(**y**), thật ra chính là joint pdf của D random variable Y1, Y2,... YD (các phần tử của vector **Y**). Và cái công thức 2.57, là
+> joint pdf của chúng, như đã thấy, lại chính là tích các marginal pdf của các random variable Y1,Y2.... YD đơn lẻ.
+>
+> \**NHƯ VẬY KẾT LUẬN: Y1, Y2,....YD LÀ CÁC RANDOM VARIABLE ĐỘC LẬP.**
+>
+> \**Và ý nghĩa của điểu này chính là: Việc đổi biến, từ X sang Y, bằng cách shift bởi μ và xoay trục sao cho trùng với các eigenvector của Σ đã
+> giúp cho trong hệ trục tọa độ mới, các tọa độ trở nên hoàn toàn độc lập nhau. Đây chính là ý mà gs Bishop nói ở đây** "\/eigen- vectors therefore
+> define a new set of shifted and rotated **coordinates** with respect to which the joint probability distribution factorizes into a product of
+> independent distributions"\/
+>
+> Ý cuối chỉ là gs nói về việc khi ta marginalizing pdf của **Y** over toàn bộ range **Y**, thì bằng cách đưa tích phân của tích thành tích các tích
+> phân, và các tích phân này đều bằng 1 do tính valid của pdf nên kết quả là tích của các số 1, nên bằng 1. Cho thấy pdf của Y là một valid pdf. Ví
+> dụ, để dễ hiểu thì ta có thể xét case hai biến Y1,Y2:
+>
+> ta có f**Y**(**y**) = f**Y**(y1,y2) = Πi=1:2 { [1/(2πλi)^(1/2)] exp[-yi^2/2λi] }
+>
+> = [1/(2πλ1)^(1/2)] exp[-y1^2/2λ1] [1/(2πλ2)^(1/2)] exp[-y2^2/2λ2]
+>
+> = f(y1) f(y2).
+>
+> Và xét tích phân trên toàn bộ range **Y**, trong trường hợp này là toàn mặt phẳng 2D:
+>
+> ∫-inf:inf∫-inf:inf f**Y**(**y**) d**y** = ∫-inf:inf∫-inf:inf f**Y**(y1,y2) dy1dy2
+>
+> = ∫-inf:inf∫-inf:inf f(y1) f(y2) dy1dy2
+>
+> Tính tích phân theo y1 trước, thì vì f(y2) ko dính gì tới y1 nên đưa ra ngoài: = ∫-inf:inf [∫-inf:inf f(y1) dy1] f(y2) dy2 Tíếp, xét tích phân theo y2, thì
+> vì [∫-inf:inf f(y1) dy1], ko dính gì đến y2, nên đưa ra ngoài
+>
+> = [∫-inf:inf f(y1) dy1] [∫-inf:inf f(y2) dy2]
+>
+> Và mỗi cách tích phân này, theo tính valid của một pdf, nên bắt buộc phải bằng 1.
+>
+> kết quả là 1 x 1 = 1.
+
+<br>
+
+<a id="node-215"></a>
+
+<p align="center"><kbd><img src="assets/454ccfd42413b86c20daddd95d75917be257649d.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, có thể hiểu đoạn này là gs nói rằng ta sẽ xem xét các moment của nó. Từ Stat110 mình đã biết, nói về moment, khái niệm moment của distribution, được define như
+> sau: moment bậc n là E[X^n]. Và như vậy **moment bậc 1, chính là mean** của distribution, EX. Còn **moment bậc 2**, EX^2, sẽ giúp ta tính **variance** với công thức VarX
+> = EX^2 - (EX)^2.
+>
+> Thế thì dù mình vẫn hay mặc định là nói với X ~ normal(μ, σ^2) thì μ chính là mean EX. Nhưng thực ra phải chứng minh. Như trong Stat110 đã làm, ta sẽ dựa vào định
+> nghĩa của kì vọng, để chứng minh mean của Z~ Normal(0, 1) là 0 trước, làm như sau: (đây cũng là ôn lại, nhưng sẽ cho ta thấy cái mà gs Bishop làm ở đoạn này thật ra là y
+> chang)
+>
+> EZ = ∫-inf:inf zfZ(z) dz = ∫-inf:inf z [1/√(2π)] exp(-z^2/2) dz
+>
+> = [1/√(2πσ^2)] ∫-inf:inf z exp(-z^2/2σ^2) dz (đưa constant ra ngoài tích phân)
+>
+> Thế thì biểu xét biểu thức trong tích phân, coi nó như hàm g(z) = z exp(-z^2/2σ^2) thì nó là một hàm có tính chất:
+>
+> g(-z) = -z exp(-(-z)^2/2σ^2) = -z exp(-z^2/2σ^2) = -g(z)
+>
+> Vậy nó là một hàm lẻ (odd function). Mà với hàm lẻ, khi ta tích phân từ -inf tới inf, thì các giá trị sẽ cancel out nhau (hủy nhau). Nên kết quả là 0.
+>
+> ⇨ EZ = 0. Và từ đó, dùng location scale theorem, nói rằng nếu ta có Z ~ standard member của một location scale family, thì σZ + μ sẽ là thành viên ứng với location μ và
+> scale σ. Với normal, nó là một location scalar family, thành ra theo đó, X = σZ + μ chính là một normal có location μ và scale σ: X ~ normal(μ, σ^2)
+>
+> Chứng minh cũng dễ: X = σZ + μ = g(Z) ⇨ Z = (X-μ)/σ = ginv(X). Dùng change of variable theorem, tính pdf của X:
+>
+> fX(x) = fZ(z) |dz/dx| = fZ(ginv(x)) |d/dx ginv(x)|
+>
+> = fZ((x-μ)/σ) |d/dx [(x-μ)/σ]|
+>
+> = (1/√2π) exp[-((x-μ)/σ)^2/2] |1/σ|
+>
+> = (1/√2π) exp[-(x-μ)/2σ^2] (1/σ)
+>
+> = (1/√2πσ^2) exp[-(x-μ)/2σ^2] → đây chính là pdf của normal(μ, σ^2).
+>
+> Đến đây ta sẽ dùng linearity để tính EX: EX = E(σZ + μ) = σE(Z) + E(μ) = σ0 + μ = μ. Giúp kết luận với normal(μ, σ^2) thì location μ chính là mean của distribution.
+>
+> Chú ý, thường thì ta cứ nghe người ta nói rằng nói normal(μ, σ^2) thì mean là μ, variance là σ^2. Tuy nhiên, đó là kết luận, ta phải chứng minh. Và việc chứng minh chính là
+> như trên vừa làm: Chứng minh nếu X có pdf là 1/√(2πσ^2) exp[-(x-μ)^2/2σ] thì EX = μ.
+>
+> Rồi, quay lại đây, cái gs Bishop làm cũng là tương tự, ta có **X** có pdf:
+>
+> f(**x**) = [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-1/2(**x**-**μ**)T Σinv(**x**-**μ**)],
+>
+> ta sẽ phải chứng minh E**X** = **μ**.
+>
+> Theo định nghĩa của kì vọng:
+>
+> E**X** = ∫**x**f(**x**)d**x** = ∫**x** [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-1/2(**x**-**μ**)T Σinv(**x**-**μ**)] d**x**
+>
+> = [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫**x** exp[-1/2(**x**-**μ**)T Σinv(**x**-**μ**)] d**x**
+>
+> Tới đây, ông Bishop đổi biến tích phân bằng cách đặt **z** = **x** - **μ** thì thực ra cái ổng làm cũng chính là lặp lại những gì ta làm ở trên, chẳng qua là nó hơi khó để thấy,
+> như sau:
+>
+> Đặt **z** = **x** - **μ ⇨** d**z** = d**x**, và cận của tích phân thì vẫn vậy (vẫn là toàn miền R^D)
+>
+> Khi đó, E**X** = [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫ (**z**+**μ**) exp[-(1/2) **z**T Σinv **z**] d**z**
+>
+> = [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫ **z** exp[-(1/2) **z**T Σinv **z**] d**z** + [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫ **μ** exp[-(1/2) **z**T Σinv **z**] d**z**
+>
+> Xét term thứ nhất, và xét cái cụm ∫ **z** exp[-(1/2) **z**T Σinv **z**] d**z**, ta sẽ thấy mr Bishop dùng lập luận y chang: vì hàm exp[-(1/2) **z**T Σinv **z**] là hàm chẵn, do
+> exp[-(1/2) **z**T Σinv **z**] = exp[-(1/2) (-**z**)T Σinv (-**z**)], nên **z** exp[-(1/2) **z**T Σinv **z**] là hàm lẻ. Và vì vậy khi tích phân trên toàn miền sẽ ra 0.
+>
+> (Chú ý nhé, ông nói "exponent is an even function of the components of z" là đang nói cái cục exp[-(1/2) **z**T Σinv **z**] làm hàm chẵn. nhưng ở ngoài còn thằng **z** nữa,
+> nên **z** exp[-(1/2) **z**T Σinv **z**] là hàm lẻ, và khi đó thì tích phân trên toàn miền nó mới bị triệt tiêu (vanish) do tính đối xứng (symmetry))
+>
+> Nên ông mới nói "\/the term in z in the factor (z + μ) will vanish by symmetry\/" là vậy.
+>
+> Và hãy nhìn kĩ cái term thứ nhất, [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫ **z** exp[-(1/2) **z**T Σinv **z**] d**z**, ta sẽ thấy nó chính là E**Z**.
+>
+> Vậy chỉ còn cái term thứ 2: [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫ **μ** exp[-(1/2) **z**T Σinv **z**] d**z**
+>
+> Để làm tiếp, đưa μ ra ngoài tích phân, thật ra là đưa hẳn ra ngoài luôn
+>
+> \**μ** { [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫ exp[-(1/2) **z**T Σinv **z**] d**z** }
+>
+> đưa cái cụm constant vào trong tích phân lại:
+>
+> \**μ** { ∫ [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-(1/2) **z**T Σinv **z**] d**z** }
+>
+> thì lúc này, cái cụm { ∫ [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-(1/2) **z**T Σinv **z**] d**z** } chính là marginalizing pdf của Z over R^D. nên theo tính valid của pdf, nó phải bằng 1.
+>
+> Kết quả term 2 bằng **μ**. giúp ta có E**X** = **μ**, giúp chứng minh μ chính là mean của Normal(**μ**, Σ).
 
 <br>
 

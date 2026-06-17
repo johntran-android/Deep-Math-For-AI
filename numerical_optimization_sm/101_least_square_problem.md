@@ -1,6 +1,6 @@
 # 10.1 Least-square Problem
 
-📊 **Progress:** `3` Notes | `4` Screenshots
+📊 **Progress:** `5` Notes | `6` Screenshots
 
 ---
 <a id="node-92"></a>
@@ -112,6 +112,52 @@
 > các cột là ∇ri(x)] [matrix có các hàng là ∇ri(x)] = J(x)T J(x)
 >
 > Vậy kết quả là Σi {∇^2ri(x) ri(x)} + J(x)TJ(x), chính là 10.5
+
+<br>
+
+<a id="node-95"></a>
+
+<p align="center"><kbd><img src="assets/a994d70a4b198b78228cca1da0e857d609c74ab8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì đại khái là vầy: Ta đã thấy rằng trong bài toán least-square, trong đó
+> hàm objective là f(x) = Σi ri(x)^2 = r(x)Tr(x) với r(x) là vector → vector
+> function, có Jacobian J(x) thì đạo hàm cấp 1 ∇f(x) và Hessian ∇^2f(x) có thể
+> được tính bởi hai công thức 10.4 và 10.5. Và gs nói rằng, trong rất nhiều
+> ứng dụng thì việc tính toán J(x) rất ít tốn kém. Từ đó, dẫn tới việc tính ra
+> gradient và Hessian cũng đều không tốn kém gì mấy. Và đây là một đặc
+> điểm mà ông cho rằng khiến bài toán least-square trở nên dễ chịu, và ông
+> gọi nó đại khái là ta có được Hessian miễn phí.
+>
+> Mình hiểu thế này, trong các thuật toán tối ưu mà ta học ở đầu tới giờ, cũng
+> như đã học ở Convex Optimization, giúp mình hiểu rằng: Trong các thuật
+> toán tối ưu, xét về tốc độ hội tụ, thì Newton method là ngon nhất, và các
+> thuật toán tối ưu đều cố gắng dùng thông tin độ cong có trong Hessian
+> matrix. Có điều, vấn đề là nhiều khi tính toán Hessian rất tốn kém, thành ra
+> trong các chương trước ta mới thấy các thuật toán quasi-Newton trong đó
+> người ta cố gắng ước lượng Hessian để có được thông tin độ cong nhưng
+> không quá tốn kém. Còn ở đây, ta có được Hessian chính xác mà không
+> tốn mấy thì dĩ nhiên là quá tốt.
+>
+> Phải hiểu thêm là, trong đoạn này còn một ý, nói đại khái là việc tính J(x)
+> rẻ, chỉ giúp tính phần J(x)TJ(x) của Hessian là rẻ thôi, còn cái term thứ hai
+> thì vẫn liên quan đến Hessian của rj(x), vẫn tốn. Tuy nhiên, đại ý là vì vài lí
+> do thì phần đầu mới đóng vai trò quan trọng, thành ra nói chung ta vẫn
+> được lợi ích.
+
+<br>
+
+<a id="node-96"></a>
+
+<p align="center"><kbd><img src="assets/922af395644376dcd64979f4e462307de1a01568.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì chương này ta sẽ bàn về các thuật toán giải bài toán least-square và
+> trong đó ta sẽ thấy chúng đều cố gắng khai thác tính chất vừa nói trên.
+>
+> Và ta sẽ thấy những thuật toán đó đều thuộc vào hai cách tiếp cận lớn mà ta
+> đã học Line Search và Trust Region. Cũng như là với mỗi cách, cũng chia ra
+> là tiếp cận theo Newton và quasi-Newton method.
 
 <br>
 
