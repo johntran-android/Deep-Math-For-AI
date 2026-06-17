@@ -1,6 +1,6 @@
 # 2.3 Gaussian Distribution
 
-📊 **Progress:** `11` Notes | `15` Screenshots
+📊 **Progress:** `13` Notes | `17` Screenshots
 
 ---
 <a id="node-205"></a>
@@ -839,6 +839,263 @@
 > thì lúc này, cái cụm { ∫ [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-(1/2) **z**T Σinv **z**] d**z** } chính là marginalizing pdf của Z over R^D. nên theo tính valid của pdf, nó phải bằng 1.
 >
 > Kết quả term 2 bằng **μ**. giúp ta có E**X** = **μ**, giúp chứng minh μ chính là mean của Normal(**μ**, Σ).
+
+<br>
+
+<a id="node-216"></a>
+
+<p align="center"><kbd><img src="assets/00e6eac41f949506687f6f2b7f9a7054d417ff68.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo xét qua second orther moment. Như nãy đã nói, n'th order moment của X là
+> E[X^n], nên 2nd order moment là E[X^2]. Tuy nhiên với D-dimensional random variable
+> vector **X** (có D variables X1, X2,...XD) thì ta sẽ biết thêm một kiến thức đó là, sẽ có D^2
+> cái 2nd order moment, mỗi cái là E[XiXj] với i,j=1,2...D. Và có thể gom lại để thể hiện cả
+> đám ở dạng matrix E[**XX**T].
+>
+> Dừng lại chút để nói rõ thêm về cái này: Vì sao E[**XX**T] là matrix? → à đơn giản là vì
+> **XX**T (**X** nhân với **X** transpose), thì đây chính là outer product của vector **X** và
+> chính nó, kết quả, như đã biết trong MIT 1806, sẽ là một rank 1 matrix. (sẵn nói luôn cho
+> vui, vì sao rank 1? Là vì ta sẽ coi đây là phép nhân hai matrix có shape D-1 nhân với matrix
+> 1-D, theo góc nhìn thứ hai khi nhân matrix A với B, thì cột j của AB là linear combination
+> các cột của A bởi hệ số là cột j của B. Vậy thì A=**X** là matrix có mỗi 1 cột, nên cột j của
+> AB=**XX**T sẽ là chỉ là phần tử thứ j của vector **X** nhân với cột của A, tức là vector **X**,
+> như vậy có thể thấy mọi cột của **XX**T đều chỉ là vector **X** nhân với một số nào đó, là
+> phần tử của vector **X**, vậy nên chắc chắn nó chỉ có duy nhất một cột độc lập ⇨ rank = 1.
+> )
+>
+> Tiếp, thế thì **XX**T là matrix, và vì **X** là random variable vector, nên **XX**T là một
+> random variable matrix. Và kì vọng của nó, sẽ là matrix có các component là kì vọng của
+> từng phần tử của matrix, nên dĩ nhiên E[**XX**T] là matrix.
+>
+> (Lại phải nhắc lại phòng khi có người đọc bản note của mình đó là ở sách này gs Bishop
+> ko dùng cách quy ước kí hiệu thông thường của toán học thống kê xác suất như trong
+> sách Casella, Stat110 - Havard đó là viết hoa với tên biến, viết thường với giá trị biến, tuy
+> vậy ông vẫn viết đậm ở vector, viết nét mảnh ở biến scalar. Cách làm này có thể có chút
+> tiện lợi nhưng với mình là người học Stat110 và Casella, việc này khiến nó thấy sao sao á,
+> nên mình sẽ vẫn theo kí hiệu của Stat110 và Casella, trong đó ngoài chuyện viết hoa,
+> thường, mình sẽ thường dùng chữ f để chỉ phân phối xác suất thay vì p. Có thể qua bối
+> cảnh khác ở những chương sau, ta sẽ có lúc phải theo cách ghi của gs Bishop.)
+>
+> Rồi, thế thì vì sao có công thức E[**XX**T] dài thòng lòng như trong đoạn này?
+>
+> Thật ra chỉ là theo định nghĩa của kì vọng và LOTUS, EX là weighted average của các
+> possible value của X, với weight là xác suất tương ứng: P(X=x) (giả sử xét discrete random
+> variable X) ⇨ EX = Σ{mọi possible value x của X} xP(X=x), và với continous variable thì EX
+> = ∫xfX(x)dx với fX(x) là pdf của X.
+>
+> Thế thì, giả sử ta có Y = g(X), thì đáng lẽ để tính EY ta phải tìm pdf/pmf của Y. Nhưng
+> LOTUS cho phép tính EY mà chỉ việc xài luôn pdf/pmf của X: EY = Eg(X) = ∫g(x)fX(x)dx.
+>
+> Tiếp, giả sử ta có hai biến X,Y. và muốn tính kì vọng của Z với Z = g(X,Y). Thì ta cũng có
+> cái gọi là 2D LOTUS, cho phép tính EZ mà chỉ cần dùng joint pdf của X, Y kí hiệu fX,Y(x,y)
+> chứ khỏi phải dùng pdf/pmf của Z: EZ = ∫∫g(x,y)fX,Y(x, y)dxdy.
+>
+> Vậy thì quay lại đây cũng y chang vậy, như đã nói, E[XXT] là matrix mà mỗi phần tử ij là
+> E[XiXj]. Vậy thì E[XiXj] có thể thấy nó chính là E[g(Xi,Xj)] với g(xi,xj) = xixj. Nên theo 2D
+> LOTUS, ta có E[XiXj] = ∫∫xixj fXiXj(xi,xj)dxidxj.
+>
+> Tuy nhiên, ta có thể coi XiXj là một hàm của X1,X2,...XD luôn: ví dụ g(x1,x2,...xD) = x1x2,
+> vẫn được, để rồi khi đó thay vì 2D LOTUS, ta có D-D LOTUS luôn: E[XiXj] = E[g(X1,X2,...
+> XD)]
+>
+> = ∫..∫ g(x1,x2,..xD) f(x1,x2...xD) dx1dx2...dxD
+>
+> (f(x1,..xD) là joint pdf của X1,..XD), nói cách khác chính là f**X**(**x**), mà đang xét ở đây
+> là pdf của N(**μ**, **Σ**) đó
+>
+> viết gọn lại thành:
+>
+> ∫ xixj f(**x**)d**x**.
+>
+> Như vậy phần tử ij của E[**XX**T] sẽ có dạng ∫xixj f(**x**)d**x**
+
+<br>
+
+<a id="node-217"></a>
+
+<p align="center"><kbd><img src="assets/df6bde5dee0e5f7b65adb4759ffd8bd6c8321b90.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì, ta đang có E[**XX**T] = [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ (**z**+**μ**)(**z**+**μ**)T exp {-(1/2)**z**T Σinv **z**} d**z**
+>
+> Tiếp theo ta sẽ mở cái tích (**z**+**μ**)(**z**+**μ**)T ra: = (**z**+**μ**)(**z**T+**μ**T) = **zz**T+**μz**T+ **zμ**T+**μμ**T, vậy thì chú ý ở đây ko phải mr Bishop nói hai cục
+> **μz**T và **zμ**T cancel nhau đâu nhé, mà phải hiểu là, ta tách cái tích phân này thành tổng của 4 cái tích phân:
+>
+> [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **zz**T exp {-(1/2)**z**T Σinv **z**} d**z** +
+>
+> [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **μz**T exp {-(1/2)**z**T Σinv **z**} d**z** +
+>
+> [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **zμ**T exp {-(1/2)**z**T Σinv **z**} d**z** +
+>
+> [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **μμ**T, exp {-(1/2)**z**T Σinv **z**} d**z** +
+>
+> Và xét cái thứ 2, và 3, ta sẽ thấy hàm trong tích phân là hàm lẻ, nên tích phân trên toàn miền sẽ bằng 0, đây mới là ý của gs khi nói "the cross-term involving **μz**T và
+> **zμ**T will again vanish by symmetry"
+>
+> Còn cái thứ 4, vì **μμ**T ko dính tới **z**, nên đưa ra ngoài, đồng thời đưa hai cụm constant vào trong lại, để có:
+>
+> **μμ**T ∫ [1/(2π)^(D/2)] [1/|Σ|^(1/2)] exp {-(1/2)**z**T Σinv **z**} d**z**
+>
+> và cái tích phân này, chính là hành động marginalizing một hàm pdf của Z ~ Normal(0, **Σ**) trên toàn miền, nên theo tính valid của pdf, thì nó phải bằng 1 (đây chính là
+> khúc ổng nói "**which itself is unity, because Gaussian distribution is normalized**". Vậy term 4 chỉ còn **μμ**T, để nó ở đó.
+>
+> Giờ quay lại term 1 trong 4 cái ở trên: [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **zz**T exp {-(1/2)**z**T Σinv **z**} d**z**
+>
+> Gs mới nói tiếp, ta sẽ dùng kết quả của việc phân tách eigendecomposition (cái chữ decomposition vốn có nghĩa là phân tách, phân rã) đối với matrix covariance Σ. Là
+> sao?
+>
+> Là vầy, làm lại cho nhớ ko thừa, ta đã biết Σ là symmetric, và Σinv cũng vậy. Theo MIT 1806 đã học, một khi ta có matrix đối xứng thì eigenvalue của nó chắc chắn có
+> giá trị thực và luôn có thể chọn một bộ eigenvector orthognormal với đủ số lượng để span toàn bộ R^D (D là kích thước matrix). Và ở đây ta đã gọi **u**1,...**u**D là bộ
+> eigenvector như vậy của Σ (và cũng là của Σinv), đặt nó thành các hàng của U, cũng là các cột của UT, thì ta sẽ có phép eigendecomposition của Σ sẽ là: Σinv = (UT)T
+> Λinv UT = U Λinv UT với Λ là diag(1/λ1,..1/λD), diagonal matrix có các eigenvalues của Σinv (cũng là nghịch đảo các eigenvalue của Σ) trên đường chéo.
+>
+> (Chỗ này có chút dễ confuse do cách mr Bishop gọi U là matrix có các hàng là các eigenvector **u**1,..**u**D thay vì đặt chúng làm cột của U, cách làm này khiến UT
+> mới là matrix có các cột là eigenvector. Và theo lí thuyết MIT 1806, thì khi Q là matrix có các cột là eigenvector của A, Λ là matrix các eigenvalues, thì ta có A = QT Λ Q.
+> Vậy áp dụng vào Σ thì Σ = (UT)T Λinv UT, và tiếp tục = U Λinv UT)
+>
+> Tiếp, xét bản chất của UT Λinv U, có thể hiểu theo góc nhìn nhân hai matrix UT, và ΛinvU, với UT có các cột như đã nói, là eigenvectors **u**1,...**u**D. Và ΛinvU là
+> matrix có các hàng là **u**1/λ1, **u**2/λ2,.... (chú ý, phải hiểu **u**1/λ1 là lấy scalar 1//λ1 nhân vector = vector). Theo 4 góc nhìn nhân hai matrix thầy Strang đã dạy thì
+> góc nhìn thứ 4 sẽ thấy nó là tổng các rank 1 matrix tạo bởi các outer product của một cột của UT và một hàng của Λinv U. Từ đó ta có:
+>
+> Σinv = UT Λinv U = Σi=1:D **u**i (λ**u**i)T = Σi=1:D **u**i**u**iT/λi, viết gọn là Σi **u**i**u**iT/λi
+>
+> Vậy thế vào [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **zz**T exp {-(1/2)**z**T Σinv **z**} d**z**, ta có:
+>
+> [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **zz**T exp {-(1/2)**z**T (Σi **u**i**u**iT/λi) **z**} d**z**
+>
+> Xét cái cục này **z**T (Σi **u**i**u**iT/λi) **z**, đưa **z** vào trong tổng, = Σi [**z**T(**u**i**u**iT/λi)**z**] = Σi [(**z**T**u**i)(**u**iT**z**)/λi]
+>
+> Đặt yi = **z**T**u**i, chú ý, nó là scalar, kết quả của dot product của hai vector **z** và **u**i, và vì là scalar nên yi = yiT,
+>
+> .. = Σi [(yi yiT)/λi] = Σi [(yi yi)/λi] = Σi (yi^2/λi), hay chuyển index variable thành k (tất nhiên vẫn hiểu k=1:D) để chuẩn bị cho lát nữa, ta có
+>
+> **z**T (Σi **u**i**u**iT/λi) **z** = Σk (yk^2/λk)
+>
+> Rồi, nãy giờ, ta chỉ mới dùng cái ý mà gs Bishop nói "make use of eigenvector expansion of covariance matrix" để mà giải thích vì sao **z**T (Σi **u**i**u**iT/λi) **z** = Σk
+> (yk^2/λk), giúp ta hiểu ở đâu ra có cái cục Σk (yk^2/2λk) trong công thức 2.61 trong sách.
+>
+> Thế thì sau ý đó ông nói "together with the completeness of the eigenvectors set". Là sao? Thật ra ko có gì khó, nó chính là nói cái ý mà ta nói ở trên, rằng, theo thầy
+> Strang đã dạy trong MIT 1806, matrix A size nxn đối xứng thì luôn có thể có một bộ eigenvector orthogonal và hơn nữa chúng còn đủ số lượng n vector độc lập. Có
+> nghĩa là, không chỉ chúng có một bộ eigenvector orthogonal, mà chúng còn có đủ n vector. Phải nhấn mạnh ý này là vì, không phải cứ là matrix vuông size nxn thì sẽ
+> luôn có đủ n eigenvector độc lập, vì nếu như nó bị defective, là khi có eigenvalue trùng nhau, thì khi đó trong n eigenvector, thì sẽ có những cái phụ thuộc nhau (trùng
+> phương nhau), dẫn đến ta ko có một bộ n vector độc lập, và dẫn đến chúng không thể span được toàn bộ R^n, cũng là cách nói của việc, chúng không làm thành basis
+> của R^n, và cũng đồng nghĩa luôn với việc nếu chỉ lấy các vector độc lập, và orthogonal đó ra, đặt các vector đó vào các cột của Q, thì Q không phải là orthogonal
+> matrix, là cho dù bộ vector đó vẫn được gọi là orthogonal, nhưng vì không đủ n vector, nên Q không vuông, nên dù vẫn có các cột orthogonal, hoặc chuẩn hóa thành
+> unit norm, để thành orthonormal thì nó vẫn không được gọi là orthogonal matrix, mà chỉ đơn giản gọi là matrix có các cột orthonormal mà thôi.
+>
+> Vậy thì quay lại đây, việc Σ đối xứng giúp không những eigenvector orthogonal mà còn có đủ D cái. Thành ra chúng sẽ tạo một basis để span toàn bộ R^D Đây chính là
+> ý "completeness of the eigenvectors set" của ngày Bishop. Và như vậy, bất kì vector **z** nào cũng đều có thể được thể hiện bởi linear combination của các basis vector
+> **u**i này.
+>
+> Thế thì, quay lại nói về vector **z**, vừa rồi mình đã có đặt yi = **z**T**u**i. Thì chỗ này ta sẽ dùng một kiến thức nữa của MIT 1806: Là khi ta có một unit vector **q**, thì
+> **a**T**q**, chính là độ dài của a trên q, và vì q có độ dài đơn vị, nên đây cũng chính là tọa độ của a trên trục q. Và nếu ta có một orthogonal basis **q**1, **q**2,...**q**n,
+> thì **a**T**q**1, **a**T**q**2,....**a**T**q**n chính là tọa độ của a trong hệ tọa độ basis **q**1, **q**2,.., đồng nghĩa: **a** = (**a**T**q**1) **q**1 + (**a**T**q**2) **q**2 + ...+
+> (**a**T**q**n) **q**n
+>
+> (Nếu muốn nói rõ hơn thì có thể sẵn tiện ôn lại cái gốc của nó: Phép chiếu Gram-Smidth mình sẽ ghi ở cuối) Như vậy, y1,...yD chính là tọa độ của **z** trong basis
+> **u**1,...**u**D.Và do đó: **z** = y1 **u**1 + y2 **u**2 + .. = Σj=1:D yj**u**j, viết gọn Σj yj**u**j → đây chính là 2.60.
+>
+> Vậy thì tới đây đã đủ nguyên liệu, ráp vào, và bây giờ tích phân cũng trở thành theo **y** thay vì **z.** Ta có
+>
+> [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **zz**T exp {-(1/2)**z**T (Σi **u**i**u**iT/λi) **z**} d**z**
+>
+> = [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ (Σj yj**u**j) (Σj yj**u**j)T exp {-(1/2) [Σk (yk^2/λk)] } d**y**
+>
+> Xét ∫ (Σj yj**u**j) (Σj yj**u**j)T exp {-(1/2) [Σk (yk^2/λk)] } d**y**:
+>
+> để dễ thấy ta xem D = 2 thì cái này là:
+>
+> ∫ (y1**u**1 + y2**u**2)(y1**u**1 + y2**u**2)T [scalar h(**y**)] d**z**, với (h(**y**) = exp{...})
+>
+> Ta sẽ thấy, bằng cách tách cái tích (y1**u**1 + y2**u**2)(y1**u**1 + y2**u**2)T, ta sẽ tách cái tích phân này thành tổng của 4 tích phân mà mỗi cái gắn với một trong 4
+> term: (y1^2)**u**1(**u**1T), y1y2**u**1(**u**2T), y2y1**u**2(**u**1T), (y2^2)**u**2(**u**2T).
+>
+> Có nghĩa là ta sẽ có Σi=1:2 Σj=1:2 ∫ yi yj **u**i **u**jT h(**y**) d**y**
+>
+> Vậy nên [1/(2π)^(D/2)] [1/|Σ|^(1/2)]∫ (Σj yj**u**j) (Σj yj**u**j)T exp {-(1/2) [Σk (yk^2/λk)] } d**y**
+>
+> = [1/(2π)^(D/2)] [1/|Σ|^(1/2)] Σi=1:D Σj=1:D ∫ yi yj **u**i **u**jT exp {-[Σk (yk^2/λk)] } d**y**
+>
+> Đưa yiyj ra cuối, và đưa uiuj ra ngoài tích phân
+>
+> = [1/(2π)^(D/2)] [1/|Σ|^(1/2)] Σi=1:D Σj=1:D **u**i **u**jT ∫ exp {-[Σk (yk^2/λk)] } yi yj d**y**
+>
+> → đây chính là kết quả trong sách (cái dấu = thứ 2)
+>
+> Để làm tiếp, ông nói ta sẽ xài kết quả 1.50, 2.55 và 2.48. Là như sau:
+>
+> Ta đưa cái cụm hằng số vào lại trong tổn và vào luôn trong tích phân:
+>
+> = Σi=1:D Σj=1:D **u**i **u**jT ∫ [1/(2π)^(D/2)] [1/|Σ|^(1/2)] exp {-[Σk (yk^2/λk)] } yi yj d**y**
+>
+> Xét cụm này: ∫ [1/(2π)^(D/2)] [1/|Σ|^(1/2)] exp {-[Σk (yk^2/λk)] } yi yj d**y**
+>
+> Dùng 2.55 |Σ|^(1/2) = Πj=1:D λj^(1/2)
+>
+> = ∫ [1/(2π)^(D/2)] [1/(Πj=1:D λj^(1/2))] exp {-[Σk (yk^2/λk)] } yi yj d**y**
+>
+> = ∫ Πj=1:D [1/(√(2πλj)] exp {-[Σk (yk^2/λk)] } yi yj d**y**
+>
+> nếu i khác j:
+>
+> = ∫ Πj=1:D [1/(√(2πλj)] exp {-[Σk (yk^2/λk)] } yi yj dy1dy2...dyD
+>
+> = ∫ Πj=1:D [1/(√(2πλj)] exp {-y1^2/λ1}...exp {-yD^2/λD} yi yj dy1dy2...dyD
+>
+> = ∫ Πj=1:D [1/(√(2πλj)] exp {-y1^2/λ1} y1 ...exp {-yD^2/λD} yi yj dy1dy2...dyD
+>
+> khi đó ta sẽ tách thành tích các tích phân:
+>
+> [ ∫ 1/(√(2πλ1) exp {-y1^2/λ1} y dy1 ] [∫1/(√(2πλ2) exp {-yD^2/λD} dy2] ...[∫ 1/(√(2πλi)exp {-yi^2/λi} yi dyi]... [ ∫ 1/(√(2πλj) exp {-yj^2/λj} yj dyj ]...
+>
+> Và trong cái tích này, hai cái tích phân ∫ 1/(√(2πλi) exp {-yi^2/λi} yi dyi, và ∫ 1/(√(2πλj) exp {-yj^2/λj} yj dyj đều là tích phân của hàm lẽ trên toàn miền, nên đều = 0, hoặc
+> có thể nhìn ra nó đều là mean E(Yi) của Yi ~ normal(0, λi) và E(Yj) của normal(0, λj). Còn những cụm khác đều có dạng của tích phân hàm normal(0, λi) trên toàn miền,
+> nên đều bằng 1. Nhưng dù sao, thì vì có thừa số - 0, nên cả cái tích này bằng: 1 nhân 1 nhân ... nhân 0 nhân 0 nhân 1 nhân 1 = 0.
+>
+> Còn nếu i = j, thì nó sẽ trở thành 1 nhân 1 nhân .....[∫ 1/(√(2πλi) exp {-yi^2/λi} (yi^2)dyi] nhân 1 nhân ... nhân 1 
+>
+> = ∫ 1/(√(2πλi) exp {-yi^2/λi} yi^2 dyi
+>
+> và đây chính là có dạng của việc tính ∫yi^2 f(yi)dx với f(yi) là pdf của normal(0, λi). Nên kết quả chính là second moement, E[Yi^2] với Yi~ Normal(0, λj). Mà ta biết VarX
+> (=λi) = EYi^2 - (EYi)^2 ⇨ EYi^2 = VarYi + (EYi)^2 = λi + 0 = λi. Nên kết quả tích phân này là bằng λi.
+>
+> Như vậy, quay lại đây, ta thấy khi xét cụm Σi=1:D Σj=1:D **u**i **u**jT ∫ [1/(2π)^(D/2)] [1/|Σ|^(1/2)] exp {-[Σk (yk^2/λk)] } yi yj d**y**, thì bản chất của nó là một cái tổng lớn,
+> mà khi i khác j thì cái tích phân = 0, nên hạng tử cũng bằng 0. Còn i = j thì tích phân bằng λi.
+>
+> Do đó, cái tổng này chỉ còn lại:
+>
+> Σi=1:D **u**i **u**iT λi
+>
+> Và, má ơi, đây chính là gì, chính là Σ, mà ta đã phân tích ở 2.48 hoặc cũng phân tích lại ở đầu cái note này.
+>
+> Như vậy cái term 1, [1/(2π)^(D/2)] [1/|Σ|^(1/2)] ∫ **zz**T exp {-(1/2)**z**T Σinv **z**} d**z** = Σ.
+>
+> Và như vậy ta đã hiểu hết toàn bộ bước chứng minh E[**XX**T] với **X** ~ Normal(**μ**, Σ) chính là = Σ + **μμ**T
+>
+> (Ôn lại phần chiếu Gramd Smith với orthogonal basis giúp giải thích vì sao **a** = Σi=1:n (**a**iT**q**i) **q**i:
+>
+> Ta có vector **a** và muốn thể hiện nó trong orthogonal basis **q**'s: **a** = a1 **q**1 + a2 **q**2 + .. an **q**n.
+>
+> Đầu tiên, chiếu **a** lên **q**1. gọi **p**1 là hình chiếu của a lên **q**1, cũng chính là nói **p**1 ∈ span {**q**1}: p1 = α**q**1. Và phần dư **r**1 = **a** - **p**1 = **a** -
+> α**q**1 sẽ vuông góc với span {**q**1}, và do đó, nó nằm trong orthogonal complement của span {**q**1}
+>
+> ⇨ **r**1T**q**1 = 0 ⇔ (**a** - α**q**1)T**q**1 = 0 ⇔ **a**T**q**1 = α**q**1T**q**1 ⇔ **a**T**q**1/**q**1T**q**1 = α ⇔ **a**T**q**1/1 (do q1 là unit vector → q1Tq1 = ||q1||^2 =
+> 1) = **a**T**q**1. Vậy α = **a**T**q**1. Nên a = **p**1 + **r**1 = α**q**1 + **r**1 = (**a**T**q**1) **q**1 + **r**1.
+>
+> Tiếp theo, xét **r**1, nó nằm trong orthogonal complent của span {**q**1}, cũng chính là span {**q**2,..**q**n}, ta sẽ chiếu tách nó thành **p**2 là hình chiếu của **r**1 lên
+> span {**q**2} và phần dư **r**2 = **r**1 - **p**2.
+>
+> Tương tự, **p**2 ∈ span {**q**2} nên **p**2 = β **q**2 phần dư **r**2 sẽ orthogonal với **q**2: (**r**1 - **p**2)T**q**2 = 0 ⇔ **r**1T**q**2 = **p**2T**q**2 ⇔ **r**1T**q**2 = β
+> **q**2T**q**2 ⇔ **r**1T**q**2 = β (do q2 unit vector. ||**q**2|| = 1) Vậy β = **r**1T**q**2 = (**a** - **p**1)T**q**2 = (**a** - α**q**1)T**q**2 = **a**T**q**2 - α**q**1T**q**2, và cái
+> này thì bằng **a**T**q**2 do q1,q2 vuông góc (bởi đã nói q1,..qn là bộ orthogonal basis). Vậy β = **a**T**q**2.
+>
+> Nên đến đây ta đã có **a** = α**q**1 + **r**1 = α**q**1 + β**q**2 + **r**2 = (**a**T**q**1) **q**1 + (aT**q**2) **q**2 + **r**2 với cái đầu là hình chiếu của **a** lên **q**1, cái
+> sau là hình chiếu của phần dư **r**1 lên **q**2, nhưng vì bộ orthogonal basis, nên nó cũng đồng thời chính là hình chiếu của **a** lên **q**2.
+>
+> Và tiếp tục như vậy ta sẽ thấy kết quả là: a sẽ tách thành Σi=1:n (**a**iT**q**i) **q**i
+>
+> Và đây là điều chỉ có được nếu ta dùng một orthogonal basis.)
 
 <br>
 
