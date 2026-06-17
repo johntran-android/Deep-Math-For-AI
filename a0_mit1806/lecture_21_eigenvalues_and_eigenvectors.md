@@ -38,8 +38,8 @@
 >
 > Nhưng có một số vector vẫn **giữ nguyên phương** sau khi
 > nhân với A, **chỉ bị scale bởi một scalar thôi**. Đó chính là
-> \**EIGENVECTORS** VÀ SCALAR X CHÍNH LÀ
-> \**EIGENVALUE** Và nên hiểu thế này, input vector x đương nhiên là thuộc
+> **EIGENVECTORS** VÀ SCALAR X CHÍNH LÀ
+> **EIGENVALUE** Và nên hiểu thế này, input vector x đương nhiên là thuộc
 > Rn (thì mới nhân với A shape m,n được, hay hiểu theo cách
 > x là vector hệ số của linear combination của A's columns
 > nên đương nhiên nó phải có n components)
@@ -71,11 +71,11 @@
 > Ax = 0*x**
 >
 > Đương nhiên khi nói "tìm eigenvector của matrix", ta chỉ
-> \**tìm các vector độc lập**, chứ không kể scaled của nó.
+> **tìm các vector độc lập**, chứ không kể scaled của nó.
 >
 > VÀ CHÚ Ý ZERO VECTOR KHÔNG PHẢI EIGENVECTOR
 > DÙ A*ZERO_VECTOR = 0*0. VÌ VỚI EIGENVECTOR TA
-> \**CHỈ XÉT CÁC NON-ZERO VECTOR**
+> **CHỈ XÉT CÁC NON-ZERO VECTOR**
 
 <br>
 
@@ -117,7 +117,7 @@
 > Thế thì ta sẽ **đi tìm mọi eigenvector và eigenvalue**. Và gs
 > cảnh báo rằng ta không còn làm việc với Ax=b nữa, mà
 > Ax=λ*x thì **cả λ và x đều là variable**. Do đó ta
-> \**không còn dùng elimination** được nữa
+> **không còn dùng elimination** được nữa
 
 <br>
 
@@ -127,7 +127,7 @@
 
 > [!NOTE]
 > gs đề nghị ta sẽ thử làm việc với **Projection matrix** và
-> \**tìm eigenvector và eigenvalue của nó.**
+> **tìm eigenvector và eigenvalue của nó.**
 >
 > Nhớ rằng từ bài trước ta đã biết Projection matrix **cũng là
 > square matrix**. Và nó làm nhiệm vụ là từ vector b, tạo ra,
@@ -184,7 +184,7 @@
 > plane** sẽ đều dc project **thành 0.**
 >
 > Px = 0.x nên mọi vector trong nullspace sẽ đều là
-> \**eigenvector** với **eigenvalue = 0**
+> **eigenvector** với **eigenvalue = 0**
 
 <br>
 
@@ -204,7 +204,7 @@
 >
 > Vậy thì **dễ thấy mọi vector có hai component giống nhau**
 > sẽ không thay đổi. Và với 2D vector thì đây là những
-> \**vector nằm trong đường thẳng y = x**
+> **vector nằm trong đường thẳng y = x**
 
 <br>
 
@@ -216,10 +216,10 @@
 
 > [!NOTE]
 > Gs: Đúng vậy, ta có thể thấy hai eigenvectors với
-> \**eigenvalue = 1 và -1**.
+> **eigenvalue = 1 và -1**.
 >
 > Hình dung cái permutation matrix này chính là phép
-> \**reflect qua đường thẳng y = x.**
+> **reflect qua đường thẳng y = x.**
 
 <br>
 
@@ -252,7 +252,7 @@
 
 > [!NOTE]
 > ta sẽ bắt đầu tìm **quy trình để tìm egenvalue** và
-> \**eigenvector**. Thế thì ta có thể chuyển **λ*x qua bên
+> **eigenvector**. Thế thì ta có thể chuyển **λ*x qua bên
 > trái** và để x ra ngoài, để trở thành **(A - λ*I)x = 0**
 >
 > λ phải nhân với I vì nó là scalar, **nhân với I để thành
@@ -308,7 +308,7 @@
 > để **xác định các pivot cols** của (A-lambda*I), từ đó có **free  cols**.
 >
 > Các **free cols sẽ ứng với free variable**. Để rồi ta sẽ chọn
-> \**free var = 1, các free vars còn lại = 0**, thay vào tìm pivot
+> **free var = 1, các free vars còn lại = 0**, thay vào tìm pivot
 > var. Thế là có một **special solutio**n, chính là **một vector
 > trong basis** của nullspace.
 >
@@ -351,7 +351,7 @@
 > [!NOTE]
 > Rồi, ta có thể **factorize** nó thành **tích** của: 
 >
-> \**(λ - 4)*(λ - 2)** để equation (λ - 4)*(λ - 2) = 0  có 2 giá trị λ
+> **(λ - 4)*(λ - 2)** để equation (λ - 4)*(λ - 2) = 0  có 2 giá trị λ
 
 <br>
 
@@ -362,10 +362,10 @@
 > [!NOTE]
 > Và từ đó, lần lượt ta sẽ **tìm nullspace** của matrix
 > (**A** - **4*I)**,  ta sẽ có **eigenvectors** ứng với
-> \**eigenvalue = 4**
+> **eigenvalue = 4**
 >
 > Và tìm **nullspace của matrix (A - 2*I)**, ta sẽ có
-> \**eigenvectors** ứng với **eigenvalue = 2** 
+> **eigenvectors** ứng với **eigenvalue = 2** 
 >
 > Gs: Vậy  có thể thấy A - 4*I là matrix như thế
 > nào?
@@ -383,7 +383,7 @@
 > sẽ chứa các eigenvectors tương ứng với eigenvalue = 4
 >
 > Và có thể **dễ thấy một vector** trong nullspace là **[1 1]** vì
-> \**components** của nó giúp **combine hai columns thành zero**.
+> **components** của nó giúp **combine hai columns thành zero**.
 >
 > Và ta cũng có thể **kết luận luôn**, đó **chính là basis** của
 > nullspace. (vì matrix có **2 cols**, **một cols là pivot cols**, **một**
@@ -404,7 +404,7 @@
 
 > [!NOTE]
 > Còn với λ = 2, ta có A - 2*I là vầy. Và đương nhiên nó
-> \**cũng** **singular**, và ta có thể **nhìn ra một vector của
+> **cũng** **singular**, và ta có thể **nhìn ra một vector của
 > nullspace là [-1, 1]** (đương nhiên cũng là một basis vì
 > dim của nullspace cũng bằng 1)
 >
@@ -426,7 +426,7 @@
 > so với A [3 1; 1 3] **chỉ là cộng thêm 3*I**
 >
 > Và ta thấy hai **eigen-values của nó cũng tăng lên 3**. Còn
-> \**eigenvector thì giữ nguyên**
+> **eigenvector thì giữ nguyên**
 
 <br>
 
@@ -454,11 +454,11 @@
 > [!NOTE]
 > Gs đề nghị ta suy nghĩ thử: Giả sửa cho **λ là
 > eigenvalue của A và B** là có **eigenvalues** là **α** thì
-> \**eigenvalue của A + B là gì.**
+> **eigenvalue của A + B là gì.**
 >
 > Hay gs hỏi giả sử tôi lập luận thế này, vì **Ax = λ*x** và
-> \**Bx = α*x** nên cộng hai vế của hai equation lại ta có
-> \**(A+B)x = (λ+α)x** từ đó suy ra eigenvalue của A+B là
+> **Bx = α*x** nên cộng hai vế của hai equation lại ta có
+> **(A+B)x = (λ+α)x** từ đó suy ra eigenvalue của A+B là
 > λ+α được không? **Lập luận này sai chỗ nào**.
 >
 > Me: Có thể thấy nó **sai ở chỗ x không giống nhau**.
@@ -486,7 +486,7 @@
 > [!NOTE]
 > Nên phải ghi là **By = α*y** và cộng hai vế của hai
 > equation lại **chẳng giúp ta rút ra được gì**. Do đó việc
-> \**biết eigenvalue của A, B không giúp tính eigenvalue
+> **biết eigenvalue của A, B không giúp tính eigenvalue
 > của A+B hay A*B**
 >
 > Do đó **chỉ khi B là α*I thì khi đó A+B = A+α*I** thì như
@@ -557,10 +557,10 @@
 > Thế thì, ta cứ đi **tìm eigenvector** theo **quy trình đã
 > biết** đó là giải **characteristic equation:** **det(Q-λ*I) =
 > 0** và ta có **λ**2 + 1 = 0**. Và equation này có 2 nghiệm
-> \**PHỨC** (**COMPLEX**  NUMBER)
+> **PHỨC** (**COMPLEX**  NUMBER)
 >
 > Và gs cho biết **matrix Q** dù là có **giá trị thực** nhưng
-> \**eigenvalue** của nó có **giá trị phức**. Vẫn thõa mãn: λ1
+> **eigenvalue** của nó có **giá trị phức**. Vẫn thõa mãn: λ1
 > \+ λ2 = 0 và λ1*λ2 = 1
 
 <br>
@@ -588,7 +588,7 @@
 
 > [!NOTE]
 > Và ở thái cực còn lại khi ta có ở đây gọi là
-> \**ANTI-SYMMETRIC MATRIX** thì ta sẽ có  **MỌI
+> **ANTI-SYMMETRIC MATRIX** thì ta sẽ có  **MỌI
 > EIGENVALUE ĐỀU SỐ PHỨC**
 
 > [!NOTE]
@@ -603,10 +603,10 @@
 
 > [!NOTE]
 > Gs dùng ví dụ này để nói về eigenvector / eigenvalue của
-> \**TRIANGULAR** MATRIX.
+> **TRIANGULAR** MATRIX.
 >
 > Và ông cho biết, với matrix **TRIANGULAR**, eigenvalue
-> \**CHÍNH LÀ NẰM TRÊN ĐƯỜNG CHÉO, tức là, chúng cũng
+> **CHÍNH LÀ NẰM TRÊN ĐƯỜNG CHÉO, tức là, chúng cũng
 > chính là các Pivot**
 
 <br>
@@ -636,7 +636,7 @@
 
 > [!NOTE]
 > Thế thì với **eigenvalue** thì **KHÔNG CÓ VẤN ĐỀ GÌ**, nhìn
-> \**đường** **chéo** là biết ngay (ý là đang nói các triangular
+> **đường** **chéo** là biết ngay (ý là đang nói các triangular
 > matrix)
 >
 > Nhưng **vấn đề là** khi có **lambda**, **giải tìm ra eigenvector**.

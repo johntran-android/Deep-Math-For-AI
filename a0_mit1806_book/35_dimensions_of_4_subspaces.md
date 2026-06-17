@@ -19,7 +19,7 @@
 >
 > [**1** 3 5 **0** 7
 >
-> \**0** 0 0 **1** 2
+> **0** 0 0 **1** 2
 >
 > 0 0 0 0 0]
 >
@@ -48,7 +48,7 @@
 > vào giải tìm ra các pivot variables, thì ta sẽ có các SPECIAL SOLUTIONS VÀ CHÚNG SẼ TẠO NÊN
 > MỘT BASIS CỦA NULLSPACE. Thế thì PHẢI HIỂU **TẠI SAO CÁC SPECIAL SOLUTION LẠI LÀM
 > THÀNH MỘT BASIS CỦA NULLSPACE?** Đó là bởi vì, bằng cách set 1 cho free variable và 0 cho những thằng còn lại để tạo một special solution
-> \**TA ĐÃ AGAIN TẠO RA TRẠNG THÁI CÁC IDENTITY MATRIX NHƯ NÓI Ở TRÊN KHIẾN CHO TA CÓ
+> **TA ĐÃ AGAIN TẠO RA TRẠNG THÁI CÁC IDENTITY MATRIX NHƯ NÓI Ở TRÊN KHIẾN CHO TA CÓ
 > CÁC SPECIAL SOLUTION SẼ INDEPENDENT NHAU.** iv) **Null Space of R.T hay Left Null Space**: Cái này DÙ CÓ THỂ LẬP LUẬN GIỐNG VỚI
 > NULL-SPACE  CỦA R. NHƯNG ĐẶC BIỆT HƠN khi xét R.Ty = 0, thì cơ bản ta CÓ TRẠNG THÁI LÀ
 > CÁC FREE  COLS  ĐỀU BẰNG 0 HẾT RỒI.

@@ -36,12 +36,12 @@
 > Đại ý là gs nói về **một "kiểu" khác khi nghĩ về nhân A cho
 > B**, đó là góc nhìn **THEO CỘT**:
 >
-> \**Coi TỪNG CỘT của kết quả C** là kết quả của **phép
+> **Coi TỪNG CỘT của kết quả C** là kết quả của **phép
 > nhân A cho TỪNG CỘT của B**.
 >
 > Lẽ dĩ nhiên **ta đã biết nhân matrix A cho col vector (một
 > cột của B)** là **linear combination của các cột** của A với
-> \**coeffs là các component của col vector đó** Ví dụ cột 1 của C sẽ là linear combination các cột của A với
+> **coeffs là các component của col vector đó** Ví dụ cột 1 của C sẽ là linear combination các cột của A với
 > coefficients là cột 1 của B
 
 <br>
@@ -105,7 +105,7 @@
 
 > [!NOTE]
 > Và theo góc nhìn thứ 4 của việc nhân matrix A với B sẽ là:
-> \**tổng của các matrix con** (rank 1 matrix) tạo bởi việc **[column_i of A nhân row_i của B]**
+> **tổng của các matrix con** (rank 1 matrix) tạo bởi việc **[column_i of A nhân row_i của B]**
 
 <br>
 
@@ -122,7 +122,7 @@
 > line qua vector [1 6]**
 >
 > Và tương tự the **column space** của matrix này là
-> \**một line đi qua vector [2 3 4]**
+> **một line đi qua vector [2 3 4]**
 
 <br>
 
@@ -132,7 +132,7 @@
 
 > [!NOTE]
 > Về **inverse matrix** của một matrix A, câu hỏi lớn sẽ là
-> \**nó tồn tại không**, vào nếu có thì **làm sao tìm được
+> **nó tồn tại không**, vào nếu có thì **làm sao tìm được
 > nó**.
 >
 > Với **square** matrix, gs cho biết **nếu A_inv tồn tại**
@@ -156,7 +156,7 @@
 > [!NOTE]
 > Gs cho ví dụ về một **singular** (hay **non invertible**)
 > matrix. Và đặt câu hỏi là thử suy nghĩ xem tại sao nó
-> \**non-invertible.**
+> **non-invertible.**
 
 <br>
 
@@ -177,7 +177,7 @@
 
 > [!NOTE]
 > Dễ thấy nó là [-3, 1], nhớ việc **nhân A với một col** là
-> \**linear combination của các col của A** với **coeff là
+> **linear combination của các col của A** với **coeff là
 > unit của x**
 
 <br>
@@ -226,7 +226,7 @@
 > [!NOTE]
 > Gs cho ví dụ của **invertible matrix**. Thì gs cho rằng, **có
 > nhiều cách chứng minh nó invertible**, có người thích tính
-> \**determinant** thì tính và t**hấy nó khác 0 suy ra invertible.** 
+> **determinant** thì tính và t**hấy nó khác 0 suy ra invertible.** 
 >
 > Người thì **thích column** có thể lập luận rằng **các column
 > của nó khác hướng** (sẽ liên quan đến independent và
@@ -329,7 +329,7 @@
 > I** thì như trên đã biết nó **chẳng qua là việc biến đổi A
 > thông qua các matrix E**:
 >
-> \**E1@A** ở bước 1 và **E2@(E1@A)** ở bước 2.
+> **E1@A** ở bước 1 và **E2@(E1@A)** ở bước 2.
 >
 > Nên chung lại c**hẳng qua là nhân một matrix E
 > (=E2@E1) với A thô**i.
@@ -342,7 +342,7 @@
 
 > [!NOTE]
 > Như vậy **E@A ra I nên có thể suy ra E chính là Ainv** và
-> \**vì apply các bước y chang cho I (ở bên phải),** nên bên
+> **vì apply các bước y chang cho I (ở bên phải),** nên bên
 > phải nó sẽ là **E@I và cái này đương nhiên cũng vẫn là
 > E** (nhân với identity matrix).
 >

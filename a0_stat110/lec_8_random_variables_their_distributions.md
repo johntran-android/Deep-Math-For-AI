@@ -67,7 +67,7 @@
 
 > [!NOTE]
 > Trong đó **mỗi indicator variable X_j** sẽ có giá trị bằng **1** nếu trial
-> \**success** và bằng **0** nếu ngược lại trial **fail**.
+> **success** và bằng **0** nếu ngược lại trial **fail**.
 
 <br>
 
@@ -96,7 +96,7 @@
 >
 > Và ở đây ta có n random variable X1, X2 ...Xn, chúng **INDEPENDENT** vì
 > theo định nghĩa của Binomial là **n trial độc lập**. Và **IDENTICAL** có nghĩa là
-> \**CHÚNG CÙNG TUÂN THEO MỘT DISTRIBUTION**, ở đây nó là **Bern (p)**
+> **CHÚNG CÙNG TUÂN THEO MỘT DISTRIBUTION**, ở đây nó là **Bern (p)**
 
 > [!NOTE]
 > INDEPENDENT IDENTICALLY DISTRIBUTED (I.I.D)
@@ -121,7 +121,7 @@
 
 > [!NOTE]
 > Đại khái là gs nói lại **định nghĩa của random variable** chỉ là **function**
-> \**map** **giữa possible outcome s** trong **sample space** với **giá trị
+> **map** **giữa possible outcome s** trong **sample space** với **giá trị
 > numerical R**.
 >
 > Lấy hình ảnh pebble như thế này, ta có **sample space** với **các possible
@@ -145,13 +145,13 @@
 
 > [!NOTE]
 > Và khi đã hiểu **X = 7 là một event** thì **X ≤ x** (x là giá trị nào đó)
-> \**cũng là một EVENT** (là subset của sample space chứa các possible
+> **cũng là một EVENT** (là subset của sample space chứa các possible
 > outcomes có label bé hơn hoặc bằng 7)
 >
 > X ≤ x = {s ∈ S: X(s) ≤ x}
 >
 > Thì với event này ta cũng sẽ **quan tâm với xác suất của nó**. Và
-> \**function theo x kí hiệu F(x)** cho biết **xác suất của event** **(X ≤ x)**
+> **function theo x kí hiệu F(x)** cho biết **xác suất của event** **(X ≤ x)**
 > gọi là **CDF of X**
 >
 > (**CUMULATIVE DISTRIBUTION FUNCTION**)
@@ -203,9 +203,9 @@
 >
 > Và gọi P(X = a_j) là p_j thì ta sẽ phải có:
 >
-> \**p_j >= 0**
+> **p_j >= 0**
 >
-> \**Σ j p_j = 1**.
+> **Σ j p_j = 1**.
 >
 > Đây xuất phát từ **hai tính chất của xác suấ**t là **không âm**, và t**ổng xác suất của
 > mọi possible outcome bằng 1**.
@@ -276,10 +276,10 @@
 > [!NOTE]
 > Quay lại **một tính chất của Binomial** đã nói bữa trước đó là nếu
 >
-> \**X ~ Bin(n, p) và Y ~ Bin(m, p) thì (X+Y) ~ Bin(n+m, p)**
+> **X ~ Bin(n, p) và Y ~ Bin(m, p) thì (X+Y) ~ Bin(n+m, p)**
 >
 > Và bữa trước ta đã chứng minh nó theo "lập luận" / hay story. Đơn giản là vì
-> \**X là số lần success của n Bern(p) trials** và **Y là số lần success của m
+> **X là số lần success của n Bern(p) trials** và **Y là số lần success của m
 > Bern(p)** trials thì **X+Y đương nhiên sẽ là số lần success của n+m Bern(p)
 > trials.**
 >
@@ -329,13 +329,13 @@
 >
 > Xét event X+Y=k:
 >
-> \**(X+Y=k) = (X=0, X+Y=k) U (X=1, X+Y=k) U ... U (X=k, X+Y=k)**
+> **(X+Y=k) = (X=0, X+Y=k) U (X=1, X+Y=k) U ... U (X=k, X+Y=k)**
 >
 > => P(X+Y=k) = P( (X=0, X+Y=k) U (X=1, X+Y=k) U ... U (X=k, X+Y=k) ) (1)
 >
 > Tại sao, vì đây đơn thuần là từ set theory: Gọi event X+Y là B và X=i là A_i
 > thì  với mọi possible value của X ta sẽ có **các disjoint events A_i** mà
-> \**union của mọi A_i sẽ tạo nên sample space**. Thì khi đó, B = (B, A1) U
+> **union của mọi A_i sẽ tạo nên sample space**. Thì khi đó, B = (B, A1) U
 > (B, A2) U...(B, Aj) giống  như hình ảnh minh họa bằng pebble world của gs
 > B bữa trước (theo link nâu)
 >
@@ -365,7 +365,7 @@
 >
 > Từ (1), (3) ta kết luận:
 >
-> \**P(X+Y=k)** **=** **Σ j P(X+Y=k|X=j)*P(X=j)**
+> **P(X+Y=k)** **=** **Σ j P(X+Y=k|X=j)*P(X=j)**
 
 <br>
 
@@ -441,7 +441,7 @@
 >
 > Và P(X=j) theo công thức PMF của Binomial Bin(n, p)
 >
-> \**P(X=j) = (n choose j)*p^j*q^(n-j)**
+> **P(X=j) = (n choose j)*p^j*q^(n-j)**
 
 <br>
 
@@ -455,12 +455,12 @@
 
 > [!NOTE]
 > Tiếp theo ta sẽ **sử dụng sự thật** rằng X, Y là các **INDEPENDENT**
-> \**VARIABLE**
+> **VARIABLE**
 >
 > Gs nói ta tuy chưa nói về định nghĩa chính thức của independent variable
 > nhưng có thể hiểu **tương tự** như **INDEPENDENT** **EVENT**: Đó là:
 >
-> \**Việc event X=j có xảy ra không KHÔNG CUNG CẤP THÊM THÔNG TIN GÌ
+> **Việc event X=j có xảy ra không KHÔNG CUNG CẤP THÊM THÔNG TIN GÌ
 > VỀ EVENT Y=k-j**. Do đó ta có thể bỏ đi condition.
 >
 > Do đó: P(Y=k-j | X = j) = P(Y=k-j | \~X = j\~) = P(Y=k-j)
@@ -517,7 +517,7 @@
 > Thế thì, đương nhiên ta có ngay **(m+n choose k)** cách chọn.
 >
 > Tuy nhiên có thể làm kiểu khác là **lấy j items từ nhóm n items** ta có **(n choose j)** và 
-> \**lấy k-j items từ nhóm m items:** **(m choose k-j)**. Với j = 0....k
+> **lấy k-j items từ nhóm m items:** **(m choose k-j)**. Với j = 0....k
 >
 > Theo product rule: Số cách chọn ở mỗi giá trị của j sẽ là  **(m choose j)*(n choose k-j)** Và với k bằng các giá trị khác nhau, ta sẽ có các cách chọn không chồng lấn,
 > do đó theo sum rule: **tổng số cách chọn sẽ là Σ j (m choose j)*(n choose k-j)** Và như vậy **(m+n choose k) = Σ j (m choose j)*(n choose k-j)** Do đó **P(X+Y=k) = (m+n choose k) * p^k * q^(m+n - k) 
@@ -535,7 +535,7 @@
 > gs sẽ dùng ví dụ này để nói về việc **khi nào thì không phải là Binomial**.
 >
 > Nhấn mạnh rằng Binomial Bin(n,p) phải là khi các n event có tính chất  i.i.d:
-> \**INDEPENDENT IDENTICALLY DISTRIBUTED**
+> **INDEPENDENT IDENTICALLY DISTRIBUTED**
 >
 > Tức là n event đều **độc lập** và đều có **cùng một distribution là Bern(p)**
 >
@@ -544,7 +544,7 @@
 >
 > (Rõ ràng ta hiểu là lấy 5 lá bài và đếm số lá xì trong đó thì đây có nghĩa là lần
 > lượt lấy 5 lá / hoặc lấy ra 5 lá rồi đếm số lá xì VÀ **LẤY THÌ LẤY RA LUÔN**
-> \**KHÔNG BỎ VÀO LẠI**, tức nó chính là **SAMPLING WITHOUT
+> **KHÔNG BỎ VÀO LẠI**, tức nó chính là **SAMPLING WITHOUT
 > REPLACEMENT**, CHỨ KHÔNG PHẢI LÀ LẤY RA RỒI BỎ VÀO LẠI lấy ra
 > rồi bỏ vào lại / SAMPLING WITH REPLACEMENT từ bộ bài 5 lá để xem có
 > mấy lá xì vì tí nữa ta sẽ nói thêm rằng nếu là lấy rồi bỏ vào lại thì sẽ khác)
@@ -570,7 +570,7 @@
 > hay sao đó.
 >
 > Nhưng gs nhấn mạnh ta cần hiểu đây là **function** **map** giữa một
-> \**possible** **outcome** trong sample space với **một giá trị R**. Ở đây là map
+> **possible** **outcome** trong sample space với **một giá trị R**. Ở đây là map
 > một **possible outcome khi bốc 5 lá bài từ bộ bài (tức là một set 5 lá)** và map
 > nó với **con số thực thể hiện số con xì trong 5 lá đó**. Đó là một function.
 >
@@ -604,7 +604,7 @@
 > Tiếp theo ta sẽ thấy distribution của X ở đây không phải Binomial. Bởi vì,
 > theo định nghĩa của Binomial Bin(n, p), thì X là số lần success khi thực hiện n
 > independent trial Bern(p). Điểm cần nhấn mạnh là **MỌI TRIALS PHẢI**
-> \**INDEPENDENT** VÀ **MỌI TRIALS ĐỀU CÓ KẾT QUẢ TUÂN THEO
+> **INDEPENDENT** VÀ **MỌI TRIALS ĐỀU CÓ KẾT QUẢ TUÂN THEO
 > CÙNG MỘT DISTRIBUTION** là Bern(p): tức là đều có thể ra 1 (success) với
 > xác suất p và ra 0 (fail) với xác suất 1-p
 >
@@ -707,7 +707,7 @@
 
 > [!NOTE]
 > Và ĐIỂM **KHÁC BIỆT MẤU CHỐT** CỦA **HYPERGEOMETRIC** VÀ
-> \**BINOMIAL** ĐÓ LÀ SAMPLING **WITH** / **WITHOUT** REPLACEMENT.
+> **BINOMIAL** ĐÓ LÀ SAMPLING **WITH** / **WITHOUT** REPLACEMENT.
 >
 > Ví dụ khi chọn bi mà mỗi lần **chọn xong thì bỏ vào lại**, hoặc chọn lá bài
 > xong bỏ vào lại (**sampling with replacement**) thì:
@@ -722,7 +722,7 @@
 >
 > Còn nếu **sampling without replacement**, chọn xong lấy ra luôn (without
 > replacement = KHÔNG HOÀN LẠI)  thì ta sẽ không có i.i.d nên sẽ là
-> \**HYPERGEOMETRIC**
+> **HYPERGEOMETRIC**
 
 > [!NOTE]
 > ĐIỂM KHÁC BIỆT MẤU CHỐT CỦA HYPERGEOMETRIC VÀ
@@ -764,7 +764,7 @@
 > Thì mẫu số không dính đến k nên đưa ra ngoài: 1/(w+b choose n)
 >
 > Và **[tổng k (w choose k)*(b choose n-k)]** sẽ một lần nữa chính là
-> \**Vandermonde** identity = **(w+b choose n)**
+> **Vandermonde** identity = **(w+b choose n)**
 >
 > Từ đó ta có (w+b choose n) ở tử và mẫu -> **Tổng k P(X=k) = 1**
 

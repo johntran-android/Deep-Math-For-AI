@@ -97,7 +97,7 @@
 <p align="center"><kbd><img src="assets/08ba51b799bbdca27fd392170d8d47621ab0c560.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**TCP Transmission Control Protocol** có mục đích
+> **TCP Transmission Control Protocol** có mục đích
 > thứ nhất là **phân biệt các loại service khác nhau**
 > (email hay video...)
 
@@ -197,10 +197,10 @@
 <p align="center"><kbd><img src="assets/ded5211faa50a1f1cb5a0b763fc2b7e9a91a1eea.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**HTTP** = Hypertext Transfer Protocol
+> **HTTP** = Hypertext Transfer Protocol
 >
 > Đại khái **TCP/IP stuff, DNS stuff là tầng dưới, nền tảng**, là
-> \**hệ thống đường ống giúp truyền dữ liệu**
+> **hệ thống đường ống giúp truyền dữ liệu**
 >
 > Thì **HTTP là tầng trên, tầng software application level**
 > giúp **build ứng dụng dựa trên các pipeline system đó**
@@ -255,7 +255,7 @@
 
 > [!NOTE]
 > Example.com gọi là
-> \**domain name**
+> **domain name**
 
 <br>
 
@@ -264,9 +264,9 @@
 <p align="center"><kbd><img src="assets/c7659956bece0ed7a21fd3f09bd2aea34fe46826.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**.com** là **Top Level Domain** : TLD
+> **.com** là **Top Level Domain** : TLD
 > Và ngày nay thì **.com không nhất thiết phải là business**, 
-> \**.net không nhất thiết phải là network**, ngoại trừ một số
+> **.net không nhất thiết phải là network**, ngoại trừ một số
 > như **.gov, .edu thì còn tương đối strictly regulated** thôi
 
 <br>
@@ -298,7 +298,7 @@
 > Q: **Local host** là gì
 >
 > D: Đại khái là **convention của human cho IP address** để
-> \**luôn chỉ máy tính của chính mình: 127.0.0.1**
+> **luôn chỉ máy tính của chính mình: 127.0.0.1**
 >
 > Có vai trò **hữu ích khi development** trên máy tính của mình
 
@@ -324,7 +324,7 @@
 > s webpage mà là example.com thì her message
 > sẽ có dạng dạng như này:
 >
-> \**GET / HTTP/1.1
+> **GET / HTTP/1.1
 > Host: www.example.com**
 >
 > 1.1 là version
@@ -404,7 +404,7 @@
 <p align="center"><kbd><img src="assets/00fefd804aec46ae847141454cecc7f37f3bb55c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**curl** = connect url: Đại khái là công cụ **cho phép giả bộ là
+> **curl** = connect url: Đại khái là công cụ **cho phép giả bộ là
 > web browser**
 
 <br>
@@ -424,7 +424,7 @@
 >
 > Ta có thể thấy **HTTT/2 (version 2)**
 >
-> \**200** response code = OK
+> **200** response code = OK
 >
 > rồi có c**ontent_type text/html charset UTF-8**
 >
@@ -490,7 +490,7 @@
 
 > [!NOTE]
 > Một số response code khác:
-> \**500** tương tự như **Segmentation Fault** của C, là **lỗi của developer**
+> **500** tương tự như **Segmentation Fault** của C, là **lỗi của developer**
 
 <br>
 
@@ -500,10 +500,10 @@
 
 > [!NOTE]
 > Đại khái là nói về cái này
-> \**search?q=cat....**
+> **search?q=cat....**
 >
 > Ý là khi ta **search google bằng google form** thì thật ra
-> \**chính là request url như vầy**
+> **chính là request url như vầy**
 
 <br>
 
@@ -636,7 +636,7 @@
 <p align="center"><kbd><img src="assets/134fd163ba5ab01d99c031db6f636467e587fe75.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**<html> <head>** ... và **</html> </head>** gọi là **start
+> **<html> <head>** ... và **</html> </head>** gọi là **start
 > và end tag**  **lang='en'** giống như **attribute** để
 > modify behavior, ở đây đại khái là c**ho web browser,
 > search engine biết ở trong đây  sẽ là English**
@@ -719,7 +719,7 @@
 
 > [!NOTE]
 > Xong ổng dùng **<br>** này để làm cái việc xuống dòng
-> \**(line break)** và nói thêm là **cái này không cần close tag**,
+> **(line break)** và nói thêm là **cái này không cần close tag**,
 > nó chỉ đứng mình ên
 
 <br>
@@ -750,7 +750,7 @@
 
 > [!NOTE]
 > Thì đại khái là nó **vẫn có hiệu quả như vậy** nhưng
-> \**semantically better**
+> **semantically better**
 >
 > Và có những các tag khác, tự tìm hiểu
 
@@ -774,7 +774,7 @@
 <p align="center"><kbd><img src="assets/a8cb5a880a4e58772a6e3bafc34dd2322b658694.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Muốn dạng list** thì dùng **<ul>**
+> **Muốn dạng list** thì dùng **<ul>**
 > (**unordered list**) hoặc **<ol>** (ordered list) và **<li>** (list)
 
 <br>
@@ -873,7 +873,7 @@
 
 > [!NOTE]
 > Nói thêm về vài cái **meta open graph tag** để
-> \**define thêm thông tin cho browser** biết bạn **muốn 
+> **define thêm thông tin cho browser** biết bạn **muốn 
 > nó show default title, description...**
 
 <br>
@@ -942,7 +942,7 @@
 > Và có thể **thêm các attribute** như **autocomplete** **= "
 > off"** để nó  **không autocomplete**
 >
-> \**autofocus** (cái này là no key-value attribute) để nó **tự focus**
+> **autofocus** (cái này là no key-value attribute) để nó **tự focus**
 > vào form
 >
 > và **placeholder** = **"Query"** để nó **show cái place holde**r text
@@ -956,7 +956,7 @@
 > [!NOTE]
 > Đại khái ổng nói **cơ bản HTML là vậy**, **có thể có thêm
 > các tag khác, các attribute khác**, nhưng cơ bản là vậy,
-> \**có thể từ từ tìm hiểu thêm các loại tag đó**
+> **có thể từ từ tìm hiểu thêm các loại tag đó**
 
 <br>
 
@@ -986,7 +986,7 @@
 
 > [!NOTE]
 > Đại khái ví dụ ở đây có
-> \**button's id**
+> **button's id**
 
 <br>
 
@@ -1081,7 +1081,7 @@
 > [!NOTE]
 > Tiếp để **bắt đầu "styling"** cho nó. Ổng bắt đầu với kiểu này
 > \- **không phải là style tag** mà là kiểu như **inline attribute**
-> \**style = font-size: large/medium.**.
+> **style = font-size: large/medium.**.
 >
 > Kết quả cho thấy đã có thể thay đổi kích thước chữ
 >
@@ -1128,8 +1128,8 @@
 <p align="center"><kbd><img src="assets/00e0f5d1c46ad61d75b49aa21cd5a31f4a08b8f2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Correct**. Do đó ta có thể làm vầ, giới thiệu thêm
-> \**div tag - division**, bỏ **text-align attribute ở parent
+> **Correct**. Do đó ta có thể làm vầ, giới thiệu thêm
+> **div tag - division**, bỏ **text-align attribute ở parent
 > div** và **những cái div con sẽ tự động được thừa
 > hưởng**
 >
@@ -1145,7 +1145,7 @@
 
 > [!NOTE]
 > Đại khái là **trend mới nhất ngày nay** thay vì dùng
-> \**division**  tag - div. Thì người ta dùng **"more semantic"**  - ý là có ý  nghĩa hơn, đó là **dùng header** (không
+> **division**  tag - div. Thì người ta dùng **"more semantic"**  - ý là có ý  nghĩa hơn, đó là **dùng header** (không
 > phải heading), **main** và **footer**.
 >
 > Có những **lợi điểm như giúp cho search engine** như
@@ -1160,7 +1160,7 @@
 
 > [!NOTE]
 > Xong ổng nói làm vầy **vẫn có một problem** đó là giả sử
-> \**muốn  đổi style, thì phải sửa chung cho file này** (có cả
+> **muốn  đổi style, thì phải sửa chung cho file này** (có cả
 > content) **sẽ tốt hơn nếu có thể tách bạch phần content và
 > phần style ra**
 
@@ -1194,7 +1194,7 @@
 > [!NOTE]
 > Xong thay vì vậy, ổng nói có thể **define với kiểu này .
 > centered, .large... nó gọi là class** - chỉ là collection of
-> \**key-value pair** và ta **tự đặt tên** để tiện sử dụng
+> **key-value pair** và ta **tự đặt tên** để tiện sử dụng
 
 <br>
 
@@ -1219,7 +1219,7 @@
 > Làm thêm một cái nữa đó là **tách bạch hai file css và 
 > html** bằng cách dùng **link tag**: 
 >
-> \**<link href="styles.css" red = "stylesheet">**
+> **<link href="styles.css" red = "stylesheet">**
 
 <br>
 
@@ -1245,7 +1245,7 @@
 
 > [!NOTE]
 > Thì đại khái nó là cái **csv thống kê favorite language**,
-> \**problem set bữa trước**. Nhưng **ổng đã chuyển thành dạng
+> **problem set bữa trước**. Nhưng **ổng đã chuyển thành dạng
 > html thôi không có gì**
 
 <br>
@@ -1257,7 +1257,7 @@
 > [!NOTE]
 > Thì giờ ổng muốn làm cho nó đẹp hơn, nhưng đại khái
 > là **liệu có cách nào không phải tự code hết các css**, mà
-> \**dùng lại những cái design đẹp của những người khác
+> **dùng lại những cái design đẹp của những người khác
 > làm sẵn không**. Đó chính là **framework**
 
 <br>
@@ -1341,7 +1341,7 @@
 
 > [!NOTE]
 > Đại khái là js sẽ **chạy trên client size web**
-> \**browser** chứ **không phải server**
+> **browser** chứ **không phải server**
 
 <br>
 
@@ -1429,7 +1429,7 @@
 
 > [!NOTE]
 > Tiếp theo đại khái là **sẽ tốt hơn nếu có thể tách js** ra khỏi
-> \**content**, giống như **ta làm với css vậy.**
+> **content**, giống như **ta làm với css vậy.**
 >
 > Nên có thể làm vầy, ở đây giống java, đó là **ta có thể gọi /
 > lấy cái form và addEventListener cho nó**.
@@ -1519,7 +1519,7 @@
 > [!NOTE]
 > Cũng dễ hiểu, vài ghi chú thôi
 >
-> \**if (input.value)**: **check trong đó có text hay chưa giống
+> **if (input.value)**: **check trong đó có text hay chưa giống
 > như check null vậy**
 >
 > Có cái **syntax để show string hơi weird trong js** là **thay 
@@ -1584,7 +1584,7 @@
 > Cũng đơn giản. Chỉ là **add event listener** và **set value
 > cho**
 >
-> \**body.style.backgroundColor** thôi.
+> **body.style.backgroundColor** thôi.
 >
 > Và trong **css, red, là ...'red'**. That's it
 
@@ -1618,7 +1618,7 @@
 > [!NOTE]
 > Xong **ổng show hàng cái** này, cơ bản là dùng **key-up
 > event** và **search trong dictionary** như đã làm trong
-> \**PS5 thôi**
+> **PS5 thôi**
 
 <br>
 
@@ -1627,8 +1627,8 @@
 <p align="center"><kbd><img src="assets/4650d405a1148b2aa906299a9b73769bad5f1162.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Final example** đại khái là (với đoạn code này) khi nào 
-> \**web browser biết được location của user** thì nó sẽ **gọi 
+> **Final example** đại khái là (với đoạn code này) khi nào 
+> **web browser biết được location của user** thì nó sẽ **gọi 
 > function này**
 >
 > Và ở đây **chỉ đơn giản là write nó ra** (kiểu như **in ra**)

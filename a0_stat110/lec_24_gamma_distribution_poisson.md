@@ -44,11 +44,11 @@
 > G(a) = **∫ 0:inf x^a e^-x dx / x** . Và function này **xác định** với **a là  số
 > thực dương.**
 >
-> \*(do trong note mình dùng tạm kí tự G cho nhanh, chứ gs dùng kí tự
+> *(do trong note mình dùng tạm kí tự G cho nhanh, chứ gs dùng kí tự
 > Gamma viết hoa)
 >
 > Gs cho rằng vì **một số lí do** mà ta sẽ **giữ 1/x** chứ không gom
-> \**x^a/x = x^(a-1)**
+> **x^a/x = x^(a-1)**
 
 <br>
 
@@ -190,11 +190,11 @@
 >
 > Bây giờ gs mới nói về **quan hệ giữa Gamma và Exponential** distribution. Đầu
 > tiên review lại một bài toán mà bữa trước đã làm. Và mà nay ta biết nó gọi là 
-> \**POISSON** **PROCESS**.
+> **POISSON** **PROCESS**.
 >
 > Trong đó ta cho rằng (gỉa định rằng), **số email nhận được** trong **khoảng thời
 > gian từ 0 cho đến mốc t**, gọi là **Nt**, là một **Poisson (λt)** r.v. Và yêu cầu **tìm**
-> \**distribution của T** là **khoảng thời gian cho đến khi nhận email đầu tiên**.
+> **distribution của T** là **khoảng thời gian cho đến khi nhận email đầu tiên**.
 >
 > Ngoài ra có thêm một **giả định nữa** đối với **Poisson** **Process** là **số email nhận
 > được trong khác khoảng thời gian không chồng lấn** (disjoint) là **độc lập nhau**
@@ -216,7 +216,7 @@
 > của khoảng thời gian trước khi có email đầu tiên**) thì **T chính là ~ Expo(λ)**
 >
 > Và ta chứng minh bằng cách **xây dựng CDF**, để **lấy derivative** cho ra **PDF**. CDF F(t) chính là
-> \**P(T<=t)**. Thì trong bài toán này ta t**ìm complement** của nó sẽ dễ hơn: **P(T>t).**
+> **P(T<=t)**. Thì trong bài toán này ta t**ìm complement** của nó sẽ dễ hơn: **P(T>t).**
 >
 > (Again, t, hay u hay x không quan trọng, vì nó chỉ là dummy variable. Cái chính là  hiểu ý
 > nghĩa của CDF. ví dụ CDF của X, tức F(t) thì ý nghĩa  là P(X<=t), là tích phân từ 0 đến t của
@@ -271,7 +271,7 @@
 >
 > Khái quát hơn, Tn>t = Nt < n với ý nghĩa: 
 >
-> \**[Thời gian chờ email thứ n] > t** 
+> **[Thời gian chờ email thứ n] > t** 
 >
 > thì cũng chính là:
 >  **[Số email nhận được từ đầu đến t] nhỏ hơn n**
@@ -318,7 +318,7 @@
 > tiên, T2 là thời gian từ đầu đến email thứ 2....) thì dễ thấy T2 = X1 + X2
 > T3 = X1 + X2 + X3,...
 >
-> \**Tn = ∑ j=1:n Xj**
+> **Tn = ∑ j=1:n Xj**
 >
 > Xj là các khoảng thời gian giữa các lần nhận email, X1 trùng với T1, 
 > như đã nói **Xj i.i.d ~ Expo(λ)**
@@ -370,7 +370,7 @@
 
 > [!NOTE]
 > Ta sẽ đi chứng minh rằng **tổng của n các i.i.d Expo(1)** r.v Xj là một
-> \**Gamma(n,1)**
+> **Gamma(n,1)**
 >
 > Gs cho rằng khi ta có thể **chứng minh với Expo(1)** thì sẽ **dễ dàng chứng
 > minh  với Expo(λ)**
@@ -416,17 +416,17 @@
 > Thế thì **để chứng minh Tn ~ Gamma(n,1)** ta phải **chứng minh Gamma(n,1)
 > cũng có MGF có công thức này** như vừa rồi.
 >
-> \**Áp dụng định nghĩa của MGF**, như đã biết, là E[e^tY]. 
+> **Áp dụng định nghĩa của MGF**, như đã biết, là E[e^tY]. 
 >
 > (Chỗ này ta lại nhắc lại để nhớ, **Y là r.v**, thì với một giá trị của t thì **e^tY, tức là
 > apply hàm f(u) = e^tu vào r.v Y,** thì **kết quả cũng là random variable**, nên ta 
-> \**đương nhiên có thể nói về / tính expected value** của nó (e^tY).
+> **đương nhiên có thể nói về / tính expected value** của nó (e^tY).
 >
 > Thì expected value đó, với một giá trị của t, chính là giá trị của hàm MGF tại
 > t, M(t))
 >
 > Thế thì, áp dụng **định nghĩa của expected value**, EX là **weighted** **sum** của 
-> \**mọi possible values** của X, với **weight** là **xác suất X mang possible value** đó.
+> **mọi possible values** của X, với **weight** là **xác suất X mang possible value** đó.
 >
 > Thì với **continuous**, nó sẽ là: 
 >
@@ -467,7 +467,7 @@
 🔗 **Related:** [LEC 24: GAMMA DISTRIBUTION & POISSON](untitled.md#node-760)
 
 > [!NOTE]
-> \**Đặt x = (1-t)y** =>  y = -x/(1-t) 
+> **Đặt x = (1-t)y** =>  y = -x/(1-t) 
 >
 > <=> **y^n** = (-1/(1-t))^n * x^n = **(1-t)^(-n) * x^n**
 >
@@ -487,14 +487,14 @@
 >
 > = [(1-t)^(-n) / (G(n))] tích phân 0:inf  **x^n * e^-x * dx / x**]
 >
-> \**limit** của tích phân **vẫn là 0:inf** vì x = (1-t)*y với t < 1 thì 1-t > 0, nên khi y từ 0->inf 
+> **limit** của tích phân **vẫn là 0:inf** vì x = (1-t)*y với t < 1 thì 1-t > 0, nên khi y từ 0->inf 
 > thì x cũng từ 0->inf
 >
 > Và **[1 / (G(n))] tích phân 0:inf  * x^n * e^-x * dx / x]** 
 >
-> \**CHÍNH LÀ** 
+> **CHÍNH LÀ** 
 >
-> \**tích phân -inf:inf của pdf của gamma r.v**, thì theo yêu cầu về tính valid của pdf, 
+> **tích phân -inf:inf của pdf của gamma r.v**, thì theo yêu cầu về tính valid của pdf, 
 > nó **phải bằng 1**
 >
 > Vậy ta còn lại **(1-t)^(-n)** hay **[1/ (1-t)]^n** Và y như kết quả MGF của Tn **Và điều này đã chứng minh Tn là ~ Gamma(n,1)**
@@ -521,7 +521,7 @@
 
 > [!NOTE]
 > Tiếp, ta sẽ tìm **moment**. Gs nói ta tuy có thể dùng **MGF**, nhưng ở đây sẽ **dễ**
-> \**hơn** nếu dùng trực tiếp **LOTUS**
+> **hơn** nếu dùng trực tiếp **LOTUS**
 >
 > Cụ thể là ta sẽ tìm **E[X^c]** với **c không nhất thiết là integer**. Nhưng với c = 1
 > ta biết đó là 1st moment, chính là mean, c=2, ta có second moment, E[X^2]
@@ -540,7 +540,7 @@
 >
 > = (**1/Gamma(a)**) tích phân 0:inf **x^c x^a e^-x dx/x**.
 >
-> \**Gom** **x^c và x^a**, .. = (1/Gamma(a)) tích phân 0:inf **x^(c+a) e^-x dx / x**. (1)
+> **Gom** **x^c và x^a**, .. = (1/Gamma(a)) tích phân 0:inf **x^(c+a) e^-x dx / x**. (1)
 >
 > Tới đây ta có thể lập luận rằng **tích phân 0:inf x^(c+a) e^-x dx/x CHÍNH LÀ 
 > hàm Gamma() EVALUATE TẠI a+c.** Vì ta biết **hàm Gamma** có công thức: **G(a) = tích phân 0:inf x^a e^-x dx / x**, nên
@@ -571,7 +571,7 @@
 
 > [!NOTE]
 > Gs lưu ý, **luôn phải ghi điều kiện xác định là a+c dương** vì
-> \**Gamma(a,1) chỉ xác định với a dương**
+> **Gamma(a,1) chỉ xác định với a dương**
 >
 > Từ đó cho phép ta tính **EX (tức c=1) = Gamma(a+1) / Gamma(a)**
 >

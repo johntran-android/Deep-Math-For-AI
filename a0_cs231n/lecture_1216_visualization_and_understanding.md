@@ -463,7 +463,7 @@
 >
 > Kết quả là ta được những cái hình như này.
 >
-> \*Lưu ý đương nhiên quá trình này là dùng một trained deep model, ta chỉ
+> *Lưu ý đương nhiên quá trình này là dùng một trained deep model, ta chỉ
 > fixed (freeze) các params, và quá trình backprop chỉ dùng để tính gradient
 > và thay đổi image tensor thôi
 
@@ -788,7 +788,7 @@
 >
 > Và giá trị của gram matrix được cho là "**unnormalized covariance**"
 >
-> \**Vì sao ý nghĩa của Gram matrix sẽ đại diện cho texture style**:
+> **Vì sao ý nghĩa của Gram matrix sẽ đại diện cho texture style**:
 >
 > Ví dụ ta có input 4x4 như hình, thể hiện một dạng "hoa văn" texture. Và giả sử có 3 filter đã học được các activate khi
 > receptive field có dạng mà nó quan tâm, filter 1 tìm kiếm hình tròn xanh lá, filter 2 tìm hình vuông đỏ, filter 3 tìm tam giác
@@ -868,7 +868,7 @@
 > \- đồng nghĩa với việc ta đã có được **kết quả mong muốn của bài toán texture synthetic - đó là tạo ra hình ảnh chứa cái
 > dạng "giống giống vậy" nhưng không cần y chang.** 
 >
-> \*Còn nói về việc dùng Gram matrix để dẫn dắt quá trình tạo synthetic image như thế nào thì dễ hiểu là cũng như ta dùng
+> *Còn nói về việc dùng Gram matrix để dẫn dắt quá trình tạo synthetic image như thế nào thì dễ hiểu là cũng như ta dùng
 > output của intermediate layer, hay class score để cùng với gradient ascent, tạo ra hình ảnh khiến maximize class score
 > thôi.
 
@@ -1252,7 +1252,7 @@
 > y^ sẽ cùng với **ảnh gốc yc** (cũng là cái hình input vào FF để có y^) và **ảnh
 > style mẫu ys**, cả ba **tham gia vào tính loss** như trước:
 >
-> \**Pass cả 3 qua cnn (như VGG)** để tính **feature" loss"** từ distance giữa
+> **Pass cả 3 qua cnn (như VGG)** để tính **feature" loss"** từ distance giữa
 > feature bởi yc và y^, và **style loss** từ distance giữa Gram matrix của ys và
 > y^
 >
@@ -1260,7 +1260,7 @@
 > model, đạt được hai mục tiêu: **khi nhận một image** nào đó vào (hình
 > gốc), qua FF model, output của nó là một image mà **nếu pass qua cnn
 > thì nó sẽ có feature giống với feature của ảnh gốc**, đồng nghĩa là
-> \**generated image có feature giống với feature gốc**. Đồng thời, **nếu pass nó
+> **generated image có feature giống với feature gốc**. Đồng thời, **nếu pass nó
 > và Starry night qua cnn và tính Gram matrix thì chúng sẽ giống nhau**, đồng
 > nghĩa **generated image có style giống với Starry night**
 >

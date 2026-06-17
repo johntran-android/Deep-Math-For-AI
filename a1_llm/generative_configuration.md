@@ -11,12 +11,12 @@
 > 1 **Configuration parameters** for **influencing** **next-word generation**: The text introduces **various configuration
 > parameters** that can be used to **control the behavior of language models** during the generation of text. These
 > parameters are **different from the training parameters** and are invoked during **inference**. They provide **control over**
-> \**aspects** such as the **maximum** **number of tokens** in the generated output and the **level of creativity.**
+> **aspects** such as the **maximum** **number of tokens** in the generated output and the **level of creativity.**
 >
 > 2 **Methods** for controlling model behavior during inference:
 >
 > a. **Max new tokens**: This parameter **limits the number of tokens that the model will generate**, putting **a cap** on the
-> \**selection process**. It allows **users to control the length of the completion**.
+> **selection process**. It allows **users to control the length of the completion**.
 >
 > b. **Random sampling**: Instead of **always** choosing the word with the **highest probability**, random sampling s**elects
 > an output word at random** \\_**based on the probability distribution.**\\_ This introduces **variability** and **reduces** the
@@ -28,7 +28,7 @@
 >
 > d. **Top p** sampling: This technique **limits the random samplin**g to predictions whose **combined probabilities do not
 > exceed a certain threshold (p)**. The model chooses from these tokens using random probability weighting, ensuring a
-> \**balance between randomness and sensibility**.
+> **balance between randomness and sensibility**.
 >
 > 3 **Temperature** parameter: The temperature parameter **influences the shape of the probability distribution** used by the
 > model to select the next token. **Higher temperatures increase randomness** by **spreading the probability more** evenly
@@ -37,11 +37,11 @@
 >
 > 4 **Prompt engineering** and **parameter experimentation**: The text highlights the **importance of prompt engineering** and **experimenting with different configuration parameters** t**o optimize the performance of language models**. By
 > carefully **crafting prompts** and **adjusting parameters**, users can **achieve desired results** in generating text that is
-> \**natural, creative, and avoids repetition**.
+> **natural, creative, and avoids repetition**.
 >
 > 5 Introduction to **LLMs and transformers**: The text mentions **LLMs (Large Language Models) and transformers**, which
 > are the model architecture that powers these language models. LLMs have the **ability to perform a variety of tasks** and
-> \**transformers** are **instrumental** in enabling their **advanced capabilities.**
+> **transformers** are **instrumental** in enabling their **advanced capabilities.**
 >
 > 6 Tasks performed by LLMs and application development: The text briefly touches upon the tasks that LLMs can perform
 > and mentions the next steps in the **application development process**, building upon the foundational knowledge
@@ -55,10 +55,10 @@
 
 > [!NOTE]
 > In this video, you'll examine some of the **methods** and **associated configuration**
-> \**parameters** that you can use to **influence the way that the model makes the final
+> **parameters** that you can use to **influence the way that the model makes the final
 > decision** about **next-word generation**. If you've used LLMs in playgrounds such as
 > on the **Hugging Face** website or an **AWS**, you might have been presented with
-> \**controls** like these to adjust how the LLM behaves. Each model exposes **a set of
+> **controls** like these to adjust how the LLM behaves. Each model exposes **a set of
 > configuration parameters** that can i**nfluence the model's output during inferenc**e.
 > Note that these are **different than the training parameters** which are learned during
 > training time. Instead, these **configuration parameters** are **invoked at inference time** and give you **control over things like the maximum number of tokens** in the
@@ -91,7 +91,7 @@
 > [!NOTE]
 > Khi model output ra t**oken probability scores** của
 > nó sẽ có **hai cách để decide** ra từ được chọn
-> \**Greedy** và **Random sampling**
+> **Greedy** và **Random sampling**
 
 <br>
 
@@ -100,7 +100,7 @@
 <p align="center"><kbd><img src="assets/d8c599b8f7b96375d42fbfd1c28ded098bbf68f0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Greedy** đại khái là **luôn chọn từ giá trị
+> **Greedy** đại khái là **luôn chọn từ giá trị
 > probability score cao nhất**, dẫn đến **câu
 > trả lời luôn giống nhau.**
 
@@ -139,7 +139,7 @@
 > To **limit the options** while **still allowing some variability**, you can **specify a top k
 > value** which instructs the model to **choose from only the k tokens with the highest
 > probability.** In this example here, **k is set to 3**, so you're restricting the model to
-> \**choose from these 3 options**. The model then selects from these options using
+> **choose from these 3 options**. The model then selects from these options using
 > the probability weighting and in this case, it chooses **donut** as the next word. This
 > method can help the **model have some randomness** while **preventing the selection
 > of highly improbable completion words**. This in turn **makes your text generation
@@ -184,16 +184,16 @@
 > Broadly speaking, the **higher** the **temperature**, the **higher the randomness**, and the **lower**
 > the **temperature**, the **lower the randomness**. The temperature value is a **scaling factor** that's **applied within the final softmax layer** of the model that\_ **impacts the shape of the
 > probability distribution of the next token**\_. In contrast to the top k and top p parameters,
-> \**changing the temperature actually alters the predictions that the model will make**. If you
+> **changing the temperature actually alters the predictions that the model will make**. If you
 > choose a **low value of temperature**, say less than one, **the resulting probability
 > distribution from the softmax layer** is more **strongly peaked** with the probability being
-> \**concentrated in a smaller number of words**. You can see this here in the blue bars beside
+> **concentrated in a smaller number of words**. You can see this here in the blue bars beside
 > the table, which show a probability bar chart turned on its side. Most of the **probability
 > here is concentrated on the word cake**. The model will **select from this distribution using
 > random sampling** and the resulting text will be **less random** and will **more closely follow
 > the most likely word sequences that the model learned during training**. If instead you set
 > the temperature to a **higher value**, say, g**reater than one,** then the model will calculate a
-> \**broader flatter probability distribution** for the next token. Notice that in contrast to the blue
+> **broader flatter probability distribution** for the next token. Notice that in contrast to the blue
 > bars, the probability is more **evenly spread across the tokens**. This leads the model to
 > generate text with a **higher degree of randomness** and **more variability** in the output
 > compared to a cool temperature setting. This can help you generate text that **sounds
@@ -251,7 +251,7 @@
 > The **math** behind the temperature concept involves **applying a scaling factor** within the **final softmax
 > layer** of the model. The **softmax function** takes a **vector of logits** (scores associated with each token
 > in the vocabulary) and **converts them into a probability distribution**. The temperature parameter
-> \**modifies the logits** before applying the softmax function.
+> **modifies the logits** before applying the softmax function.
 >
 > Here's the math behind it:
 >
@@ -260,22 +260,22 @@
 >
 > 2 The modified logits, denoted as **z',** are calculated by **dividing each logit by the temperature value
 > (T)**: **z' = z / T** The temperature value is **typically greater than 0**, with **higher values** leading to **more**
-> \**randomness** in the output.
+> **randomness** in the output.
 >
 > 3 After obtaining the modified logits, we **apply the softmax function** to **convert them into probabilities**:
-> \**softmax(z') = exp(z') / sum(exp(z'))** The softmax function **normalizes the logits by exponentiating
+> **softmax(z') = exp(z') / sum(exp(z'))** The softmax function **normalizes the logits by exponentiating
 > them and dividing by their sum**, resulting in a **probability distribution across all tokens.**
 >
 > 4 The **resulting probability distribution** is then **used for sampling the next token** during text
 > generation. **Higher probabilities indicate a higher chance of selecting a particular token**, but the
-> \**temperature value influences the shape and spread of the distribution.**
+> **temperature value influences the shape and spread of the distribution.**
 >
 > ◦ **Higher temperatur**e values (e.g., **above 1**) lead to a **more uniform distribution**, where **probabilities
 > are more evenly spread across tokens**. This results in **higher randomness and variability in the
 > generated text.**
 >
 > ◦ **Lower temperature** values (e.g., below 1) **sharpen the distribution**, making it **more peaked**. This
-> \**concentrates probabilities** on a **smaller set of tokens**, \\_**increasing the likelihood of generating text that
+> **concentrates probabilities** on a **smaller set of tokens**, \\_**increasing the likelihood of generating text that
 > aligns with the most probable word sequences learned during training.**\\_
 >
 > To summarize, the temperature parameter in language models allows users to control the trade-off

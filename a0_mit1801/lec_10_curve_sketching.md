@@ -223,7 +223,7 @@
 >
 > Vậy thì việc ta bỏ đi các higher order term, chính là, ta đang lấy gần
 > đúng bằng cách chỉ dùng kết quả đến số thập phân thứ 4 thôi, ví  dụ x.
-> \**1234, và bỏ đi các số thập phân sau đó**
+> **1234, và bỏ đi các số thập phân sau đó**
 
 <br>
 
@@ -299,7 +299,7 @@
 > Tiếp, nếu f''>0, có nghĩa là độ dốc của hàm số đang tăng lên, và
 > hình ảnh minh họa là hàm f tuy vẫn đang giảm nhưng độ dốc của nó
 > ngày càng bớt âm hơn, tức là đang bớt dốc hơn. Gs gọi nó là f
-> \**concave up**
+> **concave up**
 >
 > Ngược lại nếu f''<0, có nghĩa là độ dốc của hàm số đang giảm bớt,
 > gọi là **f concave down** 

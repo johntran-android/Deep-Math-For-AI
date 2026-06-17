@@ -71,7 +71,7 @@
 
 > [!NOTE]
 > Nhưng cái chính là ta **hiểu cách làm** để có thể thấy rằng
-> \**từ cách làm này** (tức tách matrix ra thành tổng nhiều
+> **từ cách làm này** (tức tách matrix ra thành tổng nhiều
 > matrix, **mỗi lần tách theo từng hàng**, property 3b cho
 > phép ta tính) ta **có thể tính det của mọi matrix.**
 >
@@ -148,7 +148,7 @@
 > tiên (tức a12 khác 0). 
 >
 > Ta có matrix thứ nhất là thế này, dễ thấy det của nó là
-> \**-a12a21a33** (dấu trừ vì ta phải swap row 1 lần: hàng 1
+> **-a12a21a33** (dấu trừ vì ta phải swap row 1 lần: hàng 1
 > và hàng 2)
 
 <br>
@@ -244,9 +244,9 @@
 >
 > Hiểu như vầy: 
 >
-> \**a_1α** là **vị trí khác 0 ở hàng 1 cột alpha**, 
+> **a_1α** là **vị trí khác 0 ở hàng 1 cột alpha**, 
 >
-> \**a_2β**: vị trí khác 0 ở hàng 2 cột β...
+> **a_2β**: vị trí khác 0 ở hàng 2 cột β...
 >
 > Với {**α, β ....ω**} là **bộ hoán vị của 1, 2, 3...n**
 
@@ -262,7 +262,7 @@
 > đây để kiểm tra lại các property, ví dụ cái thứ 1, **det I = 1**.
 >
 > Dễ thấy với A = I thì khi tách ra như vừa rồi, thì đương nhiên
-> \**chỉ còn có một term có det khác 0**, mà đó **cũng là cái
+> **chỉ còn có một term có det khác 0**, mà đó **cũng là cái
 > matrix mà vị trí khác 0 là a11, a22**,.... và **cũng chính là 1
 > luôn**. Và det sẽ là 1*1....1 = 1
 
@@ -284,7 +284,7 @@
 >
 > \~Câu trên sai vì lập luận vậy chỉ là các hàng không độc
 > lập với một hàng khác, chứ còn một khả năng nữa là
-> \**chúng combine nhau** ví dụ row1 = row 2 + row 3
+> **chúng combine nhau** ví dụ row1 = row 2 + row 3
 
 <br>
 
@@ -306,7 +306,7 @@
 > Nên det là + 1*1*1*1 - 1*1*1*1 = 0
 >
 > (đương nhiên ta không viết ra 16 matrix làm gì, mà chỉ
-> \**xem thử có các term nào** (det của matrix nào) **khác 0**
+> **xem thử có các term nào** (det của matrix nào) **khác 0**
 > thôi
 
 <br>
@@ -357,7 +357,7 @@
 > cái gì?**
 >
 > Me: Hình như nó **chính là det của matrix nhỏ hơn** sau khi
-> \**loại bỏ hàng 1, cột 1 của matrix gốc** đi
+> **loại bỏ hàng 1, cột 1 của matrix gốc** đi
 
 <br>
 
@@ -465,7 +465,7 @@
 > Gs tóm tắt lại chút xíu là bài trước ta đã học **10
 > properties** của **determinant**, và bài này ta đã biết **3
 > công thức tính det**  Trong đó cái quan trọng nhất là **tích của các pivot**. Nó đại khái cho ta thấy quá trình
-> \**elimination** đã **"dọn dẹp**" mớ hỗn loạn để rồi **chỉ
+> **elimination** đã **"dọn dẹp**" mớ hỗn loạn để rồi **chỉ
 > còn lại các pivot** và nhân chúng lại ta có det.
 >
 > Công thức phức tạp thứ hai thì kiểu như **triển khai hết ra** 

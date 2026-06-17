@@ -70,7 +70,7 @@
 > MỚI ĐẦU TIÊN**. Đương nhiên dễ thấy **T1 = 1**, là vì **ngay lần đầu tiên đi ăn
 > và được tặng thì món đó chính là món đồ chơi mới đầu tiên**
 >
-> \**T2** là số lần đi ăn / số đồ chơi được tặng **THÊM SAU ĐÓ CHO ĐẾN KHI
+> **T2** là số lần đi ăn / số đồ chơi được tặng **THÊM SAU ĐÓ CHO ĐẾN KHI
 > ĐƯỢC MÓN ĐỒ CHƠI MỚI THỨ 2**. Tức là tính lần thứ 2 trở đi cho đến khi
 > có món khác món thứ nhất.
 >
@@ -91,9 +91,9 @@
 > Thế thì T1 luôn bằng 1 thì đã hiểu rồi. Còn T2 ta lập luận như sau:
 >
 > T2 là #**số lần fail cho đến khi success**. Với **fail** là ám chỉ sự kiện được tặng
-> \**món đồ chơi không mới**, và **success** là ám chỉ sự kiện được tặng **món mới**,
+> **món đồ chơi không mới**, và **success** là ám chỉ sự kiện được tặng **món mới**,
 > chưa có. Như vậy có thể thấy **T2** phù hợp cho một distribution đã học là
-> \**Geometry (p)**.
+> **Geometry (p)**.
 >
 > Bữa trước ta đã biết **X ~ Geometry(p)** thì X có thể coi như **#Số lần trial fail cho
 > đến khi trial success**, với trials có tính **i.i.d** và ~ **Bern(p)**. Và theo **convention
@@ -122,7 +122,7 @@
 > Bern(p) với **p = (n-1)/n**
 >
 > Do đó **T2 là Geometric (p)** random variable. Có điều, đương nhiên vì ta cần phải
-> \**include lần success vào** vì định nghĩa của T2 là số lần đi ăn / được tặng đồ chơi
+> **include lần success vào** vì định nghĩa của T2 là số lần đi ăn / được tặng đồ chơi
 > cho đến khi có đồ chơi mới thứ 2 (chứ không phải số lần đi ăn mà nhưng chưa được
 > tặng món mới cho đến khi có món thứ 2, khi đó chỉ tính những lần fail).
 >
@@ -142,7 +142,7 @@
 > [!NOTE]
 > Tương tự như vậy ta có thể thấy **T3-1** cũng là r.v ~ **Geometric((n-2)/n)**, 
 >
-> \**T4-1 ~ Geometric((n-3)/n)**
+> **T4-1 ~ Geometric((n-3)/n)**
 >
 > Hay **Tj-1 ~ Geometric ((n-(j-1))/n)**
 
@@ -235,7 +235,7 @@
 > nên đúng có thể gọi là non-decreasing
 >
 > Tuy nhiên gs nói thêm với **Universality**, ta sẽ **assume** CDF **STRICTLY**
-> \**INCREASING (chỉ có tăng, không có đi ngang)**
+> **INCREASING (chỉ có tăng, không có đi ngang)**
 >
 > Và ông cho rằng **nếu nó tiệm cận 1** thì **cũng được** không nhất thiết phải **đạt 1**
 
@@ -254,7 +254,7 @@
 >
 > Phần 2: của Universality cho phép làm **ngược lại**, rằng nếu ta có **X ~ F**
 > thì bằng cách **apply F lên X** ta sẽ có một random variable mới tuân theo
-> \**Uniform (0,1)**. Tức **U = F(X) sẽ ~ Uniform (0,1).**
+> **Uniform (0,1)**. Tức **U = F(X) sẽ ~ Uniform (0,1).**
 >
 > Ở đây ta sẽ **giải thích tại sao (phần 2) lại vậy**
 
@@ -284,8 +284,8 @@
 
 > [!NOTE]
 > Thế thì, nhìn vào biểu đồ có thể thấy **F(X) ≤ 1/3** sẽ **tương đương** với việc
-> \**X ≤ x0** hay nói các khác hai event: event [F(X) ≤ 1/3] và event [X ≤ x0]  LÀ
-> \**CÙNG MỘT EVENT**
+> **X ≤ x0** hay nói các khác hai event: event [F(X) ≤ 1/3] và event [X ≤ x0]  LÀ
+> **CÙNG MỘT EVENT**
 >
 > Nên **P(F(X) ≤ 1/3) = P(X ≤ x0) (**hai event là một thì đương nhiên xác suất
 > chúng bằng nhau)
@@ -323,7 +323,7 @@
 > giúp **tạo random variable** của **một CDF biết trước**. 
 >
 > Thì ví dụ ta có **CDF** của **Logistic** distribution là **F(x) = e^x / (1 + e^x)**, và ta muốn
-> \**simulating**, tức **generate** các random variable của distribution này.
+> **simulating**, tức **generate** các random variable của distribution này.
 >
 > Ta sẽ tìm **F_inv** bằng cách cho **e^x / (1 + e^x) = u** và giải ra hàm **x = G(u)** thì
 > khi đó **G chính là F_inv**
@@ -343,7 +343,7 @@
 
 > [!NOTE]
 > Ta qua ví dụ này, cho **X, Y, Z** là các i.i.d **positive** random variable. Bài toán là tìm
-> \**E(X / (X + Y + Z))**
+> **E(X / (X + Y + Z))**
 
 <br>
 
@@ -357,7 +357,7 @@
 > chúng **i.i.d** 
 >
 > Thế thì nhờ tính **symmetry**: tức là **các r.v có tính đối xứng**, nên
-> \**E[X/(X+Y+Z)]** cũng phải bằng **E[Y/(X+Y+Z)]** và bằng luôn **E[Z/(X+Y+Z)]** Do symmetry: E[X/(X+Y+Z)] = E[Y/(X+Y+Z)] = E[Z/(X+Y+Z)]
+> **E[X/(X+Y+Z)]** cũng phải bằng **E[Y/(X+Y+Z)]** và bằng luôn **E[Z/(X+Y+Z)]** Do symmetry: E[X/(X+Y+Z)] = E[Y/(X+Y+Z)] = E[Z/(X+Y+Z)]
 
 <br>
 
@@ -368,9 +368,9 @@
 > [!NOTE]
 > Thế thì ta sẽ **nghĩ đến việc cộng chúng lại**, và sau đó **nhờ** **Linearity**:
 >
-> \**E(X/tổng XYZ) +  E(Y/tổng XYZ) + E(Z/tổng XYZ)** 
+> **E(X/tổng XYZ) +  E(Y/tổng XYZ) + E(Z/tổng XYZ)** 
 >
-> \**= E(X/tổngXYZ + Y/tổng XYZ + Z/tổng XYZ) (by linearity)** 
+> **= E(X/tổngXYZ + Y/tổng XYZ + Z/tổng XYZ) (by linearity)** 
 > = **E(1) = 1**
 >
 > Suy ra E(X/tổng XYZ) = E(Y/tổng XYZ) = E(Z/tổng XYZ)  = **1/3**
@@ -495,7 +495,7 @@
 >
 > Thế thì vì **n-X = k** ⇔ **X = n-k**, nên **hai event này là một**, nên:
 >
-> \**P(n-X=k) = P(X=n-k)**
+> **P(n-X=k) = P(X=n-k)**
 >
 > Tới đây ta có X ~ Bin(n, p) nên PMF của nó ta đã biết bữa trước:
 >
@@ -673,8 +673,8 @@
 > Cuối cùng gs **dặn dò** rằng ta nên **phân biệt rõ** giữa **distribution** và **random
 > variable**.
 >
-> \**distribution** giống như **bản thiết kế của căn nhà**, quy định **giá trị xác suất** một
-> \**random variable mang một possible value** nào đó
+> **distribution** giống như **bản thiết kế của căn nhà**, quy định **giá trị xác suất** một
+> **random variable mang một possible value** nào đó
 >
 > và từ **bản thiết kế có thể xây nhiều căn nhà**, tức là có **nhiều random variable
 > tuân theo design đó.**

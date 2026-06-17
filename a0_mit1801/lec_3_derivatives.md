@@ -46,7 +46,7 @@
 > Đây là hai cái (A), (B) mà **tí nữa ta sẽ chứng minh** sau.
 >
 > Để rồi **limit của sin(x)** khi delta_x -> 0 là bằng sin(x*0) + cos(x*1) =
-> \**cos(x)**
+> **cos(x)**
 
 <br>
 

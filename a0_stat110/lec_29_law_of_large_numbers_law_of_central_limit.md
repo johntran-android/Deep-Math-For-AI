@@ -30,14 +30,14 @@
 > thì **SAMPLE MEAN CONVERGE VỀ TRUE MEAN** (μ) với **xác suất = 1**
 >
 > Đại khái là μ, ta đã biết nó là EX, là **true mean**, và là **constant**. Còn
-> \**sample mean X_bar** nó là **tổng n các Xj chia cho n**, và do các **Xj là
+> **sample mean X_bar** nó là **tổng n các Xj chia cho n**, và do các **Xj là
 > random variables** nên **SAMPLE MEAN LÀ MỘT RANDOM VARIABLES**.
 >
 > Và định lý này cho bết random variable này sẽ **CONVERGE** về **constant
 > EX**: **X_bar -> μ**
 
 > [!NOTE]
-> \**LAW OF LARGE NUMBERS**
+> **LAW OF LARGE NUMBERS**
 >
 > Khi n lớn đến vô cùng thì **SAMPLE MEAN CONVERGE VỀ TRUE
 > MEAN** (μ) với XÁC SUẤT = 1
@@ -76,7 +76,7 @@
 
 > [!NOTE]
 > Một ví dụ cho **Xj ~ Bern(p)**, thì theo **luật số lớn** ta có **[Σj=1:n Xj] / n** sẽ
-> \**converge về p** với **xác suất 1**
+> **converge về p** với **xác suất 1**
 >
 > Gs nói đại khái là điều ở trên cơ bản là **rất intuitive**, rất dễ hiểu, khi **giả sử ta
 > tung đồng xu (fair coin) 1 triệu lần** thì ta sẽ thấy hợp lý để **tin rằng sẽ có một
@@ -84,7 +84,7 @@
 >
 > Ngoài ra việc luật số lớn nói rằng **xác suất bằng 1**, cũng cho ta một cái để vịn
 > vào, bởi lẽ **khi tung đồng xu mà kết quả ra là một chuỗi HHHHH** ...thì ta
-> \**sẽ vẫn biết nó sẽ không kéo dài mãi mãi** được
+> **sẽ vẫn biết nó sẽ không kéo dài mãi mãi** được
 
 <br>
 
@@ -143,11 +143,11 @@
 
 > [!NOTE]
 > Còn một phiên bản gọi là **Weak** của **LLN** nói rằng, **với mọi số dương c** dù
-> \**nhỏ đến mấy** thì xác suất của việc [t**ồn tại khoảng cách c dương giữa Sample 
+> **nhỏ đến mấy** thì xác suất của việc [t**ồn tại khoảng cách c dương giữa Sample 
 > mean và True mean**] sẽ **tiến về 0** (khi **n -> infinity**)
 >
 > Và **P(|Sample mean - True mean| > c)** -> 0 gọi là **CONVERGENCE** **IN**
-> \**PROBABILITY**
+> **PROBABILITY**
 >
 > Và ý nghĩa của nó có thể hiểu nôm na là: với n lớn đến vô cùng thì sẽ **cực
 > kì khó có có chuyện** có sự khác nhau giữa sample mean và true mean
@@ -165,9 +165,9 @@
 > Ta sẽ **chứng minh Law of Large Number (weak)**: đại khái là để chứng minh
 > gs cho rằng chỉ cần dùng **Chebyshev inequality** mà bài trước đã học.
 >
-> \**Chebyshev** inequality cho biết: 
+> **Chebyshev** inequality cho biết: 
 >
-> \**P(|X-μ| >= a) <= Var(X)** / a^2 với μ = EX, a dương bất kì
+> **P(|X-μ| >= a) <= Var(X)** / a^2 với μ = EX, a dương bất kì
 >
 > Do đó áp dụng vào đây với X là X_bar, μ là EX_bar: 
 >
@@ -183,11 +183,11 @@
 
 > [!NOTE]
 > Thế thì xét **Var(X_bar)**, đúng hơn là **Xn_bar** để chỉ đây là **sample mean**, của
-> \**n iid Xj**.
+> **n iid Xj**.
 >
 > => Var(X_bar) = Var [(1/n)*(X1 + X2 + ...Xn)]
 >
-> \**Đưa constant c ra ngoài** và **bình phương** theo property đã biết của Variance
+> **Đưa constant c ra ngoài** và **bình phương** theo property đã biết của Variance
 >
 > = **(1/n^2) Var(X1 + X2 + .... Xn)**
 >
@@ -235,7 +235,7 @@
 > Ta sẽ **nhân (Xn_bar - μ) với n^x** (x chưa biết).
 >
 > Mục đích là, **nếu x lớn hơn một mức nào đó** thì **n^x sẽ -> inf** nhanh hơn
-> \**(Xn_bar-mu) đi đến 0**. Tức là **n^x vượt trội**. Dẫn đến **tích của chúng -> inf**
+> **(Xn_bar-mu) đi đến 0**. Tức là **n^x vượt trội**. Dẫn đến **tích của chúng -> inf**
 > (blow up)
 >
 > Còn ngược lại, nếu **x nhỏ hơn mức nào đó** thì **Xn_bar - μ** **dominate**, nó **đi
@@ -251,7 +251,7 @@
 
 > [!NOTE]
 > Và con số đó là **1/2**. Là con số mà **n^x(Xn_bar - μ)** có tính chất là có một
-> \**nice distribution**, **không bị blow up** hoặc **get killed (->0) khi n -> inf**
+> **nice distribution**, **không bị blow up** hoặc **get killed (->0) khi n -> inf**
 
 <br>
 
@@ -263,10 +263,10 @@
 > Và đây cũng chính là **CENTRAL LIMIT THEOREM**: 
 >
 > Nó nói nếu chia thêm cho σ thì **n^(1/2)*(Xn_bar-μ)/σ** sẽ trở thành 
-> \**Standard Normal** distribution
+> **Standard Normal** distribution
 >
 > Và điều đó có nghĩa là nếu lấy **CDF** của **n^(1/2)*(Xn_bar-μ)/σ** thì
-> \**CDF này sẽ converge về CDF của N(0,1)**, mà ta còn nhớ nó được kí hiệu
+> **CDF này sẽ converge về CDF của N(0,1)**, mà ta còn nhớ nó được kí hiệu
 > riêng bằng fi viết hoa (Φ).
 >
 > Suy ngẫm một chút: n^(1/2)*(Xn_bar-μ)/σ là gì, nó là một random variable
@@ -291,8 +291,8 @@
 
 > [!NOTE]
 > Đại khái là, **gs cho rằng** kết quả này **rất đáng kinh ngạc**, vì
-> \**n^(1/2)(Xn_bar-μ)/σ** có thể là **discrete**, hoặc **continuous** hoặc **hỗn**
-> \**hợp** giữa cả hai.
+> **n^(1/2)(Xn_bar-μ)/σ** có thể là **discrete**, hoặc **continuous** hoặc **hỗn**
+> **hợp** giữa cả hai.
 >
 > Và **distribution** của nó rõ ràng **có thể rất phức tạp**. Trong khi đó **N(0,
 > 1)** chỉ **là một distribution cụ thể** **trong nhiều distribution**.
@@ -350,7 +350,7 @@
 >
 > (**Σj Xj** - nμ) / (√n)*σ  Và cái dạng tương đương này, chính là việc ta quan
 > tâm đến **Σj Xj** (gọi là **convolution** như đã biết), tuy nhiên ta sẽ
-> \**standardize** Σj Xj về **mean 0**, và **variance 1** bằng cách **trừ mean (của
+> **standardize** Σj Xj về **mean 0**, và **variance 1** bằng cách **trừ mean (của
 > Σj Xj)** và **chia cho standard deviation** (của Σj Xj)
 >
 > Thế thì mean của, tức **E(Σj Xj) chính là nμ**:
@@ -373,10 +373,10 @@
 > ta STANDARDIZE một random variable U = Σj Xj
 >
 > Tóm lại, **đại ý là** **hai dạng** của **CLT** chỉ là một cái ta quan tâm
-> \**distribution**, cách hành xử của **sample mean**,
+> **distribution**, cách hành xử của **sample mean**,
 >
 > và một cái ta diễn giải nó theo cách ta **quan tâm convolution: Tổng Xj**. Và
-> \**cụ thể hơn** là **trong dạng  thứ hai** thì ta quan tâm đến **Tổng Xj đã được
+> **cụ thể hơn** là **trong dạng  thứ hai** thì ta quan tâm đến **Tổng Xj đã được
 > standardized**
 
 <br>
@@ -400,13 +400,13 @@
 
 > [!NOTE]
 > Từ đó, cách làm của ta sẽ là, ta **tìm MGF của vế trái**, và chứng minh rằng khi
-> \**n -> inf** thì **MGF** này **converge về MGF của N(0,1)**.
+> **n -> inf** thì **MGF** này **converge về MGF của N(0,1)**.
 >
 > Khi đó đồng nghĩa là random variable U = **standardized Σj Xj** sẽ **converge**
 > về **X~N(0,1)**
 >
 > Gs gọi là **CONVERGE IN DISTRIBUTION**, là cái ta đang chứng minh, là
-> \**distribution của vế trái sẽ converge về N(0,1)**
+> **distribution của vế trái sẽ converge về N(0,1)**
 
 <br>
 
@@ -417,7 +417,7 @@
 > [!NOTE]
 > Đại khái là, cái **vế phải** (tức là **standardized Σj X**j), thật ra **có thể viết ở
 > dạng khác** trong đó ta **standardized từng Xj riêng** **trước khi sum** lại và
-> \**chia cho √n**.
+> **chia cho √n**.
 >
 > Do đó, có thể coi như, cái ta quan tâm tương đương với **(Σj Yj)/√n** với Yj là
 > Xj đã standardized: **Yj = (Xj-μ)/σ**
@@ -434,7 +434,7 @@
 >
 > Gọi **Sn** = Σj Yi, để rồi bài toán là ta sẽ là: 
 >
-> \**tìm MGF của Sn / √n** = Σ Xj /√n. 
+> **tìm MGF của Sn / √n** = Σ Xj /√n. 
 >
 > Và sau đó **tìm limit của nó**, để thấy nó **converge về M(t) của N(0,1)**  là chứng minh xong
 
@@ -456,7 +456,7 @@
 > Thế thì, vì các **Xj independent** nên MGF **theorem** cho phép **MGF của tổng các
 > r.v** bằng  **tích các MGF của mỗi r.v**
 >
-> \**E(e^t(X1+X2...Xn) / √n) = E(e^tX1 / √n)*E(e^tX2 / √n)*..*E(e^tXn / √n)** 
+> **E(e^t(X1+X2...Xn) / √n) = E(e^tX1 / √n)*E(e^tX2 / √n)*..*E(e^tXn / √n)** 
 > (mà xuất phát cũng từ tính chất E(XY) = EX*EY mà ta đã chứng minh trong link hồng
 
 <br>
@@ -474,7 +474,7 @@
 >
 > Nên kết quả trở thành: 
 >
-> \**{ E[e^tX1/√n] }^n = [M(t/√n)]^n** 
+> **{ E[e^tX1/√n] }^n = [M(t/√n)]^n** 
 >
 > (nhớ là ta đã giả định ở đầu bài rằng MGF M(t) của Xj tồn tại
 
@@ -551,10 +551,10 @@
 > E[e^tX]**. Thì đương nhiên **M(0) = E[e^0] = E(1) = 1**
 >
 > Nhưng quan trọng là, ta biết MGF là Moment Generating Function,
-> \**đạo hàm cấp n** của nó **chính là n'th moment của X**:
+> **đạo hàm cấp n** của nó **chính là n'th moment của X**:
 >
-> \**1st derivative M'(t)**, chính là **1st moment: EX**, chính là **mean**. Và với
-> \**Xj** thì ta đã nói ở trên đây là "đã standardized" nên **mean = 0**
+> **1st derivative M'(t)**, chính là **1st moment: EX**, chính là **mean**. Và với
+> **Xj** thì ta đã nói ở trên đây là "đã standardized" nên **mean = 0**
 >
 > còn **M''(t)** chính là **2nd moment:** **E(X^2)**. Với Xj, như vừa nói, đã standardized
 > nên variance Var(Xj) = E(Xj^2) - (EXj)^2 = 1. Nên **E(Xj^2)** = 1 - (EXj)^2 =1 - 0 
@@ -632,7 +632,7 @@
 > Thế thì dễ thấy **những gì mà Bin(n, p) có khá phù hợp với những gì mà CLT
 > vừa nói.** Là ta quan tâm đến **tổng của các r.v i.i.d**. Thế thì CLT nói rằng, **khi
 > n lớn** -> inf thì **distribution của X**, sau khi đã được **standardized** sẽ
-> \**converge / trở thành N(0,1)**
+> **converge / trở thành N(0,1)**
 
 <br>
 
@@ -713,8 +713,8 @@
 
 > [!NOTE]
 > Cuối cùng đại khái là một tạm gọi là **một trick** để **khắc phục một vấn đề** khi ta
-> \**approx. một discrete distribution** bằng một **continuous** **distribution** như khi ta
-> \**approx. Bin bằng Normal** ở đây.
+> **approx. một discrete distribution** bằng một **continuous** **distribution** như khi ta
+> **approx. Bin bằng Normal** ở đây.
 >
 > Bởi ví dụ như khi cần **approx P(X=a)**, (a là integer) thì sẽ vô dụng nếu ta
 > approx nó thành 0 (bởi như đã biết với continuous distribution thì xác suất X =
@@ -724,7 +724,7 @@
 >
 > bởi **dù sao X cũng là discrete** nên event **X=a cũng the same với event a-1/2 <
 > X < a+1/2**, chẳng qua là **cách thể hiện sau sẽ cho ta một interval** để mà làm
-> \**việc với PDF của Normal** (dùng nó để approx. Binomial)
+> **việc với PDF của Normal** (dùng nó để approx. Binomial)
 
 <br>
 

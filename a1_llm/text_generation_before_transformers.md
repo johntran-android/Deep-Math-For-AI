@@ -12,7 +12,7 @@
 > relying on **recurrent neural networks (RNNs).** 
 >
 > 2 **RNNs** had **limitations** due to **computational and memory requirements**, especially when
-> \**scaling to consider more preceding words** for **better predictions.**
+> **scaling to consider more preceding words** for **better predictions.**
 >
 > 3 **Language understanding** requires **considering the context of a sentence** or even the **entire
 > document**, as words can have **multiple meanings** and **syntactic ambiguity.**
@@ -113,8 +113,8 @@
 
 > [!NOTE]
 > Well in 2017, after the publication of this paper, **Attention is All You Need**, from
-> \**Google** and the **University of Toronto**, everything changed. The **transformer**
-> \**architecture** had arrived. This **novel approach** unlocked the progress in
+> **Google** and the **University of Toronto**, everything changed. The **transformer**
+> **architecture** had arrived. This **novel approach** unlocked the progress in
 > generative AI that we see today. It can be s**caled efficiently** to use multi-core
 > GPUs, it can **parallel process input data,** making **use of much larger training
 > datasets**, and crucially, it's able to **learn to pay attention to the meaning of the
@@ -124,7 +124,7 @@
 > Và **Attention** model cùng với **Transformer** đã mang tới một giải pháp rất
 > tốt cho vấn đề này. Nó cho phép model **học được các embed từ tuỳ theo
 > ngữ cảnh** của nó **thay vì extract từ một fixed embedding dictionary**. Nó
-> \**mang đến khả năng parallel process** đối với **sequence data** giống như
+> **mang đến khả năng parallel process** đối với **sequence data** giống như
 > cách mà **Convolutional Network làm đối với image data**.
 
 <br>

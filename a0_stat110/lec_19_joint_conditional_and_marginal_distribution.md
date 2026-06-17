@@ -33,7 +33,7 @@
 >
 > (kí hiệu là **partial derivative ∂^2 F(x, y) / ∂x∂y**, và ông cho biết cái này đơn
 > giản chỉ là lần **lượt lấy derivative của F w.r.t x và coi y như constant**, sau đó
-> \**lấy derivative của F w.r.t y, coi x như constant** hoặc ngược lại)
+> **lấy derivative của F w.r.t y, coi x như constant** hoặc ngược lại)
 >
 > Nói một chút về kí hiệu partial, trong 18.01, ta đã học rằng kí hiệu d/dx nên
 > hiểu là một operator, nên (d/dx) f(x) mang ý nghĩa là apply linear operator
@@ -98,7 +98,7 @@
 > [!NOTE]
 > Và gs nhắc lại về **marginal PDF** of X, f(x) là:
 >
-> \**f_X(x) = ∫-inf:inf f_XY(x,y)dy**
+> **f_X(x) = ∫-inf:inf f_XY(x,y)dy**
 >
 > Tức là **sum**, (hay gọi là marginalize) của **joint pdf** trên **toàn bộ các possible
 > value của Y** thì ta sẽ có marginal pdf của X.
@@ -108,7 +108,7 @@
 > nhiên đó marginal pdf của x: f(x) không phụ thuộc y
 >
 > Ngược lại khi **marginalize joint pdf trên mọi possible value của X** thì ta có
-> \**marginal pdf của y
+> **marginal pdf của y
 >
 > f_Y(y) = ∫-inf:inf f_XY(x,y)dx**
 
@@ -146,13 +146,13 @@
 > [!NOTE]
 > Tiếp theo ta sẽ làm quen với khái niệm **CONDITIONAL PDF of Y|X**:
 >
-> \**f_Y|X(y|x)  = f_XY(x,y) / f_X(x)**
+> **f_Y|X(y|x)  = f_XY(x,y) / f_X(x)**
 >
 > Trong đó **f_Y|X (y|x)** là kí hiệu để chỉ **conditional pdf**, với notation **Y|X** là để
 > chỉ rõ đây là **pdf của Y dựa trên X** mà **đôi khi có thể bỏ đi** nếu **bối cảnh là
 > rõ ràng, để chỉ còn f(y|x)**
 >
-> \**f_XY(x,y)** như đã biết, là **Joint PDF**.
+> **f_XY(x,y)** như đã biết, là **Joint PDF**.
 >
 >  **f_X(x)** là **Marginal PDF of X.**
 
@@ -172,14 +172,14 @@
 
 > [!NOTE]
 > Ta thấy nó có dạng **giống giống** với định nghĩa của **Conditional**
-> \**Probability** mà ta đã biết, khi đó liên quan đến **xác suất của các event**:
+> **Probability** mà ta đã biết, khi đó liên quan đến **xác suất của các event**:
 >
-> \**P(A|B) = P(A,B) / P(B)**
+> **P(A|B) = P(A,B) / P(B)**
 >
 > Vậy thì gs cho rằng , với cái này ta có các PDF, tức là như **đã biết**, **không
 > phải xác suất**. Nhưng ta có thể **coi** **như xác suất** với ý nghĩa ví
 > dụ như **f(y|x)** là **xác suất Y mang giá trị trong một vùng rất nhỏ quanh y**
-> \**DỰA TRÊN VIỆC** biết **X mang giá trị trong một vùng rất nhỏ quanh x.**
+> **DỰA TRÊN VIỆC** biết **X mang giá trị trong một vùng rất nhỏ quanh x.**
 
 <br>
 
@@ -196,11 +196,11 @@
 >
 > Thì từ đó ta có thể áp dụng với PMF của discrete variable:
 >
-> \**P(X=x|Y=y)*P(Y=y) = P(Y=y|X=x)*P(X=x)** vì X=x, Y=y cũng là các event
+> **P(X=x|Y=y)*P(Y=y) = P(Y=y|X=x)*P(X=x)** vì X=x, Y=y cũng là các event
 >
 > Và áp dụng cho PDF của continous r.v:
 >
-> \**f_X|Y(x|y) * f_Y(y) = f_Y|X(y|x) * f_X(x)**
+> **f_X|Y(x|y) * f_Y(y) = f_Y|X(y|x) * f_X(x)**
 
 <br>
 
@@ -246,7 +246,7 @@
 
 > [!NOTE]
 > Như bữa trước ta **đã chứng minh** **f(x,y)** sẽ bằng **1/π** khi **x^2+y^2<=1** và
-> \**f(x, y) = 0** nếu x, y ở ngoài
+> **f(x, y) = 0** nếu x, y ở ngoài
 >
 > Nhớ lại ta chứng minh bằng cách tích phân kép của joint PDF trên toàn 
 > mặt phẳng phải ra 1. Và bound tích phân thu hẹp lại thành vùng hình
@@ -276,11 +276,11 @@
 > Thế thì cái mà ta cần chú ý là **xác định limit của tích phân cho đúng**.
 >
 > Thế thì trong bài toán này, **constraint** để f(x,y) = 1/π là x,y phải thỏa
-> \**x^2+y^2<=1** tương đương **y phải nằm trong [-sqrt(1-x^2), sqrt(1-x^2]**
+> **x^2+y^2<=1** tương đương **y phải nằm trong [-sqrt(1-x^2), sqrt(1-x^2]**
 >
 > do đó khi **tích phân -infinity:infinity f(x,y)dy** trở thành
 >
-> \**tích phân trong [-sqrt(1-x^2), sqrt(1-x^2)] của f(x,y)dy** (vì ngoài đoạn này, thì
+> **tích phân trong [-sqrt(1-x^2), sqrt(1-x^2)] của f(x,y)dy** (vì ngoài đoạn này, thì
 > f(x,y) bằng 0 rồi nên khỏi cần tính)
 
 <br>
@@ -375,9 +375,9 @@
 >
 > Hoặc là ta có thể rút ra cùng kết luận này bởi :
 >
-> \**marginal** **pdf của Y** f_Y(y) = **2*sqrt(1-y^2) / π** 
+> **marginal** **pdf của Y** f_Y(y) = **2*sqrt(1-y^2) / π** 
 >
-> \**KHÔNG BẰNG** **conditional** **pdf của Y|X** tức f_Y|X(y|x) **= 1/sqrt(1-x^2)**)
+> **KHÔNG BẰNG** **conditional** **pdf của Y|X** tức f_Y|X(y|x) **= 1/sqrt(1-x^2)**)
 
 <br>
 
@@ -392,10 +392,10 @@
 > mà **không  cần phải tính pdf của g(x)** mà **chỉ cần dùng pdf của X tức
 > f(x)**
 >
-> \**E(g(x))** = tích phân từ -**infinity** tới **infinity** của **g(x)f(x)dx**
+> **E(g(x))** = tích phân từ -**infinity** tới **infinity** của **g(x)f(x)dx**
 >
 > Thế thì tương tự, nếu ta có **Joint pdf f_X,Y(x, y)** thì **LOTUS** cho phép ta tính
-> \**expected value của g(X,Y) (*)** 
+> **expected value của g(X,Y) (*)** 
 >
 > (*): Again, X,Y là r.v thì g(X,Y) ví dụ như X^2+sin(Y), tức là apply hàm g(x,y)
 > lên X, Y thì ta cũng sẽ CÓ **MỘT** **RANDOM** **VARIABLE**, để rồi có quyền tìm
@@ -403,7 +403,7 @@
 >
 > Vậy ta có thể tính như sau gọi là **2D LOTUS**
 >
-> \**E(g(X,Y)) = ∫-infinity:infinity ∫ từ -infinity:infinity g(x,y)*f(x,y)dxdy
+> **E(g(X,Y)) = ∫-infinity:infinity ∫ từ -infinity:infinity g(x,y)*f(x,y)dxdy
 >
 > f(x,y) là Joint PDF f_X,Y(x,y)**
 
@@ -446,7 +446,7 @@
 
 > [!NOTE]
 > gs cho biết ta sẽ **quay lại dùng cái này** khi qua bài nói về
-> \**CORRELATION** giữa hai r.v
+> **CORRELATION** giữa hai r.v
 >
 > Và sự thật rằng nếu hai random variable **INDEPENDENCE** THÌ HÀM Ý
 > CHÚNG CŨNG **UNCORRELATED** Ta sẽ chứng minh theorem này với continuous case, với discrete cũng
@@ -465,10 +465,10 @@
 > Do đó LOTUS cho phép ta tính E(g(X, Y)) mà không cần tìm PDF của g(X,Y) mà
 > chỉ cần dùng Joint PDF của X,Y: f_X,Y(x,y)
 >
-> \**E(XY) = ∫-inf:inf ∫-inf:inf x*y f_X,Y(x,y)dxdy**
+> **E(XY) = ∫-inf:inf ∫-inf:inf x*y f_X,Y(x,y)dxdy**
 >
 > Thế mà do ta đang xét **X,Y INDEPENDEN**T, nên như lúc nãy ta đã biết
-> \**JOINT PDF BẰNG TÍCH CỦA MARGINAL PDF: f_X,Y(x,y) = f_X(x)*f_Y(y)**
+> **JOINT PDF BẰNG TÍCH CỦA MARGINAL PDF: f_X,Y(x,y) = f_X(x)*f_Y(y)**
 >
 > Từ đó ta có E(XY) = ∫-inf:inf ∫-inf:inf **x*y f_X(x)f_Y(y)**dxdy
 >
@@ -513,7 +513,7 @@
 
 > [!NOTE]
 > Tiếp ta sẽ qua một bài toán nữa mà **LOTUS tỏ ra rất hữu ích** đó là cho
-> \**X,Y i.i.d ~ Uniform (0,1)**. Câu hỏi là tìm **expected value của |X-Y|**
+> **X,Y i.i.d ~ Uniform (0,1)**. Câu hỏi là tìm **expected value của |X-Y|**
 
 <br>
 
@@ -524,7 +524,7 @@
 > [!NOTE]
 > Thế thì, nhờ LOTUS, **E(|X-Y|)** sẽ là:
 >
-> \**E(|X-Y|) =** ∫-inf:inf ∫-inf:inf **|x-y|** f(x,y)dxdy
+> **E(|X-Y|) =** ∫-inf:inf ∫-inf:inf **|x-y|** f(x,y)dxdy
 >
 > (trong tình huống ko có gì lầm lẫn thì có thể khỏi cần ghi f_X,Y(x,y)
 > mà chỉ ghi f(x,y) vì hiển nhiên hiểu đây là Joint PDF của X, Y)
@@ -561,7 +561,7 @@
 > Tích phân **trong miền x<y** của |x-y|dxdy sẽ là **tích phân của (y-x)dxdy**
 >
 > Thế thì vì **X,Y i.i.d** và **symmetrical** nên tích phân trên miền (x>y) của (x-y)dxdy 
-> \**hoàn toàn bằng** với tích phân trên miền (x<y) của (y-x)dxdy
+> **hoàn toàn bằng** với tích phân trên miền (x<y) của (y-x)dxdy
 >
 > Nên ta **chỉ cần tính một** cái tích phân kép trên miền x>y của (x-y)dxdy
 
@@ -678,7 +678,7 @@
 > [!NOTE]
 > Đầu tiên, như đã biết về **Joint PMF**, nó là **P(X=x, Y=y)** và ở đây gs dùng **i,
 > j** để nhớ rằng các **possible value của X, Y** (số trứng nở và không nở) là
-> \**integer**.
+> **integer**.
 >
 > Thế thì theo gs, khi **đối mặt với một vấn đề mà ta không biết hướng giải quyết**,
 > thì có thể dùng **cách tiếp cận wishful thinking** mà ta đã từng dùng ở các bài
@@ -704,7 +704,7 @@
 > Theo **Axiom 2**, Xác suất của Union của các Disjoint event bằng tổng Xác suất cuả
 > từng event, do đó:
 >
-> \**P(Union của các DISJOINT event (X=i, Y=j, N=n) với n = 0,1...infinity))
+> **P(Union của các DISJOINT event (X=i, Y=j, N=n) với n = 0,1...infinity))
 >
 > = Tổng n=0,1...infinity P(X=i, Y=j, N=n)**
 >
@@ -724,7 +724,7 @@
 > [!NOTE]
 > Thế thì ta gặp phải việc tính **INFINITE SUM**, sum của một tổng có vô hạn
 > phần tử. Thì gs gợi ý rằng, trong những lúc như vậy, **cảm thấy bí**, thì nên
-> \**cho một số giá trị cụ thể** để từ đó ta **đánh giá tình hình**.
+> **cho một số giá trị cụ thể** để từ đó ta **đánh giá tình hình**.
 >
 > Ví dụ **P(X=3, Y=5, N=10)** có thể thấy rõ **xác suất này bằng 0**, vì **có 10
 > quả trứng** mà lại **chỉ có 3 cái nở, 5 cái không nở**, bị **mất 2 cái**, là điều

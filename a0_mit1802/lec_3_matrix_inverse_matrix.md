@@ -14,7 +14,7 @@
 >
 > Triển khai ra ta sẽ có **linear combination của 3 unit vector i, j, k**. Với 
 > coefficients là các det của các 2x2 matrix. Tức A x B **là VECTOR**,
-> \**không phải scalar như dot product**
+> **không phải scalar như dot product**
 
 <br>
 
@@ -140,7 +140,7 @@
 > và ở 1802 này nói về cách tính Ax theo cách mà gs Strang
 > gọi là low level: **dot product** của các **row of A** và **vector x**
 > (column of x, có thể coi như matrix có 1 column) để ra các
-> \**component của u**
+> **component của u**
 
 <br>
 

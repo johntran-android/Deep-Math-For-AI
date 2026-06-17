@@ -24,7 +24,7 @@
 > Testing MSE** vì model được training với objective function là đạt
 > performance tốt trên tranning sét. Còn overfit là vì **trong quá trình training
 > model luôn tìm ra một pattern** nào đó **chỉ có trong training set.** Và model
-> \**càng flexible** thì càng **dễ overfit training set.**
+> **càng flexible** thì càng **dễ overfit training set.**
 >
 > Kế người ta cho hai ví dụ nữa để cho thấy dạng chữ U điển hình.
 >
@@ -153,7 +153,7 @@
 > ====
 >
 > Và từ đây mình hiểu ra tại sao gọi là **high-variance** và tại sao nó gắn với
-> \**overfit**. Trong các khóa ML như MLSpec, DLSpec, người ta gọi model có
+> **overfit**. Trong các khóa ML như MLSpec, DLSpec, người ta gọi model có
 > high-variance chính là để chỉ trạng thái này, **khi chỉ cần thay đổi training data
 > một chút** là **kết quả của prediction model trên new data sẽ khác liền**.
 >
@@ -173,8 +173,8 @@
 > Tiếp theo, về **Bias(f^(x0))** lại là bias / **định kiến** mà ta đưa vào **khi chọn
 > model** cho bài toán. Ví dụ như **khi data thực tế phân bố không theo quy luật
 > tuyến tính**, mà theo một đường cong nào đó thì **dù có nhiều data mấy** thì
-> \**nếu ta chọn linear regression** cũng sẽ không thể mô tả, biểu diễn được từ đó
-> \**không thể giảm Bias(f^).**
+> **nếu ta chọn linear regression** cũng sẽ không thể mô tả, biểu diễn được từ đó
+> **không thể giảm Bias(f^).**
 
 <br>
 
@@ -188,12 +188,12 @@
 > ngược nhau**. **Flexibility tăng**, sẽ **giảm Bias** nhưng **tăng Variance**, do
 > đó **Flexibility mà quá thấp** thì Variance thấp (là tốt) nhưng **Bias lại cao**.
 >
-> \**Flexibility mà quá cao** thì **Bias thấp** nhưng **Variance lại cao**. Do đó phải
+> **Flexibility mà quá cao** thì **Bias thấp** nhưng **Variance lại cao**. Do đó phải
 > tìm ra một Flexibility sao cho cân bằng được hai cái này nên mới gọi là
 > Trade-Off
 >
 > In general, khi tăng flexibility lên dần thì **đầu tiên nó giúp giảm bias nhiều**
-> \**hơn là tăng variance**, nên thường ban đầu te**st MSE sẽ giảm**. Nhưng sau
+> **hơn là tăng variance**, nên thường ban đầu te**st MSE sẽ giảm**. Nhưng sau
 > đó đến một **lúc nào đ**ó, việc giảm MSE từ việc giảm bias (từ Bias(f^)) sẽ ít
 > đi, còn **hiệu ứng tăng MSE do tăng Variance (Var(f^)) mạnh hơn** khiến **test
 > MSE lại tăng lên.** Và việc này thể hiện ở tất cả các hình trong các ví dụ
@@ -225,7 +225,7 @@
 > [!NOTE]
 > Đại khái là case 1: **true f không phải tuyến tính mà là đường cong
 > nhưng cũng không quá cong** (polynomial degree không quá cao) nên khi
-> \**tăng flexibility, nó giúp giảm mạnh bias** (line màu xanh), trong khi **ảnh
+> **tăng flexibility, nó giúp giảm mạnh bias** (line màu xanh), trong khi **ảnh
 > hưởng việc tăng MSE do tăng variance thấp** - line màu cam chỉ
 > tăng nhẹ) nên **kết quả là MSE (màu đỏ) giảm nhanh**.
 >
@@ -260,7 +260,7 @@
 >
 > Ví dụ, real f / **dataset phân bố theo phi tuyến** nhưng ta **áp dụng linear
 > regression**, thì nó sẽ **low variance** nhưng **high bias**. Hoặc ngược lại,
-> \**true f là linear,** nhưng ta lại dùng **model có flexibility qúa cao,** ví dụ đi
+> **true f là linear,** nhưng ta lại dùng **model có flexibility qúa cao,** ví dụ đi
 > qua hết các data sample luôn, sẽ khiến nó **low bias** nhưng **high
 > variance**.
 >
@@ -295,7 +295,7 @@
 >
 > Thì đại khái là với Test Error Rate sẽ kí hiệu là: 
 >
-> \**Ave(I(y^0 != y0)
+> **Ave(I(y^0 != y0)
 >
 > Như mấy phần trước, y0 và y^0 thể hiện ground truth label và prediction của f^
 > đối với unseen sample.**
@@ -346,7 +346,7 @@
 
 > [!NOTE]
 > Dù class có max j Pr(Y=j|X) để gán cho X thì vẫn sẽ có thể sai. Vì thứ nhất là model | y^
-> \**đều được xây dựng dựa trên một giả định** (assumption) nào đó. Mà **giả định thì
+> **đều được xây dựng dựa trên một giả định** (assumption) nào đó. Mà **giả định thì
 > không phải luôn đúng  hoàn toàn.**
 >
 > Thứ hai là **real data có noise**, dẫn đến là **dù model có phản ánh  đúng quy luật của

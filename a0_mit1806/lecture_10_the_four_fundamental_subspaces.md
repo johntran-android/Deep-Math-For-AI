@@ -44,7 +44,7 @@
 
 > [!NOTE]
 > Và ta sẽ nói về một subspace quan trọng thứ 3 bên cạnh
-> \**columns** **space** và **nullspace**: **ROW SPACE**.
+> **columns** **space** và **nullspace**: **ROW SPACE**.
 >
 > Vậy rowspace là space tạo bởi **mọi linear combination của
 > các matrix row**. Hay nói cách khác, các row vector của A sẽ
@@ -70,10 +70,10 @@
 > Cho matrix A [m,n] thì **C(A) sẽ là subspace của Rm** (mỗi
 > cols  có m component)
 >
-> \**N(A) sẽ là subspace của Rn** (có n cols, nên x khiến Ax = 0
+> **N(A) sẽ là subspace của Rn** (có n cols, nên x khiến Ax = 0
 > sẽ  có n component)
 >
-> \**C(AT) cũng là subspace của Rn**, mỗi row là vector có n
+> **C(AT) cũng là subspace của Rn**, mỗi row là vector có n
 > phần tử.
 >
 > Và **N(AT) sẽ là subspace của Rm**
@@ -127,7 +127,7 @@
 > space** và **số lượng pivot chính là rank** và **chính là
 > dimensions của columns space**.
 >
-> \**Vì sao pivots cols là basis của columns space?**
+> **Vì sao pivots cols là basis của columns space?**
 >
 > thì bởi vì **chúng là các cols vector độc lập** trong các cols
 > vector, thì chúng là những vector **vừa đủ để span cols
@@ -188,7 +188,7 @@
 > Gs nhắc lại ta nhớ lại việc tìm **solution của Ax=0** (solution
 > của nó chính là thuộc nullspace): Ta sẽ **elimination**, đưa A
 > về row echelon form **U**, thậm chí reduced row echelon form
-> \**R**.
+> **R**.
 >
 > Sau đó ta sẽ **tìm ra pivol cols/variable** đồng nghĩa biết **free
 > cols/variable**. Và với từ đó gán giá trị tùy ý cho các free
@@ -197,7 +197,7 @@
 > Và nhớ lại, ta thường cho lần lượt mỗi free variable một lần
 > mang giá trị 1, mấy cái còn lại 0 (ý là ví dụ có 2 free
 > variable x1, x3 thì **lần đầu ta cho x1=1, x3=0**, lần sau cho
-> \**x3=1, x1=0** để tính ra pivot var. Và đó các solution tìm theo
+> **x3=1, x1=0** để tính ra pivot var. Và đó các solution tìm theo
 > cách gán này được gọi là các **special solution**.
 >
 > Vậy dễ thấy **các special solution này independence** (vì ta 
@@ -205,7 +205,7 @@
 > luôn có thể chọn gía trị khiến các special solution độc lập.)
 >
 > Và gs vì vậy (**independence** và **span** **nullspace**) nên đó 
-> \**cũng chính là basis vector** của nullspace.
+> **cũng chính là basis vector** của nullspace.
 >
 > Như vậy, mỗi free variable sẽ cho ta một special solution
 > (again, gán 1 cho nó, gán 0 cho mấy free variable khác và
@@ -247,7 +247,7 @@
 >
 > ======
 >
-> \*****Chứng minh special solutions span nullspace bằng phản chứng** 
+> *****Chứng minh special solutions span nullspace bằng phản chứng** 
 > Giả sử x_spec1 và x_spec2 là special solution.
 >
 > Đương nhiên tương đương alpha*x_spec1 cũng là solution với mọi alpha và
@@ -281,7 +281,7 @@
 > luận mọi solution của Ax=0 đều là linear combination  của các special solution. **SUY
 > RA SPECIAL SOLUTION SPAN NULLSPACE** 
 > ====== 
-> \****Chứng minh các special solution independence**
+> ****Chứng minh các special solution independence**
 >
 > Giả sử các special solution phụ thuộc: tức ta có thể viết x_spec2 = gamma*x_spec1
 >
@@ -300,7 +300,7 @@
 >
 > ======
 >
-> \**từ đó kết luận các SPECIAL SOLUTION LÀ BASIS CỦA NULLSPACE**
+> **từ đó kết luận các SPECIAL SOLUTION LÀ BASIS CỦA NULLSPACE**
 
 <br>
 
@@ -386,7 +386,7 @@
 <p align="center"><kbd><img src="assets/e3c5a50063903d5309f21162484d2f54e036f119.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**COLUMN SPACE CỦA R KHÁC COLUMN SPACE CỦA
+> **COLUMN SPACE CỦA R KHÁC COLUMN SPACE CỦA
 > A**. Gs cho biết, vì **TRONG QUÁ TRÌNH ELIMINATION
 > TA ĐÃ THAY  ĐỔI CÁC COLUMN**
 >
@@ -413,7 +413,7 @@
 > A, ta đã **THAY CÁC ROW BẰNG LINEAR COMBINATION
 > CỦA  CHÚNG**. Gs đề nghị ngẫm lại xem có phải vậy
 > không. Đúng là như vậy. Thế thì điều đó có nghĩa là
-> \**ROWSPACE CỦA A TRONG QUÁ TRÌNH ELIMINATION
+> **ROWSPACE CỦA A TRONG QUÁ TRÌNH ELIMINATION
 > KHÔNG THAY ĐỔI**, do đó rowspace của R vẫn chính là
 > rowspace của A. Khi thay hai vector (row) bằng hai vector
 > khác trong cùng row space (linear combination của hai
@@ -460,7 +460,7 @@
 > hai basis vector? 
 >
 > Thì bởi vì ta **có thể làm ngược qúa trình elimination** lại
-> \**để** **từ hai basis vector ra lại các row của A**. Thì điều này 
+> **để** **từ hai basis vector ra lại các row của A**. Thì điều này 
 > đồng nghĩa các **row của A là linear combination của các
 > basis vector**. Và **cũng đồng nghĩa rowspace cuả A chính
 > là rowspace của R.**
@@ -584,7 +584,7 @@
 > ROW 3 CỦA E CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA A.T
 >
 > Rồi, bây giờ ta sẽ chứng minh nó cũng chính là basis:** Là bởi như bài trước ta đã cũng nhau chứng minh để đi đến kết luận là
-> \**dimension của nullspace của A.T sẽ là m - r**. Vậy thì đối với matrix A này m = 3,
+> **dimension của nullspace của A.T sẽ là m - r**. Vậy thì đối với matrix A này m = 3,
 > n = 4 và rank = 2. Vậy dimension của nullspace của A.T = m-r=3-2 = 1
 >
 > À, vậy **dimension của nullspace của A.T = 1** nên basis của nullspace của A.T
@@ -606,7 +606,7 @@
 > space  mới: Từ những bài trước tới nay, đại khái là ta làm
 > việc với vector space nếu thỏa tính chất
 >
-> \**Hai vector cộng nhau vẫn trong vector space**. **Scale vector
+> **Hai vector cộng nhau vẫn trong vector space**. **Scale vector
 > thì vẫn được vector nằm trong space**.
 >
 > Ví dụ hai vector v1,v2 có 3 phần tử. (thuộc R3). Thì v1+v2,
@@ -620,7 +620,7 @@
 >
 > Đây chính là sự **mở rộng vector space R^n thành R^nxn**
 >
-> \*Tạm thời gs đề nghị bỏ qua một tính chất là V1 có thể
+> *Tạm thời gs đề nghị bỏ qua một tính chất là V1 có thể
 > nhân với V2 (trong bảng là A nhân B)
 
 <br>
@@ -634,7 +634,7 @@
 >
 > (nhắc lại M là tập hợp mọi matrix 3x3)
 >
-> \**mọi matrix U (3x3)**, hay
+> **mọi matrix U (3x3)**, hay
 >
 > mọi **symmetric 3x3 matrix**
 >

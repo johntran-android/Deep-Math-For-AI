@@ -512,7 +512,7 @@
 > thể  của nó thì Y|X ~ bin(X, n) sẽ là một random variable thuộc một thành viên
 > cụ thể của family này
 >
-> \**DO ĐÓ, BẤT CỨ KHI NÀO TA THẤY RANDOM VARIABLE XUẤT HIỆN TẠI
+> **DO ĐÓ, BẤT CỨ KHI NÀO TA THẤY RANDOM VARIABLE XUẤT HIỆN TẠI
 > VỊ TRÍ CỦA MỘT PARAMETERS THÌ ĐÓ LÀ KHI TA ĐANG MÔ TẢ MỘT
 > FAMILY CÁC DISTRIBUTION. Đây là một nhận định cực kì quan trọng,** 
 

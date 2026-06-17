@@ -110,10 +110,10 @@
 
 > [!NOTE]
 > Developers have **discovered that** as the **scale of foundation models grows** from
-> \**hundreds of millions** of parameters to **billions**, even **hundreds of billions**, the
-> \**subjective understanding of language** that a model possesses also **increases**.
+> **hundreds of millions** of parameters to **billions**, even **hundreds of billions**, the
+> **subjective understanding of language** that a model possesses also **increases**.
 > This language understanding stored within the parameters of the model is what
-> \**processes, reasons, and ultimately solves the tasks you give it**, but it's also true
+> **processes, reasons, and ultimately solves the tasks you give it**, but it's also true
 > that **smaller models can be fine tuned to perform well on specific focused tasks.**
 
 <br>

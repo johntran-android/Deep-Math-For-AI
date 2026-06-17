@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > gs Alan mở đầu bằng bài toán tính **derivative của hàm f(x)** =
-> \**l2 norm của vector x w,r,t x**
+> **l2 norm của vector x w,r,t x**
 
 <br>
 
@@ -19,7 +19,7 @@
 
 > [!NOTE]
 > thì gs cho rằng ta, nếu **theo cách làm thông thường**, từ 18.02 có thể sẽ
-> \**tiếp cận theo lối "indices"** như thế này: đó là ta **tính derivative của f w.r.t
+> **tiếp cận theo lối "indices"** như thế này: đó là ta **tính derivative của f w.r.t
 > các phần tử của x,** 
 > Và dùng chain rule cũng như công thức đạo hàm hàm sơ cấp ta sẽ có
 > thể tính ra kết quả là **x1/||x||**
@@ -95,7 +95,7 @@
 
 > [!NOTE]
 > Phần tiếp theo gs nói về **matrix-matrix** function. Ông lấy ví dụ như
-> \**A=LU** (ta biết nó chính là quá trình **elimination**, để biến A thành dạng
+> **A=LU** (ta biết nó chính là quá trình **elimination**, để biến A thành dạng
 > row echelon form U)
 >
 > Hoặc gs có nhắc đến **eigendecomposition**, là function take in matrix
@@ -122,7 +122,7 @@
 
 > [!NOTE]
 > Có thể hiểu trong đây gs define generic function **fac(Y,X)** là
-> \**Symbolic**.**jacobian(vec(Y), vec(X))** để rồi ở dưới gọi **J =
+> **Symbolic**.**jacobian(vec(Y), vec(X))** để rồi ở dưới gọi **J =
 > jac(X^2, X)**
 >
 > Chính là **define một function** để
@@ -133,7 +133,7 @@
 > này.
 >
 > Thế thì đại khái thầy Alan nói rằng **khi ta gọi function jac()** như ở đây
-> \**để Julia tính Jacobian matrix** thì nó chỉ việc tính derivative của từng
+> **để Julia tính Jacobian matrix** thì nó chỉ việc tính derivative của từng
 > component của output vector đối với 4 component của input, và xếp
 > thành một hàng.
 >
@@ -217,11 +217,11 @@
 >
 > Tiếp vectorize hai vế (hai vế đương nhiên đang ở dạng matrix:
 >
-> \**vec[d(X^2)] = vec(X.dX + dX.X)**
+> **vec[d(X^2)] = vec(X.dX + dX.X)**
 >
 > tới đây cái mục đích của mình đó là làm sao cho ra dạng:
 >
-> \**vec(df) = J.vec(dX),** 
+> **vec(df) = J.vec(dX),** 
 >
 > cũng như khi function f: vector-vector, ta muốn df = Jdx vậy, vì
 > ở đây dX là matrix nên vectorize nó với vec() để có vector.
@@ -231,7 +231,7 @@
 >
 > Thì ta sẽ dùng cái công thức **Kronecker** product gs Alan nói ở next slide: 
 >
-> \**(A** ⊗ **B).vec(C) = vec[BC(AT)]** với ⊗ là **Kronecker product**.
+> **(A** ⊗ **B).vec(C) = vec[BC(AT)]** với ⊗ là **Kronecker product**.
 >
 > Sở dĩ làm vậy vì trong công thức trên ta thấy **vế phải có dạng (A** ⊗ **B).vec(C)**
 > có dạng (matrix . vector), thì ta **có thể dùng nó để có J . vec(dX)** 
@@ -302,7 +302,7 @@
 > đại khái là gs cho rằng **có thể bỏ notation "vec" đi** **và không
 > ghi dấu []**:
 >
-> \**d(X^2) = (I** ⊗ **X + XT** ⊗ **I) dX** 
+> **d(X^2) = (I** ⊗ **X + XT** ⊗ **I) dX** 
 >
 > mang ý nghĩa là **linear operator,** act on dX (và tự hiểu dX là
 > vector) trong đó (I ⊗ X + XT ⊗ I) đóng vai trò là linear operator
@@ -335,9 +335,9 @@
 > [!NOTE]
 > đại khái là ta cũng dùng product rule, để có 
 >
-> \**dX^3 = dXX^2 + XdXX + dXX^2.** 
+> **dX^3 = dXX^2 + XdXX + dXX^2.** 
 > Và gs nhắc lại rằng ta **không thể gom thành 3X^2dX** được vì đây là
-> \**matrix**, **không có tính commutative (giao hoán)**
+> **matrix**, **không có tính commutative (giao hoán)**
 >
 > Rồi gs nói cái dòng **E -> E*M*M**...là cách để **define trong Julia**. với **E là ý
 > nói dX, M là X**.
@@ -440,7 +440,7 @@
 >
 > Again, theo gs ta có thể thể hiện ở dạng 
 >
-> \**d(LU) = (L.dU) + (dL.U)** 
+> **d(LU) = (L.dU) + (dL.U)** 
 >
 > = L.dU.I + I.dL.U
 >
@@ -495,7 +495,7 @@
 >
 > cho nên cái phần in đậm chính là **vec(dL/dW)T**:
 >
-> \**vec(dL/dW)T = vec(dL/dZ)T (XT** ⊗ **I)** <=> vec(dL/dW) = [vec(dL/dZ)T (XT ⊗ I)]T
+> **vec(dL/dW)T = vec(dL/dZ)T (XT** ⊗ **I)** <=> vec(dL/dW) = [vec(dL/dZ)T (XT ⊗ I)]T
 >
 > <=> **vec(dL/dW) = (XT** ⊗ **I)T vec(dL/dZ)** Dùng identity: (A ⊗ B)T = AT ⊗ BT  <=> **vec(dL/dW) = (X** ⊗ **I) vec(dL/dZ)** Tới đây áp dụng (A ⊗ B) vec(C) = vec(BCAT)
 >

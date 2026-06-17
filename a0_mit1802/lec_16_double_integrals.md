@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > Thế thì từ bữa đến giờ là về **ĐẠO HÀM** (**DERIVATIVES**) bây giờ là về 
-> \**TÍCH PHÂN** (**INTEGRALS**)
+> **TÍCH PHÂN** (**INTEGRALS**)
 >
 > Thế thì gs ôn lại rằng nếu ta có **hàm f(x)** (function đơn biến) thì **tích phân
 > từ a đến b** của **f(x)dx** có ý nghĩa là **DIỆN TÍCH** của **vùng bên dưới đồ
@@ -23,11 +23,11 @@
 
 > [!NOTE]
 > Thế thì nếu là **hàm 2 biến f(x,y)** thì ta có **double integral** mang ý nghĩa là
-> \**THỂ TÍCH (volume) của vùng bên dưới hàm f**
+> **THỂ TÍCH (volume) của vùng bên dưới hàm f**
 >
 > Lấy ví dụ hàm **z = f(x,y)** thì cũng như ta cần tích diện tích của area bên 
 > dưới hàm đơn biến f(x) trong đoạn [a, b] thì ở đây ta cần xác định một
-> \**VÙNG (AREA) R** để tính **TÍCH PHÂN KÉP (double integral)** trong vùng
+> **VÙNG (AREA) R** để tính **TÍCH PHÂN KÉP (double integral)** trong vùng
 > R này.
 >
 > Kí hiệu là **∫∫R f(x,y)*dA**
@@ -44,7 +44,7 @@
 > Thế thì với **hàm đơn biến,** **∫ từ a đến b f(x)dx** mang ý nghĩa là
 > ta sẽ 
 >
-> \**chia vùng dưới hàm f(x)** thành **vô số các hình chữ nhật** bề rộng
+> **chia vùng dưới hàm f(x)** thành **vô số các hình chữ nhật** bề rộng
 > rất nhỏ **∆x** và **có chiều cao f(x)** để rồi **diện tích sẽ là tổng diện tích**
 > tất cả các hình chữ nhật này. Và đúng hơn nữa là ta sẽ cho **∆x
 > nhỏ vô cùng để thành dx**
@@ -84,7 +84,7 @@
 > các vùng nhỏ và sum**, và **lấy limit** như định nghĩa.
 >
 > Mà cũng như với **tích phân đơn biến**, ta sẽ dùng các **trick**, như
-> \**u-substitution**, itegration by part.... để tính
+> **u-substitution**, itegration by part.... để tính
 >
 > Và cụ thể thì ta sẽ **đưa double integral thành tính 2 integral đơn**
 
@@ -118,7 +118,7 @@
 >
 > Và ta sẽ cho mỗi miếng có độ dày vô cùng nhỏ, từ đó thể tích cần tìm sẽ là
 >
-> \**Limit δx -> 0 của [Tổng mọi S(x)*δx]**
+> **Limit δx -> 0 của [Tổng mọi S(x)*δx]**
 >
 > Và đó chính là: **tích phân S(x)*dx**
 
@@ -132,7 +132,7 @@
 > Vậy ta gọi **S(x)** là **diện tích** của **"mặt cắt" bởi plane // yz** 
 > Thì t**hể tích** cần tìm (**∫∫ trên R f(x,y)dA) sẽ chính** là 
 >
-> \**tích phân S(x)dx**
+> **tích phân S(x)dx**
 
 <br>
 
@@ -152,8 +152,8 @@
 
 > [!NOTE]
 > Rồi, với một giá trị x từ **x_min** tới **x_max** đã xác định, thì ta có thể tính
-> \**S(x).** Như đã nói, nó là tích phân của f(x,y)dy với y từ đâu đến đâu
-> \**SẼ LÀ FUNCTION PHỤ THUỘC X**
+> **S(x).** Như đã nói, nó là tích phân của f(x,y)dy với y từ đâu đến đâu
+> **SẼ LÀ FUNCTION PHỤ THUỘC X**
 >
 > Bởi lẽ dễ thấy rằng **với x khác nhau**, **phạm vi của y sẽ khác nhau** hay nói cách khác y_min và y_max là function theo x: y_min(x), y_max(x)
 >
@@ -162,7 +162,7 @@
 > Để rồi ∫∫R f(x,y)dA sẽ bằng:
 >
 > tích phân x_min: xmax [ tích phân y_min(x): y_max(x) f(x,y)dy ] dx** Và đây được gọi là **ITERATED INTEGRAL** là bởi ta sẽ tích phân
-> \**lần lượt (iterated)** theo **y trước** sau đó tích phân theo **x sau**
+> **lần lượt (iterated)** theo **y trước** sau đó tích phân theo **x sau**
 
 > [!NOTE]
 > INTEGRATED INTEGRAL
@@ -189,7 +189,7 @@
 > là numbers**
 >
 > Còn cái **bounds ở trong**, LÀ **FUNCTION PHỤ THUỘC VÀO X**:
-> \**y_min(x) y_max(x)**
+> **y_min(x) y_max(x)**
 >
 > Trong **STAT110** ta cũng đã thấy gs **Blizstein** nhấn mạnh cái này
 > nhiều lần trong các bài toán xác suất cần tính tích phân kép
@@ -211,7 +211,7 @@
 
 > [!NOTE]
 > Qua ví dụ **tính thể tích** của **vùng bên dưới paraboloid** với
-> \**x, y trong range [0,1]**.
+> **x, y trong range [0,1]**.
 >
 > Đại khái là ta có paraboloid (là cái parabol xoay quanh một trục),
 > thì phần cần tính thể tích là phần **giới hạn bởi**: **paraboloid**,
@@ -237,7 +237,7 @@
 >
 > Thế thì ta sẽ cần tính: 
 >
-> \**tích phân từ 0 đến 1** [t**ích phân từ 0 đến 1 f(x,y) dy**] **dx**
+> **tích phân từ 0 đến 1** [t**ích phân từ 0 đến 1 f(x,y) dy**] **dx**
 >
 > hay ∫0:1 [ ∫0:1 f(x,y)dy ] dx
 >
@@ -260,7 +260,7 @@
 > Qua **Stat110** mình cũng đã ôn lại cách tính tích phân, về cơ bản là ta dùng **Fundamental
 > Theorem of Calculus Part 2** nói rằng:
 >
-> \**tích phân từ a đến b của f(x)dx = [nguyên hàm của f(x)](b) - [nguyên hàm của f(x)](a)** hay
+> **tích phân từ a đến b của f(x)dx = [nguyên hàm của f(x)](b) - [nguyên hàm của f(x)](a)** hay
 > nói gọn hơn, nếu **F(x) là nguyên hàm của f(x)** thì: **∫a:b f(x)dx = F(b) - F(a)** Áp dụng vào ta có để có tích phân cần tính là [**nguyên hàm của f(x,y)**] | 0:1
 >
 > với f(x,y)  = 1 - x^2 - y^2 với x constant, thì nguyên hàm anti-derivative) của nó là y - y*x^2 -
@@ -299,7 +299,7 @@
 > đảm bảo **outer integral có bound là numbers** còn **inner integral có
 > bound là function theo biến kia**.
 >
-> \**Theo lí thuyết** thì ta có thể **làm theo cái nào trước cũng được** nhưng
+> **Theo lí thuyết** thì ta có thể **làm theo cái nào trước cũng được** nhưng
 > sự thật thì **có khi làm theo cái này trước thì dễ hơn** mà làm theo cái kia
 > trước thì khó hơn
 
@@ -311,7 +311,7 @@
 
 > [!NOTE]
 > Thế thì ví dụ tiếp theo, cũng là function này nhưng ta cần tính
-> \**thể tích của phần ở dưới paraboloid** nhưng **Ở TRÊN MẶT XY**.
+> **thể tích của phần ở dưới paraboloid** nhưng **Ở TRÊN MẶT XY**.
 > Có nghĩa là lúc này hình chiếu từ trên xuống, thì R không phải là
 > hình vuông 1x1 mà là **góc tư hình tròn này**
 

@@ -216,7 +216,7 @@
 > lr 3e-5, weight scale 0.06 - 94%, 0.1 - 94%, 0.3 - 98%, 0.6 - 100%
 > lr 6e-5, weight scale 0.06 - 96%, 0.1 - 100%, 0.3 - 100% 
 >
-> \**nhưng 0.6 thì diverge (loss tăng vọt) (bên trái) hoặc bị lỗi overflow
+> **nhưng 0.6 thì diverge (loss tăng vọt) (bên trái) hoặc bị lỗi overflow
 >
 > \/overflow encountered in matmul out = x.reshape(N, -1) @ w + b**\/
 
@@ -225,12 +225,12 @@
 > diverge ?**
 >
 > Đúng là diverge, ta có thể hiểu **diverge** là do
-> \**gradient lớn** -> nên khi **update params với grad
+> **gradient lớn** -> nên khi **update params với grad
 > lớn** thì cũng **tương tự khi learning rate lớn**
 > khiến "đi vọt qua bên kia"
 >
 > trong note nn part 2 regularization đã nhắc đến việc
-> \**weight lớn có thể gây hiện tượng network '
+> **weight lớn có thể gây hiện tượng network '
 > 'explode'** bên cạnh việc nó **gây vanishing
 > gradient** liên quan đến activation function lớn local
 > grad ~= 0

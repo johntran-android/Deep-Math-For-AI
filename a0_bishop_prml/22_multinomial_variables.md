@@ -114,7 +114,7 @@
 > =  Πk=1:K μk^ { Σi=1:N **xi**k }
 >
 > Đặt mk = Σi=1:N **xi**k : tức là tổng các phần tử thứ k của các vector **x1**, ...
-> \**xN**.
+> **xN**.
 >
 > = Πk=1:K μk^mk
 >
@@ -204,7 +204,7 @@
 > Xét d/dμ (**μ**T**1**-1)
 >
 > d(**μ**T1-1) = (**μ**+d**μ**)T**1**-1) - (**μ**T**1**-1) = dμT**1** = **1**Td**μ** ⇨ ∇_**μ** [**μ**T**1**-1] = **1** Vậy ∇_μ L(**μ**, λ) = (m1/μ1,...mK/μK) + λ **1** (chú ý **1** là K-dimensional vector
-> \**1** = (1,1,...1)T) = (m1/μ1 + λ ,...,mK/μK + λ)
+> **1** = (1,1,...1)T) = (m1/μ1 + λ ,...,mK/μK + λ)
 >
 > Stationary condition: ∇_μ L(**μ**, λ) = 0
 >
@@ -449,7 +449,7 @@
 > Vì khi đó, khi nhân với cái cụm ở trên, để tạo ra kernel của posterior, thì
 > nó cũng sẽ có dạng Πk=1:K μk^(something). Đây là lí do gs Bishop nói
 > p(**μ**|**α**) ∝ Πk=1:K μk^(αk-1) với αk-1 chính là something, dĩ nhiên
-> \**α** = (α1, α2,...αK)T là parameter của prior.
+> **α** = (α1, α2,...αK)T là parameter của prior.
 >
 > Thế thì vì sao Σk μk = 1?, à thì là vì đây vẫn là do điều kiện valid của pdf
 > của multinomial thôi. Nên bây giờ do prior là distribution của **μ** tức, là
@@ -463,13 +463,13 @@
 > buộc Σi Xi = 1. Và gs Bishop cho biết cái này gọi là một **simplex**.
 >
 > Thế thì đại khái là, cái distribution này, gọi là **Dirichlet**, thật ra chỉ là
-> \**phiên bản mở rộng của Beta** **distribution**.
+> **phiên bản mở rộng của Beta** **distribution**.
 >
 > Còn nhớ beta(α, β) có pdf: f(x|α, β) = C x^(α-1)(1-x)^(β-1) với C là
 > normalizing constant = beta(α, β) (hàm beta, được define là =
 > Γ(α+β)/Γ(α)Γ(b)), thì thật ra cũng có thể coi nó là Dirichlet với K=2:
 >
-> \**X** = (X1,X2) ~ f(x1,x2|α,β) = [Γ(α+β)/Γ(α)Γ(b)] x1^(α-1) x2^(β-1) với x1
+> **X** = (X1,X2) ~ f(x1,x2|α,β) = [Γ(α+β)/Γ(α)Γ(b)] x1^(α-1) x2^(β-1) với x1
 > \+ x2 = 1
 >
 > Từ đó ta có pdf của **X** = (X1,..XK) ~ Dirichlet distribution f(x1,x2...

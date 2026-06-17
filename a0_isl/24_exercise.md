@@ -30,11 +30,11 @@
 > [!NOTE]
 > Từ less flexible -> high flexible:
 >
-> \**Bias sẽ giảm**:
+> **Bias sẽ giảm**:
 >
-> \**Variance sẽ tăng**
+> **Variance sẽ tăng**
 >
-> \**Training error** sẽ **giảm nhanh và chậm dần**:  Vì bias giảm
+> **Training error** sẽ **giảm nhanh và chậm dần**:  Vì bias giảm
 > và variance tăng đều khiến training error giảm.  Ban đầu
 > giảm nhanh do kết hợp cả hai sự giảm error do giảm bias
 > và cả variance, sau đó ảnh hưởng của giảm bias giảm

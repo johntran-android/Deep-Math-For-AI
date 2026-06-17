@@ -23,7 +23,7 @@
 
 > [!NOTE]
 > Như đã nói ở cuối bài trước, **orthonormal** vector sẽ
-> \**vuông góc nhau** và có **norm (length) = 1**
+> **vuông góc nhau** và có **norm (length) = 1**
 
 <br>
 
@@ -94,7 +94,7 @@
 
 > [!NOTE]
 > Và tính chất quan trọng của nó đó là, **nếu Q square**, thì **Q**
-> \**invertible** (vì đã nói các cols orthonormal - tức dependent
+> **invertible** (vì đã nói các cols orthonormal - tức dependent
 > rồi, mà còn square nữa thì nó full rank -> invertible)
 >
 > Thế thì **QTQ = I**, và **Q invertible** sẽ cho ta kết luận: **QT
@@ -110,15 +110,15 @@
 > [!NOTE]
 > Gs lấy một **ví dụ** về một **orthogonal** matrix, đó là **permutation**
 > matrix **3x3**. Nhớ lại những bài trước ta đã biết, matrix này sẽ giúp
-> \**hoán đổi các row** với các hàng của nó chỉ có dạng như đổi chỗ các
+> **hoán đổi các row** với các hàng của nó chỉ có dạng như đổi chỗ các
 > hàng của Identity matrix.
 >
 > Ví dụ matrix [0 1; 1 0] sẽ đổi chỗ hai hàng của matrix A 2x2; matrix P =
 > [1 0 0; 0 0 1; 0 1 0] sẽ **giữ nguyên hàng 1**, **thay hàng 2 bằng hàng 3**, và
-> \**thay hàng 3 bằng hàng 2,** tức là đổi chỗ hàng 2 và 3 của matrix A (khi
+> **thay hàng 3 bằng hàng 2,** tức là đổi chỗ hàng 2 và 3 của matrix A (khi
 > nhân PA). Ta cần nhớ khi **nhân P cho A** thì matrix PA sẽ có: **row_i
 > của PA** chính là l**inear combination các row** **của A** với
-> \**coefficients là row_i của P** (rows viewpoint)
+> **coefficients là row_i của P** (rows viewpoint)
 >
 > Ôn lại tí, gỉa sử nhân permQ này với A, thì sẽ hoán đổi các hàng của A
 > như thế nào, đương nhiên vì Q có 3 cột nên A cũng phải có 3 hàng.
@@ -330,7 +330,7 @@
 > Ta gọi A, B là hai **orthogonal** vector, thì gs đùa rằng
 > mr **Gram sẽ giúp ta tìm A, B** khi đó **chỉ việc chia cho
 > norm** thì ta sẽ có **unit vector** để có set hai vector
-> \**orthonormal** (Có lẽ đây là đóng góp của Schmidt, Brilliant
+> **orthonormal** (Có lẽ đây là đóng góp của Schmidt, Brilliant
 > Schmidt! :D)
 
 <br>
@@ -460,10 +460,10 @@
 > [!NOTE]
 > Gs: Correct. Và **trừ tiếp cho BTc.B/BTB** ta đã **bỏ đi
 > projection của c nằm trên b**. Để phần dư còn lại chính là
-> \**vuông góc với b**, và tất nhiên đã vuông góc với cả a
+> **vuông góc với b**, và tất nhiên đã vuông góc với cả a
 >
 > Vậy sau khi trừ cho ATcA/ATA và BTc.B/BTB thì phần còn lại
-> \**đã vuông góc với cả A và B**.
+> **đã vuông góc với cả A và B**.
 >
 > Và c**hia cho norm ta có C.**
 

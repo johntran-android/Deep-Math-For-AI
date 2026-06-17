@@ -17,7 +17,7 @@
 > 3 **LLMs are a general-purpose technology** with applications across various sectors of the economy.
 >
 > 4 There is still a need for **further research and exploration in the field of LLMs** to **identify use cases** and
-> \**build specific applications.**
+> **build specific applications.**
 >
 > 5 **Demand for professionals with LLM expertise** is increasing, and this course can help individuals position
 > themselves for related job opportunities.
@@ -38,7 +38,7 @@
 > learning**, **fine-tuning models**, **aligning output with human values**, and **hands-on labs.**
 >
 > 11 The hands-on labs provide **practical exercises in an AWS environment,** allowing learners to experiment with
-> \**different techniques** and workflows.
+> **different techniques** and workflows.
 >
 > 12 The labs cover tasks such as **prompt engineerin**g, **fine-tuning models**, and **reinforcement learning**
 > from human feedback.

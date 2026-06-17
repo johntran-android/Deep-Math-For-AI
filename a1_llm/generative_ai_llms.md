@@ -110,7 +110,7 @@
 > uses in **natural language generation**. You will see how they are **built** and **trained**,
 > how you can **interact with them** via text known as **prompts**. And how to f**ine tune
 > models** for your use case and data, and how you can **deploy them with applications** to
-> \**solve your business and social tasks**.
+> **solve your business and social tasks**.
 
 <br>
 

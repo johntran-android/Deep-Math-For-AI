@@ -88,11 +88,11 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > 6 Week 2: Using the **Naive Bayes classifier** for sentiment classification
 >
 > 7 Week 3: Learning about **vector space models** and their applications in
-> \**information retrieval, indexing, relevancy ranking, and information
+> **information retrieval, indexing, relevancy ranking, and information
 > filtering**
 >
 > 8 Week 4: Building a simple **machine translation** system and using
-> \**locality sensitive hashing** to improve **nearest neighbor search**
+> **locality sensitive hashing** to improve **nearest neighbor search**
 >
 > 9 Importance of NLP concepts in search engine algorithms
 
@@ -160,7 +160,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 >
 > 4 The steps for building a logistic regression classifier for sentiment analysis
 > include: p**rocessing raw tweets to extract useful features**, **training** the
-> \**classifier** to **minimize the cost,** and **making predictions** based on the trained
+> **classifier** to **minimize the cost,** and **making predictions** based on the trained
 > model.
 >
 > 5 The next video will cover how to extract features from tweets for sentiment
@@ -212,7 +212,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > number of non-zero values
 >
 > 5 Problems with large vocabularies: Model training takes
-> \**excessive time**
+> **excessive time**
 >
 > 6 Conclusion: Recap of representing text as a vector and
 > introduction to identifying problems with large vocabularies in
@@ -235,7 +235,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 > [!NOTE]
 > Một cách để 'extract feature' - tức là tạo feature vector gọi là **sparse**
-> \**representation** (từ nào có trong dic thì gán 1, không có thì gán 0
+> **representation** (từ nào có trong dic thì gán 1, không có thì gán 0
 >
 > Cách xây dựng vector kiểu này khiến số 0 nhiều nên gọi là "sparse"
 > tạm dịch là "trống trải" / "thưa thớt"
@@ -481,7 +481,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > In this lab, we will be exploring how to preprocess tweets for
 > sentiment analysis. We will **provide a function for
 > preprocessing tweets** during this week's assignment, but it is
-> \**still good to know what is going on** under the hood.
+> **still good to know what is going on** under the hood.
 >
 > By the end of this lecture, you will see **how to use the NLTK
 > package to perform a preprocessing** pipeline for Twitter
@@ -616,7 +616,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > [!NOTE]
 > Stemming như trong bài giảng đã hiểu là convert về cái từ gốc mà nếu add
 > mấy cái suffix râu ria sẽ ra nhiều từ khác nhau như ed, ing thì stemming sẽ
-> \**giúp giảm vocab size rất nhiều**, mà vẫn **giữ phần lớn ý nghĩa của từ vựng**
+> **giúp giảm vocab size rất nhiều**, mà vẫn **giữ phần lớn ý nghĩa của từ vựng**
 >
 > Có nhiều module để **stemming** nhưng ở đây ổng chọn **Porter**
 
@@ -640,7 +640,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 > [!NOTE]
 > Đai khái là mấy step trên sẽ làm sẵn trong funciton **process_tweet**()
-> \**khi làm assignment chỉ việc gọi function** này thôi nhưng **quan trọng là
+> **khi làm assignment chỉ việc gọi function** này thôi nhưng **quan trọng là
 > đã hiểu nó làm cái gì**
 
 <br>
@@ -920,10 +920,10 @@ Learn to extract features from text into numerical vectors, then build a binary 
 ### **Objectives:** Visualize and interpret the logistic
 
 > [!NOTE]
-> \**Objectives:** Visualize and interpret the logistic
+> **Objectives:** Visualize and interpret the logistic
 > regression model
 >
-> \**Steps:**   • Plot tweets in a scatter plot using their
+> **Steps:**   • Plot tweets in a scatter plot using their
 > positive and negative sums.
 >
 > • Plot the output of the logistic regression model in the

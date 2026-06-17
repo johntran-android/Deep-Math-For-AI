@@ -80,7 +80,7 @@
 <p align="center"><kbd><img src="assets/c613d2844be9633f535cfb93f363e4154a19b115.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**"Orthogonal polynomial"** có thể hiểu đại khái là người ta (ý nói thư viện
+> **"Orthogonal polynomial"** có thể hiểu đại khái là người ta (ý nói thư viện
 > giúp mình làm cái việc đưa thêm polynomial feature vào) sẽ không đơn giản
 > là cứ tạo các feature mới bằng cách bình phương, lập phương  giá trị của
 > feature cũ, ví dụ x, thì tạo thêm feature x**2. Vì làm vậy thật ra nó sẽ gây

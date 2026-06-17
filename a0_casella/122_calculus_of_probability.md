@@ -49,7 +49,7 @@
 > 1. **P(B ∩ Ac) = P(B) - P(B ∩ A)**: đại khái là chuyển vế qua, ta cần chứng
 > minh **P(B) = P(B** ∪ **A) + P(B** ∪ **Ac)**. Ta sẽ thấy ngay:
 >
-> \**B = (B ∩ A)** ∪ **(B ∩ Ac)**
+> **B = (B ∩ A)** ∪ **(B ∩ Ac)**
 >
 > (chứng minh: **s** ∈ **B thì s** ∈ **(B ∩ A)**, và **s** ∈ **(B ∩ Ac)** => **s** ∈ **(B ∩ A)** ∪ **(B ∩ Ac)**. Do đó **B** ⊂ **vế trái**. Ngược lại, s ∈ vế trái => s
 > thuộc (B ∩ A) hoặc s ∈ (B ∩ Ac). **Cả hai trường hợp** **đều dẫn đến kết
@@ -69,7 +69,7 @@
 > minh xong) 
 >
 > nên **P(A** ∪ **B) = P(A** ∪ **(B ∩ Ac))**, và đây là **union của disjoint event**
-> \**A và (B ∩ Ac)...** 
+> **A và (B ∩ Ac)...** 
 >
 > (chứng minh: nếu s thuộc A thì ko thuộc Ac, nên không thuộc B
 > ∩ Ac, ngược lại nếu s thuộc B ∩ Ac thì nó thuộc Ac nên không thể thuộc A),
@@ -80,7 +80,7 @@
 > 3. Nếu **A** ⊂ **B thì P(A) ≤ P(B)**:
 >
 > Thế thì dựa vào (a) **P(B ∩ Ac) = P(B) - P(B ∩ A)** thì theo **axiom 1**, vế trái sẽ
-> \**không âm** nên **vế phải cũng vậy**. Mà với **A** ⊂ **B thì A ∩ B = A** (chứng minh: ... )
+> **không âm** nên **vế phải cũng vậy**. Mà với **A** ⊂ **B thì A ∩ B = A** (chứng minh: ... )
 > nên từ hai điều trên ta có P(B) - P(A) >= 0. Chứng minh xong.
 >
 > Cuối cùng là một cái gọi là **Boferroli inequality**:
@@ -125,10 +125,10 @@
 > Cuối cùng là thêm **hai theorem quan trọng**. Đầu tiên chính là cái trong Stat110
 > đã học **LOTP (Law of Total Probability)**: Cho **event A** và **một partition C1,
 > C2... Cn** (theo định nghĩa partition, thì các event Ci, Cj với i ≠ j sẽ **disjoint** và
-> \**union của chúng bằng S)**.Ta sẽ có:
+> **union của chúng bằng S)**.Ta sẽ có:
 >
-> \**P(A) = ∑i P(A ∩ Ci)**  Trong các note trước đây mình **hay lập luận rằng**, "
-> \**theo set theory** thì **A = union của các intersection giữa A và các disjoint Bi**
+> **P(A) = ∑i P(A ∩ Ci)**  Trong các note trước đây mình **hay lập luận rằng**, "
+> **theo set theory** thì **A = union của các intersection giữa A và các disjoint Bi**
 > trong đó **Union của Bi bằng S**. Thì ở đây ta hiểu rõ hơn lập đằng sau cái này:
 >
 > Đó là vì: **Ui Ci = S** (vì C1, C2..Cn là **partition**), nên:
@@ -145,7 +145,7 @@
 >
 > Và vế phải là **union của các disjoint event** (vì Ci là các disjoint event nên dễ
 > dàng chứng minh A ∩ Ci cũng là các disjoint event) nên **theo Axiom 3**, nó =
-> \**∑i P(A ∩ Ci).**
+> **∑i P(A ∩ Ci).**
 >
 > Chứng minh xong: **P(A) = Σi P(A ∩ Ci)**
 >
@@ -153,17 +153,17 @@
 >
 > Còn theorem thứ hai là:
 >
-> \**P(**⋃**i Ai) ≤ ∑i P(Ai).**
+> **P(**⋃**i Ai) ≤ ∑i P(Ai).**
 >
 > Để chứng minh cái này ta sẽ **dựa trên** việc **thiết lập các disjoint A*i**:
 >
-> \**A*1 = A1**,
+> **A*1 = A1**,
 >
-> \**A*2 = A2 \\ A1 = A2 ∩ A1c**
+> **A*2 = A2 \\ A1 = A2 ∩ A1c**
 >
-> \**A*3 = A3 \\ (A1 ∩ A2) = A3 ∩ (A1 ∩ A2)c**,...,
+> **A*3 = A3 \\ (A1 ∩ A2) = A3 ∩ (A1 ∩ A2)c**,...,
 >
-> \**A*i = Ai \\ Ai-1 = Ai ∩ (Ai-1)c**
+> **A*i = Ai \\ Ai-1 = Ai ∩ (Ai-1)c**
 >
 > Khi đó **(**⋃**i Ai)** = **(**⋃**i A*i)**
 >
@@ -174,7 +174,7 @@
 >
 > Do đó:
 >
-> \**∑i P(A*i) <= ∑i P(Ai).**
+> **∑i P(A*i) <= ∑i P(Ai).**
 >
 > Như vậy **P(**⋃**i Ai) <= ∑i P(Ai)**
 

@@ -51,11 +51,11 @@
 > dout(upstream gradient) * dout/dx (local gradient) dout/dx sẽ là w và
 > transpose nếu cần sao cho dx cùng shape x
 >
-> \**dx (N, D) = dout (N, M) @ w.T (M, D)**
+> **dx (N, D) = dout (N, M) @ w.T (M, D)**
 >
 > Tương tự dw = dout * dout/dw, với dout/dw = x
 >
-> \**dw (D, M) =  x.t (D, N) @ dout (N, M)**
+> **dw (D, M) =  x.t (D, N) @ dout (N, M)**
 >
 > Còn db = dout * dout/db thì dout/db = 1 tuy nhiên vì là b được
 > broadcasting n ên phải phải lấy mean dout theo phương phù hợp (sum
@@ -114,7 +114,7 @@
 >
 > Lập luận như sau: hinge loss của một sample, ta sẽ xem thử
 >
-> \**(1) trong các predicted class score ứng với incorrect class, cái
+> **(1) trong các predicted class score ứng với incorrect class, cái
 > nào mà correct score chưa bỏ xa một đoạn delta = 1**, thì
 >
 > (2) tính tổng các distance giữa incorrect score cộng 1 và correct score.
@@ -180,7 +180,7 @@
 
 > [!NOTE]
 > Thực tập (dòng suy nghĩ): lấy 2 sample, từ các scores, ta tính ra
-> \**margin (mg) = score + 1 - correct score,** trong đó mỗi row ta sét hai vị
+> **margin (mg) = score + 1 - correct score,** trong đó mỗi row ta sét hai vị
 > trí để ví dụ cho việc correct score ở đây đã bỏ xa incorrect score (ví trí 0,
 > 0 và 1,1), tức là **margin hai chỗ này đã âm**
 >
@@ -242,7 +242,7 @@
 > [!NOTE]
 > tổng grad 2 nhánh về s3 ta có dp3/ds3 là (1 - p3)*p3
 > hay **-(e^s2 + e^s1) / tổng j e^s_j chính là** 
-> \**- (tổng các p_incorrect class)**
+> **- (tổng các p_incorrect class)**
 >
 > ====
 >
@@ -263,7 +263,7 @@
 >
 > = -e^s1*e^s3/sum**2 **chính là -p1*p3**
 >
-> \**Nếu nhân thêm dL /dp3 ta sẽ có dL / ds1**:
+> **Nếu nhân thêm dL /dp3 ta sẽ có dL / ds1**:
 >
 >  (-1/p3)*[-e^s1*e^s3/sum**2] =  
 > = (1/ [e^s3 / sum]) (e^s1*e^s3/sum**2)
@@ -408,7 +408,7 @@
 > [!NOTE]
 > Sau đó backprop thì chỉ viêc gọi các relu_backward,
 > affine_backward để có các dL/dW và dL/db
-> \**add reg loss grad** và gán vào grad dict
+> **add reg loss grad** và gán vào grad dict
 
 <br>
 

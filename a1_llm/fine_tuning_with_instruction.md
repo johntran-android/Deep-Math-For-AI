@@ -19,7 +19,7 @@
 > 1. Introduction: The passage begins by **recapping the previous week's topics**, including the **generative AI project
 > lifecycle**, **example use cases for large language model**s, and the **tasks they can perform.** 
 > 2. **Purpose of the Lesson**: The lesson **aims to teach methods to improve the performance** of an existing model for
-> \**specific use cases** and introduces **important metrics for evaluating** the performance of a **fine-tuned large language
+> **specific use cases** and introduces **important metrics for evaluating** the performance of a **fine-tuned large language
 > model (LLM).**
 >
 > 3. **Fine-Tuning with Instruction Prompts**: The passage discusses fine-tuning as a **supervised learning** process
@@ -27,18 +27,18 @@
 > Fine-tuning focuses on **improving the model's ability** to **generate relevant completions for specific tasks.**
 >
 > 4. Instruction Fine-Tuning: A strategy known as **instruction fine-tuning** is introduced, which trains the model using
-> \**examples demonstrating how it should respond to specific instructions**. For various tasks, the data set contains
-> \**prompt completion pairs** wit**h clear instructions**.
+> **examples demonstrating how it should respond to specific instructions**. For various tasks, the data set contains
+> **prompt completion pairs** wit**h clear instructions**.
 >
 > 5. **Full Fine-Tuning**: When **all the model's weights are updated** during fine-tuning, it is referred to as **full fine-tuning**.
 > This process r**esults in a new version of the model with updated weights.**
 >
 > 6. **Memory** and **Compute Considerations**: **Similar to pre-training**, **full fine-tuning requires sufficient memory** and
-> \**compute budget** to store and process all the **gradients, optimizers, and other components**. **Memory optimization**
+> **compute budget** to store and process all the **gradients, optimizers, and other components**. **Memory optimization**
 > and **parallel computing strategies** are recommended.
 >
 > 7. **Preparing Training Data**: Developers can use **publicly available datasets** and **prompt template libraries** to create
-> \**instruction prompt datasets for fine-tuning**. These libraries include **templates for different tasks and data sets.** 
+> **instruction prompt datasets for fine-tuning**. These libraries include **templates for different tasks and data sets.** 
 > 8. **Fine-Tuning Proces**s: The passage outlines the **steps for fine-tuning**, which involves **dividing the data into
 > training, validation, and test splits**. During fine-tuning, the **model generates completions for prompts**, and t**hese
 > completions are compared to the labeled responses** in the training data to c**alculate loss and update the model
@@ -59,7 +59,7 @@
 
 > [!NOTE]
 > Nói chung là week 2 sẽ tập trung vào
-> \**Fine-tuning và evaluate fine-tuned  LLM**
+> **Fine-tuning và evaluate fine-tuned  LLM**
 
 <br>
 
@@ -80,7 +80,7 @@
 <p align="center"><kbd><img src="assets/b60d24ad9f349bd0892fed5af09fbbc3e3f444a6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**pre-training** là **train model với self-supervised
+> **pre-training** là **train model với self-supervised
 > learning** với **số lượng lớn unstructured textual data**
 
 <br>
@@ -90,9 +90,9 @@
 <p align="center"><kbd><img src="assets/00de7b00fdb4ed1174bcfc6dbb58a48c4e68b98e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Fine-tuning** thì là **supervised learning**,
+> **Fine-tuning** thì là **supervised learning**,
 > train model với **data là prompt và label** là
-> \**completion mong muốn.**
+> **completion mong muốn.**
 
 <br>
 
@@ -113,7 +113,7 @@
 <p align="center"><kbd><img src="assets/140721773a064bc4dbd2c258b614cd8349357be0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**tuỳ vào specific task** mà **label -
+> **tuỳ vào specific task** mà **label -
 > có dạng một câu trả lời đạt tiêu
 > chuẩn cho task đó.**
 
@@ -135,7 +135,7 @@
 <p align="center"><kbd><img src="assets/246d181b11eed6be7c25ac017829c755da454bdb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Chuẩn bị data xong** thì bước tiếp
+> **Chuẩn bị data xong** thì bước tiếp
 > theo là **train-valid-test split.**
 
 <br>
@@ -160,7 +160,7 @@
 > [!NOTE]
 > Và khi training xong, **dùng validation để h.p tuning**
 > và tính ra **validation accuracy.** Sau cùng là dùng
-> \**test set tính test_accuracy**
+> **test set tính test_accuracy**
 
 <br>
 
@@ -222,7 +222,7 @@
 > [!NOTE]
 > Ý là **dù LLM có thể perform nhiều loại task khác nhau** nhưng **có thể mình chỉ cần nó
 > làm tốt trên một task cụ thể nào đó** ví dụ **Summarization** thôi. Lúc này ta sẽ
-> \**fine-tuning LLM với training data của specific task đó** và **không cần nhiều chỉ 500-1000
+> **fine-tuning LLM với training data của specific task đó** và **không cần nhiều chỉ 500-1000
 > sample cũng có thể đủ** để cải thiện đáng kể khả năng của model trong task mong muốn.
 > Tuy nhiên c**ó một hiện tượng có thể xẩy ra là "Catastrophic forgeting"**
 
@@ -316,7 +316,7 @@
 > the model's performance for targeted tasks.
 >
 > 5. **Custom Fine-Tuning**: Companies can **benefit from fine-tuning with their own internal data**, such as
-> \**customer support chat conversations**, to **train models tailored to their specific needs**.
+> **customer support chat conversations**, to **train models tailored to their specific needs**.
 >
 > 6. Evaluation of Model Completions: To **assess the quality of fine-tuned models**, **various metrics and
 > benchmarks can be used** to compare their performance with the original base model.
@@ -341,7 +341,7 @@
 > [!NOTE]
 > Đại khái là nói về cái tên FLAN model thật ra là để chỉ **những model khác
 > nhau** được f**ine tune với specific set of instructions**. FLAN viết tắt của
-> \**F**ine-tuned **LAnguage N**et.
+> **F**ine-tuned **LAnguage N**et.
 
 <br>
 
@@ -372,7 +372,7 @@
 
 > [!NOTE]
 > Ví dụ một trong những **dataset** dùng để fine-tuned đó, là
-> \**SAMsum** - Gồm có các **dialog và summarization**
+> **SAMsum** - Gồm có các **dialog và summarization**
 
 <br>
 
@@ -452,7 +452,7 @@
 
 > [!NOTE]
 > Đại khái nói là có thể fine-tuned tiếp với
-> \**data của mình** để cải thiện model hơn nữa phù
+> **data của mình** để cải thiện model hơn nữa phù
 > hợp với l**ĩnh vực cụ thể**
 
 <br>
@@ -519,17 +519,17 @@
 > text.**
 >
 > 5. **ROUGE-1** focuses on **individual words (unigrams)**, **ROUGE-2** takes **bigrams into account**, and
-> \**ROUGE-L** considers the **longest common subsequence** between the **generated and reference
+> **ROUGE-L** considers the **longest common subsequence** between the **generated and reference
 > outputs**.
 >
 > 6. Both **ROUGE** and **BLEU** have **limitations**, such as **rewarding repeated words** and **not
 > considering the ordering of words**.
 >
 > 7. **Pre-written libraries**, like those from **Hugging Face**, make it easy to calculate **ROUGE**  and
-> \**BLEU** scores for **model evaluation**.
+> **BLEU** scores for **model evaluation**.
 >
 > 8. While ROUGE and BLEU can be used as **diagnostic evaluation tools**, they should not be the
-> \**sole basis for reporting the final evaluation of a large language model.**
+> **sole basis for reporting the final evaluation of a large language model.**
 >
 > 9. Researchers use **evaluation benchmarks** to provide a **more comprehensive** and **robust**
 > assessment of a language model's performance.
@@ -542,7 +542,7 @@
 
 > [!NOTE]
 > Đại khái là **traditional model** thường dùng các metric như **accuracy** để đánh giá vì nó là các
-> \**deterministic** - tức là những **vấn đề có thể định lượng là đúng hay sai một cách tuyệt đố**i.
+> **deterministic** - tức là những **vấn đề có thể định lượng là đúng hay sai một cách tuyệt đố**i.
 > Trong khi đó **LLM** thường giải quyết c**ác vấn đề un-deterministic liên quan đến ngôn ngữ** -
 > nôm na là **không có định nghĩa tuyệt đối là đúng hay sai nên để evaluate LLM khó hơn**
 
@@ -577,7 +577,7 @@
 
 > [!NOTE]
 > Nhắc lại một chút các khái niệm **uni-gram**,
-> \**bi-gram** và **n-gram** trong language model là
+> **bi-gram** và **n-gram** trong language model là
 > những cụm 1 2 hoặc n từ sát nhau
 
 <br>
@@ -688,10 +688,10 @@
 > and compare LLMs holistically.
 >
 > 3. **Selecting the right evaluation dataset** is crucial to **accurately assess an LLM's performance** and
-> \**understand its true capabilities.**
+> **understand its true capabilities.**
 >
 > 4. Benchmarks like **GLUE** (General Language Understanding Evaluation) and **SuperGLUE** cover
-> \**various natural language tasks**, encouraging the development of models that can **generalize across
+> **various natural language tasks**, encouraging the development of models that can **generalize across
 > multiple tasks**.
 >
 > 5. As models get larger, **their performance against benchmarks like SuperGLUE approaches
@@ -699,7 +699,7 @@
 >
 > 6. Recent benchmarks like **Massive Multitask Language Understanding** (**MMLU**) and **BIG-bench**
 > push LLMs further, testing models on **tasks that require extensive world knowledg**e and
-> \**problem-solving abilities.**
+> **problem-solving abilities.**
 >
 > 7. The **Holistic Evaluation of Language Models** (**HELM**) is a **benchmark framewor**k that aims to
 > i**mprove model transparency** and **offers guidance on model selection for specific tasks**.
@@ -722,7 +722,7 @@
 > like rouge and blur scores to **fully understand a model's capabilities**.
 >
 > 2. To measure and compare LLMs effectively, researchers often **use pre-existing datasets** and
-> \**associated benchmarks** **specifically designed for LLM evaluation**.
+> **associated benchmarks** **specifically designed for LLM evaluation**.
 >
 > 3. **Choosing the right evaluation dataset** is **crucial** to **accurately assess an LLM's performance**
 > and **understand its true capabilities**.
@@ -769,9 +769,9 @@
 <p align="center"><kbd><img src="assets/959b1754160e4ba6fc932e54704b952a2a0b99e6.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**GLUE**, or **General Language Understanding Evaluation**, was introduced in 2018.
+> **GLUE**, or **General Language Understanding Evaluation**, was introduced in 2018.
 > GLUE is a **collection of natural language tasks**, such as **sentiment analysis** and
-> \**question-answering**. GLUE was created to encourage the development of models
+> **question-answering**. GLUE was created to encourage the development of models
 > that can **generalize across multiple tasks**, and you **can use the benchmark to
 > measure and compare the model performance**.
 
@@ -816,7 +816,7 @@
 > the benchmarks tests**, but subjectively we can see that they're not
 > performing at human level at tasks in general. There is **essentially an
 > arms race between the emergent properties of LLMs**, and the
-> \**benchmarks that aim to measure them**
+> **benchmarks that aim to measure them**
 
 > [!NOTE]
 > Cả hai đều có leaderboard đánh giá các
@@ -848,7 +848,7 @@
 > running these large benchmarks can be **computationally expensive.**
 
 > [!NOTE]
-> \**MMLU** được design để **đánh giá các khả năng vượt ra phạm vi language như toán
+> **MMLU** được design để **đánh giá các khả năng vượt ra phạm vi language như toán
 > cơ bản, lịch sử** ,....Hoặc **BIG-bench** bao gồm **204 tasks như math, social bias,
 > physic**s...Nó có nhiều v**ersion to nhỏ khác nhau để khách hàng chọn lựa**
 

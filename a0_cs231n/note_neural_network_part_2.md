@@ -28,7 +28,7 @@
 > [!NOTE]
 > có 3 cách thức phổ biến của data preprocessing. lấy matrix X NxD.
 >
-> \***Mean-subtraction** đơn giản là **trừ mỗi value với mean của feature** tức là
+> ***Mean-subtraction** đơn giản là **trừ mỗi value với mean của feature** tức là
 > đối với X thì trừ mỗi value của X cho **mean của từng cột**, nên mới dùng axis
 > = 0 trong X -= np.mean(X, **axis=0**).
 >
@@ -37,10 +37,10 @@
 >
 > hệ quả sẽ giống như ta **dịch chuyển data cloud sao cho nó có tâm là 0**.
 >
-> \***Normalization**: là cách làm để mục đích đưa các feature thành range 
+> ***Normalization**: là cách làm để mục đích đưa các feature thành range 
 > giống giống nhau 
 >
-> \**Thế thì một cách đầu tiên gọi là chia mỗi value cho standard
+> **Thế thì một cách đầu tiên gọi là chia mỗi value cho standard
 > deviation của feature** để từ đó mọi feature để có **deviation = 1**. Cùng với
 > zero centered thì nó gọi là standardization
 >
@@ -72,7 +72,7 @@
 > [!NOTE]
 > Đầu tiên là **tính covariance matrix X.T@X**. Trong đó mỗi item
 > là covariance giữa hai feature tương ứng. Sau đó dùng lệnh
-> \**svd để phân tách thành U S V** (singular value decomposition)
+> **svd để phân tách thành U S V** (singular value decomposition)
 >
 > Trong đó **mỗi cột của U là eigenvectors của cov(X)**, **đường
 > chéo của S là eigenvalues của cov(X).** (Note màu xanh dương
@@ -163,7 +163,7 @@
 > Cho thấy c**ov(X_proj) là diagonal matrix** nên **suy ra
 > X_project có feature uncorrelated
 >
-> \*Chú ý Σ ở đây là đang nói của matrix C = cov(X)** còn và
+> *Chú ý Σ ở đây là đang nói của matrix C = cov(X)** còn và
 
 <br>
 
@@ -175,7 +175,7 @@
 > Đại khái là svd function sẽ trả ra **U với các cột được sort theo
 > eigenvalue từ lớn đến nhỏ**. Và các cột của U là **orthonormal vectors**
 > nên việc project X với U (X@U) sẽ **decorrelate**. Kết quả là các
-> \**feature mới uncorrelated nhau**. (Nên nếu tính covariance matrix sẽ
+> **feature mới uncorrelated nhau**. (Nên nếu tính covariance matrix sẽ
 > được diagonal matrix)
 >
 > Và nếu **chỉ** **lấy 100 cột đầu** của U thì kết quả (của X@U[:, :100])
@@ -188,7 +188,7 @@
 > variance,)
 
 > [!NOTE]
-> \**Tại sao nói "project X với U là X@U":**
+> **Tại sao nói "project X với U là X@U":**
 >
 > Từ DL Yoshua bài 2.7 eigendecomposition đã hiểu **nếu b là unit vector 
 > thì project a on b chính là dot product của a và b** (có note về cái này).
@@ -223,7 +223,7 @@
 > Vậy kết quả là ta chuyển/chiếu 1 đám điểm trong không gian 3 chiều thành
 > lên một mặt phẳng 2D tương ứng với hai trục u1, u2 trong không gian,
 >
-> \*Phải hiểu rằng các điểm nó vẫn đứng yên vị trí, chỉ là tính lại toạ độ của
+> *Phải hiểu rằng các điểm nó vẫn đứng yên vị trí, chỉ là tính lại toạ độ của
 > Nó trong hệ trục u1, u2, u3 mới. Mà nếu mặc kệ u3, chỉ quan tâm u1, u2 thì
 > kiểu như ta chỉ quan tam đến hình chiếu của các điểm này lên mặt phẳng
 > u1, u2.
@@ -438,7 +438,7 @@
 >
 > với dZ[l] là upstream gradient,
 >
-> \**dZ[l]/dW[l] là local gradient** và có thể hiểu nó sẽ **chính là H[l-1]**
+> **dZ[l]/dW[l] là local gradient** và có thể hiểu nó sẽ **chính là H[l-1]**
 >
 > vậy nếu **các giá trị của activation value cứ NHỎ DẦN** (do W nhỏ nên
 > input*W nhỏ lại) qua từng layer thì rõ ràng **gradient sẽ bị nhỏ theo.**
@@ -450,7 +450,7 @@
 > ===
 >
 > Hiện tượng này cũng sẽ xảy ra **khi W khởi tạo random lớn**, khiến các
-> \**giá trị của z lớn dần**, để rồi khi vào tanh() nó hoạt động ở vùng đuôi,
+> **giá trị của z lớn dần**, để rồi khi vào tanh() nó hoạt động ở vùng đuôi,
 > điều này cũng sẽ gây vấn đề khi backprop qua node tanh, **local
 > gradient cũng = 0**, khiến các downstream gradient = 0.
 >
@@ -468,7 +468,7 @@
 > cách làm này có vấn đề đó là khiến output của các neuron (các node/unit của
 > layer) sẽ có variance lớn dần. Qua nhiều layer, thì nó sẽ trở nên rất lớn khiến
 > cho trong quá trình backpropagation, gradient với hàm sigmoid hay tanh sẽ work
-> \**ở vùng có độ dốc thấp gây ra hiện tượng vanishing gradient** Ý tưởng đó là init weight với giá trị random nhưng sẽ scale xuống bởi sqrt(n)
+> **ở vùng có độ dốc thấp gây ra hiện tượng vanishing gradient** Ý tưởng đó là init weight với giá trị random nhưng sẽ scale xuống bởi sqrt(n)
 > (hay nhân cho 1/sqrt(n)). Có thể chứng minh được điều này khiến variance của
 > output vẫn là 1 chứ ko lớn dần lên
 
@@ -500,7 +500,7 @@
 > zero mean tức E(x) = 0. và Weight được init zero mean nen E[w] = 0
 >
 > 4.Ý cuối, tổng i var(xi)*var(wi) trở thành n*var(x)*var(w) là vì: các wi đều
-> \**identically distributed, và xi cũng vậy. Theo định nghĩa của khái niệm 'identically
+> **identically distributed, và xi cũng vậy. Theo định nghĩa của khái niệm 'identically
 > distributed' thì các random variable này sẽ đều có chung một probability
 > distribution. Thành ra var(x1) = var(x2) = ...gọi chung là var(x) là variance của
 > phân phối xác suất.** Tương tự với w cũng thế Từ đó mới có thể triển khai thành
@@ -863,9 +863,9 @@
 > ===
 >
 > Với SVM loss, có thể hiểu L(i) ở trong hình là **tổng tất các khoảng cách** giữa
-> \**correct class score** (score gắn với correct class **f_y(i)**) và các **incorrect class
+> **correct class score** (score gắn với correct class **f_y(i)**) và các **incorrect class
 > score** (score model tính toán ứng với các incorrect class) **f_j** (j != y(i)) cộng thêm 
-> \**1 (delta, gọi là margin)**
+> **1 (delta, gọi là margin)**
 >
 > Việc giảm loss tức là **thay đổi params** sao cho model cho ra **score của correct
 > class phải vượt lên bỏ xa các score của incorrect class một khoảng margin 
@@ -882,7 +882,7 @@
 >
 > trong bài toán classification có C = 10 class, sample thứ i:
 >
-> \**phân phối xác suất thật** **p(x) là là one hot vector với số 1 ở vị trí y(i)
+> **phân phối xác suất thật** **p(x) là là one hot vector với số 1 ở vị trí y(i)
 >
 > phân phối xác suất tính toán q(x) hay p model x là y^(i)** 
 > nên cross entropy sẽ trở thành **- log y^(i)[y(i)]** hay - log probability model tính toán
@@ -971,7 +971,7 @@
 
 > [!NOTE]
 > cách thứ hai là dùng **probabilistic model** cụ thể là **logistic regression** bằng cách
-> \**chuyển các class score thành probability** p(y = 1, x, w, b) bằng hàm sigmoid và 
+> **chuyển các class score thành probability** p(y = 1, x, w, b) bằng hàm sigmoid và 
 > dùng cross entropy loss.
 >
 > với cách này thì label sẽ gán 1 hoặc 0 (thay vì -1)

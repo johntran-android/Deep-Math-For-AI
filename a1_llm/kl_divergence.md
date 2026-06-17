@@ -26,19 +26,19 @@
 > distributions**: the **distribution of the original LLM**, and a **new** **proposed distribution of an
 > RL-updated LLM**. KL-Divergence measures the **average amount of information gained**
 > when we **use the original policy** to **encode samples from the new proposed policy**. By
-> \**minimizing the KL-Divergence between the two distribution**s, PPO **ensures that the
+> **minimizing the KL-Divergence between the two distribution**s, PPO **ensures that the
 > updated policy stays close to the original policy**, preventing **drastic changes** that may
 > negatively impact the learning process.
 >
 > A **library** that you can use to train **transformer language models with reinforcement
 > learning**, using techniques such as **PPO**, is **TRL** (T**ransformer Reinforcement
 > Learning**). In  this link  you can read more about this library, and its integration with
-> \**PEFT** (**Parameter-Efficient Fine-Tuning**) methods, such as **LoRA** (Low-Rank Adaption).
+> **PEFT** (**Parameter-Efficient Fine-Tuning**) methods, such as **LoRA** (Low-Rank Adaption).
 > The image shows an overview of the PPO training setup in TRL.
 
 > [!NOTE]
 > Như cũng đã biết về **KL Divergence** trong GAN Spec, nó là công cụ để
-> \**đo sự sai khác (divergence) giữa hai mô hình phân phối xác suất
+> **đo sự sai khác (divergence) giữa hai mô hình phân phối xác suất
 > (probability distribution model)**.
 >
 > Thì trong RLHF, **RL algorithm** cụ thể là **PPO** sẽ **nhận reward của
@@ -53,7 +53,7 @@
 > như bài trước đã nói xuất phát từ '**drastic policy changes'**
 >
 > Do đó PPO sử dụng một **'constrain'** là **KL-Divergence** để kiểm soát,
-> \**giữ không cho distribution của  RL updated model không diverge quá
+> **giữ không cho distribution của  RL updated model không diverge quá
 > nhiều** với distribution của model gốc.
 >
 > Nói chung là việc này có lib giúp cụ thể là TRL

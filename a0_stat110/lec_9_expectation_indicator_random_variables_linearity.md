@@ -88,7 +88,7 @@
 > (X=0) U (X=1)**
 >
 > Nên tại đây **P(X<=x) = P(X=0 U X=1) và đây là union của các disjoint event** nên  theo
-> \**axiom 2** = P(X=0) + P(X=1) => F(x)  c**ó bước nhảy lên từ P(X=0) lên P(X=0) + P(X=1)**.
+> **axiom 2** = P(X=0) + P(X=1) => F(x)  c**ó bước nhảy lên từ P(X=0) lên P(X=0) + P(X=1)**.
 > Nói cách khác độ lớn của bước  chính là bằng P(X=1)
 >
 > Tiếp tục, từ x=1 tới x~=2, các event X<=x thực chất vẫn chứa cùng số possible outcome
@@ -98,7 +98,7 @@
 > P(X=0) + P(X=1) + P(X=2). Và sẽ tiếp tục có bước nhảy của F(x) với độ lớn chính là
 > P(X=2)
 >
-> \**Tóm tắt như sau:**
+> **Tóm tắt như sau:**
 >
 > x<0: P(X≤x) = P(∅) = 0 Vì khi x<0 thì không có giá trị nào có thể xảy ra của X mà ≤ x 
 > được nên event X ≤ x là subset rỗng, ko chứa possible outcome nào.
@@ -166,7 +166,7 @@
 > [!NOTE]
 > Tiếp gs nói qua **vài tính chất của CDF**. Đầu tiên dễ thấy là nó **luôn tăng**
 > (dù là có bước nhảy nhưng nó **không bao giờ giảm**, điều này cũng dễ hiểu vì
-> \**khi tăng x**, xác suất **X ≤ x  sẽ ngày càng lớn**, hay khi tăng x thì càng ngày
+> **khi tăng x**, xác suất **X ≤ x  sẽ ngày càng lớn**, hay khi tăng x thì càng ngày
 > có **càng nhiều possible outcome mà label nhỏ hơn x** khiến **số possible
 > outcome trong subset / event (X <= x) ngày càng nhiều lên** -> xác suất của
 > event sẽ tăng lên
@@ -183,10 +183,10 @@
 > tại x0 nếu **lim f(x) x->x0 = f(x0)** và điều nằm có nghĩa là:
 >
 > Cả **left-hand limit** và **right-hand limit** của f(x) tại x0: kí hiệu là l**im x->x0- [f(x)]** và
-> \**lim x->x0+ f(x)** đều **tồn tại** và **bằng nhau** (= f(x0))
+> **lim x->x0+ f(x)** đều **tồn tại** và **bằng nhau** (= f(x0))
 >
 > Vậy ở đây, gs nói về **right continuous**, chính là việc **tồn tại right-hand limit**:
-> \**lim x->x0+  f(x) = f(x0)**
+> **lim x->x0+  f(x) = f(x0)**
 
 > [!NOTE]
 > Quay lại sau khi học 18.01: Đã quay lại
@@ -236,15 +236,15 @@
 > VARIABLES**
 >
 > Như bài trước đã biết sơ rằng nếu **giá trị cụ thể của một random variable** này
-> \**không cung cấp thêm thông tin** gì về **giá trị của random variable kia.**
+> **không cung cấp thêm thông tin** gì về **giá trị của random variable kia.**
 >
 > Thế thì định nghĩa chính thức, ta sẽ cũng liên hệ nó, **ĐƯA NÓ VỀ** **INDEPENDENT
 > EVENT**. Đó là hai r.v X, Y sẽ **INDEPENDENT** nếu như:
 >
-> \**P(X<=x, Y<=y) = P(X<=x) * P(Y<=y) với mọi x, y**
+> **P(X<=x, Y<=y) = P(X<=x) * P(Y<=y) với mọi x, y**
 >
 > Phải hiểu là khi diễn đạt / đưa định nghĩa independent random variable với 
-> \**independent event**, thì có nghĩa là **nếu event X<=x và event Y<=y independent**
+> **independent event**, thì có nghĩa là **nếu event X<=x và event Y<=y independent**
 > thì có random variable X và random variable Y independent
 >
 > Vế trái, P(X<=x, Y<=y) được gọi là **JOINT CDF** và ta sẽ gặp lại sau. Thế thì ta có
@@ -317,7 +317,7 @@
 
 > [!NOTE]
 > Và điều đó mang ý nghĩa là giúp ta **có một con số** (average) để
-> \**"tóm tắt" lại distribution của random variable.** Tuy nhiên điều này có thể **không đủ**, vì **distribution có thể rất
+> **"tóm tắt" lại distribution của random variable.** Tuy nhiên điều này có thể **không đủ**, vì **distribution có thể rất
 > phức tạp** nên việc tóm lược thông tin qua mỗi một con số
 > (average) là không đủ. Do đó những bài sau ta sẽ làm quen với các
 > con số khác **đo lường mức biến động của random variable như
@@ -383,9 +383,9 @@
 > [!NOTE]
 > Nhưng cách thứ hai đó là ta sẽ **tính average của các con số** **trong** đây
 > là 1, 3, 5 nhưng vì mỗi con **xuất hiện nhiều lần khác nhau** nên ta sẽ
-> \**gắn trọng số cho chúng:** 
+> **gắn trọng số cho chúng:** 
 >
-> \**1***[**trọng số của 1 là 5/8** vì 1 xuất hiện 5 lần trong tổng cộng 8 lần] + **3***[t**rọng số
+> **1***[**trọng số của 1 là 5/8** vì 1 xuất hiện 5 lần trong tổng cộng 8 lần] + **3***[t**rọng số
 > của 3 là 2/8** vì 3 xuất hiện 2 lần] + **5***[t**rọng số của 5 là 1/8** vì nó chỉ xuất
 > hiện 1 lần]
 >
@@ -419,7 +419,7 @@
 > Kí hiệu là **E(X)**
 >
 > Và công thức hoàn toàn g**iống như khi tính weight average**: của các
-> \**possible value x**, với **trọng số tương ứng** cho possible value đó hoàn toàn
+> **possible value x**, với **trọng số tương ứng** cho possible value đó hoàn toàn
 > dễ hiểu sẽ chính là **dùng xác suất tương ứng P(X=x)**
 >
 > Nên **E(X) = Tổng x [x*P(X=x)]** với **mọi possible value (có thể có của X)** hay
@@ -484,7 +484,7 @@
 > [!NOTE]
 > Và ông cho rằng cái này rất quan trọng và gọi nó là **FUNDAMENTAL BRIDGE**: ý
 > nghĩa là, nó giúp **nối kết** giữa **XÁC SUẤT CỦA MỘT EVENT** với
-> \**EXPECTED VALUE CỦA MỘT INDICATOR RANDOM VARIABLE**
+> **EXPECTED VALUE CỦA MỘT INDICATOR RANDOM VARIABLE**
 
 > [!NOTE]
 > FUNDAMENTAL BRIDGE E(X) = P(A)
@@ -499,7 +499,7 @@
 > Tiếp ta làm qua **Binomial** random variable **X~Bin(n, p)**
 >
 > Tương tự E(X) sẽ là **weight average** của **các possible value của X** với
-> \**weight** là xác  suất của  việc (event) X = possible value đó.
+> **weight** là xác  suất của  việc (event) X = possible value đó.
 >
 > Với Bin(n,p) r.v ta nhớ nó (random variable) **có ý nghĩa** là **SỐ LẦN
 > SUCCESS** khi thực hiện **n i.i.d Bern(p) trials** (mỗi trial có kết quả tuân theo
@@ -544,7 +544,7 @@
 >
 > Thế thì bài trước ta đã có cái công thức này: 
 >
-> \**k*(n choose k) = n*(n-1 choose k-1)**, 
+> **k*(n choose k) = n*(n-1 choose k-1)**, 
 >
 > xuất phát từ bài toán chọn group k người và chọn một người trong đó làm president
 >
@@ -630,7 +630,7 @@
 🔗 **Related:** [TÓM TẮT:  Poisson distribution X ~Pois(λ)  PMF P(X=k) = e^-λ λ^k / k! k = 0,1,2....  - Chứng minh PMF valid: không âm và Σk P(X=k) = 1  - E(X) = λ  - Story của Poison: Số success trial khi có rất nhiều trial với xác suất success nhỏ  - Poison paradigm: Có nhiều event Ai, xác suất xảy ra mỗi event nhỏ π ⇨ Có thể approx số event xảy ra (success) bởi Pois distribution  - Poison paradigm cho phép các event có thể weak independent  E[#số event xảy ra] = λ = Σ π  - KHI n LỚN VÀ p NHỎ LẠI (ĐỂ GẦN TRỞ VỀ POISSON PARADIGM) thì BINOMIAL (n, p) SẼ CONVERGE VỀ POISSON  Chứng minh khi n LỚN ĐẾN VÔ CÙNG và p NGÀY CÀNG NHỎ thì BINOMIAL sẽ CONVERGE về POISSON.  - Trở lại Bài toán Birthday tính xác suất có ít nhất 1 bộ 3 người trùng ngày sinh: Vì số bộ 3 người là lớn, và xác suất 1 bộ 3 người trùng ngày sinh xảy ra là nhỏ, nên số bộ 3 trùng ngày sinh có thể approx bởi poison r.v Từ đó ta tính E(X) để có λ. Và từ đó tính P(có ít nhất 1 bộ trùng ngày sinh) =  P(X!=0) = 1 - P(X=0)](tóm_tắt_poisson_distribution_x_poisλ_pmf_pxk_e_λ_λk_k_k_012_chứng_minh_pmf_valid_không_âm_và_σk_pxk_.md#node-322)
 
 > [!NOTE]
-> \**Dựa vào tính chất Linearity** này ta có thể redo việc **tính E(X) của
+> **Dựa vào tính chất Linearity** này ta có thể redo việc **tính E(X) của
 > X~Bin(n,p)** như sau:
 >
 > Theo định nghĩa, đúng hơn là theo cách hiểu thứ hai về Binomial (n,p) 
@@ -638,7 +638,7 @@
 >
 > X là **tổng của n indicator random variable Bern(p)**:
 >
-> \**X = X1 + X2 + ...Xj + ...Xn** 
+> **X = X1 + X2 + ...Xj + ...Xn** 
 >
 > với Xj có hai possible value là 1 hoặc 0 với xác suất P(Xj=1) = p và P(Xj=0) = 1-p
 >
@@ -670,16 +670,16 @@
 > [!NOTE]
 > Ta sẽ quay lại ví dụ **Hypergeometric** distribution: 
 >
-> \**Chọn 5 lá bài**, thì **số lá xì** trong 5 lá (lấy lá bài ra thì không bỏ vô lại tức
+> **Chọn 5 lá bài**, thì **số lá xì** trong 5 lá (lấy lá bài ra thì không bỏ vô lại tức
 > Sampling **without** replacement) sẽ tuân theo Hypergeometric distribution
 > (Như nãy đã nói nếu Sampling with replacement thì là Binomial)
 >
 > Ở đây ta cần tính E(X)
 >
 > Thế thì gs nói đại khái là vốn dĩ trong ví dụ này ta **không care thứ tự** khi
-> \**chỉ quan tâm số lá Xì** trong 5 lá. Tuy nhiên **để cho dễ** khi tính E(x) ta vẫn 
+> **chỉ quan tâm số lá Xì** trong 5 lá. Tuy nhiên **để cho dễ** khi tính E(x) ta vẫn 
 > c**ho rằng ta lần lượt rút 5 lá** và **gọi Xj là indicator random variable** mang 
-> \**giá trị 1 nếu lá thứ j là xì** và mang giá trị **0 nếu lá thứ j không phải xì**.
+> **giá trị 1 nếu lá thứ j là xì** và mang giá trị **0 nếu lá thứ j không phải xì**.
 
 > [!NOTE]
 > E(X) CỦA HYPERGEOMETRIC
@@ -846,7 +846,7 @@
 >
 > Ta cần **check tổng q^k*p với mọi k có bằng 1 hay không**.
 >
-> \**Tổng k [p*q^k]** = **p Tổng k: [q^k]**
+> **Tổng k [p*q^k]** = **p Tổng k: [q^k]**
 >
 > Và tổng của q^k với k = 1, 2....là **GEOMETRIC** SERIES. có giá trị bằng **1/(1-q)** 
 > Nên kết quả là p/(1-q) = p/p = 1
@@ -871,7 +871,7 @@
 >
 > Nên ta có E(X) = **Tổng k=0,1,..inf [k * P(X=k)]** = **Tổng k=0:infinity [k * pq^k]**
 >
-> \**Bỏ p ra ngoài** vì không dính k: = p Σk=0:infinity [k * q^k]
+> **Bỏ p ra ngoài** vì không dính k: = p Σk=0:infinity [k * q^k]
 >
 > Tiếp xem phần note theo
 
@@ -883,12 +883,12 @@
 
 > [!NOTE]
 > Đại khái là, nếu ta không có k thì **∑k=0,1,...inf k*q^k** là **Geometric**
-> \**series** như vừa rồi
+> **series** như vừa rồi
 >
 > Nhưng **vì ta có k** cho nên gs cho rằng **đầu tiên ta cứ viết theo kiểu như ta
 > không có k**, để có geometric series = 1/(1-q)
 >
-> \**∑k=0,1,...inf q^k = 1/(1-q)**
+> **∑k=0,1,...inf q^k = 1/(1-q)**
 >
 > Sau đó ta sẽ **tìm cách để có k**, thì dễ thấy nếu **LẤY ĐẠO HÀM (TAKE
 > DERIVATIVE) HAI VẾ** ta **sẽ có k ở bên trái**, vì derivative của q^k = k*q^(k-1).
@@ -901,7 +901,7 @@
 >
 > = **1/(1-q)^2** 
 >
-> \**∑k=0,1,...inf k*q^(k-1) = 1/(1-q)^2**
+> **∑k=0,1,...inf k*q^(k-1) = 1/(1-q)^2**
 >
 > (sau khi lấy derivative hai vế ông cho rằng có thể cho k từ 1 vì với k = 0 thì
 > hạng tử trong tổng cũng bằng 0 thôi, nhưng để k từ 0 cũng không sao)

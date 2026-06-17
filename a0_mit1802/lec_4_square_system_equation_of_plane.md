@@ -29,13 +29,13 @@
 > N** nhưng **đi qua P0 thay vì đi qua O**.
 >
 > Cách làm **hoàn toàn đơn giản**, cũng là **thiết lập equation** bằng
-> \**dot product của N và vector trong plane: P0P bằng 0**.
+> **dot product của N và vector trong plane: P0P bằng 0**.
 >
 > Với vector **P0P sẽ là P - P0**.
 >
 > Từ đó ta **sẽ thấy** kết qủa (plane) equation **với các hệ số giống như
 > của plane hồi nãy** V**À CŨNG CHÍNH LÀ VECTOR N** (gọi là **normal**
-> \**vector**) **chỉ khác vế bên phải**
+> **vector**) **chỉ khác vế bên phải**
 
 <br>
 
@@ -104,7 +104,7 @@
 > tọa độ của normal vector)
 >
 > Dưới góc nhìn của 1806 mình có thể thấy ở đây là matrix full-rank:
-> \**square** và dễ thấy các **column independent** do xuất hiện các **identity
+> **square** và dễ thấy các **column independent** do xuất hiện các **identity
 > matrix**. Do đó, **column space là toàn bộ R^3**, dẫn đến **b = (1,2,3) luôn
 > nằm trong column space**. Và dẫn đến **luôn có x_particular**.
 >
@@ -176,7 +176,7 @@
 > Đầu tiên, **các row của A chính là normal vector của các plane P1, P2, P3**. và b1, b2, b3
 > như đã biết chính là khoảng cách khi shift các plane song song từ gốc tọa độ
 >
-> \**1) A là matrix rank 1, row 2, 3 đều dependent row 1**: Nói theo 1806, 3 row của A thật
+> **1) A là matrix rank 1, row 2, 3 đều dependent row 1**: Nói theo 1806, 3 row của A thật
 > ra là một, hay **chỉ có một independent row**, các row kia đều là linear combination của một
 > row (row nào cũng được).
 >
@@ -218,11 +218,11 @@
 >
 > ii) Trường hợp khác là sau khi elimination, **b3 cũng ra** 0, thì đây chính là khi **P3 có chứa
 > line P1P2.** Hệ phương trình **vô số nghiệm**. Đây cũng chính là khi Ax = b có
-> \**x_particular**. Và với việc matrix A không full-rank, có vector khác 0 trong null-space, Ax
+> **x_particular**. Và với việc matrix A không full-rank, có vector khác 0 trong null-space, Ax
 > = 0 có x_special nên dẫn đến **Ax= b có vô số solution**. Về hình học thì **P3 CÓ CHỨA
 > LINE P1P2**
 >
-> \**3. Trường hợp cả 3 row của A đều độc lập, A full-rank**
+> **3. Trường hợp cả 3 row của A đều độc lập, A full-rank**
 >
 > Theo hình học, 3 row đều độc lập, tức **3 plane equation đều có normal vector khác 
 > nhau** **P1, P2, P3 PLANE CẮT NHAU TẠI 1 ĐIỂM** -> Chỉ có một solution
@@ -299,7 +299,7 @@
 > phải khác 0.
 >
 > Và gs cho biết thêm khi A non-invertible chính là tương ứng với việc
-> \**đường thẳng giao của P1, P2 nằm trong P3** khiến ta có **vô số
+> **đường thẳng giao của P1, P2 nằm trong P3** khiến ta có **vô số
 > solution** Hoặc **P1 intersect P2 song song với P3** hoặc **P1, P2, P3 song
 > song nhau** thì đều không có solution nào Và liên hệ với 1806 thì A singular nên A (đang xét A square) có rank
 > nhỏ hơn số columns hay rows nên nullspace hay left nullspace đều

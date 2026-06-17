@@ -1136,7 +1136,7 @@
 > [!NOTE]
 > In the next course on "Improving deep neural networks," you'll be 
 > able to obtain even higher accuracy by systematically 
-> \**searching for better hyperparameters: learning_rate, 
+> **searching for better hyperparameters: learning_rate, 
 > layers_dims, or num_iterations, for example.** 
 
 <br>
@@ -1176,11 +1176,11 @@
 ## References
 
 > [!NOTE]
-> \**Week 2:
+> **Week 2:
 >  • GitHub**: \_Implementing a Neural Network from Scratch in Python – An Introduction\_ (Denny Britz, 2015)
 >  • \_Why normalize images by subtracting dataset's image mean, instead of the current image mean in deep learning?\_ (Stack Exchange)
-> \**Week 3:**  • \_CS231n: Convolutional Neural Networks for Visual Recognition\_ (Stanford University)
-> \**Week 4:** \_Autoreload of modules in IPython\_ (Stack Overflow)
+> **Week 3:**  • \_CS231n: Convolutional Neural Networks for Visual Recognition\_ (Stanford University)
+> **Week 4:** \_Autoreload of modules in IPython\_ (Stack Overflow)
 
 <br>
 

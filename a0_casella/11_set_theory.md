@@ -32,7 +32,7 @@
 > [!NOTE]
 > Tiếp theo là định nghĩa về **EVENT**, rất quan trọng. Một cách ngắn gọn,
 > EVENT là **SUBSET chứa các POSSIBLE OUTCOMES** trong **SAMPLE**
-> \**SPACE**.
+> **SPACE**.
 >
 > Và bản thân **SAMPLE SPACE CŨNG LÀ MỘT EVENT,** vì nó cũng là
 > subset của chính nó. Vì chữ subset đã thể hiện: nếu x ∈ A, và A là tập con
@@ -44,13 +44,13 @@
 > OUTCOME NÀO ĐÓ MÀ CHỨA TRONG A XUẤT HIỆN**.
 >
 > Với định nghĩa như vậy, có thể thấy **event S lúc nào cũng xuất hiện**, bởi
-> \**possible outcome nào cũng nằm trong S**. Và **event Rỗng chẳng bao giờ
+> **possible outcome nào cũng nằm trong S**. Và **event Rỗng chẳng bao giờ
 > xuất hiện**, vì chẳng có possible outcome nào chứa trong tập Rỗng  (nếu có
 > thì nó đã chẳng Rỗng).
 >
 > Thế thì từ đó người ta định nghĩa ra khái niệm **A là tập con của B**:
 >
-> \**Nếu x thuộc A thì x cũng thuộc B** (đây chính là khái niệm subset).
+> **Nếu x thuộc A thì x cũng thuộc B** (đây chính là khái niệm subset).
 >
 > Và nếu **A là tập con của B**, và **B cũng là tập con của A**: Tức là x thuộc
 > A thì suy ra x thuộc B và ngược lại. Thì đó chính là **A = B**.
@@ -99,7 +99,7 @@
 > [!NOTE]
 > Thử chứng minh một số công thức khác:
 >
-> \**A** ∪ **(B ∩ C) = (A** ∪ **B) ∩ (A** ∪ **C)**:
+> **A** ∪ **(B ∩ C) = (A** ∪ **B) ∩ (A** ∪ **C)**:
 >
 > Chứng minh về trái ⊂ vế phải:
 >
@@ -133,7 +133,7 @@
 
 > [!NOTE]
 > định nghĩa **DISJOINT EVENTS** (là khi **intersection** của chúng bằng ∅) và
-> \**PARTITION** (là khi chúng **disjoint** và **union của chúng bằng S**)
+> **PARTITION** (là khi chúng **disjoint** và **union của chúng bằng S**)
 
 <br>
 

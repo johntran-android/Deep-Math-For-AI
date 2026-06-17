@@ -32,7 +32,7 @@
 > [!NOTE]
 > Đại ý là nói qua một cách represent words theo **one-hot vector**
 >
-> \**Nhược điểm của việc represent từng từ bởi one-hot vector**. Đó
+> **Nhược điểm của việc represent từng từ bởi one-hot vector**. Đó
 > là **huge vector** ví dụ 250,000 từ trong vocab thì vector có 250.000
 > unit
 
@@ -97,10 +97,10 @@
 > \- Quét qua toàn bộ corpus theo từng ô (window), mỗi lần như vậy sẽ  có một từ làm
 > center words, và các từ xung quanh là context. Thì từ đó mới **tính conditional probability
 > P(o|c)** = xác suất xuất hiện từ context o1, o2 nếu từ center là c. Để rồi thực hiện
-> \**optimization là thay đổi các word embedding sao cho maximize cái xác suất này.** Thì thật ra **Word2Vec** có thể dùng 2 cách là..
+> **optimization là thay đổi các word embedding sao cho maximize cái xác suất này.** Thì thật ra **Word2Vec** có thể dùng 2 cách là..
 >
-> \**CBOW** như đã học bên NLPSpec, đó là **đưa ra các context word** mà bảo model
-> \**đoán center word**. Có thể hiểu là model phải làm sao để P(c|o) (xác suất từ center word xuất
+> **CBOW** như đã học bên NLPSpec, đó là **đưa ra các context word** mà bảo model
+> **đoán center word**. Có thể hiểu là model phải làm sao để P(c|o) (xác suất từ center word xuất
 > hiện khi context word là như vậy) cao nhất.
 >
 > Hoặc **Skip-gram** mà trong DLSpec có nói là **đưa center word**, bảo model **đoán
@@ -146,7 +146,7 @@
 > khung chứa 2m+1 từ, **ta có một từ center w_t** và **2m từ context: w_t + j** 
 >
 > Với j trong [-m, m] thì ta có **P(w_t+j | wt, theta)** là **xác suất của việc từ w_t+j**
-> \**xuất hiện,** **nếu đã cho trước từ w_t**, tính toán bởi theta.
+> **xuất hiện,** **nếu đã cho trước từ w_t**, tính toán bởi theta.
 >
 > Và để maximize xác suất "nói chung" ta sẽ **maximize tích của 2m các giá trị 
 > P(w_t+j | wt, theta) này**.
@@ -158,7 +158,7 @@
 >  L = PI t in [1,T] { PI j in [-m,m] P(w_t+j | w_t, theta) }
 >
 > Và đ**ể maximize cái L này** thì ta sẽ **minimize cost J được** define là 
-> \**negative average log của likelihood** L = J = **-log L / m**
+> **negative average log của likelihood** L = J = **-log L / m**
 > nên mới hay nghe cost function là **log likelihood là vậy**
 
 <br>
@@ -190,7 +190,7 @@
 >
 > Đầu tiên phép **dot product** chính là **tính ra chỉ số giống nhau giữa
 > hai word vector.** Như ta cũng biết **hai vector càng giống nhau** thì
-> \**dot product càng lớn** vì phép toán sẽ **nhân các cặp cùng vị trí** rồi **cộng lại** hết,
+> **dot product càng lớn** vì phép toán sẽ **nhân các cặp cùng vị trí** rồi **cộng lại** hết,
 >
 > [u1 u2 u3] . [v1 v2 v3] = u1v1 + u2v2 + u3v3
 >
@@ -525,9 +525,9 @@
 > scores**
 >
 > Tiếp theo với **loss function** là **negative log likelihood (log loss)** với **y^** và
-> \**target y**  - **là one-hot encoded của target word "juice",** model sẽ **tìm cách
+> **target y**  - **là one-hot encoded của target word "juice",** model sẽ **tìm cách
 > tweak các layer params và Embedding matrix E** sao cho **giảm loss** thì chính là
-> \**mang hiệu quả là với các từ context "I", "want", "a",..."of" , maximize xác suất
+> **mang hiệu quả là với các từ context "I", "want", "a",..."of" , maximize xác suất
 > xuất hiện của từ "juice"**
 
 > [!NOTE]

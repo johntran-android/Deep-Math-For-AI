@@ -63,7 +63,7 @@
 <p align="center"><kbd><img src="assets/616dc7e14b79e3361a4a0500fb50f1d951438e11.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Không cần main()**, hay define một function
+> **Không cần main()**, hay define một function
 > nào. Chỉ **code khơi khơi là nó work**. Wow
 
 <br>
@@ -120,7 +120,7 @@
 <p align="center"><kbd><img src="assets/80c4400b039bc65192bb0bd7bf3344cc151040f5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Không còn long** (8 bit cho số nguyên) hay **double** (8 bit
+> **Không còn long** (8 bit cho số nguyên) hay **double** (8 bit
 > cho số thập phân) vì Python **đã cho int và float nhiều bit
 > hơn**
 
@@ -159,7 +159,7 @@
 > cần phải loop** trong set để check.
 >
 > Cái này trong **java** cũng có nhưng syntax là if 
-> \**words.contain(word)** Thứ hai đó là (kể từ java đã có) là **built-in function** giúp khi
+> **words.contain(word)** Thứ hai đó là (kể từ java đã có) là **built-in function** giúp khi
 > muốn lowercase thì lowercase() (Java) hoặc **lower**() trong
 > Python
 
@@ -173,10 +173,10 @@
 > Rồi đến function load() nhận tên của một dictionary file
 > cũng trở nên rất gọn trong Python.
 >
-> \**file = open(dictionary, "r")** giúp giống như **fopen** trong C
+> **file = open(dictionary, "r")** giúp giống như **fopen** trong C
 > giúp mở file.
 >
-> \**for line in file:** ...Chính là syntax rất gọn để **lấy data từng
+> **for line in file:** ...Chính là syntax rất gọn để **lấy data từng
 > dòng của file** (ta đã biết qua PS5, dictionary file là **file text
 > có mỗi từ là một dòng**)
 >
@@ -247,10 +247,10 @@
 > [!NOTE]
 > Đại khái là để cho vui ổng cho xem thử là trong python
 > ta thậm chí có thể import **cả một thư viện**
-> \**face_recognition**
+> **face_recognition**
 >
 > Load image từ tên image. Sau đó dùng function
-> \**face_locations** để **localize faces** có trong image.
+> **face_locations** để **localize faces** có trong image.
 >
 > Loop trong kết quả và print ra file image (xuất ra file
 > image)
@@ -290,7 +290,7 @@
 > và dataset các **face image** để train một model học được khả
 > năng **predict rằng liệu hai image đưa vào có phải là cùng một
 > người hay không**. Dựa vào việc thiết kế training data là các
-> \**triplet** - các bộ 3 face image trong đó có hai image của cùng
+> **triplet** - các bộ 3 face image trong đó có hai image của cùng
 > một người và một image của người khác. Model sẽ có kiến
 > trúc **Siamese network**, optimization function là **Triplet loss**. Đó
 > là bài toán **face recognition**
@@ -340,8 +340,8 @@
 <p align="center"><kbd><img src="assets/6ea190020d144879afb84b921723e6053869003b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Variable**, không cần phải
-> \**declare data type**, tự nó biết
+> **Variable**, không cần phải
+> **declare data type**, tự nó biết
 
 <br>
 
@@ -351,7 +351,7 @@
 
 > [!NOTE]
 > Nhưng không còn
-> \**counter ++** được nữa
+> **counter ++** được nữa
 
 <br>
 
@@ -377,7 +377,7 @@
 > D: Có gì bad design
 >
 > A: Ở đây là specifically define. 1, 2, 3 . Phải dùng
-> \**range (0, 4)**
+> **range (0, 4)**
 
 <br>
 
@@ -399,11 +399,11 @@
 <p align="center"><kbd><img src="assets/7aff651bade6e51d74d28c5b6f63718f4f6786ce.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Forever for-loop**
+> **Forever for-loop**
 >
 > Nhớ lại trong C:
 >
-> \**while (true)
+> **while (true)
 > {
 > ..
 > }**
@@ -442,7 +442,7 @@
 > D: Tại sao nó lại ra vầy?
 >
 > A: Vì nó **đang hiểu input là string**, và do đó + sẽ là
-> \**concatenate** "1" + "2" = "12"
+> **concatenate** "1" + "2" = "12"
 
 <br>
 
@@ -763,7 +763,7 @@
 
 > [!NOTE]
 > Đại khái là nếu không dùng cs50 get_int mà dùng
-> \**int(input(...))  thì nếu nó nhập text thì sẽ bị error**
+> **int(input(...))  thì nếu nó nhập text thì sẽ bị error**
 
 <br>
 
@@ -803,7 +803,7 @@
 > đặt tên).
 >
 > Và bằng cách **set argument end** cho print ta có thể
-> \**override it's behavior thay cho \ **
+> **override it's behavior thay cho \ **
 
 <br>
 
@@ -912,7 +912,7 @@
 
 > [!NOTE]
 > Với Python, để sử dụng command line argument thì chỉ cần
-> \**import** **argv** của **sys lib**
+> **import** **argv** của **sys lib**
 >
 > Và argument là những gì sau python
 >
@@ -927,7 +927,7 @@
 
 > [!NOTE]
 > Và **muốn loop trong các argument values**, như một 
-> \**mô tuýp chung** của Python đó là muốn loop trong cái
+> **mô tuýp chung** của Python đó là muốn loop trong cái
 > gì, chỉ cần: **for** **in cái-cần-loop:**
 >
 > for arv **in argv:**
@@ -1042,7 +1042,7 @@
 <p align="center"><kbd><img src="assets/204ec98b724dc8c2aa5e767b8b53450a6d2f4cfc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**So sánh 2 string** trong Python rất dễ
+> **So sánh 2 string** trong Python rất dễ
 > dàng với **==** cái mà C không cho
 
 <br>
@@ -1094,12 +1094,12 @@
 
 > [!NOTE]
 > Minh hoạ đoạn code làm việc với file **csv**
-> \**Comma Separated Value**. Mở file ở moded **'a' =
+> **Comma Separated Value**. Mở file ở moded **'a' =
 > append**. Tức là cho **edit file nhưng chỉ append
 > thôi**.
 >
 > gọi function **csv.writer** để tạo **writer** và  gọi
-> \**writerow()** để ghi thêm một row.
+> **writerow()** để ghi thêm một row.
 
 <br>
 
@@ -1111,7 +1111,7 @@
 > Nhưng cách này người ta hay làm hơn và ta cũng
 > hay gặp ở ML's course.
 >
-> \**with open('file name', 'a') as file:** 
+> **with open('file name', 'a') as file:** 
 > Nó sẽ **handle vụ close file cho mình luôn** để đề phòng
 > quên
 

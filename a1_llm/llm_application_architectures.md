@@ -8,7 +8,7 @@
 ## **Summary:**
 
 > [!NOTE]
-> \**Summary:**
+> **Summary:**
 >
 > 1. **Building LLM-powered Applications**:
 >    - Key components are needed to create applications powered by Large Language 

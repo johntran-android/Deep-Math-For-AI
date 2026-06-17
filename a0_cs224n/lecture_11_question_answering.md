@@ -204,7 +204,7 @@
 >
 > Thì đầu tiên tính ra hidden state tại t, cái này sẽ có sự tham gia của **hidden state
 > trước đó**, **từ "chuẩn"** **của câu dịch tại time-step trước** (cái này gọi là
-> \**teacher-forcing**) và **attention result của time-step trước.** Còn cụ thể tham gia
+> **teacher-forcing**) và **attention result của time-step trước.** Còn cụ thể tham gia
 > thế nào (ví dụ cái nào concatenate với cái nào, rồi có thể được project để giảm
 > dimension...) thì xem lại.
 >
@@ -440,11 +440,11 @@
 > matrix 5x3, **cho ra 1 vector (cột)** trong đó **vị trí 1 có giá trị cao**, **số 2
 > giá trị thấp** thì điều đó thể hiện:
 >
-> \**từ context 1 relevant cao với query nói chung, không care từ nào** trong
+> **từ context 1 relevant cao với query nói chung, không care từ nào** trong
 > query,
 >
 > và **từ context 2 ít relevant với query nói chung**, **không care từ nào**
-> \**cụ thể** của query.
+> **cụ thể** của query.
 >
 > Dẫn đến khi **chuyển thành weight** (bởi softmax), và **dùng nó làm trọng
 > số cho các context word vector để tính b**, thì: vector b sẽ **mang nhiều

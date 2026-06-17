@@ -114,7 +114,7 @@
 > = (**x** - **μ**)T [Σinv_sym + Σinv_asym] (**x** - **μ**)
 >
 > = (**x** - **μ**)T Σinv_sym (**x** - **μ**) + (**x** - **μ**)T Σinv_asym (**x** -
-> \**μ**)
+> **μ**)
 >
 > Xét hạng tử thứ hai:
 >
@@ -123,7 +123,7 @@
 > như đã biết, quadratic form thì là một scalar, nên:
 >
 > (**x** - **μ**)T Σinv_asym (**x** - **μ**) = [(**x** - **μ**)T Σinv_asym (**x** -
-> \**μ**)]T
+> **μ**)]T
 >
 > ⇔ (**x** - **μ**)T Σinv_asym (**x** - **μ**) = (**x** - **μ**)T (Σinv_asym)T
 > (**x** - **μ**)
@@ -139,7 +139,7 @@
 > Vậy (**x** - **μ**)T Σinv_asym (**x** - **μ**) = 0
 >
 > ⇨ (**x** - **μ**)T Σinv_sym (**x** - **μ**) + (**x** - **μ**)T Σinv_asym (**x** -
-> \**μ**)
+> **μ**)
 >
 > = (**x** - **μ**)T Σinv_sym (**x** - **μ**)
 >
@@ -234,7 +234,7 @@
 > dot product của **x** - **μ** với u1, y2 là dot product của **x** - **μ** với y2,...thì
 > với việc gs Bishop đặt U là matrix có các hàng là u1, u2,...để rồi UT là matrix
 > có các cột là u1, u2... Thì ta sẽ thấy **y** = (y1, y2...)T chính là U(**x**-**μ**). ⇨
-> \**y** = U(**x** - **μ**)
+> **y** = U(**x** - **μ**)
 >
 > Rồi, chỗ này dùng kiến thức về **change of basis** đã học trong MIT 1806: Ôn
 > lại nhanh:
@@ -311,7 +311,7 @@
 >
 > Xét phép biến đổi identity: T(**v**i) = **v**i. Ta có:
 >
-> \**v**i = U[cột i của A], i = 1,..n
+> **v**i = U[cột i của A], i = 1,..n
 >
 > Gom **v**1, **v**2...**v**n thành các cột của V, thì **v**i = U[cột i của A], i = 1,..
 > n chính là V = UA
@@ -320,7 +320,7 @@
 > basis" / matrix chuyển cơ sở từ cơ sở v's sang cơ sở u's: A = UinvV.
 >
 > Xét một case đặc biệt, khi input basis là standard basis: **v**1, **v**2,... =
-> \**e**1, **e**2,...Hay cũng là V = I. Ta sẽ có:
+> **e**1, **e**2,...Hay cũng là V = I. Ta sẽ có:
 >
 > A = Uinv I = Uinv. Từ đây giúp kết luận, khi có **x là vector có tọa độ trong
 > standard basis**, thì A**x** = Uinv **x**, chính là động tác tính ra tọa độ của nó
@@ -329,7 +329,7 @@
 > Rồi, quay lại công thức y = U(**x**-**μ**):
 >
 > Đầu tiên chú ý là trong phần ôn lại ở trên, mình nói U là vector tạo bởi các
-> \**cột** là các basis u's.
+> **cột** là các basis u's.
 >
 > Còn trong bài này, U ở đây được gs Bishop định nghĩa là là **matrix có các
 > các hàng là các orthogonal eigenvector ui**. Như vậy **UT là orthogonal
@@ -340,7 +340,7 @@
 >
 > Và phần ôn lại ở trên giúp ta hiểu rõ bản chất của cái này chính là:
 >
-> \**CHUYỂN TỌA ĐỘ CỦA** **x (SAU KHI SHIFT BỞI μ) TỪ CƠ SỞ CHUẨN
+> **CHUYỂN TỌA ĐỘ CỦA** **x (SAU KHI SHIFT BỞI μ) TỪ CƠ SỞ CHUẨN
 > (BASIS e's) SANG HỆ TỌA ĐỘ CƠ SỞ LÀ CÁC CỘT CỦA UT, CHÍNH LÀ ui =
 > CÁC EIGENVECTOR CỦA Σ!**
 >
@@ -441,7 +441,7 @@
 > đặc điểm nhằm đảm bảo rằng phân phối này được define đúng (**well
 > defined**). Đó là **mọi eigenvalues của Σ đều dương.**
 >
-> \**Vì sao**? Ở đây có một ý rất hay mà gs Bishop không nói kĩ: Như trong note
+> **Vì sao**? Ở đây có một ý rất hay mà gs Bishop không nói kĩ: Như trong note
 > trước, ta đã hiểu cái level set (đường đồng mức của hàm 2D Gaussian là một
 > đường ellipse) ứng với exp(-1/2) có tâm tại **μ** và có trục ellipse theo phương
 > của các eigenvector với độ dài bán trục là λ1/2 và λ2/2.
@@ -509,7 +509,7 @@
 > xoay hệ trục để trùng với các eigenvector ui. Nên y1, y2,...chính là tọa độ của x
 > trong hệ trục mới: tâm tại mu, trục trùng với eigenvector **u1**, **u2**,..Mà điều
 > này dĩ nhiên có nghĩa là y1 chính là hình chiếu của vector **X** - **μ** lên trục
-> \**u1**, y2 là hình chiếu của vector **X** - **μ** lên trục **u2**,...Cùng chính là
+> **u1**, y2 là hình chiếu của vector **X** - **μ** lên trục **u2**,...Cùng chính là
 > cùng kết luận ở trên.
 >
 > Xét tiếp EZ = E[(**X**-μ)T**u**] = E[**X**-μ]T**u** = (E**X**-E**μ**)T**u** =
@@ -518,7 +518,7 @@
 > Như vậy E[Z^2] thật ra chính là E[Z^2 - (EZ)^2] và đây chính là **VARIANCE**
 > của **Z:** Var(**Z**). Và với ý nghĩa của Z là hình chiếu của (**X** - **μ**) lên trục
 > eigenvector **u**, thì như vậy ta có thể hiểu vì sao E[Z^2], **CŨNG LÀ**
-> \**EIGENVALUE** **λ**, **CHÍNH LÀ PHƯƠNG SAI CỦA DISTRIBUTION THEO
+> **EIGENVALUE** **λ**, **CHÍNH LÀ PHƯƠNG SAI CỦA DISTRIBUTION THEO
 > PHƯƠNG EIGENVECTOR** **u**, và dĩ nhiên, again, phương sai thì không âm
 > cũng giúp khẳng định lại λ phải không âm.
 >
@@ -589,7 +589,7 @@
 > lần, gs Bishop viết thường đối với tên biến có thể gây lú lẫn), có pdf là hàm
 > Gaussian pdf f**X**(**x**|**μ**, Σ) = (công thức 2.43). Và nay ta có random variable
 > vector **Y có được bằng cách áp hàm g(x) lên X, với g(x) =** U(**x**-**μ**), tức là
-> \**Y** = U(**X** - **μ**). Vậy thì áp dụng điều trên ta sẽ có pdf của **Y**:
+> **Y** = U(**X** - **μ**). Vậy thì áp dụng điều trên ta sẽ có pdf của **Y**:
 >
 > fY(y) = f**X**(**x**|**μ**,Σ) |J|
 >
@@ -718,9 +718,9 @@
 > Vậy ở đây, f**Y**(**y**), thật ra chính là joint pdf của D random variable Y1, Y2,... YD (các phần tử của vector **Y**). Và cái công thức 2.57, là
 > joint pdf của chúng, như đã thấy, lại chính là tích các marginal pdf của các random variable Y1,Y2.... YD đơn lẻ.
 >
-> \**NHƯ VẬY KẾT LUẬN: Y1, Y2,....YD LÀ CÁC RANDOM VARIABLE ĐỘC LẬP.**
+> **NHƯ VẬY KẾT LUẬN: Y1, Y2,....YD LÀ CÁC RANDOM VARIABLE ĐỘC LẬP.**
 >
-> \**Và ý nghĩa của điểu này chính là: Việc đổi biến, từ X sang Y, bằng cách shift bởi μ và xoay trục sao cho trùng với các eigenvector của Σ đã
+> **Và ý nghĩa của điểu này chính là: Việc đổi biến, từ X sang Y, bằng cách shift bởi μ và xoay trục sao cho trùng với các eigenvector của Σ đã
 > giúp cho trong hệ trục tọa độ mới, các tọa độ trở nên hoàn toàn độc lập nhau. Đây chính là ý mà gs Bishop nói ở đây** "\/eigen- vectors therefore
 > define a new set of shifted and rotated **coordinates** with respect to which the joint probability distribution factorizes into a product of
 > independent distributions"\/
@@ -830,11 +830,11 @@
 >
 > Để làm tiếp, đưa μ ra ngoài tích phân, thật ra là đưa hẳn ra ngoài luôn
 >
-> \**μ** { [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫ exp[-(1/2) **z**T Σinv **z**] d**z** }
+> **μ** { [1/(2π)^(D/2)] [1/|Σ|^1/2] ∫ exp[-(1/2) **z**T Σinv **z**] d**z** }
 >
 > đưa cái cụm constant vào trong tích phân lại:
 >
-> \**μ** { ∫ [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-(1/2) **z**T Σinv **z**] d**z** }
+> **μ** { ∫ [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-(1/2) **z**T Σinv **z**] d**z** }
 >
 > thì lúc này, cái cụm { ∫ [1/(2π)^(D/2)] [1/|Σ|^1/2] exp[-(1/2) **z**T Σinv **z**] d**z** } chính là marginalizing pdf của Z over R^D. nên theo tính valid của pdf, nó phải bằng 1.
 >

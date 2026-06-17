@@ -81,7 +81,7 @@
 
 > [!NOTE]
 > Thế thì gs cho rằng, **không như trong x, y coordinates**, thì
-> \**delta_x*delta_y** hay **delta_y*delta_x chính là delta_A** (để khi ->
+> **delta_x*delta_y** hay **delta_y*delta_x chính là delta_A** (để khi ->
 > 0 thì dxdy chính là dA)
 >
 > Còn ở đây, **delta_r. delta_theta KHÔNG PHẢI LÀ delta_A**
@@ -130,7 +130,7 @@
 >
 > Và khi chúng nhỏ về 0 thì ta có
 >
-> \**dA = r*dr*d_theta** Và đây **là cái cần nhớ khi tích phân trong Polar coordinates**.
+> **dA = r*dr*d_theta** Và đây **là cái cần nhớ khi tích phân trong Polar coordinates**.
 >
 > Ta sẽ **cần xác định lại bound** cũng như **thay dA là r*dr*d_theta**
 > chứ không chỉ dr*d_theta
@@ -177,7 +177,7 @@
 
 > [!NOTE]
 > gs nhắc lại là **99% trường hợp ta sẽ outer integrate với theta** và
-> \**inner integrate với r**.
+> **inner integrate với r**.
 >
 > Nên đầu tiên ta sẽ cần xác định inner bound với ý nghĩa là: **với theta
 > fixed**, thì **r có range gì**, sau đó outer integral bound là range của theta
@@ -197,7 +197,7 @@
 >
 > Ví dụ như khi ta **cần tính trung bình của function** chẳng hạn. Và đây là
 > ứng dụng mà ta thấy trong Stat110 dùng nhiều khi ta cần tính
-> \**expected value**
+> **expected value**
 
 <br>
 
@@ -206,7 +206,7 @@
 <p align="center"><kbd><img src="assets/a68047d942dcc6d28ea26c940f642953b230618a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Một ứng dụng** của double integral là, **tìm diện tích của vùng R**.
+> **Một ứng dụng** của double integral là, **tìm diện tích của vùng R**.
 >
 > Giả sử ta **có vùng R** thì **tuy ta có thể set up nó thành bài toán tích
 > phân một biến để tính diện tích** (ý là bằng cách tính diện tích của vùng
@@ -233,7 +233,7 @@
 
 > [!NOTE]
 > Một **ứng dụng tương tự** là ta có thể **tính khối lượng của một object**
-> \**phẳng diện tích R**, mật độ **delta** (có thể là **constant**, hoặc là function 
+> **phẳng diện tích R**, mật độ **delta** (có thể là **constant**, hoặc là function 
 > tùy thuộc vị trí)
 >
 > Khi đó bằng cách **tích phân kép trên vùng R delta.dA** sẽ cho ta khối
@@ -263,7 +263,7 @@
 > [!NOTE]
 > Và nếu đại khái là **các giá trị hàm f không equally likely** (tức có
 > vai trò quan trọng hay khả năng xảy ra như nhau) thì khi đó ta có
-> \**WEIGHTED AVERAGE**
+> **WEIGHTED AVERAGE**
 >
 > [1/Mass(R)] tích phân kép trong vùng R f*delta*dA
 >

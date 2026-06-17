@@ -16,7 +16,7 @@
 >
 > Thì ở đây gs sẽ nói về **function nhận input là matrix và output
 > matrix**. ví dụ như function **nhận vào matrix A**, trả ra **Ainv**,
-> \**A^3** hoặc trả ra kết quả sau khi **elimination A đưa nó về dạng U**
+> **A^3** hoặc trả ra kết quả sau khi **elimination A đưa nó về dạng U**
 > \- upper triangular hoặc reduce echelon form.
 >
 > Hoặc có thể **output ra scalar** ví dụ như function **tính determinant**
@@ -37,7 +37,7 @@
 > Ở đây chú ý **PHẢI HIỂU f'(A) [dA] LÀ OPERATOR f'(A) ACT ON dA** và cụ
 > thể là **dA.A^2 + A.dA.A + A^2.dA** Tại sao ra công thức này thì dễ thôi ta cứ làm theo cách làm bữa giờ:
 >
-> \**df** = f(A+dA) - f(A) = **(A+dA)^3 - A^3**
+> **df** = f(A+dA) - f(A) = **(A+dA)^3 - A^3**
 >
 > Thế thì **(A+dA)^3** phải triển khai là **(A+dA)(A+dA)(A+dA)**
 >

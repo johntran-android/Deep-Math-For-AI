@@ -12,19 +12,19 @@
 > [!NOTE]
 > Định nghĩa của CDF:
 >
-> \**F_X(x) = P_X(X ≤ x)**
+> **F_X(x) = P_X(X ≤ x)**
 >
 > Cái này **stat110** đã học rồi, nhưng nhờ ở đây ta **hiểu hơn rằng** cái **P ở đây** là
-> \**P_X** tức là **INDUCED PROBABILITY FUNCTION của X (có thể ghi là P cho
+> **P_X** tức là **INDUCED PROBABILITY FUNCTION của X (có thể ghi là P cho
 > đơn giản nhưng ta hiểu nó là P_X (theo link))**
 >
 > Và định nghĩa của **CDF** được tính / dựa trên **giá trị của induced probability
 > function** đối với **event X ≤ x**.
 >
 > Mà ta cũng đã biết **induced** **probability** **function** cũng lại được dựa trên
-> \**PROBABILITY** **FUNCTION** của **ORIGINAL** **SAMPLE SPACE S:**
+> **PROBABILITY** **FUNCTION** của **ORIGINAL** **SAMPLE SPACE S:**
 >
-> \**P_X(X ≤ x) = P({s** ∈ **S: X(s) ≤ x})**
+> **P_X(X ≤ x) = P({s** ∈ **S: X(s) ≤ x})**
 
 > [!NOTE]
 > ĐỊNH NGHĨA CỦA CDF
@@ -40,12 +40,12 @@
 > trong  thử nghiệm tung 3 đồng xu**
 >
 > Thì như đã biết từ example trước, **range của X sẽ là {0,1,2,3}**. Với
-> \**P(X=i)** với i =0, 1, 2, 3 lần lượt = **1/8, 3/8, 3/8, 1/8**.
+> **P(X=i)** với i =0, 1, 2, 3 lần lượt = **1/8, 3/8, 3/8, 1/8**.
 >
 > Thế thì tuy rằng X chỉ có các giá trị khả dĩ **rời rạc** thì định nghĩa của
-> \**cdf** lại **vẫn cho phép tính xác suất của event giá trị X nằm trong một
+> **cdf** lại **vẫn cho phép tính xác suất của event giá trị X nằm trong một
 > khoảng** với **mốc bất kì,** **ko nhất thiết phải là 0, 1, 2, 3**, ví dụ
-> \**F_X(2.5) = P_X(X ≤ 2.5**)
+> **F_X(2.5) = P_X(X ≤ 2.5**)
 >
 > Thế thì ta sẽ xem thử **tại sao cdf của X có dạng bậc thang** như vậy.
 >
@@ -54,23 +54,23 @@
 >
 > Và **{s** ∈ **S: X(s) < 0} là empty set**, vì **ko có p.o trong original sample
 > space  nào mà X(s) < 0 hết**, do đó **F_X(x) với x < 0** = **P_X(X < 0)** =
-> \**P(**∅**) = 0**
+> **P(**∅**) = 0**
 >
 > Xét **F_X(x) với x** ∈ **[0, 1)**. Tương tự nó sẽ bằng **P_X(X < x: x** ∈ **[0, 1))** =
-> \**P({s** ∈ **S: X(s) < x: x** ∈ **[0, 1)})**
+> **P({s** ∈ **S: X(s) < x: x** ∈ **[0, 1)})**
 >
-> \**= P({TTT}) = 1/8** (chỉ có một possible outcome trong event này)
+> **= P({TTT}) = 1/8** (chỉ có một possible outcome trong event này)
 >
 > Như vậy nhận xét, khi x < 0, F_X(x) = 0, nhưng khi **0 ≤ x < 1**, thì
-> \**F_X(x) = 1/8**. Do đó **có một bước nhảy tại X = 0**. Và đây là một tính chất
+> **F_X(x) = 1/8**. Do đó **có một bước nhảy tại X = 0**. Và đây là một tính chất
 > gọi là **RIGHT CONTINUOUS**:
 >
 > Đã học trong MIT 18.01, hàm số gọi là right continuous nếu
 >
-> \**limit x->0+ f(x) = f(x0)** 
+> **limit x->0+ f(x) = f(x0)** 
 >
 > Tính chất này là do CÁCH ĐỊNH NGHĨA CỦA CDF **F_X(x) = P(X ≤ x)**.
-> \**Nếu định nghĩa là P(X < x)** thì ta sẽ có tính chất **LEFT CONTINUOUS**
+> **Nếu định nghĩa là P(X < x)** thì ta sẽ có tính chất **LEFT CONTINUOUS**
 
 > [!NOTE]
 > TÍNH CHẤT RIGHT CONTINUOUS CỦA CDF LÀ DO F_X(x) =
@@ -114,7 +114,7 @@
 >
 > Và nó sẽ tạo ra **một sample space mới** chứa các **possible values của
 > random variable**. Và gắn với đó, là một probability function mới, gọi là
-> \**induced** **probability function** **P_X**, được tính từ probability function của
+> **induced** **probability function** **P_X**, được tính từ probability function của
 > original sample space:
 >
 > P**_X(X = x) = P({s** ∈ **S: X(s) = x})**
@@ -155,7 +155,7 @@
 >
 > A_x = {s ∈ S: "x th toss = Head"}
 >
-> \**A = A1 ∩ A2 ∩...A_x**
+> **A = A1 ∩ A2 ∩...A_x**
 >
 > Thế thì xét **P(A1)**, như đã nói A1 chứa **mọi outcomes bắt đầu với T**.
 >
@@ -178,7 +178,7 @@
 > xảy ra hay không) chả ảnh hưởng gì đến lần toss thứ j (Aj có xảy ra
 > không)**. Do đó theo theorem về independent event
 >
-> \**P(A) = Πi P(Ai) = (1-p)^x-1 p**
+> **P(A) = Πi P(Ai) = (1-p)^x-1 p**
 >
 > Và đó chính là **P_X(X=x)**
 

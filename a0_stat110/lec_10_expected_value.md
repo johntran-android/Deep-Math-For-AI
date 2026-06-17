@@ -38,11 +38,11 @@
 > properties**.
 >
 > Đầu tiên ông cho rằng **bất cứ khi nào expected value tồn tại** thì ta sẽ có
-> \**linearity** nói vậy là bởi vì **không phải lúc nào expected value cũng tồn tại** ví
+> **linearity** nói vậy là bởi vì **không phải lúc nào expected value cũng tồn tại** ví
 > dụ như khi có **tình trạng diverge** gì đó.
 >
 > Và ở đây ta cũng **chỉ làm với discrete variable**, sau này sẽ làm nhiều hơn với
-> \**continuous variable**
+> **continuous variable**
 
 > [!NOTE]
 > CHỨNG MINH TÍNH LINEARITY
@@ -55,7 +55,7 @@
 <p align="center"><kbd><img src="assets/2c12dca3c33c4f2e8e733c0160003bef894739d2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Dùng định nghĩa expected value** ta phải chứng minh dấu bằng này xảy ra
+> **Dùng định nghĩa expected value** ta phải chứng minh dấu bằng này xảy ra
 > Đó là cho T = X + Y thì E(T) = E(X) + E(Y)
 >
 > Ta có thể **làm với vế trái** và **cho thấy** **nó bằng vế phải** hoặc ngược lại. Ở
@@ -70,7 +70,7 @@
 > [!NOTE]
 > Dùng cách tiếp cận hữu ích hay làm đó là **wishful thinking**,
 > ta " ước rằng / **giả sử** rằng **biết X**", để rồi có thể "
-> \**condition on X**"
+> **condition on X**"
 >
 > Khi đó theo **LOTP** - **law of total probability**, mà ta có thể
 > lập luận: Đầu tiên nhắc lại về **ý nghĩa của event X=x1** đó là
@@ -176,7 +176,7 @@
 🔗 **Related:** [-TÓM TẮT:   Z^(số lẻ), ta luôn có E(Z^(số lẻ) = 0, gọi là ODD MOMENT  - Symmetry còn giúp ta kết luận (nếu Z ~ N(0,1) thì -Z cũng là một N(0,1)  - X = μ + σZ sẽ ~ N(μ, σ^2)  - Sẽ tốt hơn nếu ta hiểu Standard Normal Z ~ N(0,1) trước, sau đó hiểu rằng khi scale và shift Z với σ và μ khác nhau thì ta sẽ có bất kì một Normal distribution N(μ, σ^2) nào  - PROPERTIES CỦA VAR(X):  + Var(X + c) = Var(X)  + Var(cX) = c^2*Var(X)  + Var(X) luôn không âm, và nó chỉ bằng 0 nếu X là constant  + Variance KHÔNG CÓ TÍNH LINEARITY:  + Var(X+Y) không bằng Var(X) + Var(Y) TRỪ KHI X, Y INDEPENDENT  X không i.i.d với chính nó X, mà nó EXTREMELY DEPENDENT với chính nó. Do đó bất cứ khi nào ta ÁP DỤNG CÔNG  THỨC NÀO ĐÓ MÀ CẦN CÁC RANDOM VARIABLE CÓ X1, X2 CÓ  TÍNH I.I.D VÀO X VÀ CHÍNH NÓ THÌ ĐỀU LÀ SAI  - CHỨNG MINH VAR X N(μ, σ) = σ^2  - Z = (X - μ) / σ và gs cho biết nó được gọi là STANDARDIZATION (chuẩn hóa)  Giúp từ NORMAL X ~ N(μ, σ) ta có STANDARD NORMAL Z ~ N(0,1)  - Xây dựng PDF của N(μ, σ^2) từ N(0, 1):  fX(x) = 1/(σ√2π) * [e^(-((x-μ)/σ)^2/2)]  - Nếu X ~ N(μ, σ^2) thì -X ~ N(-μ, σ^2  - Nếu X1 ~ N(μ1, σ1^2), X2 ~ N(μ2, σ2^2) và X1, X2 independent thì:  X1 + X2 ~ N(μ1 + μ2, σ1^2 + σ2^2)  X1 - X2 ~ N(μ1 - μ2, σ1^2 + σ2^2)  - 68-95-99.7 rule  - Chứng minh 0^k / k! + 1^k / k! + 2^k / k! + .... = e^k  ⇨ Tổng k=0,1...infinity λ^k/k! = e^λ  - Tìm variance của Poisson (λ) để chứng minh nó có MEAN VÀ VARIANCE ĐỀU LÀ λ  - Khi standardize, ví dụ đơn vị là km, thì (x - μ) / σ sẽ  (km - km) / km = km / km = 1 TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA  - X~Bin(n,p), Var(X) = npq (q = 1-p)  - Chứng minh LOTIS](_tóm_tắt_zsố_lẻ_ta_luôn_có_ezsố_lẻ_0_gọi_là_odd_moment_symmetry_còn_giúp_ta_kết_luận_nếu_z_n01_thì_z.md#node-455)
 
 > [!NOTE]
-> \**Theo định nghĩa expected value** ta có **E(x)** = **Sum x [x*P(X=x)].**
+> **Theo định nghĩa expected value** ta có **E(x)** = **Sum x [x*P(X=x)].**
 >
 > Thì cái này biết rồi, mang ý nghĩa là **weighted sum của các possible value**
 > của **X**, **với** weight là **xác suất của việc X có giá trị đó**
@@ -184,14 +184,14 @@
 > Thế thì nó cũng chính là, hoặc có thể **được thể hiện theo cách khác** là:   **Sum s [X(s) * P({s}]**
 >
 > với ý nghĩa là **weighted sum** của các **X(possible outcome s)** với weight là
-> \**xác suất của possible outcome s đó P({s})**
+> **xác suất của possible outcome s đó P({s})**
 >
 > X(possible outcome s) có ý nghĩa là giá trị real mà **(random variable) function
 > X map từ possible outcome s tới.**  Và hai cách thể hiện trên là như nhau,
 > chẳng quan một cái ở **dạng group**, một cái **không group** Nói E(x) = Sum x [x*P(X=x)] ở dạng group là vì trong hình vẽ thì X=1 sẽ là
 > subset chứa 2 possible outcome, giả sử gọi là s1,s2 Vậy thì P(X=1) sẽ bằng
 > tổng của  P({s1}) và P({s2}). Tất nhiên cả s1, s2 đều được map với label = 1 hay
-> \**X(s1) = X(s2) = 1**. Và thực ra **1*P(X=1)** chính là **X(s1)*P({s1}) + X(s2)*P({s2})**
+> **X(s1) = X(s2) = 1**. Và thực ra **1*P(X=1)** chính là **X(s1)*P({s1}) + X(s2)*P({s2})**
 
 <br>
 
@@ -275,9 +275,9 @@
 
 > [!NOTE]
 > Từ đó E(T) = Tổng s [T(s) * P({s})] = **Tổng s {[X(s) + Y(s)] * P({s})}** và dùng
-> \**distribution law** (nhân phân phối vào) để có:
+> **distribution law** (nhân phân phối vào) để có:
 >
-> \**E(T)** = **Tổng s [X(s) * P({s})** + **Tổng s [Y(s) * P({s})**
+> **E(T)** = **Tổng s [X(s) * P({s})** + **Tổng s [Y(s) * P({s})**
 
 <br>
 
@@ -288,7 +288,7 @@
 > [!NOTE]
 > Và như cách thể hiện Expected value thứ hai vừa nãy mới nói thì: 
 >
-> \**Tổng s [X(s) * P({s}) chính là E(X)**, **Tổng s [Y(s) * P({s}) chính là E(Y)**
+> **Tổng s [X(s) * P({s}) chính là E(X)**, **Tổng s [Y(s) * P({s}) chính là E(Y)**
 >
 > Vậy ta đã chứng minh xong **T =X+Y thì E(T) = E(X) + E(Y)**
 
@@ -352,7 +352,7 @@
 >
 > Và trong trường hợp này **F chính là c*X** vậy nên 
 >
-> \**Tổng s [c * X(s) * P({s})]  CHÍNH LÀ E(c*X)**
+> **Tổng s [c * X(s) * P({s})]  CHÍNH LÀ E(c*X)**
 >
 > Còn **vế trái** c * Tổng x [x * P(X=x)] **đương nhiên là c*E(X)**
 >
@@ -408,7 +408,7 @@
 >
 > Thì gs lấy một ví dụ cụ thể với r = 5, và **giả sử có chuỗi kết quả của các trials** như này. 
 >
-> \**1000100100001001**
+> **1000100100001001**
 >
 > Thì ở đây, ta đạt 5 success sau khi có n=11 failure.
 >
@@ -719,7 +719,7 @@
 > hơn cả hai số bên hông nó là 1/2 * 1/2 = 1/4.
 >
 > Gs chỉ ra cách **lập luận này sai** là vì, **hai event này không độc lập** (Vì
-> \**việc số  đứng giữa lớn hơn số bên trái**, **có thể cung cấp thông tin cho biết
+> **việc số  đứng giữa lớn hơn số bên trái**, **có thể cung cấp thông tin cho biết
 > khả năng nó  lớn hơn số bên phải**) nên không thể tính xác suất số giữa lớn
 > nhất bằng cách **nhân** chúng lại (**theo định nghĩa của independent event**)
 > được.

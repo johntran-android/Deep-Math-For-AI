@@ -31,13 +31,13 @@
 
 > [!NOTE]
 > Lí do của cái này xuất phát tử **nhược điểm của logistic regression**: đó là
-> \**nếu data có các class có tính chất "dễ dàng phân tách một cách rõ ràng"**
+> **nếu data có các class có tính chất "dễ dàng phân tách một cách rõ ràng"**
 > thì **parameters của mô hình logistic regression rất không ổn định** - có thể
 > hiểu là nó sẽ **mỗi lúc mỗi khác**, vì cách nào cũng có thể phân tách tốt được
 > cả.
 >
 > Và **nếu phân phối xác suất của x trong mỗi class là normal distribution** và
-> \**số lượng sample nhỏ** thì cái này **chính xác hơn lo.re**  Cuối cùng là nó **extend ra nhiều class hơn 2 một cách tự nhiên hơn là** như cách làm của
+> **số lượng sample nhỏ** thì cái này **chính xác hơn lo.re**  Cuối cùng là nó **extend ra nhiều class hơn 2 một cách tự nhiên hơn là** như cách làm của
 > multinomial logistic regression)
 
 <br>
@@ -117,7 +117,7 @@
 > p(quả cam|quả nặng 1kg) = p(quả nặng 1kg|quả cam)*p(quả cam) /
 > [p(quả nặng 1kg|quả cam)+p(quả nặng 1kg|quả dưa)]
 >
-> \**Vậy, nôm na cách làm của phương pháp này là:** 
+> **Vậy, nôm na cách làm của phương pháp này là:** 
 >
 > Ta có ước lượng của pi_1,2 - tức xác suất bắt được quả cam khơi
 > khơi và dưa hấu khơi khơi là bao nhiêu. Nếu "trên đời này" có cam
@@ -135,7 +135,7 @@
 >
 > Thì đó cũng chính là p_k(x) **posterior probability**: xác suất chọn dc
 > quả cam khi  đã biết nó có nặng bao nhiêu, đối nghịch với pi_k là
-> \**prior probability** - xác suất  chọn được quả cam khơi khơi
+> **prior probability** - xác suất  chọn được quả cam khơi khơi
 >
 > (*): thì mình, human sẽ thấy rằng cái quả 1 kí lô đó, công với việc dưa
 > hấu với cam đều phổ biến như nhau thì chắc chắn đây là dưa hấu.
@@ -214,7 +214,7 @@
 > k mà p_k(x) cao nhất, là Bayes classifier.
 >
 > triển khai ra để đơn giản hóa để có một biểu thức **theta_k(x) phụ thuộc** 
-> \**tuyến tính** vào X gọi là **discriminant function (*)** giúp dựa vào x mà assign 
+> **tuyến tính** vào X gọi là **discriminant function (*)** giúp dựa vào x mà assign 
 > class
 >
 > Cũng từ đó ta có thể có cái decisions boundary là nơi mà các p_k(x) bằng
@@ -302,7 +302,7 @@
 >
 > <=> x = 0.5*(mu_k1^2-mu_k2^2) / (mu_k1-mu_k2) 
 >
-> \**<=> x = (mu_k1+mu_k2)/2**
+> **<=> x = (mu_k1+mu_k2)/2**
 
 <br>
 
@@ -411,7 +411,7 @@
 > classifier assign vào class nào là dựa vào x thuộc vùng nào.
 >
 > Vậy thì với ví dụ này, với LDA, ta sẽ **thay các estimated mean**,
-> \**covariance  matrix**, **pi_k** vào công thức **discriminant function**
+> **covariance  matrix**, **pi_k** vào công thức **discriminant function**
 > để có theta_k^ (vì chỉ đang  ước lượng, nên có dấu mũ) và assign k
 > mà có theta_k^ lớn nhất cho nó.
 >
@@ -675,7 +675,7 @@
 > assign class k cho sample.
 >
 > Again nhắc lại LDA, QLD đều chỉ là ta dựa trên cái sườn của Bayes, nhưng
-> \**không xài TRUE POPULATION param (tại có biết đâu mà xài)** nên ta **chỉ
+> **không xài TRUE POPULATION param (tại có biết đâu mà xài)** nên ta **chỉ
 > ước lượng chúng thôi** - thì khi đó ta sẽ có cái Classifier - **Gán class k cho
 > sample khi theta_(k) (tính bởi mean_k, sigma k, pi k) là lớn nhất**
 >
@@ -708,7 +708,7 @@
 > Còn trong QDA, **con số này lớn hơn nhiều = Kp(p-1)**.
 >
 > Thì từ đó cho thấy, vì **QDA có nhiều parameters hơn**, nên nó có
-> \**capacity hay flexibility cao hơn** - như đã biết nó **gắn với tính high
+> **capacity hay flexibility cao hơn** - như đã biết nó **gắn với tính high
 > variance**.
 >
 > Còn **LDA gắn với tính high bias**. Thì như đã biết, có sự trade off giữa
@@ -720,7 +720,7 @@
 > Nếu trong một bài toán cụ thể nào đó mà **quy luật cần nắm bắt được đơn
 > giản**, ví dụ như **thực sự** các class k có probability distribution chỉ khác
 > mean, còn **variance thì giống nhau hết**, khi đó **xài LDA là đủ**, còn dùng
-> \**QDA thì bị " dư" sẽ dễ bị overfit**
+> **QDA thì bị " dư" sẽ dễ bị overfit**
 >
 > Ngược lại, trong một b**ài toán khác phức tạp hơn**, như **thật sự các class k
 > khác nhau ở variance luôn** thì lúc này phải **cần QDA mới đủ** để mô hình
@@ -756,7 +756,7 @@
 
 > [!NOTE]
 > Nếu nói một cách ngắn gọn cho câu hỏi khi nào thì xài LDA, QDA đó là,
-> \**nếu ta có ít dữ liệu, thì nên dùng LDA**, vì lúc này ta cần **tránh high
+> **nếu ta có ít dữ liệu, thì nên dùng LDA**, vì lúc này ta cần **tránh high
 > variance model**,  dùng một QLA có capacity / f**lexibility cao mà ít training
 > set dễ gây overfit**.
 >
@@ -777,7 +777,7 @@
 
 > [!NOTE]
 > Thì mở đầu đại ý là người ta nhắc lại rằng ở trong LDA, QDA ta đã dùng các
-> \**giá trị ước đoán** của pi_1,..pi_K - **prior probability** ví dụ p(y=' cam') - xác
+> **giá trị ước đoán** của pi_1,..pi_K - **prior probability** ví dụ p(y=' cam') - xác
 > suất một quả "được chọn khơi khơi" là cam hay táo,
 >
 > và f_1(x),..f_k(x) là **probability density function mô tả p(x=X|y=Y)** (ví dụ
@@ -822,7 +822,7 @@
 > việc estimate probability distribution p(X=x|Y=k) trong mỗi class nó khó ở
 > chỗ **không chỉ phải ước đoán distribution của từng variable x1, x2.. .
 > xp**, gọi là **marginal distribution** (thể hiện trong covariance matrix là
-> \**các giá trị trên đường chéo**)
+> **các giá trị trên đường chéo**)
 >
 > mà còn phải ước đoán **distribution của các tương tác / tương quan
 > giữa các variable với nhau**, gọi là **joint distribution** (thể hiện trong
@@ -835,7 +835,7 @@
 >
 > Thế thì cái này, nếu g**iả định thêm** là **normal distribution** thì chính là
 > ta có **covariance matrix sẽ có đặc điểm là matrix chéo (diagonal)**, các
-> \**vị trí ngoài đường chéo đều bằng 0** - thể hiện k**hông có sự tương
+> **vị trí ngoài đường chéo đều bằng 0** - thể hiện k**hông có sự tương
 > quan** (correlation) giữa các variable.
 
 <p align="center"><kbd><img src="assets/b59c056ee416ccd52b6e26d9fe2129b86713af91.png" width="100%"></kbd></p>
@@ -857,7 +857,7 @@
 > nhau**.
 >
 > Tuy nhiên nó cũng **giúp tạo ra một mô hình đơn giản** mà trong
-> \**một số trường hợp nó có performance rất tốt**. Nhất là khi số **training data so với số lượng predictor không lớn** đủ để **estimate
+> **một số trường hợp nó có performance rất tốt**. Nhất là khi số **training data so với số lượng predictor không lớn** đủ để **estimate
 > joint distribution** của các predictor trong mỗi class.
 >
 > Ở đây ý là nếu p lớn (so với n) thì không đủ dữ liệu để dùng LDA,
@@ -868,7 +868,7 @@
 >
 > Gs nhắc đến **trade off bias/variance** mà ta cũng hiểu ở trên đó là
 > thực tế có một nguyên tắc là **nếu ở trong giả định đúng** thì mô hình
-> \**dù có đơn giản vẫn có hiệu quả cao**, thì ở đây naive bayes đưa
+> **dù có đơn giản vẫn có hiệu quả cao**, thì ở đây naive bayes đưa
 > vào **assumption đơn giản hóa vấn đề** như vậy thì **vẫn có thể làm
 > tốt nếu rơi vào trường hợp assumptions đúng.**
 
@@ -880,13 +880,13 @@
 
 > [!NOTE]
 > Vậy với việc cho rằng các **variable Xj đều độc lập**, ta triển khai fk(X) thành ra là
-> \**fk1(x1)*fk2(x2)...fk(xp)**. Dựa trên kiến thức **product rule** xác suất là nếu các sự
+> **fk1(x1)*fk2(x2)...fk(xp)**. Dựa trên kiến thức **product rule** xác suất là nếu các sự
 > kiện A,B độc lập nhau thì xác suất joint AB cùng xảy ra sẽ là P(A)*P(B).
 >
 > Và rồi Pr(Y=k|X=x) trở thành:
 >
 > pi_k*fk1(x1)*fk2(x2)...fkp(xp) chia cho tổng l, l từ 1 tới K pi_l*fl1(x1)*fl2(x2)*. ..
-> \*flp(xp)
+> *flp(xp)
 >
 > Từ đó, để ra kết quả, ta chỉ phải estimate các density function fl1(x), fl2(x)...
 > flp(x) với l từ 1 tới K. Có thể thấy với mỗi class ta có p function (một function
@@ -957,7 +957,7 @@
 >
 > Cũng vẽ ra confusion matrix. Rồi họ nói cũng như LDA ta có thể **adjust
 > threshold**, cho thấy với **cùng threshold thì N.B có error rate** cao hơn nhưng
-> \**sensitivity cũng tốt hơn**.
+> **sensitivity cũng tốt hơn**.
 >
 > Thế thì mới nói một ý quan trọng đó là sở dĩ N.B không  hoàn vượt trội LDA hay
 > QDA ở bài toán này đại khái là vì:  **Naive Bayes là mang lại khả năng giảm

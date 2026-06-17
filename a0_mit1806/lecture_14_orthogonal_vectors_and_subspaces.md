@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > bài này gs sẽ nói về khái niệm hai
-> \**vector space** **orthogonal**
+> **vector space** **orthogonal**
 
 <br>
 
@@ -20,7 +20,7 @@
 > [!NOTE]
 > đầu tiên gs cho biết đại khái là đến giờ ta **đã biết 4
 > subspace quan trọng** này, với việc biết **basis** và
-> \**dimension** của chúng.
+> **dimension** của chúng.
 >
 > Nay ta sẽ học về việc **chúng orthogonal với nhau** là
 > sao, thể hiện qua hình ảnh này.
@@ -107,7 +107,7 @@
 > ta có **2xTy = 0**
 >
 > Và đây là mối liên hệ giữa **định lí pytagores** và việc
-> \**dot product của hai vector bằng 0**
+> **dot product của hai vector bằng 0**
 
 <br>
 
@@ -141,8 +141,8 @@
 
 > [!NOTE]
 > Thế thì đầu tiên gs đưa ra định nghĩa, hai subspace
-> \**orthogonal** khi **MỌI vector trong subspace** này
-> \**orthogonal với MỌI vector trong subspace kia**
+> **orthogonal** khi **MỌI vector trong subspace** này
+> **orthogonal với MỌI vector trong subspace kia**
 
 <br>
 
@@ -170,7 +170,7 @@
 
 > [!NOTE]
 > Tiếp gs đề nghị hãy **xét các orthogonal subspace** của
-> \**R2**
+> **R2**
 >
 > Ta có các case sau:
 >
@@ -179,7 +179,7 @@
 > line đều orthogonal với vector duy nhất trong zero vector
 > space (đương nhiên là vector zero) (Bởi dot product của
 > vector nào với zero vector đều bằng 0) Nên thỏa yêu cầu
-> \**orthogonal sub spaces**
+> **orthogonal sub spaces**
 >
 > ii) **hai line qua origin** (là hai subpace) mà **vuông góc nhau**.
 > Đương nhiên mọi vector trong line này cũng sẽ đều vuông
@@ -279,7 +279,7 @@
 > Rowspace và Nullspace khắc họa nên R^n**.
 >
 > Còn **Columns space và Left nullspace** khắc họa nên
-> \**R^m**
+> **R^m**
 
 <br>
 
@@ -326,12 +326,12 @@
 
 > [!NOTE]
 > gs: correct, ta có **rowspace là 1 line**: vector [1 2 5].T và
-> \**nullspace là một plane**.
+> **nullspace là một plane**.
 >
 > gs: **Plane nào?**
 >
 > me: Plane quy định bởi phương trình **1***x1 + **2***x2 +
-> \**5***x3 = 0 Đó chính là **phương trình đường mặt phẳng
+> **5***x3 = 0 Đó chính là **phương trình đường mặt phẳng
 > nullspace**: tập hợp tất cả các vector / đường thẳng vuông
 > góc với vector [1 2 5]
 >
@@ -339,7 +339,7 @@
 >
 > Và liên hệ với 18.02 ta biết <1, 2, 5> **chính là NORMAL
 > VECTOR** (vector pháp tuyến) của mặt phẳng, nó sẽ
-> \**vuông góc với mọi vector trong mặt phẳng**. Vậy từ đó
+> **vuông góc với mọi vector trong mặt phẳng**. Vậy từ đó
 > trong trường hợp này bức tranh về rowspace C(AT) và
 > nullspace N(A) rất rõ rằng, **C(AT) chính là line đi qua
 > normal vector** và  **N(A) chính là plane**. Và xác nhận lại
@@ -424,7 +424,7 @@
 
 > [!NOTE]
 > đúng vậy, nó **square**, và còn **đối xứng**. vì
-> \**(ATA)T cũng bằng ATA**
+> **(ATA)T cũng bằng ATA**
 
 <br>
 
@@ -558,7 +558,7 @@
 >
 > Từ đó giúp kết luận ATAx = 0 <=> Ax = 0, hai matrix ATA  và A
 > chung nullspace **N(ATA) = N(A)**. Vậy thì đương nhiên để
-> \**ATA fullrank/non-singular/invertible** thì **N(ATA) phải bằng
+> **ATA fullrank/non-singular/invertible** thì **N(ATA) phải bằng
 > {0}**, đồng nghĩa **N(A) cũng vậy**, mà điều này dễ thấy sẽ
 > tương đương với việc **A Full Column Rank khi đó dim C(A)
 > =  rank = n => dim N(A) = 0** 

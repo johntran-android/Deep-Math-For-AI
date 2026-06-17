@@ -10,7 +10,7 @@
 > [!NOTE]
 > 1. ****Computational Challenges** of Training Large Language Models:** The passage begins by acknowledging
 > the **challenges of training large language models**. To achieve **better performance**, t**wo options** are presented:
-> \**increasing the size of the training dataset** and **increasing the number of parameters** in the model.
+> **increasing the size of the training dataset** and **increasing the number of parameters** in the model.
 >
 > 2. ****Compute Budget Definitio**n:** The concept of a "**petaFLOP per second day**" is introduced as a **unit of
 > compute** that **quantifies the required resources** for training large language models.
@@ -23,9 +23,9 @@
 > performance**, **training dataset siz**e and **model** **performance**, and **model size** and **model performance**.
 >
 > 5. **Compute **Optimal Model - Chinchilla Paper**:** The Chinchilla paper, published in **2022**, explores the
-> \**performance of language models** of various **sizes** and **quantities** of training data. Chinchilla is the resulting
+> **performance of language models** of various **sizes** and **quantities** of training data. Chinchilla is the resulting
 > compute **optimal model**, showing that **many large models** like GPT-3 may be **overparameterized** and
-> \**undertrained**.
+> **undertrained**.
 >
 > 6. ****Optimal Training Dataset Size**:** The Chinchilla paper suggests that the **optimal training dataset size** for a
 > given model is about **20 times larger** than the **number of parameters in the model**.
@@ -34,7 +34,7 @@
 > models (e.g., GPT-3)** on a range of **downstream evaluation tasks**.
 >
 > 8. ****Smaller Models** with **Similar Performance**:** As a result of the Chinchilla paper, teams are developing
-> \**smaller models that achieve similar or better results than larger non-optimal models.**
+> **smaller models that achieve similar or better results than larger non-optimal models.**
 >
 > 9. ****Bloomberg GPT**:** Bloomberg GPT is an example of a **model trained in a compute optimal way following
 > the Chinchilla loss**, achieving **good performance with 50 billion parameters.**
@@ -58,7 +58,7 @@
 > tokens**. Two options you have to achieve better performance are **increasing the size of the
 > dataset** you train your model on and **increasing the number of parameters** in your model. In
 > theory, you could **scale either of both of these quantities to improve performance**. However,
-> \**another issue to take into consideration is your compute budget** which includes factors like
+> **another issue to take into consideration is your compute budget** which includes factors like
 > the **number of GPUs** you have access to and the **time you have available for training models**.
 
 > [!NOTE]
@@ -77,11 +77,11 @@
 > [!NOTE]
 > To help you **understand some of the discussion ahead**, let's first **define a unit of
 > compute** that **quantifies the required resources**. A **petaFLOP** **per second day** is a
-> \**measurement of the number of floating point operations** performed at a **rate of one
+> **measurement of the number of floating point operations** performed at a **rate of one
 > petaFLOP per second**, running for an **entire day**. Note, one petaFLOP corresponds to
-> \**one quadrillion floating point operations per second**. When specifically thinking about
+> **one quadrillion floating point operations per second**. When specifically thinking about
 > training Transformers, **one petaFLOP / second day** is approximately equivalent to
-> \**8 NVIDIA V100 GPUs**, operating at **full efficiency for one full day.** If you have a
+> **8 NVIDIA V100 GPUs**, operating at **full efficiency for one full day.** If you have a
 > more powerful processor that can carry out more operations at once, then a
 > petaFLOP per second day requires fewer chips. For example, two NVIDIA A100 GPUs
 > give equivalent compute to the eight V100 chips.
@@ -102,7 +102,7 @@
 
 > [!NOTE]
 > To give you an idea off the scale of these compute budgets, this chart shows a
-> \**comparison off the petaFLOP per second days** required to pre-train **different variance
+> **comparison off the petaFLOP per second days** required to pre-train **different variance
 > of Bert and Roberta**, which are both **encoder only models**. **T5** and **encoder-decoder
 > model** and **GPT-3**, which is a **decoder only** model. The difference between the models
 > in each family is the **number of parameters** that were trained, ranging from a few
@@ -128,12 +128,12 @@
 > [!NOTE]
 > It turns out that they are actually w**ell-defined relationships** between these **three scaling
 > choices**. Researchers have explored the **trade-offs between training dataset size**,
-> \**model size** and **compute budget**. Here's a figure from a paper by researchers at OpenAI
+> **model size** and **compute budget**. Here's a figure from a paper by researchers at OpenAI
 > that explores the **impact of compute budget** on model performance. The y-axis is the **test
 > loss,** which you can consider as **a proxy for model performance** where smaller values are
 > better. The x-axis is the **compute budget** in **units of petaFLOP per second days**. As you
 > just saw, larger numbers can be achieved by either **using more compute power** or
-> \**training for longer** or **both**. Each **thin blue line** here shows the **model loss over a
+> **training for longer** or **both**. Each **thin blue line** here shows the **model loss over a
 > single training run**. Looking at **where the loss starts to decline more slowly** for each run,
 > reveals a **clear relationship between the compute budget and the model's performance**.
 
@@ -176,7 +176,7 @@
 > [!NOTE]
 > Đại khái là trong thực tế **compute budget sẽ bị giới hạn** bởi các yếu tố như **hardware,
 > project lifetime** hay **financial budget**. Nhưng nghiên cứu của OpenAI cũng cho thấy
-> \**nếu hai cái yếu tố còn lại** (trong 3 yếu tố là compute budget, dataset size và model
+> **nếu hai cái yếu tố còn lại** (trong 3 yếu tố là compute budget, dataset size và model
 > size) **được giữ fixed**, thì t**ăng yếu tố nào cũng sẽ cải thiện test loss theo power-law.**
 
 > [!NOTE]

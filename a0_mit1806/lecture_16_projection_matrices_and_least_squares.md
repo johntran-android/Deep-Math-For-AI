@@ -124,7 +124,7 @@
 > subspace vuông góc với cái subspace đầu tiên**
 >
 > Và I - P cũng thỏa các tính chất của projection matrix:
-> \**(I-P)T = I-P** , (**I-P)**2 = I-P**
+> **(I-P)T = I-P** , (**I-P)**2 = I-P**
 
 <br>
 
@@ -145,7 +145,7 @@
 > trong cols space**, dẫn đến không thể solve được.
 >
 > Nhưng ta sẽ **cố gắng làm tốt nhất có thể**, bằng cách
-> \**project b lên colums space của A**, mang ý nghĩa là **tìm
+> **project b lên colums space của A**, mang ý nghĩa là **tìm
 > điểm p nằm trong C(A) sao cho nó gần nhất với b**.
 >
 > Để rồi ta **tìm solution của bài toán Ax^ = p** (vốn lúc này đã
@@ -186,7 +186,7 @@
 >
 > Một là, error là **các sai sót khi ta dùng best solution** -
 > least square lin, tức **là phần "sai khác" giữa nó (Ax)** và
-> \**giá trị b** thực tế. Ta sẽ định nghĩa error là **tổng bình
+> **giá trị b** thực tế. Ta sẽ định nghĩa error là **tổng bình
 > phương các error**
 
 <br>
@@ -229,7 +229,7 @@
 
 > [!NOTE]
 > Thế thì gs cho rằng trong picture thứ nhất này, ta có thể
-> \**gọi p1, p2, p3 là các điểm trên line**.
+> **gọi p1, p2, p3 là các điểm trên line**.
 >
 > Và **khoảng cách từ p1 đến b1** là **error 1 (e1)**, tương
 > tự ta có e2, e3
@@ -246,7 +246,7 @@
 > Gs: Nó là **3 điểm nằm trên line**, phải không.
 >
 > Và hãy nhìn **matrix này**, **bên phải** của 3 equation, ta có
-> \**b1, b2, b3**
+> **b1, b2, b3**
 >
 > Và chính **vì b có giá trị như vậy**, nên nó tạo ra **3 ĐIỂM
 > KHÔNG NẰM TRÊN ĐƯỜNG THẲNG**. NÊN TA KHÔNG
@@ -337,8 +337,8 @@
 
 > [!NOTE]
 > Gs nhắc lại bài trước ta đã nhận định **ATA** có tính chất
-> \**symmetric**, và ông **kì vọng nó invertible** cũng như là
-> \**positive definite** (cái này sẽ học trong tương lai)
+> **symmetric**, và ông **kì vọng nó invertible** cũng như là
+> **positive definite** (cái này sẽ học trong tương lai)
 >
 > Gs chưa nói vì sao ATA invertible (có lẽ ông thấy hai cols
 > của nó independent, vì bài trước ta đã chứng minh nếu
@@ -371,7 +371,7 @@
 > [!NOTE]
 > Tiếp gs cho rằng tôi có thể dùng **Calculus** để **giải tìm C,
 > D bằng cách tính derivative của error function w.r.t C** và
-> \**cho nó bằng 0**, và tính derivative của error function w.r.t
+> **cho nó bằng 0**, và tính derivative của error function w.r.t
 > D và cho nó bằng 0
 >
 > Để rồi ta sẽ có hai phương trình giúp giải C, D
@@ -392,13 +392,13 @@
 > PHƯƠNG TRÌNH TA CÓ Ở ĐÂY. CÓ NGHĨA LÀ GS LIÊN
 > KẾT HAI THỨ:
 >
-> \**C, D KHIẾN MEAN SQUARE ERROR NHỎ NHẤT** CŨNG
-> \**CHÍNH LÀ** C, D **GIÚP COMBINE COLS CỦA A ĐỂ CHO
+> **C, D KHIẾN MEAN SQUARE ERROR NHỎ NHẤT** CŨNG
+> **CHÍNH LÀ** C, D **GIÚP COMBINE COLS CỦA A ĐỂ CHO
 > RA P** - VỐN LÀ **HÌNH CHIẾU CỦA b LÊN COLS SPACE
 > C(A)**
 >
 > Hay BẰNG VIỆC **PROJECT B LÊN C(A) ĐỂ CÓ p** VÀ
-> \**GIẢI HỆ PHƯƠNG TRÌNH THAY THẾ Ax^ = p** thì solution
+> **GIẢI HỆ PHƯƠNG TRÌNH THAY THẾ Ax^ = p** thì solution
 > chính là **best solution** - là hệ số của đường thẳng đi qua **gần nhất** với các điểm b (giúp giảm tối thiểu square error)
 
 <br>
@@ -463,8 +463,8 @@
 > gs: có 2 picture bạn đã thấy, một cái **cho ta thấy các
 > vector** một cái **cho ta thấy best line**.
 >
-> \**C, D không show up trong vector picture**, mà nó là
-> \**coefficient giúp combine hai cols của A để cho ra
+> **C, D không show up trong vector picture**, mà nó là
+> **coefficient giúp combine hai cols của A để cho ra
 > vector p**.
 
 <br>
@@ -590,7 +590,7 @@
 >
 > Và điều này như nãy đã nói, **sẽ suy ra các cols của ATA
 > độc lập**, và nó lại là **square matrix** nên suy ra nó
-> \**full rank -> invertible**
+> **full rank -> invertible**
 
 <br>
 
@@ -637,7 +637,7 @@
 
 > [!NOTE]
 > Và gs mào đầu cho bài sau, đó là ta đang nói đến việc
-> \**nếu matrix A có các cols độc lập** thì **ATA chắc chắn
+> **nếu matrix A có các cols độc lập** thì **ATA chắc chắn
 > invertible**. Thế thì không gì **ĐẢM BẢO CÁC COLS ĐỘC
 > LẬP NHAU** tốt hơn bằng việc **CHÚNG**
 > P**ERPENDICULAR NHAU**
@@ -681,7 +681,7 @@
 
 > [!NOTE]
 > Một ví dụ khác khi 2
-> \**vector unit và vuông góc**
+> **vector unit và vuông góc**
 
 <br>
 

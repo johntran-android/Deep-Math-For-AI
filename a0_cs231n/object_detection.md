@@ -92,7 +92,7 @@
 > [!NOTE]
 > ý tưởng của Region Proposal đại khái là ta có thể **process cái image** để
 > rồi (dựa trên thuật toán) **xác định được một đường viền đóng kín** từ đó
-> \**đề xuất một bounding box**. Để rồi ta sẽ **có khoảng 1000-2000 box**, để
+> **đề xuất một bounding box**. Để rồi ta sẽ **có khoảng 1000-2000 box**, để
 > mà **check những bounding box này bởi một classification + localization
 > cnn** để **xem có phải là có object hay ko** (thay vì với sliding window thì
 > như đoán mò)
@@ -115,7 +115,7 @@
 > [!NOTE]
 > đó chính xác là cơ chế của **R-CNN (Region-based CNN)** Trong đó đầu
 > tiên **cái hình được xử lý qua một thuật toán Region Proposal** để
-> \**propose ra những box tiềm năng**
+> **propose ra những box tiềm năng**
 >
 > Sau đó, chúng sẽ **được thay đổi kích thước** để phù hợp với input size
 > mà classification & localization cnn yêu cầu.
@@ -363,7 +363,7 @@
 > vì raw images
 >
 > Tiếp, chỗ này khác với cs231n trong đó proposed region sẽ pass qua một
-> \**ROI Pooling** rồi **FCs** để ra class **scores** và **bbox regressor** (tức
+> **ROI Pooling** rồi **FCs** để ra class **scores** và **bbox regressor** (tức
 > là ra luôn predicted location của bbox)
 >
 > Thì ở đây ta sau khi qua **ROI Pooling** thì sẽ đến các **"tiny lightweight per
@@ -413,7 +413,7 @@
 > network**.
 >
 > Vậy vì ta cần gradient backward về cả backbone CNN nên ta muốn khúc này
-> \**differentiable**.
+> **differentiable**.
 
 <br>
 
@@ -662,7 +662,7 @@
 > Đây cũng là câu hỏi của 1 người học target class của region lấy ở đâu, thì
 > chính là lúc ta xác định xem nó (một propose region) overlap với cái g.t box
 > nào để gán nó là positive thì cũng sẽ cho biết target class của nó sẽ là gì. Vậy
-> \**trước khi ta bắt đầu training, ta sẽ run training set qua region proposal để có
+> **trước khi ta bắt đầu training, ta sẽ run training set qua region proposal để có
 > các regions, rồi làm cái bước classify thành positive / negative / neutral và
 > chuẩn bị các target các kiểu. Justin nói rằng ta sẽ run offline quá trình này
 > trước khi training.** Nhưng đó là với (Slow) R-CNN, nơi ta chỉ dùng fixed region proposal
@@ -710,7 +710,7 @@
 
 > [!NOTE]
 > rồi, nói qua việc training cái Faster R-CNN, mà ta biết thay đổi chính là
-> \**train cái RPN để predict ra propose region** thay vì dùng thuật toán
+> **train cái RPN để predict ra propose region** thay vì dùng thuật toán
 > fixed như **Selective Search**.
 >
 > Vậy đầu tiên, Justin cho rằng ta có thể hình dung cái này nó giống như
@@ -984,13 +984,13 @@
 > nó, kéo dãn, ép" nó phải khớp với grid cell trên feature map**
 >
 > Từ đó đương nhiên **dẫn đến vấn đề đó là proposed region trên feature map**
-> \**không hoàn toàn align với proposed region (đã làm trên raw image)**.
+> **không hoàn toàn align với proposed region (đã làm trên raw image)**.
 >
 > Vậy thì **tạm gác lại cái vấn đề này** (vì ta sẽ khắc phục nó bằng cái **RoI Align**)
 > để nói tiếp về **cách thực hiện IoR pooling**:
 >
 > Thì đầu tiên, ta sẽ **chia proposed region thành các subregion**, ví dụ 2x2 để
-> \**thực hiện max pooling**, đương nhiên sẽ có những vùng không khớp để rồi nó
+> **thực hiện max pooling**, đương nhiên sẽ có những vùng không khớp để rồi nó
 > thành 3x2 chẳng hạn nhưng ko sao. Tiếp, **apply max pooling trên những
 > subregion đó** để mỗi vùng 2x2x512 (512 là depth) sẽ **trở thành 1x1x512** tức là
 > một 'depth' vector như đã biết.
@@ -1019,7 +1019,7 @@
 > [!NOTE]
 > Bài trước ta đã biết "cách làm" sẽ là mình sẽ dùng region proposed kết
 > quả của việc **dùng thuật toán region proposal** như **selective search** apply
-> \**trên raw image**. Sau đó ta sẽ **PROJECT** **nó lên feature map** output từ
+> **trên raw image**. Sau đó ta sẽ **PROJECT** **nó lên feature map** output từ
 > CNN.
 >
 > Sau đó, trong bước gọi là **RoI pool**, ta mới chia các "projected
@@ -1048,8 +1048,8 @@
 > không khớp**.
 >
 > Người ta đã minh họa trong slide, cái **khung màu xanh lá** kiểu như là cái
-> \**region propose mà thuật toán vẽ ra trên raw image**. Sau đó ta mới
-> \**project "lên" feature map** được cái "màu xanh lá trên feature map" thì đại
+> **region propose mà thuật toán vẽ ra trên raw image**. Sau đó ta mới
+> **project "lên" feature map** được cái "màu xanh lá trên feature map" thì đại
 > khái là **có thể thấy nó không khớp với grid cell**.(Có thể hiểu điều này, hình
 > dung grid cell trên raw image là 1 pixel, còn feature map thì nhỏ hơn raw
 > image nên chiếu cái region xuống nó sẽ ko khớp hoàn toàn với grid cell của
@@ -1057,15 +1057,15 @@
 >
 > Vậy nên phải **snap**, **để cho nó khớp**, thành ra **cái khung xanh dương
 > ở trên feature map**. Thì rõ ràng là **nó bị lệch xong với khung xanh lá**, nên
-> \**phóng chiếu khung xanh dương của feature map lên lại hình gốc thì cái
+> **phóng chiếu khung xanh dương của feature map lên lại hình gốc thì cái
 > region xanh dương sẽ không trùng với region xanh lục của image gốc**.
 >
 > ====
 >
-> \**Vấn đề thứ hai** đại khái là **nếu ta coi bước này như một function** nhận
-> \**input** là **feature map**, và **box coordinate** (được project từ region
+> **Vấn đề thứ hai** đại khái là **nếu ta coi bước này như một function** nhận
+> **input** là **feature map**, và **box coordinate** (được project từ region
 > proposed từ raw image) để có được "region feature" thì quá trình
-> \**backprop** ta **chỉ có thể tính gradient của image feature** chứ **ko thể tính
+> **backprop** ta **chỉ có thể tính gradient của image feature** chứ **ko thể tính
 > gradient của box coordinate** được.
 >
 > Thành ra cách khắc phục là **dùng RoI aligned** mà lecture trước ko có thời
@@ -1189,7 +1189,7 @@
 > object detector mà ta không phải dựa trên anchor box** hay không.
 >
 > Thì có một cách làm rất hay xuất phát từ chính đại học Michigan đó là
-> \**CornerNet**. Ý tưởng là, ta sẽ **train một mô hình trong đó một nhánh
+> **CornerNet**. Ý tưởng là, ta sẽ **train một mô hình trong đó một nhánh
 > nó sẽ dự đoán xác suất một vị trí trên feature map** **là một upper-left
 > corner** của một b. box. và **một nhánh khác dự đoán xác suất một vị trí
 > trên feature map là một lower-right corner**. Và việc train sẽ dựa vào

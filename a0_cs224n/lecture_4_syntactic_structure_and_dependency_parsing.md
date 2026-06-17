@@ -21,11 +21,11 @@
 > parsing**.
 >
 > 2. **Concepts of **Syntactic Structure****: The lecturer introduces the concepts of **constituency** and
-> \**dependency** in **syntactic structure** and explains their **relevance** in understanding **linguistic patterns**.
+> **dependency** in **syntactic structure** and explains their **relevance** in understanding **linguistic patterns**.
 >
 > 3. ****Dependency Grammars** and **Treebanks****: The discussion progresses to delve deeper into
-> \**dependency structure**, introducing **dependency grammars** and **dependency treebanks** as tools for
-> \**analyzing language structure**.
+> **dependency structure**, introducing **dependency grammars** and **dependency treebanks** as tools for
+> **analyzing language structure**.
 >
 > 4. ****Transition-Based Dependency Parsing****: Transition-based dependency parsing is introduced as a
 > method for building natural language processing systems, focusing on the process of **transitioning**
@@ -40,7 +40,7 @@
 >
 > 7. **Structuring Sentences and Meaning**: The second part of the lecture shifts towards discussing **how
 > sentences are structured to convey meaning in human language**. Concepts such as **part of speech** and
-> \**phrases** are introduced as **fundamental units of linguistic structure**.
+> **phrases** are introduced as **fundamental units of linguistic structure**.
 >
 > 8. ****Context-Free Grammars****: The lecture introduces c**ontext-free grammars** as a common approach to
 > understanding **larger units of meaning in languages**, such as **phrases**, and explains how **phrases can be
@@ -48,10 +48,10 @@
 >
 > Overall, the lecture provides a **comprehensive overview** of the **fundamental concepts** and practical
 > applications of linguistics and natural language processing, emphasizing the importance of understanding
-> \**syntactic structure** and meaning in language analysis.
+> **syntactic structure** and meaning in language analysis.
 
 > [!NOTE]
-> \**syntactic**: cú pháp
+> **syntactic**: cú pháp
 >
 > The term "syntactic" pertains to **syntax**, which is a **branch of linguistics**
 > concerned with the **structure**, **arrangement**, and **order of words** within
@@ -71,14 +71,14 @@
 > models for natural language understanding and generation.
 
 > [!NOTE]
-> \**Dependency parsing** is a technique used in natural language processing (NLP) to **analyze the
+> **Dependency parsing** is a technique used in natural language processing (NLP) to **analyze the
 > grammatical structure of sentences**. It involves **identifying the relationships** **between words** in a
 > sentence and **representing these relationships** as a **directed graph**, where the **word**s are **nodes** and
 > the **dependencies between them are edges**.
 >
 > In **dependency parsing**, each word in a sentence is assigned a **grammatical label** (such as subject,
 > object, modifier, etc.) **based on its relationship to other words** in the sentence. These relationships are
-> \**typically hierarchical**, with s**ome words serving as dependents of others.**
+> **typically hierarchical**, with s**ome words serving as dependents of others.**
 >
 > The **main goal of dependency parsing** is to **uncover the syntactic structure of sentences** by identifying
 > the **head words** (governing words) and t**heir dependents**. For example, in the sentence "**The cat sits
@@ -96,11 +96,11 @@
 > language. These grammars serve as the basis for many NLP applications.
 >
 > 3. ****Semantic Role Labeling****: Dependency parsing can assist in **identifying the semantic roles** of
-> \**words in a sentence**, such as agent, patient, theme, etc., which is useful for tasks like question
+> **words in a sentence**, such as agent, patient, theme, etc., which is useful for tasks like question
 > answering and sentiment analysis.
 >
 > 4. ****Dependency-based Parsing Algorithms****: Dependency parsing algorithms, such as
-> \**transition-based** and **graph-based parsers**, are used to parse sentences and extract syntactic
+> **transition-based** and **graph-based parsers**, are used to parse sentences and extract syntactic
 > dependencies automatically from text data.
 >
 > Overall, **dependency parsing** is a **fundamental technique in NLP** for analyzing the **syntactic structure of
@@ -124,7 +124,7 @@
 > predicate (attribute) of the sentence.
 >
 > 3. ****Prepositional Phrase (PP)****: "on the mat" is a **prepositional phrase**, where "on" is the
-> \**preposition** and "the mat" is a **noun phrase**. This constituent provides **additional information
+> **preposition** and "the mat" is a **noun phrase**. This constituent provides **additional information
 > about the verb "sits."**
 >
 > The concept of constituency is **fundamental** in **syntactic** **analysis** because it helps linguists
@@ -199,7 +199,7 @@
 > đại ý là ngôn ngữ con người có thể truyền đạt những t**hông tin rất phức tạp,**
 > và để làm được như vậy thì **cần phải có nhiều chứ không thể chỉ dùng một
 > hay vài từ.** Lấy ví dụ để thể hiện sự đồng cảm thì không thể chỉ nói "
-> \**empathy**" được.
+> **empathy**" được.
 >
 > Do đó phải **compose** **nhiều từ** thành một câu dài chứa ý nghĩa phức tạp.
 > Tuy nhiên n**gười nghe chỉ nhận một chuỗi các từ đơn lẻ** khi nghe, và bằng
@@ -219,9 +219,9 @@
 > [!NOTE]
 > Đại ý là có hai comment: 
 >
-> \**Não người rất giỏi** trong việc quyết định xem n**ên dùng cấu trúc nào
+> **Não người rất giỏi** trong việc quyết định xem n**ên dùng cấu trúc nào
 > (kiểu như cách giải thích nào)** khi gặp trường hợp ambiguity như thế này
-> \**dựa vào hoàn cảnh, bối cảnh hiện t**ại
+> **dựa vào hoàn cảnh, bối cảnh hiện t**ại
 >
 > Và **các ngôn ngữ khác**, như Chinese sẽ **không có kiểu ambiguity như này**,
 > vì **cấu trúc của nó khác,** nhưng nó cũng s**ẽ có những trường hợp khác 
@@ -351,11 +351,11 @@
 > đại khái là nói về **cách thu thập dữ liệu** phục vụ cho bài toán này đó là
 > thường là **các nhà ngôn ngữ học** tập trung lại để ngồi **vẽ ra các
 > dependency analysis** như này và tạo thành một tập hợp gọi là "
-> \**tree-bank"** 
+> **tree-bank"** 
 >
 > Nói thêm là lúc đầu (khi chưa có ML), người ta tiếp cận theo hướng là
-> \**build parser,** tức là **hand-write các cấu trúc ngữ pháp**, define
-> \**lexicon**, **part-of-speech**....Và cách tiếp cận này **có vẻ đúng** vì rõ
+> **build parser,** tức là **hand-write các cấu trúc ngữ pháp**, define
+> **lexicon**, **part-of-speech**....Và cách tiếp cận này **có vẻ đúng** vì rõ
 > ràng có những **quy tắc chung chi phối các quy luật** của việc sắp xếp các
 > từ sao cho đúng. Nhưng với ML thì tương tự như các vấn đề khác, cho
 > thấy việc c**huẩn bị bộ annotated data và dùng ML để "tự học" các rule
@@ -398,7 +398,7 @@
 
 > [!NOTE]
 > Đại khái là sẽ có những trường hợp phải dùng
-> \**non-projective structure** thì mới phân tích đúng
+> **non-projective structure** thì mới phân tích đúng
 
 <br>
 
@@ -473,7 +473,7 @@
 > Đại ý là **liệt kê ra hết tất cả các hiện trạng của configuration** này
 > như:
 >
-> \**- Trong stack có những từ gì, ví dụ trong hình là 2 từ:** s1, s2 (s viết
+> **- Trong stack có những từ gì, ví dụ trong hình là 2 từ:** s1, s2 (s viết
 > tắt của stack, ý chỉ hai từ trong stack) đang là 'good', 'has'.
 >
 > \- POS của chúng ('good' là JJ và 'has' là VBZ),
@@ -487,7 +487,7 @@
 > \- POS của chúng ra sao. ('He' là Pronoun)
 >
 > Từ đó **lấy word embedding của chúng** và **concatenate lại hết để tạo** 
-> \**"configuration" embedding** **represent cho cấu hình hiện tại.**
+> **"configuration" embedding** **represent cho cấu hình hiện tại.**
 
 <br>
 
@@ -602,7 +602,7 @@
 
 > [!NOTE]
 > Đại ý là một số chú ý của giáo sư khi làm assignment đó là nhớ  dùng
-> \**regularization** (ví dụ như L2 regularization). Nhắc lại khái niệm overfit khi
+> **regularization** (ví dụ như L2 regularization). Nhắc lại khái niệm overfit khi
 > model predict chính xác trên training example nhưng không generalize tốt
 > trên new / test example.
 >
@@ -625,7 +625,7 @@
 > Và khi test, scale model weight 50%.
 >
 > Cách này ở đây gs cho biết giúp **ngăn hiện tượng feature co-adaptation**:
-> \**Là khi feature hữu ích chỉ khi có tồn tại feature khác**. 
+> **Là khi feature hữu ích chỉ khi có tồn tại feature khác**. 
 >
 > Có thể hiểu theo ý là như một model **bagging** - **train một đám các neural net
 > và dùng nó theo cách ensemble model.**
@@ -660,7 +660,7 @@
 > hiệu quả**. **Độ dốc liên tục của nó ở bên phải giúp model learn nhanh
 > hơn** và trở nên là **default function** phải thử khi build neural net.
 >
-> \**Sigmoid vẫn xài khi cần probability output** và **tanh thì dùng trong RNN** 
+> **Sigmoid vẫn xài khi cần probability output** và **tanh thì dùng trong RNN** 
 > Có **nhiều phiên bản của ReLU** nhưng **chưa cái nào thật sự chứng minh
 > được là tốt hơn hẳn nên người ta vẫn xài ReLU**
 
@@ -672,7 +672,7 @@
 
 > [!NOTE]
 > Đại ý là phải **initialize weight small value** chứ không zero để có thể
-> \**symmetry breaking**. (trong DLSpec có nói về vấn đề này đó là gradient sẽ
+> **symmetry breaking**. (trong DLSpec có nói về vấn đề này đó là gradient sẽ
 > bằng 0 vì trong công thức tính gradient có tính các W, và qua cs231n đã).
 > quá hiểu chuyện này)
 >
@@ -693,7 +693,7 @@
 >
 > Tuy nhiên **có nhiều  thuật toán tối ưu như Adagradm SMSprop, ...
 > được phát triển để improve điều này** và sự lựa chọn an toàn và
-> \**thường là tốt nhất chính là Adam**.  Trong **pytorch** hay tensorflow
+> **thường là tốt nhất chính là Adam**.  Trong **pytorch** hay tensorflow
 > thì chỉ việc khai báo **optimizer = 'Adam'**  là đủ
 
 <br>
@@ -721,7 +721,7 @@
 > \- Hoặc nhiều **phương pháp cầu kì hơn**.
 >
 > Gs cho biết với các **fancier optimizer (Adam, RMSProp)** thì nên 
-> \**bắt đầu với lr lớn hơn là nếu dùng SGD**
+> **bắt đầu với lr lớn hơn là nếu dùng SGD**
 
 <br>
 
@@ -731,7 +731,7 @@
 
 > [!NOTE]
 > giáo sư nói lướt qua một số phương pháp để **dependency parsing**, như
-> \**Dynamic programming** với cách thực hiện khéo léo có thể tạo ra thuật
+> **Dynamic programming** với cách thực hiện khéo léo có thể tạo ra thuật
 > toán có O(n**3) thay vi exponentially nếu ko dùng dynamic programming, 
 > nhưng sẽ tập trung vào #4 - **Transition-based parsing**
 
@@ -758,7 +758,7 @@
 > rỗng**. 
 >
 > Thì bước 1 là **bỏ 'I' + 'ate' (2 từ đầu tiên trong beta) vào sigma** để rồi thực hiện
-> \**phân tích xem từ nào dependent vào từ nào**. Đây là hành động **Shift**.
+> **phân tích xem từ nào dependent vào từ nào**. Đây là hành động **Shift**.
 >
 > Kết qủa thấy **'I' dependent vào 'ate'** vì 'ăn' là từ chính trong hoàn cảnh này: 
 >
@@ -770,7 +770,7 @@
 > Nếu tạo dependency (I -> ate) thì nó là **right-arc reduce**.
 >
 > Tiếp theo **lại bỏ từ ở đầu beta vào**, tức là thêm '**fish**' vào stack để có **ROOT**, **ate**
-> \**fish**. Phân tích dependency của ate và fish cho thấy **fish bổ nghĩa vị ngữ (objective)
+> **fish**. Phân tích dependency của ate và fish cho thấy **fish bổ nghĩa vị ngữ (objective)
 > cho ate**. Tạo dependency **"obj(ate -> fish)"** vào A và **bỏ fish ra**. Lúc này beta đã trống,
 > tạo **Dependency [ROOT] -> ate** vào A và **kết thúc.**
 
@@ -845,7 +845,7 @@
 > [!NOTE]
 > kiểu như là có thể **so sánh kết quả của parsed** (bởi ml model) và **annotated 
 > result (bởi human)** Theo kiểu (Unlabeled Accuracy Score) - UAS, ví dụ ở đây
-> \**đúng 4/5 trường hợp.**
+> **đúng 4/5 trường hợp.**
 >
 > Còn kiểu Labeled thì **có quan tâm đến chính xác head-dependent word**
 > thì tính ra 2/5. Sai ở cái 3-4 (parsed) và 3-5 (Gold)

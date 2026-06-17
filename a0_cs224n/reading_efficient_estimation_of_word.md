@@ -49,11 +49,11 @@
 > today, it is possible to train N-grams on virtually all available data (trillions of words [3]).
 >
 > However, the simple techniques are at their **limits** in many tasks. For example, the
-> \**amount of relevant in-domain data** for automatic speech recognition is **limited** - the
+> **amount of relevant in-domain data** for automatic speech recognition is **limited** - the
 > performance is usually **dominated by the size of high quality transcribed speech data**
 > (often just millions of words). In machine translation, the existing corpora for many
 > languages **contain only a few billions of words** or less. Thus, there are situations where
-> \**simple scaling up of the basic techniques will not result in any significant progress**, and
+> **simple scaling up of the basic techniques will not result in any significant progress**, and
 > we have to focus on more advanced techniques.
 >
 > With **progress of machine learning techniques** in recent years, it has become **possible to
@@ -101,7 +101,7 @@
 > chiều của véctơ biểu hiện khái niệm giới tính.
 >
 > Cuối cùng là nói về thời gian và độ chính xác của quá trình huấn luyện
-> \**tùy thuộc vào số chiều của word embedding vector**
+> **tùy thuộc vào số chiều của word embedding vector**
 
 <br>
 

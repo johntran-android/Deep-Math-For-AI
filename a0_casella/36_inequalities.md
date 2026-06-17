@@ -224,7 +224,7 @@
 >
 > = ∫a:b [1/Γ(α-1)β^(α-1)] x^(α-2) e^(-x/β) dx
 >
-> \**Ỏ trong tích phân (kernel) chính là pdf của Γ(α-1, β) nên tích phân này
+> **Ỏ trong tích phân (kernel) chính là pdf của Γ(α-1, β) nên tích phân này
 > chính là P(α < X_α-1, β < β)** Vậy cuối cùng ta có:
 >
 > β [f(a | α, β) - f(b | α, β)] + P(α < X_α-1, β < β)

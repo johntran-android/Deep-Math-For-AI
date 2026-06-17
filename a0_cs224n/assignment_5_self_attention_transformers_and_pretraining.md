@@ -62,7 +62,7 @@
 > categorical probability distribution bởi vì đầu tiên, **attention scores** được
 > tính bởi **dot product** của **query vector** của từ đang xét với **mọi key
 > vector của các từ khác** (kể cả nó). Thì kết quả lớn bé thế nào đã thể hiện
-> \**mức độ tương thích, tương đồng của các từ với từ đang xét**. Sau đó với
+> **mức độ tương thích, tương đồng của các từ với từ đang xét**. Sau đó với
 > việc **apply hàm softmax**, các **unnormalized scores này được đưa về
 > range [0-1]** và **tổng bằng 1.**
 >

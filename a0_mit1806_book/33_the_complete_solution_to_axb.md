@@ -59,13 +59,13 @@
 > Vì mọi cols đều là pivot cols, nên CHÚNG INDEPENDENT NHAU, vì về bản chất
 > các vị trí pivot đã thể hiện điều đó, đối ứng với pivot của cols này, là 0 của cols kia,
 > nên không thể scale hay combine các cols đó để tạo cols này được. Mà như vậy
-> \**bộ hệ số duy nhất khiến combination của chúng bằng 0 (x của nullspace)** **chỉ
+> **bộ hệ số duy nhất khiến combination của chúng bằng 0 (x của nullspace)** **chỉ
 > có thể là 0 (*)**. -> đó chính là kết luận nullspace chỉ có zero.
 >
 > (*) Ta có thể dễ dàng chứng minh ý này bằng **PHẢN CHỨNG** : Giả sử có một bộ
 > coeff (đều khác 0) khiến linear  combination các cols (independent nhau) mà vẫn
 > cho ra 0 thì ta sẽ suy ra ngay bằng cách **chuyển vế đổi dấu** để cho ra kết quả là
-> \**một cols nào đó sẽ là linear  combination của các cols còn lại**, mà điều này **ngược với điều kiện ban đầu** 
+> **một cols nào đó sẽ là linear  combination của các cols còn lại**, mà điều này **ngược với điều kiện ban đầu** 
 > ====
 >
 > Tại sao 6: Vì khi mọi row là pivot, đương nhiên cũng cùng số đó cols là pivot cols.

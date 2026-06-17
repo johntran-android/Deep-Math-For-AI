@@ -235,7 +235,7 @@
 > (∂f/∂A)ij , chính là đạo hàm của f đối với phần tử ij của A: ∂f/∂Aij
 >
 > Còn trường hợp ta có vector → vector function **b** → **a**. Thì đạo hàm của
-> \**a** đối với **b**, sẽ là matrix mà hàng i sẽ là gradienet vector của ai đối với
+> **a** đối với **b**, sẽ là matrix mà hàng i sẽ là gradienet vector của ai đối với
 > vector **b**: (∂a/∂b)ij = ∂ai/∂bj và matrix này gọi là Jacobian
 
 <br>
@@ -255,7 +255,7 @@
 > = **a**T**dx** (vì dxTa là scalar, nên transpose tùy ý)
 >
 > Lúc này ta đã có dạng df = f'(x)[dx], tức **a**T**dx** một linear operator act on
-> \**dx**. Vì f là scalar, nên df cũng là scalar, còn **x** là vector nên **dx** cũng là
+> **dx**. Vì f là scalar, nên df cũng là scalar, còn **x** là vector nên **dx** cũng là
 > vector. Vậy thì linear operator act on vector **dx** để cho ra scalar df chỉ có thể là
 > một phép dot product của vector nào đó với vector **dx**. Và vector đó chính là
 > gradient. ⇨ ∇f = **a**

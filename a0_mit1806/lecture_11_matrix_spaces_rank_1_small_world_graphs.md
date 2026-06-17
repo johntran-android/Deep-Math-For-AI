@@ -21,7 +21,7 @@
 > thể gọi nó là **matrix space** cũng được. Và gs cho rằng
 > khi nào mà ta **vẫn đảm bảo hai khả năng add và scale
 > này** (again, tạm bỏ qua việc ta có thể nhân hai matrix) thì
-> \**ta sẽ thấy các tính chất mà mình đã làm bữa giờ với
+> **ta sẽ thấy các tính chất mà mình đã làm bữa giờ với
 > normal vector space vẫn đúng**
 
 <br>
@@ -38,7 +38,7 @@
 > Tại sao chúng là subspace? vì chúng vẫn thỏa add và
 > scale rule:
 >
-> \**Cộng** **hai matrix đối xứng** hay **nhân nó với một scalar** thì
+> **Cộng** **hai matrix đối xứng** hay **nhân nó với một scalar** thì
 > vẫn được **một matrix đối xứng**
 >
 > tương tự, **cộng** hai matrix U hay **scale** nó bởi scalar thì **vẫn
@@ -159,7 +159,7 @@
 
 > [!NOTE]
 > Và từ đó ta thấy **dimension của của S intersect U là 3**,
-> \**dimension của S + U là 9** (vì S + U là tạo thành mọi
+> **dimension của S + U là 9** (vì S + U là tạo thành mọi
 > matrix 3x3)
 >
 > Trong khi đó **dim S** và **dim U = 6**.
@@ -214,7 +214,7 @@
 > câu hỏi là, hàng 2 có thể như thế nào **để rank A = 1**.
 >
 > Me: hàng 2 **chỉ việc là linear combination của hàng 1** để A
-> \**chỉ có 1 independence row** là được
+> **chỉ có 1 independence row** là được
 
 <br>
 
@@ -256,7 +256,7 @@
 > thể biểu diễn dưới dạng một phép nhân bởi 1 vector cột
 > nào đó của nó u và một vector hàng nào đó của nó (v)**:
 >
-> \**A = u(v.T)**
+> **A = u(v.T)**
 >
 > Từ đây mình liên hệ cái vụ PEFT = Parameter Efficient
 > Finetuning của LLM có nhắc đến các low-rank matrix
@@ -276,7 +276,7 @@
 > eigenvector của rank 1 matrix đều dễ, sau này sẽ thấy.
 >
 > Và giả sử mình có một **matrix 5x17 có RANK 4**, thì ta
-> \**LUÔN CÓ THỂ BREAK NÓ THÀNH COMBINATION CỦA
+> **LUÔN CÓ THỂ BREAK NÓ THÀNH COMBINATION CỦA
 > 4 CÁI RANK 1 MATRIX
 >
 > Và 4 CÁI RANK 1 MATRIX ĐÓ SẼ LÀ BASIS CỦA MỌI
@@ -303,7 +303,7 @@
 > Hỏi lại, cho **M là mọi 5x17 matrices** là một vector space (vì
 > cộng hai matrix hay nhân matrix với một số đều tạo một 5x17
 > matrix mới = nằm trong space, nên M là vector space) thì
-> \**subset mọi rank 4 [5x17] matrices có phải là vector space
+> **subset mọi rank 4 [5x17] matrices có phải là vector space
 > không?**
 >
 > Vậy đầu tiên xem **thử cộng hai rank 4 matrix 5x17** **có cho
@@ -519,7 +519,7 @@
 
 > [!NOTE]
 > những phút cuối gs nói qua Graph, nó là một set các
-> \**nodes** và **edges**. Và ta sẽ thấy một matrix nào đó sẽ
+> **nodes** và **edges**. Và ta sẽ thấy một matrix nào đó sẽ
 > đứng sau cái graph này
 
 <br>

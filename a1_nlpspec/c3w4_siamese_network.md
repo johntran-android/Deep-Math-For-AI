@@ -29,7 +29,7 @@ Learning Objectives
 > This week you'll learn about **Siamese Networks** and the **triplet loss**. A Siamese
 > Network is a neural network which **uses the same weights** while **working in tandem
 > on two different input vectors** to **compute comparable output vectors**. You can then
-> \**compare those output vectors** and **see if they are similar**. You will use these
+> **compare those output vectors** and **see if they are similar**. You will use these
 > methods to **identify question duplicates**. This is important because you do not want
 > to have a forum full of question duplicates. So platforms like Stack Overflow or
 > Quora actually implement techniques like this. You can also use it to **identify two
@@ -38,7 +38,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái Siamese network là **neural network dùng cùng weights** nhưng với
-> \**2 input vector khác nhau** để **tính toán ra một comparable output vector.**
+> **2 input vector khác nhau** để **tính toán ra một comparable output vector.**
 > Sau đó ta có thể **dùng output vector này để so sánh với nhau để xem chúng
 > có giống nhau không**. Cụ thể thế nào chưa rõ nhưng đại khái là ta sẽ dùng
 > cái này để build một model giúp tìm các question trùng lặp nhau ví dụ trên
@@ -63,7 +63,7 @@ Learning Objectives
 > 2. Siamese networks **have numerous applications** in Natural Language Processing (NLP).
 >
 > 3. The example of comparing questions "How old are you?" and "What is your age?" illustrates the need to
-> \**compare meaning rather than just individual words** in NLP tasks.
+> **compare meaning rather than just individual words** in NLP tasks.
 >
 > 4. Siamese networks can be used to **compare the meaning of word sequences and identify question
 > duplicates**, a crucial application in platforms like Stack Overflow or Quora.
@@ -81,7 +81,7 @@ Learning Objectives
 > used in t**ext-related tasks.**
 >
 > The main ideas cover the concept of **Siamese networ**ks, their applications in NLP, and the need for
-> \**comparing meaning in various text-related tasks**. It emphasizes the **efficiency of Siamese networks in
+> **comparing meaning in various text-related tasks**. It emphasizes the **efficiency of Siamese networks in
 > identifying similarities** and **differences between input sequences.**
 
 <br>
@@ -103,7 +103,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/10642e9483c9b27b110249592d94bf9ac6e89b49.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Classification** giúp giải quyết **bài toán categorize data**, phân
+> **Classification** giúp giải quyết **bài toán categorize data**, phân
 > loại. Còn **Siamese network** giúp giải quyết b**ài toán xác định sự
 > giống nhau** giữa các data sample.
 
@@ -174,10 +174,10 @@ Learning Objectives
 > Hai nhánh nhưng **chung 1 network's params**. **Không nhất thiết phải
 > có LSTM**, đây chỉ là một ví dụ. Chủ yếu là nói **Siamese network là
 > chứa hai nhánh merge lại ở cuối để tính ra Similarity score**. bằng
-> \**Cosine similarity trên input là v1, v2.**
+> **Cosine similarity trên input là v1, v2.**
 >
 > Hiểu nôm na là **qua các layer của hai nhánh**, từ question 1, 2 ban đầu,
-> \**model sẽ extract ra hai embedding vector chứa / đại diện cho những
+> **model sẽ extract ra hai embedding vector chứa / đại diện cho những
 > thông tin cốt lõi của hai message**. Và **so sánh v1 v2 sẽ cho ta thấy độ
 > giống nhau của ý nghĩa giữa chúng** Và so sánh hai vector bằng cách tính **Cosine Similarity** như ta đã
 > biết nếu **tiến về 1 thì chứng tỏ hai véctơ gần nha**u còn **tiến về -1 thì
@@ -241,7 +241,7 @@ Learning Objectives
 > Mathematically, given a vector x with n elements (x1, x2, ..., xn), the **L2 norm**
 > (also known as the **Euclidean norm**) of x is calculated as follows:
 >
-> \**||x||2 = √(x1^2 + x2^2 + ... + xn^2)**
+> **||x||2 = √(x1^2 + x2^2 + ... + xn^2)**
 >
 > L2 normalization involves **dividing each element of the vector by the L2 norm of
 > the vector**:
@@ -281,19 +281,19 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/1429a946ba387585614f9851d731101f1bef1674.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Serial** và **Parallel** là combinator, một cái cho tuần tự 1 cái cho song song.
+> **Serial** và **Parallel** là combinator, một cái cho tuần tự 1 cái cho song song.
 >
-> \**Embedding** như đã biết sẽ 'biến' hoặc 'map' một **discrete token** - tức là
-> \**index của word trong vocab dictionary** với một **embedding vector** có
-> \**length** = **d_feature**.
+> **Embedding** như đã biết sẽ 'biến' hoặc 'map' một **discrete token** - tức là
+> **index của word trong vocab dictionary** với một **embedding vector** có
+> **length** = **d_feature**.
 >
-> \**LSTM** đã biết, **trong trax,** **number of unit nên cho bằng d_feature** (tức là
-> \**hidden state h<t>** và **cell state c<t>** đều có **chiều dài bằng với embedding
+> **LSTM** đã biết, **trong trax,** **number of unit nên cho bằng d_feature** (tức là
+> **hidden state h<t>** và **cell state c<t>** đều có **chiều dài bằng với embedding
 > input x<t>**.
 >
-> \**Mean** thì nó tính mean.
+> **Mean** thì nó tính mean.
 >
-> \**Fn** là layer nhận function để thực hiện việc tính toán (**lambda function**).
+> **Fn** là layer nhận function để thực hiện việc tính toán (**lambda function**).
 
 <br>
 
@@ -336,7 +336,7 @@ Learning Objectives
 > negative examples**.
 >
 > 3. **Anchor, Positive, and Negative** Questions: The **anchor question is the reference question**,
-> \**positive questions** are those with the **same meaning as the anchor**, and **negative questions**
+> **positive questions** are those with the **same meaning as the anchor**, and **negative questions**
 > are those **without the same meaning.**
 >
 > 4. Similarity Function: A **similarity function S** is **defined to measure the similarity between two
@@ -371,7 +371,7 @@ Learning Objectives
 > Đại khái là ta define loss function sao cho **cái similarity của anchor và
 > positive s(A,P) phải cao** hoặc **negative của nó phải thấp** -> **- s(A,P)**
 > đồng thời ta muốn **similarity của anchor và negative s(A,N) phải thấp**. Nên
-> \**gom lại loss function sẽ là s(A,N) - s(A,P).** Similarity thường dùng **Cosine
+> **gom lại loss function sẽ là s(A,N) - s(A,P).** Similarity thường dùng **Cosine
 > Similarity trong khi DLSpec dùng L2 distance**. Và **minimize loss function
 > này sẽ giúp train model phân biệt được sự khác và giống nhau giữa các
 > câu**
@@ -423,7 +423,7 @@ Learning Objectives
 > that create a **challenge for the model** in **telling apart negative and positive examples**.
 >
 > 7. **Efficient** **Training**: By using hard triplets, the **training process can focus on problematic cases,**
-> \**providing the model with the most information** on how to improve its performance.
+> **providing the model with the most information** on how to improve its performance.
 >
 > 8. Concepts Coming Together: The text mentions that all these concepts will come together to create a
 > cost function for training the Siamese model, which will likely be explained in the following video.
@@ -443,7 +443,7 @@ Learning Objectives
 > [!NOTE]
 > Như đã nói, mục tiêu của loss function là (làm sao khi giảm
 > loss) **khiến cho thằng P giống thằng A** bằng cách cho
-> \**cos(A, P) cao**, **hay -cost(A,P)** thấp và **thằng P khác
+> **cos(A, P) cao**, **hay -cost(A,P)** thấp và **thằng P khác
 > thằng N** bằng cách **cho cos(A, N) thấp**. Từ đó loss
 > function là **cos(A, N) - cos(A, P)**
 >
@@ -461,7 +461,7 @@ Learning Objectives
 > [!NOTE]
 > Có thể dùng các **similarity function** hoặc **distance metric**
 > khác (như DLSpec dùng L2 distance) nhưng phải cẩn thận và
-> \**sửa lại chút xíu** vì nếu dùng distance metric thì **phải đổi
+> **sửa lại chút xíu** vì nếu dùng distance metric thì **phải đổi
 > dấu** vì **hai cái càng giống nhau** nhau thì **similarity nó lớn**
 > nhưng d**istance nó nhỏ.**
 
@@ -513,7 +513,7 @@ Learning Objectives
 > task, likely related to **question similarity** or **duplicate detection**.
 >
 > 2. **Cost Function** and **Gradient Descent**: The process begins with **defining a cost function**, which likely
-> \**measures the similarity between pairs of questions**. Gradient descent is then used to optimize this cost
+> **measures the similarity between pairs of questions**. Gradient descent is then used to optimize this cost
 > function.
 >
 > 3. **Data Preparation**: The data is **organized into batches**, each **containing duplicate pairs of questions**.
@@ -536,7 +536,7 @@ Learning Objectives
 > model performance, where **non-duplicate pairs are used as negative examples**.
 >
 > 9. Techniques for Model Performance: The text suggests that there are **additional techniques** available to
-> \**improve the model's performance beyond using the triplet loss function** and **hard negative mining.**
+> **improve the model's performance beyond using the triplet loss function** and **hard negative mining.**
 >
 > 10. Focus on Duplicate Questions: By **creating non-duplicate pairs within the batches**, the **need for
 > additional non-duplicate examples in the input data is reduced.**
@@ -595,7 +595,7 @@ Learning Objectives
 > ngược lại càng **gần -1 thì càng khác nhau**.
 >
 > Cái nữa là dù các số ngoài đường chéo cũng có số dương nhưng
-> \**không có quy định nào bắt buộc rằng số dương thì duplicate**, số âm
+> **không có quy định nào bắt buộc rằng số dương thì duplicate**, số âm
 > thì không. Mà **cái chính ở đây là model sẽ được training sao cho
 > duplicate sẽ có chỉ số cosine similarity cao hơn không duplicate.**
 >
@@ -673,7 +673,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là chuẩn bị hai khái niệm để tính triplet loss
 >
-> \**Mean negative** của một hàng là **mean của tất cả các ô không phải
+> **Mean negative** của một hàng là **mean của tất cả các ô không phải
 > đường chéo của hàng đó**. Ví dụ hàng 1 sẽ là mean của -0.8, 0.3, và -0.
 > 5.
 >
@@ -713,11 +713,11 @@ Learning Objectives
 > có s gần với s (A, P) nhất
 >
 > Ổng nói tính kiểu này **giảm noise khiến converge nhanh hơn**  (nhờ L1 dùng
-> \**average negative**)
+> **average negative**)
 >
 > Và việc dùng **closest negative** chính là **đóng vai trò của hard-triplet** trong đó
 > negative được chọn là không quá khác so với positive khiến model phải tìm cách
-> \**học được sự khác biệt giữa negative và positive tốt hơn.** 
+> **học được sự khác biệt giữa negative và positive tốt hơn.** 
 >
 > Và cũng nhắc lại rằng, với cách làm này ta **không cần phải có một bộ negative /
 > non-duplicate riêng** mà thay vào đó **dùng chính non-duplicate có sẵn làm
@@ -892,15 +892,15 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/373caee633d7cb04010a41ed11e93053f3c2f7b7.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**mean_neg** sẽ là **4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là mean negative của hàng
+> **mean_neg** sẽ là **4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là mean negative của hàng
 > đó.
 >
 > closest_neg** sẽ là **4x1** - 4 hàng 1 cột, **giá trị mỗi hàng là closest neg của hàng
 > đó.**
 >
 > Còn **sim_ap** là vector 1x4 lấy đường chéo ra bằng function **np.diag()**. Nó ra
-> \**vector hàng** nên cần **reshape để chuyển thành cột tương ứng với mean_neg**
-> \**4x1.**
+> **vector hàng** nên cần **reshape để chuyển thành cột tương ứng với mean_neg**
+> **4x1.**
 >
 > Áp dụng công thức trừ nhau và lấy max ta được loss trên các sample data đó.
 >
@@ -1031,7 +1031,7 @@ Learning Objectives
 >
 > 5. **One-Shot Learning**: During testing, the Siamese network **performs one-shot learning**, where **it converts
 > each input question into an array of numbers**, **computes the similarity score** using cosine similarity, and
-> \**classifies questions as duplicates** if the similarity score **exceeds a threshold "Tau."**
+> **classifies questions as duplicates** if the similarity score **exceeds a threshold "Tau."**
 >
 > 6. **Hyperparameters**: The **threshold "Tau"** and the **margin "Alpha"** from the **loss function** are **tunable
 > hyperparameters** that can be **adjusted to optimize the model's performance.**
@@ -1062,7 +1062,7 @@ Learning Objectives
 > này là duplicate với câu ở vị trí tương ứng trong batch kia**. Nhưng **các
 > câu trong cùng batch không duplicate nhau**. Yêu cầu này là để ta có thể
 > thực hiện phương pháp gọi là "**modified triplet loss**" với **mean neg** và
-> \**closest neg** thay vì phải có negative sample như đã biết.
+> **closest neg** thay vì phải có negative sample như đã biết.
 
 <br>
 
@@ -1128,7 +1128,7 @@ Learning Objectives
 > trained xong**. Ta sẽ đưa vào model (vì kiến trúc của model) **2 batch q1,q2.**
 >
 > Mỗi **batch có batch_size câu**, **mỗi câu dài max_length**. Tức là đưa 2 bộ câu vào,
-> \**thì tất nhiên phải preprocess với việc biến text thành index** và **zeros padded để các
+> **thì tất nhiên phải preprocess với việc biến text thành index** và **zeros padded để các
 > câu đều có cùng một size là max_length**.
 >
 > Và với **output của mỗi batch sẽ tương ứng là v1,v2**, ta sẽ **tính cosine similarity của
@@ -1241,7 +1241,7 @@ Learning Objectives
 > 3. Improved Distance Metric: After L2 normalization, the \_**cosine similarity essentially
 > becomes the dot product of the two unit vectors**\_, which **ranges from -1 to 1**. A **value of 1**
 > indicates that the two vectors have the **same direction (maximum similarity)**, a value of
-> \**-1** means they have **opposite directions (maximum dissimilarity)**, and a **value of 0** indicates they are **orthogonal (no similarity)**. This makes cosine similarity an effective
+> **-1** means they have **opposite directions (maximum dissimilarity)**, and a **value of 0** indicates they are **orthogonal (no similarity)**. This makes cosine similarity an effective
 > distance metric for comparing the similarity between vectors.
 >
 > 4. Invariant to Scale: L2 normalization\_ **makes the similarity computation invariant to
@@ -1361,8 +1361,8 @@ Learning Objectives
 > [!NOTE]
 > Welcome to the fourth assignment of course 3. In this
 > assignment you will explore **Siamese networks** applied to
-> \**natural language processing**. You will further explore the
-> \**fundamentals of Trax** and you will be able to **implement a more
+> **natural language processing**. You will further explore the
+> **fundamentals of Trax** and you will be able to **implement a more
 > complicated structure** using it. By completing this assignment,
 > you will learn **how to implement models with different
 > architectures.**
@@ -1772,15 +1772,15 @@ Learning Objectives
 > [!NOTE]
 > Những điểm mấu chốt:
 >
-> \***Tính cos(A,P)** là lấy đường chéo ra (dùng .diagonal(scores)) nó sẽ ra 1D vector (b,)
+> ***Tính cos(A,P)** là lấy đường chéo ra (dùng .diagonal(scores)) nó sẽ ra 1D vector (b,)
 >
-> \***Tính mean_neg**: Huỷ đường chéo (set sao cho đường chéo = 0) Đó chính là
+> ***Tính mean_neg**: Huỷ đường chéo (set sao cho đường chéo = 0) Đó chính là
 > negative_zero_on_duplicate. Lấy sum qua axis 1 rồi chia cho batch_size - 1 là được
 > mean_neg vector cũng 1D vector (b,). *Lí do chia batch_size - 1 là vì Ta đang tính
 > trung bình các negative score nên không tính cái positive score ở đường chéo nên
 > trong 1 hàng của score có b, thì bỏ cái ô của đường chéo là còn b -1 ô.
 >
-> \***Tính closest_neg**: Thì phải chú ý rằng: Theo công thức là phải lấy cái negative MÀ
+> ***Tính closest_neg**: Thì phải chú ý rằng: Theo công thức là phải lấy cái negative MÀ
 > GẦN NHẤT NHƯNG NHỎ HƠN (**) positive score chứ không phải chỉ là gần nhất
 > không thôi.
 >
@@ -1817,12 +1817,12 @@ Learning Objectives
 > less than" để dùng là closest negative.
 >
 >
-> \*Còn lại là tính theo công thức thôi. Để positive, mean_neg hay closest_neg đều là 1D vector (b,)
+> *Còn lại là tính theo công thức thôi. Để positive, mean_neg hay closest_neg đều là 1D vector (b,)
 >
 > ===================================
 >
 >
-> \**Tại sao: Vì sao thì xem lại note màu xanh trong bài giảng nhưng cũng chưa rõ ràng
+> **Tại sao: Vì sao thì xem lại note màu xanh trong bài giảng nhưng cũng chưa rõ ràng
 > mà chỉ thấy rằng có vẻ bất hợp lý khi chọn  negative là câu có score gần nhất nhưng
 > lại lớn hơn. Vì đã negative thì phải nhỏ hơn thì model mới mới tìm cách phân biệt sao
 > cho kéo điểm của câu nhỏ xuống. Còn nếu trong batch có một câu mà điểm nó còn
@@ -1956,7 +1956,7 @@ Learning Objectives
 
 > [!NOTE]
 > Hai chỗ khó khi làm bị stuck đó là phải dùng
-> \**next**(data_generator(...)) . 2. Đưa q1, q2 vào
+> **next**(data_generator(...)) . 2. Đưa q1, q2 vào
 > model dưới dạng **tuple model((q1,q2))**
 
 <br>

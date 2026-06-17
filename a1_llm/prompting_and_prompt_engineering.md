@@ -9,12 +9,12 @@
 
 > [!NOTE]
 > 1 Terminology: The passage introduces key terms related to working with **transformer models**, such as
-> \**prompt** (input text), **inference** (generating text), **completion** (output text), and **context window** (the
+> **prompt** (input text), **inference** (generating text), **completion** (output text), and **context window** (the
 > available text for the prompt).
 >
 > 2 **Prompt Engineering**: **Prompt engineering** involves **refining the language and structure of prompts** to
-> \**get the desired model behavior**. **Including examples** of the task within the prompt is a **powerful strategy** to
-> \**improve model performance.**
+> **get the desired model behavior**. **Including examples** of the task within the prompt is a **powerful strategy** to
+> **improve model performance.**
 >
 > 3 **Zero-Shot Inference**: Zero-shot inference involves using prompts that enable the model to **perform a task it
 > hasn't been explicitly trained on**. The model can l**everage i**ts **general language understanding** to provide
@@ -58,13 +58,13 @@
 > several times to get the model to behave in the way that you want. **This work to
 > develop and improve the prompt is known as prompt engineering**. This is a big
 > topic. But one **powerful strategy** to get the model to produce better outcomes is to
-> \**include examples** of the task that you want the model to carry out inside the
+> **include examples** of the task that you want the model to carry out inside the
 > prompt
 
 > [!NOTE]
 > Đại khái là thường thì ta sẽ không có được câu trả lời mong muốn hay làm cho model
 > trả lời theo cách mà mình mong muốn ngay từ đầu, mà phải **revise** (improve, thay đổi)
-> \**cái prompt dần dần** cho **đến khi model nó hiểu mình cần gì**. Quá trình đó gọi là **prompt
+> **cái prompt dần dần** cho **đến khi model nó hiểu mình cần gì**. Quá trình đó gọi là **prompt
 > engineering**. Và một strategy quan trọng là **đưa** **ví dụ vào trong prompt**.
 
 <br>
@@ -87,14 +87,14 @@
 ### **Zero-shot inference** refers to the **ability of a model to make predictions** or \\*perform
 
 > [!NOTE]
-> \**Zero-shot inference** refers to the **ability of a model to make predictions** or **perform
+> **Zero-shot inference** refers to the **ability of a model to make predictions** or **perform
 > inference on tasks** or **data points** it has n**ever been explicitly trained on.** In **traditional**
 > machine learning, models are **typically trained on a specific task or dataset**, and they
-> \**struggle** to **generalize to new tasks** or data points **outside** their **training distribution**.
+> **struggle** to **generalize to new tasks** or data points **outside** their **training distribution**.
 >
 > However, with the **advancements in transformer models**, such as **GPT-3**, zero-shot
 > inference has become possible. These models are **pre-trained on large** amounts of
-> \**diverse data** and **learn general language understanding**, allowing them to **transfer
+> **diverse data** and **learn general language understanding**, allowing them to **transfer
 > knowledge across tasks**. **Zero-shot inference** leverages this **transfer learning capability**,
 > enabling the model to **perform reasonably well on unseen tasks** or data points **without
 > any specific training or fine-tuning**.
@@ -107,7 +107,7 @@
 >
 > For example, a **language model pre-trained on a variety of topics**, such as news articles,
 > books, and encyclopedias, can be u**sed for zero-shot inference on tasks** like
-> \**question-answering or text summarization**, even if it **hasn't been trained specifically on
+> **question-answering or text summarization**, even if it **hasn't been trained specifically on
 > those tasks**. By providing a prompt or description of the task, the model can generate
 > relevant responses or summaries based on its understanding of language and the
 > context provided.
@@ -168,7 +168,7 @@
 
 > [!NOTE]
 > Đại khái là **model càng lớn**, nó c**àng có thể "hỏi gì cũng biết, gì cũng làm được**" -
-> \**zeros shot inference**. Còn **model nhỏ hơn** chỉ có thể "trả lời" / "làm" những task mà
+> **zeros shot inference**. Còn **model nhỏ hơn** chỉ có thể "trả lời" / "làm" những task mà
 > gần gần với **những gì nó được huấn luyện thôi.** Và có thể mình phải **tìm kiếm một
 > model phù hợp** với task mình cần sau đó là ta sẽ **fine-tuning thêm cho model**
 

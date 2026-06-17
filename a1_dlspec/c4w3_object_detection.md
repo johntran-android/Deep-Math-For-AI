@@ -33,7 +33,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 >
 > Đại khái là muốn localize thì ta **sửa cái output layer**, v.d đang là 
 > Softmax ra 4 unit tương ứng 4 loại khả dĩ của cái hình, để
-> \**thêm vào 4 chỉ số nữa là bx, by, bw, bh** = Vị trí của cái object.
+> **thêm vào 4 chỉ số nữa là bx, by, bw, bh** = Vị trí của cái object.
 >
 > Bằng cách **có thêm 4 thông số này trong training set,** đại khái
 > là ta có thể khiến cho network có thể học được cách xác định
@@ -74,7 +74,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > [!NOTE]
 > Đại khái là muốn localize thì ta **sửa cái output layer**, v.d đang là 
 > Softmax ra 4 unit tương ứng 4 loại khả dĩ của cái hình, để
-> \**thêm vào 4 chỉ số nữa là bx, by, bw, bh** = Vị trí của cái object.
+> **thêm vào 4 chỉ số nữa là bx, by, bw, bh** = Vị trí của cái object.
 >
 > Bằng cách **có thêm 4 thông số này trong training set,** đại khái
 > là ta có thể khiến cho network có thể học được cách xác định
@@ -347,7 +347,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > dù có dính một phần của cả hai object vẫn coi như không có
 > object nào
 >
-> \**Đại khái là ta define output là 1 volume 3x3x8 và dùng Back Prop
+> **Đại khái là ta define output là 1 volume 3x3x8 và dùng Back Prop
 > để training (với y là cũng 3x3x8), xong ta predict với image mới ra
 > một volume 3x3x8 để từ đó với mỗi ô ta xem nó có phải là object
 > hay không bằng \/pC\/, nếu có thì là object gì bằng \/C1, C2, C3\/
@@ -1172,7 +1172,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > object hay không. 
 > Rồi nhân với [c1, ...c80] để ra khả năng có object class nào
 >
-> \**Đang nói cho 1 cell nha:**
+> **Đang nói cho 1 cell nha:**
 >
 > Box 1:
 >
@@ -1183,7 +1183,7 @@ Apply your new knowledge of CNNs to one of the hottest (and most challenging!) f
 > \-> Assign blah blah có nghĩa đại khái là mình sẽ tuyên bố
 > box 1 sẽ chứa xe hơi (class #3) và class score là 44%
 >
-> \**Tính tương tự cho 4 box còn lại (của 1 cell)
+> **Tính tương tự cho 4 box còn lại (của 1 cell)
 >
 >
 > Vậy làm cùng lúc cho 19x19 (tổng số cell) x5 (5 box mỗi cell) thì sao**

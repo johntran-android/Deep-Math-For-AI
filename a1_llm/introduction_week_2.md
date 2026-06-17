@@ -40,7 +40,7 @@
 > cost of using **giant models** and the **importance of model size for data control** are also discussed.
 >
 > 8. Excitement and Accessibility: **PEFT techniques make fine-tuning generative AI models accessible** to
-> \**everyday users with cost constraints**. This allows **developers to achieve good performance results without the
+> **everyday users with cost constraints**. This allows **developers to achieve good performance results without the
 > excessive costs associated with full fine-tuning**.
 >
 > Overall, the main ideas **revolve around the concepts of instruction fine-tuning**, **parameter-efficient fine-tuning,

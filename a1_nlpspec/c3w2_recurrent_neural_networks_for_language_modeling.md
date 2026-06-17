@@ -33,7 +33,7 @@ Learning Objectives
 > word using its previous (N-1) words**.
 >
 > 4 N-gram models **struggle to capture dependencies between words that are far apart**, as they would
-> \**require accounting for conditional probabilities in very long word sequences.**
+> **require accounting for conditional probabilities in very long word sequences.**
 >
 > 5 **Estimating** these probabilities **becomes challenging** with **large corpora**, and **storing all possible
 > combinations of probabilities** would **require significant space and memory**.
@@ -84,7 +84,7 @@ Learning Objectives
 > models** in **capturing dependencies** that **N-grams cannot capture**.
 >
 > 2 **RNNs** can **propagate information** **from the beginning to the end of a sequence**, allowing for
-> \**better predictions**.
+> **better predictions**.
 >
 > 3 Traditional language models, like **trigrams**, may **select the most probable word based on the
 > previous context**, but it **may not make sense in the context of the sentence.**
@@ -138,7 +138,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/a6d62c7c147a2146d830ed514f4431cd003c2680.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Mỗi lần tính toán (cho một từ, một time step)** nó sẽ lấy thông
+> **Mỗi lần tính toán (cho một từ, một time step)** nó sẽ lấy thông
 > tin từ trước đó và hiện tại do đó kết quả của từ cần tìm sẽ được
 > dựa trên thông tin từ tất cả các từ trong câu giúp tạo ra kết quả
 > chính xác hơn N-gram
@@ -194,7 +194,7 @@ Learning Objectives
 > the **RNN outputs the sentiment (positive or negative).**
 >
 > 6 **Many-to-Many tasks** involve **multiple inputs and multiple outputs**, such as **machine translation**, where a
-> \**sequence of words in one language is translated to another language**.
+> **sequence of words in one language is translated to another language**.
 >
 > 7 The **encoder-decoder architecture** is commonly **used in machine translation**, with the **encoder capturing
 > the overall meaning of the input sentenc**e and the **decoder generating the translated sequence.**
@@ -275,10 +275,10 @@ Learning Objectives
 > 5 These equations represent the **mathematical operations** performed in a simple RNN.
 >
 > 7 The hidden states in RNNs enable the **propagation of information through time**, allowing the network to
-> \**capture dependencies across different positions** **within a sequence.**
+> **capture dependencies across different positions** **within a sequence.**
 >
 > 8 Diagrams similar to the one presented in the video are often used in RNN literature to illustrate the
-> \**computation flow** and **information propagation** within a recurrent unit.
+> **computation flow** and **information propagation** within a recurrent unit.
 >
 > 9 **Hidden states** serve as the **variables that facilitate information propagation in RNNs.**
 >
@@ -492,7 +492,7 @@ Learning Objectives
 > predict image là con mèo.
 >
 > Trong bài toán này, **nếu nó là mèo thì không thể là gà hay chó**, nên label y là
-> \**[1 0 0] hoặc [0 1 0]** chứ không thể **[1 1 0]** được.
+> **[1 0 0] hoặc [0 1 0]** chứ không thể **[1 1 0]** được.
 >
 > Và **tổng ba giá trị y^_1, y^_2, y^_3 phải = 1** nên layer cuối sẽ chọn **Softmax**
 > activation function và cross function sẽ là **Categorical Cross Entropy**
@@ -583,7 +583,7 @@ Learning Objectives
 > function **fn** với input là **x** và **previous hidden state là cur_value** để
 > được **y<t> = y và h<t> = cur_value** (hay a<t> trong DLSpec).
 >
-> \**Append** y vào ys là một list chứa các y<t>.
+> **Append** y vào ys là một list chứa các y<t>.
 >
 > Ổng nói sở dĩ phải có cái scan function như này là kiểu như tạo
 > một **abstraction function để TF nó tối ưu bằng cách run trên GPU**
@@ -642,7 +642,7 @@ Learning Objectives
 > Embedding size (emb) 128 là **size của embedding vector x<t>**
 > (Tất nhiên **nếu xử lý một batch** thì x<t> sẽ là (**batch_size, emb**).
 > Hidden state size **h_dim** hoặc **(batch_size, h_dim**) là size của
-> \**h<t> (hay a<t>** theo DLSpec)
+> **h<t> (hay a<t>** theo DLSpec)
 
 <br>
 
@@ -661,13 +661,13 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/980311e75d69732c5e426c49a4715e8a87e4c2bc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Reset gate** thì kiểu như cho **phép model quyết định** thông tin của **c<t>**
+> **Reset gate** thì kiểu như cho **phép model quyết định** thông tin của **c<t>**
 >  **có cần phải lấy từ previous hidden state h<t-1> hay không**.
 > Ta thấy nếu value (của element trong Reset gate tensor) **gần 1**
 > tức là **model nhận thấy h<t-1> quan trọng** cần (cùng với x<t>)
 > để tính toán c<t>.
 > Còn ngược lại, nó sẽ adjust weight để **Reset gate value ~=0** và
-> \**c<t> sẽ chỉ ảnh hưởng bởi x<t>** 
+> **c<t> sẽ chỉ ảnh hưởng bởi x<t>** 
 > Có thể thấy **Update gate** trong GRU với sigmoid function sẽ
 > khiến **h<t>** **một là giữ bằng hidden state trước h<t-1>** hoặc **bỏ đi
 > thay mới bằng c<t>**. Tất nhiên sigmoid cho ra trong khoảng 0,1
@@ -781,7 +781,7 @@ Learning Objectives
 > không. Ta đã học qua, đại khái là nó tính chỉ số này dựa trên xác suất
 > của cái câu mà nó tạo có cao hay không. Công thức của nó như vầy.
 > Và để tránh "**underflow problems**" - khi số quá nhỏ, thì người ta
-> \**thường tính log của Perplexity** thay vì Perplexity.
+> **thường tính log của Perplexity** thay vì Perplexity.
 >
 > Theo sự hiểu, language model sau khi đ**ược huấn luyện từ một
 > corpus** sẽ học được ... kiểu như **"xác suất của các từ trong corpus"** . Do đó **để test 'năng lực' của model**, người ta sẽ **đưa cho model
@@ -963,7 +963,7 @@ Learning Objectives
 
 > [!NOTE]
 > 1 Vanilla RNNs are powerful but suffer from the **vanishing information problem** for
-> \**long sequences.**
+> **long sequences.**
 >
 > 2 Gated Recurrent Units (GRUs) are **more complex models** that can **handle long
 > sequences effectively.**
@@ -1004,11 +1004,11 @@ Learning Objectives
 > [!NOTE]
 > Có nói trong DLSpec, nói lại cho nhớ rõ không thừa. Điểm quan trọng
 > thứ nhất chính là **Relevant gate** (trong DLSpec mình note là
-> \**Reset gate**, cũng không sai) cho phép model **đánh giá sự "
+> **Reset gate**, cũng không sai) cho phép model **đánh giá sự "
 > relevant" của các thông tin trước đó h<t0> với thông tin đưa vào hiện
 > tại x<t1>** để quyết định sẽ **có hay không nhiều hay ít phần thông tin
 > trước đó để kết hợp với thông tin hiện tại để tính ra h'<t1>** tạm gọi là
-> \**candidate cho hidden state** ở time-step hiện tại.
+> **candidate cho hidden state** ở time-step hiện tại.
 >
 > Và **Update gate** sẽ q**uyết định phần thông tin nào là lấy từ
 > candidate này hay từ previous hidden state.** Tức ở đây nó sẽ **dùng
@@ -1056,8 +1056,8 @@ Learning Objectives
 > [!NOTE]
 > Đại khái ngắn gọn là minh hoạ **một simple Vanilla neural network
 > define với Trax dùng Serial layers combinator**. Trong Trax thì
-> \**activation function cũng là một layer riêng biệt**. Và cuối cùng nói
-> \**Trax rất dễ hiểu**, lệnh **print model** sẽ **cho ra ngay cấu trúc
+> **activation function cũng là một layer riêng biệt**. Và cuối cùng nói
+> **Trax rất dễ hiểu**, lệnh **print model** sẽ **cho ra ngay cấu trúc
 > của model define thế nào thì thấy thế đó** không lòng vòng giấu
 > diếm
 
@@ -1114,7 +1114,7 @@ Learning Objectives
 > tự**, để rồi cái nào có **p cao nhất sẽ là cái được chọn.** Thì ở đây, **họ còn
 > cho z<t> qua một Fully Connected layer trước khi qua softmax** nên có
 > thể hiển **độ dài của output từ F.C layer cũng phải bằng vocab size,** do đó
-> \**số hidden unit của F.C (hay Dense) layer cũng bằng vocab size là
+> **số hidden unit của F.C (hay Dense) layer cũng bằng vocab size là
 > vậy**.
 
 <br>
@@ -1353,7 +1353,7 @@ Learning Objectives
 
 > [!NOTE]
 > Welcome to the second assignment of course 3. In this assignment you will explore 
-> \**Recurrent Neural Networks RNN**.
+> **Recurrent Neural Networks RNN**.
 >
 >  • You will be using the fundamentals of google's \\_**trax**\\_ package to implement any 
 > kind of deeplearning model.
@@ -1428,7 +1428,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/6bd3ddec9e45902b4f958f25c9df6e690bb9bc17.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Define path** và **filename** để **open file, load data** bỏ
+> **Define path** và **filename** để **open file, load data** bỏ
 > đi khoảng trống đầu cuối câu và **add vào lines -
 > dạng một list các sentence.**
 
@@ -1439,7 +1439,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/681bea9b71a67c36a4b625928676d9e20098ad4e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**lowercase hết**, và chia ra thành **hai bộ**: **training**
+> **lowercase hết**, và chia ra thành **hai bộ**: **training**
 > set và **validation** set. Validation set lấy **1000 item
 > (sentence | text) cuối cùng** (**[-1000:]**) còn lại là training set.
 
@@ -1459,7 +1459,7 @@ Learning Objectives
 > Đại khái là ta sẽ **convert từng character thành
 > number** dùng function **ord**() của Python
 > giúp làm việc này. Nó sẽ **biến kí tự** thành
-> \**unicode integer tương ứng.**
+> **unicode integer tương ứng.**
 
 <br>
 
@@ -1900,7 +1900,7 @@ Learning Objectives
 > tốt** được như này. Vì nó **không nắm bắt và "nhớ" được thông tin mà nó gặp ở
 > trước đó**, dẫn tới **perplexity cao**, đồng nghĩa **model tệ**. Ngoài ra nó còn **đòi hỏi
 > nhiều memory** nên **không hiệu quả** và chạy **chậm**. Còn với **Deep Net**, những
-> \**vấn đề này được cải thiện đáng kể**. Tuy vậy ổng nói **việc hiểu về các statistical
+> **vấn đề này được cải thiện đáng kể**. Tuy vậy ổng nói **việc hiểu về các statistical
 > model** đóng vai trò **quan trọng** trong việc **giúp ta hiểu hơn về Deepnet**
 
 <br>

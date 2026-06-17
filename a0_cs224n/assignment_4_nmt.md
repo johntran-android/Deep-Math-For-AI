@@ -10,7 +10,7 @@
 > [!NOTE]
 > Thử mô tả cách là theo hình vẽ này:
 >
-> \**Source sentence** được xử lý bởi **encoder RNN**, như nói ở đây, là một **Bidirectional LSTM**, để rồi ta
+> **Source sentence** được xử lý bởi **encoder RNN**, như nói ở đây, là một **Bidirectional LSTM**, để rồi ta
 > sẽ **lấy hidden state của last step**, **pass qua cho decoder**, là một Uni-Directional RNN, dưới dạng **initial
 > hidden state** h0.
 >
@@ -40,7 +40,7 @@
 > === Embedding & Conv1D
 >
 > Đầu tiên, ta sẽ dùng **embedding matrix** để look-up / **chuyển word** hoặc
-> \**character token id**, hay **one-hot vector** **thành e-dimensional word  embedding
+> **character token id**, hay **one-hot vector** **thành e-dimensional word  embedding
 > vector** R**(e,1).
 >
 > Từ một **chuỗi m token id** của source string, ta có **chuỗi m e-D embedding  vectors.** 
@@ -107,7 +107,7 @@
 > h_t-1** (tí nữa sẽ nói)
 >
 > Nhưng ý chính là hiểu rằng **input vào decoder tại mỗi time-step,** tức là **x_dec_t** =
-> \**embedding của yt** thì ý nói là **[<START> + câu dịch mẫu]** đầu: Đây còn được gọi là **teacher forcing**
+> **embedding của yt** thì ý nói là **[<START> + câu dịch mẫu]** đầu: Đây còn được gọi là **teacher forcing**
 > cho phép model dự đoán từ tiếp theo với giả định là nó đã đúng hết ở các từ trước.
 >
 > Còn cái **chuỗi dùng làm target** thì là **[câu dịch mẫu + <END>]** 
@@ -115,7 +115,7 @@
 > Vậy thì khi **kết hợp y_t (concatenate) với o_t-1** để được **y_bar_t.** Nó tham gia **cùng
 > với h_t-1, c_t-1, tính ra h_t (*****)**
 >
-> \**o_t**-1 là **context vector** tính từ **h_t-1 với attention ở bước t-1**, đã tính rồi, giờ **cho nó
+> **o_t**-1 là **context vector** tính từ **h_t-1 với attention ở bước t-1**, đã tính rồi, giờ **cho nó
 > join vào tính ở step t luôn**. Đây là **ý mà gs Cris nói trong bài** giảng. Còn tại step t, **sau khi
 > tính ra h_t, ta mới attention để có o_t**, và d**ùng o_t tính y^_t giúp dự đoán từ ở time-step t**.
 >
@@ -164,7 +164,7 @@
 >
 > Tiếp theo o_t sẽ tham gia với y
 >
-> \**o_t mới concat với input của time-step t+1 = y_t+1 để trở thành y_bar_t+1**, ròi **cùng với h_t, c_t tính
+> **o_t mới concat với input của time-step t+1 = y_t+1 để trở thành y_bar_t+1**, ròi **cùng với h_t, c_t tính
 > ra h_t+1** và tiếp tục những bước sau (giống như từ ***** ở note trước)
 
 <br>
@@ -203,7 +203,7 @@
 > kết quả đều chỉ là **trả ra cái row vector ứng với vị trí của token id trong
 > vocab**. Và đương nhiên embedding matrix là **learnable**, quá training,
 > gradient sẽ flow về và sửa lại / learn cái embedding matrix, đồng nghĩa
-> \**learn các embedding vectors**.
+> **learn các embedding vectors**.
 >
 > Hiểu ví dụ này, tạo **Embedding(vocab_size=10, embedding_dim=3)**. Thì nó
 > sẽ tạo một matrix **10x3**. Mỗi row tại ith là một 3-d embedding vector cho
@@ -251,7 +251,7 @@
 <p align="center"><kbd><img src="assets/d821da642a95f4e546b4e5ad4e7f7c2653065fea.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**post_embed_cnn** sẽ là Conv1D layer, như mô tả, sẽ giúp convol một
+> **post_embed_cnn** sẽ là Conv1D layer, như mô tả, sẽ giúp convol một
 > sequence các embedding vector để cho ra một sequence các vector đã
 > nắm bắt / phản ánh short-term dependency.
 >
@@ -352,7 +352,7 @@
 > toán**.
 >
 > Do đó, trước khi bỏ vào LSTM, ta sẽ **pack_padded_sequence(X, soure_lengths)**, với
-> \**source_lenths** là **list chứa chiều dài của các sequence**, nó kiểu như sẽ **tạo ra một cái
+> **source_lenths** là **list chứa chiều dài của các sequence**, nó kiểu như sẽ **tạo ra một cái
 > (packed sequence)** có tác dụng **khi đưa vào LSTM, sẽ biết rằng với mỗi sequence cần xử lý
 > tới đâu**, chứ không cần phải xử lý hết theo max_length. Nhờ đó hiệu quả hơn.
 >
@@ -360,11 +360,11 @@
 >
 > Encoder (LSTM) sẽ trả ra:
 >
-> \**enc_hiddens** có shape là **(T,B,2H)**, chứa **tất cả (T) hidden state** của encoder, và vì là **Bidirectional**
+> **enc_hiddens** có shape là **(T,B,2H)**, chứa **tất cả (T) hidden state** của encoder, và vì là **Bidirectional**
 > nên dimension là **2H**  (Trong doc, output sẽ shape là [L, N, D∗Hout] với D là 2 nếu là Bidirection, L là 
 > tương đương với T, tức sequence length và N tương đương B là batch size.
 >
-> \**ht** và **ct**: **last_hidden** và **last_cell** (state). Đương nhiên là các hidden state và cell state của time-step 
+> **ht** và **ct**: **last_hidden** và **last_cell** (state). Đương nhiên là các hidden state và cell state của time-step 
 > cuối. 
 >
 > Theo document, nó sẽ trả ra có shape là (D∗num_layers, N, Hout) với bidirectional D = 2, num_layers 
@@ -425,7 +425,7 @@
 >
 > Vậy ta lấy ví dụ với chú thích: 
 >
-> \**câu target(*) là câu target đã bỏ đi <END>**, **câu target(**) là câu target  đã bỏ <START>**, ví dụ
+> **câu target(*) là câu target đã bỏ đi <END>**, **câu target(**) là câu target  đã bỏ <START>**, ví dụ
 >
 > câu target: [e_<START>, e_"I", e_"like", e_"apple", e_<END>] 
 >
@@ -447,10 +447,10 @@
 > =====
 >
 > Thế thì function này nhận vào **target_padded**, là một batch các sentences (token id), mà mỗi câu có 
-> \**bắt đầu và kết thúc với <START> token và <END> như nói ở trên**. Vậy để chuẩn bị chuỗi **target(*)** 
+> **bắt đầu và kết thúc với <START> token và <END> như nói ở trên**. Vậy để chuẩn bị chuỗi **target(*)** 
 > \- tạm gọi là phiên bản được input vào decoder RNN, ta **sẽ cắt đi cái <END>**
 >
-> \**target_padded = target_padded[:-1]** (line này họ làm giùm ở đầu function)
+> **target_padded = target_padded[:-1]** (line này họ làm giùm ở đầu function)
 >
 > Tiếp Theo **pass target sentence target_padded qua ModelEmbedding.target**, là một **nn.Embedding** 
 > đã chuẩn bị, để **chuyển mỗi token id thành embedding vector.** Để từ (B,T) ta có (B,T,E).
@@ -726,7 +726,7 @@
 >
 > Giữa hai con số trên, **lấy số nhỏ hơn**.
 >
-> \**Làm vậy với mọi unigram,** cộng điểm lại.
+> **Làm vậy với mọi unigram,** cộng điểm lại.
 >
 > Thì ta đã được tử số.
 >
@@ -743,7 +743,7 @@
 >
 > Công thức có thể diễn giải như sau: **xem thử trong các câu mẫu (reference) thì
 > cái nào là có chiều dài gần bằng với chiều dài câu dịch (c) nhất**. Để rồi BP sẽ
-> \**bằng 1 nếu câu dịch (c) dài hơn câu đó**, và bằng **exp(1-len(r)/len(c)) nếu câu dịch
+> **bằng 1 nếu câu dịch (c) dài hơn câu đó**, và bằng **exp(1-len(r)/len(c)) nếu câu dịch
 > ngắn  hơn**.
 >
 > Khi có trường hợp có hai câu r dài gần bằng, nhưng một cái dài hơn, một cái

@@ -383,7 +383,7 @@
 > pattern - Không cần y chang.
 
 > [!NOTE]
-> \*a[l](C) & a[l](G):
+> *a[l](C) & a[l](G):
 > Unrolled into vectors
 
 > [!NOTE]
@@ -524,7 +524,7 @@
 
 > [!NOTE]
 > Correct. One-shot learning
-> \**refers to the amount of data we
+> **refers to the amount of data we
 > have** to solve a task.
 
 <br>

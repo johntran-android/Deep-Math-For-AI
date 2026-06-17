@@ -1348,7 +1348,7 @@
 > P_θ(C(**X**) chứa θ) là 1-α.
 >
 > Thế thì mục đích cuối cùng vẫn là ta muốn: với observed value **X** =
-> \**x thì ta có một set / interval C(x) mà xác suất chứa θ là 1-α, hơn nữa
+> **x thì ta có một set / interval C(x) mà xác suất chứa θ là 1-α, hơn nữa
 > ta cũng muốn size của nó nhỏ nhất có thể.** Vậy thì, nói dài dòng để nhấn mạnh rằng tuy rằng khi đã nói về
 > Bayesian trong đó ta coi θ như rv, và với observed value **X** = **x** thì
 > ta có distribution của **X**: π(θ|**x**) và nếu có thể tìm được C(**x**)
@@ -1388,7 +1388,7 @@
 >
 > Còn nhớ, theo định nghĩa: likelihood là function của θ, define bởi L(θ|**x**)
 > = f(**x**|θ) mang ý nghĩa là độ hợp lí của θ khi giá trị quan sát được **X** =
-> \**x**.
+> **x**.
 >
 > Áp dụng Bayes rule f(**x**|θ) π(θ) = π(θ|**x**) f(**x**) ⇨ f(**x**|θ) = π(θ|**x**)
 > f(**x**) / π(θ). Nên L(θ|**x**) = π(θ|**x**) f(**x**) / π(θ)
@@ -1428,7 +1428,7 @@
 > Rồi, thì với việc λ có posterior là Γ(Σixi+a, [n+1/b]^-1), là một unimodal pdf,
 > ta thì việc tìm k thỏa cũng chính là tìm hai cái mốc λL, λU sao cho:
 >
-> \**P(λL ≤ λ ≤ λU) = 1-α** và **PDF TẠI ĐÓ BẰNG NHAU**: π(λL|**x**) = π(λU|**x**)
+> **P(λL ≤ λ ≤ λU) = 1-α** và **PDF TẠI ĐÓ BẰNG NHAU**: π(λL|**x**) = π(λU|**x**)
 >
 > Giải ra hai cái mốc này ta sẽ có cái HDP (chú ý, cái này phải dùng máy tính
 > để giải)

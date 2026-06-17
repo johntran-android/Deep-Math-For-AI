@@ -8,12 +8,12 @@
 ## ****Using Reward Model in RLHF Process****:
 
 > [!NOTE]
-> \****Using Reward Model in RLHF Process****:
+> ****Using Reward Model in RLHF Process****:
 > To **achieve a human-aligned model** through reinforcement learning from human feedback (RLHF), 
 > you'll integrate the reward model into the reinforcement learning process. The goal is to **update the 
 > weights of the language model (LLM)** and **create a model that aligns with human preference**s.
 >
-> \****Iteration of RLHF Process****:
+> ****Iteration of RLHF Process****:
 > 1. **Start with a well-performing mode**l on the **task of interest**.
 > 2. **Pass a prompt** from the dataset **to the instruct LLM**, generating a **completion**.
 > 3. **Combine the completion and original prompt** into a **prompt-completion pair.**
@@ -23,19 +23,19 @@
 > 7. This intermediate version is referred to as the **RL updated LLM**.
 > 8. These steps together constitute **one iteration** of the RLHF process.
 >
-> \****Multiple Iterations****:
+> ****Multiple Iterations****:
 > 1. Multiple iterations (**epochs**) of RLHF occur, **similar to other fine-tuning processes.**
 > 2. **Reward score**s are **expected to improve after each iteration.**
 > 3. The model's text output should **increasingly align with human preferences**.
 > 4. Iterations **continue until alignment is achieved**, based on **set evaluation criteria** (e.g., reaching a threshold 
 > of helpfulness) or a **maximum number of steps** (e.g., 20,000).
 >
-> \****Reinforcement Learning Algorithm****:
+> ****Reinforcement Learning Algorithm****:
 > 1. This **algorithm** takes the **reward model's output** and **updates LLM weights** to **increase the reward score over time.**
 > 2. **Proximal Policy Optimization (PPO)** is a **popular choice** for this step.
 > 3. While **understanding PPO's details isn't essential**, it can aid in **troubleshooting implementation challenges**.
 >
-> \**Further Technical Details (Optional)**:
+> **Further Technical Details (Optional)**:
 > A **deeper dive into the PPO algorithm** is available in an optional video. This isn't necessary for quizzes or the lab, 
 > but it can enhance understanding of RLHF's significance in ensuring safe and aligned behavior of LLMs during deployment.
 
@@ -50,7 +50,7 @@
 > completion.**  
 >
 > Sau đó đưa cặp **prompt-completion** vào **Reward model** để nó
-> \**predict ra logit score** đ**óng vai trò là reward** cho LLM. Nhớ lại Reward model
+> **predict ra logit score** đ**óng vai trò là reward** cho LLM. Nhớ lại Reward model
 > được train sao cho nó **nhận cặp prompt-completion** và **cho ra điểm cao nếu
 > completion align tốt với human preference và ngược lại.**
 >
@@ -80,7 +80,7 @@
 >
 > You'll then **pass this reward value** for the prom completion pair **to the
 > reinforcement learning algorithm** to **update the weights of the LLM**, and
-> \**move it towards** generating more aligned, higher reward responses. Let's
+> **move it towards** generating more aligned, higher reward responses. Let's
 > call this intermediate version of the model the RL updated LLM.
 
 <br>

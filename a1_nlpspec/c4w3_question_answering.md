@@ -137,7 +137,7 @@ Learning Objectives
 > Here are the main ideas extracted from the lecture text in numerical order:
 >
 > 1. Introduction to the lecture topics, including transfer learning with the full transformer, 
-> \**BERT** (Bidirectional Encoder Representation for Transformers), and the **T5** model.
+> **BERT** (Bidirectional Encoder Representation for Transformers), and the **T5** model.
 >
 > 2. Explanation of what **transfer learni**ng is and its relevance to NLP tasks.
 >
@@ -164,7 +164,7 @@ Learning Objectives
 > data** to create **input features and targets.**
 >
 > 11. Discussion of fine-tuning a pre-trained model for various downstream tasks like 
-> \**translation, summarization, and question answering**.
+> **translation, summarization, and question answering**.
 >
 > 12. Summary of key points, including the use of transfer learning for feature-based or 
 > fine-tuning approaches, the importance of data, and the role of pre-training tasks.
@@ -349,7 +349,7 @@ Learning Objectives
 
 > [!NOTE]
 > BERT thì nó là
-> \**Bi-directional**
+> **Bi-directional**
 
 <br>
 
@@ -434,7 +434,7 @@ Learning Objectives
 >    - Example given: "After school, Lucas does his [blank] in the library."
 >
 > 8. ****Prediction Mechanism****: Add a **dense layer** post the **token** and **classify after encoder outputs**. 
-> \**Multiplication by embedding matrix** transforms them into vocabulary dimension, ending with **softmax**.
+> **Multiplication by embedding matrix** transforms them into vocabulary dimension, ending with **softmax**.
 >
 > 9. ****Next Sentence Prediction****: Determines if two given sentences follow one another in a sequence or not.
 >
@@ -498,7 +498,7 @@ Learning Objectives
 > [!NOTE]
 > Kiến trúc của BERT thật ra **y như ta đã học với
 > Transformer** thì **BERT_base** có **12 transformer blocks**,
-> \**12 attention heads và 110 triệu params**.
+> **12 attention heads và 110 triệu params**.
 >
 > Các LLM sau này như GPT-3 cũng được xây dựng dựa trên
 > kiến trúc tương tự nhưng có nhiều params hơn
@@ -518,7 +518,7 @@ Learning Objectives
 >
 > Cụ thể là **15%** tokens được chọn randoms, trong đó sẽ có **80%
 > được mask**. **10% được replace với token khác** randomly và
-> \**10% giữ nguyên.**
+> **10% giữ nguyên.**
 
 <br>
 
@@ -665,7 +665,7 @@ Learning Objectives
 > và **Positional embedding**. Ta còn có **Segment embedding** để chứa
 > thông tin cho biết từ nào là của câu nào.
 >
-> \**Combine cả 3 lại để thành input của BERT**
+> **Combine cả 3 lại để thành input của BERT**
 
 <br>
 
@@ -722,11 +722,11 @@ Learning Objectives
 > The final input representation for each token is the sum of its token embedding, segment embedding, and positional
 > embedding. This combined embedding is fed into the BERT architecture.
 >
-> \**### Training Process:**
+> **### Training Process:**
 >
 > BERT's training process comprises two main phases: pre-training and fine-tuning.
 >
-> \**#### 1. Pre-training:**
+> **#### 1. Pre-training:**
 >
 > This phase involves training on a massive amount of unlabeled data over the following tasks:
 >
@@ -806,7 +806,7 @@ Learning Objectives
 > [!NOTE]
 > Thì như nói ở bài trước, **tuỳ specific task được fine-tune** mà
 > sentence #1 và sentence #2 sẽ khác nhau. Nếu là NER -
-> \**Name Entity Recognition** thì là **Sentences và Tags**,...
+> **Name Entity Recognition** thì là **Sentences và Tags**,...
 
 <br>
 
@@ -1106,9 +1106,9 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là ngoài vấn đề các ngôn ngữ khác nhau cho những cách tokenize
 > khác nhau chứ không thống nhất được, thì còn vấn đề đặt ra đối với việc
-> \**bộ vocab size nên có kích thước bao nhiêu**.
+> **bộ vocab size nên có kích thước bao nhiêu**.
 >
-> \**Nhiều quá thì tất nhiên là tốt** cho kết quả của model hơn nhưng **lại gây
+> **Nhiều quá thì tất nhiên là tốt** cho kết quả của model hơn nhưng **lại gây
 > vấn đề memory.**
 >
 > Thì ở đây ta sẽ khám phá **SentencePiece** với **BPE**, một **tokenization
@@ -1191,7 +1191,7 @@ Learning Objectives
 > [!NOTE]
 > Nãy giờ kiểu như nói về **cách mà SentencePiece hoạt động khi thực
 > hiện việc tokenization**. Bây giờ mình sẽ lấy data, preprocess nó và
-> \**apply BPE algorithm** - tokenization.
+> **apply BPE algorithm** - tokenization.
 >
 > Function dưới đại khái là nhận filepath của file data chứa data json,
 > Đầu tiên nó **mở file được chỉ định** bởi filepath với **open(filepath)** và đọc nội dung của file dưới dạng một list các **json-likes strings**.
@@ -1243,7 +1243,7 @@ Learning Objectives
 > prepend với một kí tự '_'** để **indicate rằng đó là bắt đầu của một từ**. 
 >
 > Cuối cùng,
-> \**các characters được tách ra bởi space** để **BPE algorithm có thể nhóm các
+> **các characters được tách ra bởi space** để **BPE algorithm có thể nhóm các
 > characters phổ biến nhất** trong dictionary theo một **'greedy fashion'.**
 >
 > Trong đoạn code dưới, ta thấy họ **tạo Counter**, bỏ vào đó một **list các word**: tạo
@@ -1253,7 +1253,7 @@ Learning Objectives
 >
 > Dòng thứ 2, **dùng Python list comprehension** tạo dictionary, map giữa **key-value,** 
 > Trong đó key là: **Từng kí tự trong word**, **joint với nhau** và **xen ' ' vào giữa**. Ví dụ
-> \**word = '_want' -> '_ w a n t', '_get' -> '_ g e t'**
+> **word = '_want' -> '_ w a n t', '_get' -> '_ g e t'**
 >
 > Còn value là: **freq = frequency = số lần xuất hiện của từ mà Counter nó đếm
 > được.**
@@ -1278,7 +1278,7 @@ Learning Objectives
 > processing (NLP) to **break down words** into **smaller units**, such as **subword pieces**. It's a popular
 > approach for **handling out-of-vocabulary words** and **reducing the size of the vocabulary**, which can be
 > helpful for NLP models. Tokenization refers to the process of **splitting text into smaller units**, like **words** or
-> \**subword pieces**.
+> **subword pieces**.
 >
 > 2. **Vocabulary Size Matters**: The **size of the vocabulary** (the **number of unique tokens** or **subword
 > pieces**) is a **crucial hyperparameter** when using BPE. The vocabulary size determines **how finely
@@ -1521,12 +1521,12 @@ Learning Objectives
 > [!NOTE]
 > You've seen how to use **BERT**, and other **transformer models** for a wide range of **natural
 > language tasks**, including machine translation, summarization, and question answering.
-> \**Transformers** have become the **standard model for NLP,** similar to **convolutional models in
+> **Transformers** have become the **standard model for NLP,** similar to **convolutional models in
 > computer vision**. And all started with **Attention**!
 >
 > In practice, you'll **rarely train a transformer model from scratch**. Transformers tend to be
 > very **large**, so they take **time, money, and lots of data** to train fully. Instead, you'll want to
-> \**start with a pre-trained model and fine-tune it** with your dataset if you need to.
+> **start with a pre-trained model and fine-tune it** with your dataset if you need to.
 >
 > \\_Hugging Face\\_ (🤗) is the best resource for pre-trained transformers. Their **open-source
 > libraries** simplify **downloading** and **using transformer models** like **BERT, T5, and GPT-2**.
@@ -1586,7 +1586,7 @@ Learning Objectives
 > Và với pipeline đã load, ta **chỉ việc inference nó với "câu
 > hỏi" mà ta cần hỏi ở dạng text**. **Pipeline** bên trong sẽ có **tokenizer phù
 > hợp để tokenize input** và **inference với model**, cũng như
-> \**detokenize model's output**
+> **detokenize model's output**
 
 <br>
 
@@ -1870,7 +1870,7 @@ Learning Objectives
 
 > [!NOTE]
 > Dùng **AutoModelForQuestionAnswering**.
-> \**from_pretrained**(tên model  = distilBERT
+> **from_pretrained**(tên model  = distilBERT
 > model name) để **load model**
 
 <br>
@@ -2110,7 +2110,7 @@ Learning Objectives
 > Ở đây ta sẽ chỉ **sử dụng một vài example của nó** (trong file **data.
 > txt**)
 >
-> \**Open file và tạo list**
+> **Open file và tạo list**
 
 <br>
 
@@ -2128,7 +2128,7 @@ Learning Objectives
 
 > [!NOTE]
 > Có thể thấy mỗi data sample là map với các key
-> \**content-length, content-type, text, timestamp, url**
+> **content-length, content-type, text, timestamp, url**
 
 <br>
 
@@ -2155,8 +2155,8 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là để **tạo training data** sample, ta **lấy một câu** rồi
-> \**mask** một hay vài phần (cụm từ) đi, để làm input, và
-> \**dùng các cụm từ được mask đó để làm output**
+> **mask** một hay vài phần (cụm từ) đi, để làm input, và
+> **dùng các cụm từ được mask đó để làm output**
 
 <br>
 
@@ -2177,7 +2177,7 @@ Learning Objectives
 >
 > Có nghĩa là không có gì khác hết. Và ta sẽ **dùng phương thức nói ở trên**
 > (**che từ đi, và dùng nó làm label**) để train model predict. Cách này gọi là
-> \**self-supervised learning** và thật ra ta đã dùng nó ở **CBOW** - Continuous
+> **self-supervised learning** và thật ra ta đã dùng nó ở **CBOW** - Continuous
 > Bowl Of Words
 >
 > Đoạn code dưới **loop trong data và lấy content (text) ra bỏ vào thành một
@@ -2197,7 +2197,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái nói là **họ chuẩn bị hai function** giúp **tokenize** và
-> \**detokenize** data. Trong đó dùng **sentencepiece** vocabulary
+> **detokenize** data. Trong đó dùng **sentencepiece** vocabulary
 > được **fit từ bộ dataset C4.**
 >
 > Trong function nó sẽ load bộ vocab này (**vocab_file='
@@ -2482,7 +2482,7 @@ Learning Objectives
 > [!NOTE]
 > input string:
 >
-> \**b'Beginners** BBQ Class Taking Place in Missoul**a!**\\nDo you want
+> **b'Beginners** BBQ Class Taking Place in Missoul**a!**\\nDo you want
 > to get  better at making **delicious** BBQ? You will have the
 > opportunity, put **this  on** your calendar now. Thursday, September
 > 22**nd** **join** World Class  BBQ Champion, Tony Balay **from
@@ -2886,19 +2886,19 @@ Learning Objectives
 > (Encoder block) như một cách để biết thật sự bên trong Trax's
 > Transformer có gì.
 >
-> \**d_ff** là **số unit của Feed Forward layers**,
+> **d_ff** là **số unit của Feed Forward layers**,
 >
-> \**d_model** là **kích thước embedding vector**,
+> **d_model** là **kích thước embedding vector**,
 >
-> \**max_len** là h.p quy định **max length** để giúp quá trình **padding và
+> **max_len** là h.p quy định **max length** để giúp quá trình **padding và
 > batching.**
 >
-> \**n_heads** là **number of heads trong Multi-head attentions layers**.
+> **n_heads** là **number of heads trong Multi-head attentions layers**.
 >
-> \**dropout** đương nhiên là **dropout rate,** 
+> **dropout** đương nhiên là **dropout rate,** 
 > input vocab size là **vocab size,**
 >
-> \**n_encoder_layers** = 24 tức có tới 24 Encoder kế tiếp nhau trong
+> **n_encoder_layers** = 24 tức có tới 24 Encoder kế tiếp nhau trong
 > Encoder stacks,
 >
 > tương tự với **n_decoder_layers**
@@ -2996,7 +2996,7 @@ Learning Objectives
 
 > [!NOTE]
 > Chưa hiểu lắm, họ dùng **trax.supervise.decoding**, gọi function
-> \**autoregressive_sample** take input:
+> **autoregressive_sample** take input:
 >
 > \- **pre-trained model** load ở trên,
 >
@@ -3034,7 +3034,7 @@ Learning Objectives
 
 > [!NOTE]
 > Thử **dùng** T5 đã **fine-tuned trên SqaAD dataset**. Đưa vào model
-> \**question + context** và xem thử answer của nó ra sao
+> **question + context** và xem thử answer của nó ra sao
 
 <br>
 
@@ -3080,7 +3080,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là lab này mình sẽ dùng **T5 model** đã được
-> \**fine-tuned với bộ dataset tên là SQuAD**.
+> **fine-tuned với bộ dataset tên là SQuAD**.
 
 <br>
 
@@ -3154,7 +3154,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/29e47f238a3b5430da35adbaaccdadaba02f876c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**inputs** = '**question**: What are some of the colours of a rose? **context**: A rose is
+> **inputs** = '**question**: What are some of the colours of a rose? **context**: A rose is
 > a woody perennial flowering plant of the genus Rosa, in the family Rosaceae,
 > or the flower it bears.There are over three hundred species and tens of
 > thousands of cultivars. They form a group of plants that can be erect shrubs,

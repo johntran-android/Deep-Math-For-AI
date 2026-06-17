@@ -48,7 +48,7 @@
 
 > [!NOTE]
 > Đầu tiên gs cho biết ra nhiều người lẫn lộn giữa **RANDOM VARIABLE** và
-> \**DISTRIBUTION** CỦA NÓ (tức PMF) . Ông gọi nó là **Sympathetic magic.**
+> **DISTRIBUTION** CỦA NÓ (tức PMF) . Ông gọi nó là **Sympathetic magic.**
 
 <br>
 
@@ -99,7 +99,7 @@
 > căn nhà. **Ta không thể ở trong bản thiết kế** của căn nhà.
 >
 > Và vì vậy ta **có thể có nhiều căn nhà với cùng một design**. GIống như ta có thể có
-> \**NHIỀU RANDOM VARIABLE** CÓ CÙNG **MỘT DISTRIBUTION**. Ví dụ như trong
+> **NHIỀU RANDOM VARIABLE** CÓ CÙNG **MỘT DISTRIBUTION**. Ví dụ như trong
 > Binomial ta có n i.i.d indicator random variable đều có distribution Bern(p)
 
 <br>
@@ -196,13 +196,13 @@
 >
 > = e^(-λ) * Σk=1:inf [λ^k / (k-1)!]
 >
-> \**Lấy bớt 1 λ** ra ngoài
+> **Lấy bớt 1 λ** ra ngoài
 >
 > = e^(-λ) * λ * Σk=1:inf [**λ^(k-1) / (k-1)!**] 
 >
 > Thì E(X) = **Σk=0:inf [λ^(k-1) / (k-1)!]** , ta có thể **đặt n = k-1** để có:
 >
-> \**EX = e^(-λ) * λ * Σn=0:inf [λ^n / n!]** thì cái tổng **lại chính là Taylor 
+> **EX = e^(-λ) * λ * Σn=0:inf [λ^n / n!]** thì cái tổng **lại chính là Taylor 
 > series của e^λ**
 >
 > Nên kết quả là e^(-λ) * λ * e^λ = **λ** Đây cũng là kiến thức mà ta đã biết từ I.S.L, **Expected value của Poisson
@@ -267,7 +267,7 @@
 
 > [!NOTE]
 > Và ta gọi đó là mô hình **Poisson Poisson paradigm**. Có **SỐ LƯỢNG LỚN N EVENTS A_j** với
-> \**XÁC SUẤT EVENT p_j XẢY RA NHỎ** (điều này cũng giống như có số lớn trial, xác suất success
+> **XÁC SUẤT EVENT p_j XẢY RA NHỎ** (điều này cũng giống như có số lớn trial, xác suất success
 > của mỗi trial nhỏ)
 
 > [!NOTE]
@@ -307,17 +307,17 @@
 > Thế thì **KHI MỘT SETTING MÀ CÓ CÁC ĐẶC ĐIỂM PHÙ HỢP NHƯ VỪA RỒI** ta **SẼ CÓ THỂ TUYÊN BỐ 
 > (CLAIM)** **RẰNG:** 
 >
-> \**#Số event Aj xuất hiện (tương đương số trial success)** sẽ có thể **COI NHƯ, XẤP XỈ NHƯ** một **Poisson (λ)** 
+> **#Số event Aj xuất hiện (tương đương số trial success)** sẽ có thể **COI NHƯ, XẤP XỈ NHƯ** một **Poisson (λ)** 
 > r**andom variable**, hay nói cách khác nó sẽ tuân theo **Poisson distribution**
 >
-> \**ĐỂ TỪ ĐÓ CÓ THỂ DÙNG PMF CỦA POISSON ĐỂ XẤP XỈ PMF CỦA NÓ**
+> **ĐỂ TỪ ĐÓ CÓ THỂ DÙNG PMF CỦA POISSON ĐỂ XẤP XỈ PMF CỦA NÓ**
 >
 > Và ta **đã chứng minh** **Expected value** của Poisson random variable là **λ**.
 >
 > Nên bây giờ khi ta nói **#số event Aj xuất hiện** sẽ xấp xỉ là một **Poisson random variable** thì **sẽ make sense
 > nếu ta cho rằng expected value của #số event Aj xuất hiện chính là bằng λ**
 >
-> \**E[#Số event Aj xuất hiện] = λ**
+> **E[#Số event Aj xuất hiện] = λ**
 >
 > Nhưng bên cạnh đó,
 >
@@ -431,7 +431,7 @@
 > [!NOTE]
 > Cụ thể là ta sẽ xem **PMF của Binomial** như đã biết
 >
-> \**P(X=k) = (n choose k) p^k (1-p)^(n-k)**,
+> **P(X=k) = (n choose k) p^k (1-p)^(n-k)**,
 >
 > sẽ **trở thành như thế nào** khi **p->0** (ứng với việc xác suất
 > success của các trial trở nên nhỏ)
@@ -447,7 +447,7 @@
 > [!NOTE]
 > Rồi, ta sẽ dùng **đại số** để **triển khai ra** một chút trước khi **tính limit của nó**.
 >
-> \**(n choose k)** theo ý nghĩa hoặc theo công thức ta nhớ nó là **số cách chọn set
+> **(n choose k)** theo ý nghĩa hoặc theo công thức ta nhớ nó là **số cách chọn set
 > k item từ n item không care thứ tự**. Để rồi nó là **n*(n-1)...*(n-k+1)/k!**
 >
 > Thế p = λ/n vào ta có
@@ -484,7 +484,7 @@
 > Sau đó gs ghi chú cho ta **một công thứ**c mà ông cho là **quan trọng nhất của 
 > limit** là: 
 >
-> \**(1 + x/n)^n sẽ tiến về e^x khi n -> infinity**
+> **(1 + x/n)^n sẽ tiến về e^x khi n -> infinity**
 >
 > Do đó **áp dụng cái này** ta sẽ có **(1- λ/n)^n** sẽ tiến tới **e^(-λ)**
 
@@ -552,7 +552,7 @@
 > có độc lập với nhau không.
 >
 > Hơn nữa, **Binomial đòi hỏi** xác suất success đều là **theo Bern(p)** tức là
-> \**một là có mưa rơi trúng hai là không**. Mà trong tình huốnng này, **có thể một
+> **một là có mưa rơi trúng hai là không**. Mà trong tình huốnng này, **có thể một
 > ô có nhiều hạt mưa rơi trúng**, thành ra xác suất trial success / event xảy ra
 > cũng không hoàn toàn theo Bern(p).
 >
@@ -624,9 +624,9 @@
 >
 > Vậy thì xét bộ 3 người (i,j,k), ta sẽ tính xác suất họ trùng sinh nhật, tức P(A_ijk) theo **naive definition**
 >
-> \**Sample space**: **Chọn ngày sinh cho 3 người** thì có **365^3 possible outcomes**
+> **Sample space**: **Chọn ngày sinh cho 3 người** thì có **365^3 possible outcomes**
 >
-> \**Event space**: Đếm các possible outcome thuộc event space [trùng ngày sinh]: 
+> **Event space**: Đếm các possible outcome thuộc event space [trùng ngày sinh]: 
 >
 > theo 3 bước: chọn ngày sinh cho ông thứ nhất: 365, chọn ngày sinh cho ông thứ 2: 1 (vì phải trùng với ông thứ 1), chọn ngày 
 > sinh cho ông thứ 3: 1. Vậy theo step rule có **365 possible outcome thuộc event space**.
@@ -664,7 +664,7 @@
 > minh (theo link). Vậy **E[#Số triple matched] = lambda**.
 >
 > Thế mà EX tức E[#Số triple matched], ta đã dùng các công cụ **linearity**,
-> \**fundamental bridge** để tính **expected value ra** (n choose k) [1/365^2]
+> **fundamental bridge** để tính **expected value ra** (n choose k) [1/365^2]
 >
 > Từ đó cho phép ta có **lambda = (n choose k) [1/365^2]** 
 
@@ -703,7 +703,7 @@
 >
 > Và để tính P của event này, ta sẽ dùng complement của nó, để từ đó :
 >
-> \**P([ÍT NHẤT một triple matched])** = 1 - **P([KHÔNG CÓ triple matched nào])**
+> **P([ÍT NHẤT một triple matched])** = 1 - **P([KHÔNG CÓ triple matched nào])**
 >
 > Và P([KHÔNG CÓ triple matched nào]) chính là P(X=0) = e^-λ * λ^0 / 0! = e^-λ * 1 / 1
 > = **e^-λ**

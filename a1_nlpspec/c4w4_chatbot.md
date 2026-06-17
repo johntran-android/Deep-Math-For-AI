@@ -69,14 +69,14 @@ Describe the Reformer model
 > due to their size, **requiring industrial-scale compute**.
 >
 > 4/ The session will introduce the **"reformer" model**, also known as the
-> \**reversible transformer**, highlighting its significance and functionality.
+> **reversible transformer**, highlighting its significance and functionality.
 >
 > 5/ Participants will **build and train a chatbot** that can **handle extensive text
 > sequences**, using all the **prior context** in a conversation to generate
 > appropriate replies.
 >
 > 6/ The differences between **context-based Q&A** and c**losed-loop Q&A** are
-> \**revisited**, with **emphasis on how chatbots function similarly to the latter.**
+> **revisited**, with **emphasis on how chatbots function similarly to the latter.**
 >
 > 7/ The assignment for the week will u**tilize the NLP knowledge** from
 > previous courses, **harnessing transformers** for l**ong sequences** to develop
@@ -94,7 +94,7 @@ Describe the Reformer model
 
 > [!NOTE]
 > Nói về các task mà **deal với long text sequences** như **viết sách**, và
-> \**chatbot** đặt ra thách thức là **un-trainable model**
+> **chatbot** đặt ra thách thức là **un-trainable model**
 >
 > Thì tuần này họ sẽ nói về **Reformer = Reversible Transformer** giúp giải
 > quyết thách thức này,
@@ -154,13 +154,13 @@ Describe the Reformer model
 > 1/ Running a large transformer on **long sequences** often results in **memory issues.**
 >
 > 2/ **Transformers' size** introduces various **engineering challenges**, particularly when
-> \**handling attention.**
+> **handling attention.**
 >
 > 3/ Attention on a sequence of **length L** demands **L squared time and memory**, mainly
 > because of the **pairwise comparison of each word in two sentences**.
 >
 > 4/ The memory requirement is **compounded with increased layers**, as demonstrated by
-> \**GPT-3's 96 layers.**
+> **GPT-3's 96 layers.**
 >
 > 5/ **Calculations** become **increasingly cumbersome** as sequence lengths grow, e.g., a
 > sequence of **10,000 words** demands **100 million operations**.
@@ -176,7 +176,7 @@ Describe the Reformer model
 > activations for backpropagation**.
 >
 > 9/ Although one can **reduce memory** by **recomputing activations**, this can be
-> \**time-consuming**, especially for models like GPT-3.
+> **time-consuming**, especially for models like GPT-3.
 >
 > 10/ The goal is to **find efficient ways** to **speed up re-computation to save on memory.**
 >
@@ -209,7 +209,7 @@ Describe the Reformer model
 
 > [!NOTE]
 > Đại khái là nhắc lại **QKV attention** formula trong đó mỗi cái đều là
-> \**(L, d_model)** tensor.
+> **(L, d_model)** tensor.
 >
 > Nên các **kết quả của phép tính QK.T là tensor (LxL)**. Nên **nếu L lớn
 > thì yêu cầu bộ nhớ và tính toán cũng lớn theo L^2** 
@@ -274,7 +274,7 @@ Describe the Reformer model
 > predict vector của từ - word embedding vector, và **nhiệm vụ là tìm trong vocabulary,
 > vector từ nào là gần nhất với vector từ trên)**
 >
-> \**Gần xa ở đây là dựa vào các metric đo khoảng cách vector** như **Euclidean
+> **Gần xa ở đây là dựa vào các metric đo khoảng cách vector** như **Euclidean
 > distance** hay **Cosine similarity...**
 >
 > Thì ý tưởng là nếu ta tìm theo **kiểu tuyến tính** - như từ trên xuống thì với dataset lớn
@@ -307,7 +307,7 @@ Describe the Reformer model
 > Và **vì các plane được tạo có tính random nên**, **càng nhiều lần chia** (số hash table) thì đại
 > khái là **các điểm sẽ gần gần với các nearest neibor thật sự của vector** và dẫn đến kết
 > quả **càng chính xác** Nhưng **đổi lại sẽ tăng thời gian và computational cót** lên nên đây là
-> \**trade off giữa speed và precision**
+> **trade off giữa speed và precision**
 
 <br>
 
@@ -357,13 +357,13 @@ Describe the Reformer model
 > Nôm na cũng là, tạo các plane random để từ đó xác định bucket id
 > cho các data points là q và k1,k2...kn
 >
-> \**Làm nhiều lần như vậy** (như đã biết sẽ tăng độ chính xác khi tìm
+> **Làm nhiều lần như vậy** (như đã biết sẽ tăng độ chính xác khi tìm
 > nearest neighbor nhưng cũng tăng thời gian)
 >
 > Tổng hợp các k vector có chung bucket với q. Đó chính là
 > approximate nearest neighbor.
 >
-> \**Thực hiện attention với q và các \_k đó**\_ thay vì mọi key như
+> **Thực hiện attention với q và các \_k đó**\_ thay vì mọi key như
 > bản gốc
 
 <br>
@@ -389,7 +389,7 @@ Describe the Reformer model
 > Next, you **map each vector to a bucket with LSH**, then you **sort the vectors by LSH bucket**,
 >
 > and finally, you **do attention only in each bucket.**  You could do **this one bucket at a time**, but that
-> \**doesn't take advantage of hardware parallelism**.
+> **doesn't take advantage of hardware parallelism**.
 >
 > Instead, I'll show you how to do a **batch computation**.
 >
@@ -406,7 +406,7 @@ Describe the Reformer model
 > Bắt đầu ta sẽ dùng một **đám vector (mỗi time-step 1 vector) đóng vai trò vừa là q, vừa
 > là k.** Thay vì như original QKV attention là mỗi từ sẽ có 3 vector q, k, v
 >
-> \**Dùng LSH để xếp mỗi thằng vào một bucket id**. Kết quả minh hoạ như hàng 2, khi mỗi
+> **Dùng LSH để xếp mỗi thằng vào một bucket id**. Kết quả minh hoạ như hàng 2, khi mỗi
 > vector được assign bucket (xanh, đỏ, vàng)
 >
 > Xong **sort cả đám theo bucket id (từ nhỏ tới lớn)**. (hàng 3, các vector đã xếp theo các
@@ -675,7 +675,7 @@ Describe the Reformer model
 > the **original attend function**. We will review the steps in performing dot-product
 > attention with more focus on the details of the operations and their significance.
 > This is useful when comparing to LSH attention. Note we will be discussing a
-> \**single example/head** unless otherwise specified.
+> **single example/head** unless otherwise specified.
 
 <br>
 
@@ -686,13 +686,13 @@ Describe the Reformer model
 > [!NOTE]
 > The **attend function** receives **Query** and **Key**. As a reminder, they are produced by a
 > matrix multiply of all the inputs with a single set of weights. We will describe the inputs as
-> \**embeddings** assuming an NLP application, however, this is not required.
+> **embeddings** assuming an NLP application, however, this is not required.
 >
 > This matrix multiply works very much like a **convolutional network** where a **set of weights (a
 > filter)** **slides across the input vectors** leaving behind a **map of the similarity of the input to
 > the filter.**  In this case, the **filters are the weight matrices** 𝑊𝑄 **and** 𝑊𝐾. The r**esulting
 > maps are** **Q and K**. Q and K have the dimensions of (**n_seq, n_q**) where **n_seq** is the
-> \**number of input embeddings** and **n_q** or **n_k** is the s**elected size of the Q or K
+> **number of input embeddings** and **n_q** or **n_k** is the s**elected size of the Q or K
 > vectors**.
 >
 > Note the shading of Q and K, this reflects the fact that **each entry is associated with a particular
@@ -701,16 +701,16 @@ Describe the Reformer model
 > K. In that case, the dot-product in attend is **matmul(q,q)**.
 >
 > Note the resulting dot-product (Dot) entries describe a complete (**n_seq,n_seq**) map of the
-> \**similarity of all entries of q vs all entries of k**. This is reflected in the notation in the dot-product
+> **similarity of all entries of q vs all entries of k**. This is reflected in the notation in the dot-product
 > boxes of  𝑤𝑛 **,** 𝑤𝑚   representing **word_n, word_m**.
 >
 > Note that each row of Dot describes the relationship of an input embedding, say  𝑤**0** , with
-> \**every other input.**
+> **every other input.**
 
 > [!NOTE]
 > Hình trước đã review lại cách hoạt động của QKV Dot Product Attention.
 >
-> \**Word embeddings** (n_seq, emb_dim) sẽ t**hông qua các weight matrix WQ, 
+> **Word embeddings** (n_seq, emb_dim) sẽ t**hông qua các weight matrix WQ, 
 > WK, WV** mà tạo ra **Q (n_seq, n_q), K (n_seq, n_k), V (n_seq, n_v)** mà có
 > thể n_q = n_k = n_v = emb_dim luôn.
 >
@@ -729,7 +729,7 @@ Describe the Reformer model
 >
 > Và một cái nữa đó là **hoàn toàn có thể bỏ cái K đi, chỉ dùng Q** đóng luôn vai trò
 > của K vẫn sẽ ra kết quả tương tự. Attention weights sẽ là 
-> \**softmax [sqrt(Q@Q_T)/n_q]**
+> **softmax [sqrt(Q@Q_T)/n_q]**
 
 <br>
 
@@ -756,7 +756,7 @@ Describe the Reformer model
 > K_T** những chỗ đó có **giá trị âm lớn, sau khi softmax sẽ thành ra 0**.
 >
 > Việc này mang ý nghĩa là **khi cần "tính" những từ liên quan đến w1** thì
-> \**bỏ qua những từ sau nó, chỉ dùng những từ trước (và chính nó) nó là w0,
+> **bỏ qua những từ sau nó, chỉ dùng những từ trước (và chính nó) nó là w0,
 > w1**
 
 <br>
@@ -774,7 +774,7 @@ Describe the Reformer model
 > [!NOTE]
 > Softmax sẽ apply và kết quả của "scaled dot product" Theo
 > từng row để normalize, **biến mỗi row** (ví dụ row 1) đang là các "
-> \**chỉ số tương quan"** của một từ (w0) với các từ khác (w0,w1....)
+> **chỉ số tương quan"** của một từ (w0) với các từ khác (w0,w1....)
 > thành ra **attention weights - trọng số**
 
 <br>
@@ -950,15 +950,15 @@ Describe the Reformer model
 
 > [!NOTE]
 > 1. **Memory Efficiency** in **Deep Models**: **Large deep models** often **run out of memory** due to the
-> \**continuous allocation of memory** by each layer. This problem can be addressed using
-> \**reversible layers.**
+> **continuous allocation of memory** by each layer. This problem can be addressed using
+> **reversible layers.**
 >
 > 2. **Reversible Residual Connections**: To save memory while **running the Transformer network
 > in reverse**, **reversible residual connections** are introduced. These **connections allow you to
 > recompute activations quickly instead of storing them**.
 >
 > 3. Reversible Layer Configuration: The key idea is to **have two copies of the model inputs** and
-> \**update only one of them at each laye**r. The **unmodified activations are used to compute
+> **update only one of them at each laye**r. The **unmodified activations are used to compute
 > residuals.**
 >
 > 4. Reversible Layer Equations: The standard residual connection equations in a Transformer
@@ -997,7 +997,7 @@ Describe the Reformer model
 > [!NOTE]
 > When running **large deep models**, you'll often **run out of memory**, as **each layer
 > keeps allocating it for a long time**. I'll show you how this can be solved using
-> \**reversible layers**. Let's dive in.
+> **reversible layers**. Let's dive in.
 >
 > The transformer network proceeds by **repeatedly adding the residuals to the hidden
 > states**. To run it in reverse, you can **subtract the residuals in the opposite order**,
@@ -1263,11 +1263,11 @@ Describe the Reformer model
 >
 > Explore the **MultiWoz dataset**
 >
-> \**Process the data to feed it into the model**
+> **Process the data to feed it into the model**
 >
 > Train your model
 >
-> \**Generate a dialogue by feeding a question to the model**
+> **Generate a dialogue by feeding a question to the model**
 
 <p align="center"><kbd><img src="assets/7c84f13f584749fc0c64b8330a510004e8a0f7ad.png" width="100%"></kbd></p>
 
@@ -1496,7 +1496,7 @@ Describe the Reformer model
 
 > [!NOTE]
 > Lấy **tất cả các key** của dialog dataset ra, loop trong đó và
-> \**dùng function get_conversation() ở trên để lấy các dialog
+> **dùng function get_conversation() ở trên để lấy các dialog
 > content** - là đoạn **text chứa các câu kế tiếp nhau không có
 > xuống dòng gì cả, append vào list**
 
@@ -1528,8 +1528,8 @@ Describe the Reformer model
 > dialog** theo kiểu **yield (thay vì return) như ta đã biết là nó sẽ
 > return từng chút từng chút** 
 >
-> \**Tuple (dialog, dialog)** là vì khi training dialog cũng **chính là target** (kiểu như **self-supervise learning mà**) cụ thể dùng như thế nào thì
-> \**tí sẽ biết.**
+> **Tuple (dialog, dialog)** là vì khi training dialog cũng **chính là target** (kiểu như **self-supervise learning mà**) cụ thể dùng như thế nào thì
+> **tí sẽ biết.**
 
 <br>
 
@@ -1752,7 +1752,7 @@ Describe the Reformer model
 
 > [!NOTE]
 > Cơ bản **nói thêm về cách thức hoạt động** để hiểu sơ, còn
-> \**Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
+> **Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
 > y1 = x1 + f(x2), f là attention, thì **còn có vụ swap x2, và
 > y1 trong stack để x2 nằm trên.**
 >
@@ -1832,13 +1832,13 @@ Describe the Reformer model
 
 > [!NOTE]
 > Define **training.TrainTask** take input **labeled_data** là **train_gen** = **training**
-> \**data** **generator** ở trên.
+> **data** **generator** ở trên.
 >
-> \**loss_layer** là **tl.CrossEntropyLoss**(),
+> **loss_layer** là **tl.CrossEntropyLoss**(),
 >
-> \**optimizer** dùng **trax.optimizer.Adam** với lr = 0.01
+> **optimizer** dùng **trax.optimizer.Adam** với lr = 0.01
 >
-> \**lr_schedule** dùng **trax.lr.warmup_and_rsqrt_decay** với **n_warmup_steps** =
+> **lr_schedule** dùng **trax.lr.warmup_and_rsqrt_decay** với **n_warmup_steps** =
 > 1000 cái này để nghiên cứu sau nhưng **cơ bản là có thể hiểu nó là một specific
 > technique của  adjusted learning rate**.
 >
@@ -1887,7 +1887,7 @@ Describe the Reformer model
 <p align="center"><kbd><img src="assets/2249557a6edbeed0919b3e2875287efb87ce247c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Load (pre-trained) weights từ file** và **save
+> **Load (pre-trained) weights từ file** và **save
 > starting state** để reset model state khi ta generate
 > new conversation. Tí sẽ hiểu
 

@@ -89,13 +89,13 @@
 >
 > Vì gs cho rằng ta đang **LẠM DỤNG NAIVE DEFINITION** probability, vì điều
 > trên chỉ đúng nếu như trong tình huống **các possible outcome đều**
-> \**EQUALLY LIKELY** ví dụ như, **cho 2 cửa có một xe một dê**, thì đúng là khi
+> **EQUALLY LIKELY** ví dụ như, **cho 2 cửa có một xe một dê**, thì đúng là khi
 > đó các possible outcome khi chọn một cửa là equally likely.
 >
 > Nhưng ở đây, trong bài toán này có 3 cửa, chứa 2 dê 1 xe, đã chọn một cửa
 > rồi ông Monty mở một cửa có dê, thì lúc này tuy vẫn là 2 cửa có một dê một
 > xe nhưng **dựa vào (condition on) những gì đã có**, thì các possible outcome
-> \**KHÔNG CÒN EQUALLY LIKELY NỮA. DO ĐÓ XÁC SUẤT KHÔNG CÒN
+> **KHÔNG CÒN EQUALLY LIKELY NỮA. DO ĐÓ XÁC SUẤT KHÔNG CÒN
 > LÀ 50-50**.
 
 <br>
@@ -110,7 +110,7 @@
 >
 > Thì gs lưu ý rằng: **Sai lầm khó thấy mà người ta hay mắc phải** khi lập
 > luận như vừa rồi đó là, v**iệc Monty mở cửa 2 cho thấy con dê** thực ra có
-> \**2 sự kiện:** 1) **Cửa số 2 có con dê** và 2) **Monty chọn cửa 2**
+> **2 sự kiện:** 1) **Cửa số 2 có con dê** và 2) **Monty chọn cửa 2**
 >
 > Và ta **PHẢI DỰA TRÊN** (CONDITION ON) **CẢ HAI SỰ KIỆN NÀY**
 
@@ -191,7 +191,7 @@
 
 > [!NOTE]
 > Và tương tự như khi sau khi ta bỏ đi các pepple không nằm trong B, ta
-> \**RENORMALIZING** để các xác suất có tổng bằng 1. Thì đây cũng vậy, ta
+> **RENORMALIZING** để các xác suất có tổng bằng 1. Thì đây cũng vậy, ta
 > sẽ nhân 2 cho mỗi cái để đưa chúng về 1/3 và 2/3 (có tổng bằng 1)
 >
 > Như vậy, cho thấy **P([cái xe nằm sau cửa 1], [monty mở cửa 2]) là 1/3**
@@ -255,7 +255,7 @@
 > như tôi biết / có điều này, giá như tôi biết điều kia**" không ích lợi gì.
 >
 > Nhưng với probability, thì khi ta nảy sinh những suy nghĩ như vậy thì nó gợi
-> \**ý cho ta DỰA TRÊN / CONDITION ON NHỮNG CÁI ĐÓ (đây là cách tiếp
+> **ý cho ta DỰA TRÊN / CONDITION ON NHỮNG CÁI ĐÓ (đây là cách tiếp
 > cận "wishful thinking" mà gs sẽ nói đến nhiều lần sau này)** Và trong bài toán này, sẽ dễ hiểu khi ta **GIÁ NHƯ BIẾT ĐƯỢC VỊ TRÍ
 > CÁI XE, và ta sẽ condition on that**
 
@@ -309,7 +309,7 @@
 > Và P**(D1), P(D2), P(D3) là prior probability**, lần lượt là xác suất cái xe nằm sau
 > cửa 1,2,3. Đương nhiên đều bằng **1/3 (do equally likely và naive definition)**
 >
-> \**TỪ đó P(S) = Σi P(S|Di)P(Di) = P(S|D1)(1/3) + P(S|D2)(1/3) + P(S|D3)(1/3)**
+> **TỪ đó P(S) = Σi P(S|Di)P(Di) = P(S|D1)(1/3) + P(S|D2)(1/3) + P(S|D3)(1/3)**
 
 <br>
 
@@ -420,7 +420,7 @@
 > (2+81)/(2+8+81+9) = 83% lớn hơn của bs A là (70+10)/(70+20+10) = 80%**
 >
 > Nghịch lý này dễ thấy là **bởi bs B làm nhiều ca tháo băng, là loại dễ**, khiến
-> \**trung bình lại thì tỉ lệ thành công cao hơn bs A**.
+> **trung bình lại thì tỉ lệ thành công cao hơn bs A**.
 >
 > Do đó gs nói chắc chắn là **có nhiều bs hàng đầu thế giới** nhưng **tỉ lệ của họ
 > không cao lắm** vì họ **chỉ làm những ca khó nhất**
@@ -446,7 +446,7 @@
 > mùa**. Nhưng **chỉ cần người B có thực hiện nhiều cú đánh  hơn người A ở
 > mùa sau**, y như bs B làm 90 ca thay băng trong đó fail 9, tỉ lệ thành công
 > 81/90 (so với bs A chỉ làm 10 ca thay băng,  thành công cả 10, tỉ lệ 100/100)
-> \**sẽ giúp kéo tổng tỉ lệ thành công của bs B lên cao hơn A.**
+> **sẽ giúp kéo tổng tỉ lệ thành công của bs B lên cao hơn A.**
 
 <br>
 

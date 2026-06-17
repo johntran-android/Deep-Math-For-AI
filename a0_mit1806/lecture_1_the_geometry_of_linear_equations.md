@@ -44,10 +44,10 @@
 >
 > Nãy giờ ở đây gs nói về **Row picture** kiểu như **góc
 > nhìn về matrix theo các row.**  Dưới góc nhìn này, việc
-> \**solve equation system này là việc tìm ra bộ x,y giúp
+> **solve equation system này là việc tìm ra bộ x,y giúp
 > solve cả hai equation**, hay nói cách khác chính là:
 >
-> \**Tìm ra điểm giao của hai linear line**
+> **Tìm ra điểm giao của hai linear line**
 
 <br>
 
@@ -92,7 +92,7 @@
 > Thành ra ta sẽ cộng **1*col1 với 2*col2**
 >
 > Hình ảnh sẽ là ta **đi theo hướng col1 một đoạn = 1*col1** và
-> \**đi theo hướng col2 một đoạn = 2*col2** sẽ **dẫn tới chính là
+> **đi theo hướng col2 một đoạn = 2*col2** sẽ **dẫn tới chính là
 > vector b (0,3)**
 
 <br>
@@ -179,7 +179,7 @@
 >
 > Hay điều này **tương tự** như hỏi rằng:
 >
-> \**Liệu với 3 vector col1,2,3,** **ta có thể cover mọi điểm
+> **Liệu với 3 vector col1,2,3,** **ta có thể cover mọi điểm
 > trong không gian 3D** ko?
 
 <br>
@@ -206,13 +206,13 @@
 
 > [!NOTE]
 > Còn ở một trường hợp khác, giả sử ta có matrix A với
-> \**3 col vector nằm trong một plane**, mà điều này xảy
+> **3 col vector nằm trong một plane**, mà điều này xảy
 > ra **khi một col vector là combination của hai col kia**
 > (vì như đã biết, **hai col kia sẽ cover một plane**, nên
-> \**nếu col thứ 3 nằm trong plane đó thì nó sẽ là một
+> **nếu col thứ 3 nằm trong plane đó thì nó sẽ là một
 > linear combination của hai col 1 và col 2**.
 >
-> \**Khi đó 3 col vector chỉ cover được 1 plane** nên **mọi điểm b nằm ngoài plane này sẽ đều không
+> **Khi đó 3 col vector chỉ cover được 1 plane** nên **mọi điểm b nằm ngoài plane này sẽ đều không
 > reachable bằng 3 col vector** -> không thể solve
 > equasys với 3 vector này được
 
@@ -253,7 +253,7 @@
 > có **2 cách**, và gs như nãy giờ cũng thấy **thích cách làm
 > theo column**.
 >
-> \**Với góc nhìn column** thì **Ax là một linear combination
+> **Với góc nhìn column** thì **Ax là một linear combination
 > của các col vector của A**, mà **các coefficient quy định
 > bởi x**
 >
@@ -262,7 +262,7 @@
 
 > [!NOTE]
 > Bài sau gs sẽ dùng phương pháp
-> \**Elimination** để **tìm solution của equasys**
+> **Elimination** để **tìm solution của equasys**
 
 <br>
 

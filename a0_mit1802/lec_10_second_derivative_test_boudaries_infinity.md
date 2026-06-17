@@ -47,7 +47,7 @@
 > [!NOTE]
 > Thế thì đầu tiên gs cho rằng, cũng **giống như với bài toán một biến**,
 > khi ta đã **xác định được critical point** bằng cách solve equation
-> \**derivative = 0**.
+> **derivative = 0**.
 >
 > Thì ta sẽ **dùng second derivative** để xác định xem **function cong
 > lên hay cong xuống**
@@ -81,7 +81,7 @@
 
 > [!NOTE]
 > Thế thì nhớ như bữa trước, ta có thể làm cách khác bằng cách
-> \**completing the square**, như ở đây, trong ví dụ cụ thể w = x^2 + 2xy
+> **completing the square**, như ở đây, trong ví dụ cụ thể w = x^2 + 2xy
 > \+ 3y^2 này thì k**ết quả nó là (x+y)^2 + 2y^2** nên nó sẽ **luôn >=0**.
 > Và **chỉ bằng 0 khi x = y = 0**.
 >
@@ -337,12 +337,12 @@
 > \+ cy^2** nơi mà lúc nãy, dùng phương thức "**complete the square**"
 > ta đã kết luận rằng với các trường hơp sau:
 >
-> \**4ac - b^2 < 0** thì ta có **saddle point tại** 
+> **4ac - b^2 < 0** thì ta có **saddle point tại** 
 >
-> \**4ac - b^2 > 0** thì tùy **a âm** thì ta có **maximum** hay a **dương** thì ta có 
-> \**minimum**
+> **4ac - b^2 > 0** thì tùy **a âm** thì ta có **maximum** hay a **dương** thì ta có 
+> **minimum**
 >
-> \**4ac - b^2 = 0** thì ta có trường hợp **degenerate** **critical point**
+> **4ac - b^2 = 0** thì ta có trường hợp **degenerate** **critical point**
 >
 > Vậy thì áp dụng **second derivative test**:
 >
@@ -372,19 +372,19 @@
 >
 > đại khái là dựa trên công thức **Taylor** expansion của hàm một biến:
 >
-> \**f(x) = f(a) + f'(a)(x-a) + (1/2!)f''(a)(x-a)^2 + (1/3!)f'''(a)(x-a)^3 + ..**  thì khi
+> **f(x) = f(a) + f'(a)(x-a) + (1/2!)f''(a)(x-a)^2 + (1/3!)f'''(a)(x-a)^3 + ..**  thì khi
 > ta **chỉ giữ đạo hàm cấp 1**, ta có **linear approximation**:
 >
-> \**f(x) ~= f(a) + f'(a)(x-a)**
+> **f(x) ~= f(a) + f'(a)(x-a)**
 >
 > Với hàm nhị biến f(x,y): Linear approximation sẽ là:
 >
-> \**f(x,y) ~= f(x0,y0) + f_x(x0, y0)(x-x0) + f_y(x0, y0)(y-y0)** chuyển f(x0,y0)
+> **f(x,y) ~= f(x0,y0) + f_x(x0, y0)(x-x0) + f_y(x0, y0)(y-y0)** chuyển f(x0,y0)
 > qua ta có:
 >
-> \**delta_f = f(x,y) - f(x0,y0) = f_x(x0, y0)(x-x0) + f_y(x0, y0)(y-y0)** Thế thì lí
+> **delta_f = f(x,y) - f(x0,y0) = f_x(x0, y0)(x-x0) + f_y(x0, y0)(y-y0)** Thế thì lí
 > do mà **linear approximation không hữu dụng lắm** vì, tại **critical point**,
-> \**f_x(x0,y0) = 0** và **f_y(x0,y0) = 0**. Nên thành ra nếu chỉ linear
+> **f_x(x0,y0) = 0** và **f_y(x0,y0) = 0**. Nên thành ra nếu chỉ linear
 > approximation thì **delta_f = 0** 
 >
 > Ta sẽ cần **quadratic approximation**, ta đã biết với hàm đơn biến sẽ là
@@ -403,7 +403,7 @@
 >
 > Thế thì đại khái là gs nói rằng **khi ta thay function f bằng approximation của
 > f**. Thì **critical point là không đổi**. Do đó, **tại critical point** với việc dùng
-> \**quadratic approximation** ta **coi như hàm quadratic.** 
+> **quadratic approximation** ta **coi như hàm quadratic.** 
 >
 > Và ý là bài toán trở về quadratic case trong đó các f_xx, f_xy, f_yy đóng vai
 > trò của a, b, c
@@ -444,7 +444,7 @@
 
 > [!NOTE]
 > tiếp ta sẽ tính second derivative A = f_xx,  B = f_xy, C = f_yy để tính 
-> \**AC - B^2**. Kết quả cho thấy **= 3 > 0** và **A dương**. Suy ra critical
+> **AC - B^2**. Kết quả cho thấy **= 3 > 0** và **A dương**. Suy ra critical
 > point là **local** **minimum**
 
 <br>

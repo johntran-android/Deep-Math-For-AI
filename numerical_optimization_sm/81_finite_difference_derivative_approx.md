@@ -32,13 +32,13 @@
 >
 > Gốc rễ của nó, như gs Nocedal nói, là từ Taylor's theorem đã học trong chap 2:
 >
-> \**f(x + p) = f(x) + ∇f(x + tp)Tp** for some t ∈ [0,1] 
+> **f(x + p) = f(x) + ∇f(x + tp)Tp** for some t ∈ [0,1] 
 >
 > Tiếp, nếu f twice differentiable, thì:
 >
-> \**∇f(x + p) = ∇f(x) + ∫0:1 ∇^2f(x + tp)pdt**
+> **∇f(x + p) = ∇f(x) + ∫0:1 ∇^2f(x + tp)pdt**
 >
-> \**f(x + p) = f(x) + ∇f(x)Tp + (1/2)pT ∇^2f(x + tp) p** for some t in [0,1]
+> **f(x + p) = f(x) + ∇f(x)Tp + (1/2)pT ∇^2f(x + tp) p** for some t in [0,1]
 >
 > Và đại khái là cái này chính là cái cho ta finite differentiation:
 >
@@ -689,7 +689,7 @@
 >
 > [∂r1(x)/∂xi,...,∂rm(x)/∂xi]T ≈ [r(x + εei) - r(x)] / ε 
 >
-> \**∂r(x)/∂xi ≈ [r(x + εei) - r(x)] / ε** 
+> **∂r(x)/∂xi ≈ [r(x + εei) - r(x)] / ε** 
 >
 > Tức là: bằng cách tính sai khác giá trị hàm r tại x + εei và tại x, chia cho ε,
 > ta sẽ có cột thứ i của matrix J, chứa các đạo hàm riêng của r1,...rm đối

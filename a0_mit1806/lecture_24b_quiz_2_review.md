@@ -15,12 +15,12 @@
 
 > [!NOTE]
 > Câu hỏi đầu tiên gs **giải là tìm Projection matrix** để **project**
-> \**lên vector a = (2, 1, 2)**. Thế thì gs nói rằng ta có thể dùng
+> **lên vector a = (2, 1, 2)**. Thế thì gs nói rằng ta có thể dùng
 > công thức như sau , nhưng mình nên lập luận lại công thức
 > này như sau:
 >
 > việc **project vector b lên (line đi qua) vector a**, tức là ta sẽ
-> \**tách vector b thành hai phần: p + e**. Trong đó p là projection,
+> **tách vector b thành hai phần: p + e**. Trong đó p là projection,
 > là phần của b **nằm trên a**, và e là residual, hay error, là phần
 > còn dư, **vuông góc với a**.
 >
@@ -42,7 +42,7 @@
 >
 > p = a (aTb/aTa)
 >
-> \**=> P = aaT/aTa**
+> **=> P = aaT/aTa**
 
 <br>
 
@@ -126,7 +126,7 @@
 >
 > dim C(AT) + dim N(A) = 3
 >
-> \**Kết quả của phép chiếu** vẫn là **vector trong R^3** (nằm trên một line trong
+> **Kết quả của phép chiếu** vẫn là **vector trong R^3** (nằm trên một line trong
 > R^3 thì vẫn là subspace của R^3), nên **matrix A sẽ phải có 3 hàng** để column
 > space (Ax nằm trong column space) là subspace của R^3:
 >
@@ -148,7 +148,7 @@
 > Còn **nullspace của A** sẽ chính là **plane vuông góc với line a**, để rồi **mọi
 > vector trong đó đều bị map thành 0**. 
 >
-> \**output space chỉ còn 1 line** cho thấy **dim C(A) = 1**, mọi vector trong plane
+> **output space chỉ còn 1 line** cho thấy **dim C(A) = 1**, mọi vector trong plane
 > vuông góc với line đều thành 0: **dim N(A) = 2, nên suy ra dim (CT)** cũng = 1
 >
 > Vậy nên rank matrix = 1, matrix có shape 3x3. Và qủa thật công thức của P =
@@ -237,7 +237,7 @@
 > câu hỏi thứ hai là **fit một đường thẳng đi qua zero**, sao cho
 > fit được 3 điểm (t=1,y=4), (2,5) và (3,8)
 >
-> \**vì đường thẳng đi qua zero** nên phương trình sẽ là **y = Dt** thay vì y = Dt + C.
+> **vì đường thẳng đi qua zero** nên phương trình sẽ là **y = Dt** thay vì y = Dt + C.
 
 <br>
 
@@ -271,12 +271,12 @@
 > 3], đều thỏa Ax=0)\~
 >
 > Chỗ này sai nè, Ax=0, với **A chỉ là vector (1,2,3)** tức là nó **có 3 row**, mỗi row là
-> \**một 1D vector trong R^1** (số thực, scalar, có thể coi như là 1D vector trong không
+> **một 1D vector trong R^1** (số thực, scalar, có thể coi như là 1D vector trong không
 > gian R^1). Vậy với 3 row vector này, **ta có 1 pivot**, có nghĩa là **đủ để span toàn
 > bộ R^1** rồi, và do vậy **nullspace CHỈ CHỨA ZERO**.
 >
 > Điều này khác với khi xét matrix A là matrix **cũng rank 1**, nhưng có shape là
-> \**1x3**, tức là nó **chỉ có 1 row**, nhưng 3 columns. Lúc bấy giờ, row-space là và
+> **1x3**, tức là nó **chỉ có 1 row**, nhưng 3 columns. Lúc bấy giờ, row-space là và
 > nullspace là **subspace của R^3** (thay vì R^1), và **với 1 pivot row**, hay, 1 vector
 > trong basis của row space, nó **chỉ đủ để span một line trong R^3**. Và vì vậy, vì
 > định lý **tổng dimension của rowspace và nullspace bằng 3**, nên **nullspace sẽ có
@@ -331,7 +331,7 @@
 > orthogonal trong plane** đó. Thế thì theo gs,  **đương nhiên
 > có vô số** cặp vector orthogonal trong plane. Và ta sẽ làm
 > theo cách tiếp cận của Gram Smith bắt đầu bằng việc
-> \**chọn a1 làm vector A**. và từ đó, **tính các vector khác bằng
+> **chọn a1 làm vector A**. và từ đó, **tính các vector khác bằng
 > cách project các vector tiếp theo (ở đây là a2) lên các
 > vector trước** và **giữ lại phần dư (residual)**
 >
@@ -363,7 +363,7 @@
 > Mà theo như ta biết **determinant của singular matrix sẽ bằng 0** (đây là
 > properties 8 của determinants vốn dĩ có thể được giải thích bởi properties 6 -
 > đó là **determinants matrix có row bằng 0 sẽ bằng 0**: với matrix singular thì
-> \**các row không independent**, nên **khi elimination** (vốn dĩ là **quá trình
+> **các row không independent**, nên **khi elimination** (vốn dĩ là **quá trình
 > row exchange, không khiến thay đổi trị tuyệt đối của det**) cho ra **upper
 > triangular** **matrix** U, sẽ **có ít nhất một row nào đó thành zero**, và theo
 > một properties trước đó thì cho ta biết **matrix có zero row sẽ có det = 0**. Vậy
@@ -548,7 +548,7 @@
 >
 > tương đương sqrt(-3) = sqrt(3)sqrt(-1) = **sqrt(3)*i** Vậy có 2 λ mang giá trị complex: 
 >
-> \**0.5(1 + sqrt(3)*i) và 0.5(1-sqrt(3)*i)**
+> **0.5(1 + sqrt(3)*i) và 0.5(1-sqrt(3)*i)**
 
 > [!NOTE]
 > Công thức tính solution thật ra rất dễ thôi:
@@ -567,7 +567,7 @@
 >
 > x + b/2a = +/- sqrt(b**2 - 4ac)/2a
 >
-> \**x = -b/2a +/- sqrt(b**2 - 4ac)/2a** 
+> **x = -b/2a +/- sqrt(b**2 - 4ac)/2a** 
 
 <br>
 
@@ -591,7 +591,7 @@
 > number** có thể được **biểu diễn theo dạng Euler** như
 > sau:
 >
-> \**z = r*e^(i*θ) = cos(θ) +i*sin(θ)** và ta đã có z = cos(θ) + i*sin(θ) = 1/2 + i*[+/- sqrt(3)/2] thì ta sẽ tính theta để thể hiện z dưới dạng Euler = **r*e^(i*θ)** Với r là modulus, như ở đây bằng 1.
+> **z = r*e^(i*θ) = cos(θ) +i*sin(θ)** và ta đã có z = cos(θ) + i*sin(θ) = 1/2 + i*[+/- sqrt(3)/2] thì ta sẽ tính theta để thể hiện z dưới dạng Euler = **r*e^(i*θ)** Với r là modulus, như ở đây bằng 1.
 >
 > theta = arg tan(θ) = (đối / kề) = (imaginary part) / (real)
 >
@@ -601,7 +601,7 @@
 >
 > Và theo công thức Euler: r*e^(i*θ), thay θ vào: 
 >
-> \**λ = e^[(+/-) π*i/3]** Hay**: 
+> **λ = e^[(+/-) π*i/3]** Hay**: 
 >
 > λ_1 = e^(π*i/3) 
 >
@@ -632,7 +632,7 @@
 > Ax = λx => A^2x = AAx = Aλx = λAx = λλx = λ^2x
 >
 > Như vậy A^2x = λ^2x suy ra **x cũng là eigenvector của A^2** với
-> \**eigenvalue = λ^2**
+> **eigenvalue = λ^2**
 >
 > Tương tự như vậy có thể chứng minh là **với matrix A^k** thì **x
 > (eigenvector của A) cũng là eigenvector của A^k**, với e**igenvalue
@@ -666,7 +666,7 @@
 > Đầu tiên gs đề nghị **xác định A3 là singular hay non-singular**.
 >
 > me: có thể để ý thấy column 3 = 2 column 1, nên matrix này có
-> \**các column không independent**, do đó nó singular. (*)
+> **các column không independent**, do đó nó singular. (*)
 >
 > Hoặc ta có thể **tính det của A3 theo cofactor formula** theo
 > column 1, thì chỉ cần tính a21*C21 = 1*(- det của matrix A3 bỏ
@@ -701,7 +701,7 @@
 >
 > Thế thì bản chất của phép chiếu là ta sẽ **phân tách vector b** thành hai
 > phần, một phần nằm trên **column space của A**, gọi là p, và một phần
-> \**residual**, **e vuông góc với C(A)**. Và ta muốn e vuông góc với C(A) là
+> **residual**, **e vuông góc với C(A)**. Và ta muốn e vuông góc với C(A) là
 > bởi **chỉ như vậy thì ta mới có irreducible / smallest error**. Như vậy ta
 > có **hai sự thật**:
 >
@@ -776,7 +776,7 @@
 
 > [!NOTE]
 > và ta có thể **dùng trace để kiểm tra lại**,
-> \**tổng của các eigenvalue = trace**, = **tổng
+> **tổng của các eigenvalue = trace**, = **tổng
 > các item trên đường chéo**
 
 <br>
@@ -796,7 +796,7 @@
 > SPAN TOÀN BỘ R^4. Khi đó **projection lên Column
 > space** của A **chính là projection một vector trong R4 lên
 > R**4, đương nhiên chỉ là chính nó. Khi đó ta sẽ có
-> \**projection matrix chính là Identity matrix.**
+> **projection matrix chính là Identity matrix.**
 
 <br>
 

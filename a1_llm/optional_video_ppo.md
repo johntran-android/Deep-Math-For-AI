@@ -10,7 +10,7 @@
 > [!NOTE]
 > What does PPO stand for and what do those terms mean in the context of
 > reinforcement learning? PPO stands for **Proximal Policy Optimization**, which is a
-> \**powerful algorithm** for **solving reinforcement learning problems**. As the name
+> **powerful algorithm** for **solving reinforcement learning problems**. As the name
 > suggests, PPO **optimizes a policy**, **in this case the LLM**, to be **more aligned with
 > human preferences**. Over many **iterations**, PPO **makes updates to the LLM**. The
 > updates are **small** and **within a bounded region**, resulting in an **updated LLM that is
@@ -58,7 +58,7 @@
 
 > [!NOTE]
 > Let's have a closer look at the **value functio**n and the **value loss**. Assume a
-> \**number of prompts are given**. First, you **generate the LLM responses to the
+> **number of prompts are given**. First, you **generate the LLM responses to the
 > prompts**, then you **calculate the reward for the prompt completions using the
 > reward model**. For example, the first prompt completion shown here might
 > receive a reward of 1.87. The next one might receive a reward of -1.24, and
@@ -113,7 +113,7 @@
 > [!NOTE]
 > The goal is to **minimize the value loss** that is the **difference between
 > the actual future total reward** in this example, 1.87, and its
-> \**approximation to the value function**, in this example, 1.23. The **value
+> **approximation to the value function**, in this example, 1.23. The **value
 > loss** makes **estimates for future rewards more accurate**. The value
 > function is then used in **Advantage Estimation in Phase 2**, which we
 > will discuss in a bit.
@@ -135,7 +135,7 @@
 > guided by the prompt completion**, **losses, and rewards**.
 >
 > PPO also **ensures to keep the model updates within a certain small region** called the
-> \**trust region**. This is where the **proximal** aspect of PPO comes into play. Ideally, this
+> **trust region**. This is where the **proximal** aspect of PPO comes into play. Ideally, this
 > series of small updates will **move the model towards higher rewards**. The **PPO policy
 > objective** is the main ingredient of this method. Remember, the objective is to **find a policy
 > whose expected reward is high**. In other words, you're trying to **make updates to the LLM
@@ -169,9 +169,9 @@
 > break it down step-by-step. First, focus on the most important expression and ignore the rest
 > for now.
 >
-> \**Pi (a_t|s_t)** in this context of an LLM, is the **probability of the next token a_t given the
+> **Pi (a_t|s_t)** in this context of an LLM, is the **probability of the next token a_t given the
 > current prompt s_t**. The **action a_t is the next token**, and **the state s_t** is the
-> \**completed prompt up to the token t**.
+> **completed prompt up to the token t**.
 >
 > The denominator is the **probability of the next token** with the **initial version of the LLM
 > which is frozen**.
@@ -179,8 +179,8 @@
 > The **numerator** is the **probabilities of the next token**, **through the updated LLM**,
 > which we can change for the better reward.
 >
-> \**A^_t** is called the **estimated advantage term of a given choice of action**. The
-> \**advantage term** estimates **how much better or worse the current action is** **compared
+> **A^_t** is called the **estimated advantage term of a given choice of action**. The
+> **advantage term** estimates **how much better or worse the current action is** **compared
 > to all possible actions at data state**.
 >
 > We look at the **expected future rewards** of a **completion following the new token**, and
@@ -214,12 +214,12 @@
 > Let'
 > s consider the case where the **advantage** is **positive** for the **suggested token**. A positive
 > advantage means that the **suggested token is better than the average**. Therefore,
-> \**increasing the probability of the current token seems like a good strategy** that leads to
+> **increasing the probability of the current token seems like a good strategy** that leads to
 > higher rewards. This **translates to maximizing the expression** we have here. 
 >
 > If the
-> \**suggested token is worse than average**, the **advantage will be negative**. Again,
-> \**maximizing the expression will demote the token, which is the correct strategy**. 
+> **suggested token is worse than average**, the **advantage will be negative**. Again,
+> **maximizing the expression will demote the token, which is the correct strategy**. 
 >
 > So the
 > overall conclusion is that **maximizing this expression results in a better aligned LLM**.

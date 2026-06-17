@@ -70,7 +70,7 @@
 >
 > Từ Q0Qt = t * Q0Q1 ta có 3 linear function như vầy:
 >
-> \**x(t) + 1 = t*2
+> **x(t) + 1 = t*2
 >
 > y(t) - 2 = t
 >
@@ -86,7 +86,7 @@
 
 > [!NOTE]
 > qua phần ứng dụng. Đầu tiên gs cho plane với equation này, câu hỏi là
-> \**line đi qua Q0, Q1 có intersect với plane không?**
+> **line đi qua Q0, Q1 có intersect với plane không?**
 
 <br>
 
@@ -147,7 +147,7 @@
 
 > [!NOTE]
 > Cho bánh xe **bán kính a**, lăn trên trục x.
-> \**P là 1 điểm trên vành bánh.**
+> **P là 1 điểm trên vành bánh.**
 
 <br>
 
@@ -200,9 +200,9 @@
 <p align="center"><kbd><img src="assets/f6a113165189e394ad924ab5ba66307de4bde743.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Vector AB thì dễ thấy bằng (0, a)**
+> **Vector AB thì dễ thấy bằng (0, a)**
 >
-> \**Vector BP** thì có **length bằng a** và có **góc theta với trục
+> **Vector BP** thì có **length bằng a** và có **góc theta với trục
 > vertical line**
 >
 > Thế thì d**ựa vào lượng giác** ta có hai tọa độ của BP là **-a*sin(theta)**
@@ -245,7 +245,7 @@
 >
 > Và property A đó là lim theta->0 [(cos(theta) - 1) / theta] = 0, tức là, khi
 > theta ~= 0, [cos(theta) - 1] /theta ~= 0 <=> cos(theta) - 1 ~= 0 <=>
-> \**cos(theta) ~= 1)**
+> **cos(theta) ~= 1)**
 >
 > Hoặc nói đúng hơn, là đây chính là dùng công thức linear approximation
 > (link đỏ) f(x) = f(0) + f'(0)*x với f(x) là sin(x) thì công thức này sẽ cho ta
@@ -273,7 +273,7 @@
 >
 > f(t) = Tổng n = 0:N (1/n!)[đạo hàm cấp n của f tại a] (x-a)^n
 >
-> \**= f(0) + f'(0)t + f''(0)t^2/2 + ...** Chỗ này hình như gs ghi sai f'(0). Phải là f(0)
+> **= f(0) + f'(0)t + f''(0)t^2/2 + ...** Chỗ này hình như gs ghi sai f'(0). Phải là f(0)
 
 <br>
 

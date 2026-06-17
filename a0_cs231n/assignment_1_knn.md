@@ -195,12 +195,12 @@
 > từ nhỏ tới lớn, và trả ra index của chúng.
 >
 > Sau đó **lấy (index của) k thằng (có value distance nhỏ) nhất** thì
-> \**phải là lấy k thằng đầu** (lúc đầu làm sai, lấy k thằng cuối)
+> **phải là lấy k thằng đầu** (lúc đầu làm sai, lấy k thằng cuối)
 >
-> \**Bỏ cái list index vào y_train** để **lấy labels** **value**.
+> **Bỏ cái list index vào y_train** để **lấy labels** **value**.
 >
 > Cuối cùng dùng **np.bincount()** để đếm số lần xuất hiện,  và np.
-> \**argmax** để lấy cái có số lần xuất  hiện cao nhất. Đoạn code này
+> **argmax** để lấy cái có số lần xuất  hiện cao nhất. Đoạn code này
 > Hỏi GPT
 
 <br>

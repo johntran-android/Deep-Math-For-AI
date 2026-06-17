@@ -477,7 +477,7 @@
 > space về vector khác 0 trong rowspace. Và vector khác 0 trong left
 > nullspace về 0
 >
-> \**Tại sao AA^+ là projection matrix onto C(A)?**
+> **Tại sao AA^+ là projection matrix onto C(A)?**
 >
 > Vì AA^+x sẽ nằm trong C(A), và AA^+xAA^+x = AA^+x, nên nó là
 > projection matrix, với đích đến là C(A), nên nó là projection matrix
@@ -506,7 +506,7 @@
 >
 > Nếu xét **full SVD** thì lập luận cũng tương tự:
 >
-> \**QUAY LẠI SAU**
+> **QUAY LẠI SAU**
 
 > [!NOTE]
 > QUAY LẠI SAU
@@ -700,7 +700,7 @@
 > Thì cái này xảy ra khi A mập lùn, và b nằm trong C(A). Lúc này, A^+b LÀ CÁI CÓ
 > NORM NHỎ NHẤT TRONG VÔ SỐ NGHIỆM.
 >
-> \**CÓ NGHĨA LÀ, A^+b, SẼ LUÔN LẤY RA CÁI CÓ NORM NHỎ NHẤT TRONG 
+> **CÓ NGHĨA LÀ, A^+b, SẼ LUÔN LẤY RA CÁI CÓ NORM NHỎ NHẤT TRONG 
 > VÔ SỐ CÁI LEAST SQUARE SOLUTION HOẶC TRUE SOLUTION NẾU NHƯ
 > RƠI VÀO CASE CÓ VÔ SỐ NGHIỆM.**
 
@@ -749,7 +749,7 @@
 > bằng p, là hình chiếu của b lên C(A) chứ ko phải b, ⇨ A^+b ko phải nghiệm.
 > Nhưng again, ta thấy A^+b là cái thỏa Ax^ = p ⇨ A^+b là least square solution
 >
-> \**Túm lại: Nói ngắn gọn:
+> **Túm lại: Nói ngắn gọn:
 >
 > AA^+ là P_ontoC(A) nên:
 >

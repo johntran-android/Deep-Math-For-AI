@@ -748,7 +748,7 @@
 > Trong đây, các **encoder's output c00...cWH sẽ đóng vai key** và **values
 > vectors**,  tức là nó sẽ được **dùng để learn ra keys và values (qua matrix
 > W_K, W_V)** còn **các vector output từ các block ở dưới của decoder** sẽ
-> \**đóng vai để learn ra queries (qua W_Q**)
+> **đóng vai để learn ra queries (qua W_Q**)
 >
 > Vậy trong attention này, một vector query sẽ tìm sự tương đồng với các
 > vector key từ encoder (quá trình tính attention / alignment scores) để rồi có
@@ -766,7 +766,7 @@
 > các vị trí trong encoder's input" và "tất cả các vị trí trước đó của decoder's
 > input" hay trong bài toán image captioning, **một vị trí output của cross
 > attention sẽ là sự tham vấn phức tạp với mọi feature vector của image**, và
-> \**mọi từ đã  được generate trong câu caption trước đó.**
+> **mọi từ đã  được generate trong câu caption trước đó.**
 
 <br>
 

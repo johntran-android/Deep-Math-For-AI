@@ -358,7 +358,7 @@
 > [!NOTE]
 > Sai một chỗ khiến code work đúng khi factor 2.0,
 > 3.0 nhưng không khi factor 0.5: Đó là nhầm lẫn
-> \**int16_t** thì lại ghi là **uint16_t**. Phải search google
+> **int16_t** thì lại ghi là **uint16_t**. Phải search google
 > mới phát hiện.
 
 <br>
@@ -431,7 +431,7 @@
 > taken photo. Accordingly, the start of a JPEG usually demarks the end of
 > another.
 >
-> \**However**, digital cameras often initialize cards with a FAT file system
+> **However**, digital cameras often initialize cards with a FAT file system
 > whose **“block size” is 512 bytes (B)**. The implication is that these cameras
 > only write to those cards in units of 512 B. A photo that’s 1 MB (i.e., 1,048,576
 > B) thus takes up 1048576 ÷ 512 = 2048 “blocks” on a memory card. But so
@@ -448,9 +448,9 @@
 > only **once you encounter another signature**.
 >
 > Moreover, **rather than** read my memory card’s **bytes one at a time**, you can
-> \**read 512 of them at a time** into a buffer for efficiency’s sake. Thanks to FAT,
+> **read 512 of them at a time** into a buffer for efficiency’s sake. Thanks to FAT,
 > you can trust that JPEGs’ signatures will be “block-aligned.” That is, you need
-> \**only look for those signatures in a block’s first four bytes.**
+> **only look for those signatures in a block’s first four bytes.**
 
 <br>
 
@@ -610,7 +610,7 @@
 > và inptr: FILE mà mình sẽ đọc data từ đó
 >
 > Và có **chú ý là ta sẽ cần đọc file** từ memory card theo các
-> \**chunk 512 bytes** thì có nghĩa là như vậy ta sẽ **set size =
+> **chunk 512 bytes** thì có nghĩa là như vậy ta sẽ **set size =
 > 512 (mỗi element là 512 bytes)**
 
 <br>

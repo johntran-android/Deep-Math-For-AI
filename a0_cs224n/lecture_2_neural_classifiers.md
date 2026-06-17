@@ -51,7 +51,7 @@
 
 > [!NOTE]
 > Đại ý là Word2Vec algorithm trong quá trình training sẽ tìm cách **tweak các params (mà ở đây chỉ là các word embedding)** sao cho
-> \**những từ gần nghĩa nhau** sẽ **nằm gần nhau trong vector space** thì
+> **những từ gần nghĩa nhau** sẽ **nằm gần nhau trong vector space** thì
 > sẽ khiến giảm loss và đạt objective function.
 >
 > Và thầy Manning lưu ý ta rằng ở đây mình đang xem là dùng **PCA** để
@@ -83,9 +83,9 @@
 > [!NOTE]
 > Đại khái là như ta đã biết bên **MLSpec** đó là **gradient descent** nếu nói
 > chính xác thì đó **batch gradient descent** - tức là ta sẽ **tính gradient**  =
-> \**derivative của loss** w.r.t **params** với l**oss tính trên toàn bộ data
+> **derivative của loss** w.r.t **params** với l**oss tính trên toàn bộ data
 > sample** mà ở đây là **toàn bộ center words**, và cũng đồng nghĩa là
-> \**toàn bộ training corpus** và có thể lên tới hàng trăm nghìn từ.
+> **toàn bộ training corpus** và có thể lên tới hàng trăm nghìn từ.
 >
 > Thì làm vậy như ta cũng đã biết là sẽ khiến **một lần tính để update params
 > sẽ mất rất nhiều thời gian**. Tuy là kiểu như ta **sẽ đi theo hướng đúng
@@ -93,7 +93,7 @@
 >
 > Thì do vậy mà thay vào đó nên dùng **stochastic G.D** hoặc **mini-batch
 > G.D** trong đó ta tính gradient (derivative của loss function w.r.t params)
-> \**dựa trên một hoặc vài data sample thôi, và gọi nó là ước lượng của
+> **dựa trên một hoặc vài data sample thôi, và gọi nó là ước lượng của
 > gradient (chính xác)**
 >
 > Và vì **chỉ là ước lượng** của gradient chính xác (mà muốn tính phải tính
@@ -166,7 +166,7 @@
 > Thứ hai, thày nói là **thật ra có thể dùng chỉ một vector cho một từ và thật
 > sự làm vậy hiệu quả hơn** nhưng có cái là khiến quá trình thực hiện t**rở
 > nên rối khi ta tính đạo hàm.** Rồi tiếp theo thì đại khái là không chỉ có một algorithm duy nhất mà thật ra
-> \**có nhiều cách làm**, trong số đó là **skip gram** như thầy vừa nói mấy bữa
+> **có nhiều cách làm**, trong số đó là **skip gram** như thầy vừa nói mấy bữa
 > nay và **CBOW** là cái mình đã học trong NLPSpec trong đó thay vì cho
 > trước center  word bắt đoán outer context word thì ta sẽ cho model đoán
 > center word dựa trên bag of context words. Cả hai **đều cho cùng kết quả.**
@@ -287,7 +287,7 @@
 > [!NOTE]
 > Đại khái là nếu dùng **raw-counts** tức là bảng thống kê co-occurrence 
 > nguyên gốc thì sẽ không work tốt, lí do là có quá nhiều từ mang ý nghĩa 
-> \**"chung chung"** như the, he, has sẽ có tần suất xuất hiện cao, khiến gây
+> **"chung chung"** như the, he, has sẽ có tần suất xuất hiện cao, khiến gây
 > nhiễu thông tin. Do đó mới nói là **sẽ tốt hơn nếu scale các chỉ số lại
 > ví dụ như dùng log**, dùng cách giới hạn hạn mức hoặc là bỏ luôn các từ
 > chung chung như vậy (function words) 
@@ -509,7 +509,7 @@
 > [!NOTE]
 > Đại khái là nói về ảnh hưởng của **data lên performance**. Khi model
 > train trên **Wiki data** có **semantic scores cao hơn** còn model train trên
-> \**google news** thì có **syntactic score cao hơn**. Và model train bằng web
+> **google news** thì có **syntactic score cao hơn**. Và model train bằng web
 > crawl (lấy hết data trên internet) thì tốt hơn cả ở hai khía cạnh.
 
 <br>

@@ -71,7 +71,7 @@
 > Vì sao:
 >
 > bước 1 Rnnxn=bn, suy ra xn = bn/Rnn tốn một phép chia scalar. Tức
-> \**1 flops**
+> **1 flops**
 >
 > Bước 2 Rn-1n-1xn-1+Rn-1nxn=bn-1
 >

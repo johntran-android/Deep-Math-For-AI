@@ -20,12 +20,12 @@
 > towards producing more helpful and less harmful outputs.
 >
 > 3. Progress of RLHF: The power of RLHF is emphasized. While **it's not perfect**, researchers are
-> \**consistently working to improve LLM**s by making them **more honest, hopeful, and harmless**
+> **consistently working to improve LLM**s by making them **more honest, hopeful, and harmless**
 > through the advancements in reinforcement learning.
 >
 > 4. Guest Speaker and Responsible AI: Applied scientist **E**k from Amazon joins the discussion to
-> \**explain the algorithms behind reinforcement learning** for **model alignment.** The importance of
-> \**responsible AI** is highlighted, with **Dr. Nashley Sepus** joining to discuss the topic further.
+> **explain the algorithms behind reinforcement learning** for **model alignment.** The importance of
+> **responsible AI** is highlighted, with **Dr. Nashley Sepus** joining to discuss the topic further.
 >
 > 5. Using LLMs as **Reasoning Engines**: The other technique discussed is **using LLMs as
 > reasoning engines**, allowing them to **make subroutine calls for actions like web searches**.
@@ -37,7 +37,7 @@
 > APIs to gather information**, making them a **valuable tool for generating insights and reasoning**.
 >
 > 7. Efficient Use of Resources: The **cost-effectiveness of using LLMs as reasoning engines**
-> \**rather than fact databases** is mentioned. LLMs can focus on g**enerating content while
+> **rather than fact databases** is mentioned. LLMs can focus on g**enerating content while
 > databases provide factual information**.
 >
 > 8. Anticipation for the Final Week: The excitement about the final week's content is expressed, as it

@@ -98,8 +98,8 @@
 > [!NOTE]
 > thế thì ta sẽ xem xét matrix A (m, n), tức là, bữa giờ, ta quan
 > tâm đến matrix A **SQUARE** để bàn đến **determinant**,
-> \**eigenvalue** và **eigenvector** và sau đó là square &
-> \**SYMMETRIC**, và **POSITIVE DEFINITE** Nay ta **quay lại matrix (m, n)**. Và ta đã biết **dù A
+> **eigenvalue** và **eigenvector** và sau đó là square &
+> **SYMMETRIC**, và **POSITIVE DEFINITE** Nay ta **quay lại matrix (m, n)**. Và ta đã biết **dù A
 > không square, nhưng ATA sẽ square và symmetric.**
 >
 > (Chứng minh ATA symmetric rất dễ: (ATA)T = AT(ATT) = ATA
@@ -160,7 +160,7 @@
 > nào**, hay, **mọi column của A đều là pivot columns.** 
 >
 > Và điều này xảy ra, nếu nói về rank của A, thì đó là khi
-> \**rank của A = n** (**mọi column của A đều là pivot**, hay
+> **rank của A = n** (**mọi column của A đều là pivot**, hay
 > đều là basis vector, khi đó dim của C(A) = n, gọi là **full
 > column rank**)
 
@@ -185,7 +185,7 @@
 
 > [!NOTE]
 > Và gs cho biết thêm đó là với positive definite matrix thì
-> \**ta không bao giờ phải row exchange** trong quá trình
+> **ta không bao giờ phải row exchange** trong quá trình
 > elimination. **Mọi pivot sẽ xuất hiện trên đường chéo** Điều này dễ hiểu, bởi dễ thấy rằng một matrix positive
 > definite đương nhiên sẽ full rank, vì nó square và mọi
 > eigenvalue đều dương, hoặc det dương, nói nói quá
@@ -218,7 +218,7 @@
 > Và trong cách nói đó thì ta đã **gặp một cặp similar
 > matrix**:
 >
-> \**A và Λ**, bởi vì ta đã biết **S_invAS** **= Λ**
+> **A và Λ**, bởi vì ta đã biết **S_invAS** **= Λ**
 >
 > (Đương nhiên phải có điều kiện A có **full set các
 > independent eigenvectors**)
@@ -264,7 +264,7 @@
 > bởi vì **nó (đường chéo) chính là eigenvalues**
 >
 > (T**riangular** matrix hay đặc biệt hơn là
-> \**diagonal** matrix mà triangular matrix như đã biết
+> **diagonal** matrix mà triangular matrix như đã biết
 > có **eigenvalues nằm ngay trên đường chéo**)
 
 <br>
@@ -300,13 +300,13 @@
 
 > [!NOTE]
 > Rất dễ hiểu, bắt đầu với việc vì λ là eigenvalues của A nên
-> \**Ax = λx**. 
+> **Ax = λx**. 
 >
 > <=> AIx = λx
 >
 > A(MMinv)x = λx <=> | tiếp, ta sẽ nhân hai vế cho M_inv
 >
-> \**Minv**AMMinvx = **Minv**λx <=>
+> **Minv**AMMinvx = **Minv**λx <=>
 >
 > (MinvAM)Minvx = λMinvx <=>
 >
@@ -332,7 +332,7 @@
 
 > [!NOTE]
 > SIMILAR MATRICES sẽ có **CÙNG EIGENVALUES** và
-> \**eigenvectors move around** (eigenvector khác nhau)
+> **eigenvectors move around** (eigenvector khác nhau)
 
 <br>
 
@@ -410,9 +410,9 @@
 >
 > Thế thì trong các matrix similar với J, cái **gần với diagonal
 > matrix nhất** với Λ là cái **[4 1; 0 4]**.  Và đó đượcgọi là
-> \**Jordan form.** (*) Dù cái này c**hỉ khác [4 0; 0 4] ở chỗ** **có một phần tử
+> **Jordan form.** (*) Dù cái này c**hỉ khác [4 0; 0 4] ở chỗ** **có một phần tử
 > ngoài đường chéo khác 0** (số 1) nhưng nó khiến **[A -λ*I]** 
-> \**TRỞ NÊN CÓ MỘT PIVOT**, thành ra **CHỈ CÒN 1 FREE
+> **TRỞ NÊN CÓ MỘT PIVOT**, thành ra **CHỈ CÒN 1 FREE
 > COLUMN**.
 >
 > Dẫn đến basis của nullspace A-λI chỉ có 1 vector. Và **chỉ có 1
@@ -477,7 +477,7 @@
 > các eigenvector độc lập khi các eigenvalue khác nhau.
 >
 > Nhưng nếu có eigenvalue trùng nhau (repeat eigenvalues) thì ta chỉ có một matrix
-> \**A - λI**.  Lấy ví dụ matrix 2x2, có hai eigenvalue 4,4. Thì như đã nói, ta chỉ có một
+> **A - λI**.  Lấy ví dụ matrix 2x2, có hai eigenvalue 4,4. Thì như đã nói, ta chỉ có một
 > matrix A - lambda*I, dẫn tới hai tình huống. Nếu matrix A - lambda*I có rank 1, tức
 > là có một pivot variable, và từ đó ta chỉ có một free variable, hay, một vector (non
 > zero) độc lập trong nullspace. Đây chính là vấn đề, gọi là defective matrix khi nó

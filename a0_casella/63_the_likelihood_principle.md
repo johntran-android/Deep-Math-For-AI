@@ -238,7 +238,7 @@
 > luận hoặc kết luận về θ**,
 >
 > Và **CÁI KẾT LUẬN VỀ θ ĐÓ, ĐƯỢC GỌI LÀ EVIDENCE**, kí hiệu là Ev(E,
-> \**x**) viết tắt của evidence about θ arising from E and **x**, tạm dịch: Bằng
+> **x**) viết tắt của evidence about θ arising from E and **x**, tạm dịch: Bằng
 > chứng về θ có được dựa trên thử nghiệm E và giá trị quan sát thấy **x** Một ví dụ minh họa là E là thử nghiệm trong đó ta quan sát giá trị của X1,
 > ... Xn iid ~ n(μ, σ^2) vói σ^2 đã biết. Vì sample mean Xbar là sufficient
 > statistic cho μ (những phần trước đã chứng minh điều này) nên ta dùng
@@ -357,7 +357,7 @@
 > ====
 >
 > So sánh với LIKELIHOOD PRINCIPLE, nói rằng: Nếu ta có hai điểm data
-> \**x**,  **y** (tức hai giá trị quan sát được của của random sample **X**) sao
+> **x**,  **y** (tức hai giá trị quan sát được của của random sample **X**) sao
 > cho  L(θ|**x**) = C(**x**,**y**)L(θ|**y**). Với C(**x**, **y**) là constant có chỉ
 > phụ thuộc x, y chứ  không phụ thuộc θ. Thì khi đó, kết luận về θ dựa trên x
 > hoặc y phải giống nhau
@@ -388,7 +388,7 @@
 > và giả sử **x1*** và **x2*** là hai sample point từ E1 và E2 sao cho likelihood của chúng tỉ lệ, tức là
 >
 > L(θ|**x1***) = CL(θ|**x2***) với mọi θ và C là constant as a function theo θ, tức là có thể phụ thuộc
-> \**x1*** và **x2***  nhưng không phụ thuộc θ. Thì khi đó nguyên lý này FLP nói là Ev(E1, **x1***) =
+> **x1*** và **x2***  nhưng không phụ thuộc θ. Thì khi đó nguyên lý này FLP nói là Ev(E1, **x1***) =
 > Ev(E2, **x2***)
 >
 > Ta sẽ chứng minh nó dựa trên FSP (Formal Sufficient Principle) và Conditionality Principle CP như
@@ -412,7 +412,7 @@
 >
 > Thử nghiệm E* sẽ kí hiệu là (**X***, θ, f*(**x***|θ)) với **X*** = (j, **X**j) mang ý nghĩa là, giá trị cụ
 > thể của thí nghiệm sẽ là một cặp gồm có: xu tung ra ngửa hay sấp (j = 1 hay 0) và tương ứng là
-> \**X**j bằng bao nhiêu. Là sao?
+> **X**j bằng bao nhiêu. Là sao?
 >
 > Tức là **x***, tức là giá trị quan sát được của **X*** sẽ là:
 >
@@ -451,7 +451,7 @@
 > Vậy thì theo cái theorem vừa nhắc lại thì điều này phải đồng nghĩa T((1,**x1**)) = T((2,**x2**))
 >
 > Như vậy tới đây, ta xét cái experiment E*, với hai điểm giá trị (1,**x1***) và (2,**x2***) có T((1,
-> \**x1***)) = T((2,**x2***))
+> **x1***)) = T((2,**x2***))
 >
 > thì điều này phù hợp với bối cảnh của FSP, giúp kết luận Ev(E*, (1,**x1***)) = Ev(E*, (2,**x2***))
 >
@@ -724,8 +724,8 @@
 > lí này thì tại sao ta lại bỏ data mà dùng hai thằng đó.
 >
 > Rồi, như vậy nếu mà đã tin vào sufficient statistic, thì mắc gì lại phải giữ lại
-> \**X** để mà đi tính residuals nữa? Do đó việc ta tính residuasl tức là ta còn giữ
-> \**X, và đó là sự vi phạm sufficient statistic.** Và từ đó cũng chính là vi 
+> **X** để mà đi tính residuals nữa? Do đó việc ta tính residuasl tức là ta còn giữ
+> **X, và đó là sự vi phạm sufficient statistic.** Và từ đó cũng chính là vi 
 > phạm likelihood principle (vì Formal likelihood principle derive từ formal
 > sufficient principle và conditionality principle) **Tất nhiên tác giả cho rằng, trước khi ta dùng Sufficient Statistic thì phải
 > cảm thấy thoải mái với model đã, có nghĩa là ta phải không còn nghi

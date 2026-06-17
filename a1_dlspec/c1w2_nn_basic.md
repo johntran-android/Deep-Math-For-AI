@@ -1006,7 +1006,7 @@
 <p align="center"><kbd><img src="assets/3d9ba77afdea8df062bc22692e1e04ab30664b7c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Maximum likelihood estimation** is like when you are trying to guess
+> **Maximum likelihood estimation** is like when you are trying to guess
 >  what the best answer is to a question.
 > Imagine you have a big jar of candy, and you have to guess how many
 >  candies are inside.
@@ -1683,7 +1683,7 @@
 <p align="center"><kbd><img src="assets/1214b0bed70ea1b91aed585454fbe86b1b57b198.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**CHÚ Ý BƯỚC NÀY** w = w.reshape(X.shape[0], 1) **LÀ ĐỂ CHẮC CHẮN
+> **CHÚ Ý BƯỚC NÀY** w = w.reshape(X.shape[0], 1) **LÀ ĐỂ CHẮC CHẮN
 > W CÓ SHAPE MONG MUỐN
 >
 > Trong lecture ổng có nhấn mạnh đừng ngại reshape để đảm bảo shape
@@ -1726,7 +1726,7 @@
 <p align="center"><kbd><img src="assets/4061c49b75b91cde004b6f2fcdc9dd8890a75135.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**optimize(...X_train, Y_train,...) mới đúng, chứ với X, Y là sai**
+> **optimize(...X_train, Y_train,...) mới đúng, chứ với X, Y là sai**
 
 <br>
 
@@ -1735,7 +1735,7 @@
 <p align="center"><kbd><img src="assets/3a13669354d7d12f676ac0a3c64738fcdd1cc1f3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Comment**: Training accuracy is close to 100%. 
+> **Comment**: Training accuracy is close to 100%. 
 > This is a **good** sanity check: your model is working and has high 
 > enough capacity to fit the training data. 
 > Test accuracy is **70%. It is actually not bad for this simple model,** 
@@ -1765,7 +1765,7 @@
 <p align="center"><kbd><img src="assets/8625bbadb46e610f32fc80697fec5f144df7621f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Thử với các learning rate khác nhau**
+> **Thử với các learning rate khác nhau**
 
 <br>
 

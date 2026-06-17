@@ -76,11 +76,11 @@
 
 > [!NOTE]
 > thế thì gs nói rằng bài toán này **xảy ra ở nhiều lĩnh vực**, ví dụ như
-> \**Random Walk** trong tài chính
+> **Random Walk** trong tài chính
 >
 > Bài toán này cũng có set up tương tự, **bắt đầu ở** **i đâu đó từ 0 tới N**. Và
 > mỗi random walk có thể **đi đến i+1 hoặc về i-1** với **p là xác suất đi tới**,
-> \**1-p là xác suất đi lui**. Và khi đạt vị trí 0 hoặc N gọi là **Absorb state** thì
+> **1-p là xác suất đi lui**. Và khi đạt vị trí 0 hoặc N gọi là **Absorb state** thì
 > game over
 
 <br>
@@ -95,7 +95,7 @@
 > state cứ **nhảy đi nhảy về ở một điểm i nào đó** và không bao giờ đạt N hoặc 0.
 >
 > Nhưng bài toán này **có một đặc điểm** đó là **giả sử ở step đầu A thắng**, để
-> \**current state là i+1** (nếu B thắng thì i thành i-1, vì đã đặt i là số tiền ban đầu
+> **current state là i+1** (nếu B thắng thì i thành i-1, vì đã đặt i là số tiền ban đầu
 > của A mà) thì **ta lại có bài toán y hệt** chẳng qua là **khác initial money thôi**.
 >
 > Từ đó nó **gợi ý cho mình về thứ để dựa vào** (conditioned on)
@@ -123,7 +123,7 @@
 > Thế thì dựa trên **Law of Total Probability (LOTP)** thì, xác suất A thắng khi bắt
 > đầu với i dollar sẽ bằng:
 >
-> \**P_i = p*P_(i +1) + q*P_(i-1)**
+> **P_i = p*P_(i +1) + q*P_(i-1)**
 >
 > Vì sao: Vì để A thắng chung cuộc thì sẽ là có thể chia ra làm 1 trong 2 khả năng sau: 
 >
@@ -168,7 +168,7 @@
 >
 > \+ P[A thua step đầu] * P[A thắng chung cuộc từ i-1]
 >
-> \**P_i = p* P_(i+1)  + q* P_(i-1)**
+> **P_i = p* P_(i+1)  + q* P_(i-1)**
 
 <br>
 
@@ -200,11 +200,11 @@
 
 > [!NOTE]
 > đại khái gs B cho rằng để solve **difference equation** này. Ta sẽ thường
-> \**đoán nghiệm đặc biệt** trước, **thế vào xem có phải là nghiệm không**. 
+> **đoán nghiệm đặc biệt** trước, **thế vào xem có phải là nghiệm không**. 
 >
 > Ở đây ông đoán **P_i = x^i** thế vào ta có
 >
-> \**x^i = p*x^(i+1) + q*x^(i-1)** <=> 
+> **x^i = p*x^(i+1) + q*x^(i-1)** <=> 
 >
 > p*x^(i+1) - x^i + q*x^(i-1)  = 0
 >
@@ -358,7 +358,7 @@
 >
 > ii) Nhưng thường **cuộc chơi không công bằng**, **rất có thể là người chơi
 > luôn có xác suất thắng thấp hơn một chút so với nhà cái**. Và kết cục là
-> \**chơi càng nhiều** (số tiền tổng cộng N càng lớn) thì **xác suất thắng chung
+> **chơi càng nhiều** (số tiền tổng cộng N càng lớn) thì **xác suất thắng chung
 > cuộc của người chơi càng thấp.**
 >
 > Do đó nó có tên là **Gambler's ruin là vậy**
@@ -409,7 +409,7 @@
 > nhiều giá trị** khác nhau.
 >
 > Gs lấy ví dụ nếu ta nói x của equation này thì nó không phải variable vì nó
-> \**chỉ có thể bằng 7**, là một **constant**.
+> **chỉ có thể bằng 7**, là một **constant**.
 >
 > Nhưng **kể cả khi equation có nhiều solution** thì **nó cũng là constant.**
 >
@@ -424,11 +424,11 @@
 
 > [!NOTE]
 > Thế thì gs định nghĩa rằng, **random variable là một FUNCTION** map giữa
-> \**SAMPLE SPACE đến R**
+> **SAMPLE SPACE đến R**
 >
 > Đại khái là, ta đã biết Sample space S là tập hợp **mọi possible outcome** của
 > một experiment, thế thì **s** (s nhỏ) là một **possible outcome** và được **map** với
-> \**một giá trị trên R** bởi function (đã nói random variable là một function).
+> **một giá trị trên R** bởi function (đã nói random variable là một function).
 
 <br>
 
@@ -460,7 +460,7 @@
 > Ví dụ đầu tiên ta sẽ làm quen với **Bernoulli distribution**:
 >
 > Một **random variable X** được cho là có Bernoulli distribution Bern (p) nếu như X
-> \**CHỈ** có **2 possible value là 0 và 1** Với **P(X=1) = p và P(X=0) = 1-p.**
+> **CHỈ** có **2 possible value là 0 và 1** Với **P(X=1) = p và P(X=0) = 1-p.**
 >
 > (gs cho biết ông sẽ nói về định nghĩa của "distribution" sau)
 >
@@ -479,7 +479,7 @@
 > [!NOTE]
 > Và đương nhiên **X = 1** là một **EVENT**, và nó có thể được coi là **event
 > space** (ta đã biết event là một subset của sample space) chứa 
-> \**mọi possible outcome s được map với 1:** **{s: X(s) = 1}**
+> **mọi possible outcome s được map với 1:** **{s: X(s) = 1}**
 >
 > Nhớ lại khái nhiệm **event space**, là **subset của sample space** chứa các
 > possible outcome thỏa một đặc điểm nào đó mà ta quan tâm'
@@ -538,7 +538,7 @@
 > Khi đó, xác suất xảy ra của kết quả cụ thể này (HHHTTTT) sẽ tính như sau:
 >
 > Đó là ta dùng **định nghĩa của** **INDEPENDENT** **event** để có xác suất của
-> \**n = 7 event độc lập** này (**joint probability**) P(H,H,H,T,T,T,T) là **tích của xác suất
+> **n = 7 event độc lập** này (**joint probability**) P(H,H,H,T,T,T,T) là **tích của xác suất
 > của từng sự kiện**.
 >
 > P(H,H,H,T,T,T,T) = P(H)*P(H)*P(H)*P(T)*P(T)*P(T)*P(T)
@@ -567,7 +567,7 @@
 >
 > Và **mỗi event này có xác suất xảy ra là p^k(1-p)^(n-k).**
 >
-> \**P([có k lần success trong n lần]) = P(X=k) =** **(n choose k)*p^k*(1-p)^(n-k)** ====
+> **P([có k lần success trong n lần]) = P(X=k) =** **(n choose k)*p^k*(1-p)^(n-k)** ====
 >
 > Bàn thêm chút: P(H,H,H,T,T,T,T) = P(H)*P(H)*P(H)*P(T)*P(T)*P(T)*P(T) là sao?
 >

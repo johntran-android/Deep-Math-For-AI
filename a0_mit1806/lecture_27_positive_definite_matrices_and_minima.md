@@ -11,8 +11,8 @@
 > Bài này ta sẽ **tiếp tục thảo luận về Positive Definite
 > (Symmetric)** matrix, trong đó ta **gom lại mọi thứ** đã
 > học từ đầu tới giờ: **pivot**, **determinant**,
-> \**eigenvector**... Và có thêm một người bạn mới đó là
-> \**xTAx (quadratic form)
+> **eigenvector**... Và có thêm một người bạn mới đó là
+> **xTAx (quadratic form)
 >
 > CHÚ Ý, POSITIVE DEFINITE là nói về SYMMETRIC thỏa
 > mãn  các tính chất như mọi eigenvalue đều dương, ...
@@ -40,7 +40,7 @@
 > Vậy thì như bài trước ta đã biết **3 phép thử** cần pass để
 > một matrix là **POSITIVE DEFINITE matrix**:
 >
-> \**(CHỈ CẦN PASS MỘT TRONG SỐ CHÚNG)**
+> **(CHỈ CẦN PASS MỘT TRONG SỐ CHÚNG)**
 >
 > i) **Mọi EIGENVALUES đều DƯƠNG** (bằng 0 thì nó thành
 > singular rồi)
@@ -73,7 +73,7 @@
 >
 > me: ta có thể **dùng điều kiện det** của matrix 2x2 **dương**
 > (submatrix [2] thì đã có det dương rồi) -> như vậy phải
-> \**lớn hơn 18**
+> **lớn hơn 18**
 
 <br>
 
@@ -93,7 +93,7 @@
 > cái kia là 20**
 
 > [!NOTE]
-> \**SYMMETRIC** MATRIX CÓ EIGENVALUE **DƯƠNG**
+> **SYMMETRIC** MATRIX CÓ EIGENVALUE **DƯƠNG**
 > HOẶC **BẰNG 0**, THÌ GỌI LÀ **POSITIVE SEMI
 > DEFINITE**
 
@@ -106,7 +106,7 @@
 > [!NOTE]
 > gs: correct, và vì eigenvalue có thể bằng 0, nên ta có tính
 > chất của **Positive Semi Definite** là **eigenvalue**
-> \**KHÔNG ÂM** Pivot bằng mấy?
+> **KHÔNG ÂM** Pivot bằng mấy?
 >
 > Me: 2 và 0 (có nghĩa là, sẽ chỉ có một pivot bằng 2, chứ
 > nói pivot kia = 0 thì ko đúng, nhưng ý là vị trí thứ 2 trên
@@ -132,7 +132,7 @@
 > chính là pivot đầu tiên) rồi thì cái kia phải bằng 0.
 >
 > Như vậy nó **không pass pivot test** (nhắc lại để
-> \**positive definite thì pivot phải > 0)** ====
+> **positive definite thì pivot phải > 0)** ====
 >  Một cách khác cũng gần với cách 1, đó là ta thấy hàng
 > 2 = 3*hàng 1, tức là, nó depend hàng 1. Vậy kết luận
 > ngay khi elimination, hàng 2 sẽ bị biến thành 0. => vị
@@ -202,7 +202,7 @@
 > Và đại khái là đây là trường hợp mà ta sẽ có một **SADDLE
 > POINT** - **HÌNH YÊN NGỰA** - khi function **tăng ở một số
 > direction này** và **giảm ở direction khác** Bởi vì đây, như đã biết, nó không phải là Positive Definite
-> \**Nếu nó là Positive Definite**, ta sẽ có dạng đồ thị là **cái tô
+> **Nếu nó là Positive Definite**, ta sẽ có dạng đồ thị là **cái tô
 > khi function tăng ở mọi direction.**
 
 <br>
@@ -217,7 +217,7 @@
 > rằng **điều kiện pivot đã thỏa**, khi chắc chắn hai pivot dương.
 >
 > Tiếp theo ta sẽ kiểm tra **điều kiện của eigenvalue**. gs hỏi
-> \**làm sao ta biết chúng dương** hay không mà không cần
+> **làm sao ta biết chúng dương** hay không mà không cần
 > tính?
 >
 > me: Vì ta có **det dương** tức là **tích các eigenvalue dương**,
@@ -240,7 +240,7 @@
 <p align="center"><kbd><img src="assets/41f930481c6f4ebc96dbb7417d2285cb6db32537.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**và điều kiện các "sub det" dương hết cũng thỏa**, gs cho
+> **và điều kiện các "sub det" dương hết cũng thỏa**, gs cho
 > rằng ta sẽ expect **xTAx sẽ DƯƠNG VỚI MỌI X KHÁC 0**,
 > VÀ **BẰNG 0 = MINIMUM TẠI X = 0**
 
@@ -347,7 +347,7 @@
 > [!NOTE]
 > Thế thì lướt lại nếu **như ta có 18y^2 thay vì 20** (mà hồi nãy
 > nói là đây là **marginal** case) thì có thể thấy khi đó ta sẽ có
-> \**2(x+3y)^2 + 0y^2**, **vẫn đảm bảo function luôn ko âm**.
+> **2(x+3y)^2 + 0y^2**, **vẫn đảm bảo function luôn ko âm**.
 >
 > Nhưng **dưới mức đó** (cái mức mà ta xác định cho d để
 > matrix [[a b][c d]] có det dương), ví dụ như 17y^2, thì nó sẽ
@@ -385,7 +385,7 @@
 
 > [!NOTE]
 > Hai hệ số gắn với **square term chính là 2 pivot**, và số
-> \**3** chính là của **L matrix** (thể hiện ở bước trừ hàng 2
+> **3** chính là của **L matrix** (thể hiện ở bước trừ hàng 2
 > cho 3 hàng 1 để khử a22 = 6)
 
 <br>
@@ -542,11 +542,11 @@
 > eigenvalue, nhưng **ít nhất nên check lại trace và det** xem
 > có đúng không.
 >
-> \**Trace** phải là **tổng eigenvalue = tổng đường chéo** =
+> **Trace** phải là **tổng eigenvalue = tổng đường chéo** =
 > 2+2+2 = 6 và tổng 3 eigenvalue này bằng 6 cho thấy
 > đúng.
 >
-> \**Det là 4, phải bằng tích các eigenvalue**, ta thấy cũng
+> **Det là 4, phải bằng tích các eigenvalue**, ta thấy cũng
 > đúng.
 
 <br>
@@ -565,7 +565,7 @@
 > THE SQUARE ta sẽ thấy nó luôn > 0 với x khác 0
 >
 > Để rồi đồ thị của quadratic function f(x1,x2,x3) này
-> \**trong không gian 4 chiều** (3 chiều của 3 variable và
+> **trong không gian 4 chiều** (3 chiều của 3 variable và
 > 1 chiều của f) sẽ là một hình dạng của **Paraboloid -
 > khối chảo parabol**)
 
@@ -597,7 +597,7 @@
 > với trục dọc của quả bóng)**
 >
 > Còn nếu là **hình cầu (sphere)**, như quả banh thì ta có
-> \**Identity matrix** khi **mọi trục đều là eigenvector** với **eigenvalue bằng nhau hết và bằng 1**
+> **Identity matrix** khi **mọi trục đều là eigenvector** với **eigenvalue bằng nhau hết và bằng 1**
 
 <br>
 

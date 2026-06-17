@@ -15,10 +15,10 @@
 
 > [!NOTE]
 > gs cho rằng đây là một bài **rất quan trọng** khi ta sẽ nói về
-> \**projection lên subspace** 
+> **projection lên subspace** 
 >
 > Đầu tiên, gs dùng ví dụ trong **1D dimension subspace** - đó là 
-> \**đường thẳng a**: **tìm điểm trên a sao cho gần nhất với b**
+> **đường thẳng a**: **tìm điểm trên a sao cho gần nhất với b**
 
 <br>
 
@@ -117,7 +117,7 @@
 
 > [!NOTE]
 > Và **aaT/aTa chính là matrix P**, mẫu số là một
-> \**scalar** (dot product của a với chính nó) và **aaT
+> **scalar** (dot product của a với chính nó) và **aaT
 > là một cols x một row** -> như ta đã biết nó là
 > một **RANK 1 MATRIX**
 
@@ -147,7 +147,7 @@
 > \-> matrix **P là rank 1 matrix**, có **cols space với dim = 1**,
 > và vector a chính là vector duy nhất trong basis. Nên **cols
 > space của P chính là line đi qua vector a**. Nên kết quả của
-> \**Pb sẽ vẫn nằm trên line này**
+> **Pb sẽ vẫn nằm trên line này**
 
 <br>
 
@@ -173,7 +173,7 @@
 > = **aaT/aTa** = P
 >
 > => tức là vẫn transpose bằng chính nó, nên nó mà 
-> \**symmetric** matrix
+> **symmetric** matrix
 
 <br>
 
@@ -258,7 +258,7 @@
 > biết, một plane, cụ thể hơn trong ví dụ đang là 2D plane
 > trong R3 Thì nó là **2D subspace của R3** thì nó sẽ có 2
 > basis vector (hay nói đúng hơn là **cần 2 vector độc lập**
-> \**để có một basi**s của subspace này). Ta gọi nó là {a1, a2}
+> **để có một basi**s của subspace này). Ta gọi nó là {a1, a2}
 >
 > Gs cũng cho biết **a1 a2 không nhất thiết vuông góc nhau**,
 > vì có vô số basis - và như ta còn nhớ **miễn là chúng là hai
@@ -281,7 +281,7 @@
 
 > [!NOTE]
 > Gs nói n**ếu b nằm trong C(A) thì khỏe rồ**i,
-> \**projection của b lên A sẽ chỉ là chính nó**
+> **projection của b lên A sẽ chỉ là chính nó**
 
 <br>
 
@@ -308,9 +308,9 @@
 > LINEAR COMBINATION CỦA HAI BASIS VECTOR a1, a2**. 
 >
 > Và 2 coefficient trong linear combination này CHÍNH LÀ x^: 
-> \**[x^1, x^2]**
+> **[x^1, x^2]**
 >
-> \**p = x^1*a1 +x^2*a2** hay ghi thế này cũng được **p = Ax^**
+> **p = x^1*a1 +x^2*a2** hay ghi thế này cũng được **p = Ax^**
 
 <br>
 
@@ -438,7 +438,7 @@
 > Thế thì câu hỏi là **x^ là gì**, và **projection p là gì**.
 >
 > Vậy thì từ **ATAx^ = ATb**, **nhân hai vế cho (ATA)_inv** ta sẽ có 
-> \**x^** = **(ATA)_invATb**
+> **x^** = **(ATA)_invATb**
 >
 > Và p = Ax^ (hồi nãy đã nói, p là projection của b lên column
 > space của A nên p là linear combination của các A cols hay **p
@@ -447,7 +447,7 @@
 > Giờ **có x^ rồi** thì thế vào ta có **p = A(ATA)^-1ATb**
 >
 > Và gs liên hệ nó với trường hợp 1D hồi nãy, a là vector, thì
-> \**p = aaT/aTab** còn bây giờ A là matrix thì công thức là vậy.
+> **p = aaT/aTab** còn bây giờ A là matrix thì công thức là vậy.
 >
 > Thì nó cũng như nhau thôi vì **1/aTa cũng chính là (aTa)^-1**
 >  - có thể coi là inverse của aTa
@@ -479,7 +479,7 @@
 > phải là square invertible matrix**, vì như đã nói ban đầu **A
 > là LONG & THIN MATRIX** có vài cols nhưng nhiều row.
 >
-> \**DO ĐÓ Ainv KHÔNG TỒN TẠI.**
+> **DO ĐÓ Ainv KHÔNG TỒN TẠI.**
 >
 > Và **cái rule ở (ATA)inv = Ainv(AT)inv chỉ đúng khi A square
 > & invertible matrix** mà thôi

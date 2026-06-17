@@ -23,7 +23,7 @@
 > complex**, thay vì chỉ là số thực R)
 >
 > Đại khái là ta sẽ cần **điều chỉnh chút xíu** khi nói về
-> \**length** **của vector**. Như có thể thấy, **nếu là R^n**,
+> **length** **của vector**. Như có thể thấy, **nếu là R^n**,
 > length của vector là **dot product của vector với chính nó
 > uTu**.
 >
@@ -43,7 +43,7 @@
 <p align="center"><kbd><img src="assets/e0e2225d4a1a492ccd126d3b4b971eae1133c79a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Khi định nghĩa length** bằng **z_bar.Tz**, thì nó trở thành 
+> **Khi định nghĩa length** bằng **z_bar.Tz**, thì nó trở thành 
 > đúng ví dụ **u_barTu** = 1*1 - i*i = 1 + 1 = 2
 
 <br>
@@ -54,7 +54,7 @@
 
 > [!NOTE]
 > Và ta gọi việc **transpose** đồng thời **conjugate** z_bar.T là
-> \**Hermitian** z^H
+> **Hermitian** z^H
 
 <br>
 
@@ -66,7 +66,7 @@
 > Và tương tự với **inner product giữa hai vector khác nhau**
 > cũng vậy, **với real value vector thì nó là yTx**, nhưng với
 > complex vector thì như đã nói, ta sẽ dùng conjugate. Và
-> \**inner product giữa y và x** sẽ là: **y_barTx**, hay **yHx**
+> **inner product giữa y và x** sẽ là: **y_barTx**, hay **yHx**
 > (đọc là "y_Hermit" = vừa transpose vừa lấy conjugate)
 
 <br>
@@ -103,7 +103,7 @@
 > thì nay sẽ là **qHq = 0**
 >
 > Và với orthogonal matrix Q mang giá trị complex thì ta sẽ có
-> \**Q_hermitQ = I thay vì QTQ = I**.
+> **Q_hermitQ = I thay vì QTQ = I**.
 >
 > Nói chung đây chỉ là **những thay đổi chút xíu khi ta deal với
 > complex vector / matrix** thay vì real vector matrix
@@ -129,7 +129,7 @@
 > trọng** nhất: **Fourier matrix**.
 >
 > Dạng tổng quát của nó là thế này: phần tử thứ i, j là
-> \**w^(i*j)** với **i, j bắt đầu từ 0 đến n-1** Ví dụ cột 1 (với j=0, i = 0,1,...) đương nhiên i*j = 0, thành
+> **w^(i*j)** với **i, j bắt đầu từ 0 đến n-1** Ví dụ cột 1 (với j=0, i = 0,1,...) đương nhiên i*j = 0, thành
 > ra mọi component của cột 1 đều là w^0 = 1
 >
 > Tương tự hàng 1 cũng vậy (i=0, j=0,1,2...)
@@ -202,7 +202,7 @@
 >
 > e^i*(π/2) = cos(π/2) + i*sin(π/2) = 0 + i*1 = **i**
 >
-> \**Tức là với n = 4 thì w chính là i. 
+> **Tức là với n = 4 thì w chính là i. 
 >
 > để rồi ta thử check lại xem có phải w^4 = 1 không.** thì rõ ràng i^2 = -1, i^3 = i*i^2 = i(-1) = -i, i^4 = i*i^3 = i*(-i) 
 > = -i^2 = -(-1) = **1
@@ -230,7 +230,7 @@
 > Và gs cho biết matrix này có **các ORTHOGONAL COLUMNS**:
 >
 > Ví dụ lấy cột 2 inner product với cột 4, nhớ rằng ta
-> \**đang làm việc với complex vector** nên **inner product
+> **đang làm việc với complex vector** nên **inner product
 > thật ra là [cột 2]_ hermit.[cột 4]** 
 >
 > Tức là **transpose** cột 2  và **conjugate (đổi dấu phẩn ảo**) rồi 
@@ -398,7 +398,7 @@
 > có thể hiểu điều này, rõ ràng là **F32 ở "trên"** sẽ **chỉ
 > "apply" với nửa trên của x** (x này là kết qủa sau khi
 > đã được xắp xếp lại bởi P). Và **F32 ở dưới** sẽ chỉ
-> \**"apply" với nửa dưới cuả x** ứng với các item có index
+> **"apply" với nửa dưới cuả x** ứng với các item có index
 > chẵn trong x ban đầu
 
 <br>
@@ -409,7 +409,7 @@
 
 > [!NOTE]
 > Và **matrix bên trái** bao gồm các **Identity** và
-> \**D** (là diagonal matrix) sẽ **làm nhiệm vụ "Sắp xếp lại"**
+> **D** (là diagonal matrix) sẽ **làm nhiệm vụ "Sắp xếp lại"**
 
 <br>
 
@@ -452,7 +452,7 @@
 
 > [!NOTE]
 > Đó **chính là Fast Fourier transform**. ý tưởng chính là
-> \**thay vì tốn 64^2 phép tính** thì ta sẽ **giảm đi rất nhiều**
+> **thay vì tốn 64^2 phép tính** thì ta sẽ **giảm đi rất nhiều**
 
 <br>
 
@@ -480,7 +480,7 @@
 
 > [!NOTE]
 > Từ đó **thay vì n^2** ta sẽ chỉ tốn
-> \**(1/2)nlog(n)** phép tính
+> **(1/2)nlog(n)** phép tính
 
 <br>
 

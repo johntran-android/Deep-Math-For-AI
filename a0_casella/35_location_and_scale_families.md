@@ -62,10 +62,10 @@
 > FAMILY CÁC DISTRIBUTION** mà trong đó bắt đầu với một valid pdf f(x) thì
 > f(x - μ) với μ khác nhau cũng là pdf của các distribution, mà cùng nhau tụi nó
 > tạo thành một gia đình các distribution mà cái gia đình này thuộc loại "
-> \**location** **family**"
+> **location** **family**"
 >
 > Và nhờ việc ta **đã chứng minh** nếu **f là pdf thì f(x - μ) / σ cũng là pdf** nên 
-> \**f(x - μ) hoàn toàn hợp lệ là pdf** khỏi thắc mắc
+> **f(x - μ) hoàn toàn hợp lệ là pdf** khỏi thắc mắc
 >
 > Việc giới thiệu **location param** sẽ tạo **hiệu qủa** là **các distribution được shift
 > bởi location param μ** và **hình dạng của distribution không đổi**. Cái dòng
@@ -91,7 +91,7 @@
 >
 > Ví dụ như nếu **cho trước giá trị đã biết σ** thì 
 >
-> \**f(x) = (1/σ√2π) e^-x^2/2σ^**2 sẽ là standard pdf CỦA MỘT LOCATION 
+> **f(x) = (1/σ√2π) e^-x^2/2σ^**2 sẽ là standard pdf CỦA MỘT LOCATION 
 > FAMILY. 
 >
 > Bởi vì xét f(x - μ) = (1/σ√2π) e^-(x-μ)^2/2σ^2, thì nó sẽ có dạng là pdf của
@@ -105,7 +105,7 @@
 > NHƯNG CÁI CHÍNH PHẢI HIỂU, NHƯ ĐÃ NHẤN MẠNH TRONG NOTE
 > TRƯỚC, ĐÓ LÀ TA CÓ MỘT ĐỊNH NGHĨA **MANG ĐẾN MỘT CÔNG CỤ** ĐÓ LÀ: 
 >
-> \**CHỈ CẦN CÓ MỘT PDF f(x) THÌ f(x - μ) VỚI μ KHÁC NHAU SẼ
+> **CHỈ CẦN CÓ MỘT PDF f(x) THÌ f(x - μ) VỚI μ KHÁC NHAU SẼ
 > TẠO CHO TA MỘT FAMILY CÁC DISTRIBUTION CÓ CHUNG DẠNG
 > NHƯNG KHÁC LOCATION**,
 >
@@ -138,7 +138,7 @@
 >
 > Lấy ví dụ trong đó ta muốn thiết lập một experiment để **đo lường một hằng số
 > μ nào đó**. Nhưng **sự đo có sai số** t**hể hiện** bởi **random variable Z**. Dẫn tới
-> \**giá trị quan sát thấy** của yếu tố cần đo sẽ **bị ảnh hưởng bởi sai số**, nên **với
+> **giá trị quan sát thấy** của yếu tố cần đo sẽ **bị ảnh hưởng bởi sai số**, nên **với
 > các giá trị sai số khác nhau (Z)** thì **giá trị quan sát thấy của yếu tố cần đo
 > cũng khác nhau luôn**, tức là **nó cũng là random variable**, đặt là **X**. Và quan hệ
 > giữa X, Z, μ thể hiện bởi: **X = Z + μ** 
@@ -196,7 +196,7 @@
 > Rồi, cái hiệu quả của việc khác nhau scale param là nó **kéo dãn hoặc bóp
 > cái distribution lại** nhưng vẫn **giữ nguyên hình dạng cơ bản.**
 >
-> \**Thường** **thường** scale param sẽ được dùng khi f(x) có dạng đối xứng quanh
+> **Thường** **thường** scale param sẽ được dùng khi f(x) có dạng đối xứng quanh
 > 0 (như normal (0, σ) hoặc có dạng "chỉ dương khi x > 0".
 >
 > Vài ví dụ là Normal (0, σ^2) hay Γ(α fixed, β)
@@ -213,12 +213,12 @@
 
 > [!NOTE]
 > Tương tự, nếu f(x) là pdf thì **(1/σ)f[(x-μ)/σ]** sẽ là family thuộc loại
-> \**location-scale** với standard pdf là **f(x)**, **μ** gọi là **shift** parameter,
+> **location-scale** với standard pdf là **f(x)**, **μ** gọi là **shift** parameter,
 > σ gọi là **scale** parameter
 >
-> \**Hiệu ứng** của việc đưa thêm / giới thiệu thêm cả scale và shift param là
+> **Hiệu ứng** của việc đưa thêm / giới thiệu thêm cả scale và shift param là
 > để **stretch** / **contract** (σ > 1 / < 1) đồ thị của distribution, sau đó thì
-> \**shift nó để dời location** hay nói như trong sách là để nhưng điểm trên
+> **shift nó để dời location** hay nói như trong sách là để nhưng điểm trên
 > đồ thị vốn nằm bên phải trục x = 0 nay sẽ thành nằm bên phải trục x = μ
 
 <br>

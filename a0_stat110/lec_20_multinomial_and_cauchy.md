@@ -38,12 +38,12 @@
 > [!NOTE]
 > Cụ thể theorem đó là: Cho **X, Y là hai r.v Normal distribution**:  
 >
-> \**X ~ N(μ1, σ1^2)**, **Y ~ N(μ2, σ2^2)**
+> **X ~ N(μ1, σ1^2)**, **Y ~ N(μ2, σ2^2)**
 >
 > Và **X, Y  independent** thì **Tổng X+Y cũng sẽ là r.v ~ Normal distribution**
 > với mean là **tổng mean**, và variance là **tổng variance**:
 >
-> \**X+Y ~ N(μ1+μ2, σ1^2 + σ2^2)**
+> **X+Y ~ N(μ1+μ2, σ1^2 + σ2^2)**
 >
 > Để rồi nếu là đang quan tâm difference X-Y, thì ta cũng sẽ coi như là tổng
 > của hai r.v X+(-Y) với **-Y** cũng là **Normal rv với mean -μ2, variance
@@ -100,7 +100,7 @@
 > Và vế phải, **có dạng e^(μt+σ^2*t^2/2)** với μ = μ1 + μ2; σ^2 = σ1^2 + σ2^2  cho ta kết
 > luận rằng:
 >
-> \**X+Y cũng là ~ Normal distribution** với mean là μ = μ1 + μ2    và variance σ^2 = σ1^2
+> **X+Y cũng là ~ Normal distribution** với mean là μ = μ1 + μ2    và variance σ^2 = σ1^2
 > \+ σ2^2.
 >
 > Bởi vì như đã biết, MGF cũng có **công dụng tương tự PDF, CDF đó là giúp xác định
@@ -178,7 +178,7 @@
 > hàm **chẵn (g(-x) = g(x))**, nên **tích phân từ -inf:inf trở thành 2* tích phân 
 > từ 0:inf**, và khi đó **có thể bỏ dấu trị tuyệt đối**
 >
-> \**2 * ∫ 0:inf  z * (1/√2π) * e^(-z^2/2) dz**
+> **2 * ∫ 0:inf  z * (1/√2π) * e^(-z^2/2) dz**
 >
 > = **2 * (1/√2π)** * ∫ 0:inf z * e^(-z^2/2) dz (i)
 >
@@ -255,7 +255,7 @@
 > Thế thì với **Bin(n, p)** r.v **X chỉ là một NUMBER**, mang giá trị là **số Bern(p) trial success**.
 >
 > Còn ở đây, khi nhìn nhận một trial **có thể cho k possible outcomes**, ta có thể **thay** chuỗi n
-> \**trial** bằng n **object** cần phân loại thành k loại.
+> **trial** bằng n **object** cần phân loại thành k loại.
 >
 > Thì khi đó **X1** là **số object thuộc loại 1**, **Xk là số object thuộc loại k**.
 >
@@ -271,7 +271,7 @@
 
 > [!NOTE]
 > Và từ đó ta có **JOINT DISTRIBUTION** (**JOINT PMF**):
-> \**P(X1=n1, X2=n2, ... Xk=nk)**
+> **P(X1=n1, X2=n2, ... Xk=nk)**
 
 <br>
 
@@ -285,7 +285,7 @@
 >
 > Thì đây là **n independent events**, theo **định nghĩa của independent events:**
 >
-> \**P của chuỗi kết quả cụ thể** như trên = P(intersection của các events) = **tích của P mỗi events:** Nói rõ hơn: Chuỗi kết qủa cụ thể của 11 trial (chú ý bây giờ không còn là Bern (p) trial đâu nhé
+> **P của chuỗi kết quả cụ thể** như trên = P(intersection của các events) = **tích của P mỗi events:** Nói rõ hơn: Chuỗi kết qủa cụ thể của 11 trial (chú ý bây giờ không còn là Bern (p) trial đâu nhé
 > vì mỗi trial có tới k possible outcomes) 23311112221 sẽ là intersection của
 >
 > (1st trial ra 2, x,x,x....x) ∩ (x, 2nd trial ra 3, x,...x) ∩ (x, x, 3rd trial ra 3) ∩ ...
@@ -311,16 +311,16 @@
 >
 > Thế rồi, **trong n events đó**, có:
 >
-> \**n1 (=5) events** outcome là **loại 1** với xác suất xảy ra là **p1**.
+> **n1 (=5) events** outcome là **loại 1** với xác suất xảy ra là **p1**.
 >
-> \**n2 (=4) events** outcome là l**oại 2** với xác suất xảy ra là **p2**....
+> **n2 (=4) events** outcome là l**oại 2** với xác suất xảy ra là **p2**....
 >
 > Vậy tích n của P các events = [**p1*p1..(n1=5 lần)**] * [**p2*p2*..(n2=4 lần)**] ...
 >
 > = **p1^n1 * p2^n2 *...pk^nk**
 >
 > Event (X1=n1(=5), X2=n2(=3),..Xk=nk) **không chỉ có một chuỗi cụ thể** như trên mà có thể có
-> \**chuỗi khác** với cùng các con số nhưng s**ắp xếp thứ tự khác nhưng đều có n1=5 lần ra loại 1** (tức là trong chuỗi có 5 số 1), và đều có n2=3 lần ra loại 2 (tức là có 4 con số 2)..
+> **chuỗi khác** với cùng các con số nhưng s**ắp xếp thứ tự khác nhưng đều có n1=5 lần ra loại 1** (tức là trong chuỗi có 5 số 1), và đều có n2=3 lần ra loại 2 (tức là có 4 con số 2)..
 >
 > Ví dụ 12121211332 là một outcome như vậy cũng thuộc event (X1=n1(=5), X2=n2(=3),..Xk=nk)
 >
@@ -338,7 +338,7 @@
 >
 > Theo **axiom 2**:
 >
-> \**P(X1=n1, ..Xk=nk) = Tổng của n!/ (n1!n2!...) xác suất của mỗi event,**
+> **P(X1=n1, ..Xk=nk) = Tổng của n!/ (n1!n2!...) xác suất của mỗi event,**
 >
 > mà chúng **đều có giá trị là p1^n1 * p2^n2 *... pk^nk** (vì như đã nói chúng chỉ khác cách  sắp
 > xếp của các kết quả
@@ -451,19 +451,19 @@
 > (vector) ~ Multinomial**, có điều, **tham số của nó sẽ khác**.
 >
 > Đó là nó sẽ là **n-n1 thay vì n**, điều này dễ hiểu, vì "coi như" **chỉ còn n-n1 trials / objects**  Và
-> \**xác suất cũng thay đổi**, vì sẽ là **SAI** nếu ta để **p = [p2, ...pk]** vì tổng của chúng **KHÔNG
+> **xác suất cũng thay đổi**, vì sẽ là **SAI** nếu ta để **p = [p2, ...pk]** vì tổng của chúng **KHÔNG
 > CÒN BẰNG 1**. Do đó ta **phải tính lại**, gọi là [**p'2, p'3...p'k**]
 >
 > Thế thì, ví dụ xét **p'2**, ta sẽ lập luận như sau:
 >
-> \**p'2** sẽ là **xác suất một object không phải loại 1**, **thuộc loại 2**. Hay nói cách khác, là **xác
+> **p'2** sẽ là **xác suất một object không phải loại 1**, **thuộc loại 2**. Hay nói cách khác, là **xác
 > suất một object là loại 2** nếu, **dựa trên** việc **nó không phải là loại 1**.
 >
-> \**p'2 = P(thuộc loại 2 | không phải loại 1)**
+> **p'2 = P(thuộc loại 2 | không phải loại 1)**
 >
 > Thì theo **định nghĩa** **conditional probability**, ta sẽ có
 >
-> \**P(thuộc loại 2 | không phải loại 1)** = **P(thuộc loại 2, không thuộc loại 1) / P(không thuộc loại 1)**
+> **P(thuộc loại 2 | không phải loại 1)** = **P(thuộc loại 2, không thuộc loại 1) / P(không thuộc loại 1)**
 >
 > i) **P(thuộc loại 2, không thuộc loại 1)** thì là **intersection** của **hai sự kiện** nhưng **[thuộc loại
 > 2**] thì **đồng** **nghĩa** [**không thuộc loại 1**] rồi 
@@ -554,7 +554,7 @@
 > rằng với **Z~N(0,1)** thì **(-Z) cũng ~ N(0,1)**, gs lập luận rằng vì vai trò của X,
 > Y như nhau (symmetry) và tính symmetry của N(0,1) nên
 >
-> \**KHÚC NÀY CHƯA HIỂU**
+> **KHÚC NÀY CHƯA HIỂU**
 >
 > P(X/Y ≤ t) = P(X/|Y| ≤ t)
 
@@ -575,7 +575,7 @@
 >
 > Thế thì ta cần nhớ rằng, **PDF** của Joint Distribution định nghĩa rằng:
 >
-> \**P((X, Y) thuộc vùng A) = tích phân kép trên A f(x,y)dxdy**
+> **P((X, Y) thuộc vùng A) = tích phân kép trên A f(x,y)dxdy**
 >
 > Và X/Y ≤ t mà ta đã chứng minh nó tương đương X ≤ t|Y| chính là xác định một vùng A như vậy:
 > Hay nói cách khác P(X ≤ t|Y|) là P(X,Y thuộc vùng A sao cho X ≤ t|Y|)
@@ -599,8 +599,8 @@
 > [!NOTE]
 > Tiếp theo f(x,y) như đã biết, là JOINT PDF của X,Y. Mà vì **đã nói X,Y i.i.d**
 > tức là Independent. Do đó, dựa vào định nghĩa của Independent r.v.s về
-> \**JOINT** và **MARGINAL** **distribution** cho ta biết **JOINT PDF f_X,Y(x, y)** bằng 
-> \**TÍCH** của **MARGINAL PDF** f_X(x) và f_Y(y)
+> **JOINT** và **MARGINAL** **distribution** cho ta biết **JOINT PDF f_X,Y(x, y)** bằng 
+> **TÍCH** của **MARGINAL PDF** f_X(x) và f_Y(y)
 >
 > f_XY(x, y) = f_X(x)*f_Y(y)
 >
@@ -616,12 +616,12 @@
 >
 > Đưa vào tích phân sẽ là:
 >
-> \**∫-inf:inf ∫-inf:t|y| (1/√2π) * e^(-x^2/2) * (1/√2π) * e^(-y^2/2) dxdy**
+> **∫-inf:inf ∫-inf:t|y| (1/√2π) * e^(-x^2/2) * (1/√2π) * e^(-y^2/2) dxdy**
 >
 > Thì khi tính tích phân của x, ta coi y như constant, nên những gì không dính
 > đến x,  và những term liên quan đến y có thể đưa ra ngoài tích phân
 >
-> \**(1/√2π) ∫-inf:inf  e^(-y^2/2) ∫ -inf:t|y|  (1/√2π) * e^(-x^2/2) * dxdy** 
+> **(1/√2π) ∫-inf:inf  e^(-y^2/2) ∫ -inf:t|y|  (1/√2π) * e^(-x^2/2) * dxdy** 
 
 <br>
 
@@ -639,11 +639,11 @@
 > ∫ -inf:t|y|  (1/√2π) * e^(-x^2/2) * dx
 >
 > gs nhắc lại rằng, ta đã từng nói là **không thể tính được tích phân** này ở dạng
-> \**closed form** (search "không thể  tính" )
+> **closed form** (search "không thể  tính" )
 >
 > Nhưng sau đó ta đã biết **có thể tính được bằng cách khác** khá rắc rối. Hơn
 > nữa, ta cũng đã biết đây chính là **Φ(t|y|)** - ý nghĩa là hàm Φ là **CDF** của
-> \**Standard Normal N(0,1)**, evaluated tại t|y| (theo link màu cam)
+> **Standard Normal N(0,1)**, evaluated tại t|y| (theo link màu cam)
 
 <br>
 
@@ -662,7 +662,7 @@
 >
 > Ta sẽ nhận định tiếp rằng function trong dấu tích phân y tức:
 >
-> \**e^(-y^2/2) Φ(t|y|)**,
+> **e^(-y^2/2) Φ(t|y|)**,
 >
 > Bây giờ là **hàm chẵn** (vì nó có dạng g(y^2, |y|) nên g(-a) = g(a) thành ra ta sẽ **thay tích phân -inf:inf**
 > bằng **2 * tích phân từ 0:inf** và **bỏ dấu trị tuyệt đối của y**
@@ -708,7 +708,7 @@
 >
 > Quay lại bài toán này, ta đang có xây dựng CDF **F_V(t)** của Cauchy r.v V =
 > X/Y  thì bây giờ đ**ương nhiên ta cũng lấy đạo hàm theo t** để có PDF của V
-> \**f_V(t): F'(t) = f(t) chỉ là ta đang đang có F(t) ở dạng tích phân**
+> **f_V(t): F'(t) = f(t) chỉ là ta đang đang có F(t) ở dạng tích phân**
 
 <br>
 
@@ -768,7 +768,7 @@
 >
 > Nên F'(t) =
 >
-> \**(1/π) Tích phân 0:inf của {y * e^[-(1+t^2)y^2/2} dy** 
+> **(1/π) Tích phân 0:inf của {y * e^[-(1+t^2)y^2/2} dy** 
 > ===
 >
 > Tới đây thì ta có một tích phân **CÓ THỂ giải được**, bởi để ý thấy "y^2/2" và y ở
@@ -816,7 +816,7 @@
 > Với cách tiếp cận **wishful** như đã biết ta **ước rằng, đã biết y**, để mà **conditioned on y**. Thì
 > P(X ≤ t|Y|) trở thành 
 >
-> \**tích phân -inf:inf P(X ≤ t|Y| | Y=y)**
+> **tích phân -inf:inf P(X ≤ t|Y| | Y=y)**
 >
 > Tới thời điểm này có thể đã khá quen với lập luận vì sao mà ta có cái này (cũng chính là
 > Law of Total Probability), nhưng cứ lập luận lại cho nhớ lâu:
@@ -850,7 +850,7 @@
 >
 > Còn với continuous case thì nó sẽ tương đương:
 >
-> \**P(X ≤ t|Y|) = tích phân -inf:inf P(X ≤ t|Y| | Y=y) f_Y(y)dy,** trong đó f_Y(y) mà gs ghi là Φ(y) là **PDF của y,** và Y như đã biết là N(0,1)
+> **P(X ≤ t|Y|) = tích phân -inf:inf P(X ≤ t|Y| | Y=y) f_Y(y)dy,** trong đó f_Y(y) mà gs ghi là Φ(y) là **PDF của y,** và Y như đã biết là N(0,1)
 
 <br>
 
@@ -875,7 +875,7 @@
 > Và khi đó ta có **P(X ≤ ty)**, và vì **X~N(0,1)** nên **P(X ≤ ty) chính là Φ(ty)** và bài
 > toán trở thành:
 >
-> \**tích phân -inf:inf f Φ(ty) f_Y(y)dy**
+> **tích phân -inf:inf f Φ(ty) f_Y(y)dy**
 >
 > giải tiếp tại đây như hồi nãy (theo link xanh)
 

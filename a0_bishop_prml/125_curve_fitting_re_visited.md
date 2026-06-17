@@ -66,7 +66,7 @@
 
 > [!NOTE]
 > Như vậy, với góc nhìn này, dựa trên x,
-> \**w**, β thì T ~ normal(y(**x**, w), 1/β)
+> **w**, β thì T ~ normal(y(**x**, w), 1/β)
 
 <br>
 
@@ -99,7 +99,7 @@
 > nào cũng có chung pdf/pmf f(.|θ) hết.
 >
 > Vấn đề là, gs giả định đám Ti này độc lập thì ok đi. Nhưng có thể đặt câu hỏi là
-> \**chúng có cùng population distribution không**?
+> **chúng có cùng population distribution không**?
 >
 > Nguồn cơn thắc mắc là ở chỗ, mean của distribution của Ti lại là hàm phụ thuộc
 > x: y(x, **w**). Nên rõ ràng là với x khác nhau, ETi = y(xi,w) sẽ khác nhau cho nên
@@ -165,7 +165,7 @@
 >
 > Với ML estimator, được định nghĩa là θ^_mle(**X**) = argmax_θ L(θ|**X**),
 > mang ý nghĩa là θ khiến tối đa hóa độ hợp lí khi quan sát được giá trị của
-> \**X**
+> **X**
 >
 > Còn Bayes estimator, được định nghĩa là, mean hoặc median của phân
 > phối posterior π(θ|**x**).
@@ -237,7 +237,7 @@
 > đương lúc này chính là SUM OF SQUARED ERROR (y như  cách tiếp
 > cận bài toán này bữa trước) để rồi giúp ta hiểu một điều quan trọng:
 >
-> \**ĐI TÌM w BẰNG CÁCH MINIMIZE SUM OF SQUARED ERROR LOSS
+> **ĐI TÌM w BẰNG CÁCH MINIMIZE SUM OF SQUARED ERROR LOSS
 > CŨNG CHÍNH LÀ VIỆC ĐI TÌM MAXIMUM LIKELIHOOD ESTIMATOR
 > CỦA w VỚI GIẢ ĐỊNH GAUSSIAN NOISE**.
 >
@@ -425,7 +425,7 @@
 > mean của distribution này, là y(xi, w) và variance 1/β **VẪN ĐANG ĐƯỢC COI
 > NHƯ CÓ GIÁ TRỊ CỐ ĐỊNH NHƯNG CHƯA BIẾT (FIXED UNKNOWN**
 >
-> \**Chỉ khi nào ta coi y(xi,w), 1/β như random variable, cũng là coi w, β là random
+> **Chỉ khi nào ta coi y(xi,w), 1/β như random variable, cũng là coi w, β là random
 > variable, và xem xem posterior distribution của nó. Thì lúc đó mới là ta tiến sáng
 > Bayesian approach.**
 >
@@ -474,7 +474,7 @@
 > distribution nào đó phản ảnh hiểu biết sơ khai của ta về nó, sau đó, dùng
 > Bayes rule để xây dựng distribution của θ dựa trên quan sát **X** = **x**, mang
 > ý nghĩa là cập nhật lại hiểu biết của ta về θ nhờ quan sát thấy sự kiện **X** =
-> \**x** xảy ra. Và dùng cái distribution này để làm inference / estimator θ. Thì đó
+> **x** xảy ra. Và dùng cái distribution này để làm inference / estimator θ. Thì đó
 > chính là Bayes estiamtor θ^_B(**X**).
 >
 > Vậy nên, ở đây, ta sẽ bắt đầu coi w, β như random variable. và chọn prior
@@ -507,7 +507,7 @@
 >
 > = [1/(2π)^D/2] (1/|**Σ**|^1/2) exp {-1/2(**x** - **μ**)T Σinv (**x** - **μ**)}
 >
-> \**Σ** = (1/α) **I** ⇨ det **Σ** = (1/α)^(M+1);
+> **Σ** = (1/α) **I** ⇨ det **Σ** = (1/α)^(M+1);
 >
 > pdf của W: f(**w**|α) = N(**w**|0, (1/α) **I**)
 >
@@ -584,7 +584,7 @@
 > Đây gọi là **MAXIMIZE POSTERIORI**
 >
 > Chỗ này suy ngẫm tí xíu: Trong sách Casella khi nói về Bayes estimator thì thường
-> \**chỉ nói rằng ta sẽ lấy mean của posterior distribution**. Còn ở đây, trong machine
+> **chỉ nói rằng ta sẽ lấy mean của posterior distribution**. Còn ở đây, trong machine
 > learning, ta **lại đi tìm θ khiến maximize** π(θ|**x**). Ngẫm lại, thì không phải
 > distribution nào cái mean cũng là nơi có pdf cao nhất.
 >

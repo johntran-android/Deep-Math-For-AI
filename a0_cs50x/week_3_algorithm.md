@@ -103,7 +103,7 @@
 
 > [!NOTE]
 > Thì với **Linear Search** pseudo code như sau.
-> \**Cứ đi tìm từng cái thôi**
+> **Cứ đi tìm từng cái thôi**
 
 <br>
 
@@ -126,7 +126,7 @@
 > [!NOTE]
 > Đại khái là thay vì **pseudo code hoàn toàn bằng
 > English** (ý nói **ngôn ngữ con người**) thì nó có thể
-> \**cho nó giống với C (hay coding language) hơn xíu**
+> **cho nó giống với C (hay coding language) hơn xíu**
 
 <br>
 
@@ -234,7 +234,7 @@
 > Quay lại biểu đồ này, một cái formally nói về hiệu qủa của
 > algorithm là "**Running time**". Như **số lần phải lật
 > trang** trong **linear search**, **số lần phải xé đôi** trong
-> \**binary search**
+> **binary search**
 >
 > Ổng có nhắc tới một khái niệm mới học trong Algorithm
 > Spec là "**Worst case**" ví dụ như cái tên cần tìm là Z
@@ -249,7 +249,7 @@
 
 > [!NOTE]
 > Giới thiệu khái niệm **Big O notation**. Đại khái là ta sẽ
-> \**không care chi tiết** - kiểu như hơn thua so đo quá chi
+> **không care chi tiết** - kiểu như hơn thua so đo quá chi
 > tiết trong việc tính toán running time của algorithm
 > mà chỉ focus vào performance nói chung, nôm na là 
 > kiểu như **tập trung và chiến lược chứ không so đó tiểu tiết**
@@ -262,11 +262,11 @@
 
 > [!NOTE]
 > Với nguyên tắc đó thì **n hay n/2 cũng như nhau**. Và
-> \**log base 2 hay log base e hay bao nhiêu cũng như
+> **log base 2 hay log base e hay bao nhiêu cũng như
 > nhau.**
 >
 > Nôm na ví dụ như **số n lên tới rất lớn** thì cái việc có
-> \**chia 2, hay chia 3 cũng không tạo ra khác biệt ở
+> **chia 2, hay chia 3 cũng không tạo ra khác biệt ở
 > cấp chiến lược.**
 
 <br>
@@ -367,7 +367,7 @@
 <p align="center"><kbd><img src="assets/1b62a4c27eca65e95961c5c14a5b0921af592529.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Theta** là notation khi **Upper Bound bằng Lower Bound**
+> **Theta** là notation khi **Upper Bound bằng Lower Bound**
 >
 > Ví dụ một **algorithm lần lượt đếm số người trong hội
 > trường**. Thì đ**ể đếm hết n người thì ít nhất hay nhiều
@@ -423,7 +423,7 @@
 > char tương ứng đứng trước, sau, hay bằng nhau trong
 > alphabet
 >
-> \**0 là bằng nhau**
+> **0 là bằng nhau**
 
 <br>
 
@@ -434,7 +434,7 @@
 > [!NOTE]
 > Xong thử chạy, thì với "thimble**"** nó Found, nhưng với
 > race car - 1 cái không có trong list thì nó ra message:
-> \**Segmentation fault (core dumped)**
+> **Segmentation fault (core dumped)**
 
 <br>
 
@@ -447,7 +447,7 @@
 > nhất của nó chỉ có 5**. Nhưng **loop nó loop tới 6**, nên đây
 > tương đương lỗi "**Out of boundary**".. trong java
 >
-> \**Hồi nãy không bị** là do **nó tìm thấy thimble** và **return trước**
+> **Hồi nãy không bị** là do **nó tìm thấy thimble** và **return trước**
 > khi nó tới i = 6
 >
 > Sửa lại cho nó tới i < 6 thôi là hết lỗi
@@ -475,7 +475,7 @@
 > [!NOTE]
 > Và return sẽ là cách để **signify rằng à
 > function work as expect** (**return** **0**) hay
-> \**not as expect (return 1)**
+> **not as expect (return 1)**
 
 <br>
 
@@ -535,7 +535,7 @@
 
 > [!NOTE]
 > Đây là cách **define một class** trong C
-> \**typedef** (type definition) **struct** (structure),
+> **typedef** (type definition) **struct** (structure),
 > {variable} name của class
 
 <br>
@@ -617,7 +617,7 @@
 <p align="center"><kbd><img src="assets/5b17fbac6aa4b0e6b5ebcb2b9b1700da407c46f3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Selection Sort**: Rất đơn giản, cho l**oop đến khi sort xong.**
+> **Selection Sort**: Rất đơn giản, cho l**oop đến khi sort xong.**
 > Pseudo code phiên bản con người:
 > David s**ẽ đi từ đầu đến cuối**, và **update vào bộ nhớ ông nào
 > là nhỏ nhất**. 
@@ -1011,7 +1011,7 @@
 
 > [!NOTE]
 > Xong ổng viết theo kiểu này, trong function
-> \**draw(n)** nó **tự động gọi draw(n+1)**
+> **draw(n)** nó **tự động gọi draw(n+1)**
 
 <br>
 
@@ -1180,7 +1180,7 @@
 >
 > Tiếp tục như vậy.
 >
-> \*Thì ổng nói các bạn **thấy tay của tôi luôn chỉ về tương lai,
+> *Thì ổng nói các bạn **thấy tay của tôi luôn chỉ về tương lai,
 > không có bước quay lại nào cả.**
 
 <br>

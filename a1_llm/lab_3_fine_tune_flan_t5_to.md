@@ -46,8 +46,8 @@
 
 > [!NOTE]
 > Import một số lib như bữa trước như transformer,
-> \**dataset**, **evaluate**, **rouge_score** để **evaluate model**,
-> \**peft** để **"Parameterized Efficient Fine Tuning"**, đặc
+> **dataset**, **evaluate**, **rouge_score** để **evaluate model**,
+> **peft** để **"Parameterized Efficient Fine Tuning"**, đặc
 > biệt có thêm trl giúp Reinforcement Learning
 
 <br>

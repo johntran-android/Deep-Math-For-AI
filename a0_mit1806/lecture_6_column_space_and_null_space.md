@@ -19,7 +19,7 @@
 
 > [!NOTE]
 > Bài trước ta đã biết về **vector space**, có tính chất khi
-> \**cộng hai vector hay scale một vector ta đều dc vector
+> **cộng hai vector hay scale một vector ta đều dc vector
 > nằm trong space**.
 >
 > Và kết hợp hai thứ đó thì có thể **nói chung là mọi Linear
@@ -36,7 +36,7 @@
 >
 > Với **R3**, **bản thân nó là subspace của chính nó**.
 >
-> \**Bất kì plane nào hay line nào đi qua gốc O** đều là
+> **Bất kì plane nào hay line nào đi qua gốc O** đều là
 > subspace của R3
 
 <br>
@@ -94,7 +94,7 @@
 >
 > Nhớ lại, với ví dụ A như vầy, thì **column space của A là
 > subspace của R4 (tại col của a có 4 component)**  Gs hỏi
-> \**vậy trong column space của A có gì**, **ngoài 3 column
+> **vậy trong column space của A có gì**, **ngoài 3 column
 > của A**. Thì dĩ nhiên nó là **mọi linear combination của 3
 > column vector**
 
@@ -125,7 +125,7 @@
 
 > [!NOTE]
 > Vậy **quay lại equation Ax = b**. Câu hỏi là
-> \**liệu nó có solution với mọi b không?**
+> **liệu nó có solution với mọi b không?**
 >
 > Câu trả lời là **không**. Vì sao?
 
@@ -138,11 +138,11 @@
 > [!NOTE]
 > Là vì, trước hết ta ghi lại **dạng triển khai của Ax=b**, như
 > ta đã biết ở bài trước, cái mà ta đang tìm - tức là
-> \**solution x là coeff của một linear combination các
+> **solution x là coeff của một linear combination các
 > column vector của A** sao cho nó **ra bằng vector b**.
 >
 > Thế thì **b là một vector trong R4**, mà như vừa mới nói
-> \**column space của A nhiều lắm chỉ có thể là một 3D** subspace của R4 **chứ** **ko thể fill hết R4** dc. Cho
+> **column space của A nhiều lắm chỉ có thể là một 3D** subspace của R4 **chứ** **ko thể fill hết R4** dc. Cho
 > nên **luôn tồn tại một vector b không nằm trong subspace
 > đó**.
 >
@@ -185,7 +185,7 @@
 > [!NOTE]
 > Thế thì, gs hỏi tiếp là, **column space này lớn cỡ nào**?
 >
-> \**3 col này có independent ko**?
+> **3 col này có independent ko**?
 >
 > hay, **mỗi col vector có add thêm thông tin ko?**.
 >
@@ -193,7 +193,7 @@
 > đổi ko**?
 >
 > Thế thì có thể thấy câu trả lời là **có**. Đó là **col 3**. Nó là
-> \**col 1+col 2**. Như vậy nó là một **linear combination của
+> **col 1+col 2**. Như vậy nó là một **linear combination của
 > col 1 và col 2**. Vậy nó **ko add thông tin gì thêm**, **vì col
 > 1 và col 2 bản thân nó đã tạo một plane chứa col 3 rồi**.
 >
@@ -255,7 +255,7 @@
 
 > [!NOTE]
 > Vậy **dễ thấy một solution sẽ là 0 vector**. Nên có thể
-> \**khẳng định null space của matrix A, kí hiệu là N(A) sẽ
+> **khẳng định null space của matrix A, kí hiệu là N(A) sẽ
 > luôn chứa vector zero.**
 >
 > Gs cho rằng điều này **cho ta biết:** **nó có thể là một
@@ -303,7 +303,7 @@
 > Gs hỏi, **tại sao tôi biết nullspace là một subspace**, một
 > vector space.
 >
-> \**Thử** **trả lời**: là **bởi tập hợp các solution của Ax=0** sẽ thỏa
+> **Thử** **trả lời**: là **bởi tập hợp các solution của Ax=0** sẽ thỏa
 > hai điều kiện của một vector space:
 >
 > Nếu **Ax1=0, Ax2=0, thì A(x1+x2) đương nhiên cũng bằng 0**.
@@ -387,7 +387,7 @@
 > có **2 cách để nói về định nghĩa về vector space.**
 >
 > Một là **giống như column space**, trong đó ta sẽ dc bảo là
-> \**hãy build vector space**, **fill in vector space từ các vector
+> **hãy build vector space**, **fill in vector space từ các vector
 > này** (ví dụ các col vector của matrix A). Thì ta nhớ ta sẽ
 > mô tả nó là **mọi linear combination của các vector này**.
 >

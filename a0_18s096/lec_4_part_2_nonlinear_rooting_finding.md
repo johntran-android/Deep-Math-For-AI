@@ -78,7 +78,7 @@
 >
 > Trong bài về Newton's method của MIT 18.01 gs cũng có nói
 > một số điều kiện để phương pháp này có tác dụng. Cũng như là
-> \**phân tích để cho thấy độ chính xác** (khi tìm solution của f(x) = 0 theo
+> **phân tích để cho thấy độ chính xác** (khi tìm solution của f(x) = 0 theo
 > cách này sẽ ngày càng tăng)
 
 <br>
@@ -93,7 +93,7 @@
 >
 > Tức là khi f(x) là R^n -> R^n function. Nếu là trong 18.01, ta xét R -> R function
 > thì ta đang **dùng Newton method** để **giải tìm solution** (chính xác hơn là
-> \**approximated solution)** của **nonlinear function f(x) = 0**)
+> **approximated solution)** của **nonlinear function f(x) = 0**)
 >
 > Còn bây giờ f(x) = 0 với **x** ∈ **R^n, f(x)** ∈ **R^n** thì ta đang **GIẢI HỆ N NONLINEAR 
 > EQUATION**. (dĩ nhiên không thể represent bởi f(x) = Ax đâu nhé, vì đây chỉ đúng 
@@ -109,17 +109,17 @@
 > 3) Lặp lại như vậy thì **x(i) sẽ converge về x*** là **solution của f(x) = 0**
 >
 > Vậy thì: Tại thời điểm này ta đã có thể **tính derivative** của mọi function kể cả
-> \**R^n -> R^n**.
+> **R^n -> R^n**.
 >
 > Thế thì **linear approx. của f(x)**: Với δx ≈ 0 ta có **f(x + δx) ≈ f(x) + f'(x)δx**
 >
 > (hoặc có thể nói kiểu khác với starting point x1: Với x ≈ x1 ta có:
 >
-> \**f(x) ≈ f(x1) + f'(x1)(x - x1)**
+> **f(x) ≈ f(x1) + f'(x1)(x - x1)**
 >
 > Thì vế phải chính là **phương trình tiếp tuyến tại x1**: 
 >
-> \**f(x) = f(x1) + f'(x1)(x - x1))**
+> **f(x) = f(x1) + f'(x1)(x - x1))**
 >
 > Ta sẽ **giải tìm solution của f(x1) + f'(x1)(x - x1)) = 0** để ra **next guess x2**.
 >
@@ -261,7 +261,7 @@
 >
 > với ∇f0(x) đóng vai f(x), thì ∇^2f0(x) chính là J
 >
-> \**δx = - J_inv f(x)** cũng tương ứng với **Δx_nt = - ∇^2f(x)_inv ∇f(x)** 
+> **δx = - J_inv f(x)** cũng tương ứng với **Δx_nt = - ∇^2f(x)_inv ∇f(x)** 
 >
 > (vì Hessian của f0, tức ∇^2f0(x) CHÍNH LÀ JACOBIAN CỦA ∇f0(x))
 
@@ -273,7 +273,7 @@
 
 > [!NOTE]
 > Nói chung là đây cũng chỉ đang là việc gs nói ứng dụng của
-> \**Jacobian** (derivative) một lưu ý là để phát huy tác dụng, tương
+> **Jacobian** (derivative) một lưu ý là để phát huy tác dụng, tương
 > tự như trong R1 case, thì **initial guess phải không quá xa true
 > solution**.
 >
@@ -299,7 +299,7 @@
 > Thì ta có thể **update parameter theo hướng -∇f**: **x = x - α ∇f** giúp 
 > giảm hàm f đi một chút, **Dần dần ta sẽ tìm ra / tiếp cận optimal** 
 > (cái này nếu là nói trong bối cảnh convex optimization thì đúng là
-> \**gradient descent method**, hay còn gọi là **steepest descent method**
+> **gradient descent method**, hay còn gọi là **steepest descent method**
 > sẽ dần dần giúp tìm optimal / minimum, nhưng trong bối cảnh của
 > deep learning, thì có thể ta sẽ chỉ tìm thấy local minimum, do function
 > trong deep learning thường không convex)
@@ -329,7 +329,7 @@
 >
 > a) **Exact** **line** **search**: Ta sẽ giải một bài toán optimization 1 biến:
 >
-> \**minimize f(x + t Δx)** subject to **t ≥ 0**. Để nôm na là tìm ra bước đi
+> **minimize f(x + t Δx)** subject to **t ≥ 0**. Để nôm na là tìm ra bước đi
 > (step size) tối ưu, giúp giảm hàm f xuống nhiều nhất theo hướng
 > Δx (= - ∇f(x))
 >
@@ -359,12 +359,12 @@
 >
 > Rồi một vấn đề nữa là **tình trạng zig-zag của steepest descent**
 > trong bối cảnh mà (nói theo EE364A) **sub-level set của function**
-> \**f có condition number có giá trị lớn** (gọi là **bad condition**). Khi
+> **f có condition number có giá trị lớn** (gọi là **bad condition**). Khi
 > đó, đại khái là **số iteration cần thiết để converge sẽ lớn ⇨ lâu
 > converge**. mà hình ảnh là như ta có **một valley hẹp bề này mà
 > rộng ở bề kia**. Khi đó, việc **đi theo steepest descent direction sẽ
 > khiến ta cứ leo qua leo lại giữa hai bên "vách"** của thung lũng
-> \**khiến rất lâu mới đến được đáy,.**
+> **khiến rất lâu mới đến được đáy,.**
 >
 > Thì từ đó có những thuật toán như **Adam**, **Momentum**, mà ta
 > đã học trong **CS231n** giúp **có những cách thức để giảm đi việc
@@ -389,7 +389,7 @@
 > nó sẽ giúp ta **chọn algorithm phù hợp**
 >
 > Và khi **số parameters là khổng lồ** (như trong **deep learning**) thì 
-> \**luôn luôn phải dùng analytic gradient** (ý là phải tính gradient từ
+> **luôn luôn phải dùng analytic gradient** (ý là phải tính gradient từ
 > "công thức" vs tính bằng numerical gradient / hay còn gọi
 > là finite gradient) - ví dụ như trong deep learning, như đã biết
 > back-propagation chính là quá trình ta tính analytic gradient (và
@@ -413,7 +413,7 @@
 > LLM đạt **được một benchmark** nào đó)
 >
 > Thế thì ta sẽ **xây dựng physical model** thể hiện bằng một
-> \**equation ví dụ A_p (x) = b_p.**
+> **equation ví dụ A_p (x) = b_p.**
 >
 > Từ đó ta giải ra x(p) là một hàm theo p. Ví dụ như từ p là hình dạng
 > của cái ghế, ta tính ra x là lực tác dụng chẳng hạn.
@@ -540,7 +540,7 @@
 >
 > ∂f/∂pk = - vT ∂A/∂pk x
 >
-> \**THẾ THÌ NHẮC LẠI Ý CHÍNH LÀ GIẢI HAI EQUATION:
+> **THẾ THÌ NHẮC LẠI Ý CHÍNH LÀ GIẢI HAI EQUATION:
 >
 > A(p)x = b ra x, và A(p)Tv = f'(x)T ra v GIÚP TA 1) TÍNH RA f VÀ 2) TÍNH
 > DERIVATIVE CỦA F VỚI PARAMETER BẤT KÌ ∂f/∂pk

@@ -112,11 +112,11 @@
 > Thế thì khi hoàn thành matrix này ta sẽ có thể đưa ra một số
 > nhận định như:
 >
-> \**Graph** càng lớn (**càng nhiều nodes, edges**) thì **matrix
+> **Graph** càng lớn (**càng nhiều nodes, edges**) thì **matrix
 > càng lớn**.
 >
 > Nhưng **mỗi row chỉ có 2 chỗ là khác 0**, vì như đã nói,
-> \**mỗi row thể hiện một edge**, và **edge chỉ đi từ một node
+> **mỗi row thể hiện một edge**, và **edge chỉ đi từ một node
 > đến một node**, nên sẽ **chỉ có hai vị trí khác 0** ở mỗi row.
 >
 > Và do đó matrix (m, n) với m row sẽ **chỉ có 2*m vị trí khác
@@ -154,7 +154,7 @@
 >
 > Me: Tiếp nối lập luận trước, **nếu mọi cols đều
 > independent**, thì tức là **chúng đều là pivots**, và do đó
-> \**không có free cols**. Dẫn đến **không có vector nào
+> **không có free cols**. Dẫn đến **không có vector nào
 > trong basis** => **nullspace chỉ chứa zero**, và mang ý
 > nghĩa là **solution duy nhất của Ax=0 chính là x=0**
 
@@ -219,7 +219,7 @@
 > bằng 0.
 >
 > Cũng có nghĩa là đang nói đến một việc mà ta đã biết:
-> \**Nullspace là một vector space, nên luôn chứa zero**.
+> **Nullspace là một vector space, nên luôn chứa zero**.
 > Cũng vì vậy **zero luôn là một solution của Ax=0**. Thì cái
 > này không có gì đáng nói.
 
@@ -230,15 +230,15 @@
 <p align="center"><kbd><img src="assets/0c7a8976ed461a652257eb567f5cea9cfab0fc73.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Một solution khác** có thể lấy là (1, 1, 1, 1). Và nó **cũng
+> **Một solution khác** có thể lấy là (1, 1, 1, 1). Và nó **cũng
 > tạo một basis** luôn, để **scale nó c với c sẽ cho ra một
 > solution**
 >
-> \**Tại sao nói (1, 1, 1, 1) tạo một basis?**
+> **Tại sao nói (1, 1, 1, 1) tạo một basis?**
 >
 > Thông thường **khi xét nullspace của A**, tức solution của
 > Ax = 0, ta phải **tìm các pivot columns**, cũng các
-> \**independent cols** và **suy ra các free cols**.
+> **independent cols** và **suy ra các free cols**.
 >
 > Để rồi **mỗi free cols sẽ ứng với một special solution**,
 > cũng chính là **ứng với một vector trong basis**. Hay nói
@@ -326,8 +326,8 @@
 > \-> **dimension của column space A.T = rank A = 3**
 >
 > Và từ đó **A.T sẽ có 3 pivots / independent cols**, nên
-> \**đồng nghĩa với 5-3 = 2 free cols**. -> 2 special solution ->
-> \**Basis của nullspace của A.T = 2 -> dim của N(A.T) = 2** ====
+> **đồng nghĩa với 5-3 = 2 free cols**. -> 2 special solution ->
+> **Basis của nullspace của A.T = 2 -> dim của N(A.T) = 2** ====
 >
 > Có thể giải thích ngắn hơn: Ta biết định lý **Rank-Nullity** nói
 > rằng với **matrix A [m,n] thì C(A) và N(AT) đều là subspace
@@ -509,7 +509,7 @@
 > nullspace of A.T**
 >
 > Ta sẽ tìm basis của nullspace of A.T N(A.T), đầu tiên gs hỏi
-> \**có bao nhiêu vector trong basis của N(A.T)**
+> **có bao nhiêu vector trong basis của N(A.T)**
 >
 > Me: Như đã rồi, ta đã biết dim N(A.T) = 2, nên basis của
 > nó có 2 vector.
@@ -640,7 +640,7 @@
 > Hồi nãy ta nhận định: **dimension của nullspace of A.T
 > chính là số loop = 2**
 >
-> \**m, là số hàng của A - ứng với số edge =** 5
+> **m, là số hàng của A - ứng với số edge =** 5
 >
 > Còn **rank**, chính là số cols độc lập của A cũng là số hàng
 > độc lập của A, nó **chính là số node - 1**. Vì sao? Vì như

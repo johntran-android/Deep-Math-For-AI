@@ -116,7 +116,7 @@
 > sẽ cũng có kì vọng là variance sigma**2
 >
 > Nên nếu nếu F-stats mà bằng 1 tức là khẳng định
-> \**null-hypothesis**
+> **null-hypothesis**
 
 <br>
 

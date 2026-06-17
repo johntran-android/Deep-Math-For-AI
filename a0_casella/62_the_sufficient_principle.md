@@ -100,7 +100,7 @@
 > = P_θ(**X** = **x**, T(**X**) = t) / mẫu
 >
 > và cái tử số là joint event của hai event disjoint: **X** = **x,** T(**X**) = t, nên nếu
-> \**X = x xảy ra thì T(X) = T(x) chắc chắn phải xảy ra, đồng nghĩa T(X) = t 
+> **X = x xảy ra thì T(X) = T(x) chắc chắn phải xảy ra, đồng nghĩa T(X) = t 
 > với t khác T(x) sẽ  không thể xảy ra ⇨ xác suất = 0**
 >
 > Do đó mình chỉ quan tâm các giá trị của **x** mà T(**x**) = t. Tức là:
@@ -232,7 +232,7 @@
 >
 > Rồi, sau khi ông 2 có cái hàm f(**x**) thì ổng mới dùng cách nào đó để
 > generating các random variable **Y**, có phân phối xác suất pmf f**Y**, hay P(**Y** =
-> \**y**) mà ta chưa biết nhưng ta vẫn có thể có cách tạo ra sao cho giá trị của
+> **y**) mà ta chưa biết nhưng ta vẫn có thể có cách tạo ra sao cho giá trị của
 > P(**Y** = y | T(**X**) = T(**x**))  (tức là xác suất của việc **Y** = **y**, dựa trên việc biết
 > T(**X**) = T(**x**)) bằng với f(**y**) ở trên.
 >
@@ -250,7 +250,7 @@
 > Khi nói về P(**X** = **x** | T(**X**) = **x**), thì ta hiểu rằng, đây là một hàm phụ
 > thuộc **x**, tức là, nó là cái hàm f(**x**) nào đó, mà gía trị f(**x**), tức là bỏ **x**
 > vô, tính ra f(**x**). Sẽ cho ta biết giá trị mang ý nghĩa là "nếu biết T(**X**) =
-> \**x**, thì xác suất (của việc) **X** = **x** là bao  nhiêu)
+> **x**, thì xác suất (của việc) **X** = **x** là bao  nhiêu)
 >
 > Còn nói về P(**Y** = **x** | T(**X**) = **x**), thì tương tự, sẽ là function g(**x**)
 > nào đó, mà khi bỏ **x** vào, thì lại cho ta biết, à, nếu dựa trên việc quan sát,
@@ -266,7 +266,7 @@
 >
 > Xét event **X** = **x** **là subset của** T(**X**) = T(**x**). Vì sao?
 >
-> \**X** = **x,** mình hiểu bản chất của nó là {s ∈ Ω: **X**(s) = **x**}
+> **X** = **x,** mình hiểu bản chất của nó là {s ∈ Ω: **X**(s) = **x**}
 >
 > là sao, bản chất của random variable là function. Nên X1, X2,...là các function
 > map từ sample space Ω tới tập số thực.
@@ -294,7 +294,7 @@
 >
 > Thế thì trước khi đi tiếp ta phải ôn lại **CÁCH TẠO RA** **Y**:
 >
-> \**Y** được tạo ra, tức là nó mang giá trị **y**, sao cho: 
+> **Y** được tạo ra, tức là nó mang giá trị **y**, sao cho: 
 >
 > P(**Y** = **y** | T(**X**) = T(**x**)) = P(**X** = **y** | T(**X**) = T(**x**))
 >
@@ -348,7 +348,7 @@
 >
 > Thế thì giá trị của **Y** ở đây đang nói, là **x, và gía trị của T(X) đang là t'** nên:
 >
-> \**Giá trị cụ thể x (của Y) được tạo ra bởi** P(**Y** = **x** | T(**X**) = t') = P(**X** = **x** | T(**X**) = t')
+> **Giá trị cụ thể x (của Y) được tạo ra bởi** P(**Y** = **x** | T(**X**) = t') = P(**X** = **x** | T(**X**) = t')
 >
 > và ý quan trọng đó là **Y** = **x** đã xảy ra, nên xác suất P(**Y** = **x** | T(**X**) = t') dương
 >
@@ -396,7 +396,7 @@
 >
 > và vì P(**X** = **x** | T(**X**) = T(**x**)) = P(**Y** = **x** | T(**X**) = T(**x**))
 > như theo định nghĩa về cách tạo **y**, là **y** được sinh ra sao cho P(**Y** =
-> \**y** | T(**X**) = T(**x**)) = P(**X** = **y** | T(**X**) = T(**x**))
+> **y** | T(**X**) = T(**x**)) = P(**X** = **y** | T(**X**) = T(**x**))
 >
 > .. = P(**Y** = **x** | T(**X**) = T(**x**)) P(T(**X**) = T(**x**))
 >
@@ -409,7 +409,7 @@
 > Tóm tắt lại:
 >
 > Nãy giờ nhằm chứng minh là:** Giả sử ta chỉ biết giá trị của sufficient statistic T(**X**) = T(**x**) (chứ ko biết
-> \**x**), thì  bằng cách generate giá trị **y** của **Y** sao cho P(**Y** = **y** |
+> **x**), thì  bằng cách generate giá trị **y** của **Y** sao cho P(**Y** = **y** |
 > T(**X**) = T(**x**)) = P(**X** = **x** | T(**X**) = T(**x**)) thì ta vẫn sẽ có được
 > các giá trị của **y giống y như được lấy từ marginal P(Y = y)  giống y phân
 > phối marginal P(X = x)**. Điều này chứng tỏ rằng việc biết được T(**x**)  đã
@@ -443,7 +443,7 @@
 > còn mẫu số là pmf của random variable T(**X**), kí hiệu là q(T(**X**) | θ)
 >
 > Và như vậy để conditional probability ở trên ko phụ thuộc θ thì cái tỉ số này 
-> \**XÉT Ở GÓC ĐỘ CỦA MỘT HÀM SỐ THEO θ PHẢI LÀ MỘT CONSTANT** Và đó là nội dung của theorem 6.2.2. 
+> **XÉT Ở GÓC ĐỘ CỦA MỘT HÀM SỐ THEO θ PHẢI LÀ MỘT CONSTANT** Và đó là nội dung của theorem 6.2.2. 
 >
 > Một lưu ý đã từng nói, đại khái để hoàn toàn hiểu theorem này, ta phải có
 > cách hiểu toàn diện hơn về conditional probability hơn là theo những gì chap1
@@ -649,7 +649,7 @@
 
 > [!NOTE]
 > đại khái là gs cho rằng ta nếu ta **dùng định nghĩa** của sufficient statistic để
-> \**chứng minh** một statistic T(.) là sufficient statistic thì có thể sẽ rất **cồng
+> **chứng minh** một statistic T(.) là sufficient statistic thì có thể sẽ rất **cồng
 > kềnh** (unwieldly) vì ta sẽ phải làm các bước sau: 
 >
 > 1) **Đoán hay chọn hàm số** dùng để tạo một statistic T(.) mà ta nghi là sufficient
@@ -674,7 +674,7 @@
 🔗 **Related:** [8.3 METHODS OF EVALUATING TEST](83_methods_of_evaluating_test.md#node-739)
 
 > [!NOTE]
-> \**Factorization theorem**, nói rằng: gọi f(**x**|θ) là joint pmf/pdf của sample **X**. Một
+> **Factorization theorem**, nói rằng: gọi f(**x**|θ) là joint pmf/pdf của sample **X**. Một
 > statistic T(**X**) được gọi là sufficient statistic cho θ **nếu và chỉ nếu** tồn tại các
 > function g(t|θ) và h(**x**) sao cho: Với mọi sample point **x**, và mọi parameter
 > points θ ta đều có:
@@ -737,7 +737,7 @@
 > (A ∩ C))
 >
 > = [U_{**z** ∈ At0} (T = t0 ∩ **X** = **z**)] U [U_{**z** không thuộc At0} (T = t0 ∩
-> \**X** = **z**)]
+> **X** = **z**)]
 >
 > ⇨ P(T = t0) = P[U_{**z** ∈ At0} (T = t0 ∩ **X** = **z**)] + P[U_{**z** !∈ At0} (T =
 > t0 ∩ **X** = **z**)]
@@ -959,7 +959,7 @@
 
 > [!NOTE]
 > Rồi, đại ý là những ví dụ vừa rồi đều là ta thấy **sufficient statistic** T(**X**), là 
-> \**scalar**.
+> **scalar**.
 >
 > Điều này có nghĩa là, **trong những tình huống này, mọi thông tin của sample
 > có thể được gói gọn trong một con số.**
@@ -1025,7 +1025,7 @@
 >
 > Thì ta đã show ra rằng f(**x**|Θ) = g(T(**x**)|Θ)h(**x**)
 >
-> \**TỪ ĐÓ** Factorization theorem cho phép **KẾT LUẬN** (Xbar(**x**), S^2(**x**)) **CHÍNH LÀ
+> **TỪ ĐÓ** Factorization theorem cho phép **KẾT LUẬN** (Xbar(**x**), S^2(**x**)) **CHÍNH LÀ
 > SUFFICIENT STATISTIC CỦA** sample **X** ~ normal(μ, σ^2)
 
 <br>
@@ -1180,7 +1180,7 @@
 > At1 chứa Bt'1,Bt'2,Bt'3 và At2 chứ hai cái còn lại.
 >
 > Bởi vậy mới nói partition gắn với minimal sufficient statistic là cái
-> \**COARSEST**
+> **COARSEST**
 
 <br>
 
@@ -1272,12 +1272,12 @@
 > partition với **x**: Chỗ này đại khái là: Với **x** thì ảnh của nó qua T(**X**):
 > T(**x**) và do đó nó nằm trong cùng partition với A_T(**x**) = {**z** ∈ X_curl:
 > T(**z**) = T(**x**)}, và người ta gọi **x**_T(**x**) hay mình có thể đặt là
-> \**z**_T(**x**) cho dễ, là chỉ những điểm trong A_T(**x**), dĩ nhiên là cũng
+> **z**_T(**x**) cho dễ, là chỉ những điểm trong A_T(**x**), dĩ nhiên là cũng
 > chung partition với **x** Thế thì: như vậy **x** và **x**_T(**x**) cũng nằm chung một partition là
 > A_T(**x**): nên T(**x**) = T(**x**_T(**x**))
 >
 > Xét f(**x**|θ) và f(**x**_T(**x**)|θ) tức là joint pdf của **X** evaluate tại hai điểm
-> \**x** và **x**_T(**x**):
+> **x** và **x**_T(**x**):
 >
 > Và định lý này ta đang cần chứng minh chiều đi, tức là nếu như: xét hai
 > sample point **x** và **y** thì f(**x**|θ) / f(**y**|θ) = constant ⇔ T(**x**) = T(**y**) thì T sẽ là 
@@ -1300,7 +1300,7 @@
 > = f(**x**_T(**x**)|θ) h(**x**)
 >
 > Và đặt hàm g(t|θ) = f(**x**t|θ): Tức là với một giá trị t, thì g(t|θ) = f(**x**t|θ) với
-> \**x**t như đã nói ở trên, là điểm cố định mà ta chọn trong mỗi partition At. Ví
+> **x**t như đã nói ở trên, là điểm cố định mà ta chọn trong mỗi partition At. Ví
 > dụ tính g(t1|θ) thì lôi thằng **x**_t1 ra, và evaluate joint pmf/pdf tại đó
 > f(**x**_t1|θ).
 >
@@ -1380,7 +1380,7 @@
 > trị cụ thể nào đó. Và đó chính là một bộ giá trị quan sát thấy, của một lần
 > lấy mẫu (sampling). Và kí hiệu là **x** = (x1,...xn). Tuy nhiên, nếu ta
 > sampling lần nữa, X1, ...Xn sẽ mang giá trị khác. Ta sẽ có giá trị cụ thể của
-> \**X** lần này là **y,** tức (y1,....yn)
+> **X** lần này là **y,** tức (y1,....yn)
 >
 > Rồi từ đó ta sẽ có sample mean xbar và ybar cũng như sample variance
 >
@@ -1462,7 +1462,7 @@
 > Như vậy, cái ta đang có ở đây đó là:
 >
 > xét hai điểm **x**, **y**, thì f(x|θ) / f(y|θ) là constant as a function of θ ⇔ min_i
-> \**x** = min_i **y**, và max_i **x** = max_i **y**. Mà ta nhớ lại theorem đi:
+> **x** = min_i **y**, và max_i **x** = max_i **y**. Mà ta nhớ lại theorem đi:
 >
 > nó nói nếu như ta lập luận được / có kết luận rằng: xét hai điểm x, y thì  f(x|θ) /
 > f(y|θ) là constant as a function of θ ⇔ T(x) = T(y), thì khi đó theorem này cho
@@ -1571,7 +1571,7 @@
 >
 > và = 0 otherwise
 >
-> \**= n(n-1)r^(n-2)**  nếu 0 < r < 1, θ + (r/2) < m < θ + 1 - r/2 và = 0 otherwise
+> **= n(n-1)r^(n-2)**  nếu 0 < r < 1, θ + (r/2) < m < θ + 1 - r/2 và = 0 otherwise
 >
 > ====
 >

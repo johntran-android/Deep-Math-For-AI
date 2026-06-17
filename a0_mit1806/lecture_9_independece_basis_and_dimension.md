@@ -38,7 +38,7 @@
 >
 > Vậy nhìn lại đây, vì m < n, số hàng < số cột, nên **kiểu
 > gì cũng chỉ có tối đa m pivot variable/column**, thành ra
-> \**luôn có n-m > 0 các free variable/column**.
+> **luôn có n-m > 0 các free variable/column**.
 >
 > Vậy ta có thể kết luận Ax=0 **chắc chắn có solution khác 0**
 
@@ -53,11 +53,11 @@
 > vector x1, x2....xn independence (có thể nói dài dòng là
 > linearly independence) **NẾU KHÔNG CÓ LINEAR
 > COMBINATION NÀO CỦA CHÚNG BẰNG 0**, **NGOẠI**
-> \**TRỪ** một trường hợp được phép, là khi **MỌI
+> **TRỪ** một trường hợp được phép, là khi **MỌI
 > COEFFICIENT c_i ĐỀU BẰNG 0**
 >
 > Me: Suy nghĩ một chút có thể hiểu vì sao lại vậy, là bởi vì
-> \**nếu tồn tại một linear combination của chúng bằng 0**
+> **nếu tồn tại một linear combination của chúng bằng 0**
 > thì chuyển vế đổi dấu một vector một cái qua ta sẽ thấy
 > ngay **vector đó là linear combination của các vector còn
 > lại**, tức là nó **phụ thuộc tuyến tính với đám kia.**
@@ -114,7 +114,7 @@
 > tiện như vầy, thì 3 vector này có independence không?
 >
 > me: Không. Vì như đã biết, **vì v1, v2 independence**,
-> \**nên mọi linear combination của chúng đã tạo thành
+> **nên mọi linear combination của chúng đã tạo thành
 > plane R^2**.
 >
 > Và **v3 nằm trong R^2**, nên **nó cũng là kết quả của
@@ -138,7 +138,7 @@
 > là vì soi lại cái ta vừa nhận định: Nếu matrix A có **số hàng
 > nhỏ hơn số cột** thì kiểu gì cũng sẽ **có solution khác 0** (như
 > đã giải thích, vì số pivot lớn nhất **sẽ chỉ là m < n** nên sẽ
-> \**luôn có free column** / free variable -> nên chắc chắn có thể
+> **luôn có free column** / free variable -> nên chắc chắn có thể
 > chọn giá trị khác không cho free variable và thế vào ta tính
 > ra pivot variable để **có special solution khác 0**.
 >
@@ -175,7 +175,7 @@
 > không thỏa điều kiện vừa nói)
 >
 > Vậy thì **nếu nullspace của A chỉ có mỗi zero vector**, thì có nghĩa là
-> \**ngoài bộ coeffs toàn 0**, thì **chẳng có bộ nào khác** tạo ra linear
+> **ngoài bộ coeffs toàn 0**, thì **chẳng có bộ nào khác** tạo ra linear
 > combination của A's column để **cho ra 0** -> nên các **column của
 > A independence**
 >
@@ -212,7 +212,7 @@
 > space** là sao
 >
 > thì ông cho biết mình đã thấy nó rồi, khi ta nhớ đã từng nói
-> \**vector space** tạo bởi **mọi linear combination của column
+> **vector space** tạo bởi **mọi linear combination của column
 > của matrix A** được gọi là **columns spac**e của A. Thì đó
 > cũng chính là nói rằng **CÁC COLUMNS CỦA A SPAN
 > COLUMN SPACE C(A)**
@@ -282,7 +282,7 @@
 >
 > Thì dễ thấy chúng là 3 vector **trùng với 3 trục của không
 > gian R^3**, nên nếu **muốn c1*v1 + c2*v2 + c3*v3 = 0** thì
-> \**chỉ có một case là c1=c2=c3=0.**
+> **chỉ có một case là c1=c2=c3=0.**
 >
 > Hoặc có thể lập luận rằng ta **đặt nó làm cols của matrix A**,
 > Thì dễ thấy ta sẽ có **matrix Identity I**. Sau đó ta **xem xét
@@ -349,7 +349,7 @@
 > independence thì có nghĩa là khi đưa matrix A về row
 > echelon form, ta sẽ có **mỗi cột một pivot** (và vì số hàng
 > bằng số cột) nên ta cũng có **mỗi hàng một pivot**. Và khi
-> \**số hàng bằng số cột bằng số pivot, ta gọi là Full Rank** Và reduced row  echelon form của A sẽ là I.
+> **số hàng bằng số cột bằng số pivot, ta gọi là Full Rank** Và reduced row  echelon form của A sẽ là I.
 >
 > Đồng nghĩa **EA = I** (E là elimination matrix). Từ đó suy
 > ra **E chính là A_inv** đồng nghĩa **A là invertible matrix (vì
@@ -363,7 +363,7 @@
 
 > [!NOTE]
 > thế thì gs hỏi rằng, nếu tôi x**óa đi một vector**, (3 3 8).T thì
-> \**hai vector còn lại** này **có là basis của một space nào ko**?
+> **hai vector còn lại** này **có là basis của một space nào ko**?
 
 <br>
 
@@ -375,7 +375,7 @@
 > có, **hai vector này độc lập tuyến tính**, vậy nó đã **thỏa  điều
 > kiện thứ nhất**. Vậy nó sẽ là **basis của cái vector space mà
 > chúng span** - là mọi linear combination của chúng. Và đó là
-> \**một 2D plane trong R3** (chú ý lại rằng ko phải là R2 nhé, vì
+> **một 2D plane trong R3** (chú ý lại rằng ko phải là R2 nhé, vì
 > vector có 3 phần tử, nó nằm trong R3)
 >
 > Vậy thì, gs nói rằng, nếu tôi **vẽ lại vector (3,3,8)** vì nó là một
@@ -396,8 +396,8 @@
 > [!NOTE]
 > Gs nhắc lại lần nữa về một case mà ta có các **columns
 > vector span the columns space**, mà chúng lại
-> \**independence**, cho nên các columns vector này là
-> \**basis của columns space**
+> **independence**, cho nên các columns vector này là
+> **basis của columns space**
 
 <br>
 
@@ -459,10 +459,10 @@
 > Các **vector independence**: là khi **không có linear combination
 > nào của chúng ra zero** (trừ khi mọi coeff bằng 0)
 >
-> \**Span**: là một space tạo bởi **mọi linear combination của đám
+> **Span**: là một space tạo bởi **mọi linear combination của đám
 > vector** (**không care** chúng **có độc lập hay không**)
 >
-> \**Basis**, là bộ vector **independence** và **span** một space thì
+> **Basis**, là bộ vector **independence** và **span** một space thì
 > chúng là basis của space
 >
 > Và giờ là **Dimension**: là **số vector trong basis** của một space
@@ -525,7 +525,7 @@
 > combination của các cols ra 0.**
 >
 > Nói chung là **chứng tỏ các cols dependence**, nên
-> \**không phải là basis của columns space**
+> **không phải là basis của columns space**
 
 <br>
 
@@ -584,7 +584,7 @@
 >
 > Thế thì nhận định quan trọng là:
 >
-> \**Nếu ta biết dimension của Column space C(A) là 2**,  thì miễn
+> **Nếu ta biết dimension của Column space C(A) là 2**,  thì miễn
 > là **2 vector bất kì trong columns space mà INDEPENDECE**
 > nhau thì **sẽ tạo một basis
 >
@@ -634,7 +634,7 @@
 > Câu trả lời là: Có. Và kiến thức cuối cùng của bài giảng này
 > là:
 >
-> \**SỐ FREE COLUMN CHÍNH LÀ SỐ DIMENSION CỦA
+> **SỐ FREE COLUMN CHÍNH LÀ SỐ DIMENSION CỦA
 > NULLSPACE**
 >
 > Và như vậy, với **n** columns, trong đó có **r** pivot, cũng

@@ -45,7 +45,7 @@
 > Để rồi khi tạo matrix U chứa các basis của C(A) và N(AT), matrix V
 > chứa các basis của C(AT) và N(A) thì ta có AV = UΣ
 >
-> \*Tại các basis của N(AT) cũng orthogonal với các basis của C(A) và
+> *Tại các basis của N(AT) cũng orthogonal với các basis của C(A) và
 > ngược lại: Thì bởi hai subspace này **orthogonal complement. Nên
 > gs viết trong sách là chúng TỰ ĐỘNG vuông góc nhau.** Tương tự
 > với vr+1...vn (basis của nullspace N(A)) cũng tự động vuông góc

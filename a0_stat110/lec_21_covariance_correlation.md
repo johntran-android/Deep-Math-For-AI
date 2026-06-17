@@ -15,7 +15,7 @@
 >
 > Thế thì định nghĩa của **covariance** của hai r.v X,Y định nghĩa là 
 >
-> \**Cov(X,Y) = E[(X-EX)(Y-EY)]**
+> **Cov(X,Y) = E[(X-EX)(Y-EY)]**
 
 > [!NOTE]
 > Cov(X,Y) = E[(X-EX)(Y-EY)]
@@ -47,7 +47,7 @@
 >
 > VÀ (X-EX) VÀ (Y-EY) CŨNG INDEPENDENT NÊN
 >
-> \**Cov(X,Y) = E[(X-EX)(Y-EY)] = E(X-EX)*E(Y_EY) = 0**
+> **Cov(X,Y) = E[(X-EX)(Y-EY)] = E(X-EX)*E(Y_EY) = 0**
 
 <br>
 
@@ -66,7 +66,7 @@
 >
 > rồi **khi x nhỏ hơn EX** thì **y cũng có xu hướng nhỏ hơn mean của nó EY**.
 > Thì khi đó dể hiễu ta sẽ có **tích của (X-EX) (Y-EY) dương**. Ta gọi đó là
-> \**POSITIVE CORRELATED**.
+> **POSITIVE CORRELATED**.
 >
 > Ngược lại nếu khi **x lớn hơn mean EX** mà **y có xu hướng nhỏ hơn mean EY** và
 > ngược lài khi x nhỏ hơn mean EX thì y lại có xu hướng lớn hơn mean EY thì ta
@@ -100,7 +100,7 @@
 > bậc hai: để có **Standard** **deviation**.)
 >
 > Do đó gs cho rằng **bằng cách cho Y = X**, ta đã chứng minh ngay một
-> \**theorem**, **property của Covariance** đó là **Cov(X,X) = Var(X)**
+> **theorem**, **property của Covariance** đó là **Cov(X,X) = Var(X)**
 >
 > Đơn giản là: **Cov(X,X)** = E[(X-EX)(X-EX)] = **E[(X-EX)^2] và đây
 > chính là công thức của variance của X**
@@ -266,7 +266,7 @@
 >
 > = a1*Cov (X1, b1Y1) + a2Cov (X2, b1Y1) + a1Cov (X1, b2Y2) + a2Cov (X2, b2Y2)
 >
-> \**= a1b1*Cov (X1, Y1) + a2b1Cov (X2, Y1) + a1b2Cov (X1, Y2) + a2b2Cov (X2, Y2)**
+> **= a1b1*Cov (X1, Y1) + a2b1Cov (X2, Y1) + a1b2Cov (X1, Y2) + a2b2Cov (X2, Y2)**
 
 > [!NOTE]
 > #Property 6: Cov(X+ Y, Z+W) = Cov(X, Z) + Cov(X, W) + Cov(Y, Z) + Cov(Y, W)
@@ -289,7 +289,7 @@
 >
 > Tiếp, **property (6)** cho ta biết Cov(X1+X2, X1+X2) sẽ là tổng của 4 cái:
 >
-> \**Cov(X1, X1) + Cov(X1, X2) + Cov(X2, X1) + Cov(X2, X2)**
+> **Cov(X1, X1) + Cov(X1, X2) + Cov(X2, X1) + Cov(X2, X2)**
 >
 > = **Var(X1) + Var(X2) + 2Cov(X1,X2)**  |  Cov(X1,X1) = Var(X1) again do
 > property (1)
@@ -298,7 +298,7 @@
 >
 > từ đây ta có theorem:
 >
-> \**khi và chỉ khi Cov(X1, X2) = 0** thì **variance của tổng bằng tổng
+> **khi và chỉ khi Cov(X1, X2) = 0** thì **variance của tổng bằng tổng
 > variance**
 >
 > Và gs cho biết ta đã biết **nếu hai r.v Independent thì Covariance của chúng
@@ -400,7 +400,7 @@
 > = 0 - 0*1 = 0
 >
 > Do **EZ** = 0, và **E(Z^3)** như đã biết, là **3nd moment**, là một n'th moment với
-> \**n lẻ**. Mà bài trước ta đã chứng minh **với Normal N(0,1 thì n'th moment với n lẻ
+> **n lẻ**. Mà bài trước ta đã chứng minh **với Normal N(0,1 thì n'th moment với n lẻ
 > đều bằng 0** Vậy nó **UNCORRELATED,** nhưng rõ ràng chúng **KHÔNG HỀ INDEPENDENT,** Vì **biết X là biết Y** còn **biết Y thì ít nhất biết độ lớn (trị tuyệt đối của X)**
 
 > [!NOTE]
@@ -421,7 +421,7 @@
 > [!NOTE]
 > Ta qua định nghĩa chính thức về **CORRELATION**: 
 >
-> \**Corr(X,Y)** = **Cov(X,Y)** / **[SD(X) * SD(Y)]** 
+> **Corr(X,Y)** = **Cov(X,Y)** / **[SD(X) * SD(Y)]** 
 > SD(X) là standard deviation của X, như đã biết, = sqrt Var(X)
 >
 > Thế thì đại khái là gs cho biết nó có thể thể hiện bằng công thức khác, đó là: 
@@ -461,7 +461,7 @@
 >
 > Đầu tiên chứng minh trước: khi **add constant vào r.v** **không làm thay đổi Cov**:
 >
-> \**Cov(X+c, Y+d)** = E[(X+c)(Y+d)]  - E(X+c)E(Y+d) 
+> **Cov(X+c, Y+d)** = E[(X+c)(Y+d)]  - E(X+c)E(Y+d) 
 >
 > = E[XY + cY + dX + cd] - (EX + c)(EY + d)
 >
@@ -553,11 +553,11 @@
 
 > [!NOTE]
 > Thế thì ta sẽ quay lại **Multinomial** để áp dụng những thứ vừa học về
-> \**covariance**.
+> **covariance**.
 >
 > Ta nhớ **Multinomial** có **X là vector (X1, X2...Xk)** mang ý nghĩa là **số object
 > thuộc loại 1, 2...k** trong **n trial/object** và vector p = **(p1, p2...pk)** sẽ định nghĩa
-> \**xác suất mà object thuộc loại 1, 2....k**
+> **xác suất mà object thuộc loại 1, 2....k**
 >
 > Thế thì trong bối cảnh này, ta sẽ tính **covariance giữa Xi, Xj,** **Cov(Xi, Xj)**
 
@@ -602,11 +602,11 @@
 
 > [!NOTE]
 > Tiếp ta **xét i khác j:**  Để cho dễ ta sẽ concrete (**cụ thể hóa**) bằng cách tính
-> \**Cov(X1, X2)**. Và nó tương tự với mọi cặp Xi, Xj khác
+> **Cov(X1, X2)**. Và nó tương tự với mọi cặp Xi, Xj khác
 >
 > Trước hết ta có thể nhận xét ta **đoán** kết quả sẽ là **ÂM**, tức **NEGATIVE CORRELATED**
 > Lí do là vì, **intuitively** với **số object cho trước**, thì khi **số object thuộc loại 1 tăng** thì
-> \**số object thuộc loại 2 phải giảm**.
+> **số object thuộc loại 2 phải giảm**.
 >
 > Thế thì cách tiếp cận đó là ta dựa vào công thức của Var(X1+X2) 
 >
@@ -663,7 +663,7 @@
 > Lần trước ta tính dùng công cụ INDICATOR RANDOM VARIABLE
 >
 > Ta viết lại story của **Bin(n, p)** như đã quen thuộc, X là s**ố i.i.d trial Bern(p)**
-> \**success**, trong **n trial** có thể được thể hiện bằng **tổng của n indicator
+> **success**, trong **n trial** có thể được thể hiện bằng **tổng của n indicator
 > random variable X1, X2...** Trong đó Xi là indicator random variable gắn với event [trial Aj success]
 > và xác suất success là p (đều là p, vì đây là n i.i.d trials).
 >
@@ -706,7 +706,7 @@
 > Thế thì quay lại đây **Xj** là indicator r.v **Bern(p)**. **Var(Xj)** theo công thức
 > ta biết = **E(Xj)^2 - (EXj)^2**
 >
-> \**E(Xj^2)** như **vừa lập luận**, = **E(Xj)** 
+> **E(Xj^2)** như **vừa lập luận**, = **E(Xj)** 
 >
 > => **Var(Xj) = EXj - (EXj)^2**.
 >
@@ -770,14 +770,14 @@
 <p align="center"><kbd><img src="assets/b5546d373bcc264bd1b9079bf6723aba825e25e2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Var(X) = Var(X1 + X2 + ... Xn)**.
+> **Var(X) = Var(X1 + X2 + ... Xn)**.
 >
 > Theo property (7) cho biết rằng. **Var(∑j Xj) = ∑j Var(Xj) + 2 ∑i<j Cov(Xi, Xj)**
 >
 > Thế thì, ta có **n term Var(Xi)** và (**n choose 2) term Cov(Xi, Xj)**
 >
 > Lúc này gs nói thế này. Rất nhiều sinh viên khi làm bài toán này sẽ **cảm thấy bối rối** vì
-> \**không biết nên tính Xi nào trước**. Ý là, bởi vì ta đã nói, (gỉa sử n = 10) **X1, .. X10
+> **không biết nên tính Xi nào trước**. Ý là, bởi vì ta đã nói, (gỉa sử n = 10) **X1, .. X10
 > không độc lập** trong bối cảnh bài toán có câu chuyện là " Cái lọ có 10 trái banh với hai
 > màu trắng đỏ", Lấy n trái, và mỗi lần lấy từng trái ra khỏi  lọ, để đếm xem có mấy trái
 > trắng và lấy thì không hoàn lại (without replacement)
@@ -856,7 +856,7 @@
 >
 > i) Sample space: Tổng số cách chọn 2 trái banh 1,2: Step1: Chọn banh 1 có
 > (w+p)  possible outcome. Step 2: Chọn banh 2 có (w+p-1) => Theo step rule:
-> \**(w+p)*(w+p-1)**
+> **(w+p)*(w+p-1)**
 >
 > ii) Event space (số possible outcome mà banh 1 và 2 đều là trắng): w*(w-1) Step
 > 1: Chọn banh 1 là trắng: w possible outcome. Step 2 chọn banh 2 là trắng: w-1

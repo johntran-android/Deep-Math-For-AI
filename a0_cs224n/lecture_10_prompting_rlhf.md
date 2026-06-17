@@ -608,7 +608,7 @@
 >
 > E s^~p_theta(s)[R(s^)] = **∑s [R(s) * p_theta(s)]**
 >
-> \*Vì sao **s^~p_theta(s)**: bởi vì **với một chuỗi s**, **lm tính toán ra xác suất của
+> *Vì sao **s^~p_theta(s)**: bởi vì **với một chuỗi s**, **lm tính toán ra xác suất của
 > chuỗi s này**  (đây là **tính chất cơ bản của language model**). Nên s tuân theo
 > phân phối xác suất quy định bởi p_theta(s).
 >
@@ -638,7 +638,7 @@
 > ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[\/**∇_theta p_theta(s)**\/] Thay (2) vào: 
 > ∇_theta ∑s [R(s) * p_theta(s)] = ∑s R(s)[   {∇_theta log [p_theta(s)] } * p_theta(s)  ]
 >
-> \**= ∑s p_theta(s) * R(s) [ ∇_theta log [p_theta(s)] ]**
+> **= ∑s p_theta(s) * R(s) [ ∇_theta log [p_theta(s)] ]**
 >
 > Đây chính là định nghĩa của **Expectation s^~p_theta(s) { R(s) [ ∇_theta log [p_theta(s)] }
 >
@@ -646,7 +646,7 @@
 >
 > thành ra cần tính 
 >
-> \**Expectation s^~p_theta(s) { R(s^) [ ∇_theta log [p_theta(s^)] }** 
+> **Expectation s^~p_theta(s) { R(s^) [ ∇_theta log [p_theta(s^)] }** 
 
 <br>
 
@@ -668,9 +668,9 @@
 >
 > Expectation s^~p_theta(s) { R(s^) [ ∇_theta log [p_theta(s^)] }
 >
-> \**~= (1/m) Sum i=1:m R(s_i) [ ∇_theta log [p_theta(s_i)]**
+> **~= (1/m) Sum i=1:m R(s_i) [ ∇_theta log [p_theta(s_i)]**
 >
-> \**Có nghĩa đại khái ban đầu cần tính Đạo hàm của một hàm expectation,  thì
+> **Có nghĩa đại khái ban đầu cần tính Đạo hàm của một hàm expectation,  thì
 > việc này khó / không tính được, nên ta chuyển nó thành expectation của một
 > hàm số khác trong đó có thể tính được vì có thể tính đạo hàm theo theta của
 > p_theta.
@@ -714,7 +714,7 @@
 > gradient sẽ mang dấu dương, để nếu update theta, nó sẽ tăng xác xuất của
 > p_theta (s_i), mang ý nghĩa là **tăng cường khả năng xuất hiện chuỗi s_i.**
 >
-> \**Vì objective function như đã nói, nó là ∑s [R(s) * p_theta(s)]  nên update
+> **Vì objective function như đã nói, nó là ∑s [R(s) * p_theta(s)]  nên update
 > theta theo gradient ascent đương nhiên sẽ đẩy giá trị kì vọng này lên, đồng
 > nghĩa đẩy p(s_i) lên.** 
 >

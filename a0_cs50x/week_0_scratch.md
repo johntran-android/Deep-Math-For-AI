@@ -192,7 +192,7 @@
 > (0-255)
 >
 > Giải pháp là **dùng nhiều bit hơn**, và dẫn đến
-> \**Unicode** vẫn là map giữa number và character
+> **Unicode** vẫn là map giữa number và character
 > nhưng nhiều hơn
 >
 > Nó là Consortium - kiểu như đồng thuận giữa nhiều
@@ -207,7 +207,7 @@
 
 > [!NOTE]
 > Nếu dùng **32 bits** = 4 bytes để represent thì sẽ có
-> \**8 tỉ** cách khác nhau để permutation các con số 0,1
+> **8 tỉ** cách khác nhau để permutation các con số 0,1
 
 <br>
 
@@ -435,7 +435,7 @@
 > [!NOTE]
 > Qua tuần sau khi học về C, ta sẽ biết với vai trò là developer ta
 > phải cho máy tính biết cái gì là text cái gì là number ...Đó chính là
-> \**data type** Và sau này với các language như Python, nó sẽ tự dựa vào
+> **data type** Và sau này với các language như Python, nó sẽ tự dựa vào
 > context mà biết được data type phù hợp, rất tiện lợi cho human
 
 <br>
@@ -521,7 +521,7 @@
 > [!NOTE]
 > Đại khái là người ta represent number là **chỉ số Hezt - tần số cao độ
 > (nốt cao hay nốt trầm)**. Có thể **dùng thêm byte khác** represent
-> \**cường độ (to hay nhỏ)**. Có thể **dùng thêm byte nữa** represent ..kiểu
+> **cường độ (to hay nhỏ)**. Có thể **dùng thêm byte nữa** represent ..kiểu
 > như **thời gian bấm 1 nốt nhạc lâu hay nhanh**...Từ đó ra các định
 > dạng **MIDI, mp3**...tất cả **đều là các cách represent khác nhau của
 > âm thanh.**
@@ -579,7 +579,7 @@
 
 > [!NOTE]
 > Ổng lấy ví dụ, search trong phone book app,
-> \**"HI"**, lập tức **autocomplete** suggest các name
+> **"HI"**, lập tức **autocomplete** suggest các name
 > start với HI. Câu hỏi là **nó hoạt động như thế
 > nào?**
 
@@ -838,9 +838,9 @@
 <p align="center"><kbd><img src="assets/6c764132e59ae63f0661b9fbe6214f1e4fd01b96.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Input** là **'Hello, world'** là **argument/parameter** của function
+> **Input** là **'Hello, world'** là **argument/parameter** của function
 >
-> \**Algorithm** là những gì Scratch **xử lý bên dưới khi thực hiện
+> **Algorithm** là những gì Scratch **xử lý bên dưới khi thực hiện
 > function say() này** 
 > Output trong trường hợp này gọi là **'side effect'** - **something
 > mình thấy, nghe ...**
@@ -1089,7 +1089,7 @@
 
 > [!NOTE]
 > Ý ổng nói đến một ý quan trọng đó là: Kiểu như **ở high level**, khi ta
-> \**rê chuột tới cái thùng rác người ta thấy nó 'Mở ra'**, nhưng **thực
+> **rê chuột tới cái thùng rác người ta thấy nó 'Mở ra'**, nhưng **thực
 > tế 'ở dưới code'** chỉ là **thay đổi cái hình của cái sprite thành hình
 > khác.** Và nếu làm siêng hơn, cho nó thay đổi thành nhiều hình liên tục
 > thay vì chỉ có 2 hình thì nó sẽ tạo hiệu ứng thị giác là cái thùng mở

@@ -50,9 +50,13 @@ def process_text_block(text):
     return text
 
 def escape_note_line(l):
-    # Prevent markdown from rendering leading '-', '+', '*' as bullet points inside callout blocks.
-    # In these notes, all three are math operators or emphasis markers, never list delimiters.
-    if l.startswith('-') or l.startswith('+') or l.startswith('*'):
+    # Prevent markdown from rendering leading '-' and '+' as bullet points inside callout blocks.
+    if l.startswith('-') or l.startswith('+'):
+        return '\\' + l
+    # Only escape '*' when it's a bare list marker (* item) — not when it's inline emphasis (*text*).
+    # List marker pattern: '* ' (asterisk + space) or lone '*'.
+    # Inline emphasis pattern: '*text' (asterisk immediately followed by non-space) — leave as-is.
+    if l == '*' or l.startswith('* '):
         return '\\' + l
     return l
 

@@ -26,7 +26,7 @@
 > Thế thì đại khái là **để tính diện tích elip**, theo ứng dụng của tích phân
 > kép bài trước ta đã biết là có thể dùng để tính diện tích) ta có:
 >
-> \**Diện tích = Tích phân kép trong vùng R của 1*dx*dy với R được định
+> **Diện tích = Tích phân kép trong vùng R của 1*dx*dy với R được định
 > nghĩa bởi (x/a)^2 + (y/b)^2 < 1** Và ta có thể **tìm bound của inner integral** bằng cách **giải x theo y**
 > và bound của outer integral là **number**
 >
@@ -35,7 +35,7 @@
 > không được**,  vì đây **không phải hình tròn** mà là hình elip.
 >
 > Do đó gs mới **làm động tác change variable** (mà ông nói thêm viêc
-> \**chuyển qua Polar coordinate** **cũng là change variable** nhưng **còn
+> **chuyển qua Polar coordinate** **cũng là change variable** nhưng **còn
 > nhiều kiểu khác** nữa mà ta sẽ học ở bài này)
 >
 > Thế thì đặt **(x/a) = u** ta sẽ có **du = dx/a**, **(y/b) = v**, ta sẽ có **dv = dy / b**
@@ -95,7 +95,7 @@
 >
 > Ví dụ như từ **u = 3x - 2y**, **v = x + y** ta có thể thấy rằng:
 >
-> \**Rate of change của u w.r.t y** là **bằng** **-2,** và nó **không phụ
+> **Rate of change của u w.r.t y** là **bằng** **-2,** và nó **không phụ
 > thuộc x**
 >
 > (Ý là partial u / partial y = -2, trong lecture 2 của 18.01 ta đã học một
@@ -125,10 +125,10 @@
 > Rồi thế thì ta **cần tìm liên hệ giữa delta_A và delta_A**': Thì gs cho rằng
 > ta biết p**hép biến đổi này nó không phụ thuộc vị trí của delta_A**. Ví dụ
 > nếu **delta_A nằm chỗ khác** thì phép biến đổi tuyến tính cũng sẽ cho ra
-> \**delta_A' cùng diện tích** nhưng **nằm chỗ khác**.
+> **delta_A' cùng diện tích** nhưng **nằm chỗ khác**.
 >
-> \**Do đó** gs cho rằng ta **có thể dùng một delta_A đơn giản nhất**, để
-> \**xem thử delta_A' có diện tích bao nhiêu** từ đó ta **SUY RA CONSTANT
+> **Do đó** gs cho rằng ta **có thể dùng một delta_A đơn giản nhất**, để
+> **xem thử delta_A' có diện tích bao nhiêu** từ đó ta **SUY RA CONSTANT
 > FACTOR** liên kết detla_A và delta_A'
 
 <br>
@@ -183,7 +183,7 @@
 > x, y sang u, v thì ta sẽ **thay dxdy bằng (1/5)dudv**.
 >
 > Đương nhiên **function trong tích phân cũng theo u, v** và
-> \**bound của integral** cũng vậy.
+> **bound của integral** cũng vậy.
 
 <br>
 
@@ -200,18 +200,18 @@
 > [!NOTE]
 > Thế thì ta đã biết **nếu f là function theo x, y** thì **TOTAL DIFFERENTIAL** cho ta:
 >
-> \**df = f_x*dx + f_y*dy**.
+> **df = f_x*dx + f_y*dy**.
 >
 > Và khi **thay df, dx, dy** bằng **delta_f, delta_x, delta_y** ta sẽ có
-> \**LINEAR APPROXIMATION**:
+> **LINEAR APPROXIMATION**:
 >
-> \**delta_f ~= f_x*delta_x + f_y*delta_y**
+> **delta_f ~= f_x*delta_x + f_y*delta_y**
 >
 > Thì ở đây ta có **f = u(x,y)** và **v = v(x,y)** nên
 >
-> \**delta_u ~= u_x*delta_x + u_y*delta_y**
+> **delta_u ~= u_x*delta_x + u_y*delta_y**
 >
-> \**delta_v ~= v_x*delta_x + v_y*delta_y**
+> **delta_v ~= v_x*delta_x + v_y*delta_y**
 >
 > Viết thành **dạng** **matrix** thì:
 >
@@ -334,7 +334,7 @@
 > Và đây là lúc ta **chính thức được học về Jacobian**, gs nói 
 > đại khái là  ta có thể thấy nó được kí hiệu như vầy: 
 >
-> \**J = partial (u,v) / partial(x,y), tức là, matrix các partial derivative
+> **J = partial (u,v) / partial(x,y), tức là, matrix các partial derivative
 > được gọi là Jacobian matrix**
 >
 > Nhưng nên hiểu **notation này khá lạ**, nó không **có nghĩa là ta lấy
@@ -351,7 +351,7 @@
 > Để rồi như ta nói vừa nãy, dudv liên hệ với dxdy thông qua **GIÁ TRỊ
 > TUYỆT ĐỐI CỦA JACOBIAN DERTERMINANT**
 >
-> \**dudv = |J|dxdy**
+> **dudv = |J|dxdy**
 >
 > CHÚ Ý HAI DẤU **| |**: Một cái là nói về **determinant** của matrix, và
 > cái kia là t**rị tuyệt đối.**

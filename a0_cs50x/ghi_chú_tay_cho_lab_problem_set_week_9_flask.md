@@ -38,7 +38,7 @@
 
 > [!NOTE]
 > Đầu tiên là gọi (command liên command)
-> \**sqlite3 birthdays.db**
+> **sqlite3 birthdays.db**
 >
 > và **.schema** để xem thử cái db này nó có các
 > column ra sao
@@ -121,14 +121,14 @@
 >
 > Sau đó là configure Flask : **app = Flask(__name__)** 
 > Họ nói là ở đây **disable cái caching của response**, có thể là dòng này: 
-> \**app.config["SESSION_PERMANENT"] = False**, nôm na hiểu là để
+> **app.config["SESSION_PERMANENT"] = False**, nôm na hiểu là để
 > khi ta thay đổi gì đó mà browser không notice. Tạm hiểu vậy.
 >
 > Kế đến là **configure Jinja với function filters** để giúp **format value as US 
 > dollars dễ hơn**.
 >
 > Rồi tiếp nó **configure Flask để store sessions trên local filesystem**
-> \**thay vì cookies** (vốn là default).
+> **thay vì cookies** (vốn là default).
 >
 > Cuối cùng là nó **configure SQL module dùng finance.db**
 
@@ -245,7 +245,7 @@
 >
 > Khi **nhận kết quả thì nó parse (decode) từ response content
 > ra, để lấy ra price**. Rồi cuối cùng **tạo một cái dict có 3 key** là
-> \**name, price, symbol trả về**
+> **name, price, symbol trả về**
 
 <br>
 

@@ -135,7 +135,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 > Thay vào đó phải làm theo kiểu lấy **log**.
 >
 > Ví dụ muốn lấy từ 0.0001 - 1. Thừ xem **0.0001** là log(a) **a bao nhiêu**.
-> \**1** là log(b) -> **b bao nhiêu.**
+> **1** là log(b) -> **b bao nhiêu.**
 > \-> Dẫn tới bài toán chọn **r random trong đoạn [a,b]** -> **alpha = 10^r**
 
 <br>
@@ -427,7 +427,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <p align="center"><kbd><img src="assets/f25620b54372c5a86a8ec204dbe3dee759520bfd.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Covariate shift.** And the idea is that, if you've learned some X to Y mapping, 
+> **Covariate shift.** And the idea is that, if you've learned some X to Y mapping, 
 > if the distribution of X changes, then you might need to retrain 
 > your learning algorithm.
 
@@ -460,8 +460,8 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <p align="center"><kbd><img src="assets/0385a4bb4fb4d5a98fdf43c9b96db9ddd5410b42.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Covariate shift:** This is the phenomenon where the
-> \**distribution of the inputs to a layer changes during training**,
+> **Covariate shift:** This is the phenomenon where the
+> **distribution of the inputs to a layer changes during training**,
 > which makes it difficult for the network to learn. By normalizing the
 > inputs to each layer, batch normalization reduces the internal
 > covariate shift, which can make it easier for the network to learn.
@@ -1042,7 +1042,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 >
 > Cứ tưởng kẹt ở Excersie này, người ta đã gợi ý là phải đảm
 > bảo argument's shape đúng mà. Có điều không có nói vụ 
-> \**from_logits** khiến mò mãi mới đúng
+> **from_logits** khiến mò mãi mới đúng
 >
 > 1. Chú ý thứ tự argument, **(labels, logits)**
 >
@@ -1051,7 +1051,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 > 3.Phải thêm **from_logits = True** mới đúng
 
 > [!NOTE]
-> \**from_logits = True** có nghĩa là Y^ (output của last layer
+> **from_logits = True** có nghĩa là Y^ (output của last layer
 > trong n.n) vẫn ở dạng 'raw output', không phải dạng '
 > Probability'.
 >
@@ -1062,7 +1062,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 >
 > Thì đây cũng vậy, cái mà mình bỏ vào cùng với y là Z, là **raw
 > output** chứ không phải là **Probability** nên phải ghi rõ
-> \**from_logit = True** Nếu không ghi, hoặc để = false, hàm categorical_crossentropy
+> **from_logit = True** Nếu không ghi, hoặc để = false, hàm categorical_crossentropy
 > sẽ apply **Softmax** (tính ra Probability) rồi mới tính Loss
 
 <br>
@@ -1096,7 +1096,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 <p align="center"><kbd><img src="assets/e82454c69961df5dbbca765f8ca92baebe19ff00.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**from_logits = True** có nghĩa là Y^ (output của last layer
+> **from_logits = True** có nghĩa là Y^ (output của last layer
 > trong n.n) vẫn ở dạng 'raw output', không phải dạng '
 > Probability'.
 >
@@ -1107,7 +1107,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 >
 > Thì đây cũng vậy, cái mà mình bỏ vào cùng với y là Z, là **raw
 > output** chứ không phải là **Probability** nên phải ghi rõ
-> \**from_logit = True** Nếu không ghi, hoặc để = false, hàm categorical_crossentropy
+> **from_logit = True** Nếu không ghi, hoặc để = false, hàm categorical_crossentropy
 > sẽ apply **Softmax** (tính ra Probability) rồi mới tính Loss
 
 <br>
@@ -1249,7 +1249,7 @@ Explore TensorFlow, a deep learning framework that allows you to build neural ne
 
 > [!NOTE]
 > Then, calling the optimizer method
-> \**apply_gradients**, will apply the optimizer's
+> **apply_gradients**, will apply the optimizer's
 > update rules to each trainable parameter.
 >
 > Đây chính là bước mà T.F nó update W1, b1,

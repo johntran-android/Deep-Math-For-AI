@@ -38,7 +38,7 @@
 > vector u)
 >
 > Nhưng khi **t tăng lên**, thì vì **du2/dt** có một thành phần
-> \**+ u1**  và - 2*u2 và du1/dt thì - u1, + 2*u2 nên kiểu như là
+> **+ u1**  và - 2*u2 và du1/dt thì - u1, + 2*u2 nên kiểu như là
 > nó sẽ **move ra khỏi u1, đi vào u2**
 
 <br>
@@ -110,7 +110,7 @@
 > gia" vào hai phần của solution**.
 >
 > Trong đó phần thứ nhất, với **eigenvalue = -3**, thì nó sẽ
-> \**khiến e^-3t nhỏ dần nhỏ dần về 0** khi t tăng lên đến vô
+> **khiến e^-3t nhỏ dần nhỏ dần về 0** khi t tăng lên đến vô
 > cùng (vì đồ thị của hàm e^x sẽ về 0 khi x về -inf, và về inf khi
 > x về inf)
 >
@@ -118,7 +118,7 @@
 > và phần này luôn bằng 1 với mọi t**.
 >
 > Như vậy là khi t tăng lên, solution với **một phần là constant**,
-> \**một phần nhỏ dần về 0**, để khi t lớn chỉ còn lại một phần
+> **một phần nhỏ dần về 0**, để khi t lớn chỉ còn lại một phần
 > mà ta quan tâm
 
 <br>
@@ -139,7 +139,7 @@
 > nullspace của A. Điều này cũng phản ánh **sự thật** đơn
 > giản rằng, **nếu nullspace của A có dim > 0**, thì **basis
 > của N(A) chính là eigenvector** vì đó là non-zero vector
-> \**ứng với eigenvalue = 0**, do Ax=0*x)
+> **ứng với eigenvalue = 0**, do Ax=0*x)
 >
 > Vậy tìm nullspace của A, thì ta thấy ngay **cols 2 là free cols** / ứng với free variable. Ta **chọn giá trị của nó bằng 1**.
 >
@@ -209,7 +209,7 @@
 >
 > Ta sẽ có:
 >
-> \**Vế trái** là **du1/dt,** ta sẽ có derivative của **e^(λ1t)*x1**
+> **Vế trái** là **du1/dt,** ta sẽ có derivative của **e^(λ1t)*x1**
 > đối với t. Dùng chain rule (in calculus) ta có
 >
 > d [e^(λ1t)*x1] /dt = x1*[de^(λ1t)/d(λ1t)]*[d(λ1t)/dt]
@@ -236,7 +236,7 @@
 > [!NOTE]
 > gs: cũng như bữa trước mình có **c1(λ1^k)x1 + c2(λ2^k)x2** là
 > general solution của equation **u_k+1 = Au_k** Thì nay **c1(e^λ1t)x1 + c2(e^λ2t)x2** là general solution của
-> \**du/dt = Au**
+> **du/dt = Au**
 
 <br>
 
@@ -246,7 +246,7 @@
 
 > [!NOTE]
 > Và tương tự như bữa trước, khi ta có **eigenvalues λ1, λ2** và
-> \**eigenvectors x1, x2**, **ta gắn vào**, và để có thể hoàn chỉnh
+> **eigenvectors x1, x2**, **ta gắn vào**, và để có thể hoàn chỉnh
 > solution chỉ còn **phải tìm c1, c2** nữa thôi.
 
 <br>
@@ -257,7 +257,7 @@
 
 > [!NOTE]
 > Và để có c1, c2 ta sẽ dùng đến
-> \**initial condition**: u(0) = [1 0]T
+> **initial condition**: u(0) = [1 0]T
 
 <br>
 
@@ -300,12 +300,12 @@
 > Còn **c2*(e^λ2t)*x2** trở thành **c2*0*x2 = 0** (vì e^[-infinity] = 0)
 >
 > Từ đó ta có u(t) đạt giá trị ổn định, tức trạng thái
-> \**STEADY stage là c1x1 = (1/3)*[2 1]T = [2/3 1/3]T**
+> **STEADY stage là c1x1 = (1/3)*[2 1]T = [2/3 1/3]T**
 >
 > ===
 >
 > Nhưng gs cho biết **không phải lúc nào cũng như vậy**.
-> \**Đôi khi nó sẽ VANISH / disappear.** Đôi khi nó sẽ **BLOW UP.**
+> **Đôi khi nó sẽ VANISH / disappear.** Đôi khi nó sẽ **BLOW UP.**
 >
 > Và **eigenvalue sẽ cho ta biết điều đó**
 
@@ -430,7 +430,7 @@
 > A's eigenvectors (tức là các columns của S)**?
 >
 > Trả lời: Đơn giản là vì ta đã có hoặc xét trạng thái rằng A có
-> \**n independent eigenvectors**, từ đó chúng **span toàn bộ
+> **n independent eigenvectors**, từ đó chúng **span toàn bộ
 > Rn**, hay nói cách khác chính chính là một basis của Rn.
 > Do đó bất kì Rn vector u đều có thể represent bởi linear
 > combination của eigenvectors với coefficient vector v:
@@ -455,7 +455,7 @@
 > [!NOTE]
 > Nhân hai vế cho **S_inv**:
 >
-> \**S_inv.S dv/dt** = **S_inv A Sv** <=> **dv/dt =** **Λv**
+> **S_inv.S dv/dt** = **S_inv A Sv** <=> **dv/dt =** **Λv**
 >
 > Và khi đó có thể thấy, kết quả bên phải là một vector
 > mà mỗi phần tử, ví dụ thứ i, là bằng **λ_i * v_i**
@@ -531,7 +531,7 @@
 >
 > f(x) = 1 + x/1! + x^2/2! + ... = x^0/0! + x^1/1! + x^2/2! + ....
 >
-> \**= Sum n=0:infinity [x^n/n!]**
+> **= Sum n=0:infinity [x^n/n!]**
 
 > [!NOTE]
 > Đầu tiên ta cần ôn lại về **chuỗi Taylor** (gs có nhắc đến,
@@ -574,16 +574,16 @@
 
 > [!NOTE]
 > Lập luận như sau: Ta đang muốn chứng minh phương trình
-> \**du(t)/dt = Au(t)** có nghiệm tổng quát là **u(t) = e^(At)u(0).**
+> **du(t)/dt = Au(t)** có nghiệm tổng quát là **u(t) = e^(At)u(0).**
 >
 > Với ý nghĩa là, ta cho rằng những function mà có tính chất
-> \**đạo hàm của nó đối với biến số t (du/dt) có tính cách tỉ lệ với
+> **đạo hàm của nó đối với biến số t (du/dt) có tính cách tỉ lệ với
 > chính nó**, liên hệ thông qua matrix A (đây là ý nghĩa của
 > phương trình du(t)/dt = Au(t)) SẼ CÓ DẠNG TỔNG QUÁT
 > LÀ u(t) = e^(At) u(0)
 >
 > Thế thì để chứng minh u(t) = e^(At)u(0) là nghiệm thì
-> \**đương nhiên phải chứng minh derivative của nó du/dt phải
+> **đương nhiên phải chứng minh derivative của nó du/dt phải
 > bằng Au(t).
 >
 > Thành ra ta sẽ bắt đầu từ u(t) = e^(At)u(0), lấy đạo hàm của
@@ -607,7 +607,7 @@
 >
 > Thế thì, **Sum n=0:infi (At)^(n-1) / (n-1)!** CŨNG **CHÍNH LÀ e^(At)**
 > vì Sum n=0:infi (At)^(n-1) / (n-1)! thì cũng coi như y chang 
-> \**Sum n=0:infi (At)^n / n!**
+> **Sum n=0:infi (At)^n / n!**
 
 > [!NOTE]
 > Và từ đó, ta điền vào việc triển khai du(t)/dt đang là để có :
@@ -807,7 +807,7 @@
 >
 > Thì qua việc phân tách vừa rồi:
 >
-> \**u(t) = e^(At) = S*e^(Λt)*Sinv**,
+> **u(t) = e^(At) = S*e^(Λt)*Sinv**,
 >
 > thì ta thấy S và Sinv thì không đổi, vì n**ó không dính đến
 > t**. Chỉ có e^(Λt) = diagonal matrix các eigenvalue là dính
@@ -861,7 +861,7 @@
 > (second order differential equation)
 >
 > Yêu cầu của ta tương tự như bài toán Fibonacci là cần
-> \**đưa nó về HỆ phương trình vi phân bậc 1** (system of first
+> **đưa nó về HỆ phương trình vi phân bậc 1** (system of first
 > order differential equations)
 
 <br>

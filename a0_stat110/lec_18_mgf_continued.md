@@ -83,7 +83,7 @@
 >
 > gs nói sơ rằng chữ **moments**, có xuất xứ từ **vật lý** (Physic) và sự thật
 > có **rất nhiều điểm tương đồng giữa variance** (trong **statistic**) với
-> \**moment of inertia** (mô men quán tính)
+> **moment of inertia** (mô men quán tính)
 
 <br>
 
@@ -105,7 +105,7 @@
 > E(e^tX).
 >
 > Nhớ rằng  khi **apply function vào random variable X** ta có f(X) = e^tX
-> \**cũng là random variable** nên đương nhiên **có thể hợp lệ để tính
+> **cũng là random variable** nên đương nhiên **có thể hợp lệ để tính
 > expected value**.
 >
 > Nên function theo t, M(t) này mang ý nghĩa là, **định nghĩa ra một function
@@ -164,7 +164,7 @@
 > nên **nhân và chia bớt cho (1-t),** tích phân từ 0 đến infinity của e^[-x(1-t)] dx sẽ
 > là
 >
-> \**(1/1-t)** * ∫0:inf(**1-t) e^[-x(1-t)] dx**
+> **(1/1-t)** * ∫0:inf(**1-t) e^[-x(1-t)] dx**
 >
 > và tích phân này **đương nhiên là bằng 1** vì nó là tích phân -inf:inf của PDF
 > của Expo(1-t) theo tính chất, **để valid thì nó phải bằng 1**.
@@ -232,7 +232,7 @@
 
 > [!NOTE]
 > Gs nói dù ta có thể **tính đạo hàm nhiều lần để có 1st, 2nd** moment nhưng **có**
-> \**cách hay hơn**. Bằng cách **nhận ra 1/(1-t)** liên quan đến **Geometric** series
+> **cách hay hơn**. Bằng cách **nhận ra 1/(1-t)** liên quan đến **Geometric** series
 >
 > gs: **Bất cứ khi nào ta thấy 1 chia cho 1 trừ cái gì đó thì ta nên luôn nghĩ đến
 > Geometric series**.
@@ -329,7 +329,7 @@
 >
 > E[Y^n] = E[X^n] / λ^n
 >
-> \**E[Y^n] = n! / λ^n** Như vậy là ta đã có **n'th moment của Y ~ Expo(λ)**
+> **E[Y^n] = n! / λ^n** Như vậy là ta đã có **n'th moment của Y ~ Expo(λ)**
 
 > [!NOTE]
 > N'TH MOMENT CỦA
@@ -397,7 +397,7 @@
 > Thế thì để **tính n'th moment** với n **chẵn**, gs cho rằng ta sẽ phải **đối
 > mặt với nhiều bài toán tích phân phức tạp**
 >
-> \**Do đó ta sẽ dùng MGF**. Như bài trước đã chứng minh **MGF của Z ~ N(0,
+> **Do đó ta sẽ dùng MGF**. Như bài trước đã chứng minh **MGF của Z ~ N(0,
 > 1) là M(t) = e^(t^2/2)**
 >
 > Thế thì gs nói thêm, bằng các công cụ như **chain rule**, **product rule**, ...
@@ -412,7 +412,7 @@
 > vì khi đó nó có dạng u(t)*v(t). 
 >
 > Và tiếp tục lấy đạo hàm lần 3 thì sẽ **ngày càng tedious** để làm,
-> \**DÙ LÀ VẪN LÀM ĐƯỢC**
+> **DÙ LÀ VẪN LÀM ĐƯỢC**
 
 <br>
 
@@ -442,13 +442,13 @@
 > = **[ (2n)! / (2^n * n!) ]** * t^(2n) / (2n)!
 >
 > Khi đó **những thứ gắn với t^(2n) / (2n)!** , tức là [ (2n)! / (2^n * n!) ] chính là 
-> \**coefficient của (2n)'th moment**  - tức moment thứ 2n (là **moment chẵn**)
+> **coefficient của (2n)'th moment**  - tức moment thứ 2n (là **moment chẵn**)
 >
 > Vậy (2n)'th moment, hay E(z^2n) = **(2n)! / (2^n * n!)**
 
 > [!NOTE]
 > Cần kiến thức về convergence của series từ 18.01 nhưng hiểu đại khái là
-> \**với bất kì giá trị nào của x** thì tổng của chuỗi x^n/n! sẽ converge = e^x
+> **với bất kì giá trị nào của x** thì tổng của chuỗi x^n/n! sẽ converge = e^x
 
 <br>
 
@@ -493,10 +493,10 @@
 > [!NOTE]
 > Thế thì ông nói là bài trước ta đã biết **3 lí do tại sao MGF lại quan trọng**  và
 > qua các ví dụ vừa rồi  ta có thể hiểu tại sao nó gọi là **MOMENT**
-> \**GENERATING** **FUNCTION** đơn giản vì nó **giúp generate mọi moment**
+> **GENERATING** **FUNCTION** đơn giản vì nó **giúp generate mọi moment**
 >
 > Thì tiếp theo ta sẽ thảo luận **MGF của Poisson**, mà như ta đã biết
-> \**Pois(lambda)** r.v có **mean** và **variance** đều là **lambda**
+> **Pois(lambda)** r.v có **mean** và **variance** đều là **lambda**
 
 <br>
 
@@ -510,9 +510,9 @@
 > review một chút, để tính EX, ta tính weighted sum mọi possible value
 > x của X, weight bởi PMF (đối với discrete r.v):
 >
-> \**EX = ∑ x: x*P(X=x)**, với continuous rv, EX sẽ có dạng tương đương là:
+> **EX = ∑ x: x*P(X=x)**, với continuous rv, EX sẽ có dạng tương đương là:
 >
-> \**∫ -inf:inf x f(x)dx (f là PDF)**
+> **∫ -inf:inf x f(x)dx (f là PDF)**
 >
 > Thế thì nếu chiếu theo đó để tính E(g(X)), g(X) là function g apply lên
 > r.v X, nên cũng là một rv) thì ta sẽ cầm PMF/PDF của g(X), tức là:
@@ -531,7 +531,7 @@
 >
 > với poisson, ta đã biết X chỉ c**ó các possible value dương 0, 1, 2...**
 >
-> \**E (e^tX) = ∑ k=0:infinity** **e^(tk) * e^-λ * λ^k / k!**
+> **E (e^tX) = ∑ k=0:infinity** **e^(tk) * e^-λ * λ^k / k!**
 
 <br>
 
@@ -592,7 +592,7 @@
 >
 > Nhưng bài trước ta đã biết, nếu **X, Y INDEPENDENT** thì ta có một **theorem** (chưa chứng minh) rằng:
 >
-> \**M_X+Y(t) = M_X(t) * M_Y(t)** (tức là MGF của X+Y sẽ là tích của MGF của mỗi r.v X,Y)
+> **M_X+Y(t) = M_X(t) * M_Y(t)** (tức là MGF của X+Y sẽ là tích của MGF của mỗi r.v X,Y)
 >
 > Do đó ta có: M_(X+Y)(t) = e^[**λ**(e^t-1)] * e^[**µ**(e^t-1)] = **e^[(λ+µ)(e^t-1)]**
 
@@ -609,7 +609,7 @@
 > kết luận **X+Y là ~ Pois(λ+µ)**
 >
 > Gs nói thêm đại khái là đây cũng là **một tính chất hay ho của Poisson**, vì
-> \**tổng hai Poisson vẫn là Poisson**. Không phải distribution nào cũng có tính
+> **tổng hai Poisson vẫn là Poisson**. Không phải distribution nào cũng có tính
 > chất đó
 
 > [!NOTE]
@@ -687,11 +687,11 @@
 > \- **JOINT** **PMF** (discrete) là **P(X=x, Y=y)**
 >
 > Và như đã nói, nếu X, Y independent thì ta có thể tách 
-> \**F(x,y) = P(X<=x, Y<=y)** ra thành **P(X<=x) * P(Y<=y)**
+> **F(x,y) = P(X<=x, Y<=y)** ra thành **P(X<=x) * P(Y<=y)**
 >
-> \**P(X=x, Y=y) = P(X=x) * P(Y=y)**
+> **P(X=x, Y=y) = P(X=x) * P(Y=y)**
 >
-> \**MARGINAL CDF**: Và **P(X<=x)** gọi là **marginal** **CDF of X** cũng như **P(Y<=y)** gọi là **marginal CDF of Y.**
+> **MARGINAL CDF**: Và **P(X<=x)** gọi là **marginal** **CDF of X** cũng như **P(Y<=y)** gọi là **marginal CDF of Y.**
 >
 > Nên nếu X, Y independent ta có thể nói **JOINT CDF BẰNG TÍCH
 > MARGINAL CDF**
@@ -705,7 +705,7 @@
 > [!NOTE]
 > Với **continuous** r.v thì ta có **JOINT** PDF: **f(x,y)** mang ý nghĩa là:
 >
-> \**P((x,y) thuộc B)** = **∫∫B f(x,y)dxdy**
+> **P((x,y) thuộc B)** = **∫∫B f(x,y)dxdy**
 >
 > gs nói đây là lần đầu tiên ta thấy **tích phân kép** ở class này, nhưng
 > ông cho biết phần lớn ta **chỉ cần coi như lấy 2 lần tích phân** mỗi lần **theo một biến vậy**
@@ -729,10 +729,10 @@
 >
 > Có nghĩa là :
 >
-> \**Joint CDF = tích các Marginal CDF** 
+> **Joint CDF = tích các Marginal CDF** 
 > tương tự như vậy với PMF và PDF
 >
-> \**Joint PMF = tích các Marginal PMF 
+> **Joint PMF = tích các Marginal PMF 
 >
 > Joint PDF = tích các Marginal PDF**
 
@@ -766,9 +766,9 @@
 >
 > Thành ra, trong trường hợp này ta sẽ đ**i tính Marginal PMF** của từng cái.
 >
-> \**Marginal PMF của X**, theo định nghĩa, là **P(X=x)** ta sẽ lập luận như sau:
+> **Marginal PMF của X**, theo định nghĩa, là **P(X=x)** ta sẽ lập luận như sau:
 >
-> \**(X=x)** = ∪ {mọi possible value y của Y} (X=x, Y=y) đây là dựa vào set theory:
+> **(X=x)** = ∪ {mọi possible value y của Y} (X=x, Y=y) đây là dựa vào set theory:
 >
 > (X=x) ⊂ S ⇨ (X=x) ∩ S = (X=x) ⇔ (X=x) = (X=x) ∩ (∪ {mọi possible value y của Y} Y=y))
 >
@@ -799,7 +799,7 @@
 
 > [!NOTE]
 > Gs cho biết chính vì ta s**um lại mọi possible value của Y** gọi là
-> \**MARGINALIZING** nên nó có cái tên marginal
+> **MARGINALIZING** nên nó có cái tên marginal
 >
 > Với nếu là continuous, thì ví dụ **marginal pdf của Y** sẽ là như vầy
 >
@@ -908,7 +908,7 @@
 > = ∫∫A f(x,y)dxdy = ∫∫A c*dxdy = c*∫∫A dxdy = c*{diện tích của vùng A} = c*1
 >
 > tích phân kép trong vùng A (unit square) của dxdy theo **1802** ta đã biết, nó
-> \**chính là diện tích của vùng A**, và đây là **unit square** nên **area = 1** 
+> **chính là diện tích của vùng A**, và đây là **unit square** nên **area = 1** 
 > = **c*{diện tích của vùng A} = c*1**
 >
 > Vậy để **valid** thì như đã nói **∫∫A f(x,y)dxdy phải bằng 1** => **c = 1**
@@ -963,7 +963,7 @@
 
 > [!NOTE]
 > gs nhắc nhở rằng, trong trường hợp này **X,Y DEPENDENT**. vì dễ thấy rằng,
-> \**không như trong hình vuông** hồi nãy, với **một giá trị nào đó của X**, thì **Y vẫn
+> **không như trong hình vuông** hồi nãy, với **một giá trị nào đó của X**, thì **Y vẫn
 > tự do có mọi giá trị trong khoảng 0,1.**
 >
 > Còn ở đây nếu **X = 1**, thì **Y sẽ chỉ có thể bằng 0**, còn nếu **X = 0** thì **Y có thể 

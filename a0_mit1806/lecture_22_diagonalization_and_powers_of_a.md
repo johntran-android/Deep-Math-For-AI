@@ -15,7 +15,7 @@
 
 > [!NOTE]
 > Gs cho rằng ta đã biết về **eigenvector** và **eigenvalue** và
-> \**cách tìm** chúng. Thì nay ta sẽ bàn về **ứng dụng** của
+> **cách tìm** chúng. Thì nay ta sẽ bàn về **ứng dụng** của
 > chúng.
 
 <br>
@@ -27,7 +27,7 @@
 > [!NOTE]
 > gs **GIẢ SỬ RẰNG** ta **ĐÃ CÓ** **n INDEPENDENT
 > EIGENVECTORS** của matrix A. Và ta đặt chúng làm
-> \**colums của matrix S** Thì phần tiếp theo gs muốn cho ta thấy chuyện gì xảy
+> **colums của matrix S** Thì phần tiếp theo gs muốn cho ta thấy chuyện gì xảy
 > ra khi ta **nhân S với A**
 
 <br>
@@ -38,11 +38,11 @@
 
 > [!NOTE]
 > Vậy thì như đã biết khi ta **nhân matrix A với matrix S**, ta sẽ
-> \**THEO** **GÓC NHÌN COLUMNS** để thấy nó có kết quả là:
+> **THEO** **GÓC NHÌN COLUMNS** để thấy nó có kết quả là:
 >
 > [cols 1 của AS] sẽ là **A.[cols1 của S]** = **Ax1** (và như đã biết
 > sẽ là **linear combination** các **cols của A** với **coefficient** là các
-> \**component** của **[col 1 của S],** nhưng ta không bàn tới ở đây)
+> **component** của **[col 1 của S],** nhưng ta không bàn tới ở đây)
 >
 > và [col 2 của AS] sẽ là **A.[col 2 của S]** = **Ax2**
 >
@@ -110,7 +110,7 @@
 > Và như vậy ta có **AS = SΛ**.
 >
 > Tiếp gs **nhấn mạnh** rằng ta **đã giả định / cho rằn**g A có
-> \**N** **INDEPENDENT EIGENVECTORS**. Mục đích là để
+> **N** **INDEPENDENT EIGENVECTORS**. Mục đích là để
 > matrix **S** (là cái mà có các columns các eigenvector của A)
 > sẽ **INVERTIBLE**
 >
@@ -155,7 +155,7 @@
 > [!NOTE]
 > Gs nhắc lại rằng bữa trước có nói **matrix (n, n) sẽ có n
 > eigenvalue - eigenvector**, và gs cho biết trong thực tế
-> \**CHỈ CÓ MỘT SỐT ÍT MATRIX LÀ KHÔNG THỂ CÓ N
+> **CHỈ CÓ MỘT SỐT ÍT MATRIX LÀ KHÔNG THỂ CÓ N
 > EIGENVECTOR INDEPENDENT MÀ THÔI** (Mà ví dụ là
 > một matrix có r**epeat eigenvalue** như cuối bài trước đã
 > thấy)
@@ -222,7 +222,7 @@
 > Như vậy qua việc phân tách A^2 = S.Λ^2.Sinv có thể thấy
 >
 > 1) **EIGENVECTOR của A^2** **CÙNG LÀ EIGENVECTOR**
-> \**CỦA A** (VÌ S LÀ EIGENVECTOR CỦA A, nên A = S.Λ.
+> **CỦA A** (VÌ S LÀ EIGENVECTOR CỦA A, nên A = S.Λ.
 > Sinv)
 >
 > 2) **EIGENVALUE CỦA A^2 THÌ LÀ BÌNH PHƯƠNG CỦA
@@ -238,10 +238,10 @@
 > Và tương tự ta hòan toàn dễ hiểu rằng **A^k = S.Λ^K.Sinv** ,
 > và cho ta biết **eigenvector của A mũ bao nhiêu thì nó vẫn là
 > eigenvector của A**. Và eigenvalue của A^k thì bằng
-> \**lũy thừa k của A's eigenvalue**.
+> **lũy thừa k của A's eigenvalue**.
 >
 > Và gs cho rằng phép eigen-factorization này cho ta một
-> \**công cụ tuyệt vời** khi deal với **LŨY THỪA CỦA MATRIX**.
+> **công cụ tuyệt vời** khi deal với **LŨY THỪA CỦA MATRIX**.
 > mà hai phép factorization trước A =LU, và A = QR không làm
 > được.
 
@@ -277,7 +277,7 @@
 > kiện** là **A có N INDEPENDENT EIGENVECTORS.** 
 >
 > Cụ thể hơn là chỉ khi **n eigenvector**, tức các cols của S
-> \**independent** thì S mới **full-rank** và invertible **giúp S_inv tồn
+> **independent** thì S mới **full-rank** và invertible **giúp S_inv tồn
 > tại** thì mới có phép factorization này được
 
 <br>
@@ -302,7 +302,7 @@
 
 > [!NOTE]
 > và gs lấy ví dụ nếu trong **mathlab** ta gọi function
-> \**eig(rand(10, 10))** thì nó sẽ cho ra matrix **10x10** các con
+> **eig(rand(10, 10))** thì nó sẽ cho ra matrix **10x10** các con
 > số ngẫu nhiên, và **n eigenvector của nó sẽ khác nhau**. Khi
 > đó ta sẽ có bộ **10 eigenvector INDEPENDENT**
 
@@ -333,7 +333,7 @@
 > matrix, và như đã biết các **eigenvalue** **của triangular
 > matrix nằm sẵn trên đường chéo**. Vậy thì I có **n
 > eigenvalue giống nhau** đều bằng 1. Nhưng gs nói rằng nó
-> \**VẪN CÓ ĐỦ N INDEPENDENT EIGENVECTORS**, VÀ
+> **VẪN CÓ ĐỦ N INDEPENDENT EIGENVECTORS**, VÀ
 > THẬT RA **MỌI VECTOR ĐỀU LÀ EIGENVECTORS** 
 >
 > Dễ hiểu vì bất kể vector nào trong Rm=Rn (vì đây là I, số
@@ -389,7 +389,7 @@
 > 2*I) **chỉ có dimension = 1** (chỉ có 1 free cols = chỉ có 1
 > vector trong basis).
 >
-> \**Gs nói con đường hình học** lại dẫn ta tới **chỉ 1 vector,
+> **Gs nói con đường hình học** lại dẫn ta tới **chỉ 1 vector,
 > hay 2 eigenvector này DEPENDENT
 >
 > Tóm lại, nghĩa là ta có hai eigenvalue trùng nhau, thì
@@ -446,7 +446,7 @@
 >
 > Thì gs hỏi **Au_0** ta được gì?
 >
-> \**Au_0 = A(c1x1+c2x2+....cnxn)**
+> **Au_0 = A(c1x1+c2x2+....cnxn)**
 >
 > = Ac1x1 + Ac2x2 + .... (nhân phân phối A vô)
 >
@@ -468,7 +468,7 @@
 > thuộc columns space**, vì sao, vì **khi lambda = 0, x thuộc
 > nullspace**. Vậy thì ta chỉ có thể kết luận là **mọi vector
 > thuộc nullspace là eigenvectors với eigenvalue = 0**, và
-> \**các eigen vectors còn lại thì thuộc columns space**. Chứ
+> **các eigen vectors còn lại thì thuộc columns space**. Chứ
 > kết luận ở note trước rằn eigenvectors đều nằm trong
 > columns space LÀ SAI (Từ đó, khi có n eigenvectors độc
 > lập suy ra chúng là basis của columns space CŨNG SAI
@@ -503,7 +503,7 @@
 >
 > Tương tự, như vậy thì có thể hiểu A^100u_0 sẽ là:
 >
-> \**A^100u_0 = c1.λ1^100.x1 + c2.λ2^100.x2 + ......**
+> **A^100u_0 = c1.λ1^100.x1 + c2.λ2^100.x2 + ......**
 
 <br>
 
@@ -549,7 +549,7 @@
 >
 > bài toán gốc ở đây là vì để xác định một số trong dãy Fibonacci
 > thì nó là t**ổng của hai số trước đó**: **F_k+1 = F_k + F_k-1**. 
-> \**mà trong đó** **F_k lại là hàm số phụ thuộc F_k-1**. Nên ta có
+> **mà trong đó** **F_k lại là hàm số phụ thuộc F_k-1**. Nên ta có
 > một **second-order equation** (là khi mà ta có một item phụ
 > thuộc 2 item trước đó, mà Fibonacci là một điển hình. Mở rộng
 > ra third-order equation thì khi một item phụ thuộc 3 preceding
@@ -562,7 +562,7 @@
 > Và bất cứ khi nào ta có một system of equations thì ta luôn
 > có thể express nó ở dạng matrix: 
 >
-> \**u_k+1 sẽ có thể được thể hiện bởi một matrix nhân u_k.**
+> **u_k+1 sẽ có thể được thể hiện bởi một matrix nhân u_k.**
 >
 > Gs hỏi matrix đó sẽ là gì?
 
@@ -629,7 +629,7 @@
 
 > [!NOTE]
 > từ đó gs cho biết c**hắc chắn ta sẽ có 2**
-> \**INDEPENDENT eigenvector**
+> **INDEPENDENT eigenvector**
 
 <br>
 
@@ -639,7 +639,7 @@
 
 > [!NOTE]
 > Và từ đây ta đã có thể trả lời ý thứ hai của câu hỏi đó là
-> \**dãy số này sẽ lớn nhanh đến mức nào**.
+> **dãy số này sẽ lớn nhanh đến mức nào**.
 >
 > Thì như ví dụ trước ta đã biết nó sẽ **phụ thuộc vào
 > eigenvalue**, trong trường hợp này là **cái có giá trị lớn
@@ -648,7 +648,7 @@
 > λ1^100 (c1 sẽ tìm nhờ u_0)**
 >
 > Và có nghĩa là nó sẽ **tăng lên theo factor là λ1** tức là cứ
-> \**mỗi lần nó lại lớn gấp (xấp xỉ) λ1 lần * giá trị trước** đó.
+> **mỗi lần nó lại lớn gấp (xấp xỉ) λ1 lần * giá trị trước** đó.
 
 <br>
 
@@ -658,7 +658,7 @@
 
 > [!NOTE]
 > Sở dĩ ta **chỉ nói nó phụ thuộc cái eigenvalue thứ nhất** là
-> \**bởi cái eigenvalue kia nhỏ hơn 1 (0.618)**, dẫn đến là **nó sẽ
+> **bởi cái eigenvalue kia nhỏ hơn 1 (0.618)**, dẫn đến là **nó sẽ
 > nhỏ về 0 rất nhanh**
 
 <br>
@@ -704,7 +704,7 @@
 > order equation system** bắt đầu **từ một giá trị ban đầu u_0**.
 >
 > Thì chìa khóa là ta **cần tìm eigenvalues của matrix A**
-> \**đứng sau quan hệ giữa u_k và u_0** Và nó sẽ cho ta biết
+> **đứng sau quan hệ giữa u_k và u_0** Và nó sẽ cho ta biết
 > chuyện gì thật sự xảy ra.
 >
 > Sau đó ta sẽ **viết u_0 dưới dạng linear combination

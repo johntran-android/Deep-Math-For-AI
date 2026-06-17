@@ -73,7 +73,7 @@
 >
 > thì ta sẽ thấy:
 >
-> \**d/dθ ∫-inf:inf f(x, θ)dx:** 
+> **d/dθ ∫-inf:inf f(x, θ)dx:** 
 >
 > thì ta sẽ coi cái tích phân như một hàm số thôi:
 >
@@ -84,7 +84,7 @@
 > thì lại áp dụng định nghĩa đạo hàm là
 > một cái lim vào cái integrant:
 >
-> \**= ∫-inf:inf lim δ → 0 [f(x, θ + δ) - f(x, θ)] / δ** Vậy từ đó nếu ta chứng minh :
+> **= ∫-inf:inf lim δ → 0 [f(x, θ + δ) - f(x, θ)] / δ** Vậy từ đó nếu ta chứng minh :
 >
 > lim δ → 0 [∫-inf:inf [f(x, θ + δ) - f(x, θ)]dx] / δ BẰNG CÁI
 >
@@ -112,12 +112,12 @@
 
 > [!NOTE]
 > Đại khái là theorem 2.4.2 nói rằng: Cho rằng ta có function h(x, y) **liên tục tại y0**
-> \**với mỗi giá trị của x**. Và **gỉa sử** ta **có một function g(x)** sao cho:
+> **với mỗi giá trị của x**. Và **gỉa sử** ta **có một function g(x)** sao cho:
 >
-> \**với mọi x, y thì |h(x, y)|** **đều nhỏ hơn g(x)** và quan trọng hơn là **tích phân của g(x)
+> **với mọi x, y thì |h(x, y)|** **đều nhỏ hơn g(x)** và quan trọng hơn là **tích phân của g(x)
 > là xác định**. Khi đó TA CÓ THỂ ĐỔI CHỖ TÍCH PHÂN VÀ LIMIT:
 >
-> \**lim y → y0 ∫-inf:inf h(x, y) dx = ∫-inf:inf lim y → y0 h(x, y)dx** 
+> **lim y → y0 ∫-inf:inf h(x, y) dx = ∫-inf:inf lim y → y0 h(x, y)dx** 
 > Mình chỉ tạm hiểu có theorem này chứ ko thấy chứng minh.
 >
 > Thế thì cái ý chính là, áp dụng cái theorem trên với hàm h(x, y) cụ thể hơn:
@@ -162,7 +162,7 @@
 >
 > Do đó ta có:
 >
-> \**d/dθ ∫-inf:inf f(x, θ)dx | θ = θ0 = ∫-inf:inf [∂/∂θ f(x, θ) | θ = θ0] dx** ====
+> **d/dθ ∫-inf:inf f(x, θ)dx | θ = θ0 = ∫-inf:inf [∂/∂θ f(x, θ) | θ = θ0] dx** ====
 >
 > NÓI CHUNG KHÚC Ở TRÊN TẠM HIỂU NÓ NÓI VỀ THEOREM CHO PHÉP
 > TA ĐỔI CHỖ TÍCH PHÂN VÀ LIMIT KHI THỎA ĐIÈU KIỆN CẦN THIẾT

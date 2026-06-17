@@ -12,7 +12,7 @@
 >
 > 1. ****Pretraining Your Own Model**:** While working with **existing Language Model Models** (LLMs) **saves time and allows
 > for faster prototyping**, there are **situations** where it **may be necessary to pretrain your own model from scratch**. This is
-> \**especially** **true** when dealing with **specialized domains** that use **specific vocabulary** and **language structures not
+> **especially** **true** when dealing with **specialized domains** that use **specific vocabulary** and **language structures not
 > commonly found in general language.**
 >
 > 2. ****Domain Adaptation for Specialized Domains**:** In certain domains like **law, medicine, finance**, etc., the language
@@ -20,7 +20,7 @@
 > to **difficulties** in **model understandin**g and **usage of these specialized terms.**
 >
 > 3. ****Benefits of Pretraining from Scratch:**** **Pretraining a model from scratch** allows for **better performance** in highly
-> \**specialized domains**. It enables the model to **learn the domain-specific vocabulary** and **language structures** that are
+> **specialized domains**. It enables the model to **learn the domain-specific vocabulary** and **language structures** that are
 > crucial for achieving good results in such areas.
 >
 > 4. ****BloombergGPT** as a Pretrained Model for **Finance**:** BloombergGPT is an example of a **large language model that
@@ -28,12 +28,12 @@
 > achieve top results in **financial benchmarks** while maintaining **competitive performance in general LLM benchmarks**.
 >
 > 5. ****Challenges** in Pretraining for **Specific Domains**:** When pretraining a model for a specific domain, there are
-> \**challenges related to trade-offs between model size, training data size, and available compute budget**. Real-world
+> **challenges related to trade-offs between model size, training data size, and available compute budget**. Real-world
 > constraints, such as **limited availability of domain-specific training data**, may necessitate making trade-offs in model
 > development.
 >
 > 6. **Recap of Topics Covered:** The passage briefly recaps the topics covered throughout the week, which include
-> \**common use cases for LLMs**, the t**ransformer architecture**, **influencing model output at inference time**, g**enerative AI
+> **common use cases for LLMs**, the t**ransformer architecture**, **influencing model output at inference time**, g**enerative AI
 > project lifecycle**, **pretraining process**, c**omputational challenges**, and **scaling laws for LLMs.**
 >
 > Overall, the passage emphasizes the **importance of domain-specific pretraining** for **achieving optimal performance in

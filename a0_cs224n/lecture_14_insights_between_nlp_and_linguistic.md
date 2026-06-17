@@ -347,7 +347,7 @@
 > [!NOTE]
 > đại khái là ta có thể có cách để kiểm tra khả năng của một language
 > model trong việc nhận biết các **cấu trúc cú pháp** - "syntactic structure"
-> \**một cách riêng biệt** với **ý nghĩa của từ vựng,** hay nói đơn giản hơn
+> **một cách riêng biệt** với **ý nghĩa của từ vựng,** hay nói đơn giản hơn
 > là liệu model có học được cách nhận biết các cấu trúc cú pháp mà không
 > cần phải biết nghĩa của từ vựng hay không. Giống như là nếu nó thấy
 > "A verbed B" thì A phải là do-er, B là patient và ngược lại, chứ không cần
@@ -411,7 +411,7 @@
 > KHÁC NHAU.
 >
 > Nhưng bên cạnh đó nó cũng chứng minh rằng, self attention CŨNG GIÚP
-> \**PHẢN ÁNH THÔNG TIN CÚ PHÁP CỦA TỪ**, để rồi ta có **CÙNG MỘT
+> **PHẢN ÁNH THÔNG TIN CÚ PHÁP CỦA TỪ**, để rồi ta có **CÙNG MỘT
 > TỪ** NHƯNG TRONG CÁC **CÂU KHÁC NHAU THÌ VAI TRÒ CÚ PHÁP
 > CŨNG KHÁC NHAU.
 >

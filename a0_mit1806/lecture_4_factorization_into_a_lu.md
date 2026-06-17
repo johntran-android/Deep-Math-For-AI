@@ -88,7 +88,7 @@
 > [!NOTE]
 > Tiếp theo, gs muốn tìm hiểu **liên hệ giữa A và U** (là matrix
 > kết quả sau khi elimination), nên đặt ra ví dụ này. Câu hỏi là
-> \**elimination matrix E21 là gì?** (E21 như đã học, ý là matrix
+> **elimination matrix E21 là gì?** (E21 như đã học, ý là matrix
 > giúp nhân A để khử a21)
 >
 > Đã học ở bài trước: Dùng cách tiếp cận theo hàng, hàng 1
@@ -116,7 +116,7 @@
 > lại việc từ A biến thành U. Thế mà biến A thành U là do E:
 > EA = U**. 
 >
-> \**Nên bây giờ L đảo ngược chuyện đó nên L chính là E_inv** 
+> **Nên bây giờ L đảo ngược chuyện đó nên L chính là E_inv** 
 >
 > Ta có thể hiểu như vầy: EA = U và LU = A <=> L(EA) = A
 > <=> (LE)A = A <=> LE = I từ đó suy ra **L = E_inv**
@@ -137,7 +137,7 @@
 >
 > Quả thật nó chính là kết quả trên: 
 >
-> \**[1, 0; -4, 1]** --(đổi dấu ở vị trí 21)--> **[1 0; 4 1]**
+> **[1, 0; -4, 1]** --(đổi dấu ở vị trí 21)--> **[1 0; 4 1]**
 
 <br>
 
@@ -148,8 +148,8 @@
 🔗 **Related:** [LECTURE 7: SOLVING AX = 0: PIVOT VARIABLES, SPECIAL SOLUTIONS](untitled.md#node-180)
 
 > [!NOTE]
-> \**U** là gs viết tắt của **Upper Triangular**, tức là matrix mà
-> \**bên dưới đường chéo là 0 hết**, **L** là **Lower Triangular** (đường chéo là 1 hết, bên trên đường chéo là 0 hết)
+> **U** là gs viết tắt của **Upper Triangular**, tức là matrix mà
+> **bên dưới đường chéo là 0 hết**, **L** là **Lower Triangular** (đường chéo là 1 hết, bên trên đường chéo là 0 hết)
 
 <br>
 
@@ -162,7 +162,7 @@
 > đương nhiên đường chéo là các pivot**. 
 >
 > Và có thể **tách thêm ra** thành dạng như ở dưới trong đó
-> \**matrix giữa chỉ có đường chéo là các pivot.** 
+> **matrix giữa chỉ có đường chéo là các pivot.** 
 > Nhận xét, nhìn **có vẻ giống phép decomposition (eigen
 > hoặc singular)**
 
@@ -175,7 +175,7 @@
 > [!NOTE]
 > Gs mới nói qua ví dụ dùng **matrix 3x3**. Vậy chưa cần
 > biết cụ thể các matrix sẽ ntn nhưng ta biết quá trình để
-> \**elimination biến** A thành dạng pivot (U), ta sẽ dùng E21
+> **elimination biến** A thành dạng pivot (U), ta sẽ dùng E21
 > để loại coeff ở vị trí 21, sau đó là 31 và 32
 
 <br>
@@ -321,7 +321,7 @@
 >
 > Vậy ta cho rằng sẽ tốn
 >
-> \**n**2 + (n-1)**2 +....2**2+1**2**
+> **n**2 + (n-1)**2 +....2**2+1**2**
 >
 > operations
 
@@ -377,7 +377,7 @@
 > pivot = 0 thì ta phải row exchange.
 >
 > Thì việc đó thực hiện bằng p**ermutation matrix**, ví dụ
-> \**p12 là chỉ permutation matrix giúp exchange row 1 và
+> **p12 là chỉ permutation matrix giúp exchange row 1 và
 > row 2.**
 >
 > Thế thì, gs đặt câu hỏi là **nếu ta có matrix 3x3, thì có

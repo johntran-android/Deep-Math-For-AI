@@ -80,12 +80,12 @@
 
 > [!NOTE]
 > Gs nhắc lại bài trước ta đã làm quen với **Standard Normal (0,1)**, đã biết **CDF** của nó, kí hiệu là **Φ**, đã chứng minh
-> \**mean của nó E(Z) là 0**, và **variance Var(Z) = 1**
+> **mean của nó E(Z) là 0**, và **variance Var(Z) = 1**
 >
 > Khi chứng minh E(Z) = 0, như đã biết sẽ là [**tích phân từ -inf:inf của z * f(z)dz]**,
 >
 > (cũng chính là mang ý nghĩa **weighted sum các các possible values** weighted bởi **xác suất nó mang giá trị đó**) trong đó
-> \**f(z) là  PDF** của Z)
+> **f(z) là  PDF** của Z)
 >
 > Thì ta đã lập luận rằng: z * f(z) = **z * e^(-z^2/2)** là **odd** function, nên **tích phân từ -a:a của odd function luôn bằng 0**. Do
 > đó dễ dàng **suy ra E(Z) = 0**.
@@ -95,7 +95,7 @@
 > ====
 >
 > Hơn nữa, ta cũng **dễ dàng chứng minh E(Z^3) = bằng 0** nhờ sử dụng **LOTUS** (theorem cho phép ta tính E(Z^3) chỉ việc
-> \**dùng PDF của Z** mà k**hông cần phải tìm PDF của Z^3**:
+> **dùng PDF của Z** mà k**hông cần phải tìm PDF của Z^3**:
 >
 > Thế thì để tính E(Z^3), theo lý ta sẽ phải tìm PDF của X^3. Nhưng LOTUS cho phép chỉ việc thay z^3 vào x trong công thức trên
 > thì vẫn có thể valid trong việc tính E(Z^3)
@@ -115,7 +115,7 @@
 
 > [!NOTE]
 > Đại khái là còn với **EVEN MOMENT** ví dụ **E(Z^4)**, thì như lúc ta tìm
-> \**E(Z^2) đã thấy rằng không dễ** để tính
+> **E(Z^2) đã thấy rằng không dễ** để tính
 >
 > Nhưng **ít nhất là ta có thể dùng LOTUS** để viết ra công thức (thế z^4 vào
 > z trong biểu thức tính E(Z)
@@ -198,7 +198,7 @@
 >
 > Mean: Thì để tính **E(X) = E(μ + σZ)** ta dùng **linearity** để có:
 >
-> \**E(X) = E(μ) + E(σZ)** và **ngay lập tức có kết quả là μ**.
+> **E(X) = E(μ) + E(σZ)** và **ngay lập tức có kết quả là μ**.
 >
 > Vì E(σZ) = σE(Z) = σ0 = 0 (**EZ = 0** như đã chứng minh ở bài trước)
 >
@@ -232,7 +232,7 @@
 > E(X-EX) = EX - E(EX)  = EX - EX  = 0 (E(EX) = EX vì EX là constant)
 >
 > Mang ý nghĩa nôm na là **các giá trị của X phân tán hai bên mean** thì khi tính 
-> \**distant** chúng sẽ **triệt tiêu nhau**
+> **distant** chúng sẽ **triệt tiêu nhau**
 >
 > ii) Nếu **triển khai thêm** ra thì ta sẽ có **Var(X) = E(X^2) - (EX)^2**
 >
@@ -241,7 +241,7 @@
 > Tiếp, gs cho rằng, cũng sẽ dễ hiểu rằng, khi ta **ADD CONSTANT c VÀO X**, thì **ĐỘ
 > BIẾN ĐỘNG CỦA NÓ KHÔNG ĐỔI**, nó **chỉ bị SHIFT LOCATION thôi**. Nên
 >
-> \**Var(X+c) = Var(X)**
+> **Var(X+c) = Var(X)**
 >
 > Ta cũng có thể **chứng minh:** Var(X+c): = E[(X+c)^2] - [E(X+c)]^2
 >
@@ -322,7 +322,7 @@
 > Var(X) + Var(Y)** **TRỪ KHI X, Y INDEPENDENT** (gs nói ta sẽ quay lại cái này sau)
 >
 > Có thể nhanh chóng thấy tính chất linearity không áp dụng đối với var bằng việc
-> \**xét Var(X + X)** của **2 EXTREMELY DEPENDENT** r.v đó là X VÀ chính nó X
+> **xét Var(X + X)** của **2 EXTREMELY DEPENDENT** r.v đó là X VÀ chính nó X
 > (X với X là cực kì dependent chứ gì nữa vì khi biết giá trị của X thì ta sẽ chắc biết
 > giá trị của ..X)
 >
@@ -343,7 +343,7 @@
 
 > [!NOTE]
 > Gs nhấn mạnh rằng, **X không i.i.d với chính nó X**, mà nó **EXTREMELY**
-> \**DEPENDENT** với chính nó. Do đó bất cứ khi nào ta **ÁP DỤNG CÔNG 
+> **DEPENDENT** với chính nó. Do đó bất cứ khi nào ta **ÁP DỤNG CÔNG 
 > THỨC NÀO ĐÓ MÀ CẦN CÁC RANDOM VARIABLE CÓ X1, X2 CÓ 
 > TÍNH I.I.D VÀO X VÀ CHÍNH NÓ THÌ ĐỀU LÀ SAI**
 
@@ -356,7 +356,7 @@
 > [!NOTE]
 > Với các tính chất đó, ta quay lại đây ta tính variance của X~N(μ, σ) 
 >
-> \**Var(μ + σZ)** = **Var(σZ)** (vì tính chất Var(X+c) = Var(X))
+> **Var(μ + σZ)** = **Var(σZ)** (vì tính chất Var(X+c) = Var(X))
 >
 > = σ^2 * Var(Z) = σ^2 * 1 = **σ^2**
 >
@@ -407,7 +407,7 @@
 > [!NOTE]
 > Thế thì ta sẽ **bắt đầu với CDF F(x)**, như đã biết, ý nghĩa của nó là **P(X <=
 > x)**. Thì như vừa biết về một **trick** hữu ích là **standardization**, nên ta sẽ
-> \**standardize** nó.
+> **standardize** nó.
 >
 > Có thể hiểu chỗ này là **vì σ dương**, nên **event X<=x** sẽ tương đương /
 > chính là event **(X-μ )/σ < (x-μ)/σ** (vì σ dương nên chia σ không làm đổi dấu,
@@ -425,7 +425,7 @@
 >
 > Cho phép ta viết:
 >
-> \**P(X ≤ x) = P[(X - μ) / σ) ≤ P[(x - μ) / σ]**
+> **P(X ≤ x) = P[(X - μ) / σ) ≤ P[(x - μ) / σ]**
 
 <br>
 
@@ -435,7 +435,7 @@
 
 > [!NOTE]
 > Và vì **Z = (X - μ) / σ** bây giờ là một random variable tuân theo
-> \**STANDARD NORMAL (CHUẨN TẮC) Z~N(0, 1)** nên như đã biết bữa
+> **STANDARD NORMAL (CHUẨN TẮC) Z~N(0, 1)** nên như đã biết bữa
 > trước ta kí hiệu hàm capital fi Φ để chỉ **CDF của standard normal**
 >
 > Vậy nên ở đây **P(Z ≤ (x-μ)/σ)** thì **chính là Φ((x-μ)/σ)**
@@ -466,12 +466,12 @@
 > Xét d/dx u(x) trước: Dễ thấy u = (x-μ) /σ  thì **du/dx = 1/σ** 
 >
 > Còn d/du Φ(u): Thì vì **u là random variable theo Standard Normal u~N(0,1)** nên  
-> \**d/du Φ(u) chính là derivative của Φ(u)** đối với u thì nó **CHÍNH LÀ PDF CỦA
+> **d/du Φ(u) chính là derivative của Φ(u)** đối với u thì nó **CHÍNH LÀ PDF CỦA
 > STANDARD NORMAL DISTRIBUTION**
 >
 > Nên **d/du Φ(u) = (1/√2π) [e^(-u^2/2)]**
 >
-> \**Thay u = (x - μ) / σ** vào ta có
+> **Thay u = (x - μ) / σ** vào ta có
 >
 > PDF của **N(μ, σ^2) = (1/σ) (1/√2π) * [e^(-((x-μ)/σ)^2/2)]
 >
@@ -499,7 +499,7 @@
 > ⇔ -X = -μ + σ(-Z) (ii)
 >
 > Điều này theo định nghĩa tương tự như khi nói **nếu ta có X = μ + σZ**
-> \**với Z là standard normal r.v** thì cho phép **suy ra X ~ N(μ, σ^2)**
+> **với Z là standard normal r.v** thì cho phép **suy ra X ~ N(μ, σ^2)**
 >
 > Thì ở đây trong (ii), -**Z cũng là một standard normal** r.v như đã nói ở (i) cho
 > nên gíup ta **có thể kết luận -X sẽ là r.v ~ N(-μ, σ^2)** Và gs nói kết quả này rất hợp lý, khi ta đổi dấu của X thì ta có normal distrib
@@ -520,7 +520,7 @@
 
 > [!NOTE]
 > Tiếp, gs nói đại khái là sau này ta sẽ chứng minh điều sau đây sau, giờ ta chỉ biết rằng, nếu ta có các **independent random variables**
-> \**X_j ~ N(μ_j, sigma_j^2)**
+> **X_j ~ N(μ_j, sigma_j^2)**
 >
 > Thì **X1 + X2** sẽ **~ N(mu1 + mu2, sigma1^2 + sigma2^2)** trong đó ta được phép **cộng mean** là do như đã biết **mean có tính linearity**
 > (Đã nói, sẽ chứng minh sau)
@@ -556,7 +556,7 @@
 >
 > Thì rule này đại khái là nói lên **một số giá trị của CDF**
 >
-> \**P(|X-mu| <= 1*sigma)**: Xác suất khoảng cách từ **X tới mean** nhỏ hơn **1*sigma là 0.68**
+> **P(|X-mu| <= 1*sigma)**: Xác suất khoảng cách từ **X tới mean** nhỏ hơn **1*sigma là 0.68**
 >
 > P(|X-mu| <= 2*sigma): Xác suất khoảng cách từ X tới mean nhỏ hơn 2*sigma là 0.95
 >
@@ -578,7 +578,7 @@
 > để hiểu **tại sao nó lại work.**
 >
 > Đầu tiên mình nhớ lại **LOTUS**, đó là khi ta cần **tính E(X^2)**. Theo lí thuyết, E(X) là
-> \**weighted** **sum** của **mọi possible valued** của random variable X, weight bởi **xác suất
+> **weighted** **sum** của **mọi possible valued** của random variable X, weight bởi **xác suất
 > mang giá trị đó** của nó, tức là với discrete r.v thì là PMF **P(X=x)** còn **với continuous** 
 > r.v thì cách làm tương đương là lấy tích phân từ **-infinity tới infinity của xf(x)dx. f(x) 
 > chính là PDF**.
@@ -587,7 +587,7 @@
 > tìm **PDF**, hay **PMF của g(X**), sau đó mới tính như trên.
 >
 > Nhưng **LOTUS** cho phép ta **chỉ việc thay g(x) vào x**, để  với discrete r.v thì E(X^2) =
-> \**Tổng mọi x: g(x)*P(X=x)** hay với continuous thì là tích phân từ **-infinity tới infinity
+> **Tổng mọi x: g(x)*P(X=x)** hay với continuous thì là tích phân từ **-infinity tới infinity
 > của g(x)f(x)dx**.
 >
 > ====
@@ -595,7 +595,7 @@
 > Thế thì gs lấy ví dụ giúp ta **"HIỂU HIỂU"** **TẠI SAO LOTUS LẠI CHO PHÉP LÀM VẬY**
 >
 > Cho rằng X có các **possible values là 0, 1, 2, 3**.. với các **PMF P0, P1,**.... Tức **P0 là P(X=0),**
-> \**P1 là P(X=1)**...
+> **P1 là P(X=1)**...
 >
 > Thì tương ứng **X2 sẽ có các possible values** là 0^2,1^2, 2^2, 3^3, ....
 >
@@ -603,13 +603,13 @@
 >
 > Tương tự E(X^2) cũng sẽ là 
 >
-> \**i)** **Tổng mọi possible value của X^2**, với trọng số là
+> **i)** **Tổng mọi possible value của X^2**, với trọng số là
 >
-> \**ii) Xác suất mà X^2 mang giá trị possible value đó**:
+> **ii) Xác suất mà X^2 mang giá trị possible value đó**:
 >
 > Thế thì **Tổng mọi possible value của X^2**, có thể ghi là như vầy: 
 >
-> \**Tổng mọi x: x^2** **(1)**
+> **Tổng mọi x: x^2** **(1)**
 >
 > Còn **xác suất mà X^2 mang possible value, mà các possible value của X^2
 > chính là x^2 với x=0: 0^2, x=1: 1^2, x=2: 2^2...**, P(X^2=x^2).
@@ -617,10 +617,10 @@
 > Thì có thể nhìn thấy trong bảng, khi gs ghi như vậy ý đồ để ta thấy rằng, ví dụ x=3
 > đi thì **P(X^2=3^2) CHÍNH LÀ BẰNG P(X=3)**, có nghĩa là 
 >
-> \**P(X^2=x^2) CŨNG BẰNG P(X=x)** **(2)** 
+> **P(X^2=x^2) CŨNG BẰNG P(X=x)** **(2)** 
 > Thành ra ta **CÓ THỂ TÍNH E(X^2), KẾT HỢP (1) VÀ (2):**
 >
-> \**E(X^2) = Tổng mọi x: x^2 * P(X=x)**
+> **E(X^2) = Tổng mọi x: x^2 * P(X=x)**
 
 > [!NOTE]
 > GIẢI THÍCH TẠI SAO LOTUS WORK (CHƯA PHẢI CHỨNG MINH
@@ -664,7 +664,7 @@
 >
 > = Σy Σ{x: g(x) = y} g(x) P(X = x)
 >
-> \**= Σy Σ{x: g(x) = y} g(x) P(X = x)** = **Σx g(x) P(X = x)**
+> **= Σy Σ{x: g(x) = y} g(x) P(X = x)** = **Σx g(x) P(X = x)**
 
 <br>
 
@@ -719,7 +719,7 @@
 >
 > Thế thì: từ đó, e^λ = λ^0/0! + λ^1/1! + ....λ^n/n! = **Tổng λ=0,1..inf λ^k/k!**
 >
-> \**Vậy Tổng k=0,1...infinity λ^k/k! = e^λ**
+> **Vậy Tổng k=0,1...infinity λ^k/k! = e^λ**
 
 > [!NOTE]
 > Chứng minh 0^k / k! + 1^k / k! + 2^k / k! + .... = e^k
@@ -779,7 +779,7 @@
 > Thì giống như ta cần tìm derivative của x*e^x, ta cần dùng product rule, đã
 > học qua bên **18096**
 >
-> \**d(uv) = udv + vdu, hay (uv)' = u'v + uv'**
+> **d(uv) = udv + vdu, hay (uv)' = u'v + uv'**
 >
 > Vậy d(x*e^x) = dx * e^x + x * d(e^x) từ đó d (x*e^x) / dx (tức là derivative) sẽ
 > bằng 1 * e^x + x*e^x (vì derivative của x = 1 và derivative của e^x = e^x)
@@ -843,7 +843,7 @@
 
 > [!NOTE]
 > Tiếp, đại khái là gs nói về **một ưu điểm của standardization** đó là ta có thể
-> \**hiểu X**, là **giá trị đo đạc được của một yếu tố nào đó** thì nó **sẽ gắn với
+> **hiểu X**, là **giá trị đo đạc được của một yếu tố nào đó** thì nó **sẽ gắn với
 > một đơn vị nào đó**.
 >
 > Thế thì khi **standardize**, ví dụ đơn vị là km, thì (x - μ) / σ sẽ  (km - km) /
@@ -879,7 +879,7 @@
 > [!NOTE]
 > Thế thì theo gs **cách thứ 3** ta có thể làm được bây giờ đó là **áp dụng tính
 > chất của variance** đã học lúc nãy đó là **nếu các r.v INDEPENDENT**, thì
-> \**Var(X+Y) = Var(X) + Var(Y)**
+> **Var(X+Y) = Var(X) + Var(Y)**
 >
 > Gs nói thêm ta tạm dùng chứ ta sẽ quay lại **chứng minh tính chất này sau**
 > (lúc nãy chỉ mới chứng minh hai cái trên Var(X+c) và Var(cX))
@@ -895,7 +895,7 @@
 > variable X** theo dạng **∑ của n INDICATOR RANDOM VARIABLE I_j** 
 >
 > Và như đã biết, **indicator** random variable là random variable có giá trị bằng
-> \**1** nếu **event Aj occur** / hoặc **trial** **success** (mà xác suất occur hay
+> **1** nếu **event Aj occur** / hoặc **trial** **success** (mà xác suất occur hay
 > trial success  bằng p, tức **P(Aj) = p**, xác suất fail là 1-p. Cũng là ý nghĩa của
 > việc nói **I_j ~ Bern(p)**)
 >
@@ -950,7 +950,7 @@
 > Vậy **P(I1^2=0) = P(I1=0) = 1-p**
 >
 > Tiếp, **E(I1^2) theo định nghĩa** là **weighted sum của mọi possible value** của
-> \**I1^2**, weight bởi **xác suất nó mang giá trị đó**.
+> **I1^2**, weight bởi **xác suất nó mang giá trị đó**.
 >
 > Thì như vừa nói, p**ossible value của I1^2 là 0 hoặc 1** và xác suất của tương
 > ứng là **p và 1-p**. Nên dễ thấy **E(I1^2) cũng chính là bằng E(I1)**, và ta đã biết 
@@ -1011,7 +1011,7 @@
 > Như đã biết LOTUS cho rằng ta có thể **chỉ việc dùng PDF / PMF của X** **thay vì
 > phải tìm PDF / PMF của g(X)** khi tính **E(g(X))**:
 >
-> \**E(g(X)) = Sum x g(x) * P(X=x) (i)**
+> **E(g(X)) = Sum x g(x) * P(X=x) (i)**
 >
 > (với continuous, thì là tích phân từ -infinity tới infinity  của g(x) * f(x)dx
 >
@@ -1043,7 +1043,7 @@
 > nên P({s}} là khối lượng của từng viên sỏi đó.
 >
 > X(s) là gì, thì ta nhớ định nghĩa của random variable là một **FUNCTION**
-> \**map** **possible outcome s** với **real number**
+> **map** **possible outcome s** với **real number**
 >
 > Thì **P(X=x) thể hiện việc group** là bởi có thể **có nhiều viên sỏi {s} có nhãn X(s)
 > là x**, nên P(X=x) sẽ giống như gom khối lượng của mọi viên sỏi s có nhãn X(s)
@@ -1110,9 +1110,9 @@
 > [!NOTE]
 > Tiếp theo, trong Sum x g(x) **Sum [s: X(s)=x] P({s})** ta sẽ thấy
 >
-> \**Sum [s: X(s)=x] P({s})** **diễn dịch ra** thì nó là **tổng mọi P({s}) với s sao cho
+> **Sum [s: X(s)=x] P({s})** **diễn dịch ra** thì nó là **tổng mọi P({s}) với s sao cho
 > X(s) = x,** cũng là tổng mọi P({s}) sao cho **s thuộc event** (vốn có ý nghĩa là
-> \**subspace** của sample space) **(X=x)**
+> **subspace** của sample space) **(X=x)**
 >
 > Thế thì để cho dễ thấy ta tiếp tục ví dụ bên kia (x có possible value: x1, x2.
 > Trong sample space có s1, s2 mang mác x1, tức là X(s1) = X(s2) = x1. Và
@@ -1123,11 +1123,11 @@
 > Mà s1, s2 chính là hai possible outcomes **THUỘC EVENT SPACE** X=x1
 > hay nói cách khác: 
 >
-> \**(X=x1) = (s=s1) U (s=s2)** => P(X=x1) = P[(s=s1) U (s=s2)]
+> **(X=x1) = (s=s1) U (s=s2)** => P(X=x1) = P[(s=s1) U (s=s2)]
 >
 > Và (s=s1) U (s=s2) là **union** của **2 disjoint event** nên theo **Axiom 2**: 
 >
-> \**P(X=x1) = P(s=s1) + P(s=s2)**
+> **P(X=x1) = P(s=s1) + P(s=s2)**
 >
 > Và **khái quá**t ra **P(X=x) = Tổng P({s}) sao cho X(s) = x**
 >

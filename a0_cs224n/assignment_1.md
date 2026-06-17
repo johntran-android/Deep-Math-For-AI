@@ -13,7 +13,7 @@
 > trong nlp)
 >
 > Nhờ nltk ta sẽ download bộ dataset **Reuters**, ngoài ta còn có
-> \**sklearn's TruncatedSVD, PCA** 
+> **sklearn's TruncatedSVD, PCA** 
 > Sau đó là người ta define sẵn **start & end token**
 
 <br>
@@ -106,13 +106,13 @@
 
 > [!NOTE]
 > Đại khái là với cách reduced dimensionality thì vẫn giữ được cái "
-> \**semantic relationships**" giữa các từ vựng như "doctor" và "hospital" thì
+> **semantic relationships**" giữa các từ vựng như "doctor" và "hospital" thì
 > sẽ vẫn gần gũi nhau hơn là "doctor" và "dog"
 >
 > Thêm nữa khi nào cần có thể ôn lại SVD là gì thông qua các note bài giảng 
 > của khóa **CS168** mà người ta để link ở đây. Nói thêm việc sử dụng full SVD
 > với các bộ dữ liệu lớn thì không thực tế vì yêu cầu ram lớn, Tuy nhiên nếu
-> \**chỉ cần top K vector component** thì có thể **dùng TruncatedSVD** làm có thể
+> **chỉ cần top K vector component** thì có thể **dùng TruncatedSVD** làm có thể
 > làm được không cần phải perform full SVD
 
 <br>
@@ -287,7 +287,7 @@
 > embeddings like **GloVe** (G**lobal Vectors for Word Representation**) and the way they
 > capture word meanings.
 >
-> \**Word embeddings** are created by training on **large corpora of text data** and learning
+> **Word embeddings** are created by training on **large corpora of text data** and learning
 > word representations based on **co-occurrence statistics**. Words that often **appear in
 > similar contexts** tend to have **similar word embeddings**. However, word embeddings are
 > not always perfect at capturing **nuanced semantic relationships**, especially when it
@@ -295,19 +295,19 @@
 >
 > Here's why this might happen:
 >
-> \**Frequency of Co-occurrence**: In many texts, "**happy**" and "**sad**" may **appear in
+> **Frequency of Co-occurrence**: In many texts, "**happy**" and "**sad**" may **appear in
 > similar contexts** because they are **both related to emotional states**. As a result,
 > t**heir word embeddings may end up being closer to each** other due to **their frequent
 > co-occurrence.**
 >
-> \**Context** vs. **Semantic** Similarity: Word embeddings primarily **capture contextual
+> **Context** vs. **Semantic** Similarity: Word embeddings primarily **capture contextual
 > information** rather than **pure semantic similarity**. While "happy" and "cheerful" have
 > similar meanings, they may not always appear in identical contexts, leading to them
 > being farther apart in the embedding space.
 >
-> \**Training Data**: The **quality of the training data** and the **size of the corpus** can also affect
+> **Training Data**: The **quality of the training data** and the **size of the corpus** can also affect
 > word embeddings. If the training data lacks **diverse examples of word usage**, it may not
-> \**capture fine-grained semantic relationships** accurately.
+> **capture fine-grained semantic relationships** accurately.
 >
 > To **address this issue**, you can consider using more specialized word embeddings that
 > are specifically designed to **capture semantic relationships** or use techniques like word

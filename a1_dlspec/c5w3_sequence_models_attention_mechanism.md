@@ -100,7 +100,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > [!NOTE]
 > Đại khái là ta không chỉ muốn 'một kết quả' mà phải là 'kết quả tốt nhất,
 > phù hợp nhất' Giống như bản dịch chính xác nhất, và ta làm điều này nhờ
-> \**Beam Search**
+> **Beam Search**
 
 <br>
 
@@ -109,7 +109,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 <p align="center"><kbd><img src="assets/a5bbf3931d357386511f7641bc1acf72e44a0a2f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Greedy search** đại khái là search từ tốt nhất one-by-one,
+> **Greedy search** đại khái là search từ tốt nhất one-by-one,
 > nhưng thường lại không phải là cách tạo ra câu tốt nhất
 
 <br>
@@ -156,7 +156,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > [P('a', x, 'September'), P('aaron', x, 'September'),....10000 từ...P('zulu', x, 'September')]
 >
 > Xong tính Probability của 1 cặp P(y<1>, y<2> | X) theo công thức:
-> \**P(y<1>, y<2> | X) = P(y<1>|x).P(y<2>|x, y<1>)** 
+> **P(y<1>, y<2> | X) = P(y<1>|x).P(y<2>|x, y<1>)** 
 > để có: 
 >
 > [
@@ -237,7 +237,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > [!NOTE]
 > Chưa hiểu tính P(y*|x) và P(y^|x) là sao
 > như thế nào chỉ tạm thời hiểu:
-> \**P(y*|x)** là **true** probability distribution
+> **P(y*|x)** là **true** probability distribution
 > còn **P(y^|x)** là '**predicted**' probability distribution
 
 <br>
@@ -355,7 +355,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > phải so đo nhiều chỉ số P1, P2...), và chỉ số này bằng e luỹ thừa của trung bình
 > cộng của tất cả chỉ số P1,P2...nhân với 1 tham số BP
 >
-> \**BP** - **Brevity Penalty** - chỉ cần hiểu đại khái là nó sẽ ngăn việc hệ thống thiên vị cho
+> **BP** - **Brevity Penalty** - chỉ cần hiểu đại khái là nó sẽ ngăn việc hệ thống thiên vị cho
 > câu ngắn
 
 <br>
@@ -1117,7 +1117,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > [!NOTE]
 > Đại khái là tổng hợp (**synthesizing**) các âm thanh riêng lẻ ghi âm tiếng
 > ' trigger word' = activate, negative word và background noise bằng
-> \**pydub**, mục đích là để dễ dàng hơn trong việc tạo label y - kiểu như
+> **pydub**, mục đích là để dễ dàng hơn trong việc tạo label y - kiểu như
 > nếu tự record 1 audio mà có noise, có trigger word ,,, thì **khó mà đánh
 > dấu được trigger word nó ở vị trí nào**
 >
@@ -1222,7 +1222,7 @@ Augment your sequence models using an attention mechanism, an algorithm that hel
 > thời điểm trong độ dài của background sao cho nó chèn được
 > âm thanh vừa (tính độ dài của cái cần chèn trước, rồi mới lấy
 > điểm đầu cuối một cách ngẫu nhiên) dùng
-> \**get_random_time_segment**()
+> **get_random_time_segment**()
 >
 > Phải check không chồng lấp với cái có sẵn (nếu có) bằng
 > function **is_overlapping**() và keep track những cái đã chèn bằng

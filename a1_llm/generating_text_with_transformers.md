@@ -22,7 +22,7 @@
 > of the input sequence's structure and meaning**.
 >
 > 5 **Decoder**: The **deep representation from the encoder** is **inserted into the decoder** to influence its
-> \**self-attention mechanisms**. A **start of sequence token** is **added to the decoder's input**, and **it
+> **self-attention mechanisms**. A **start of sequence token** is **added to the decoder's input**, and **it
 > predicts the next token** based on the **contextual understanding from the encoder**.
 >
 > 6 **Looping and Generation**: The **output token** from the **decoder** is p**assed back as input to generate
@@ -30,7 +30,7 @@
 > sequence of tokens.**
 >
 > 7 **Detokenization**: The **final sequence of tokens** can be **detokenized into words**, resulting in the
-> \**translated output.**  8 Types of **Transformer Models:**
+> **translated output.**  8 Types of **Transformer Models:**
 >
 > a. **Encoder-Only Models**: They work as **sequence-to-sequence models** and can be used for **classification tasks** with additional layers. **BERT** is an example.
 >
@@ -45,7 +45,7 @@
 > prompts,** is the **key to working with transformer model**s.
 >
 > The passage emphasizes that the goal is to provide **enough background information** to understand the
-> \**differences between various transformer models** and read their documentation, without needing to
+> **differences between various transformer models** and read their documentation, without needing to
 > remember all the details. The next part of the course will focus on prompt engineering.
 
 <br>
@@ -56,8 +56,8 @@
 
 > [!NOTE]
 > Như đã nói ở bài trước, qua các bước **tokenization**, **embedding**,
-> \**multi-head attention**, **fully connected layers**, **output** của encoder sẽ được
-> \**insert** vào **khúc giữa của decoder** cung cấp các **thông tin về ngữ cảnh**
+> **multi-head attention**, **fully connected layers**, **output** của encoder sẽ được
+> **insert** vào **khúc giữa của decoder** cung cấp các **thông tin về ngữ cảnh**
 > cho **decoder** để nó **dùng khi generating text.**
 
 <br>
@@ -68,7 +68,7 @@
 
 > [!NOTE]
 > Decoder cũng **nhận input bắt đầu từ start of sentence token**, cũng **tokenization**, **embedding**, và
-> \**multi-head attention**. Sau đó nó **kết hợp với output của encoder** và qua một số **FC layer**
+> **multi-head attention**. Sau đó nó **kết hợp với output của encoder** và qua một số **FC layer**
 > và **softmax** để p**redict ra từ tiếp theo**. Tiếp tục, **bỏ từ mới generate này** vào **input** của
 > decoder để **tiếp tục vòng lặp cho đến khi generate EOS token**.
 
@@ -86,7 +86,7 @@
 
 > [!NOTE]
 > Xong hết, các token được
-> \**detokenize** để **tạo ra câu tiếng Anh**
+> **detokenize** để **tạo ra câu tiếng Anh**
 
 <br>
 
@@ -103,7 +103,7 @@
 > [!NOTE]
 > Let's summarize what you've seen so far. The **complete transformer
 > architecture** consists of an **encoder** and **decoder** components. The
-> \**encoder** encodes **input sequences** into a **deep representation** of the
+> **encoder** encodes **input sequences** into a **deep representation** of the
 > structure and meaning of the input. The **decoder**, working from **input
 > token triggers**, uses the **encoder's contextual understanding** to **generate
 > new tokens**. It does this in a **loop until some stop condition has been
@@ -116,7 +116,7 @@
 <p align="center"><kbd><img src="assets/088aeb66f7fd8c1d00be9e428d204c61e2d600bb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Encoder-only models** also work as **sequence-to-sequence models**, but **without
+> **Encoder-only models** also work as **sequence-to-sequence models**, but **without
 > further modification**, the input sequence and the output sequence or the **same
 > length.** Their use is **less common these days**, but by **adding additional layers
 > to the architecture**, you can **train encoder-only model**s to perform **classification
@@ -125,7 +125,7 @@
 
 > [!NOTE]
 > Encoder-decoder models, as you've seen, perform well on
-> \**sequence-to-sequence tasks** such as **translation**, where the **input
+> **sequence-to-sequence tasks** such as **translation**, where the **input
 > sequence** and the **output sequence** can be **different lengths**. You can
 > also **scale and train this type of model to perform general text
 > generation tasks**. Examples of encoder-decoder models include
@@ -136,7 +136,7 @@
 > Finally, **decoder-only models** are some of the **most commonly used** today. Again, as they have scaled, their capabilities have grown.
 > These models can now generalize to most tasks. Popular
 > decoder-only models include the **GPT** family of models, **BLOOM**,
-> \**Jurassic**, **LLaMA**, and many more
+> **Jurassic**, **LLaMA**, and many more
 
 <br>
 

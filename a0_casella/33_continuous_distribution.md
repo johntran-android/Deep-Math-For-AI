@@ -245,7 +245,7 @@
 >
 > = [x^(α-1) e^-(x/β) / [ Γ(α)ββ^(α-1) ]
 >
-> \**= [x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ]
+> **= [x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ]
 >
 > Và đây là công thức pdf của Γ(α, β)** Với α sẽ ảnh hưởng đến hình dạng của distribution còn β ảnh hưởng đến độ
 > phân tán của distribution
@@ -385,7 +385,7 @@
 >
 > u(x), v(x) : g(x) = u(x)v(x)
 >
-> \**d/dx g(x)** = d/dx u(x)v(x) = **[d/dx u(x)] v(x) + u(x) [d/dx v(x)]** ∫d/dx g(x)dx = ∫[d/dx u(x)] v(x)dx + ∫u(x) [d/dx v(x)]dx
+> **d/dx g(x)** = d/dx u(x)v(x) = **[d/dx u(x)] v(x) + u(x) [d/dx v(x)]** ∫d/dx g(x)dx = ∫[d/dx u(x)] v(x)dx + ∫u(x) [d/dx v(x)]dx
 >
 > ∫d/dx g(x)dx = g(x) = u(x)v(x)
 >
@@ -464,7 +464,7 @@
 > gian chờ đợi một sự kiện xảy ra (ví dụ như chờ email đến)
 >
 > Story này khiến nó tương tự như Geometric distribution - có story là số
-> \**Bern(p) trial cần thiết** cho đến khi có **trial success** đầu tiên, để rồi thời
+> **Bern(p) trial cần thiết** cho đến khi có **trial success** đầu tiên, để rồi thời
 > gian chờ cho tới khi có email cũng giống một chuỗi khoảnh khắc (đơn vị
 > thời gian) cho đến khi nhận được email vậy.
 >
@@ -508,7 +508,7 @@
 >
 > vì s > 0 ⇨ s + t > t ⇨ X(s) > s + t > t
 >
-> \**X(s) > s + t ⇨ X(s) > t
+> **X(s) > s + t ⇨ X(s) > t
 >
 > Nếu s (possible outcome) mà thỏa X(s) > s + t, thì dĩ nhiên nó cũng
 > thỏa X(s) > t
@@ -723,7 +723,7 @@
 >
 > = (1/σ√2π) e^-[(x - μ)/σ]^2/2 
 >
-> \**= (1/σ√2π) e^-[(x - μ)^2/2σ^2]  
+> **= (1/σ√2π) e^-[(x - μ)^2/2σ^2]  
 >
 > Đây chính là công thức pdf của N(μ, σ)**
 
@@ -831,13 +831,13 @@
 > Chú ý là, dù thể hiện ở dạng u,v, du, dv, nhưng thực ra ta vẫn đang tính
 > các tích phân theo z, nên ko cần đổi limit
 >
-> \**Tính z(-e^-z^2/2) |-inf:inf:**
+> **Tính z(-e^-z^2/2) |-inf:inf:**
 >
 > z → -inf/+inf ⇨ -z^2/2 → -inf ⇨ e^-z^2/2 → 0 ⇨ z(-e^-z^2/2) → 0
 >
 > ⇨ z(-e^-z^2/2) |-inf:inf = 0 - 0 = 0
 >
-> \**Tính ∫-inf:inf (- e^-z^2/2) dz:** 
+> **Tính ∫-inf:inf (- e^-z^2/2) dz:** 
 >
 > Cái tích phân này muốn tính phải dùng trick
 > và như lúc tìm normalizing constant của pdf N(0,1) ta thấy cái tích phân
@@ -1068,7 +1068,7 @@
 > β), mà bản thân nó có liên hệ với hàm Gamma thông qua: Beta (α, β) =
 > Γ(α) Γ(β) / Γ(α + β)
 >
-> \**f(x) = 1/B(α, β) x^(α-1)(1-x)^(β-1) ; x** ∈ **(0,1) α , β > 0**
+> **f(x) = 1/B(α, β) x^(α-1)(1-x)^(β-1) ; x** ∈ **(0,1) α , β > 0**
 >
 > Nói sơ rằng Β là một continuous distribution mà để toàn bộ  giá trị xác
 > suất trong một vùng **hữu hạn, cụ thể là (0,1)** (ý là, khác với Γ (0, inf)
@@ -1121,7 +1121,7 @@
 >
 > = [Γ(α+n) Γ(β) Γ(α + β)] / [Γ(α + n + β) Γ(α) Γ(β)]
 >
-> \**= [Γ(α+n) Γ(α + β)] / [Γ(α + n + β) Γ(α)]** ====
+> **= [Γ(α+n) Γ(α + β)] / [Γ(α + n + β) Γ(α)]** ====
 >
 > Dĩ nhiên từ đó ta có mean, là moment bậc nhất EX = [Γ(α+1) Γ(α + β)] / [Γ(α + 1 + β) Γ(α)] 
 >
@@ -1198,7 +1198,7 @@
 >
 > = (1/π) [nguyên hàm của 1 + (x - θ)^-2] | -inf: inf
 >
-> \**= (1/π) arctan(x - θ) | -inf: inf
+> **= (1/π) arctan(x - θ) | -inf: inf
 >
 > x → inf, arctan(x - θ) → π/2**
 >
@@ -1330,7 +1330,7 @@
 >
 > ⇔ fX(e^y) = (1/e^yσ√2π) e^-[(y - μ)^2/2σ^2] 
 >
-> \**⇔ fX(x) = (1/σ√2π) (1/x) e^-[(log(x) - μ)^2/2σ^2]**  | x = e^y
+> **⇔ fX(x) = (1/σ√2π) (1/x) e^-[(log(x) - μ)^2/2σ^2]**  | x = e^y
 >
 > Đây chính là pdf của log normal
 
@@ -1366,7 +1366,7 @@
 >
 > = e^2(μ+σ^2) -  [e^(μ + σ^2/2)]^2
 >
-> \**= e^2(μ+σ^2) -  e^(2μ + σ^2)
+> **= e^2(μ+σ^2) -  e^(2μ + σ^2)
 >
 > Đoạn cuối nói về việc log normal khá giống γ. Và cũng rất phổ biến trong
 > việc mô hình những biến số bị lệch phải ví dụ như income

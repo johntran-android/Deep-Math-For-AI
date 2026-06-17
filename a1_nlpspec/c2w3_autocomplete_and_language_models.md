@@ -29,10 +29,10 @@ Learning Objectives
 
 > [!NOTE]
 > 1 **N-grams** are **fundamental concepts** in NLP used in **various applications** like
-> \**speech recognition**, **spelling correction**, and **augmentative communication**.
+> **speech recognition**, **spelling correction**, and **augmentative communication**.
 >
 > 2 This video provides an overview of what will be learned about n-grams and
-> \**language models.**
+> **language models.**
 >
 > 3 A **text corpus** is a **large database of text documents**, and a **language model**
 > calculates the **probabilities of sentences** and **upcoming words**.
@@ -48,13 +48,13 @@ Learning Objectives
 >
 > 7 The tasks for this week include **transforming raw text corpus** into a **language
 > model**, handling **out-of-vocabulary words**, applying **smoothing techniques**, and
-> \**evaluating** language models using **perplexity**.
+> **evaluating** language models using **perplexity**.
 >
 > 8 The language model helps **suggest likely words** for **auto-completion** and
-> \**improves the accuracy of word prediction** in various applications.
+> **improves the accuracy of word prediction** in various applications.
 >
 > 9 The use of **smoothing techniques** and **perplexity** metric enhances the
-> \**performance** and **estimation** of unseen words and sentences.
+> **performance** and **estimation** of unseen words and sentences.
 >
 > 10 By implementing the skills learned, a **sentence auto-completion model** can be
 > successfully created in the assignments.
@@ -68,7 +68,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là ta sẽ dựa vào một **text corpus** để tạo một **Language
 > Model** có khả năng tính ra **xác suất của một sequence** hoặc
-> \**probability của một từ sau một sequence các từ** cho trước từ đó
+> **probability của một từ sau một sequence các từ** cho trước từ đó
 > dùng nó để áp dụng vào tạo một **autocomplete program** trong đó
 > người tính toán **tìm ra từ có xác suất cao nhất theo sau một 
 > từ user mới gõ** vào chẳng hạn.
@@ -113,7 +113,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái dùng **text corpus** tạo **Language model**. Xử lý
-> \**out-of-vocab words** và **unseen words - smoothing** cuối cùng
+> **out-of-vocab words** và **unseen words - smoothing** cuối cùng
 > là **đánh giá model với perplexity metric**
 
 <br>
@@ -130,13 +130,13 @@ Learning Objectives
 
 > [!NOTE]
 > 1 **N-gram language models** allow you to **generate texts** by **estimating the \\/conditional probability**\\/ of an
-> \**N-gram** from a **text corpus.**
+> **N-gram** from a **text corpus.**
 >
 > 2 An **N-gram** is a **sequence of words,** where the **word order matters**. In this context, you'll focus on
 > sequences of words.
 >
 > 3 When **processing** the corpus, **punctuation is treated as words**, but **special characters** like codes are
-> \**removed**.
+> **removed**.
 >
 > 4 **Unigrams** are **sets of unique single words** in the corpus, while **bigrams** are sets of **two words
 > appearing side-by-side**.
@@ -144,7 +144,7 @@ Learning Objectives
 > 5 To be considered a **bigram**, words **must appear next to each other**. The prefix "**bi**" signifies **two**.
 >
 > 6 **Trigrams** represent **unique triplets of words** **appearing together** in sequence. The prefix "**tri**" denotes
-> \**three**.
+> **three**.
 >
 > 7 Corpus **notation** includes using **subscripts** and **superscripts** to denote **specific sequences of words**
 > within the corpus.
@@ -160,7 +160,7 @@ Learning Objectives
 > in sequence.
 >
 > 11 The **general formula** for N-gram probabilities extends this concept to any number N, where the
-> \**probability of word w_N following the sequence w_1 to w_N-1** is estimated by the **count of the N-gram
+> **probability of word w_N following the sequence w_1 to w_N-1** is estimated by the **count of the N-gram
 > w_1 to w_N** divided by the **count of the N-gram prefix w_1 to w_N-1.**
 >
 > 12 **N-gram language models** can be used to \\/**compute probabilities of whole sentences** by **combining
@@ -218,8 +218,8 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/ebfcaf72a98bad6c2ec10b141aaf569bc9416b69.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Unigram probability** của 1 từ (hay 1 uni-gram) tính bằng
-> \**số lần xuất hiện của từ đó** **trong corpus** (không phải
+> **Unigram probability** của 1 từ (hay 1 uni-gram) tính bằng
+> **số lần xuất hiện của từ đó** **trong corpus** (không phải
 > trong một câu nhé), chia cho **tổng số từ của corpus**
 
 <br>
@@ -231,7 +231,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/c02674a292e5fe5492e34a94c287be35b4c50004.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Bigram probability** của 1 **bigram** (= 2 từ liền kề)
+> **Bigram probability** của 1 **bigram** (= 2 từ liền kề)
 >
 > Định nghĩa là **conditional probability** - **khả năng xuất hiện
 > của từ w2, nếu w1 đã "xảy ra"**
@@ -306,7 +306,7 @@ Learning Objectives
 > 4 Applying the **chain rule** **of probability** to estimate the **sentence probability.**
 >
 > 5 Using **bigram approximation** and the **Markov assumption** to **simplify** the calculation of
-> \**sentence probability**.
+> **sentence probability**.
 >
 > 6 The **product of conditional probabilities of words** and their **immediate predecessors** in
 > the **bigram formula.**
@@ -327,9 +327,9 @@ Learning Objectives
 >
 > Thì đại khái là ta nhớ lại về **conditional probability P(B|A)**
 > sẽ được tính bằng **P(A,B) chia cho P(A).**
-> \**P(A,B) gọi là joint probability của A, B** hiểu là xác suất của 
+> **P(A,B) gọi là joint probability của A, B** hiểu là xác suất của 
 > chuỗi **A, B cùng xuất hiện**
-> \**P(A)** là xác suất của **A xuất hiện**.
+> **P(A)** là xác suất của **A xuất hiện**.
 >
 > Nên: **P(A,B) = P(A)*P(B|A)** dịch sang ý nghĩa là: 
 > Xác suất **A xuất hiện** * xác suất **B nếu đã có A.**
@@ -351,9 +351,9 @@ Learning Objectives
 >
 > P của (the teacher drinks tea) =
 > P(tea | the teacher drinks)
-> \*P(drinks | the teacher)
-> \*P(teacher | the)
-> \*P(the)
+> *P(drinks | the teacher)
+> *P(teacher | the)
+> *P(the)
 
 <br>
 
@@ -388,16 +388,16 @@ Learning Objectives
 > Như vậy khi tính P của câu '**the teacher drink tea**': 
 > P(the teacher drink tea) =
 > P(tea | the teacher drinks)
-> \*P(drinks | the teacher)
-> \*P(teacher | the)
-> \*P(the)
+> *P(drinks | the teacher)
+> *P(teacher | the)
+> *P(the)
 >  **Sẽ trở thành** 
 >
 > P(the teacher drink tea) =
 >  **P(tea | drinks)
-> \*P(drinks | teacher)
-> \*P(teacher | the)
-> \*P(the)**
+> *P(drinks | teacher)
+> *P(teacher | the)
+> *P(the)**
 
 > [!NOTE]
 > Thì đại khái người ta dùng cách tiếp cận gần đúng
@@ -472,8 +472,8 @@ Learning Objectives
 > [!NOTE]
 > P(Mary like cats) =
 > P(cat| Mary like) (~= P(cat, like) = 0.1)
-> \*P(like|Mary) = 0.3
-> \*P(Mary) = 0.1
+> *P(like|Mary) = 0.3
+> *P(Mary) = 0.1
 >
 > =0.1*0.3*0.1 = 0.003
 
@@ -498,7 +498,7 @@ Learning Objectives
 > Vậy kết luận câu này trong P assignment sai:
 >
 > "Assume the probability of the next word depends only on previous
-> \**N-gram" thì phải là N-1 gram** mới đúng
+> **N-gram" thì phải là N-1 gram** mới đúng
 
 > [!NOTE]
 > Hoặc CHẤP NHẬN RẰNG KHÔNG QUAN TRỌNG TIỂU TIẾT
@@ -542,7 +542,7 @@ Learning Objectives
 > Cho nên có thể hiểu câu này.
 >
 > "Assume the probability of the next word depends only on previous
-> \**N-gram"**
+> **N-gram"**
 
 <br>
 
@@ -569,7 +569,7 @@ Learning Objectives
 > the beginning of each sentence.**
 >
 >  5 Dealing with the **end of sentences** and the **issue of simplification** in the 
-> \**conditional probability formula.**
+> **conditional probability formula.**
 >
 >  6 **Adding an end-of-sentence token** to handle cases where the **last word of a 
 > sentence lacks sufficient context**.
@@ -611,7 +611,7 @@ Learning Objectives
 >
 > Do đó, người ta **chèn vào trước câu** một **start of sentence
 > token <s>**, từ đó tính **bigram probability cho từ "the"** sẽ là
-> \**P(the|<s>)**
+> **P(the|<s>)**
 
 <br>
 
@@ -620,7 +620,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/a226f4cf0cbcee82111adb7046fb28f09b0b0ae0.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Tương tự** như vậy cho
+> **Tương tự** như vậy cho
 > bài toán **Trigram**, ta sẽ **chèn** **2 <s> đầu câu**
 >
 > Khái quát hoá cho **N-gram**, ta sẽ chèn **N-1 <s> đầu câu**
@@ -672,7 +672,7 @@ Learning Objectives
 > [!NOTE]
 > Nói chung là một loạt slide trước muốn **chứng minh cho ta thấy
 > rằng cần phải thêm một 'End of sentence' token vào cuối câu** sẽ
-> \**fix được các vấn đề gây sai sót  trong việc tính probability.**
+> **fix được các vấn đề gây sai sót  trong việc tính probability.**
 >
 > Đơn cử dễ hiểu nhất là với </s> cuối câu thì **ΣC(drinks w) nó đã
 > bằng C(drinks)** cho dù drinks đứng cuối câu
@@ -747,7 +747,7 @@ Learning Objectives
 
 > [!NOTE]
 > Biết thêm cái **Punkt**
-> \**sentence** **tokenizer**
+> **sentence** **tokenizer**
 
 <br>
 
@@ -801,7 +801,7 @@ Learning Objectives
 >
 > re.sub(r"[^a-zA-Z0-9. ?! ]+", "", corpus)
 >
-> \**re** là một cái thư viện để **Regular expression**,
+> **re** là một cái thư viện để **Regular expression**,
 
 <br>
 
@@ -829,7 +829,7 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là **chia corpus thành từng
 > câu** và **câu thành từng từ**, ta dùng string.
-> \**split()** function với **delimiter (eg. " ")**
+> **split()** function với **delimiter (eg. " ")**
 
 <br>
 
@@ -901,7 +901,7 @@ Learning Objectives
 
 > [!NOTE]
 > The previous result produces a
-> \**list of pairs**. This is not
+> **list of pairs**. This is not
 > equivalent to a dictionary.
 
 > [!NOTE]
@@ -946,7 +946,7 @@ Learning Objectives
 
 > [!NOTE]
 > Nói chung chỉ trước cho cách lấy
-> \**prefix của n-gram** để dùng khi tính
+> **prefix của n-gram** để dùng khi tính
 > probability của 1 n-gram
 
 <br>
@@ -956,11 +956,11 @@ Learning Objectives
 #### # get **trigram prefix** from a **4-gram** fourgram = ['I', 'am', 'happy','because'] trigram = fourgram**[0:-1]** # Get the elements **from 0**, included, **up to the last element**, **not included**. print(trigram)
 
 > [!NOTE]
-> \**4-gram prefix** của của một 5-gram "I love you so much" là "I love you so"
+> **4-gram prefix** của của một 5-gram "I love you so much" là "I love you so"
 >
-> \**3-gram prefix** của nó là "love you so"
+> **3-gram prefix** của nó là "love you so"
 >
-> \**2-gram prefix** của nó là "you so"
+> **2-gram prefix** của nó là "you so"
 
 <br>
 
@@ -994,7 +994,7 @@ Learning Objectives
 > [!NOTE]
 > Ta again thấy cái **[]*a_number** trong
 > python là là **concatenate** a_number
-> \**lần**. ví dụ **["a"]*4 = ["aaaa"]**
+> **lần**. ví dụ **["a"]*4 = ["aaaa"]**
 
 <br>
 
@@ -1020,13 +1020,13 @@ Learning Objectives
 > calculating **conditional probabilities**.
 >
 > 2 Transforming count matrix into a **probability matrix**: The count matrix is then **transformed** into a
-> \**probability matrix** by **dividing each cell** by the **corresponding row sum**, which represents the count of
+> **probability matrix** by **dividing each cell** by the **corresponding row sum**, which represents the count of
 > the **(n-1)-gram prefixes**. This matrix contains information about the **conditional probability of the
 > n-grams.**
 >
 > 3 Connecting the probability matrix to the **language model**: The probability matrix is used in the
-> \**language model** to estimate the **probability of a given sentence**. The model splits the sentence into
-> \**n-grams** and **finds their probability in the probability matrix**. It can als**o predict the next word** in a
+> **language model** to estimate the **probability of a given sentence**. The model splits the sentence into
+> **n-grams** and **finds their probability in the probability matrix**. It can als**o predict the next word** in a
 > sequence by e**xtracting the last (n-1)-gram** and **finding the corresponding row in the probability
 > matrix**.
 >
@@ -1067,11 +1067,11 @@ Learning Objectives
 > hiện với một từ bất kì**. Còn tại **mỗi ô** sẽ là **số lần một 2-gram
 > xuất hiện với từ của cột đó** mà ta sẽ tính probability. Nói chung nhờ
 > cái bảng này mà ta sẽ tính được **N-gram probability** bằng cách
-> \**chia mỗi ô cho sum row đó.**
+> **chia mỗi ô cho sum row đó.**
 >
 > Nhớ lại ví dụ **3-gram probability** của một **3-gram** **w1w2w3**
 > là: khả năng \/**w3 xuất hiện nếu w1w2 đã xuất hiện**\/
-> \**P(w3|w1w2)**.Tính bằng **số lần w3 xuất hiện sau khi w1w2** **đã
+> **P(w3|w1w2)**.Tính bằng **số lần w3 xuất hiện sau khi w1w2** **đã
 > xuất hiện C(w1,w2,w3)** chia cho **số lần một từ bất kì xuất hiện
 > sau khi w1w2 đã xuất hiện C(w1, w2, any word)**
 
@@ -1094,8 +1094,8 @@ Learning Objectives
 > [!NOTE]
 > Đại khái là với cái **probability matrix** này, ta sẽ **tạo một
 > language model** - thật ra đơn giản **chỉ là một đoạn script**
-> \**dùng cái matrix này** để **tính ra xác suất của một câu** bằng cách
-> \**split câu thành các n-gram**, và **tính xác suất của câu** theo
+> **dùng cái matrix này** để **tính ra xác suất của một câu** bằng cách
+> **split câu thành các n-gram**, và **tính xác suất của câu** theo
 > công thức (bằng cách tính xác suất của các N-gram rồi nhân lại).
 >
 > Ví dụ tính xác suất của câu "I learn" như sau
@@ -1159,15 +1159,15 @@ Learning Objectives
 >
 > 2 **Dataset splitting**: Before evaluating the language model, the dataset is **divided into training, validation, and
 > test sets.** The **training set** is used for model **training**, the **validation** set helps **tune hyper-parameters**, and the
-> \**test set** is held out to **evaluate the model's performance** on unseen data.
+> **test set** is held out to **evaluate the model's performance** on unseen data.
 >
 > 3 Understanding **perplexity**: Perplexity is a measure of **how well a language model assigns probabilities to
 > sentences**. A **lower perplexity score** indicates that the \\/**sentences are more likely to have been written by
 > humans**\\/, while a **higher score suggests randomness** in word choice.
 >
 > 4 Calculation of **perplexity**: Perplexity is computed by **raising the probability of sentences** in the test set to the
-> \**power of -1 divided by the number of words** in the test set. **The** **higher** the language model estimates the
-> \**probability**, the l**ower the perplexity scor**e will be.
+> **power of -1 divided by the number of words** in the test set. **The** **higher** the language model estimates the
+> **probability**, the l**ower the perplexity scor**e will be.
 >
 > 5 Perplexity example: Two language models with **different probabilities** for the test set are **compared**. The
 > model with a **higher probability has a lower perplexity score**, indicating **better performance** in predicting the
@@ -1182,7 +1182,7 @@ Learning Objectives
 >
 > 8 Impact of improved perplexity: **Lower perplexity scores indicate better language model**s. An example with a
 > Wall Street Journal corpus shows how **perplexity decreases as the model complexity increases**, with **trigram**
-> \**models** producing **more reasonable language.** 
+> **models** producing **more reasonable language.** 
 > 9 H**andling out-of-vocabulary words**: In future videos, techniques for handling words **not seen in the training
 > set** will be covered, as this is an **important aspect for real-world language model applications.**
 
@@ -1218,7 +1218,7 @@ Learning Objectives
 <p align="center"><kbd><img src="assets/5da90f06cf33303ef7973d4f051263661fb94012.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Text do người viết** sẽ có **PP thấp**, còn text **random generated** bởi
+> **Text do người viết** sẽ có **PP thấp**, còn text **random generated** bởi
 > máy tính sẽ có **PP cao**. Nói chung là một **chỉ số hay dùng** để đ**ánh giá
 > Language Model**
 >
@@ -1281,7 +1281,7 @@ Learning Objectives
 > [!NOTE]
 > Now how does the improved perplexity translate in a production quality language
 > model? Here is an example of a Wall Street Journal corpus. If you take a **unigram**
-> \**language model**, the perplexity is very high, **962**. This just **generates words by their
+> **language model**, the perplexity is very high, **962**. This just **generates words by their
 > probability.** With a **bigram language model**, the text **starts to make a little more
 > sense**. Using a **trigram** you can see the language it produces is **pretty close to
 > reasonable**. The perplexity is now equal to 109, much closer to the target perplexity
@@ -1290,7 +1290,7 @@ Learning Objectives
 
 > [!NOTE]
 > một ví dụ cho thấy **3 language model** generate text dùng
-> \**WSJ corpus**, thì cái **trigram model** tạo nội dung **có vẻ
+> **WSJ corpus**, thì cái **trigram model** tạo nội dung **có vẻ
 > khá giống người nhấ**t, và nó cũng có **PP thấp nhất**
 
 <br>
@@ -1328,7 +1328,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái ta sẽ phải tính cái **frequencies** của **n-gram** và
-> \**(n-1)-gram** - mà còn gọi là **N-gram Prefix**, Thì ổng nói trong P.A có khi
+> **(n-1)-gram** - mà còn gọi là **N-gram Prefix**, Thì ổng nói trong P.A có khi
 > ta sẽ save trong một cái **dictionary**, nhưng có khi ta cần save
 > dưới dạng một table / **matrix** có hàng là các N-gram prefix cột
 > là các single word.
@@ -1612,7 +1612,7 @@ Learning Objectives
 >
 > Nhưng **một số task khác** thì khi dùng để predict thì **nó sẽ phải gặp
 > những từ không có trong vocab** list của model, thì cái này gọi  là
-> \**open vocabs**
+> **open vocabs**
 
 <br>
 
@@ -1625,7 +1625,7 @@ Learning Objectives
 > chuẩn** nào đó **ví dụ như frequency** đạt bao nhiêu
 > mới cho vào.
 >
-> \**Những từ không có trong vocab** sẽ bị **thay thế bằng
+> **Những từ không có trong vocab** sẽ bị **thay thế bằng
 > UNK**
 >
 > Và **tính probability như bình thường**
@@ -1712,7 +1712,7 @@ Learning Objectives
 > and lower-level N-grams with weighted constants.
 >
 >  12 The **weights (lambdas) in interpolation are learned** from the **validation set** by 
-> \**maximizing the probability of sentences**.
+> **maximizing the probability of sentences**.
 >
 >  13 Interpolation can be applied to general N-grams by using more lambdas.
 >
@@ -1739,9 +1739,9 @@ Learning Objectives
 > thứ 1 là model gặp từ không có trong vocab, thì gán thành
 > UNK) đó là từ **có trong vocab nhưng cái n-gram thì
 > không**, ví dụ, **John, eats đều có trong vocab**, nhưng
-> \**không có chỗ nào mà John eats đứng cạnh nhau cả**, như
+> **không có chỗ nào mà John eats đứng cạnh nhau cả**, như
 > vậy không tính probability của cái N-gram ví dụ 3-gram như
-> \**John eats apple** dc vì không có cái 2-gram **John eats**.
+> **John eats apple** dc vì không có cái 2-gram **John eats**.
 
 <br>
 
@@ -1754,7 +1754,7 @@ Learning Objectives
 > trước. Đại khái là ta **cộng 1 vào mỗi một N-gram**. thì gọi là **Laplacian
 > smoothing**, hoặc k thì gọi là **Add-k smoothing**  Ví dụ như ở hình dưới,
 > tính BI-GRAM, **chú ý là đang tính Bi-gram** probability nên mới kí hiệu là
-> \**P(wn|wn-1)**.
+> **P(wn|wn-1)**.
 >
 > Ví dụ Bi-gram probability của P(w2|w1) thì ta + 1 vào mọi bi-gram Trong
 > count-matrix. Theo công thức ta sẽ **đếm số lần w1w2 xuất hiện** và chia
@@ -1783,7 +1783,7 @@ Learning Objectives
 >
 > Trong ví dụ dưới, muốn tính **P(chocolate| John drinks)** thì theo
 > công thức phải tính số lần **"John drinks chocolate"** xuất hiện
-> \**chia cho** số lần **John drink** + **1 từ nào đó** xuất hiện. Nhưng
+> **chia cho** số lần **John drink** + **1 từ nào đó** xuất hiện. Nhưng
 > rõ ràng là không có bộ "**John drink chocolate"** nào hết có nghĩa là
 > tử số **= 0**, mẫu số thì có = 1 (John drink + tea)
 >
@@ -1794,7 +1794,7 @@ Learning Objectives
 > Katz backoff: Đại khái là có thể khi giảm cấp thì **nhân thêm hệ số điều
 > chỉnh**, vì giảm cấp  rõ ràng sẽ làm giảm độ chính xác. Hệ số này
 > chưa nói rõ sẽ tính ntn. Còn nếu không cần tính hệ số điều chỉnh mà
-> \**cứ dùng 1 constant** như **0.4** thì gọi là **Stupid backoff**
+> **cứ dùng 1 constant** như **0.4** thì gọi là **Stupid backoff**
 
 <br>
 
@@ -1854,7 +1854,7 @@ Learning Objectives
 > [!NOTE]
 > Ở đây là nói về cách 2, bắt đầu bằng **định ra M là số
 > lượng của vocab**, ta sẽ dùng **Counter**, bỏ vào đó cái
-> \**word+word count dictionary** và gọi **function
+> **word+word count dictionary** và gọi **function
 > most_common(M)** để nó **lấy ra list M vocab có word count
 > cao nhất.** Nói chung chỉ cho cách xài Counter rất tiện lợi
 
@@ -1872,8 +1872,8 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái là **loop qua các từ**, từ nào
-> \**có trong vocav thì append vào list**,
-> \**ko có thì append 'UNK**"
+> **có trong vocav thì append vào list**,
+> **ko có thì append 'UNK**"
 
 <br>
 
@@ -2044,7 +2044,7 @@ Learning Objectives
 > 4 Building a l**anguage model** by organizing information about **N-Grams in the
 > corpus.** 
 > 5 Handling **missing information in sentences** through techniques like **smoothing**,
-> \**backoff**, and **interpolation**.
+> **backoff**, and **interpolation**.
 >
 > 6 Dealing with **out-of-vocabulary words** using **special markers** like **"<UNK>"**.
 >
@@ -2080,9 +2080,9 @@ Learning Objectives
 > [!NOTE]
 > You will l**oad and pre-process the data**, **develop an Ngram based language
 > model**, calculate the **perplexity** to **evaluate your model's performance**, and finally,
-> \**bring everything together to build an auto complete system.** This week's
+> **bring everything together to build an auto complete system.** This week's
 > assignment helps you lay the foundations for the future courses and allows you to
-> \**better understand probabilities and K smoothing**, a technique that is very
+> **better understand probabilities and K smoothing**, a technique that is very
 > common in NLP. You will also see some different ways of **handling out of
 > vocabulary words.**
 
@@ -2213,7 +2213,7 @@ Learning Objectives
 
 > [!NOTE]
 > Đại khái nói chìa khoá của một **auto-complete system** là một
-> \**language model**. Nó sẽ assign **probability cho một câu** sao
+> **language model**. Nó sẽ assign **probability cho một câu** sao
 > cho **câu nào giống thật hơn**, thì sẽ có **probability cao hơn**. Và
 > có nhiều language model trong đó **N-gram** là một loại **đơn
 > giản và mạnh mẽ**.
@@ -2631,7 +2631,7 @@ Learning Objectives
 > nói n-gram là cho phép tính gần đúng của p w | 1 chuỗi thay bằng
 > P (w | n từ cuối của chuỗi) hay P (w | n - 1 từ cuối của chuỗi) 
 >
-> \**Nhưng thôi cứ theo PA là n từ cuối - n-gram, với từ đang 'tính' nữa
+> **Nhưng thôi cứ theo PA là n từ cuối - n-gram, với từ đang 'tính' nữa
 > thì thành (n+1)-gram**
 
 <br>
@@ -2804,7 +2804,7 @@ Learning Objectives
 >
 > \- và một dictionary khác để "tra cứu" xem một cái n+1_gram
 > nào đó xuất hiện mấy lần, và..
-> \***Cái dict này tạm thời đừng quan tâm ở đâu ra.** 
+> ***Cái dict này tạm thời đừng quan tâm ở đâu ra.** 
 >
 > \- tham số k và vocab size để tính k-smoothing.
 >
@@ -3101,7 +3101,7 @@ Learning Objectives
 > trong vocab.
 >
 > Bước này thì chỉ việc bỏ cái n_gram vào function đã define ở trên
-> \**estimate_probabilities**() là nó sẽ trả ra cái **probabilities dict**- với key là từ
+> **estimate_probabilities**() là nó sẽ trả ra cái **probabilities dict**- với key là từ
 > (ví dụ a), và value là P (a| n_gram). Xong loop trong đó xem thằng nào có
 > P cao nhất để trả về kết quả.
 

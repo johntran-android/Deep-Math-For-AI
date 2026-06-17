@@ -42,7 +42,7 @@
 > nhiên vì định nghĩa của X là function mapping từ s ∈ Ω và x ∈ R, nên ta có thể
 > ghi là:
 >
-> \**{s** ∈ **Ω: X(s) < 0}**  **(2)
+> **{s** ∈ **Ω: X(s) < 0}**  **(2)
 >
 > Từ (1) và (2) giúp ta thấy rõ event X** ∈ **A chính là event A, để nói P(X** ∈ **A) cũng = P(A) mà ko cần phải lăn tăn gì nữa**
 >
@@ -335,7 +335,7 @@
 > với X có các possible value 0,1,2...thì U = X + Y sẽ có các possible value
 > thể hiện theo v: v, 1 + v, 2 + v với v = 0,1,2...
 >
-> \**Auv** là gì? Định nghĩa Auv = {(x,y) ∈ A: g1(x,y) = u, g2(x,y) = v}
+> **Auv** là gì? Định nghĩa Auv = {(x,y) ∈ A: g1(x,y) = u, g2(x,y) = v}
 >
 > = {(x,y) ∈ A: x + y = u, y = v} = **{(x,y)** ∈ **A: x = u - v, y = v}** và đây 
 > đơn gỉản là **(u - v, v)** tức là single point
@@ -382,7 +382,7 @@
 > và λ là hai số dương nên nó luôn dương**, và **e^-(θ+λ) thì cũng luôn dương**
 > nốt (nhớ ko, với e^x thì x→ -inf thì e^x → 0).
 >
-> \**Chỉ có mẫu số**, **có (u-v)!v! thì v! thì luôn dương rồi**, vì v chỉ có các gía trị
+> **Chỉ có mẫu số**, **có (u-v)!v! thì v! thì luôn dương rồi**, vì v chỉ có các gía trị
 > 0,1,2...nên nhỏ nhất là 0! thì bởi qui ước vẫn bằng 1 > 0.
 >
 > Còn (u-v)!, **theo quy ước** nếu **a < 0 thì a! KHÔNG XÁC ĐỊNH**, nên nếu **v > u thì (u-v)! KHÔNG XÁC ĐỊNH (UNDEFINED)** dẫn tới bản thân hàm số
@@ -417,7 +417,7 @@
 > ⇨ ... = e^-(θ+λ) (θ + λ)^u / u!
 >
 > Và tới đây có thể thấy **marginal pmf của U** CÓ DẠNG CỦA MỘT
-> \**POISSON(θ+λ)**
+> **POISSON(θ+λ)**
 
 <br>
 
@@ -597,7 +597,7 @@
 > Như đã biết pdf của β(α, β) f(x) = Γ(α + β)/Γ(α) Γ(β) x^(α-1)(1-x)^β
 >
 > với **0 < x < 1**. Again, giờ ta đã hiểu hơn define x ∈ (0, 1) chính là nói về
-> \**support set**, nơi mà **f(x) sẽ luôn dương** (ngoài khoảng này thì pdf = 0)
+> **support set**, nơi mà **f(x) sẽ luôn dương** (ngoài khoảng này thì pdf = 0)
 >
 > Và ko có gì phải nói lại, vì X, Y **independent** nên **joint pdf = tích marginal pdf**.
 >

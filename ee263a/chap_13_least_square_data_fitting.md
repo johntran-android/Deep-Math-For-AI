@@ -122,7 +122,7 @@
 > nhất, xấp xỉ tốt nhất hàm f - quan hệ giữa x và y. Và để thực hiện
 > mục tiêu này
 >
-> \**thì ít nhất là (tí nữa sẽ nói vì sao)**
+> **thì ít nhất là (tí nữa sẽ nói vì sao)**
 >
 > ta sẽ muốn kết quả của nó khi đưa ra dự đoán dựa trên x(i): y^(i) =
 > f^(x(i)) phải rất sát, rất giống với **kết quả thực tế**, được tạo bởi
@@ -293,7 +293,7 @@
 >
 > Và cái này chính là avg(yd), vì sao nhỉ?
 >
-> \**1**Tyd thì chính là Σi y(i), là scalar.
+> **1**Tyd thì chính là Σi y(i), là scalar.
 >
 > ⇨ θ^ = Ninv1Tyd = Σi y(i) / N, chính là trung bình của y(i)
 >
@@ -395,7 +395,7 @@
 > ⇨ và least square solution của bài toán data fitting này, như đã biết sẽ
 > là:
 >
-> \**θ** = (ATA)invATyd
+> **θ** = (ATA)invATyd
 >
 > Vì nói cung là đơn giản, nên matrix ATA có thể được ghi ra explicitly:
 >

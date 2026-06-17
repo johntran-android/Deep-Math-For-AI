@@ -114,7 +114,7 @@
 <p align="center"><kbd><img src="assets/600e0ff20f49846fd8c68e533228ced1b9f1678b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**code hello.c** là để kêu nó tạo một file
+> **code hello.c** là để kêu nó tạo một file
 > hello.c (tương đương New -> File -> hello.c)
 >
 > Còn **make hello** là để compile (chuyển
@@ -160,7 +160,7 @@
 > màu khác nhau cho** các function, loop, conditional
 >
 > Và ta **có thể change color nếu muốn** bằng cách  change
-> \**config của IDE**
+> **config của IDE**
 
 <br>
 
@@ -221,7 +221,7 @@
 > Q: **Có cần phải luôn có ';'** sau mỗi line không.
 >
 > A: Cái này sẽ biết khi thực hành. 
-> \**Không, basically, cần sau mỗi "Statement".** 
+> **Không, basically, cần sau mỗi "Statement".** 
 >
 > Cơ bản **';' giống như dấu chấm hết câu** trong tiếng Anh vậy
 
@@ -237,7 +237,7 @@
 > những lần sau chỉ **make hello** để compile thôi
 
 > [!NOTE]
-> \**Control L** để
+> **Control L** để
 > clean mọi thứ
 
 <br>
@@ -261,7 +261,7 @@
 > Nó sẽ như này, cái '$' nó sẽ in ngay sau chữ "hello, world"
 >
 > Và tuy rằng mình vẫn tiếp tục type lệnh mới được nhưng nó
-> \**không đẹp mắt cho lắm**, mà thông thường người ta sau khi kết
+> **không đẹp mắt cho lắm**, mà thông thường người ta sau khi kết
 > thúc gì đó sẽ cho xuống dòng để sẵn sàng cho lệnh mới
 
 <br>
@@ -310,7 +310,7 @@
 
 > [!NOTE]
 > Thử bỏ dòng đó đi thì nó báo lỗi như này:
-> \**Không có function printf**
+> **Không có function printf**
 
 <br>
 
@@ -355,7 +355,7 @@
 > [!NOTE]
 > Kế ổng nói bạn có thể thắc mắc **sao mình biết có các
 > function nào trong header files / library** thì câu trả lời là
-> \**documentation** Rồi ổng nói **manual.cs50.io** là  p**hiên bản đơn giản
+> **documentation** Rồi ổng nói **manual.cs50.io** là  p**hiên bản đơn giản
 > hơn của C documentation** do **CS50** tạo ra vì cái
 > documnent gốc của C có **vẻ hơi khó đọc với người ít
 > kinh nghiệm**
@@ -419,7 +419,7 @@
 > [!NOTE]
 > Thì dùng function **get_string**() của **cs50.h** lib, để hỏi
 > và chờ câu trả lời sau đó **assign** nó vào
-> \**answer** variable
+> **answer** variable
 
 <br>
 
@@ -602,7 +602,7 @@
 <p align="center"><kbd><img src="assets/a0699a45a3c162782f13168ab01df4053b147db2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**make compare** để **compile**
+> **make compare** để **compile**
 >
 > Rời **./compare** để gọi function
 
@@ -639,7 +639,7 @@
 
 > [!NOTE]
 > Hoá ra không phải, mà ý ổng muốn nói là **phải dùng** 'y' -
-> \**single quote cho character** và ''Agree!'' - **double quote
+> **single quote cho character** và ''Agree!'' - **double quote
 > cho text**
 
 <br>
@@ -652,7 +652,7 @@
 > Xong, làm thử thấy nó không printf ra gì hết. Why?
 >
 > \-> Nhìn có thể thấy ổng gõ **Capitalized 'Y', 'N'** nên nó
-> \**fail khi compare với 'y' và 'n'**
+> **fail khi compare với 'y' và 'n'**
 
 <br>
 
@@ -819,7 +819,7 @@
 
 > [!NOTE]
 > Nói qua **forever loop**, với một số ví dụ như forever loop
-> \**check xem có collision giữa sprite và object khác không**,
+> **check xem có collision giữa sprite và object khác không**,
 > hoặc chờ **user input text** cũng là dạng forever loop
 
 <br>
@@ -829,7 +829,7 @@
 <p align="center"><kbd><img src="assets/4a7772bc7cf73fb51549333290a305467818505f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Forever loop** trong **C** đây
+> **Forever loop** trong **C** đây
 
 <br>
 
@@ -867,7 +867,7 @@
 <p align="center"><kbd><img src="assets/1d564d3c9cf4f7470aef73a7d25e3d0b479dd898.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Control C** sẽ cancel cái này
+> **Control C** sẽ cancel cái này
 
 <br>
 
@@ -890,7 +890,7 @@
 <p align="center"><kbd><img src="assets/8d4e7c195f365d65a2edc691313c0da1d4deaf1a.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**CLI = Command Line Interface** vs với
+> **CLI = Command Line Interface** vs với
 > GUI Graphical User Interface
 
 <br>
@@ -947,7 +947,7 @@
 <p align="center"><kbd><img src="assets/aa2f24e51eefbca63eb0b9402ad386ade3fdf951.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**ls** ra xem thì **thấy hello thiếu .c** tức
+> **ls** ra xem thì **thấy hello thiếu .c** tức
 > là **đặt tên file thiếu đuôi c**
 
 <br>
@@ -1155,7 +1155,7 @@
 
 > [!NOTE]
 > Một cách hay hơn là dùng 
-> \**do 
+> **do 
 > {
 > ...n = get_int()..
 > } 
@@ -1180,7 +1180,7 @@
 
 > [!NOTE]
 > Đại khái là comment có thể coi như
-> \**pseudocode describe high abstract**
+> **pseudocode describe high abstract**
 
 <br>
 
@@ -1222,7 +1222,7 @@
 
 > [!NOTE]
 > Đại khái là ổng làm một cái calculator như vầy, rồi nhập
-> \**2,2** thì kết quả ra 4. OK. Nhưng làm tiếp với **2 tỉ và 2 tỉ thì
+> **2,2** thì kết quả ra 4. OK. Nhưng làm tiếp với **2 tỉ và 2 tỉ thì
 > nó ra -294...**
 
 <br>
@@ -1346,7 +1346,7 @@
 
 > [!NOTE]
 > Vấn đề là khi ổng **dùng phép chia** thì nó sẽ dùng
-> \**long** (là số nguyên), n**ên kết quả nó làm tròn**.
+> **long** (là số nguyên), n**ên kết quả nó làm tròn**.
 >
 > Để có số thập phân phải **type cast** cho nó thành
 > dạng số **thập phân float**

@@ -277,13 +277,13 @@
 > [!NOTE]
 > ở đây ta sẽ hoàn thiện **một nn.module CaptionTransformer**, function init đã
 > được làm sẵn trong đó ta thấy họ **chuẩn bị những cái như các kích thước**,
-> \**các token id đặc biệt như <NULL>, <START>, <END>**. Rồi **các layer** gồm có
-> \**embedding**, dùng để **chuyển token id thành embedding vector.** **Positional
+> **các token id đặc biệt như <NULL>, <START>, <END>**. Rồi **các layer** gồm có
+> **embedding**, dùng để **chuyển token id thành embedding vector.** **Positional
 > encoding mình** đã làm ở trên, để chuyển lấy ra positional encoding vector
 > với một vị trí.
 >
 > Rồi ta thấy họ khởi tạo **TransformerDecoderLayer**, pass vào khởi tạo
-> \**TransformerDecoder**. Ta sẽ xem nó là ntn
+> **TransformerDecoder**. Ta sẽ xem nó là ntn
 
 <br>
 
@@ -338,7 +338,7 @@
 > ==== #Attend to both target sequence and sequence of the last encoder layer
 >
 > Rồi, tiếp theo nó sẽ đi qua cơ chế **"cross attention"** ở cổng **query**. Còn
-> \**encoder output** sẽ join ở 'cổng' **key**, **value**. Output sẽ được **dropout**,
+> **encoder output** sẽ join ở 'cổng' **key**, **value**. Output sẽ được **dropout**,
 > add **skip connection** và **layer normalized**.
 >
 > Trong đây nói lại một cách ngắn gọn, thì query (từ decoder) sẽ dùng để so sánh

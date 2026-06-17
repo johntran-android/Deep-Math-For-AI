@@ -41,20 +41,20 @@
 >
 > Và nếu A lại là **SYMMETRIC** matrix, thì như đã biết, khi đó
 > các **eigenvectors sẽ ORTHOGONAL**, để rồi S sẽ trở thành
-> \**Q** - ORTHOGONAL MATRIX (thêm việc normalize vector
+> **Q** - ORTHOGONAL MATRIX (thêm việc normalize vector
 > về unit length). Và với orthogonal matrix Q, thì **Qinv = QT**
 > nên **diagonalization với A sẽ là QΛQT**
 >
 > Thêm nữa nếu A cũng **POSITIVE DEFINITE** thì **Λ** sẽ là
-> \**POSITIVE Λ** (mọi eigenvalues, pivots, left determinant đều
+> **POSITIVE Λ** (mọi eigenvalues, pivots, left determinant đều
 > dương, quadratic function dương, chỉ bằng 0 khi x = 0)
 >
 > Thí ý quan trọng:
 >
 > Nếu A là SYMMETRIC matrix, thì: 
 >
-> \**SINGULAR VALUE DECOMPOSITION** CŨNG CHÍNH LÀ
-> \**DIAGONALIZATION** **QΛQT** 
+> **SINGULAR VALUE DECOMPOSITION** CŨNG CHÍNH LÀ
+> **DIAGONALIZATION** **QΛQT** 
 >
 > mà trong đó **Q đóng vai trò của cả U và V**, **còn Λ là Σ**.
 >
@@ -66,7 +66,7 @@
 >
 > Điều đó có nghĩa là nếu A không symmetric, mà chỉ
 > là A = SΛSinv thì ta sẽ không care, vì S không phải là
-> \**ORTHOGONAL** matrix
+> **ORTHOGONAL** matrix
 
 > [!NOTE]
 > Nếu A là SYMMETRIC matrix, thì:
@@ -88,7 +88,7 @@
 > Ở đây mình ôn lại chút xíu về **4 fundamental subspaces**,
 > ta đã gặp cái vụ một vector **x thuộc Rn** sẽ phân tách thành
 > hai vector: một cái nằm **x_null trong nullspace** của A, một cái
-> \**x_r nằm trong rowspace** của A. Để rồi **Ax = Ax_r + Ax_null**
+> **x_r nằm trong rowspace** của A. Để rồi **Ax = Ax_r + Ax_null**
 >
 > Và **Ax_null = 0** -> **Ax = Ax_r = b** mang ý nghĩa là, A sẽ
 > map **vector trong nullspace x_null thành zero**. Và **map
@@ -107,7 +107,7 @@
 
 > [!NOTE]
 > thế thì gs cho rằng **mong muốn của ta** sẽ là: từ một
-> \**ORTHOGONAL BASIS** TRONG **ROWS-PACE**, map nó
+> **ORTHOGONAL BASIS** TRONG **ROWS-PACE**, map nó
 > đến một **ORTHOGONAL BASIS** TRONG **COLUMNS
 > SPACE**
 
@@ -125,11 +125,11 @@
 > [!NOTE]
 > Đại khái là để có **orthogonal basis** của **row-space** thì ta
 > đã biết rằng, **GRAM-SMIDTH** sẽ giúp ta làm được cái này:
-> \**bắt đầu với một bộ INDEPENDENT vector** - tức là một
-> \**basis bình thường**, **Gram Smidth sẽ giúp ta tạo ra một bộ
+> **bắt đầu với một bộ INDEPENDENT vector** - tức là một
+> **basis bình thường**, **Gram Smidth sẽ giúp ta tạo ra một bộ
 > ORTHONORMAL basis vector** 
 >
-> \*Ôn lại tí xíu về Gram-Smith: Giả sử có a, b, c basis vectors
+> *Ôn lại tí xíu về Gram-Smith: Giả sử có a, b, c basis vectors
 > của R3 (đương nhiên, đã nói basis thì nó independent, và đủ
 > số lượng để span R3) có điều chưa phải là orthogonal Ta sẽ
 > dùng quy trình G.S để tạo orthogonal basis A,B,C:
@@ -187,7 +187,7 @@
 > Tiếp theo, coi như ta có các **orthonormal basis vector
 > của row-space** {v1, v2, ....vr} (set có **r independent
 > vector** vì **r là rank**), như đã nói ở đầu ở đây **A**
-> \**không nhất thiết phải full-rank** (rank = m = n)
+> **không nhất thiết phải full-rank** (rank = m = n)
 
 <br>
 
@@ -223,10 +223,10 @@
 >
 > Thì khi đó ta sẽ có cái ta muốn là:
 >
-> \**Av1 = σ1u1**, **Av2 = σ2u2**,....
+> **Av1 = σ1u1**, **Av2 = σ2u2**,....
 >
 > Matrix A sẽ **map** một **basis vector của rowspace** với
-> \**một basis  vector của columns space** và **cả hai basis đều
+> **một basis  vector của columns space** và **cả hai basis đều
 > orthogonal**
 
 <br>
@@ -298,7 +298,7 @@
 
 > [!NOTE]
 > Cái điểm quan trọng cần để ý là **COLUMN** **SPACE** và
-> \**ROW** **SPACE** CÓ **CÙNG** **DIMENSION** = r
+> **ROW** **SPACE** CÓ **CÙNG** **DIMENSION** = r
 >
 > Nên **một** vector trong **basis của rows space** được **map**
 > với **một** vector trong **basis của columns space**.
@@ -405,7 +405,7 @@
 > là **EIGENVALUES** của ATA
 
 > [!NOTE]
-> \**KHÔNG THỂ TÌM CẢ U VÀ V CÙNG LÚC**, TÌM V TRƯỚC:
+> **KHÔNG THỂ TÌM CẢ U VÀ V CÙNG LÚC**, TÌM V TRƯỚC:
 > MƯỢN ATA
 >
 > ATA = (U∑VT)T(U∑VT) = V(∑T)(UT)U∑(VT) = V(∑T)∑VT
@@ -429,8 +429,8 @@
 > Do đó U CHÍNH LÀ MATRIX CÁC EIGENVECTOR CỦA AAT Và EIGENVALUE CỦA AAT CŨNG LÀ BÌNH PHƯƠNG CỦA
 > STRETCHING FACTOR NHỚ RẰNG, MỤC TIÊU CỦA BÀI TOÁN LÀ **TÌM BỘ BASIS
 > ORTHONORMAL BASIS CỦA ROW SPACE OF A (V)** VÀ
-> \**ORTHONORMAL BASIS CỦA COLUMN SPACE OF A (U)**.
-> \**SAO CHO AV = UΣ**
+> **ORTHONORMAL BASIS CỦA COLUMN SPACE OF A (U)**.
+> **SAO CHO AV = UΣ**
 >
 > (Có thể có rất nhiều bộ orthonormal basis của rowspace và
 > columns space nhưng không thỏa)
@@ -489,7 +489,7 @@
 > gs lấy ví dụ matrix A này, và ta có matrix ATA.
 >
 > Ta sẽ **tìm eigenvectors ATA sẽ chính là V cần tìm**, và
-> \**eigenvalues của ATA sẽ là Σ^2, hay Σ chính là square
+> **eigenvalues của ATA sẽ là Σ^2, hay Σ chính là square
 > root của (matrix of) eigenvalues của ATA**
 
 <br>
@@ -641,7 +641,7 @@
 > [!NOTE]
 > Gs có giải thích lỗi này trong bài sau. Nhưng đại khái là
 > ví dụ này cho thấy nếu ta tìm V và ∑ bằng cách tìm
-> \**eigenvectors và eigenvalues của ATA**, sau đó tìm U
+> **eigenvectors và eigenvalues của ATA**, sau đó tìm U
 > thông qua e**igenvectors của AAT**, và **ĐẢM BẢO**
 > dấu của chúng phù hợp nhau thì ta sẽ thấy **qủa thật là
 > A có thể được phân tách thành U∑VT**.
@@ -658,13 +658,13 @@
 > [!NOTE]
 > Lấy ví dụ thứ 2, cho matrix A này, nó **rank 1** (dễ thấy chỉ
 > có **1 independent col/row**) Và gs vẽ **row-space**  là một
-> \**line đi qua basis vector** và **nullspace là line vuông góc
+> **line đi qua basis vector** và **nullspace là line vuông góc
 > với rows-space**.
 >
 > tương tự với **columns space và left nullspace**
 >
 > Và ta cũng **chọn unit vector basis** của **row-space** và
-> \**column-space** (dùng basis của rows space - một trong
+> **column-space** (dùng basis của rows space - một trong
 > hai row vector, cái nào cũng được, normalize để có unit
 > norm, tương tự với columns)
 >
@@ -748,11 +748,11 @@
 > orthogonal
 >
 > Tóm lại, **eigenvectors của AAT** chính là U, trong đó một cái là
-> \**basis của C(A)** (1, 2), cái kia là **basis của left nullspace
+> **basis của C(A)** (1, 2), cái kia là **basis của left nullspace
 > N(AT)** (-2, 1).
 >
 > Chẳng qua như đã nói trong case này A chỉ có mỗi hai cột, và
-> \**có một cột độc lập** dĩ nhiên là **lấy cột nào cũng là basis của
+> **có một cột độc lập** dĩ nhiên là **lấy cột nào cũng là basis của
 > C(A)**, và **nhẩm tính vector vuông góc với nó thì có basis của
 > N(AT)**
 
@@ -868,7 +868,7 @@
 > SPACE**, **m-r col sau là basis của LEFT NULLSPACE**
 >
 > và V CHÍNH LÀ CHỨA N ORTHONORMAL  BASIS CỦA
-> \**R^N**: **r col đầu là basis của ROW-SPACE**, và **n - r
+> **R^N**: **r col đầu là basis của ROW-SPACE**, và **n - r
 > column sau là basis của NULLSPACE.
 >
 > Và thông qua tìm eigenvector của ATA và AAT thì nó

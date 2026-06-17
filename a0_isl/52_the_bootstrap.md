@@ -55,7 +55,7 @@
 
 > [!NOTE]
 > Thế thì để đánh giá công thức ước lượng của  alpha, người ta mới dùng máy tính để
-> \**GENERATE 1000 DATASET KHÁC NHAU** (đương nhiên từ cùng một quy luật, true
+> **GENERATE 1000 DATASET KHÁC NHAU** (đương nhiên từ cùng một quy luật, true
 > population parameters). Và **dùng công thức trên để estimated các alpha^**.
 >
 > Để rồi ta sẽ **tính trung bình các estimated alpha** - tức là **ESTIMATED MEAN**, sau

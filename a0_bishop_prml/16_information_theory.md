@@ -993,10 +993,10 @@
 > được gọi là **CONDITIONAL ENTROPY** của **Y** given **X:** H(**Y**|**X**) Mình hiểu cái này như vầy:
 >
 > Người ta gọi, định nghĩa additional information needed to specify **y** given
-> \**x** là -ln(f(**y**|**x**)), thì nên hiểu ý nghĩa của nó đó là:
+> **x** là -ln(f(**y**|**x**)), thì nên hiểu ý nghĩa của nó đó là:
 >
 > khi đã biết **X** = **x** thì lượng thông tin cần thiết để xác định ra giá trị **y** của biến
-> \**Y** là -ln(f(**y**|**x**)).
+> **Y** là -ln(f(**y**|**x**)).
 >
 > Nên cơ bản là mình đang có một random variable W có được bằng cách áp
 > hàm g(**x**,**y**) lên hai biến **X**,**Y**: W = -ln(f(**Y**|**X**)). Và ta sẽ gọi EW là conditional

@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > đây là lecture cuối mà ta sẽ finish việc giải một
-> \**linear equation system Ax = b**
+> **linear equation system Ax = b**
 >
 > Để trả lời câu hỏi (như trong Ax=0 đã làm) là, nó **có
 > solution không?** nếu có thì **nó là gì?**
@@ -84,7 +84,7 @@
 > \- **Bên dưới pivot = 0**.
 >
 > \- Ở dạng **Reduce** Row Echelon thì có thêm yêu cầu
-> \**chuyển  pivot = 1**, và **khử luôn các giá trị bên trên
+> **chuyển  pivot = 1**, và **khử luôn các giá trị bên trên
 > pivot** để trong pivot col **chỉ có pivot là khác 0**.
 >
 > Rồi, ta tiếp tục bước nữa, hủy A33 để finished col 3.
@@ -100,7 +100,7 @@
 > [!NOTE]
 > đến đây ta **xác nhận lại được nhận định ban đầu** về điều
 > kiện của b n**ếu muốn equation system có solution:** đó là
-> \**b3 phải bằng b1 + b2**
+> **b3 phải bằng b1 + b2**
 
 <br>
 
@@ -154,7 +154,7 @@
 <p align="center"><kbd><img src="assets/820374efcbc68d4d7d63a71dcb05fb37642ea680.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**backsubstitution các free variable x2, x4 vào** giải ra x1,
+> **backsubstitution các free variable x2, x4 vào** giải ra x1,
 > x3 và ta có **x_particular** (particular solution)
 >
 > Tuy nhiên, cái ta cần là **tìm ra mọi solution.**
@@ -169,7 +169,7 @@
 
 > [!NOTE]
 > Để có toàn bộ solution (complete solution), gs đề nghị ta tìm
-> \**nullspace - như đã biết ở bài trước là tập hợp các vector x thỏa
+> **nullspace - như đã biết ở bài trước là tập hợp các vector x thỏa
 > Ax = 0.**
 >
 > Khi đó, bằng cách **kết hợp x_particular với bất kì vector x_null
@@ -292,7 +292,7 @@
 > x_p nhưng không đi qua 0.
 >
 > V**à cái 2D plane này không phải là subspace**, vì nó
-> \**không đi qua gốc O**, mà như đã biết subspace thì phải đi
+> **không đi qua gốc O**, mà như đã biết subspace thì phải đi
 > qua gốc O
 
 <br>
@@ -307,7 +307,7 @@
 > cách tìm **special solution** của để rồi tạo nên **complete** 
 > solution:
 >
-> \**x = x_particular + nullspace** (=linear combination của
+> **x = x_particular + nullspace** (=linear combination của
 > special solution)
 >
 > Tiếp gs đề nghị ta nghĩ rộng hơn, với matrix m,n có rank
@@ -350,7 +350,7 @@
 >
 > => Thử trả lời: r = n tức bằng số cột, có nghĩa là ta có
 > trạng thái **mọi column đều là pivot column**, hay, ta có
-> \**n pivot** và **ko có free variable nào.**
+> **n pivot** và **ko có free variable nào.**
 
 <br>
 
@@ -447,7 +447,7 @@
 > Ax = b sẽ như thế nào?
 >
 > \-> Mỗi hàng đều có một pivot, nên quá trình elimination sẽ
-> \**không biến hàng nào thành 0 hết**. Nhớ lại câu chuyện hồi
+> **không biến hàng nào thành 0 hết**. Nhớ lại câu chuyện hồi
 > nãy, nếu elimination biến một hàng thành 0, thì muốn  Ax=b
 > có solution thì phải yêu cầu là cũng các bước elimination đó
 > biến phần tử tương ứng của vector b thành 0. (Nếu không
@@ -456,7 +456,7 @@
 > equation system vô nghiệm)
 >
 > Mà **nguyên nhân gốc rễ** **một hàng bị eliminate thành 0** là do
-> \**nó bị phụ thuộc tuyến tính** với các hàng khác, thành ra
+> **nó bị phụ thuộc tuyến tính** với các hàng khác, thành ra
 > muốn thỏa điều kiện trên thì phần tử tương ứng với hàng bị
 > set thành 0 cũng phải phụ thuộc tuyến tính với các phần tử
 > khác.

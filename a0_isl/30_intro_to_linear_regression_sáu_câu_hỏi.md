@@ -30,7 +30,7 @@
 > lại lợi ích tăng sale tương xứng không
 >
 > 3,4. Trong 3 kênh, kênh nào giúp tăng sale, nếu đều giúp tăng sale thì
-> \**hiệu quả mỗi cái nhiều ít ra sao**?
+> **hiệu quả mỗi cái nhiều ít ra sao**?
 >
 > 5. Với một mức chi hiện tại thì **có thể dự báo sale sẽ là bao nhiêu**,
 > dự báo có **chính xác | đáng tin cậy cỡ nào**?

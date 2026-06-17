@@ -88,12 +88,12 @@
 
 > [!NOTE]
 > Đại khái người ta nảy ra ý tưởng đó là "ta sẽ giảm loss, sao cho ta sẽ
-> \**giảm cách biệt giữa phân phối xác suất thật** (mà hai từ i, j xuất hiện
+> **giảm cách biệt giữa phân phối xác suất thật** (mà hai từ i, j xuất hiện
 > cùng lúc) và **phân phối xác suất đang tính bởi các word vector từ U và V**
 >
 > Nói đúng hơn là **ước lượng phân phối xác suất thật** (nên người ta mới
 > để **P^ij**, vì ta **không thể có xác suất thật mà chỉ có thể ước lượng** dựa vào
-> \**chỉ số statistic từ C.O matrix (P^ij = Xij)**. 
+> **chỉ số statistic từ C.O matrix (P^ij = Xij)**. 
 >
 > Và **Qij** bây giờ **cũng thành "ước lượng" luôn** Q^ij ta **chỉ dùng cái "vế" tử số
 > trong công thức là exp(uj.ui)**, bỏ cái mẫu số đi, trên **tinh thần là "ước lượng" 

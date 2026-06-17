@@ -180,7 +180,7 @@
 >
 > Không khó để tìm eigenvalue, đã có tổng λ1 + λ2 = 60, tích λ1λ2 = 175
 > ⇨ λ1 = ?. giải bằng định lý Viet ta sẽ có λ1 (của S)= **57** λ2 (của S) =
-> \**3** 
+> **3** 
 >
 > Với hai giá trị đó thì theo giáo sư ma trận rank 1 √57 u1v1T lớn hơn
 > nhiều ma trận rank 1 √3u2v2T.
@@ -258,7 +258,7 @@
 > trước đã biết, đường chéo S_ii (S = AAT/(m-1) chính là sample
 > variance của feature i, nên tổng đường chéo (của là trace) của S
 > sẽ là tổng sample variance, tạm dịch là phương sai toàn phần, hay
-> \**toàn bộ variance** của dataset
+> **toàn bộ variance** của dataset
 >
 > T = s1^2 + ...sm^2   (m features, có m sample variances)
 >

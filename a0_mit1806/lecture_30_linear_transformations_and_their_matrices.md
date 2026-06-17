@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > đại khái mở đầu gs nói rằng mọi thứ ta học bữa giờ
-> \**đều liên quan đến LINEAR TRANSFORMATION**
+> **đều liên quan đến LINEAR TRANSFORMATION**
 
 <br>
 
@@ -85,7 +85,7 @@
 
 > [!NOTE]
 > Lấy ví dụ của transformation này: **shift toàn bộ space** bởi
-> \**v_0**, câu hỏi là đây **có phải là linear transformation**
+> **v_0**, câu hỏi là đây **có phải là linear transformation**
 > không?
 >
 > Me: thử lập luận như sau: (u+v)+v0 không bằng (u+v0)
@@ -311,7 +311,7 @@
 > gì**, (có nghĩa là **KHÔNG BIẾT MATRIX A đứng đằng
 > sau T(v) = Av là gì**) thì
 >
-> \**TA CẦN BAO NHIÊU THÔNG TIN ĐỂ CÓ THỂ TÍNH
+> **TA CẦN BAO NHIÊU THÔNG TIN ĐỂ CÓ THỂ TÍNH
 > T(v) VỚI MỌI v?**
 
 <br>
@@ -322,11 +322,11 @@
 
 > [!NOTE]
 > Đại khái lập luận thế này, giả sử ta có **2 INDEPENDENT**
-> \**VECTOR v1, v2 span toàn bộ một plane R^2**.
+> **VECTOR v1, v2 span toàn bộ một plane R^2**.
 >
 > Thì **nếu như biết kết quả của phép linear transformation**
 > trên **v1, v2** tức là **biết T(v1) và T(v2)** thì gs cho rằng ta
-> \**ĐÃ ĐỦ ĐỂ CÓ THỂ TÍNH T(v) VỚI MỌI v** trong plane đó.
+> **ĐÃ ĐỦ ĐỂ CÓ THỂ TÍNH T(v) VỚI MỌI v** trong plane đó.
 >
 > Bởi vì **v1, v2 là một basis** nên có thể express v bất kì dưới
 > dạng linear combination của v1, v2: **v = c*v1 + d*v2**
@@ -373,7 +373,7 @@
 > Tiếp theo, đại khái là gs nói về **COORDINATES**,
 >
 > Và ông cho biết coordinates (của một vector, hay một điểm)
-> \**thực ra chính là các COEFFICIENTS trong LINEAR
+> **thực ra chính là các COEFFICIENTS trong LINEAR
 > COMBINATION** CỦA CÁC BASIS VECTORS để tạo ra
 > vector đó
 >
@@ -381,11 +381,11 @@
 > cv1+dv2, thì (c,d) là coordinates của v với basis v1, v2
 >
 > Hay nói cách khác, **KHI TA XÁC ĐỊNH MỘT BASIS**, thì
-> \**CÁC COFFICIENTS CỦA CÁC BASIS TẠO RA V CHÍNH
+> **CÁC COFFICIENTS CỦA CÁC BASIS TẠO RA V CHÍNH
 > LÀ COORDINATES CỦA V**
 
 > [!NOTE]
-> \**COORDINATES** (của một vector, hay một điểm) thực ra
+> **COORDINATES** (của một vector, hay một điểm) thực ra
 > chính là các **COEFFICIENTS** trong **LINEAR** **COMBINATION** 
 > CỦA CÁC **BASIS VECTORS** để tạo ra vector đó
 
@@ -408,7 +408,7 @@
 
 > [!NOTE]
 > Và đại khái là ta **thật ra đã luôn** **đang dùng**
-> \**STANDARD BASIS**.
+> **STANDARD BASIS**.
 >
 > Ví dụ như vector v = (3 2 4) như vầy thì dễ thấy ta THẬT RA
 > ĐANG THỂ HIỆN NÓ VỚI BỘ **STANDARD BASIS**:
@@ -439,9 +439,9 @@
 > KHÁC SẼ TẠO NÊN COORDINATE KHÁC** 
 
 > [!NOTE]
-> \**CHỌN MỘT BASIS** KHÁC, VÍ DỤ NHƯ DÙNG
+> **CHỌN MỘT BASIS** KHÁC, VÍ DỤ NHƯ DÙNG
 > EIGENVECTORS chẳng hạn, khi đó **COEFFICIENTS**
-> \**KHÁC SẼ TẠO NÊN COORDINATE KHÁC**
+> **KHÁC SẼ TẠO NÊN COORDINATE KHÁC**
 
 <br>
 
@@ -460,7 +460,7 @@
 > và **CHỌN MỘT  BASIS w1, w2...wm CHO OUTPUT** in
 > R^m
 >
-> \**2)** CHUẨN BỊ PHÉP **LINEAR TRANSFORMATION** CHO
+> **2)** CHUẨN BỊ PHÉP **LINEAR TRANSFORMATION** CHO
 > CÁC **INPUT BASIS VECTOR ĐÓ T(v1), T(v2)**...
 >
 > 3) **BIỂU DIỄN** **KẾT QUẢ T(v1), T(v2) THEO CÁC BASIS
@@ -485,9 +485,9 @@
 > Đầu tiên gs **chọn basis vector của input và output đều
 > là** là hai vector v 1,v2 này:
 >
-> \**MỘT CÁI THEO LINE (v1)**,
+> **MỘT CÁI THEO LINE (v1)**,
 >
-> \**MỘT CÁI VUÔNG GÓC VỚI LINE (v2)**.
+> **MỘT CÁI VUÔNG GÓC VỚI LINE (v2)**.
 >
 > Câu hỏi là **matrix A là gì?**
 
@@ -561,18 +561,18 @@
 > MATRIX A CẦN XÂY DỰNG SẼ CÓ EIGENVECTOR LÀ 2
 > BASIS VECTORS NÀY** Hay nói cách khác ta đã **CHỌN BASIS SAO CHO
 > MATRIX A CÓ MỘT EIGENVECTOR TRÙNG VỚI LINE**
-> \**(basis thứ 1)**, ỨNG VỚI **EIGENVALUE BẰNG 1.** Cho nên Av1 = 1*v1
+> **(basis thứ 1)**, ỨNG VỚI **EIGENVALUE BẰNG 1.** Cho nên Av1 = 1*v1
 >
 > Và **EIGENVECTOR THỨ HAI VUÔNG GÓC VỚI LINE**
 > (basis thứ 2) với **VỚI EIGENVALUE** **là 0**.
 >
 > Nên Av2 = 0*v2 Để rồi:
 >
-> \**T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1** 
+> **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1** 
 >
 > và
 >
-> \**T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0**  Và đây là good basis, vì **giúp cho matrix A cần xây
+> **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0**  Và đây là good basis, vì **giúp cho matrix A cần xây
 > dựng có dạng** là một **DIAGONAL matrix** với **eigenvalue
 > nằm trên diagonal.** Và diagonal matrix với các eigenvalue
 > nằm trên đường chéo chính là matrix Λ Và như đã nói, vì ta đã xây dựng A giúp transform hai
@@ -590,18 +590,18 @@
 > MATRIX A CẦN XÂY DỰNG SẼ CÓ EIGENVECTOR LÀ 2
 > BASIS VECTORS NÀY** Hay nói cách khác ta đã **CHỌN BASIS SAO CHO
 > MATRIX A CÓ MỘT EIGENVECTOR TRÙNG VỚI LINE**
-> \**(basis thứ 1)**, ỨNG VỚI **EIGENVALUE BẰNG 1.** Cho nên Av1 = 1*v1
+> **(basis thứ 1)**, ỨNG VỚI **EIGENVALUE BẰNG 1.** Cho nên Av1 = 1*v1
 >
 > Và **EIGENVECTOR THỨ HAI VUÔNG GÓC VỚI LINE**
 > (basis thứ 2) với **VỚI EIGENVALUE** **là 0**.
 >
 > Nên Av2 = 0*v2 Để rồi:
 >
-> \**T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1** 
+> **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1** 
 >
 > và
 >
-> \**T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0**  Và đây là good basis, vì **giúp cho matrix A cần xây
+> **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0**  Và đây là good basis, vì **giúp cho matrix A cần xây
 > dựng có dạng** là một **DIAGONAL matrix** với **eigenvalue
 > nằm trên diagonal.** Và diagonal matrix với các eigenvalue
 > nằm trên đường chéo chính là matrix Λ Và như đã nói, vì ta đã xây dựng A giúp transform hai
@@ -713,7 +713,7 @@
 > nó là **symmetric matrix**, c**ũng thỏa các tính chất như
 > P^2 = P**
 >
-> \**Nhưng với good basis** là hai vector trên line và vuông
+> **Nhưng với good basis** là hai vector trên line và vuông
 > góc với line, **ta được (projection) matrix CŨNG
 > SYMMETRIC, NHƯNG CÒN DIAGONAL**. Ngoài ra thì
 > việc A^2 = A rất dễ thấy
@@ -733,11 +733,11 @@
 >
 > Thế thì diễn đạt bằng lời đó là:
 >
-> \**Lấy basis vector thứ nhất** của input : **v1**.
+> **Lấy basis vector thứ nhất** của input : **v1**.
 >
-> \**Apply linear transformation lên nó T(v1)**.
+> **Apply linear transformation lên nó T(v1)**.
 >
-> \**Diễn đạt nó** dưới dạng **linear combination các basis
+> **Diễn đạt nó** dưới dạng **linear combination các basis
 > của output** (u1, u2....): 
 >
 > T(v1) = a11u1 + a21u2 + ...
@@ -849,7 +849,7 @@
 > gs lấy ví dụ khác. cũng là một linear transformation: đó là
 > phép **tính derivative w.r.t x**
 >
-> \**input basis** là 3 vector (again, ta đã biết **function có thể
+> **input basis** là 3 vector (again, ta đã biết **function có thể
 > đóng vai trò là vector**, hay khái niệm vector hay vector space
 > không chỉ giới hạn trong vector thông thường mà còn mở
 > rộng với function): {1, x, x^2} và **output basis là {1, x}**

@@ -320,7 +320,7 @@
 > = **A**E[**ZZ**T]**A**T (Linearity)
 >
 > Xét E[**ZZ**T]: Để thấy nó là cái gì, ta xét Cov(**Z**,**Z**) = E[(**Z**-E**Z**)(**Z**-E**Z**)T] = E[(**Z** - **0**)(**Z**T -
-> \**0**T] (**0** là vector zero)
+> **0**T] (**0** là vector zero)
 >
 > = E[**ZZ**T]. À như vậy,E[ZZT] = Cov(**Z,Z**) và như ở trên mình đã biết, nó là Identity matrix: I
 >
@@ -479,7 +479,7 @@
 > σ^2)
 >
 > Hồi nãy, khi xây dựng công thức multivariate Gaussian (**μ**, **Σ**), mình đã bắt đầu với
-> \**Z** = (Z1,...ZD) là random variable vector, với Zi ~ normal(0,1). Để rồi đổi biến với X =
+> **Z** = (Z1,...ZD) là random variable vector, với Zi ~ normal(0,1). Để rồi đổi biến với X =
 > A**Z** + **μ** ta có **X** là vector (X1,...XD)
 >
 > Thế thì theo đó (x1,...xD) đúng là một observed value của **X**, là một R-D dimensional
@@ -495,7 +495,7 @@
 > Nên X trong bối cảnh sau và bối cảnh trước nó hơi khác nhau.
 >
 > Nhưng nếu cứ theo toán mà làm, thì thật ra cũng đều là **X**, random variable vector và
-> \**x** là giá trị quan sát được của nó.
+> **x** là giá trị quan sát được của nó.
 >
 > Và sự thật thì distribution của **X** trong bối cảnh sau cũng là N-dimensional Normal chỉ
 > có điều μ và Σ = diag(σ^2) = σ^2 I (vì các biến X1,...Xn độc lập, nên Covariance matrix
@@ -522,7 +522,7 @@
 > \-----
 >
 > Rồi, nếu bây giờ, đổi distribution của X đi chút, để nó là **D-dimensional Normal**(μ
-> \**1**, σ^2 **I**)
+> **1**, σ^2 **I**)
 >
 > μ***1** có nghĩa là nhân scalar μ cho vector 1 = [1,...1] để có vector [μ,...μ]
 >
@@ -548,7 +548,7 @@
 > ====
 >
 > Rồi, thế thì như vậy giúp hoàn toàn rõ ràng rằng, ở đây ta có **X** (mà gs dùng chữ
-> \**x**, vốn là đã khiến ta mệt mỏi, vì ông làm vậy ông đã không còn theo quy tắc đặt tên
+> **x**, vốn là đã khiến ta mệt mỏi, vì ông làm vậy ông đã không còn theo quy tắc đặt tên
 > của toán rồi nhưng may mà mình học Casella nên hiểu rõ để ko bị lú. Nên cứ viết theo
 > notation của Stat110 hay Casella: Viết hoa cho biến, viết thường cho giá trị biến, chữ
 > đậm cho vector, chữ ốm cho scalar) là random sample của các X1,...XN có population
@@ -559,7 +559,7 @@
 >
 > Và đó chính là data set, và tới đây CHÚ Ý CỤM TỪ NÀY CỦA mr BISHOP:
 >
-> \**PROBABILITY OF THE DATA SET**
+> **PROBABILITY OF THE DATA SET**
 >
 > Ý ông là sao?
 >

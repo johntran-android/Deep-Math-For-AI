@@ -116,7 +116,7 @@
 >
 > 2 Using a **standard neural network** for learning the mapping from x to
 > y does not work well due to **different input and output lengths** and
-> \**the inability to share learned features across** **different positions** of
+> **the inability to share learned features across** **different positions** of
 > texts.
 >
 > 3 **Recurrent Neural Networks (RNNs)** are a solution that address the
@@ -361,7 +361,7 @@
 > involves **predicting the probability of a particular sequence of words**.
 >
 > 2 A language model is used in **speech recognition systems** to identify the
-> \**probability of a particular sentence**, and it is also used in **machine
+> **probability of a particular sentence**, and it is also used in **machine
 > translation** systems to output **only likely sentences.**
 >
 > 3 To build a language model using an RNN, you need **a training set of a
@@ -529,7 +529,7 @@
 > 3 If the sequence model is built on a word-level vocabulary,
 > each y1, y2, y3,... represents a word, but if it is built on a
 > character-level vocabulary, each y1, y2, y3,... represents a
-> \**character**.
+> **character**.
 >
 > 4 Building a character-level language model has pros and cons,
 > such as being able to assign a probability to any sequence of
@@ -631,10 +631,10 @@
 > model's output and input on the computation.
 >
 > 5 **Difficulty** of getting the neural network to **memorize** and use the
-> \**relevant information from earlier in the sequence.**
+> **relevant information from earlier in the sequence.**
 >
 > 6 Discussion of the solution to the vanishing gradient problem with
-> \**GRUs**, which will allow the neural network to **capture longer-range
+> **GRUs**, which will allow the neural network to **capture longer-range
 > dependencies.**
 >
 > 7 **Exploding gradient problem** and the solution of **gradient clipping.**
@@ -680,14 +680,14 @@
 > [!NOTE]
 > Nói chung đại khái là nói về những thách thức của basic
 > RNN:
-> \**-** **Gradient Vanishing**: Qua nhiều time-step, gradient bị vanish
+> **-** **Gradient Vanishing**: Qua nhiều time-step, gradient bị vanish
 > giống giống như train một N.N rất deep - nhiều layer.
 >
-> \**- Vấn đề không 'nhớ' được** rằng lúc đầu là they - số nhiều để
+> **- Vấn đề không 'nhớ' được** rằng lúc đầu là they - số nhiều để
 > sau phải dùng were.
 >
-> \**- Gradient exploding** thì ít gặp hơn và có cách xử bằng 
-> \**Gradient Clipping** còn G.V thì khó nhận biết và xử lý hơn.
+> **- Gradient exploding** thì ít gặp hơn và có cách xử bằng 
+> **Gradient Clipping** còn G.V thì khó nhận biết và xử lý hơn.
 
 <br>
 
@@ -738,7 +738,7 @@
 > a **sigmoid** function.
 >
 > 6 The gate allows the network to **decide when to update the memory cell value**,
-> \**based on the relevance of the current input to long-range connections**.
+> **based on the relevance of the current input to long-range connections**.
 >
 > 7 **The key equation for the GRU involves combining the candidate value and
 > previous memory cell value with the gate value to determine the updated memory
@@ -789,7 +789,7 @@
 > và current input để tính ra activation của unit.
 >
 > The formula for computing the activations of an RNN unit involves the
-> \**activation function applied to the previous activation** and the **current
+> **activation function applied to the previous activation** and the **current
 > input**, passed through some **weights** and a **bias**. This can be
 > represented visually as a box with inputs for a previous time step and
 > current input, and output activation.
@@ -831,7 +831,7 @@
 > [!NOTE]
 > 1 **Gated Recurrent Units (GRUs)** are **modifications to the basic RNN**
 > hidden layer that allow for **better capturing of long-range connections** and
-> \**addressing vanishing gradient** problems.
+> **addressing vanishing gradient** problems.
 >
 > 3 The GRU unit involves a **memory cell (C)** that **provides memory for
 > previous inputs**, **allowing the network to remember relevant information for
@@ -851,7 +851,7 @@
 > connections**.\/
 >
 > 7 The key equation for the GRU involves combining the **candidate value** and
-> \**previous memory cell value** with the **gate value** to **determine the updated
+> **previous memory cell value** with the **gate value** to **determine the updated
 > memory cell value**.
 >
 > 8 The gate is an important component of the GRU and can be thought of as **a
@@ -866,7 +866,7 @@
 > connections in sequences of data**. [1]
 
 > [!NOTE]
-> \**"the relevance of the current input"**: Hiểu đại khái là nếu input x
+> **"the relevance of the current input"**: Hiểu đại khái là nếu input x
 > tại một unit nào đó có ảnh hưởng đến các unit ở xa hơn (long
 > range connection) thì nó sẽ được giữ lại và tính toán sau này (ví dụ
 > như They và were vậy
@@ -980,16 +980,16 @@
 > passed through time, allowing values to be passed from one LSTM
 > to another.
 >
-> \**Đại khái là các unit nối lại bằng thêm một đường màu đỏ cho phép
+> **Đại khái là các unit nối lại bằng thêm một đường màu đỏ cho phép
 > thông tin được giữ lại và pass đi xuyên suốt.**
 >
 > Overall, the LSTM is a powerful type of RNN that is able to learn
 > l**ong-term dependencies** in sequences. Its equations are **more
 > complex** than those of the GRU, but its multiple gates give it more
-> \**flexibility** and **control** over which information to remember and which
+> **flexibility** and **control** over which information to remember and which
 > to forget.
 >
-> \**Nói chung LSTM phức tạp nhưng linh hoạt hơn còn GRN đơn giản
+> **Nói chung LSTM phức tạp nhưng linh hoạt hơn còn GRN đơn giản
 > nhưng cho phép scale up tốt hơn**
 
 > [!NOTE]
@@ -1305,9 +1305,9 @@
 > Ở đây ổng cho m = batch_size luôn
 >
 > Hiểu được như vậy thì input của mỗi time step sẽ là:  (**nx**,
-> \**batch_size** **= m**)
+> **batch_size** **= m**)
 >
-> \*(Ghi chú từ lần review thứ 1)
+> *(Ghi chú từ lần review thứ 1)
 
 <br>
 
@@ -2007,7 +2007,7 @@
 > rằng khả năng đáp án đúng chính là kí tự thứ 'd' là bao nhiêu %
 > (cao hay thấp).
 >
-> \**y^[1] là vector chứa khả năng (Probability) của các kí tự trong 
+> **y^[1] là vector chứa khả năng (Probability) của các kí tự trong 
 > vocab list là đáp án đúng [P('a'), P('b'), ...P('z')]**
 > và index của chúng trong vocab list tất nhiên lần lượt là 0,1,2,3,..
 >
@@ -2166,7 +2166,7 @@
 > model that uses an LSTM to generate music. At the end, you'll even be able to
 > listen to your own music!
 >
-> \**By the end of this assignment, you'll be able to:**
+> **By the end of this assignment, you'll be able to:**
 >  • Apply an LSTM to a music generation task
 >  • Generate your own jazz music with deep learning
 >  • Use the flexible Functional API to create complex models

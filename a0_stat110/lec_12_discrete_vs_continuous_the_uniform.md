@@ -53,12 +53,12 @@
 <p align="center"><kbd><img src="assets/8c8518a9cb3f3ef4277aee43dfdc5f72c6f74da3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Khác biệt** đầu tiên giữa discrete và continuous là. sự xuất hiện của **PDF**
+> **Khác biệt** đầu tiên giữa discrete và continuous là. sự xuất hiện của **PDF**
 > thay vì PMF
 >
 > Gs nói đại khái là vì với continuous r.v, có **có thể có mọi giá trị**, ví dụ trong
 > khoảng từ 0 tới 1. Thế thì vì có **VÔ SỐ REAL NUMBER TỪ 0 TỚI 1**. Nên
-> \**xác suất X mang giá trị cụ thể nào cũng là bằng 0: P(X=x) = 0 
+> **xác suất X mang giá trị cụ thể nào cũng là bằng 0: P(X=x) = 0 
 >
 > Do PMF P(X=x) USELESS, nên ta cần PDF**
 
@@ -82,9 +82,9 @@
 
 > [!NOTE]
 > Ta sẽ làm quen qua **PDF**. Gs cho rằng **ý chính cần hiểu** là chữ
-> \**DENSITY** (**Mật độ**). Và đây là **khác biệt quan trọng** với PMF, trong
+> **DENSITY** (**Mật độ**). Và đây là **khác biệt quan trọng** với PMF, trong
 > PMF, **Mass** mang ý nghĩa là **xác suất**, giống như trong pebble world,
-> \**tổng khối lượng các viên sỏi bằng 1**, và **KHỐI LƯỢNG mỗi viên sỏi
+> **tổng khối lượng các viên sỏi bằng 1**, và **KHỐI LƯỢNG mỗi viên sỏi
 > (possible outcome) là XÁC SUẤT XẢY RA của possible outcome** đó
 >
 > Nhưng qua continuous case, PDF. Ta không có xác suất mà là **MẬT ĐỘ
@@ -185,7 +185,7 @@
 
 > [!NOTE]
 > Và nếu dùng công thức integrate ta cũng sẽ có kết quả tương tự. Đó là vì với
-> \**epsilon** **RẤT RẤT NHỎ**, thì **trong khoảng thay đổi rất nhỏ của x**, f(x) **không
+> **epsilon** **RẤT RẤT NHỎ**, thì **trong khoảng thay đổi rất nhỏ của x**, f(x) **không
 > thay đổi mấy**, coi như hằng số.
 >
 > Và integrate **constant từ a (=-eps/2) đến b (=eps/2)** đơn giản là bằng **constant
@@ -212,7 +212,7 @@
 > Cho nên **để có P(X<=x)** ta chỉ cần **integrate hàm mật độ xác suất PDF trên KHOẢNG NHỎ HƠN x**,
 > đó chính là từ **trừ vô cùng tới x:**
 >
-> \**CDF: P(X<=x) = TÍCH PHÂN TỪ -infinity TỚI x f(t)dt  (f hay f(x) là PDF của X)**
+> **CDF: P(X<=x) = TÍCH PHÂN TỪ -infinity TỚI x f(t)dt  (f hay f(x) là PDF của X)**
 >
 > Ở đây gs nói **t** chỉ là ta dùng một biến khác / tên biến khác (gọi là dummy variable) để không lẫn lộn với x, có thể dùng u,v,a,b gì đó không 
 > quan trọng
@@ -286,7 +286,7 @@
 > \/"Và **phần thứ hai** của FTC cho biết rằng **tích phân trên đoạn [a, b] của
 > hàm f(x)** sẽ **có thể tính thông qua nguyên hàm của f(x) tức F(x)**:
 >
-> \**=> Tích phân từ a đến b f(x)dx = F(b) - F(a)**
+> **=> Tích phân từ a đến b f(x)dx = F(b) - F(a)**
 >
 > Do đó dựa vào **phần 2 của FTC** ta có thể tính **xác suất x thuộc [a, b]:
 >
@@ -294,7 +294,7 @@
 >
 > thì cái này có thể tính BẰNG CÁCH DÙNG CDF = F(b) - F(a)**
 >
-> \*Gs nói ta nói **khoảng hay đoạn đều được** vì với continuous random
+> *Gs nói ta nói **khoảng hay đoạn đều được** vì với continuous random
 > variables thì P(X=x) = 0. Tức là **nói P(a<x<b) hay P(a<=x<=b) đều được\/** ⇨ Soi sáng bởi 1801 Xác nhận lại: Theo 1801 thì đây là FTC1: nếu F' = f
 > thì ∫a:b f(x)dx = F(b) - F(a). Từ đó từ việc ta đã có đạo hàm của CDF là PDF
 > F'(x) = f(x). Nên vận dụng FTC1 ta có thể tính xác suất X rơi vào vùng a:b
@@ -370,7 +370,7 @@
 > của random variable X với mean** (EX, hoặc E(X), gs có nói ta có thể không
 > cần dấu ngoặc): X - EX
 >
-> \**Var (X) = E(X-E(X))**
+> **Var (X) = E(X-E(X))**
 >
 > Thế thì vấn đề là gs nói nếu dùng công thức này để tính variance thì sẽ V**Ô DỤNG**. 
 > Vì theo **linearity**:
@@ -427,7 +427,7 @@
 > [!NOTE]
 > Và ông nói thực ra **khi làm việc** ta sẽ t**huận tiện hơn** khi **làm với variance**,
 > chẳng qua là **khi cần giá trị nào đó có cùng unit** cho mục đích **interpretable**
-> \**thì dùng standard deviation**
+> **thì dùng standard deviation**
 
 <br>
 
@@ -438,7 +438,7 @@
 > [!NOTE]
 > Môt **cách thể hiện khác**, ta sẽ triển khai **(X-EX)^2**:
 >
-> \**X^2 - 2X(EX) + (EX)^2**
+> **X^2 - 2X(EX) + (EX)^2**
 
 <br>
 
@@ -473,7 +473,7 @@
 
 > [!NOTE]
 > Gs nói **kết quả này** làm ta **liên tưởng đến câu hỏi** mà có thể đã gặp là
-> \**[trung bình của bình phương]** có giống với **[bình phương của trung bình]**
+> **[trung bình của bình phương]** có giống với **[bình phương của trung bình]**
 > hay không.
 >
 > Thì kết quả này cho ta thấy **Trung bình của bình phương, tức E[X^2]** luôn lớn
@@ -634,7 +634,7 @@
 
 > [!NOTE]
 > Tiếp theo ta sẽ tính **variance**. Thế thì **theo công thức thứ 2**, variance =
-> \**Var(X) = E(X^2) - (EX)^2**
+> **Var(X) = E(X^2) - (EX)^2**
 >
 > Vậy ta đã có EX, **cần thêm E(X^2)**. Thế thì nếu **đặt Y = X^2** thì **E(X^2) =
 > E(Y)**.
@@ -642,7 +642,7 @@
 > Và **để có E(Y)** **TA PHẢI CÓ PDF CỦA Y** (gọi là **f_Y(y)**) thì khi đó ta **mới có
 > thể tính E(Y)** = **tích phân -infinity:infinity của y *f(y)dy**.
 >
-> \**Có điều ta không có f_Y(y).**
+> **Có điều ta không có f_Y(y).**
 >
 > Nên một cách **LÀM BIẾNG / VÔ Ý THỨC (UNCONSCIOUS)**, ta **có thể cứ dùng 
 > lại cái f_X(x) tức là PDF của X**:
@@ -650,7 +650,7 @@
 > tích phân từ **-infinity: infinity x f_X(x)dx**, nhưng **THAY x (đứng trước f_X(x)) 
 > bằng x^2:**
 >
-> \**tích phân từ -infinity: infinity x^2 f_X(x)dx**
+> **tích phân từ -infinity: infinity x^2 f_X(x)dx**
 >
 > Có nghĩa là **thay vì dùng f_Y(y), ta vẫn dùng f_X(x)**
 >
@@ -666,7 +666,7 @@
 > ta chỉ việc thay x bằng g(x))**
 
 > [!NOTE]
-> \**LOTUS - LAW OF UNCONSCIOUS
+> **LOTUS - LAW OF UNCONSCIOUS
 > STATISTICIAN** 
 
 <br>
@@ -678,7 +678,7 @@
 > [!NOTE]
 > Và gs cho biết ta sẽ **quay lại chứng minh LOTUS sau**. Với **discrete** cũng vậy
 >
-> \**LOTUS cho phép tính E(g(X))** = Tổng mọi possible value của X: **g(X) P(X=x)**
+> **LOTUS cho phép tính E(g(X))** = Tổng mọi possible value của X: **g(X) P(X=x)**
 >
 > tức là thay x bằng g(X), còn thì vẫn dùng PMF của X, thay vì phải đi tìm PMF 
 > của g(X)
@@ -694,15 +694,15 @@
 > [!NOTE]
 > Ví dụ **U~Uniform(0,1)** tức **a=0,b=1**
 >
-> \**E(U) = (b+a)/2** như vừa chứng minh, **= 1/2**
+> **E(U) = (b+a)/2** như vừa chứng minh, **= 1/2**
 >
-> \**E(U^2)** nhờ áp dụng LOTUS, = **tích phân từ 0 tới 1 u^2 f(u)du**
+> **E(U^2)** nhờ áp dụng LOTUS, = **tích phân từ 0 tới 1 u^2 f(u)du**
 >
 > với **f(u) là PDF của Unif(a, b) = constant c = 1/(b-a)** như hồi nãy đã chứng minh, nên với b=1, a=0, f(u) = **1**
 >
 > Vậy E(U^2) = tích phân từ 0 tới 1 u^2 * **1** * du = [nguyên hàm của u^2](b) - [nguyên hàm của u^2](a)
 >
-> \**Nguyên hàm của u^2 là = u^3/3** (vì derivative của d/du u^3/3 = u^2)
+> **Nguyên hàm của u^2 là = u^3/3** (vì derivative của d/du u^3/3 = u^2)
 >
 > Vậy E(U^2) = **b^3/3 - a^3/3 = 1/3**
 >
@@ -750,7 +750,7 @@
 >
 > Thì tính Universal của Uniform cho ta biết rằng:
 >
-> \**Nếu đặt X là F_inv(U) thì X sẽ là random variable tuân theo distribution  quy
+> **Nếu đặt X là F_inv(U) thì X sẽ là random variable tuân theo distribution  quy
 > định bởi / có CDF là F.** Gs ghi **X ~ F**. Chính là vậy - random variable t**uân theo distribution quy
 > định bởi / có CDF là F**.
 >
@@ -758,7 +758,7 @@
 > quan tâm, và ta biết **nó là CDF của một random variable nào đó** mà ta chưa
 > biết. Thì
 >
-> \**CHỈ CẦN TÌM** **F_inv** rồi **GẮN VÀO** **Uniform (0,1) r.v U** vào để có **F_inv(U)** thì 
+> **CHỈ CẦN TÌM** **F_inv** rồi **GẮN VÀO** **Uniform (0,1) r.v U** vào để có **F_inv(U)** thì 
 > ta sẽ **có một r.v X TUÂN THEO DISTRIBUTION CÓ CDF LÀ F.**
 
 > [!NOTE]
@@ -781,7 +781,7 @@
 > Để **chứng minh** đại khái là gs cho rằng **không có gì ghê gớm**, ta chỉ cần **bắt đầu với định nghĩa của CDF**:
 >
 > Đó là vì **CDF của random variable X** là hàm số quy định **P(X<=x)**, nên **để chứng minh F là CDF của X** = F_inv(U) thì ta sẽ 
-> \**chứng minh P(X<=x) bằng F(x)** 
+> **chứng minh P(X<=x) bằng F(x)** 
 >
 > Thế thì bắt đầu với **P(X<=x)**, **thay X bằng F_inv(U)**. Ta có **P(F_inv(U) <= x)**
 >

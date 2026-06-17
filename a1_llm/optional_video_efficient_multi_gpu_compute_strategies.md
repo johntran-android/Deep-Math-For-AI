@@ -16,7 +16,7 @@
 > or **8-bit integers (INT8)**.
 >
 > 3. **Quantization** statistically **projects the original 32-bit floating-point numbers** into **lower precision spaces** using
-> \**scaling factors**.
+> **scaling factors**.
 >
 > 4. **Modern deep learning frameworks** and libraries support **quantization-aware training**, where quantization **scaling
 > factors** are learned during the **training process**.
@@ -25,7 +25,7 @@
 > the dynamic range of FP32** but **reducing memory footprint by half.**
 >
 > 6. **Quantization** can significantly **reduce the memory consumption** **required** to store and train models, making it
-> \**feasible** **to train large models on single GPUs** with 16-bit or 8-bit quantization.
+> **feasible** **to train large models on single GPUs** with 16-bit or 8-bit quantization.
 >
 > 7. As models scale beyond a **few billion parameters**, **training on a single GPU becomes impossible**, **necessitating
 > the use of distributed computing techniques** across multiple GPUs.
@@ -52,13 +52,13 @@
 > [!NOTE]
 > You'll begin by considering **the case where your model is still fits on a single GPU**. The first
 > step in scaling model training is to **distribute large data-sets across multiple GPUs** and
-> \**process these batches of data in parallel**. A popular implementation of this model replication
+> **process these batches of data in parallel**. A popular implementation of this model replication
 > technique is **Pytorches distributed data-parallel**, or **DDP** for short. DDP **copy your model
 > onto each GPU** and **sends batches of data to each of the GPUs** in **parallel**. **Each
 > data-set is processed in parallel** and then a **synchronization step combines the results of
 > each GPU**, which **in turn updates the model on each GPU**, which is always identical across
 > chips. This implementation allows **parallel computations** across all GPUs that results in
-> \**faster training**
+> **faster training**
 
 > [!NOTE]
 > Như cũng đã biết bên MLOps Spec, kiểu đang nói là copy model trên nhiều GPU, rồi mỗi GPU
@@ -75,7 +75,7 @@
 > [!NOTE]
 > If your model is **too big** for this, you should look into another technique called **modal
 > sharding**. A popular implementation of modal sharding is **Fully Sharded Data Parallel,** or
-> \**FSDP** for short. FSDP is motivated by a paper published by researchers at Microsoft in 2019
+> **FSDP** for short. FSDP is motivated by a paper published by researchers at Microsoft in 2019
 > that proposed a technique called **ZeRO**. ZeRO stands for **zero redundancy optimizer** and
 > the goal of ZeRO is to optimize memory by distributing or sharding model states across GPUs
 > with ZeRO data overlap. This allows you to **scale model training across GPUs** when **your
@@ -95,8 +95,8 @@
 > [!NOTE]
 > Earlier this week, you looked at all of the **memory components** required for training
 > LLMs, the **largest memory requirement was for the optimizer states**, which take up
-> \**twice as much space as the weights**, followed by **weights** themselves and the
-> \**gradients**. Let's represent the parameters as this blue box, the gradients and yellow
+> **twice as much space as the weights**, followed by **weights** themselves and the
+> **gradients**. Let's represent the parameters as this blue box, the gradients and yellow
 > and the optimizer states in green.
 
 <br>
@@ -137,9 +137,9 @@
 
 > [!NOTE]
 > Đại khái là với **cấp độ 1**, nó sẽ **shard optimizer's states**, có thể giúp
-> \**giảm memory xuống 4 lần**. Ở **stage 2**, thêm **gradients** cùng với stage 1
+> **giảm memory xuống 4 lần**. Ở **stage 2**, thêm **gradients** cùng với stage 1
 > có thể giúp **giảm 8 lần** memory cần thiết. **Stages 3** thì shard luôn
-> \**model params**. và ở cấp này, factor sẽ là bằng số GPU - ví dụ có **64
+> **model params**. và ở cấp này, factor sẽ là bằng số GPU - ví dụ có **64
 > GPU thì giảm 64 lần.**
 
 <br>
@@ -159,7 +159,7 @@
 > you saw happening in DDP. But with FSDP, you **also distributed or shard the
 > model parameters, gradients, and optimize the states across the GPU nodes**
 > using one of the **strategies** specified in the **ZeRO paper**. With this strategy, you
-> \**can now work with models that are too big to fit on a single chip**
+> **can now work with models that are too big to fit on a single chip**
 
 > [!NOTE]
 > Đại khái là với **FSDP** ta **không những chia data cho các GPU** mà còn **chia
@@ -213,7 +213,7 @@
 > computation.
 >
 > In summary, FSDP is **suitable** for both **small and large models**, allowing
-> \**seamless scaling** of model training across multiple GPUs. Researchers explore
+> **seamless scaling** of model training across multiple GPUs. Researchers explore
 > compute optimal models to achieve better performance with smaller models due
 > to the complexity and expense of training large models across GPUs.
 

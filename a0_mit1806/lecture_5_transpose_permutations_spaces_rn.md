@@ -34,7 +34,7 @@
 <p align="center"><kbd><img src="assets/b098d4ea5546605bb2011c798916a7684db3b4ea.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Số lượng các reordering khả dĩ là n giai thừa**. Và permutation matrix
+> **Số lượng các reordering khả dĩ là n giai thừa**. Và permutation matrix
 > có tính chất đặc biệt là **P**_**inv chính là P_transpose
 >
 > P_inv = P.T**
@@ -61,7 +61,7 @@
 <p align="center"><kbd><img src="assets/844250914a09eee3d162702be82563c210643999.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Symmetric matrix** là matrix
+> **Symmetric matrix** là matrix
 > transpose ko thay đổi gì
 
 <br>
@@ -134,7 +134,7 @@
 > space R2 chính là toàn bộ mặt phẳng**.
 >
 > Ta có thể nói **toàn bộ** là bởi vì, **giả sử ta lấy đi vector [0,0]**, để có
-> \**kiểu như mặt phẳng nhưng thủng một lỗ** thì **ta sẽ không còn thỏa
+> **kiểu như mặt phẳng nhưng thủng một lỗ** thì **ta sẽ không còn thỏa
 > mãn yêu cầu,** là, **ví dụ vector [3 2] nhân với một scalar 0 sẽ dc một
 > vector cũng trong vector space đó** hay khi cộng với vector [-3 -2] thì dc
 > vector cũng nằm trong vector space
@@ -196,7 +196,7 @@
 
 > [!NOTE]
 > Nhưng check **một line khác ko đi qua origin** thì thấy
-> \**ko thỏa luật**. À **như vậy line phải đi qua O thì mới là
+> **ko thỏa luật**. À **như vậy line phải đi qua O thì mới là
 > subspace.**
 >
 > Và **MỌI SUBSPACE PHẢI CHỨA GỐC 0**, vì **nó phải cho
@@ -298,7 +298,7 @@
 
 > [!NOTE]
 > Đúng là vậy, nó **chính là một plane đi qua hai column vector** và
-> \**đương nhiên qua gốc 0**.
+> **đương nhiên qua gốc 0**.
 >
 > Gs cho rằng cái này **rất quan trọng**. Hình ảnh **lấy 2 vector trong
 > R3  sẽ tạo một subspace của R3 là một không gian 2 chiều - plane**
@@ -306,7 +306,7 @@
 >
 > Giúp ta **hình dung bài toán khác trong vector space R10**, **lấy
 > combination của 5 vector** sẽ **tạo một subspace của R10** là
-> \**một không gian 5 chiều**. (ko phải R5, vì vector có 10 component)
+> **một không gian 5 chiều**. (ko phải R5, vì vector có 10 component)
 >
 > Tất nhiên **còn tùy 5 vector ntn**, **vì nếu chúng cùng trên 1 line thì
 > subspace đó sẽ chỉ là 1 line đi qua gốc 0** như đã biết, nhưng "

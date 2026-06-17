@@ -255,7 +255,7 @@
 >
 > = a^2E[(X - μX)^2] + b^2E[(Y - μY)^2] + 2abE[(X - μX)(Y - μY)] 
 >
-> \**= a^2VarX + b^2VarY + 2abCov(X,Y)
+> **= a^2VarX + b^2VarY + 2abCov(X,Y)
 >
 > Khi X, Y độc lập thì Cov(X,Y) = 0 ⇨ Var(aX + bY) = a^2VarX + b^2VarY**
 
@@ -435,7 +435,7 @@
 >
 > ⇨ **fX,Y(x,y) = 10 ; 0 < x < 1, 0 < y < 1/10 + x** 
 >
-> \**ĐÂY LÀ KẾT QUẢ TRONG SÁCH**
+> **ĐÂY LÀ KẾT QUẢ TRONG SÁCH**
 
 > [!NOTE]
 > Vậy thì ở đây đại khái nói là ta có thể lập luận kiểu khác để cho ra joint pdf
@@ -493,7 +493,7 @@
 >
 > ⇨ **fX,Y(x,y) = 10*1, 0 < x < 1; x < y < x + 1/10**
 >
-> \**KẾT QỦA NÀY Y CHANG CÁI TA CÓ KHI DERIVE BẰNG CÁCH LÀM CỦA
+> **KẾT QỦA NÀY Y CHANG CÁI TA CÓ KHI DERIVE BẰNG CÁCH LÀM CỦA
 > CHAP 3 Ở TRÊN**
 
 > [!NOTE]

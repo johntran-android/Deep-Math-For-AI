@@ -63,7 +63,7 @@
 
 > [!NOTE]
 > nói sơ về việc tại sao attention giúp giải quyết hai vấn đề của RNN là
-> \**linear interaction** và **xử lý song song.**
+> **linear interaction** và **xử lý song song.**
 >
 > về linear interaction thì đại khái là vì với attention, **một node sẽ có tương tác
 > trực tiếp với các node khác dù có ở xa thế nào đi nữa**, chứ không phải gián
@@ -88,7 +88,7 @@
 > [!NOTE]
 > ý tưởng của attention là kiểu như **"giống giống" look up table.** Với cơ chế
 > lookup table, mình đ**ưa ra query**, để rồi xem trong các key-value cái nào có
-> \**key khớp với query thì trả ra value tương ứng**.
+> **key khớp với query thì trả ra value tương ứng**.
 >
 > vậy với attention thì tương tự: chìa ra cái query, để rồi xem trong các cặp key
 > \-value thì c**ái nào có key khớp nhất**. độ khớp ở đây không cứng nhắc (ý là
@@ -154,7 +154,7 @@
 <p align="center"><kbd><img src="assets/f1238710696c9fd592128fe50b7313d1d4695598.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \*câu hỏi thứ nhất là w có shape là gì: w 1:n là chuỗi các từ trong vocab, có thể
+> *câu hỏi thứ nhất là w có shape là gì: w 1:n là chuỗi các từ trong vocab, có thể
 > hiểu w là matrix các one-hot vector, nói chung mỗi w_i là one-hot vector ứng với
 > từ có size là (Vx1), để rồi qua embedding matrix trở thành embedding vector  x_i
 > có dimension là D. x_i (d,1) = E@w_i (d,V@V,1=d,1)
@@ -163,7 +163,7 @@
 >
 > ====
 >
-> \*có câu hỏi đặt ra đó là **tại sao phải có hai matrix Q, K** khi mà  q_T@k chỉ cho
+> *có câu hỏi đặt ra đó là **tại sao phải có hai matrix Q, K** khi mà  q_T@k chỉ cho
 > ra một matrix, có thể hiểu anh này thắc mắc là dù gì thì q (matrix) và k (matrix)
 > cũng nhân nhau để ra matrix vậy tại sao cần phải tính matrix q và k từ X bằng 2
 > matrix riêng biệt Q và K
@@ -176,8 +176,8 @@
 >
 > ====
 >
-> \*câu hỏi nữa liên quan đến e_ii, đại khái câu hỏi có thể hiểu là quan tâm đến
-> \**liệu attention score của một từ với chính nó là ntn**.
+> *câu hỏi nữa liên quan đến e_ii, đại khái câu hỏi có thể hiểu là quan tâm đến
+> **liệu attention score của một từ với chính nó là ntn**.
 >
 > Câu trả lời đó là **vì ta có Q,K riêng** nên **có thể q và k của một từ không giống
 > nhau thành ra attention score của 1 từ với chính nó sẽ không "lớn hơn hết thảy"
@@ -537,7 +537,7 @@
 > XQ(XK).T = XQ(K.T)(X.T) để được matrix (n,n) - mỗi hàng là attention scores
 > vector của một từ với mọi từ khác.
 >
-> \*Như đã nói ở trên đúng ra thì tới đây ta sẽ chia cái cục này cho d để "scale
+> *Như đã nói ở trên đúng ra thì tới đây ta sẽ chia cái cục này cho d để "scale
 > xuống"
 >
 > Tiếp theo ta sẽ apply softmax cho matrix này để normalized, chuyển  attention

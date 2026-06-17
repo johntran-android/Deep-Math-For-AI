@@ -127,7 +127,7 @@
 
 > [!NOTE]
 > Đại khái nói tuy nó **hơi rắc rối** nhưng pointer cho ta
-> \**sức mạnh để làm nhiều cái mà bình thường không
+> **sức mạnh để làm nhiều cái mà bình thường không
 > có**. Ví dụ như trong bài giảng của David về việc **làm function swap hai biến x, y.** 
 >
 > Nếu chỉ như cách thông thường - nơi mà khi pass  var
@@ -352,7 +352,7 @@
 > [!NOTE]
 > Chỗ này hay đây dù biết rồi nhưng đáng nhắc lại đó là **array** 
 > ví dụ int numbers[3] -> numbers là array of integer thì thật ra
-> \**number** chính là **pointer mang giá trị là address tới cái int đầu
+> **number** chính là **pointer mang giá trị là address tới cái int đầu
 > tiên trong array.** Do đó, giả sử viết function setInt() nhận int và ví dụ x2 giá trị
 > thì khi gọi nó với một int variable thì giá trị của variable đưa vào
 > function không bị thay đổi vì như đã biết, nó chỉ đưa copy của var's
@@ -418,7 +418,7 @@
 > mang giá trị là ADDRESS tới một int
 >
 > Rồi khi cần ĐI TỚI VÀ LẤY GIÁ TRỊ ở address đó thì dùng 
-> \*p.
+> *p.
 >
 > \-> Nhiêu đó là thấy flaw rồi, dùng cùng 1 syntax để 2 việc khác
 > nhau, declare pointer, và ĐI TỚI ADDRESS 

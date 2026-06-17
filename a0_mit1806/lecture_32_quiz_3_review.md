@@ -95,7 +95,7 @@
 > nullspace.
 >
 > Vậy các vector khác 0 trong nullspace đó chính là
-> \**eigenvector với eigenvalue = 0**
+> **eigenvector với eigenvalue = 0**
 
 > [!NOTE]
 > Suy niệm một chút về vấn đề SINGULAR: Giả sử ta có matrix A 3x2, với 2
@@ -144,9 +144,9 @@
 > biến **mất đi một chiều không gian**
 >
 > Bàn thêm về rows, vì ta **có 2 independent rows**, là 2 vector trong R^2, nên chúng đã
-> \**đủ span toàn bộ R^2**, dẫn đến **KHÔNG CÓ CHIỀU KHÔNG GIAN NÀO CỦA R2 BỊ
+> **đủ span toàn bộ R^2**, dẫn đến **KHÔNG CÓ CHIỀU KHÔNG GIAN NÀO CỦA R2 BỊ
 > SUY BIẾN THÀNH 0 CẢ** ĐỂ RỒI **vector x nào trong R^2** cũng đều được matrix A
-> \**map nó với Ax khác 0 thuộc 2D plane column space**.
+> **map nó với Ax khác 0 thuộc 2D plane column space**.
 >
 > Input x trong **R^2** qua A, output Ax **vẫn trong một 2D plane** của R3, không có sự suy biến
 > chiều không gian.
@@ -320,11 +320,11 @@
 >
 > Vậy e^At = **Tổng n: [S*(Λ^n)*Sinv*(t^n)]/n!**
 >
-> \**Bỏ S ra khỏi tổng:**
+> **Bỏ S ra khỏi tổng:**
 >
 > S * { Tổng n: [(Λ^n)*Sinv*(t^n)]/n! }
 >
-> \**Bỏ S_inv ra khỏi tổng:**
+> **Bỏ S_inv ra khỏi tổng:**
 >
 > S * {  Tổng n: [(Λ^n)*(t^n)]/n! } * Sinv =
 >
@@ -534,13 +534,13 @@
 > VỚI ATA.
 >
 > Bởi lẽ ta đã biết ĐỐI VỚI **SYMMETRIC MATRIX**,
-> \**DIAGONALIZATION** CHÍNH LÀ **SVD**
+> **DIAGONALIZATION** CHÍNH LÀ **SVD**
 >
-> \**Nên khi ta có ATA = V(ΣTΣ)VT** thì nó cũng **VỪA LÀ SVD CỦA
+> **Nên khi ta có ATA = V(ΣTΣ)VT** thì nó cũng **VỪA LÀ SVD CỦA
 > ATA CŨNG VỪA LÀ DIAGONALIZATION CỦA ATA**:
 >
 > Ta biết khi diagonalization ATA = QΛQT THÌ **Q** là
-> \**ORTHOGONAL EIGENVECTORS Q CỦA ATA** (với Qinv = QT)
+> **ORTHOGONAL EIGENVECTORS Q CỦA ATA** (với Qinv = QT)
 > và **Λ là DIAGONAL EIGENVALUES MATRIX CỦA ATA**
 >
 > Vậy nên V CHÍNH LÀ Q, ΣTΣ CHÍNH LÀ Λ
@@ -555,7 +555,7 @@
 > Rn (gồm rowspace và nullspace của A).
 >
 > Thế thì nếu A là symmetric, ta biết A = AT thì đương nhiên
-> \**columns space chính là rowspace**. Nên **U chính là V**.
+> **columns space chính là rowspace**. Nên **U chính là V**.
 >
 > Điều này biện minh cho việc tại sao V đóng vai trò của cả V và U
 > khi SVD matrix ATA.

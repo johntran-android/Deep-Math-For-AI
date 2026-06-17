@@ -23,7 +23,7 @@
 > taking one step.
 >
 > 4 Mini-batch gradient descent algorithm involves dividing training sets into
-> \**mini-batches** and **processing them iteratively** for faster training.
+> **mini-batches** and **processing them iteratively** for faster training.
 >
 > 5 Mini-batches consist of a **subset of the training set** and are processed in a
 > For loop using one step of gradient descent.
@@ -63,7 +63,7 @@
 <p align="center"><kbd><img src="assets/12130e9b94754d445b8cffb54244f644700d7fc8.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Epoc chính là số Iteration** thôi 
+> **Epoc chính là số Iteration** thôi 
 > Trong mỗi epoch/Iteration:
 >
 > Đ/v **mini batch**: nó sẽ chạy lần lượt tất
@@ -114,14 +114,14 @@
 > on every iteration** due to training on different mini-batches.
 >
 > 3 **The size of the mini-batch** used in gradient descent is a
-> \**parameter that needs to be chosen**.
+> **parameter that needs to be chosen**.
 >
 > 4 A **mini-batch size** of **m** results in **batch** gradient descent, while a
 > mini-batch size of **1** results in **stochastic** gradient descent.
 >
 > 5 **Batch** gradient descent takes **too much time per iteration** for a
 > large training set, while **stochastic** gradient descent can be
-> \**extremely noisy**.
+> **extremely noisy**.
 >
 > 6 The mini-batch size used in practice is usually somewhere in
 > between **1 and m**, as these values are respectively too small and
@@ -200,10 +200,10 @@
 
 > [!NOTE]
 > 1 The speaker wants to show some **optimization algorithms** that are
-> \**faster than gradient descent.**
+> **faster than gradient descent.**
 >
 > 2 To understand these algorithms, it is necessary to understand
-> \**exponentially weighted averages**, also known as **exponentially
+> **exponentially weighted averages**, also known as **exponentially
 > weighted moving averages.**
 >
 > 3 The speaker provides an example of **how to compute** exponentially
@@ -213,8 +213,8 @@
 > given, and its general formula is presented.
 >
 > 5 The speaker explains how to **vary the parameter beta** to obtain
-> \**different effect**s, such as a **smoother** or **noisier** curve, or **faster** or
-> \**slower adaptation** to temperature changes.
+> **different effect**s, such as a **smoother** or **noisier** curve, or **faster** or
+> **slower adaptation** to temperature changes.
 >
 > 6 Varying **beta** is a **hyperparameter** that can be tuned to optimize
 > learning algorithms.
@@ -242,7 +242,7 @@
 
 > [!NOTE]
 > Beta lớn -> **Lấy nhiều ảnh hưởng của quá khứ**, 
-> \**giảm ảnh hưởng của hiện tại** 
+> **giảm ảnh hưởng của hiện tại** 
 > \-> **Trễ nhận ra sự thay đổi hơn** 
 > \-> **Đường cong smooth hơn** do nó thay đổi 
 > chậm hơn
@@ -301,7 +301,7 @@
 > correction.**
 >
 > 10 It takes about **10 days** for the height of the **exponentially decaying function** to
-> \**decay** to around **1/3** or one over **e** of the peak.
+> **decay** to around **1/3** or one over **e** of the peak.
 >
 > 11 When **beta equals 0.9,** the algorithm is as if computing an **exponentially
 > weighted average** that focuses on the **last 10 days' temperature.**
@@ -411,7 +411,7 @@
 > noisy data** and **capture trends** over time.
 >
 > 2 When implementing **exponential moving averages,** **bias correction** can
-> \**improve accuracy**, especially during the **initial phas**e of the estimate.
+> **improve accuracy**, especially during the **initial phas**e of the estimate.
 >
 > 3 Without bias correction, the e**stimate may start off much lower than
 > expected**, leading to a **biased assessment.**
@@ -426,10 +426,10 @@
 > data** during the **initial phase of learning**.
 >
 > 7 While most implementations of exponentially weighted moving averages
-> \**do not include bias correction**, it can be **useful in certain situations**.
+> **do not include bias correction**, it can be **useful in certain situations**.
 >
 > 8 With these concepts, we can build **better optimization algorithm**s using
-> \**exponential moving averages.**
+> **exponential moving averages.**
 
 <br>
 
@@ -476,10 +476,10 @@
 
 > [!NOTE]
 > 1 The Momentum algorithm or **Gradient Descent with Momentum** is an
-> \**optimization algorithm** that works **faster** than **standard Gradient Descent.**
+> **optimization algorithm** that works **faster** than **standard Gradient Descent.**
 >
 > 2 The basic idea is to compute an **exponentially weighted average** of the
-> \**gradients** and use that to update weights instead of using the gradients
+> **gradients** and use that to update weights instead of using the gradients
 > themselves.
 >
 > 3 Gradient Descent often **oscillates** and takes many steps to reach the
@@ -531,7 +531,7 @@
 > average'** 
 >
 > Đại khái hệ quả là làm cho 'đường đi' của Gradient Descent nó
-> \**bớt zic zac/ tán loạn** về phương ngang (đang lấy ví dụ như trong 
+> **bớt zic zac/ tán loạn** về phương ngang (đang lấy ví dụ như trong 
 > hình) mà **bước dài hơn về phương dọc** (là phương sẽ đến minimum)
 
 > [!NOTE]
@@ -543,7 +543,7 @@
 >  or getting stuck in local minima**, which are commonly faced in 
 > traditional gradient descent.
 >  2 Stabilization: Gradient descent with momentum tends to 
-> \**dampen oscillations and moves more smoothly towards the 
+> **dampen oscillations and moves more smoothly towards the 
 > minimum**. This can lead to faster convergence and better results.
 >
 >  3 Handling of sparse gradients: **Sparse gradients** occur 
@@ -620,7 +620,7 @@
 
 > [!NOTE]
 > 1 RMSprop is another algorithm that can **speed up gradient descent,** and it aims to
-> \**slow down learning in the vertical direction** and **speed up learning in the horizontal
+> **slow down learning in the vertical direction** and **speed up learning in the horizontal
 > direction**.
 >
 > 2 On each iteration, RMSprop computes the **derivative of the parameters on the
@@ -636,7 +636,7 @@
 > horizontal direction are divided by a smaller number.**
 >
 > 5 In practice, **RMSprop** is used in a **high-dimensional space of parameters**, and it can
-> \**damp out oscillations** in a **subset of parameters.**
+> **damp out oscillations** in a **subset of parameters.**
 >
 > 6 RMSprop stands for **Root Mean Squared Prop** because it **squares** the derivatives and
 > then takes the **square root at the end.**
@@ -723,18 +723,18 @@
 > 3 **RMSprop** and **Adam Optimization Algorithm:**  4 RMSprop and the Adam optimization
 > algorithm are two algorithms that have been shown to **work well across a wide range of
 > deep learning architectures**. The Adam optimization algorithm is a **combination** of
-> \**momentum** and **RMSprop**. It uses hyperparameters **Beta_1** and **Beta_2** to calculate the
-> \**moving** **weighted** **average** **of the derivatives and their squares**.
+> **momentum** and **RMSprop**. It uses hyperparameters **Beta_1** and **Beta_2** to calculate the
+> **moving** **weighted** **average** **of the derivatives and their squares**.
 >
 > 5 Implementation of Adam:  6 To implement Adam, we first initialize **V_dw**, **V_db**, **S_dw**,
 > and **S_db** to zero. We then compute the derivatives, dw, and db, using mini-batch gradient
 > descent, and calculate the momentum and RMSprop updates using **Beta_1** and **Beta_2**.
-> \**Bias correction** is implemented **to correct** V_dw, V_db, S_dw, and S_db. Finally, the
+> **Bias correction** is implemented **to correct** V_dw, V_db, S_dw, and S_db. Finally, the
 > weights are updated using the learning rate hyperparameter **Alpha** and the **RMSprop-like**
 > update.
 >
 > 7 Hyper-parameters and Tuning:  8 The Adam optimization algorithm has several
-> \**hyper-parameters** that need to be tuned, including **Alpha**, **Beta_1**, **Beta_2**, and **Epsilon**.
+> **hyper-parameters** that need to be tuned, including **Alpha**, **Beta_1**, **Beta_2**, and **Epsilon**.
 > Alpha is the learning rate and needs to be tuned, while default values of Beta_1, Beta_2,
 > and Epsilon are often used. Beta_1 computes the mean of the derivatives, and Beta_2 is
 > used to compute the exponentially weighted average of the squares. The term Adam
@@ -795,7 +795,7 @@
 
 > [!NOTE]
 > 1 **Learning rate** **decay** is a technique that can help **speed up** the learning algorithm by
-> \**gradually reducing** the **learning rate over time**.
+> **gradually reducing** the **learning rate over time**.
 >
 > 2 By using a **smaller** learning rate, the algorithm can **oscillate** in a **tighter region** **around
 > the minimum** instead of **wandering far away** as training goes on and on.
@@ -815,7 +815,7 @@
 > ways** to organize all the **hyperparameters** and **efficiently search amongst them.**
 >
 > 7 **Learning rate decay** is usually **lower** down on the **list of things to try**, compared to
-> \**setting a fixed value of Alph**a and **getting it to be well-tuned**, which has a huge impact on
+> **setting a fixed value of Alph**a and **getting it to be well-tuned**, which has a huge impact on
 > training.
 >
 > 8 Lastly, the concept of **local optima** and **saddle points** in **neural network**s are briefly
@@ -845,7 +845,7 @@
 
 > [!NOTE]
 > Đại khái là với mini-bactch gradient descent với **Fixed alpha** thì 
-> \**J sẽ không converge chính xác về Minimum** mà sẽ **loanh quanh** khu
+> **J sẽ không converge chính xác về Minimum** mà sẽ **loanh quanh** khu
 > vực đó. Vấn đề này có thể **tạm chấp nhận** vì dù sao mini-batch 
 > giúp G.D nhanh hơn và kết quả cũng không qúa tệ.
 >
@@ -865,7 +865,7 @@
 <p align="center"><kbd><img src="assets/c77a8167d090ae0cba235daeebc920e6ec69c2ed.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \**Manually decay:** Đại khái là tự adjust alpha thủ công
+> **Manually decay:** Đại khái là tự adjust alpha thủ công
 > chỉ dc khi training vài model hàng giờ, hàng ngày liền
 > thì cách này đại khái là theo dõi model và tự điều chỉnh
 > alpha If you're **training just one model at a time**, and if your
@@ -877,7 +877,7 @@
 > this works, this **manually controlling Alpha**, really **tuning
 > Alpha by hand, hour-by-hour, day-by-day**. This works
 > only if you're training **only a small number of model**s, but
-> \**sometimes people do that as well**
+> **sometimes people do that as well**
 
 > [!NOTE]
 > Một số cách thức decay alpha hay dùng
@@ -943,7 +943,7 @@
 > Nên vấn đề là **không phải ta sẽ bị stuck ko xuống được
 > nữa** mà là khi gặp mấy cái saddle này ta sẽ **xuống rất rất chậm**
 >
-> \*Ta ở đây ý nói J trong quá trình training, xuống ở đây ý nói 
+> *Ta ở đây ý nói J trong quá trình training, xuống ở đây ý nói 
 > việc giảm J trong quá trình G.D
 >
 > Và vấn đề trên đ**ã được giải quyết** bằng nhưng **Algorithm** cải tiến
@@ -1179,7 +1179,7 @@
 #### Note
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
@@ -1188,7 +1188,7 @@
 <p align="center"><kbd><img src="assets/7037b19a78a8cdc72f0bbdabd9e6765f07fe5eec.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
@@ -1262,7 +1262,7 @@
 #### Note
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
@@ -1271,7 +1271,7 @@
 <p align="center"><kbd><img src="assets/f5a55a39c805c56f876c405d122077ccf740dad5.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
@@ -1421,7 +1421,7 @@
 #### 6.4 - Summary
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
@@ -1430,7 +1430,7 @@
 <p align="center"><kbd><img src="assets/3c8b849a58c7682fb6293b47c3e48e35da8386cb.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
@@ -1489,7 +1489,7 @@
 <p align="center"><kbd><img src="assets/5b8cc8227164b61f5434cd4a55d628632bb9b38e.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
@@ -1582,7 +1582,7 @@
 #### 7.4 - Achieving similar performance with different methods
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
@@ -1591,7 +1591,7 @@
 <p align="center"><kbd><img src="assets/ca327c1b0f55ea43fb38dbfdcd66942611b0a59f.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> \*NOTE
+> *NOTE
 
 <br>
 
