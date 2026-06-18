@@ -206,12 +206,7 @@ Derivative Approx
 <p align="center"><kbd><img src="assets/img_ufte9ep.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đoạn này chính là gs Nocedal chứng minh công thức finite differencing
-> (forward). Bản chất vẫn là vậy, dùng Taylor theorem, và với ε nhỏ cho
-> phép bỏ đi phần dư là term bậc cao của ε và chuyển thành dấu xấp xỉ.
-> Nhưng phần chứng minh của gs chặt chẽ tuyệt đối, để giúp làm rõ về
-> mặt toán học sao hồi nãy có mình có thể nói khi x' trong phạm vi gần x thì
-> Hessian tại x bằng x'.
+> Đoạn này chính là gs Nocedal chứng minh công thức finite differencing (forward). Bản chất vẫn là vậy, dùng Taylor theorem, và với ε nhỏ cho phép bỏ đi phần dư là term bậc cao của ε và chuyển thành dấu xấp xỉ. Nhưng phần chứng minh của gs chặt chẽ tuyệt đối, để giúp làm rõ về mặt toán học sao hồi nãy có mình có thể nói khi x' trong phạm vi gần x thì Hessian tại x bằng x'.
 >
 > Đại khái là vầy:
 >
@@ -221,9 +216,7 @@ Derivative Approx
 >
 > ⇔ f(x + p) - f(x) - ∇f(x)Tp = (1/2)pT ∇^2f(x + tp)p
 >
-> Gọi L là upper bound nào đó của norm Hessian: ||∇^2f(x)|| ≤ L. Ta có thể
-> nói vậy là vì hàm số không thể cong vô cực (do điều kiện twice
-> continously differentiable)
+> Gọi L là upper bound nào đó của norm Hessian: ||∇^2f(x)|| ≤ L. Ta có thể nói vậy là vì hàm số không thể cong vô cực (do điều kiện twice continously differentiable)
 >
 > Xét |(1/2)pT ∇^2f(x + tp)p|
 >

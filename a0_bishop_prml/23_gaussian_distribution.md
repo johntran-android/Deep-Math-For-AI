@@ -1,6 +1,6 @@
 # 2.3 Gaussian Distribution
 
-📊 **Progress:** `13` Notes | `17` Screenshots
+📊 **Progress:** `16` Notes | `22` Screenshots
 
 ---
 <a id="node-205"></a>
@@ -1096,6 +1096,159 @@
 > Và tiếp tục như vậy ta sẽ thấy kết quả là: a sẽ tách thành Σi=1:n (**a**iT**q**i) **q**i
 >
 > Và đây là điều chỉ có được nếu ta dùng một orthogonal basis.)
+
+<br>
+
+<a id="node-218"></a>
+
+<p align="center"><kbd><img src="assets/85ddfa13ca169509ea06e9715f632e30f6434d4e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, tới đây ta đã có E[**XX**T] = **μμ**T + Σ
+>
+> Thế thì dừng lại chút, để nhớ rằng thứ ta đang cố gắng tính, E[**XX**T], là matrix các second moment của **X**, là
+> random vector ~ Normal (**μ**, Σ).
+>
+> Vậy thì ta còn nhớ, với single random variable X, khi học về variance Var(X), thì công thức đầu tiên được học là VarX =
+> E[(X - EX)^2], thì nếu nhìn kĩ vào đây, ta sẽ thấy nó chính là việc đặt một biến Z = X - EX, và lấy second moment của nó:
+> E[Z^2], cho nên đây là ý của gs Bishop khi nói "subtracted the mean before taking second mo-ments in order to define a
+> variance".
+>
+> Thế thì với với random variable vector **X**, ta cũng làm tương tự: trừ đi mean: E[**X**], và lấy second moment, mà
+> second moment đối với random variable vector thì như đã nói, sẽ là một matrix, (ví dụ second moment của **X** là matrix
+> E[**XX**T]), nên second moment của **X** - E**X** là E[(**X** - E**X**)(X - E**X**)T], và cái này **được gọi là covariance**
+> của **X**.
+>
+> Dừng lại chút xíu để suy ngẫm rằng: Có thể thấy đây là một cách dẫn dắt khiến mình thấy hơi lạ. Trong Stat110 hay
+> Casella, mình chưa từng được nghe về second moment của một random variable vector, nhưng đã được học về khái
+> niệm covariance giữa hai random variable: Cov(X,Y) được define bởi E[(X-EX)(Y-EY)]. Tuy nhiên, mình nhớ là gs Joe
+> trong Stat110 hay trong sách Casella cũng không nói đến covariance matrix, để rồi mình chỉ hiểu một cách đại khái là, với
+> random variable vector **X**, là vector tạo bởi các random variable X1,...Xn, thì covariance matrix là matrix mà các phần
+> tử sẽ là covariance của các cặp random variable Xi, Xj mà thôi. Hiểu vậy thì vẫn đúng. Nhưng ý muốn nói ở đây là, với
+> đoạn này của sách Bishop, mình nhận ra ông đang cho ta biết về định nghĩa của **covariance của một random vector**,
+> đó là: Covariance của vector X được define là second moment của vector **X** - E**X**, và với second moment của vector
+> **U**, được define bởi E[**UU**T] thì covariance của vector **X** sẽ là E[(**X**-E**X**)(**X**-E**X**)T]. Như vậy từ nay khi
+> nói về covariance matrix, mình sẽ hiểu thêm một tầng, đó là nó chính là **second moment của** (**X** - E**X**).
+>
+> Tiếp, gs nói tiếp, vì đang xét **X** ~ Normal(**μ**, Σ), mà ở trên ta đã chứng minh E**X** = **μ.** Nên covariance của **X**:
+>
+> cov(**X**) = E[(**X** - **μ**)(**X** - **μ**)T]
+>
+> Triển khai ra: E[(**X** - **μ**)(**X** - **μ**)T] = E[(**X** - **μ**)(**X**T - **μ**T)] = E[**XX**T - **μX**T - **Xμ**T + **μμ**T]
+>
+> = E[**XX**T] - E[**μX**T] - E[**Xμ**T] + E[**μμ**T]
+>
+> = E[**XX**T] - E[**μX**T] - E[**Xμ**T] + E[**μμ**T]
+>
+> = E[**XX**T] - **μ**E[**X**T] - E[**X**]**μ**T + E[**μμ**T] (dùng tính linearity E[**μX**T] = **μ**E[**X**T], E[**Xμ**T] =
+> E[**X**]**μ**T)
+>
+> = E[**XX**T] - **μ**(E[**X**]T) - **μμ**T + **μμ**T (**μμ**T là constant ⇨ E[**μμ**T] = **μμ**T)
+>
+> = E[**XX**T] - **μ**(**μ**T) - **μμ**T + **μμ**T
+>
+> = E[**XX**T] - **μμ**T
+>
+> Vậy Cov(**X**) = E[**XX**T] - **μμ**T, mà kết quả 2.62 cho ta E[**XX**T] = **μμ**T + Σ
+>
+> ⇨ Cov(**X**) = **μμ**T + Σ - **μμ**T = Σ
+>
+> Như vậy là ta đã chứng minh rằng: **COVARIANCE** CỦA RANDOM VECTOR **X**, có định nghĩa là second moment
+> của (**X** - E**X**), và với việc X ~ Normal(**μ**, Σ), THÌ NÓ CHÍNH LÀ Σ.
+>
+> Và từ đây ta mới hiểu sâu hơn là vì sao khi nói về pdf của Normal(μ, Σ) thì Σ lại được gọi là **COVARIANCE MATRIX.**
+
+<br>
+
+<a id="node-219"></a>
+
+<p align="center"><kbd><img src="assets/3338fd03e6dc621917d7fc8b2fb274893bd44f0c.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5bf65e26e7226d7cc1b216fae19a18a6ab6ca612.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bd5e902c1365efcf56888f7fd1f2bc9569f15fee.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, gs nói về nhược điểm của phân phối (multivariate) Normal: Nói ngắn gọn là tốn quá nhiều
+> parameter, cụ thể là với D-dimension, thì ta có D parameters của **μ** và D(D+1)/2 là số parameter của Σ
+> (ko phải DxD là vì Σ là matrix đối xứng). Như vậy tổng cộng là D(D+3)/2, tức là với D lớn, số params cũng
+> như chi phí tính toán sẽ tăng theo O(D^2).
+>
+> Để khắc phục, người ta có thể đưa vào vài ràng buộc với Σ, đánh đổi việc sẽ làm hạn chế bớt khả năng
+> biểu diễn các pattern trong data để đổi lấy việc giảm chi phí tính toán (tính toán nhanh hơn). Trong đó một
+> cách là dùng Σ chỉ có dạng diagonal, dĩ nhiên khi đó số param chỉ là D, khiến tổng cộng chỉ là 2D.
+>
+> Hoặc là dùng Σ có dạng αI, có nghĩa là chỉ tốn một param cho Σ, để tổng cộng là D+1 params, và case này
+> gọi là isotropic covariance.
+>
+> Thế thì thử giải thích vì sao có 3 hình dạng khác nhau trong hình a, b, c.
+>
+> Với hình a, là Σ bình thường. Thì note trước mình đã hiểu, với một level set của hàm pdf, sẽ tương ứng với
+> level set của hàm exponent: exp[-(1/2)(**x**-**μ**)T Σinv(**x**-**μ**)] = c thì nó sẽ có dạng là một đường
+> ellipse có tâm tại **μ**, và các trục trùng với eigenvector **u**i của Σ, và độ dài bán trục là cλ1/2, cλ2/2
+>
+> Thế thì nếu Σ trở thành diagonal matrix diag(σ1, σ2...) thì sao? Hay vì sao các hình ellipse trở nên thẳng
+> góc với các trục xi?
+>
+> Rất đơn giản nếu như ta đã hiểu trục của ellipse là các eigenvector của Σ, thì **khi Σ là diag(σ1, σ2,...) thì
+> eigenvector của nó là gì**? → Nó **chính là các basis vector** **e**1,**e**2,....Vì sao:
+>
+> Là vì **với diagonal matrix, eigenvector của nó chính là nằm trên đường chéo**: Nên λ1, λ2,...cũng chính là
+> σ1, σ2,....
+>
+> Nếu gọi **u1** là eigenvector của Σ ứng với eigenvector λ1, ta có:
+>
+> Σ **u1** = λ1 **u1** ⇔ diag(σ1, σ2,...) **u1** = λ1 **u1**
+>
+> Xét vế trái, dễ thấy nó sẽ là vector (λ1 **u1**1, λ2 **u1**2,...). còn vế phải là vector (λ1 **u1**1, λ1 **u1**2,...
+> ). Nên ta có hệ phương trình: λ1 **u1**1 = λ1 u**1**1, λ2 **u1**2 = λ1 **u1**2, ...,λD **u1**D = λ1 **u1**D,....
+> và cái này suy ra **u1**1 = 1, u12 = u13 = ...= 0, nói cách khác **u1** chính là **e1** = [1,0,0,..0]
+>
+> Tương tự, **u2** chính là **e2**
+>
+> Như vậy cái eigenvector của diagoal(σ1,...σD) chính là các trục ban đầu (basis **e**'s) thành ra các ellipse
+> thẳng trục như hình b.
+>
+> Còn hình c), là khi Σ = αI, khi đó đơn giản là **mọi eigenvalue đều bằng nhau** và bằng α, nên các ellipse
+> có **độ dài bán trục bằng nhau, nên thành hình tròn** hết (với D > 2 thì các level set là các mặt cầu,
+> spherical surface)
+
+<br>
+
+<a id="node-220"></a>
+
+<p align="center"><kbd><img src="assets/1402a6c48b2a491afa85de194299d40ea08a486b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi đại khái là phần cuối cùng này nói về một cái nhược
+> điểm, một cái hạn chế nữa của cái phân phối Gaussian, phân
+> phối normal đó. Đó là về cơ bản nó **về mặt nội tại của nó là
+> một cái phân phối gọi là unimodal**. Có nghĩa là nó chỉ có một
+> cái đỉnh thôi. Chính vì vậy nó không thể mô hình hóa được,
+> không thể xấp xỉ hóa được những cái distribution trong tự
+> nhiên mà vốn nó có nhiều đỉnh, nó gọi là multi-modal
+> distribution. Do đó về mặt mình có thể hiểu nôm na là cái
+> normal distribution nó **vừa quá flexible, nếu như mình xét ở
+> khía cạnh nó quá nhiều parameters**, quá nhiều tham số.
+> Nhưng nó cũng lại quá có **cái tính chất là không đủ flexible**
+> khi mà xét ở khía cạnh nó chỉ là một cái **unimodal**
+> **distribution**.
+>
+> Thành thử ra là nó có cái hạn chế ở chỗ đó.
+>
+> Đồng thời, những cái chương sau mình sẽ học rằng là bằng
+> cách giới thiệu những cái đưa vào những cái **biến ẩn** gọi là
+> **latent variable** hoặc gọi là **hidden variable** thì người ta
+> **có thể khắc phục được chuyện này**. Và nó sẽ dẫn đến một
+> số những cái mô hình, ví dụ như gọi là **Markov random
+> field**, là một cái mô hình mà trong đó người ta đưa vào thêm
+> một cái biến ẩn thuộc dạng rời rạc discrete. Cũng như là
+> **linear dynamical system**.
+>
+> Nói chung là đây là những cái mà trong những cái chương
+> sau mình sẽ học và trong chương 8 mình sẽ học một cái rất
+> là mạnh, một cái cách kết hợp của những cái dạng này, nó
+> gọi là probabilistic graphical model.
 
 <br>
 

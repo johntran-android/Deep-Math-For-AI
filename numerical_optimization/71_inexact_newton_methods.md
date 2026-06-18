@@ -1,6 +1,6 @@
 # 7.1 Inexact Newton Methods
 
-📊 **Progress:** `22` Notes | `28` Screenshots | `14` AI Reviews
+📊 **Progress:** `22` Notes | `28` Screenshots | `15` AI Reviews
 
 ---
 
@@ -10,6 +10,10 @@
 <p align="center"><kbd><img src="assets/img_pvuqi1m.png" width="80%"></kbd></p>
 
 <br>
+
+
+<a id="node-sijdcir"></a>
+### Thuật toán tối ưu quy mô lớn
 
 <p align="center"><kbd><img src="assets/img_sijdcir.png" width="80%"></kbd></p>
 
@@ -556,12 +560,19 @@
 > Tuy nhiên quay lại đây ta chỉ cần dùng công thức A, B, C thôi.
 >
 > Note vừa rồi là mình ôn lại thế nào là Cauchy point.
+>
 > Thì ý đầu tiên, tác gỉa nói nếu d0TBkd0 = (∇fk)TBk(∇fk) ≤ 0 thì theo thuật toán 7.2, nó sẽ return τ sao cho pk = z0 + τd0 mininimize mk(pk). Thì đây chính là gì? → Chính là rơi vào trường hợp (A), tức là pk trả ra chính là Cauchy point trong công thức (A), p = -(Δk / ||gk||) gk
+>
 > Còn không, thì thuật toán 7.2 tính z1 như sau: z1 = z0 + α0d0 = α0p0 (vì z0 = 0)
+>
 > Thay α0 = r0Tr0 / d0TBkd0 thì z1 = - [(∇fk)T / (∇fk)TBk∇fk] ∇fk.
+>
 > Để rồi nếu ||z1|| < Δk thì z1 chính là Cauchy point, công thức C.
+>
 > Còn nếu ||z1|| > Δk thì thuật toán cũng sẽ return τ ≥ 0 sao cho pk = z0 + τdj thỏa ||pk|| = Δk. Đây chính là case (B).
+>
 > Nói chung, ý tưởng chính là:
+>
 > Nếu với d0 (= - ∇fk), mà bị return ở chốt đầu tiên hay return ở chốt thứ 2, thì thuật toán đều đang trả ra Cauchy point (là điểm nằm trên hướng -∇fk và đi xuống thấp nhất có thể trong phạm vi hàng rào).
 > Nếu qua được vòng này, ko bị dừng ở d0, thì chắc chắn d1,d2..dj sẽ phải tốt hơn d0. Vì sao? Vì ta còn nhớ trong CG, cách thức hoạt động của nó khi chạy thuật toán đó là: Chọn d0 là hướng dốc nhất tại điểm ban đầu, đi theo hướng đó xuống thấp nhất có thể trong phạm vi hàng rào, thì đụng hàng rào hay dừng ở điểm trong hàng rào, gọi là thì cái vector đó đều chính là Cauchy point. Giả sử iteration đầu tiên dừng ở điểm trong hàng rào, iteration tiếp theo sẽ tìm chọn d1 là hướng conjugate wrt matrix A với d0 và bắt đầu tìm kiếm điểm thấp nhất theo hướng đó. Thì điều này tương đương với việc, ngay từ đầu ta tìm kiếm trong subspace span {d0,d1} điểm nào minimize hàm mk trong phạm vi hàng rào. Do đó, điểm tìm thấy theo hướng d1 phải thấp hơn hoặc bằng điểm tìm thấy ở bước d0. Tiếp tục như vậy, để rồi mình hình kết quả cuối cùng, chắc chắn phải luôn tốt hơn, thấp hơn cái điểm Cauchy point.
 > Như vậy, thuật toán luôn đảm bảo trả ra hướng tốt hơn hoặc ít nhất là bằng Cauchy point, đảm bảo hội tụ toàn cục theo một theorem đã học trong chap 5
@@ -573,6 +584,8 @@
 
 <br>
 
+<a id="node-iw5i5g4"></a>
+- **Trust Region Newton CG**
 <p align="center"><kbd><img src="assets/img_iw5i5g4.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_qowci7.png" width="80%"></kbd></p>
@@ -748,24 +761,24 @@
 
 <br>
 
+<a id="node-imxeywh"></a>
+- **Định lý 7.3: Tính chất dãy**
 <p align="center"><kbd><img src="assets/img_imxeywh.png" width="80%"></kbd></p>
 
 <br>
 
+<a id="node-q78yfdt"></a>
+- **Chứng minh norm zj tăng**
 <p align="center"><kbd><img src="assets/img_q78yfdt.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Theorem 7.3 nói rằng chuỗi {zj}} được sinh ra bởi thuật toán 7.2 sẽ
-> luôn thỏa cái sau lớn hơn cái trước về norm.
+> Theorem 7.3 nói rằng chuỗi {zj}} được sinh ra bởi thuật toán 7.2 sẽ luôn thỏa cái sau lớn hơn cái trước về norm.
 >
 > Phần chứng minh đại ý là vầy:
 >
 > Đầu tiên trong 7.3, việc cập nhật {zj} theo công thức: zj+1 = zj + αjdj
 >
-> (Ôn nhanh: d0 là hướng steepest descent, d1, d2... sau đó hướng 
-> conjugate wrt matrix Bk với d trước đó. Có dj rồi thì giải bài toán 
-> minimize hàm bậc hai đơn biến, là hàm mk restrict theo hướng dj 
-> để tìm step size αj)
+> (Ôn nhanh: d0 là hướng steepest descent, d1, d2... sau đó hướng conjugate wrt matrix Bk với d trước đó. Có dj rồi thì giải bài toán minimize hàm bậc hai đơn biến, là hàm mk restrict theo hướng dj để tìm step size αj)
 >
 > Thế thì: ||zj+1|| = ||zj + αjdj||
 >
@@ -777,15 +790,11 @@
 >
 > = ||zj||^2 + 2αjdjTzj + αj^2||dj||^2
 >
-> Đến đây, nếu ta chứng minh được djTzj > 0 thì sẽ chứng minh
-> được ||zj+1|| > ||zj|| (1)
+> Đến đây, nếu ta chứng minh được djTzj > 0 thì sẽ chứng minh được ||zj+1|| > ||zj|| (1)
 >
-> Và ta sẽ chứng minh bằng quy nạp: Chứng minh nó đúng với k = 1,
-> rồi giả sử đúng với k = j, và chứng ninh nó đúng luôn với k = j+1 thì 
-> sẽ có thể kết luận nó đúng với mọi k.
+> Và ta sẽ chứng minh bằng quy nạp: Chứng minh nó đúng với k = 1, rồi giả sử đúng với k = j, và chứng ninh nó đúng luôn với k = j+1 thì sẽ có thể kết luận nó đúng với mọi k.
 >
-> Nhưng trước hết tác giả chứng minh một kết quả để lát sau sẽ dùng:
-> đó là zjTrj = 0. Cái này dễ thôi:
+> Nhưng trước hết tác giả chứng minh một kết quả để lát sau sẽ dùng: đó là zjTrj = 0. Cái này dễ thôi:
 >
 > Theo công thức update {zj}:
 >
@@ -799,23 +808,14 @@
 >
 > rjTzj = rjTΣi=0:j-1 αidi = Σi=0:j-1 αi rjTdi
 >
-> Tới đây, mới xem lại Theorem 5.2, nói nói đại khái là residual tại
-> vòng sau, thì luôn vuông góc với mọi direction trước đó (trong thuật
-> toán CG gốc, ta sẽ có rkTpi với i = 0,1,...k-1): Cho nên ở đây, ta sẽ
-> có rj vuông góc với d0,d1,...dj-1. Nên cái bên phải = 0 ⇨ rjTzj = 0
+> Tới đây, mới xem lại Theorem 5.2, nói nói đại khái là residual tại vòng sau, thì luôn vuông góc với mọi direction trước đó (trong thuật toán CG gốc, ta sẽ có rkTpi với i = 0,1,...k-1): Cho nên ở đây, ta sẽ có rj vuông góc với d0,d1,...dj-1. Nên cái bên phải = 0 ⇨ rjTzj = 0
 >
 > ------ 
 > Quay lại đây, chứng minh quy nạp nói ở trên:
 >
-> Xét k = 1, d1Tz1 có > 0 không? (z0 = 0 rồi nên ta sẽ chứng minh từ
-> k = 1)
+> Xét k = 1, d1Tz1 có > 0 không? (z0 = 0 rồi nên ta sẽ chứng minh từ k = 1)
 >
-> d1Tz1 = d1T(z0 + α1d1) = d1Tα1d1 = α1 ||d1||^2 cái này > 0, vì sao?
-> vì α1 là step-size, luôn dương (vì sao luôn dương, vì α1 là stepsize tìm
-> được bằng cách tối thiểu hóa hàm bậc hai đơn biến mk giới hạn bởi
-> d1, mà d1. hay dj luôn là descent direction (nếu ko, tưc djTBkdj ≤ thì 
-> thuật toán đã return ở chốt đầu rồi, nên đã qua được chốt đó thì tức là
-> djTBkdj > 0. Nên αj = rjTrj / djTBkdj sẽ dương do tử và mẫu dương.
+> d1Tz1 = d1T(z0 + α1d1) = d1Tα1d1 = α1 ||d1||^2 cái này > 0, vì sao? vì α1 là step-size, luôn dương (vì sao luôn dương, vì α1 là stepsize tìm được bằng cách tối thiểu hóa hàm bậc hai đơn biến mk giới hạn bởi d1, mà d1. hay dj luôn là descent direction (nếu ko, tưc djTBkdj ≤ thì thuật toán đã return ở chốt đầu rồi, nên đã qua được chốt đó thì tức là djTBkdj > 0. Nên αj = rjTrj / djTBkdj sẽ dương do tử và mẫu dương.
 >
 > Tiếp, gỉa sử nó đúng với k = j: djTzj > 0
 >
@@ -837,11 +837,12 @@
 >
 > và βj+1αj ||dj||^2 cũng dương nốt.
 >
-> Vậy chứng minh xong là djTzj > 0 với mọi j ⇨ theo (1), ta đã chứng
-> minh xong.
+> Vậy chứng minh xong là djTzj > 0 với mọi j ⇨ theo (1), ta đã chứng minh xong.
 
 <br>
 
+<a id="node-c21ufur"></a>
+- **So sánh Dogleg và 7.2**
 <p align="center"><kbd><img src="assets/img_c21ufur.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -849,53 +850,29 @@
 >
 > Ideas của nó là như sau:
 >
-> Nó muốn cải thiện Cauchy points. Cauchy point's story: Đi từ điểm đầu tiên
-> x0, theo hướng dốc nhất, ráng đưa mk(p) (giới hạn theo hướng đó) xuống
-> thấp nhất trong phạm vi hàng rào. Nó có thể dừng ở trong, hoặc đụng hàng
-> rào (Bk xác định âm: đi theo hướng đó sẽ giảm mk vô hạn → đụng hàng
-> rào, Bk xác định dương: có thể dừng ở trong hoặc ngoài (đụng hàng rào))
+> Nó muốn cải thiện Cauchy points. Cauchy point's story: Đi từ điểm đầu tiên x0, theo hướng dốc nhất, ráng đưa mk(p) (giới hạn theo hướng đó) xuống thấp nhất trong phạm vi hàng rào. Nó có thể dừng ở trong, hoặc đụng hàng rào (Bk xác định âm: đi theo hướng đó sẽ giảm mk vô hạn → đụng hàng rào, Bk xác định dương: có thể dừng ở trong hoặc ngoài (đụng hàng rào))
 >
-> Và ta đã biết vụ Cauchy points là bước nhảy mang lại mức giảm đủ tốt, giúp
-> đảm bảo hội tụ toàn cục, đóng vai trò tham chiếu cho các phương pháp
-> khác phải  ít nhất là bằng cái này.
+> Và ta đã biết vụ Cauchy points là bước nhảy mang lại mức giảm đủ tốt, giúp đảm bảo hội tụ toàn cục, đóng vai trò tham chiếu cho các phương pháp khác phải  ít nhất là bằng cái này.
 >
-> Tiếp, mới xét câu chuyện nếu ta cho phạm vi giới hạn tăng từ rất nhỏ đến
-> rất rộng. Thì: ở mức nhỏ → hướng Newton cơ bản là trùng hướng dốc nhất.
-> Nhưng ở mức lớn, hướng Newton sẽ có thể khác hướng dốc nhất. Nên khi
-> đó nếu chỉ một mực dùng hướng dốc nhất, có thể sẽ không lợi ích. Và khi
-> mô phỏng việc tăng dần bán kính tin cậy Δ, thì nghiệm của bài toán
-> minimize mk với mk dùng Hessian trong Bk, s.t ||p|| ≤ Δ sẽ cho ra / vẽ ra một
-> đường cong hình cẳng chó. Và đó là cái quỹ đạo mà ta muốn MEN THEO
-> ĐỂ tìm kiếm điểm thấp nhất của mk trong bán kính giới hạn.
+> Tiếp, mới xét câu chuyện nếu ta cho phạm vi giới hạn tăng từ rất nhỏ đến rất rộng. Thì: ở mức nhỏ → hướng Newton cơ bản là trùng hướng dốc nhất. Nhưng ở mức lớn, hướng Newton sẽ có thể khác hướng dốc nhất. Nên khi đó nếu chỉ một mực dùng hướng dốc nhất, có thể sẽ không lợi ích. Và khi mô phỏng việc tăng dần bán kính tin cậy Δ, thì nghiệm của bài toán minimize mk với mk dùng Hessian trong Bk, s.t ||p|| ≤ Δ sẽ cho ra / vẽ ra một đường cong hình cẳng chó. Và đó là cái quỹ đạo mà ta muốn MEN THEO ĐỂ tìm kiếm điểm thấp nhất của mk trong bán kính giới hạn.
 >
-> Nhưng dĩ nhiên ta ko biết chính xác cái quỹ đạo đó. (vì có cái quỹ đạo đó thì
-> cũng đương nhiên là biết p nên bằng gì với Δ cho trước rồi).
+> Nhưng dĩ nhiên ta ko biết chính xác cái quỹ đạo đó. (vì có cái quỹ đạo đó thì cũng đương nhiên là biết p nên bằng gì với Δ cho trước rồi).
 >
-> Do đó, người ta DỰNG NÊN MỘT XẤP XỈ CỦA QUỸ ĐẠO ĐÓ. Tạo bởi 2
-> vector:
+> Do đó, người ta DỰNG NÊN MỘT XẤP XỈ CỦA QUỸ ĐẠO ĐÓ. Tạo bởi 2 vector:
 >
-> pU: là đi theo hướng dốc nhất và tối thiểu hàm mk restrict theo hướng đó
-> (tức là pU là γ (-∇fk) với γ là solution của bài toán mininize mk(γ(-∇fk))
+> pU: là đi theo hướng dốc nhất và tối thiểu hàm mk restrict theo hướng đó (tức là pU là γ (-∇fk) với γ là solution của bài toán mininize mk(γ(-∇fk))
 >
 > pB là hướng Newton: -(Bk)inv ∇fk
 >
-> Tức là, cái quỹ đạo này sẽ fixed: đầu tiên đi từ 0 → pU. Và sau đó từ pU đi
-> theo hướng pB.
+> Tức là, cái quỹ đạo này sẽ fixed: đầu tiên đi từ 0 → pU. Và sau đó từ pU đi theo hướng pB.
 >
-> Nên phương trình mô tả cái quỹ đạo sẽ là: p~(τ) = pU + (τ - 1) (pB - pU) với
-> τ từ 1 → 2.
+> Nên phương trình mô tả cái quỹ đạo sẽ là: p~(τ) = pU + (τ - 1) (pB - pU) với τ từ 1 → 2.
 >
-> Từ đó ta sẽ giải bài toán: minimize hàm mk(p) restrict theo quỹ đạo này.
-> Giống như ta minimize hàm mk restrict theo hướng steepest, thì nay sẽ là
-> restricted theo quỹ đạo này.
+> Từ đó ta sẽ giải bài toán: minimize hàm mk(p) restrict theo quỹ đạo này. Giống như ta minimize hàm mk restrict theo hướng steepest, thì nay sẽ là restricted theo quỹ đạo này.
 >
-> Nhưng thật ra ta ko cần giải bài toán này. vì đã có theorem chứng minh
-> rằng ĐI THEO QUỸ ĐẠO NÀY THÌ HÀM mk SẼ GIẢM LIÊN TỤC. Do đó bài
-> toán  CHỈ ĐƠN GIẢN LÀ TRỞ THÀNH TÌM ĐIỂM XA NHẤT TRÊN QUỸ
-> ĐẠO NÀY TRONG PHẠM VI HÀNG RÀO.
+> Nhưng thật ra ta ko cần giải bài toán này. vì đã có theorem chứng minh rằng ĐI THEO QUỸ ĐẠO NÀY THÌ HÀM mk SẼ GIẢM LIÊN TỤC. Do đó bài toán  CHỈ ĐƠN GIẢN LÀ TRỞ THÀNH TÌM ĐIỂM XA NHẤT TRÊN QUỸ ĐẠO NÀY TRONG PHẠM VI HÀNG RÀO.
 >
-> Do đó, nếu điểm cuối của hành trình (τ = 2) vẫn trong hàng rào, thì p~* = pU
-> + (2-1)(pB - pU) = pB (tức là ta sẽ rất đẹp, lấy luôn Newton step)
+> Do đó, nếu điểm cuối của hành trình (τ = 2) vẫn trong hàng rào, thì p~* = pU + (2-1)(pB - pU) = pB (tức là ta sẽ rất đẹp, lấy luôn Newton step)
 >
 > còn không thì giải tìm giao điểm của quỹ đạo với hàng rào.
 >
@@ -903,19 +880,13 @@
 >
 > ------
 >
-> VẬY THÌ TẠI SAO CHỖ NÀY GS NÓI THUẬT TOÁN 7.2 CÓ THỂ COI NHƯ
-> LÀ GIỐNG GIỐNG DOGLEG:
+> VẬY THÌ TẠI SAO CHỖ NÀY GS NÓI THUẬT TOÁN 7.2 CÓ THỂ COI NHƯ LÀ GIỐNG GIỐNG DOGLEG:
 >
 > À thì bởi vì, 7.2 nó cũng
 >
-> a) BẮT ĐẦU BỞI HƯỚNG DỐC NHẤT: d0 là hướng dốc nhất tại điểm xuất
-> phát. Và ta sẽ đi theo hướng đó để giảm mk xuống thấp nhất trong phạm vi
-> hàng rao. À, NHƯ VẬY, Y NHƯ pU Ở TRÊN VỪA ÔN LẠI.
+> a) BẮT ĐẦU BỞI HƯỚNG DỐC NHẤT: d0 là hướng dốc nhất tại điểm xuất phát. Và ta sẽ đi theo hướng đó để giảm mk xuống thấp nhất trong phạm vi hàng rao. À, NHƯ VẬY, Y NHƯ pU Ở TRÊN VỪA ÔN LẠI.
 >
-> b) SAU ĐÓ, các chuỗi d1,d2,...sẽ NHẰM MỤC TIÊU LÀ TẠO z1,z2,....
-> converge về z*, hay p* = - Bkinv ∇fk À. NHƯ VẬY, khá tương đương việc
-> Dogleg sẽ tiếp tục  đi từ pU theo hướng pB (Newton step), với 7.2 sẽ tạo
-> một chuỗi các hướng mà tổng hợp lại cũng dẫn ta đến xấp xỉ pB.
+> b) SAU ĐÓ, các chuỗi d1,d2,...sẽ NHẰM MỤC TIÊU LÀ TẠO z1,z2,.... converge về z*, hay p* = - Bkinv ∇fk À. NHƯ VẬY, khá tương đương việc Dogleg sẽ tiếp tục  đi từ pU theo hướng pB (Newton step), với 7.2 sẽ tạo một chuỗi các hướng mà tổng hợp lại cũng dẫn ta đến xấp xỉ pB.
 >
 > SO SÁNH:
 >
@@ -923,12 +894,21 @@
 >
 > 7.2: z1 cơ bản chính là pU → z1,z2,.. hội tụ về Newton step.
 
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+>
+> Bài phân tích của bạn thể hiện sự hiểu biết sâu sắc về thuật toán Dogleg và so sánh rất chi tiết, chính xác với mô tả của Thuật toán 7.2. Tuy nhiên, phần giải thích về điểm Cauchy khi B_k 'xác định âm' còn thiếu chính xác; việc m_k giảm vô hạn trên hướng dốc nhất phụ thuộc vào tích ∇f_k^T B_k ∇f_k, không chỉ đơn thuần là B_k xác định âm.
+
 <br>
 
+<a id="node-z1vw0a9"></a>
+- **Đường Dogleg Newton**
 <p align="center"><kbd><img src="assets/img_z1vw0a9.png" width="80%"></kbd></p>
 
 <br>
 
+<a id="node-llp166r"></a>
+- **Tiền xử lí Trust-Region Newton-CG**
 <p align="center"><kbd><img src="assets/img_llp166r.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1371,6 +1351,8 @@
 
 <br>
 
+<a id="node-yl8no1o"></a>
+- **Tiền điều kiện Cholesky không hoàn chỉnh**
 <p align="center"><kbd><img src="assets/img_yl8no1o.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1413,6 +1395,8 @@
 
 <br>
 
+<a id="node-8qeqega"></a>
+- **Cholesky sửa đổi không chính xác**
 <p align="center"><kbd><img src="assets/img_8qeqega.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1461,6 +1445,8 @@
 
 <br>
 
+<a id="node-b24vre7"></a>
+- **Phương pháp Newton-Lanczos Vùng Tin Cậy**
 <p align="center"><kbd><img src="assets/img_b24vre7.png" width="80%"></kbd></p>
 
 > [!NOTE]

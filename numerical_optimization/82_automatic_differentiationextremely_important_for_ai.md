@@ -1,6 +1,6 @@
 # 8.2 Automatic differentiation(*extremely important for AI)
 
-📊 **Progress:** `36` Notes | `46` Screenshots | `0` AI Reviews
+📊 **Progress:** `36` Notes | `46` Screenshots | `2` AI Reviews
 
 ---
 > [!NOTE]
@@ -667,6 +667,11 @@
 > Và kĩ thuật này đến nay vẫn được dùng trong training AI hiện đại, chính là
 > cái gọi là Gradient Checkpointing
 
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Bài làm xuất sắc trong việc nắm bắt nhược điểm chính của Reverse Mode và giải thích cơ chế checkpointing một cách chi tiết, kèm ví dụ minh họa rất rõ ràng. Tuy nhiên, việc đề cập tới "gs Nocedal" không có trong đoạn văn bản gốc được cung cấp, cần lưu ý chỉ trích dẫn thông tin trực tiếp từ nguồn đã cho.
+
 <br>
 
 <a id="node-d2hzq64"></a>
@@ -830,6 +835,11 @@
 > dậm chân nhau, đặng pass vào vector seed có số 1 ở những vị trí tương
 > ứng của các đầu ra đó từ đó forward sweep một lần được nhiều cột
 > của J cùng lúc (lúc nãy đã mô tả rồi)
+
+> [!TIP]
+> **🤖 AI Feedback** — ❌ Score: **55/100**
+>
+> Bài làm thể hiện sự nắm vững về cách tính từng cột của ma trận Jacobian bằng forward mode. Tuy nhiên, có sự nhầm lẫn về ý nghĩa của Dpf(x) đối với hàm vector và mô tả kỹ thuật tô màu cho Jacobian thưa trong forward mode còn chưa chính xác.
 
 <br>
 

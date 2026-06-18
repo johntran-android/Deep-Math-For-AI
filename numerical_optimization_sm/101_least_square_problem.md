@@ -1,6 +1,6 @@
 # 10.1 Least-square Problem
 
-📊 **Progress:** `5` Notes | `6` Screenshots
+📊 **Progress:** `8` Notes | `10` Screenshots
 
 ---
 <a id="node-92"></a>
@@ -158,6 +158,114 @@
 > Và ta sẽ thấy những thuật toán đó đều thuộc vào hai cách tiếp cận lớn mà ta
 > đã học Line Search và Trust Region. Cũng như là với mỗi cách, cũng chia ra
 > là tiếp cận theo Newton và quasi-Newton method.
+
+<br>
+
+<a id="node-97"></a>
+
+<p align="center"><kbd><img src="assets/6d56e64c80e4506e0305fb325ba7eee5a930120a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì ta xét ví dụ này, đại khái là người ta muốn nghiên cứu hiệu quả của
+> một loại thuốc tác động lên bệnh nhân. Họ sẽ lấy mẫu (draw sample) máu
+> của bệnh nhân tại các thời điểm t khác nhau sau khi bệnh nhân uống thuốc,
+> và đo mức độ tập trung của thuộc trong từng mẫu. Tạo thành một cái bảng
+> các mốc thời gian tj, ứng với các chỉ số yj. Nói chung data sẽ là các cặp (tj,
+> yj).
+>
+> Thế rồi, dựa vào kinh nghiệm, người ta tìm thấy một function φ(x, t) = x1 +
+> x2 t + x3 t^2 + x4 e^(-x5t) là một funcntion hữu ích giúp dự đoán chỉ số y với
+> t cho trước. Và bài toán đặt ra là ta tìm vector x = (x1,x2,..x5), là paramter
+> vector, sao cho hàm Φ fit được tốt nhất với các data thu thập được.
+>
+> Dừng lại xíu, có thể nhận ra đây chính là bài toán curve fitting mà chap 1
+> trong sách Bishop đã nói. Và cũng cần nhận thấy, đây không phải là bài toán
+> linear regression, vì sao? Vì đây không phải hàm tuyến tính theo tham số
+> **x**, vì ta thấy x5 tham gia trong e^-x5t, nếu chỉ có ví dụ như x4 e^t, thì đây
+> vẫn là hàm tuyến tính theo tham số **x**.
+>
+> Và cũng chú ý, đây cũng ko phải là bài toán polynomial fitting, vì hàm số này
+> ko phải là hàm đa thức của x, vì cái term x4 e^-x5t.
+>
+> Thế thì, trong bài toán này, người ta nhận ra rằng, hoặc thường dùng hàm
+> (1/2) Σi [φ(x, tj) - yj]^2, là tổng bình phương sai lệch giữa dự đoán Φ(x, tj) và
+> yj. Ý nói, cái bài toán thực tế này chính là ví dụ điển hình của bài toán least -
+> squared khái φ(x, ti) - yjquát mà ta nói đầu đến giờ. Trong đó hàm residual
+> rj(x) ở đây chính là rj(x) = φ(x, tj) - yj.
+
+<br>
+
+<a id="node-98"></a>
+
+<p align="center"><kbd><img src="assets/473310616aa297325093654a0733b0600fe22bc1.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Hình 10.1 thể hiện các mốc thời gian t khác nhau cùng với các giá trị
+> quan sát y tương ứng. Ta có các điểm (t1, y1), (t2, y2), v.v. Đường cong
+> chính là đồ thị của hàm φ(x, t).
+>
+> Hàm φ(x, t) nên được hiểu là đường cong tương ứng với một bộ tham số
+> (vector) x nào đó. Nhiệm vụ của chúng ta là tìm bộ tham số x sao cho
+> hàm này khớp tốt nhất với các cặp điểm (t, y) đã cho.
+>
+> Trên hình, các đường chấm chấm thể hiện khoảng cách hoặc sai lệch
+> giữa giá trị dự đoán của hàm φ(x, ti) và giá trị yi quan sát được (observed
+> value).
+>
+> Như vậy, bài toán đặt ra là **tìm x sao cho tổng bình phương độ dài của
+> các đoạn chấm chấm này là nhỏ nhất**.
+>
+> Giá trị x tối thiểu hóa này được gọi là x*. Sau khi tìm được x*, ta sẽ sử
+> dụng nó để dự đoán cho các mốc thời gian t khác.
+
+<br>
+
+<a id="node-99"></a>
+
+<p align="center"><kbd><img src="assets/dd44037fd1551081dc0d3b0046c53ac9a689043a.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/738573b35cb2c982199826aec06e8e33ed1137c3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Giáo sư gọi mô hình này là **fixed regressor model** trong thống kê học. Tạm
+> dịch là mô hình hồi quy cố định, tuy nhiên, chúng ta sẽ giữ nguyên thuật ngữ
+> fixed regressor model.
+>
+> Loại mô hình này **GIẢ ĐỊNH rằng các thời điểm t** (thời điểm lấy mẫu máu)
+> **được thực hiện rất chính xác**. **Sự không chính xác phát sinh từ việc đo
+> lường mẫu máu** hoặc chỉ số trong mẫu máu. Do đó, giá trị quan sát được của
+> y (y1, y2, ... ) sẽ **chứa nhiễu và sai số**. Các sai số này mang tính ngẫu
+> nhiên, **mức độ nhiều hay ít tùy thuộc vào chất lượng thiết bị** đo đạc.
+>
+> Trong bài toán thực tế đã đề cập, **t chỉ là các giá trị số, phản ánh thời điểm lấy
+> mẫu máu trên một bệnh nhân**. Tuy nhiên, trong bài toán khớp dữ liệu (data
+> fitting) tổng quát, **t không nhất thiết là một con số mà có thể là một vector**.
+> Cụ thể, t có thể là một **vector bao gồm thời điểm lấy mẫu máu và cân nặng
+> của bệnh nhân**. Điều này đồng nghĩa với việc mở rộng khả năng lấy mẫu
+> không chỉ trên một bệnh nhân mà trên nhiều bệnh nhân.
+>
+> Một điểm khác là về hàm đo lường độ chính xác của mô hình. Trước đó, chúng
+> ta đã đề cập đến việc sử dụng hàm tổng bình phương các sai lệch. Tuy nhiên,
+> cũng **có thể sử dụng các hàm khác như tổng các giá trị tuyệt đối của sai lệch,
+> hoặc giá trị tuyệt đối của sai lệch lớn nhất**.
+>
+> Chúng ta có thể sử dụng khái niệm **norm** để diễn tả các hàm này. Theo định
+> nghĩa, norm có các dạng khác nhau: **L2 norm của một vector là căn bậc hai
+> của tổng bình phương các phần tử**; **L1 norm của một vector là tổng giá trị
+> tuyệt đối của tất cả các phần tử**; và **L-infinity norm của một vector là giá trị
+> tuyệt đối của phần tử lớn nhất** trong vector đó.
+>
+> Với cách thể hiện bằng norm vector, chúng ta có thể thay thế các hàm mục tiêu
+> (objective functions) như sau:
+>
+> Hàm tổng bình phương các discrepancy (sai lệch) chính là **bình phương của
+> L2 norm** **của vector r(x)** = [r(x,t1), r(x,t2)...].
+>
+> Tổng giá trị tuyệt đối của các r (vector residual) chính là **L1 norm của vector
+> r(x)**.
+>
+> Và hàm thứ ba (giá trị tuyệt đối của sai lệch lớn nhất) chính là **L-infinity norm
+> của vector** **r(x)**.
 
 <br>
 
