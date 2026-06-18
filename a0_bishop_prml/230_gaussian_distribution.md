@@ -1,4 +1,4 @@
-# 2.3 Gaussian Distribution
+# 2.3.0 Gaussian Distribution
 
 📊 **Progress:** `16` Notes | `22` Screenshots
 
