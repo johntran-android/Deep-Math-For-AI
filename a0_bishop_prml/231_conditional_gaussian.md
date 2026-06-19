@@ -1,4 +1,4 @@
-# 2.3.1
+# 2.3.1 Conditional Gaussian
 
 📊 **Progress:** `6` Notes | `7` Screenshots
 
@@ -261,9 +261,9 @@
 <p align="center"><kbd><img src="assets/af6ebf187c5dc0405e0669df7353628b74707a85.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và cụ thể là bằng cách dùng Schur complement, ta có thể thể hiện **Λaa** và
-> **Λab** theo các matrix **Σaa, Σab, Σbb** để rồi thay vài **μa|b** và **Σa|b ta sẽ
-> có hai công thức 2.81 và 2.82**:
+> Và cụ thể là bằng cách dùng Schur complement, ta có thể thể hiện **Λaa**
+> và **Λab** theo các matrix **Σaa, Σab, Σbb** để rồi thay vài **μa|b** và
+> **Σa|b ta sẽ có hai công thức 2.81 và 2.82**:
 >
 > **μa|b** = **μa** + **Σab** **Σbb_inv** (**xb** - **μb**)
 >
@@ -275,13 +275,13 @@
 >
 > **Σa|b** = (**Λaa**)**inv**
 >
-> thì 2.79 và 2.80 dài dòng hơn, tức là **thể hiện bằng partitioned precision ở dưới
-> nãy sẽ gọn hơn.**
+> thì 2.79 và 2.80 dài dòng hơn, tức là **thể hiện bằng partitioned precision
+> ở dưới nãy sẽ gọn hơn.**
 >
-> Một lưu ý cuối, đó là dựa vào cả hai công thức đều thấy **μa|b là hàm tuyến tính
-> theo xb, cũng như Σa|b hoàn toàn không phụ thuộc xa. Và ông nói đây là một ví
-> dụ của cái gọi là LINEAR-GAUSSIAN model (có thể sẽ được học ở các chap
-> sau)**
+> Một lưu ý cuối, đó là dựa vào cả hai công thức đều thấy **μa|b là hàm
+> tuyến tính theo xb, cũng như Σa|b hoàn toàn không phụ thuộc xa. Và ông
+> nói đây là một ví dụ của cái gọi là LINEAR-GAUSSIAN model (có thể sẽ
+> được học ở các chap sau)**
 
 <br>
 

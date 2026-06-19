@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,312 notes` · `~16,727 screenshots` · `19 courses`** · work in progress
+**`~12,315 notes` · `~16,734 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -572,13 +572,14 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i` 
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 227 Notes | 📸 301 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 230 Notes | 📸 308 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
 - [2.2 Multinomial Variables](a0_bishop_prml/22_multinomial_variables.md) — `7n / 9i` 
 - [2.3.0 Gaussian Distribution](a0_bishop_prml/230_gaussian_distribution.md) — `16n / 22i` 
-- [2.3.1](a0_bishop_prml/231.md) — `6n / 7i` 
+- [2.3.1 Conditional Gaussian](a0_bishop_prml/231_conditional_gaussian.md) — `6n / 7i` 
+- [2.3.2 Marginal Gaussian](a0_bishop_prml/232_marginal_gaussian.md) — `3n / 7i` 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
 - [1.2.0 Probability theory](a0_bishop_prml/120_probability_theory.md) — `13n / 21i` 
