@@ -1,6 +1,6 @@
 # 10.1 Least-square problem
 
-📊 **Progress:** `9` Notes | `10` Screenshots | `7` AI Reviews
+📊 **Progress:** `11` Notes | `13` Screenshots | `9` AI Reviews
 
 ---
 > [!NOTE]
@@ -8,7 +8,7 @@
 
 
 <a id="node-ot9v1dc"></a>
-## Bài toán bình phương tối thiểu
+## Bài toán Least-Squares
 
 <p align="center"><kbd><img src="assets/img_ot9v1dc.png" width="80%"></kbd></p>
 
@@ -26,10 +26,6 @@
 > Và chương này mình sẽ học các thuật toán mạnh mẽ để giải bài toán này
 
 <br>
-
-
-<a id="node-woorrym"></a>
-### Least-Squares và Jacobian
 
 <p align="center"><kbd><img src="assets/img_woorrym.png" width="80%"></kbd></p>
 
@@ -75,17 +71,9 @@
 
 <br>
 
-
-<a id="node-rhbo48g"></a>
-#### Đạo hàm Gradient và Hessian
-
 <p align="center"><kbd><img src="assets/img_rhbo48g.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thử giải thích công thức 10.4:
->
->
->
 > Thế thì ta có f(x) = (1/2) r(x)Tr(x) và J(x) là d/dx r(x).
 >
 >
@@ -336,6 +324,210 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Nội dung tóm tắt rất chính xác và chi tiết về các khái niệm như mô hình hồi quy cố định, vai trò của biến t, các phương pháp đo lường sai lệch và cách biểu diễn chúng bằng các norm. Việc giải thích các định nghĩa norm còn giúp làm rõ thêm các khái niệm trong bài, mặc dù mối liên hệ giữa tổng bình phương sai lệch và bình phương của L2 norm không được nêu tường minh trong đoạn văn gốc như các norm L1 và L-infinity.
+
+<br>
+
+<a id="node-c5vpak7"></a>
+- **Cơ sở thống kê Bình phương nhỏ nhất**
+<p align="center"><kbd><img src="assets/img_c5vpak7.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, tiếp, thế thì gs nói đại khái là ta chapter này, như đã nói, sẽ chủ yếu là tập trung vào việc bài toán mà hàm mục tiêu là sum squared error, hay cũng là thể hiện thông qua L2 norm của residual.
+>
+>
+>
+> Ở đây gs sẽ thay kí hiệu chút xíu, dùng εj để chỉ error j: εj = Φ(x, tj) - yj.
+>
+>
+>
+> Có thể nhắc lại chút xíu, Φ(x, t) là một function nào đó dùng để tính toán với input t để cho ra giá trị dự đoán y, dựa trên giá trị của bộ tham số x. Và theo đó Φ(x, tj) thể hiện dự đoán của mô hình với tj và εj thể hiện sai lệch giữa observed value yj và dự đoán này. Để rồi mục tiêu là tìm x sao cho minimize tổng bình phương εj.
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì, gs nói tiếp, thường là ta sẽ có lí do để giả định rằng εj's (tức các ε1, ε2,....) là independent và identically distributed, với varance σ^2 và pdf g\_σ(.).
+>
+>
+>
+> Dừng lại chỗ này chút xíu, chỗ này quan trọng đây:
+>
+>
+>
+>  Ta hiểu khi nói rằng ta giả định εj's iid, thì tức là đầu tiên mình đang bước sang lĩnh vực xác suất thống kê, trong đó, ε1, ε2,...là các random variables. Và iid có nghĩa là, chúng mutually independent, và có chung population distribution g\_σ(ε), và variance của distribution này, tức Var(ε) = σ.
+>
+>
+>
+> Dĩ nhiên là nhờ học Stat110 và Casella, mình không còn lạ gì cái này nữa. Nhưng ở đây còn một ý quan trọng, mà ta có thể liên hệ với những gì được học trong Chapter 1 của sách Bishop: Giả định distribution của ε là Normal(0, σ^2). Tức là: trong sách Bishop, chapter 1, ta cũng được học về một ví dụ mà gs Bishop dùng bài toán polynomial fitting để dẫn dắt các khái niệm nền tảng của một bài toán học máy. Và một điểm trong đó, đó là, gs nói ta sẽ giả định phân phối của t dựa trên x là iid Normal(y(x,w), σ^2) (đúng hơn thì trong đó gs nói ta sẽ giả định T \~ normal(y(**x**, w), 1/β), với β là pricision, là nghịch đảo của variance)
+>
+>
+>
+> Thế thì, lúc đó mình cũng đã nhận ra rằng, với T \~ Normal(y(x,w), σ^2), thì dùng location scale family theorem, ta sẽ nhận thấy giả định này cũng chính là đồng nghĩa với việc giả định T - y(x,w) (mà cái này chính là error) sẽ là random variable thuộc phân phối Normal(0, σ^2).
+>
+>
+>
+> Còn ở đây, gs Nocedal nói về giả định của error, nhưng lưu ý là ông chưa nói rằng ε có phân phối normal nhé, mà chỉ là phân phối có variance σ^2, với pdf là g\_σ(.) thôi.
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi, tiếp, nhờ đã cày Stat110 và Casella, mà ta dễ dàng hiểu công thức 10.12, là vầy:
+>
+>
+>
+> Nhờ Casella, với bối cảnh ta học về bài toán inference, cụ thể là point estimation: Với sample **X** = X1,...Xn iid \~ f(**x**|θ), bài toán là tìm một function của random sample W(**X**), (còn gọi là một statistic) sao cho estimate được tốt nhất giá trị của population param θ. Thế thì, hàm likelihood, được định nghĩa là, là hàm của θ, L(θ|**x**), mang ý nghĩa là độ hợp lí của θ khi giá trị quan sát được của sample **X** là **x**, và được định nghĩa là L(θ|**x**) = f(**x**|θ). Để rồi sau đó, ta có một cách tiếp cận phổ biến để tìm ra point estimator tốt của θ, đó là maximum likelihood estimator, được định nghĩa là W_mle(**X**) = argmax\_θ ∈ Θ L(θ|**x**).
+>
+>
+>
+> Vậy thì quay lại đây, ta có các observation (t1,y1), (t2,y2)....(tj,yj) với εj được assume là các random variable iid có phân phối g\_σ(ε). Thì lần này ta sẽ làm ngược lại với gs Bishop:
+>
+>
+>
+> Đúng ra, trong bài toán này, nói đến likelihood, thì nó phải là hàm của tham số x: L(x|y,t) và thì theo định nghĩa trên, thì giá trị của nó được define bởi joint pdf f(y|t,x) với y là vector y1,y2,...t là vector t1,..t2, và x là vector tham số.
+>
+>
+>
+> Khi đó L(x|y,t) = f(y|t,x) và nhờ tính iid ta mới tách thành tích các marginal pdf.
+>
+>
+>
+> Câu hỏi là, vì sao trong công thức 10.12, gs lại dùng marginal pdf của error εj thay vì đáng lí phải dùng pdf f(yj | tj,x). Chẳng lẽ nó là một?
+>
+>
+>
+> Nếu vậy thì đang giả định điều gì cho phép điều đó xảy ra, vì rõ ràng, nếu làm như gs Bishop, giả định ε là iid Normal (0, σ^2) thì cũng chỉ đồng nghĩa là đang giả định y|t là normal(Φ(x,t), σ^2) thôi, và dù cùng là normal nhưng chúng khác mean cơ mà.
+>
+>
+>
+>  Câu trả lời thật ra đơn giản: Đúng là chúng bằng nhau. Và cái mà thật ra gs Nocedal đang làm chính là: đổi biến, thể hiện f(yj | tj,x) bởi f(εj | tj,x)
+>
+>
+>
+> Ta có εj có phân phối g\_σ(ε)j. Và εj = Φ Φ(x, tj) - yj ⇔ yj = Φ(x, tj) - εj.
+>
+>
+>
+> Tới đây, tình hình là ta cần pdf của y|t nhưng cái ta có là pdf của ε|t. Nên ta sẽ dùng change of variable theorem, ôn nhanh: Trong Stat110 và Casella đã học, khi ta có X \~ fX(x) và Y = g(X), với g là hàm mapping 1-1 giữa support set của X và support set của Y, tức là với mỗi x belong support set của X thì chỉ ứng với một y thuộc support set của Y và ngược lại: y = g(x) ⇔ x = ginv(y). Khi đó có thể xây dựng pdf của Y như sau: fY(y) = fX(x) |dx/dy| = fX(ginv(y)) |d/dy ginv(y)|
+>
+>
+>
+> Áp dụng vào đây với yj = g(εj) = -εj + Φ(x, tj) ⇨ εj = ginv(yj) = -yj + Φ(x, tj). Và |d/dyj εj| = |d/dyj \[-yj + Φ(x, tj)\]| = |-1| = 1.
+>
+>
+>
+> Nên áp dụng theorem này, pdf của yj sẽ là:
+>
+> f(yj|tj,x) = f(εj | tj, x) với cần lưu ý, phải hiểu f(εj) là pdf của ε, tức hàm g\_σ(εj |tj, x).
+>
+>
+>
+>  Như vậy, likelihood function sẽ là:
+>
+>
+>
+> L(x|y,t) = f(y|t,x) = Πj f(yj|tj,x) = Πj g\_σ(εj|tj,x) = Πj g\_σ(φ(x, tj) - yj), giúp giải thích công thức 10.12 ở đâu ra.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Bài phân tích rất chính xác và cực kỳ sâu sắc. Bạn không chỉ tóm tắt nội dung mà còn mở rộng kiến thức liên quan từ các nguồn khác (Bishop, Casella) và đặc biệt là đưa ra giải thích toán học chi tiết (đổi biến) cho công thức likelihood, làm rõ những điểm mà văn bản gốc có thể chưa làm rõ. Khả năng liên hệ và giải thích các khái niệm thống kê phức tạp là xuất sắc.
+
+<br>
+
+<a id="node-i4dullp"></a>
+- **MLE và Bình phương tối thiểu**
+<p align="center"><kbd><img src="assets/img_i4dullp.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_t5udsze.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Và như đã hiểu, việc đi tìm x khiến maximize hàm likelihood, chính là sẽ cho ra maximum likelihood estimate.
+>
+>
+>
+> Kế tiếp, như dự đoán, gs nói rằng nếu ta giả định ε \~normal(0, σ^2), khi đó, g\_σ(ε) = \[1/√(2πσ^2)\] exp\[-ε^2/2σ^2\]
+>
+>
+>
+> Thay vào hàm likelihood:
+>
+>
+>
+>  L(x|y,t) = Πj g\_σ(φ(x, tj) - yj) = Πj \[1/√(2πσ^2)\] exp\[-(φ(x, tj) - yj)^2/2σ^2\]
+>
+>
+>
+> = Πj \[1/√(2πσ^2)\] exp\[(-1/2σ^2) (φ(x, tj) - yj)^2\]
+>
+>
+>
+> = \[1/√(2πσ^2)\]^m Πj { exp\[(-1/2σ^2) (φ(x, tj) - yj)^2\] }
+>
+>
+>
+> = \[1/√(2πσ^2)\]^m exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\]
+>
+>
+>
+> Vậy, ta có bài toán tối ưu cần giải: maximize over x {\[1/√(2πσ^2)\]^m exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\]}
+>
+>
+>
+> Tới đây, nhờ ee364A cũng như từ đầu đến giờ của sách này, mình biết có thể chuyển bài toán tối ưu thành bài toán tương đương bằng cách thay hàm mục tiêu khi áp một hàm monotone lên nó. Và hàm log (base e, hay base nào cũng được) là hàm monotone increasing. Thành ra ta sẽ chuyển thành bài toán tương đương, và tiếp tục chuyển tương đương bằng cách bỏ đi các constant:
+>
+>
+>
+> maximize_x { log {\[1/√(2πσ^2)\]^m exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\]}
+>
+>
+>
+> Tách log(term 1 x term 2) = log (term 1) + log (term 2):
+>
+>
+>
+> ⇔ maximize_x { log {\[1/√(2πσ^2)\]^m} + log { exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\]}
+>
+>
+>
+> Chuyển tương đương bằng cách bỏ hằng số:
+>
+>
+>
+> ⇔ maximize_x { log { exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\] }
+>
+>
+>
+> Dùng log exp (a) = a:
+>
+>
+>
+> ⇔ maximize_x { (-1/2σ^2) Σj (φ(x, tj) - yj)^2 }
+>
+>
+>
+> Tới đây, chuyển tương đương bằng cách: maximize f ⇔ minimize -f
+>
+>
+>
+> ⇔ minimize_x { Σj (φ(x, tj) - yj)^2 }
+>
+>
+>
+> Như vậy, tới đây có thể thấy rằng bài toán tìm maximum likelihood estimator của tham số x, DƯỚI GIẢ ĐỊNH ERROR LÀ RANDOM VARIABLE NORMAL(0, σ^2) thì cũng chính là bài toán tìm x sao cho least equare: minimize tổng bình phương của error. Đây cũng là cái mà gs Bishop đã nói trong Chap 1 của sách Bishop (Pattern Recognition & Machine Learning)
+>
+>
+>
+>  Đoạn cuối là một ý nói rằng: Dù giả định ε như trên là phổ biến nhưng nó không phải cách duy nhất cho ra kết quả cho thấy bài toán tối ưu nó phù hợp với các lí thuyết thống kê. Còn có những cách khác. Tham khảo thêm.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **99/100**
+>
+> Ghi chú của bạn cực kỳ chính xác và đi sâu vào chi tiết toán học khi chứng minh mối liên hệ giữa ước lượng hợp lý cực đại và tối thiểu tổng bình phương, cho thấy sự hiểu biết vững chắc về tài liệu. Không có điểm yếu đáng kể, tuy nhiên bạn có thể cân nhắc sử dụng cùng ký hiệu cho hàm likelihood (p(y; x, σ)) như trong văn bản gốc để duy trì tính nhất quán khi tham chiếu.
 
 <br>
 
