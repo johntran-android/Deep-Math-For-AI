@@ -1,6 +1,6 @@
 # 2.3.3 Bayes's theorem for Gaussian variables
 
-📊 **Progress:** `3` Notes | `5` Screenshots
+📊 **Progress:** `5` Notes | `7` Screenshots
 
 ---
 <a id="node-233"></a>
@@ -190,6 +190,182 @@
 > **Xb**]) thì cov(**Xa**) là **Σaa**, nên ở đây Cov(Y) chính là **L**inv + **AΛ**inv**A**T.
 >
 > ⇨ **Y** ~ Normal(**Aμ** + **b**, **L**inv + **AΛ**inv**A**T)
+
+<br>
+
+<a id="node-236"></a>
+
+<p align="center"><kbd><img src="assets/2374e0615454e18f36c99df9f71c37a639957c12.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, cùng tìm hiểu đoạn này là sao.
+>
+> Ôn lại bối cảnh một chút, bài toán đang làm là, cho marginal và conditional distribution đều là
+> Normal (Gaussian) trong đó mean của f(**y**|**x**) là hàm tuyến tính theo **x**, còn
+> covariance độc lập với **x**. Nên ta có f(**x**) ~ Normal(**μ**, **Λ**inv) và f(**y**|**x**) ~
+> Normal(**A**x+**b**, **L**inv).
+>
+> Nhiệm vụ là tìm joint distribution, và ta đã thấy nó cũng là Gaussian. Một khi có joint
+> distribution, ta sẽ áp dụng kết quả ở phần trước, để thấy marginal distribution f(**y**) cũng là
+> Gaussian, có mean là E[**Y**] = **Aμ** + **b** và cov(**Y**) = **L**inv + **A** **Λ**inv **A**T.
+>
+> Thế thì ở đây mr Bishop nói rằng khi **A** là **Identity matrix** thì distribution của Y hóa ra là
+> convolution của hai Gaussian. Trong Stat110, thực sự thì gs Joe Blizstein chỉ nói rất sơ sơ
+> về convolution. Cụ thể là ông cho ta biết convolution là tổng của hai random variable (ông
+> nói convolution chỉ là một từ bóng bẩy của sum, tổng) X, Y. Có điều, ông chỉ nói nhiêu đó
+> trong bối cảnh là nói về hàm MGF, rằng, MGF sẽ cho ta cách derive pdf của một tổng các
+> random variable dễ hơn là dùng convolution, lợi dụng một tính chất của MGF đó là nếu X, Y
+> độc lập thì MGF của X + Y = MGF của X nhân MGF của Y: M_(X+Y)(t) = MX(t) × MY(t).
+>
+> Thế thì, thử suy nghĩ một chút: Như vậy có thể thấy bài toán thực ra là, ta có hai biến ngẫu
+> nhiên X, Y, biết pdf, và muốn tìm distribution của Z = X + Y.
+>
+> Thì cái này, thực ra trong Casella đã học rồi, nó chính là bài toán đổi biến (change of
+> variable): Một cách tổng quát, bài toán là ta có X, Y với joint pdf/pmf fX,Y(x,y). Và muốn tìm
+> distribution của (U,V) = với U = g(X, Y), V = h(X,Y), với hàm g và h có tính chất mapping 1-1
+> giữa (x,y) trong support set của random variable vector (X,Y) và (u,v) trong support set của
+> (U,V). (hiểu đại khái là, với (x,y) được map với (u,v) thì vẫn có thể có (x', y') khác được map
+> với (u,v) nhưng với điều kiện (u', v') đó phải không được nằm trong support set của (X,Y)
+> (tập các giá trị mà joint pdf fX,Y(x,y) dương). Khi đó: với u = g1(x,y), v = g2(x,y) thì x = h1(u,
+> v), y = h2(u,v). (g, h là hàm nào đó, ko phải đạo hàm). Ta sẽ có:
+>
+> fU,V(u,v) = fX,Y(x, y) |∂(x, y)/∂(u, v)| = fX,Y(h1(u, v),h2(u, v)) |∂(x, y)/∂(u, v)|
+>
+> Với = |∂(x, y)/∂(u, v)| là trị tuyệt đối của det của Jacobian matrix (đạo hàm của hàm vector →
+> vector (u, v) → (x, y), có hàng 1 là gradient ∇x(u,v): (∂x/∂u, ∂x/∂v), và hàng 2 là gradient ∇y(u,
+> v) = (∂y/∂u, ∂y/∂v).
+>
+> Áp dụng vào đây, ta sẽ đặt vector (Z, X) là random vector có được bởi Z = g1(X, Y) = X + Y,
+> V = g2(X, Y) = X (identity function) ⇨ X = h1(Z, V) = V, Y = h2(Z, V) = Z - V.
+>
+> Jacobinan: ∇x(z,v) = (∂x/∂z, ∂x/∂v)T =  (0, 1)T. ∇y(z,v) = (∂y/∂z, ∂y/v∂) = (1, -1)T
+>
+> ⇨ |det J| = |det [0, 1; 1, - 1]| = |1| = 1.
+>
+> ⇨ fZ,V(z,v) = fX,Y(x,y) = fX,Y(v, z-v)
+>
+> = fX,Y(x, z-x) (Thay v = x)
+>
+> Tới đây, cái ta đang có là joint pdf của Z, V (cũng là Z, X). Bằng cách marginalizing over mọi
+> possible của X, ta sẽ có marginal pdf của Z:
+>
+> fZ(z) = ∫fZ,V(z,x) dx = ∫fX,Y(x, z-x) dx.
+>
+> **CÁI NÀY CHÍNH LÀ CÔNG THỨC CỦA CONVOLUTION.**
+>
+> Và nếu X, Y độc lập, ta có thể tách joint pdf của X, Y thành tích các marginal pdf:
+>
+> ⇨ fZ(z) = ∫ fX(x) fY(z-x) dx
+>
+> Rồi, nãy giờ là kiểu như để mình hiểu bản chất cái công thức convolution thật ra chỉ là đổi
+> biến. Quay lại đây, ta sẽ cùng nhau xem thử vì sao gs lại nói "nói rằng khi **A** là **Identity
+> matrix** thì distribution của Y hóa ra là convolution của hai Gaussian"
+>
+> Đầu tiên, ta đã kết luận **Y** given **x**, f(**y**|**x**) ~ Normal(**Ax**+**b**, **L**inv), theo
+> location scalae family theorem, khi random variable X ~ một pdf thuộc location scalar familty
+> có location μ thì X
+> \- μ sẽ là random varialbe có pdf là standard member của familty đó, tức location = 0. Với
+> normal, nó là một dạng location scale family, nên **T** = **Y** - E**Y** = **Y** - **Ax** - **b**
+> chính là một Normal(**0**, **L**inv).
+>
+> vậy ta có **T** = **Y** - **Ax** - **b** ⇔ **Y** = **T** + **Ax** + **b**.
+>
+> Nếu **A** = **I**, ta có **Y** = **T** + **x** + **b**
+>
+> Dĩ nhiên ta đang xét **x** fixed, là một observed value của **X**.
+>
+> Bây giờ, nếu ta tính đến với **X** là random variable, có distribution f(**x**) là Normal(**μ**,
+> **Λ**inv), thì theo location scale, ta cũng sẽ có **U** = **X** + **b** sẽ là Normal(**μ** + **b**,
+> **Λ**inv)
+>
+> Lúc này, **Y** = **T** + **X** + **b** = **T** + **U chính là tổng của hai Normal:**
+>
+> **T** ~ Normal(**0**, **L**inv) và U ~ Normal(**μ** + **b**, **Λ**inv)
+>
+> Nếu áp dụng công thức covolution ở trên, và giải cái tích phân f(**y**) =
+> ∫f**T**(**t**)f**U**(**y**-**t**)d**t** thay công thức pdf của **T** và **U** vào, ta có thể chứng
+> minh rằng quả thật đây là Gaussian có mean là tổng mean, covariance là tổng covariance.
+> Hoặc làm như trong Stat110, dùng MGF, ta cũng có thể chứng minh điều này. Nhưng cái
+> chính là, một khi đã chỉ ra **Y** là tổng của **T**, **U** thì dùng tính linearity ta nhất định phải
+> có mean bằng tổng mean. Và vì tính độc lập của T, U ta sẽ có covariance bằng tổng
+> covariance:
+>
+> Và mean của **Y**, E**Y** = **μ** + **b**, bằng **0** + **μ** + **b =** E**T +** E**U**.
+>
+> Còn covariance Cov(**Y**) = **L**inv + **Λ**inv = Cov(**T**) + Cov(**U**)
+>
+> Và kết quả mà mình đã làm ở phần trước - marginal pdf của **Y**, f(**y**) cho thấy nó
+> Normal(**Aμ** + **b**, **L**inv + **AΛ**inv**A**T) , với **A** = **I**, Normal(**μ** + **b**, **L**inv
+> \+ **Λ**inv) đã xác nhận điều này.
+>
+> Do đó, gs mới nói, với **A** = **I** thì hóa ra **Y** chính là tổng của hai Normal random
+> variable
+
+<br>
+
+<a id="node-237"></a>
+
+<p align="center"><kbd><img src="assets/61a0c4eafc8d243630e3bd57bc3a8e96675e816c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, cuối cùng là ta sẽ tìm f(**x**|**y**) (nhắc lại nhé, đề bài cho ta có f(**x**) ~ Normal(**μ**, **Λ**inv), f(**y**|**x**)
+> là Normal(**Ax**+**b**, **L**inv), xong chứng minh f(**x**,**y**) và f(**y**) cũng là Gaussian, giờ đến cái
+> f(**x**|**y**):
+>
+> Thì nhờ đã có f(**x**,**y**) ta cũng chỉ dùng cái kết quả ở mấy phần trước, khi trong đó ta có **X** = [**Xa**;
+> **Xb**] có pdf Normal(**μ**, **Σ**) với **Σ** = [**Σaa**, **Σab**; **Σba**, **Σbb**] và **Σ**inv = **Λ** = [**Λaa**,
+> **Λab**; **Λba**, **Λbb**], thì f(**xa**|**xb**) sẽ là Normal có **μa|b** = **μa** - **Λaa_inv Λab** (**xb** - **μb**) và
+> covariance matrix là **Σa|b** = (**Λaa**)inv.
+>
+> Vậy thì áp dụng kết quả đó, cùng với ta có joint distribution của **X**, **Y** là Normal có mean = [**μ**; **Aμ** +
+> **b**], precision = [**Λ** + **A**T**LA**, -**A**T**L**; -**LA**, **L**]
+>
+> và distribution của **Y** là Normal(**μ** + **b**, **L**inv + **Λ**inv)
+>
+> ⇨ **Λaa** ứng với **Λ** + **A**T**LA**, **Λ**ab ứng với -**A**T**L**, **xb** ứng với **y**, **μb** ứng với E[**Y**] =
+> Rồi, cuối cùng là ta sẽ tìm f(**x**|**y**) (nhắc lại nhé, đề bài cho ta có f(**x**) ~ Normal(**μ**, **Λ**inv), f(**y**|**x**)
+> là Normal(**Ax**+**b**, **L**inv), xong chứng minh f(**x**,**y**) và f(**y**) cũng là Gaussian, giờ đến cái
+> f(**x**|**y**):
+>
+> Thì nhờ đã có f(**x**,**y**) ta cũng chỉ dùng cái kết quả ở mấy phần trước, khi trong đó ta có **X** = [**Xa**;
+> **Xb**] có pdf Normal(**μ**, **Σ**) với **Σ** = [**Σaa**, **Σab**; **Σba**, **Σbb**] và **Σ**inv = **Λ** = [**Λaa**,
+> **Λab**; **Λba**, **Λbb**], thì f(**xa**|**xb**) sẽ là Normal có **μa|b** = **μa** - **Λaa_inv Λab** (**xb** - **μb**) và
+> covariance matrix là **Σa|b** = (**Λaa**)inv.
+>
+> Vậy thì áp dụng kết quả đó, cùng với ta có joint distribution của **X**, **Y** là Normal có mean = [**μ**; **Aμ** +
+> **b**], precision = [**Λ** + **A**T**LA**, -**A**T**L**; -**LA**, **L**]
+>
+> và distribution của **Y** là Normal(**Aμ** + **b**, **L**inv + **AΛ**inv**A**T)
+>
+> ⇨ **Λaa** ứng với **Λ** + **A**T**LA**, **Λ**ab ứng với -**A**T**L**, **xb** ứng với **y**, **μb** ứng với E[**Y**] =
+> **Aμ** + **b**
+>
+> ta có thể nói ngay: f(**x**|**y**) cũng là pdf của Normal, có mean:
+>
+> E[**X**|**y**]
+>
+> (sẽ áp vào công thức tương ứng với **μa** - **Λaa_inv Λab** (**xb** - **μb**))
+>
+> = **μ** - (**Λ** + **A**T**LA**)_inv (-**A**T**L**)(**y** - **Aμ** - **b**)
+>
+> = **μ** + (**Λ** + **A**T**LA**)_inv (**A**T**L**)(**y** - **Aμ** - **b**)
+>
+> = (**Λ** + **A**T**LA**)inv(**Λ** + **A**T**LA**)**μ** + (**Λ** + **A**T**LA**)_inv[**A**T**L**(**y** - **b**) -
+> **A**T**LAμ**]
+>
+> = (**Λ** + **A**T**LA**)inv{(**Λ** + **A**T**LA**)**μ** + [**A**T**L**(**y** - **b**) - **A**T**LAμ**]}
+>
+> = (**Λ** + **A**T**LA**)inv [**Λμ** + **A**T**LAμ** + **A**T**L**(**y** - **b**) - **A**T**LAμ**]
+>
+> = (**Λ** + **A**T**LA**)inv [**Λμ** + **A**T**L**(**y** - **b**)]
+>
+> = (**Λ** + **A**T**LA**)inv [**A**T**L**(**y** - **b**) + **Λμ**] → Đây là 2.111
+>
+> Cov(**X**|**y**)
+>
+> (sẽ áp vào công thức (**Λaa**)inv)
+>
+> = (**Λ** + **A**T**LA**)inv → Đây là 2.112
 
 <br>
 
