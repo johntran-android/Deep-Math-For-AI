@@ -1,6 +1,6 @@
 # 2.3.4 MLE for Gaussian
 
-📊 **Progress:** `2` Notes | `2` Screenshots
+📊 **Progress:** `4` Notes | `4` Screenshots
 
 ---
 <a id="node-239"></a>
@@ -280,6 +280,65 @@
 > ⇔ Σi=1:N{**xi**}/N = **μ** → 2.121
 >
 > Kết luận **μ***, cũng là **μ**^_mle chính là Σi=1:N{**xi**}/N, là **SAMPLE MEAN.** 
+
+<br>
+
+<a id="node-241"></a>
+
+<p align="center"><kbd><img src="assets/04261fe241171580ed8fca24aaa5104a6473b184.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, sau khi có μ^mle, ta sẽ giải tiếp bài toán tối ưu tìm **Σ**^mle, gs
+> không giải ở đây mà chỉ đưa công thức, và cách này cũng phức tạp vì
+> đây là bài toán mà biến tối ưu lại là một matrix, nên mình sẽ tạm chấp
+> nhận kết quả này.
+
+<br>
+
+<a id="node-242"></a>
+
+<p align="center"><kbd><img src="assets/15157a537f989195f0ef44644c3f485c4c3ea0a3.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng, là một cái mà mình đã biết từ Casella, đó là, với một estimator W(**X**)
+> nào đó của θ, thì Bias(W(**X**)) được define bởi E_θ[W(**X**) - θ], theo tính
+> linearity, = E_θ[W(**X**)] - θ, để rồi, nếu bias = 0, thì ta có một unbiased estimator
+> của θ.
+>
+> Còn nhớ, trong Casella, mình cũng đã thấy, sample mean Xbar = (Σi Xi)/n là
+> unbiased estimator của population mean, còn sample variance S^2 = (1/n) Σi
+> (Xi-EX)^2 lại là biased estimator của population variance σ^2.
+>
+> Ở đây, ta gặp lại cái vụ này:
+>
+> E[**μ**^ml] = E[(Σi **Xi**) / N], theo linearity, = Σi E[**Xi**] / N = Σi **μ** / N = N **μ** /
+> N = **μ**
+>
+> → Bias(**μ**^ml) = **μ** - **μ** = 0 → **μ**^ml là unbiased estimator của **μ**.
+>
+> Còn E[**Σ**^ml] = E[(1/N) Σi=1:N (**Xi** - **μ**^ml)(**Xi** - **μ**^ml)T]
+>
+> = (1/N) Σi=1:N E[(**Xi** - **μ**^ml)(**Xi** - **μ**^ml)T] (dùng tính linearity của kì vọng)
+>
+> = (1/N) Σi=1:N E[(**Xi** - **μ** + **μ** - **μ**^ml)(**Xi** - **μ** + **μ** - **μ**^ml)T]
+>
+> = (1/N) Σi=1:N E{[(**Xi** - **μ**) + (**μ** - **μ**^ml)][(**Xi** - **μ**) + (**μ** - **μ**^ml)]T}
+>
+> = (1/N) Σi=1:N E{[(**Xi** - **μ**) + (**μ** - **μ**^ml)][(**Xi** - **μ**)T + (**μ** -
+> **μ**^ml)T]}
+>
+> = (1/N) Σi=1:N E[(**Xi** - **μ**)(**Xi** - **μ**)T + (**μ** - **μ**^ml)(**Xi** - **μ**)T +
+> (**Xi** - **μ**)(**μ** - **μ**^ml)T + (**μ** - **μ**^ml)(**μ** - **μ**^ml)T]
+>
+> = (1/N) Σi E[(**Xi** - **μ**)(**Xi** - **μ**)T] +
+>
+> (1/N) Σi E[(**μ** - **μ**^ml)(**Xi** - **μ**)T] +
+>
+> (1/N) Σi E[(**Xi** - **μ**)(**μ** - **μ**^ml)T] +
+>
+> (1/N) Σi E[(**μ** - **μ**^ml)(**μ** - **μ**^ml)T]
+>
+> ....
 
 <br>
 
