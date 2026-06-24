@@ -1,6 +1,6 @@
 # 10.2 Linear Least-squares
 
-📊 **Progress:** `1` Notes | `1` Screenshots
+📊 **Progress:** `2` Notes | `2` Screenshots
 
 ---
 <a id="node-103"></a>
@@ -115,6 +115,139 @@
 > JT(Jx* - y) = 0 ⇔ JTJx = JTy.
 >
 > Và đây, gs nói, cũng chính là normal equation.
+
+<br>
+
+<a id="node-104"></a>
+
+<p align="center"><kbd><img src="assets/beae46e89547a07f59426379aeda2d9ef3f0000b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì phần tiếp theo, gs sẽ mô tả sơ vài thuật toán chính giúp giải bài toán này.
+>
+> Thì cái đầu tiên đơn giản là giải cái normal equation này JTJx = JTy, vì nghiệm của nó chính là solution của bài
+> toán này. (Đây là lúc ta nhớ lúc trước có chỗ thấy người ta nói bài toán không có closed-form solution, thì mình
+> hiểu rằng, tức là không phải bài toán nào cũng có solution thể hiện dưới dạng closed-form, ví dụ như ở đây, về cơ
+> bản, là có thể, vì nhân hai vế cho JTJinv, ta sẽ có x = (JTJ)invJTy. (với việc giả định J full column rank thì ta sẽ có
+> JTJ invertible)
+>
+> Rồi, thế thì, để giải normal equation, đại khái thuật toán sẽ làm 3 bước:
+>
+> i) Tính toán ra matrix hệ số JTJ và vector JTy
+>
+> ii) Phân tách matrix JTJ thành dạng tích của hai matrix tam giác thông qua phép phân rã Cholesky.
+>
+> iii) Giải lần lượt hai hệ phương trình tuyến tính với mà mỗi hệ đều có matrix hệ số là tam giác, khiến quá trình chỉ
+> là back hay forward substitution.
+>
+> Thế thì trong bước 2, gs cho biết ta sẽ đảm bảo có thể phân tách được JTJ thành R'TR' (trong sách là R_bar)
+> nếu m ≥ n và J full column rank. Thử phân tích xem vì sao?
+>
+> Nếu m ≥ n, thì tức là ta có matrix J cao ốm (nhiều hàng hơn cột), và full column rank tức mọi cột độc lập và khi đó
+> JTJ sẽ full rank (chứng minh nhanh: Giả sử **A full rank nhưng ATA không fullrank** → tồn tại x khác 0 khiến ATAx
+> = 0. A full rank thì Ax phải khác 0 khi x khác 0 do nullspace của A chỉ có {0}. Mà AT(Ax) = 0 ⇨ Ax nằm trong left
+> nullspace C(AT), là orthogonal complement với column space C(A) (cặp orthogonal complemt còn lại là nullspace
+> và rowspace). Nhưng với x khác 0 thì Ax do A full column rank, sẽ phải nằm trong C(A), là vector khác 0 trong
+> C(A).Do đó không thể có chuyện nó là left nullspace vector được. Như vậy mâu thuẫn giả thiết. Nên ATA phải full
+> rank. Vậy áp dụng vào đây, J full column rank thì JTJ full rank.
+>
+> Ngoài ra, vì JTJ là gram matrix, là matrix positive semi definite (check quadratic form uTJTJu = (Ju)TJu = ||Ju||^2
+> ≥ 0 với mọi u), điều này đồng nghĩa mọi eigenvalue không âm, mà ở trên đã nói nó full rank, tức là không có
+> eigenvalue bằng 0.
+>
+> Vậy, JTJ là matrix **xác định dương** (positive definite) → Thoả điều kiện tồn tại của Cholesky factorization.
+>
+> Tiếp, ông nói cách làm này cơ bản cũng tốt nhưng có nhược điểm chí mạng là condition number của JTJ = bình
+> phương của condition number của J, mà relative error của solution lại thường là tỉ lệ thuận với condition number.
+> Do đó, sai số của phương pháp này thường lớn hơn các phương pháp khác. Và hơn nữa, có thể khi J có
+> condition number quá lớn (gọi là ill condition) thì thuật toán này còn có thể fail (do bước phân rã Cholesky fail do
+> eigenvalue bằng 0 do lỗi làm tròn)
+>
+> Cùng phân tích chút xíu về đoạn này.
+>
+> Còn nhớ đã học trong MIT 18.06 condition number của matrix A được định nghĩa là tỉ lệ của stretching factor lớn
+> nhất và nhỏ nhất của A: κ(A) = max_x (||Ax||/||x||) / min_x (||Ax||/||x||), và thật ra biến đổi chút cộng với định nghĩa
+> của norm A là max_x ||Ax|| / ||x||, thì ta có κ(A) = ||A|| . ||Ainv||.
+>
+> Vậy thì ta thử giải thích vì sao sai số tương đối lại tỉ lệ thuận với condition number.
+>
+> Sai số nói đến ở đây, dĩ nhiên là sai số khi giải hệ, Ax = b (vì đang nói đến việc giải normal equation, có bản chất
+> cũng chỉ là giải hệ tuyến tính với A là JTJ, b là JTy).
+>
+> Thế thì, giả sử x là solution của hệ, ta có x thỏa Ax = b. Sai số phát sinh khi nào? → Là khi b bị vì lí do gì đó, thay
+> đổi một khoảng Δb, trở thành b + Δb. Khi đó solution của hệ phải thay đổi, trở thành x + Δx. Và Δx là sai số tuyệt
+> đối. Dễ thấy AΔx = Δb.
+>
+> Giả sử A invertible, ta có Δx = Ainv Δb. ⇨ ||Δx|| = ||Ainv Δb||, và cái này, là norm của vector kết qủa khi dùng Ainv
+> transform Δb, nên nó luôn nhỏ hơn việc lấy stretching factor lớn nhất đem stretch Δb: ||Ainv|| ||Δb|| ⇨ ||Δx|| =
+> ||Ainv Δb|| ≤ ||Ainv|| ||Δb||
+>
+> Tiếp, xét x thỏa Ax = b ⇨ ||b|| = ||Ax|| ≤ ||A|| ||x|| ⇨ 1/||x|| ≤ ||A||/||b||
+>
+> Nhân vế theo vế của ||Δx|| ≤ ||Ainv|| ||Δb|| và 1/||x|| ≤ ||A||/||b||, ta có: ||Δx|| / ||x|| ≤ ||Ainv|| ||Δb|| ||A|| / ||b|| = ||Ainv||
+> ||A|| (||Δb|| / ||b||).
+>
+> Như vậy, sai số tương đối ||Δx|| / ||x|| sẽ tỉ lệ thuận với ||Ainv|| ||A|| và cả ||Δb|| / ||b||, là biến động tương đối của b.
+> Thì trong đó ||Ainv|| ||A|| chính là κ(A), nên giúp ta hiểu vì sao gs Nocedal nói "...Since the relative error in the
+> computed solution of a problem is usually proportional to the condition num-ber.."
+>
+> Rồi, vì sao gs nói "the condition number of JTJ is the square of the condition number of J"?
+>
+> Để hiểu, ta sẽ quay lại định nghĩa của κ(A): tỉ lệ stretching factor lớn nhất / nhỏ nhất.
+>
+> Như đã nói stretching factor lớn nhất, chính là định nghĩa của norm A: ||A|| = max_x ||Ax|| / ||x||. Vậy thì ta sẽ thử
+> mổ xẻ bài toán này: maximize_x ||Ax|| / ||x||. Đối mặt với bài toán tối ưu này, nhận thấy ||Ax|| / ||x|| là hàm không
+> âm, và hàm quadratic thì đồng biến với input không âm, nên ta sẽ chuyển thành bài toán tương đương:
+> maximize_x ||Ax||^2 / ||x||^2 = (Ax)T(Ax) / xTx = xTATAx / xTx (cái này trong MIT 1806, sách thầy Strang mình biết
+> gọi là Rayleint quotient).
+>
+> Tiếp, nhận ra ATA là Gram matrix, là matrix đối xứng, nên luôn tồn tại phép phân rã eigenvalue với bộ eigenvector
+> vuông góc: (ATA) = Q Λ QT. ⇨ xTATAx / xTx = xTQΛQTx / xTx. Bài toán trở thành maximize_x xTQΛQTx / xTx ,
+> đổi biến: Đặt y = QTx ⇨ yTy = (xTQQTx) = xTx ta có bài toán maximize yTΛy / yTy
+>
+> Σi λmin(ATA) yi^2 ≤ yTΛy = Σi λi yi^2 ≤ Σi λmax(ATA) yi^2
+>
+> ⇔ λmin(ATA) Σi yi^2 ≤ yTΛy = Σi λi yi^2 ≤ λmax(ATA) Σi yi^2
+>
+> ⇔ λmin(ATA) ||y||^2 ≤ yTΛy = Σi λi yi^2 ≤ λmax(ATA) ||y||^2
+>
+> ⇨ λmin(ATA) ≤ yTΛy / yTy = Σi λi yi^2 ≤ λmax(ATA)
+>
+> ⇨ yTΛy / yTy, cũng là ||Ax||^2 / ||x||^2 đạt max = λmax(ATA) và đạt min = λmin(ATA)
+>
+> ⇨ ||Ax|| / ||x|| đạt max = √ λmax(ATA) và đạt min = √λmin(ATA)
+>
+> Vậy κ(A) = √ λmax(ATA) / √λmin(ATA)
+>
+> Tiếp. Dùng quan hệ của eigenvalue của ATA và singular value của A:
+>
+> Ta biết, bất cứ matrix nào cũng có phép phân tách SVD: Có bản chất là: mapping một orthogonal basis của
+> rowspace (đặt là các cột của matrix V) và orthogonal basis của columnspace (đặt là các cột của U): Avi = σiui, i =
+> 1,2....⇨ AV = UΣ. Với việc V có các cột orthogonal: VVT = I_r (r là rank) nhân hai vế cho VT, ta có A = U Σ VT.
+>
+> Xét ATA, áp cái SVD factorization của A vào: ATA = (U Σ VT)T (U Σ VT) = (V ΣT UT)(U Σ VT) = V ΣT UTU Σ VT =
+> V ΣTΣ VT, và đây cũng chính là eigen-decomposition của ATA, giúp kết luận σ(A)^2 = λ(ATA) ⇨ σ(A) = √λ(ATA).
+>
+> Từ đó, κ(A) = √ λmax(ATA) / √λmin(ATA) = σmax(A) / σmin(A).
+>
+> Nếu áp dụng công thức này, thì κ(ATA) = √λmax([ATA]T[ATA])/√λmin([ATA]T[ATA])
+>
+> = √λmax([ATA ATA])/√λmin([ATA ATA])
+>
+> = √λmax([ATA]^2)/√λmin([ATA]^2)
+>
+> Ôn nhanh tính chất này giả sử u và λ là eigenvector/value của A: Au = λu ⇨ A^2u = A λu = λ Au = λ^2 u ⇨ u cũng
+> là eigenvector ứng với eigenvalue là λ^2, tức là eigenvalue của A^2 = [eigenvalue tương ứng của A]^2. Nếu A là
+> matrix có eigenvalue không âm, ví dụ như matrix ATA, thì khi đó dễ thấy ta sẽ có thể nói, λmax(A^2) =
+> [λmax(A)]^2, và λmin(A^2) = [λmin(A)]^2
+>
+> Vậy λmax[(ATA)^2] = [λmax(ATA)]^2 và λmin([ATA]^2) = [λmin(ATA)]^2
+>
+> ⇨ √λmax([ATA]^2)/√λmin([ATA]^2) = λmax(ATA) / λmin(ATA)
+>
+> và cái này = [√λmax(ATA) / √λmin(ATA)]^2 = [κ(A)]^2
+>
+> Vậy ta đã thấy κ(ATA) = [κ(A)]^2 ⇨ giúp hiểu vì sao gs nói vậy.
 
 <br>
 
