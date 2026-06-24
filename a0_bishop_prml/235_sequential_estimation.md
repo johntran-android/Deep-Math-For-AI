@@ -1,6 +1,6 @@
 # 2.3.5 Sequential estimation
 
-📊 **Progress:** `3` Notes | `5` Screenshots
+📊 **Progress:** `5` Notes | `8` Screenshots
 
 ---
 <a id="node-244"></a>
@@ -180,6 +180,222 @@
 >
 > Như vậy cùng với chuỗi {θ}, ta sẽ có bộ hệ số {a1, a2,....} và Robbins-Monroes
 > quy định nó phải thỏa các tính chất 2.130/1/2.
+
+<br>
+
+<a id="node-247"></a>
+
+<p align="center"><kbd><img src="assets/facdd5d8acfc35d57cd46c94ed903ce273b09ca5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì ở đây ta mới áp dụng cái Robbins Monroes vào để giải bài toán maximum likelihood
+> estimation đây.
+>
+> Thế thì ta đã nói trong phần trước rằng, nói về phương pháp maximum likelihood là ta đang tìm
+> cách ước lượng (estimate) tham số của một population mà các data được lấy từ đó. Cụ thể là với
+> random sample X1,...Xn iid ~ f(x|θ), ta muốn tìm một statistic W(**X**) để estimate cho θ, và một
+> cách tiếp cận, đó là dùng W(**X**) = argmax_θ L(θ|**x**), với định nghĩa của hàm L(θ|**x**) là =
+> f(**x**|θ), thì W(**X**) = argmax_θ f(**x**|θ). Và với việc nó là ML estimator của θ, ta kí hiệu θ^ml,
+> hay viết θ^ml(**X**) cũng được để nhớ rằng nó là một statistic - tức một random variable có được
+> bởi việc áp một hàm số lên random sample **X**. Ta có θ^ml(**X**) = argmax_θ f(**x**|θ).
+>
+> Sau đó, ta cũng biết để giải bài toán tối ưu, có thể chuyển bài toán gốc thành các bài toán tương
+> đương bằng các technique khác nhau, ví dụ dùng objective mới là [một hàm monotone áp lên
+> hàm objective gốc], hoặc nhân với constant.
+>
+> Vậy thì ở đây log là một hàm montone, nên solution của bài toán maximize hàm log (hay ln để thể
+> hiện log base e) likelihood, nhân thêm constant (1/N), thì cũng là solution của bài toán gốc:
+> θ^ml(**X**) = argmax_θ {(1/N) log L(θ|**x**) = (1/N) log [f(**x**|θ)]
+>
+> và với việc data, hay random sample thường sẽ có tính iid, nên joint pdf của chúng sẽ có thể tách
+> thành tích các marginal pdf: f(**x**|θ) = Πi=1:N f(**x**i|θ) Dẫn đến ln [f(**x**|θ)] = ln [Πi=1:N
+> f(**x**i|θ)]. Dùng tính chất hàm log, ta có Σi=1:N ln f(**x**i|θ). Và bài toán tối ưu lúc này là:
+>
+> maximize_θ {(1/N) Σi=1:N ln f(**x**i|θ)}
+>
+> Như vậy, đây là bài toán tối ưu ko ràng buộc có objective là (1/N) Σi=1:N ln f(**x**i|θ), thì để giải ta
+> sẽ dùng điều kiện cần tối ưu bậc nhất (first order optimality necessary condition) để tìm stationary
+> point, nơi có gradient vanish:
+>
+> ∇{(1/N) Σi=1:N ln f(**x**i|θ)} = 0,
+>
+> dĩ nhiên cũng có thể kí hiệu:
+>
+> ∂/∂θ {(1/N) Σi=1:N ln f(**x**i|θ)} = 0 → đây là công thức 2.133 trong sách.
+>
+> (kí hiệu .. |θml trong sách chỉ đơn giản là, cái ∂/∂θ {(1/N) Σi=1:N ln f(**x**i|θ)}, là hàm số theo θ, và
+> với θ = θml, thì giá trị của hàm số này phải bằng 0)
+>
+> Tất nhiên, (1/N) Σi=1:N ln f(**x**i|θ) là tổng của N hàm, áp dụng đạo hàm của tổng = tổng đạo hàm
+> (sum rule) ta có:
+>
+> ⇔ (1/N) Σi=1:N ∂/∂θ [ln f(**x**i|θ)]
+>
+> Tới đây, tác giả nói, nếu ta xét cái này ở limit, tức lấy lim N → ∞, thì ta sẽ có gì, hay ta sẽ xem nó
+> là cái gì, mà vì sao nó lại là kết quả như 2.134 trong sách:
+>
+> lim N→∞ {(1/N) Σi=1:N ∂/∂θ [ln f(**x**i|θ)]}
+>
+> Thế thì mình hãy tạm bỏ qua cái lim, mà nhìn vào cụm Σi=1:N ∂/∂θ [ln f(**x**i|θ)]. Nếu mình xét cái
+> hàm T(**u**) sau đây: T(**u**) = ∂/∂θ [ln f(**u**|θ)], thì khi đem áp nó lên một random variable
+> vector **Xi**, ta sẽ có một random variable mới: T(**Xi**) = ∂/∂θ [ln f(**Xi**|θ)]. Khi đó ứng với mỗi
+> random variable trong **X1**, **X2**, ....**XN**, ta sẽ có T1 = T(**X1**), T2 = T(**X2**),...cũng tạo
+> thành một random sample Ti.
+>
+> Thế thì Tbar = (Σi Ti)/N là sample mean của random sample này.
+>
+> Nhớ lại trong Stat110 đã học **Week Law Of Large Number**, với random sample X1,...Xn ~ f(x|θ)
+> với θ là population mean và Xbar là sample mean, WLLN nói rằng ta đã biết, khi N → ∞, Tbar sẽ
+> hội tụ in probability về true population mean của Ti, cũng chính là nói rằng sample mean khi xét ở
+> limit N → ∞ chính là true mean E[Xi] = θ.
+>
+> Vậy quay lại đây chính là ta đang dùng WLLN để nói rằng sample mean Tbar sẽ hội tụ (in
+> probability) về true mean của Ti:
+>
+> lim {N → ∞} Tbar = E[Ti]
+>
+> ⇔ lim N→∞ {(1/N) Σi=1:N ∂/∂θ [ln f(**X**i|θ)]} = E[∂/∂θ [ln f(**Xi**|θ)], giúp ta hiểu công thức 2.134
+> ở đâu ra.
+>
+> Thêm nữa, ta đã biết cái việc giải bài toán MLE, thì điều kiện cần tối ưu bậc nhất giúp giải ra
+> stationary point chính là Σi=1:N ∂/∂θ [ln f(**X**i|θ)], cũng ⇔ (1/N) Σi=1:N ∂/∂θ [ln f(**X**i|θ)] =
+> 0. Thì nếu vậy giá trị của nó khi xét tại limit N → ∞ cũng phải bằng 0. Do đó, điều kiện giải tìm
+> stationary point trở thành tương đương với E[∂/∂θ [ln f(**Xi**|θ)] = 0. Mà như ta đã đặt ∂/∂θ [ln
+> f(**Xi**|θ) = Ti, = T(**Xi**). Nên ta có điều kiện cần giải là E[T] = 0. Và dĩ nhiên E[T] là hàm phụ
+> thuộc θ, nên ghi là E_θ[T], hoặc ông Bishop ghi là E[T|θ] để áp cái Robbins-Monroes vào, dù rằng
+> cách ghi này hơi khiên cưỡng vì nó có thể khiến ta lầm tưởng θ được xem như random variable,
+> thật sự thì không phải vậy, θ trong bối cảnh bài toán MLE, chắc chắn là fixed unknown, nên đáng
+> lí phải ghi E_θ[T] thôi.
+>
+> Thế thì khi mở màn, gs nói về Robbins-Monroes, ông nói ta sẽ hai random variable θ và Z, có
+> joint pdf f(θ, z), và xét hàm E[Z|θ], là một hàm theo θ, f(θ), và gọi nó là regresion function.
+>
+> Vậy ở đây, cái E[T], như đã nói trên, nó cũng là hàm theo θ, nên được ghi là E_θ[T], nhưng nếu
+> ghi là E[T|θ] với ngầm hiểu chỉ thể hiện là hàm theo θ fixed, thì ta cũng có thễ chấp nhận nó là
+> regression function vì sao nói và việc giải E[T|θ] = 0 cũng chính là tìm root của regression
+> function.
+>
+> Sẵn tiện ôn lại vài vài ý về của expectation hay conditional expectation:
+>
+> Này nhé, nếu ta có X ~ f(x|θ), và ta coi θ như fixed & unknown. Cái hàm pdf của x, thực ra có thể
+> ghi là f_θ(x) cũng được. Khi đó dùng định nghĩa EX, ta có EX = ∫x f_θ(x)dx, thì cái này là hàm
+> theo θ. Trong sách toán thống kê xác suất, khi ko muốn nhắc đến việc đây là hàm của θ, người ta
+> có thể chỉ ghi E[X], còn khi muốn nhấn mạnh nó là hàm của θ, người ta ghi là E_θ[X]. (chữ θ ở
+> dưới chân E), dĩ nhiên nó là hàm theo θ, có thể đặt là g(θ)
+>
+> Vậy tương tự, giả sử ta thay cái kí hiệu θ bởi y, để có X ~ f(x|y), hay f_y(x), thì kì vọng của X sẽ kí
+> hiệu là E_y[X], dĩ nhiên tương tự, nó là hàm theo y, có thể đặt là g(y)
+>
+> Tiếp, nếu ta lại coi y chỉ là một possible value của một random variable Y nào đó, lúc này, cái pdf
+> f_y(x), hay f(x|y) trở thành conditional pdf. Và sự khác biệt là: Với y, hay θ trong hai case trên, thì
+> nó được coi là fixed, và unknown, chỉ vì ta chưa biết giá trị của nó thôi (chứ nó chỉ có một giá trị
+> cố định nào đó, dẫn đến pdf của X chỉ là một hàm cố định nào đó thôi), nên khi tính kì vọng của X,
+> ta sẽ phụ thuộc vào nó, để kết quả là function của y, hay θ (g(y) hay g(θ)).
+>
+> Còn một khi ta đã coi y là một possible value của random variable, thì giá trị của nó ko còn fixed
+> unknown nữa, mà nó là random variable. Lúc này, tùy vào giá trị của Y, mà pdf của X sẽ khác, tức
+> là f(x|y) sẽ là hàm số phụ thuộc Y. Nên đây gọi là conditional pdf của X given Y. Để từ đó, kì vọng
+> của X, vẫn là hàm phụ thuộc y, nhưng bản chất nó khác case trên ở chỗ, ở case trên, ta hiểu
+> E_y[X], hay E_θ[X] là con số cố định nào đó, chẳng qua chưa biết θ, hay y là gì để mà ráp vào
+> thôi, còn ở đây kì vọng của X sẽ là con số có thể mang nhiều giá trị khác nhau, tùy vào ông Y có
+> giá trị là gì. Thành ra người ta ko kí hiệu f_y(x) (cũng ám chỉ hàm này phụ thuộc y, nhưng mang ý
+> nghĩa y là param có giá trị fixed, unknown) mà kí hiệu f(x|y) (cũng ám chỉ hàm này phụ thuộc y,
+> nhưng nó hàm ý rằng y có giá trị thay đổi). Và tương ứng, ta cũng không chỉ ghi kì vọng của X là
+> E_y[X], mà kí hiệu là E[X|y].
+>
+> Và lúc này E[X|Y], là hàm theo Y, nên nó là random variable, thành ra ta nhớ trong Adam's Law,
+> có cái vụ E[E[X|Y]] là vì vậy: vì E[X|Y] chính là một random variable, có được nhờ áp hàm E[X|y]
+> vào random variable Y, nên ta mới có thể nói về kì vọng của nó: E[E[X|Y]]. Chứ còn nếu chỉ là
+> E_y[X], thì nó chỉ là con số fixed nào đó, chứ ko phải random variable.
+>
+> Cuối cùng, nhức đầu ở chỗ khi người ta viết X ~ f(x|θ), thì có khi họ đang nói θ là fixed nhưng có
+> khi họ đang theo Bayesian mà nói θ là random variable. Thành ra dễ gây confused nếu không để
+> ý. Do đó có khi ghi E[X|θ], có khi ghi E_θ[X] thì phải hiểu khi ghi E[X|θ] thì có thể đang nói về
+> random variable hoặc chỉ là fixed number phụ thuộc θ.
+>
+> Trong lúc mở màn, ổng nói ta xét hai biến Z và θ, và nói về hàm E[Z|θ], thì như vừa rồi đã lập
+> luận, ta hoàn toàn hiểu cái này là hàm theo θ, gọi là regression function
+>
+> Vậy thì khi ta có T(X) = ∂/∂θ ln f(X|θ), thì kì vọng của T cũng có thể kí hiệu là E[T|θ]
+>
+> Và hãy nhận ra rằng, dù đang trong bài toán MLE, vốn dĩ không coi θ như random variable,
+> nhưng mr Bishop lại đang lí thuyết của Robbins-Monroes, trong đó coi θ và Z đều là random
+> variable, nên nó gây vài confuse.
+
+<br>
+
+<a id="node-248"></a>
+
+<p align="center"><kbd><img src="assets/342802030c5333bfc76635a72a4fa90d4d42c222.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5eb3490a4d71adaa825a9d0475d130fd7b6c8e11.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì, sau khi đã THẤY rằng việc giải first order necessary optimality condition
+> gíup tìm stationary point của bài toán MLE chính là giải bài toán tìm root của
+> hàm regression f(θ) = E[T|θ] với T(**X**) = ∂/∂θ [ln f(**X**|θ)] (tìm root tức là f(θ) =
+> ⇔ E[T|θ] = 0) thì ta sẽ áp dụng cơ chế của Robbin-Monroes (R-M)
+>
+> Nhớ lại R-M nói rằng, để giải f(θ) = 0, với f(θ) = E[Z|θ], ta sẽ tạo (generate) chuỗi
+> {θ^(1), θ^(2),....,θ^(N)} theo công thức:
+>
+> θ^(N) = θ^(N-1) + a_N-1 × z(θ^(N-1))
+>
+> với a_N-1 là con số dương nào đó, và z(θ^(N-1)) là giá trị quan sát được của Z
+> khi θ đang = θ^(N-1).
+>
+> Áp dụng vào đây, ta muốn giải bài toán MLE tìm μML của Gaussian, thì θ cần
+> tìm để E[Z|θ] = f(θ = 0 chính là μML, để f(μML) = E[T|μML]= [đạo hàm của log
+> likelihood tại μML] = 0.
+>
+> (T = T(X) = ∂/∂μ [ln f(X|μ)]).
+>
+> Thế thì thuật toán R-M để tìm μML sẽ là việc tạo chuỗi {μML^(1), μML^(2),...
+> μML^(N) tiến dần về μML thật sự thỏa f(μML) = 0}, theo công thức:
+>
+> μML^(N) = μML^(N-1) + a_N-1 × t(μML^(N-1))
+>
+> với a_N-1 là hệ số nào đó
+>
+> và t(μ^(N-1)) là giá trị quan sát được của T khi μML = μML^(N-1).
+>
+> Thế thì T = T(X) = ∂/∂μ [ln f(X|μ)]) thì
+>
+> t(μML^(N-1)) sẽ là ∂/∂μ [ln f(X|μ)]) | μ = μML
+>
+> = ∂/∂μ [ln {[1/√(2πσ^2)] exp[-(x-μ)^2/2σ^2]) | μ = μML
+>
+> = ∂/∂μ [ln {[(2πσ^2)^(-1/2)] exp[-(x-μ)^2/2σ^2]) | μ = μML
+>
+> = ∂/∂μ [ln [(2πσ^2)^(-1/2)] + ln exp[-(x-μ)^2/2σ^2])] | μ = μML
+>
+> = ∂/∂μ [(-1/2) ln (2πσ^2) - (x-μ)^2/2σ^2] | μ = μML
+>
+> = {∂/∂μ [(-1/2) ln (2πσ^2)] - ∂/∂μ [(x-μ)^2/2σ^2] } | μ = μML
+>
+> = {0 - (1/2σ^2) ∂/∂μ [(x-μ)^2] } | μ = μML
+>
+> = (1/2σ^2) 2(x-μ) | μ = μML
+>
+> = (1/σ^2)(x-μ) | μ = μML
+>
+> = (1/σ^2)(x-μML) → Đây chính là 2.136
+>
+> (gs Bishop ghi ∂/∂μML gây khó hiểu, đáng lí phải là ∂/∂μ[...] | μ = μML để thể hiện
+> rằng, đây là hàm số đạo hàm theo μ, và evaluate tại μML)
+>
+> Vậy T = (tương ứng với Z khi xét lí thuyết Robbin-Monros ta nói về Z và θ) =
+> (1/σ^2)(x-μML)
+>
+> Nên thuật toán sẽ là:
+>
+> μML^(N) = μML^(N-1) + a_N-1 (1/σ^2)(x - μML) với ý nghĩa là, gỉa sử ta đang có
+> μML = μML^(N-1). Và data mới xuất hiện X = xN. Ta sẽ dùng nó để ráp vào công
+> thức để tính μML mới (μML^(N)).
+>
+> Và ví dụ ta chọn a_N = σ^2 / N, thì công thức để update sẽ là:
+>
+> μML^(N) = μML^(N-1) + (xN - μML^(N-1)) / (N-1).
 
 <br>
 
