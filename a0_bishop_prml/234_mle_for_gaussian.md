@@ -300,10 +300,10 @@
 <p align="center"><kbd><img src="assets/15157a537f989195f0ef44644c3f485c4c3ea0a3.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng, là một cái mà mình đã biết từ Casella, đó là, với một estimator W(**X**)
-> nào đó của θ, thì Bias(W(**X**)) được define bởi E_θ[W(**X**) - θ], theo tính
-> linearity, = E_θ[W(**X**)] - θ, để rồi, nếu bias = 0, thì ta có một unbiased estimator
-> của θ.
+> Cuối cùng, là một cái mà mình đã biết từ Casella, đó là, với một estimator
+> W(**X**) nào đó của θ, thì Bias(W(**X**)) được define bởi E_θ[W(**X**) - θ],
+> theo tính linearity, = E_θ[W(**X**)] - θ, để rồi, nếu bias = 0, thì ta có một
+> unbiased estimator của θ.
 >
 > Còn nhớ, trong Casella, mình cũng đã thấy, sample mean Xbar = (Σi Xi)/n là
 > unbiased estimator của population mean, còn sample variance S^2 = (1/n) Σi
@@ -311,24 +311,26 @@
 >
 > Ở đây, ta gặp lại cái vụ này:
 >
-> E[**μ**^ml] = E[(Σi **Xi**) / N], theo linearity, = Σi E[**Xi**] / N = Σi **μ** / N = N **μ** /
-> N = **μ**
+> E[**μ**^ml] = E[(Σi **Xi**) / N], theo linearity, = Σi E[**Xi**] / N = Σi **μ** / N = N
+> **μ** / N = **μ**
 >
 > → Bias(**μ**^ml) = **μ** - **μ** = 0 → **μ**^ml là unbiased estimator của **μ**.
 >
 > Còn E[**Σ**^ml] = E[(1/N) Σi=1:N (**Xi** - **μ**^ml)(**Xi** - **μ**^ml)T]
 >
-> = (1/N) Σi=1:N E[(**Xi** - **μ**^ml)(**Xi** - **μ**^ml)T] (dùng tính linearity của kì vọng)
+> = (1/N) Σi=1:N E[(**Xi** - **μ**^ml)(**Xi** - **μ**^ml)T] (dùng tính linearity của kì
+> vọng)
 >
 > = (1/N) Σi=1:N E[(**Xi** - **μ** + **μ** - **μ**^ml)(**Xi** - **μ** + **μ** - **μ**^ml)T]
 >
-> = (1/N) Σi=1:N E{[(**Xi** - **μ**) + (**μ** - **μ**^ml)][(**Xi** - **μ**) + (**μ** - **μ**^ml)]T}
+> = (1/N) Σi=1:N E{[(**Xi** - **μ**) + (**μ** - **μ**^ml)][(**Xi** - **μ**) + (**μ** -
+> **μ**^ml)]T}
 >
 > = (1/N) Σi=1:N E{[(**Xi** - **μ**) + (**μ** - **μ**^ml)][(**Xi** - **μ**)T + (**μ** -
 > **μ**^ml)T]}
 >
-> = (1/N) Σi=1:N E[(**Xi** - **μ**)(**Xi** - **μ**)T + (**μ** - **μ**^ml)(**Xi** - **μ**)T +
-> (**Xi** - **μ**)(**μ** - **μ**^ml)T + (**μ** - **μ**^ml)(**μ** - **μ**^ml)T]
+> = (1/N) Σi=1:N E[(**Xi** - **μ**)(**Xi** - **μ**)T + (**μ** - **μ**^ml)(**Xi** - **μ**)T
+> \+ (**Xi** - **μ**)(**μ** - **μ**^ml)T + (**μ** - **μ**^ml)(**μ** - **μ**^ml)T]
 >
 > = (1/N) Σi E[(**Xi** - **μ**)(**Xi** - **μ**)T] +
 >
@@ -338,7 +340,28 @@
 >
 > (1/N) Σi E[(**μ** - **μ**^ml)(**μ** - **μ**^ml)T]
 >
-> ....
+> Xét term thứ 2: (1/N) Σi E[(**μ** - **μ**^ml)(**Xi** - **μ**)T]
+>
+> = (1/N) E[Σi (**μ** - **μ**^ml)(**Xi** - **μ**)T]
+>
+> = (1/N) E[(**μ** - **μ**^ml) Σi (**Xi** - **μ**)T]
+>
+> = E[(**μ** - **μ**^ml) ((1/N)Σi **Xi** - **μ**)T]
+>
+> = E[(**μ** - **μ**^ml) (**μ**^ml - **μ**)T]
+>
+> Xét term thứ 3 (1/N) Σi E[(**Xi** - **μ**)(**μ** - **μ**^ml)T]
+>
+> tương tự, sẽ ra - E[(**μ** - **μ**^ml) (**μ**^ml - **μ**)T]
+>
+> Do đó chỉ còn (1/N) Σi E[(**Xi** - **μ**)(**Xi** - **μ**)T] + (1/N) Σi E[(**μ** -
+> **μ**^ml)(**μ** - **μ**^ml)T]
+>
+> Và cái đầu chính là **Σ**, cái sau chính là **Σ**/N
+>
+> ⇨ Kết quả là [(N - 1)/N] **Σ**, kết quả này khác **Σ**
+>
+> do đó đây là một biased estimator của **Σ**.
 
 <br>
 

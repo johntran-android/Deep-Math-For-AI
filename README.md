@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,331 notes` · `~16,755 screenshots` · `19 courses`** · work in progress
+**`~12,335 notes` · `~16,761 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -564,16 +564,17 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [10.2 Linear Least-Square Problem](numerical_optimization/102_linear_least_square_problem.md) — `2n / 3i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Numerical Optimization — SimpleMind Notes (📝 104 Notes | 📸 132 Screenshots)
+### 📂 Numerical Optimization — SimpleMind Notes (📝 105 Notes | 📸 133 Screenshots)
 
 - [8.1 Finite-Difference Derivative Approx](numerical_optimization_sm/81_finite_difference_derivative_approx.md) — `21n / 29i` 
 - [8.2 Automatic Differentiation (*extremely Important For Ai)](numerical_optimization_sm/82_automatic_differentiation_extremely_important_for_ai.md) — `35n / 46i` 
 - [7.1 Inexact Newton Methods (continue from StudyBoard notebooks)](numerical_optimization_sm/71_inexact_newton_methods_continue_from_studyboard_notebooks.md) — `9n / 10i` 
 - [10.1 Least-square Problem](numerical_optimization_sm/101_least_square_problem.md) — `10n / 13i` 
+- [10.2 Linear Least-squares](numerical_optimization_sm/102_linear_least_squares.md) — `2n / 2i` 
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 239 Notes | 📸 319 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 242 Notes | 📸 324 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -583,6 +584,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [2.3.2 Marginal Gaussian](a0_bishop_prml/232_marginal_gaussian.md) — `3n / 7i` 
 - [2.3.3 Bayes's theorem for Gaussian variables](a0_bishop_prml/233_bayess_theorem_for_gaussian_variables.md) — `5n / 7i` 
 - [2.3.4 MLE for Gaussian](a0_bishop_prml/234_mle_for_gaussian.md) — `4n / 4i` 
+- [2.3.5 Sequential estimation](a0_bishop_prml/235_sequential_estimation.md) — `3n / 5i` 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
 - [1.2.0 Probability theory](a0_bishop_prml/120_probability_theory.md) — `13n / 21i` 
