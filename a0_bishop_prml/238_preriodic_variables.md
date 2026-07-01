@@ -1,6 +1,6 @@
 # 2.3.8 Preriodic variables
 
-📊 **Progress:** `4` Notes | `10` Screenshots
+📊 **Progress:** `7` Notes | `16` Screenshots
 
 ---
 <a id="node-264"></a>
@@ -295,6 +295,241 @@
 > chuẩn hóa. Nhưng mà cái kiểu như là cái cái cách biến thiên của cái hàm mà gọi là
 > circulating Gaussian này nó cũng có cái dạng của hình chuông nhưng mà nó lại có cái
 > tính periodic. Nó hay là chỗ đó.
+
+<br>
+
+<a id="node-268"></a>
+
+<p align="center"><kbd><img src="assets/2a8c3fe159cbf208b65aeaa228b84f92c6e904b7.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ôn nhanh lại chút xíu về Circulating Gaussian: Đại ý là, ta muốn mô hình hóa các đại lượng
+> mang tính chu kì, gọi là periodic variable, và cụ thể hơn, ta muốn xây dựng một phân phối
+> Normal đối với periodic variable. Vậy thì, đại khái là, đầu tiên, lấy ví dụ yếu tố cần mô phỏng là
+> hướng gió, thì nếu chỉ biểu diễn theo lối thông thường, ta sẽ có kết quả rất phụ thuộc vào gốc.
+>
+> Ý là, ví dụ nếu như cứ cho X1,X2,...Xn là các random variable thể hiện cho các giá trị quan sát
+> của hướng gió (còn nhớ, trong Casella đã học định nghĩa của random sample size n: Tiến hành
+> quan sát giá trị của một đại lượng ngẫu nhiên n lần, mỗi lần dùng một random variable Xi để ghi
+> nhận giá trị của nó, và thực hiện theo lối sao cho các random variable mutually independent và
+> có cùng distribution. Vì tính chất random của đại lượng được quan sát nên dĩ nhiên Xi là random
+> variable, vì nó có thể có nhiều possible values), thì vấn đề là, hướng gió (giả sử dùng đơn vị độ)
+> 179 độ và 1 độ thật ra rất gần nhau. Dẫn đến vấn đề là, nếu ta chọn gốc khác thì mô hình sẽ
+> khác. Ví dụ, chọn gốc tham chiếu là mốc 0 độ thì sample mean sẽ khác, mà chọn ở mốc khác thì
+> sample mean sẽ khác.
+>
+> Do đó, ta mới dùng một cách tiếp cận khác: Đó là thay vì dùng góc θ để biểu diễn hướng gió,
+> đồng nghĩa là đang dùng hệ tọa độ cực (polar coordinate) thì ta sẽ dùng hệ tọa độ Cartesian, tức
+> là cứ dùng các vector 2D, và vì chỉ quan tâm hướng, nên ta cho chúng có độ dài bằng nhau, và
+> tiện nhất là cho bằng 1, để sự khác nhau của các vector sẽ thể hiện sự khác nhau của hướng
+> gió. Bằng cách này, ta loại bỏ sự phụ thuộc vào gốc tham chiếu khi sample mean luôn là sample
+> mean (ý là ko phải bị phụ thuộc gốc tham chiếu như dùng góc). Và ta đi đến công thức:
+>
+> **θbar = argtan(Σi sin(θi) / Σi cos(θi))**
+>
+> Và đại ý là, khi ta đi xây dựng một phân phối Chuẩn dành cho biến periodic, ta sẽ thấy đây chính
+> là công thức của ML estimator của mean θ của phân phối đó (y như Xbar, tức sample mean
+> cũng là ML estimator của μ vậy)
+>
+> Thế rồi, để đi xây dựng một phân phối chuẩn nhưng dành cho biến chu kì (periodic variable),
+> người ta có ý tưởng làm như sau: Lôi một phân phối 2D Normal(**μ**, σ^2 × **I**), và phương
+> hướng làm (xây dựng một hàm density có tính chất của một phân phối Normal hình chuông
+> nhưng lại có tính chu kì, đó là pdf tại θ + 2π phải bằng pdf tại θ (theo quy ước, người ta dùng
+> chu kì 2π) như sau: CHUYỂN HÀM NORMAL SANG BIẾN θ, r (dùng change of variable, để xây
+> dựng pdf của θ, r từ pdf của X1, X2), sau đó, GIỚI HẠN NÓ TRÊN RÀNG BUỘC R = 1. Lúc này,
+> ta được một cái hàm density có tính chất chu kì (có được là do ràng buộc r = 1, khiến khi θ thay
+> đổi, sẽ tương ứng ta chạy vòng quanh đường tròn đơn vị → mang lại tính chu kì) và đồng thời
+> thừa hưởng đặc điểm của phân phối Normal, vì kiểu như khi chạy một vòng quanh đường tròn
+> đơn vị, giá trị hàm số cũng thay đổi theo hình chuông: cao khi tới gần góc phần tư thứ 1, giảm
+> khi đi xa ra khỏi đó.
+>
+> Và nhiệm vụ còn lại, là, đặt ra normalizing function để giúp cái hàm density này trở thành valid:
+> tích phân toàn miền = 1 (vì khi ta giới hàn hàm Normal density trên r = 1, thì đã không còn valid
+> là pdf ở điều kiện tích phân toàn miền bằng 1 nữa)
+>
+> Và kết qủa là ta có công thức của phân phối Von Mises, còn gọi là Circulating Gaussian:
+>
+> **f(θ) = [1/2πI0(m)] exp{m cos(θ - θ0)}**
+>
+> với θ là mean tương ứng với μ của normal thông thường
+>
+> và m là concentration, tương tự precision của normal thông thường
+>
+> Và để ý tính periodic của nó: f(θ + 2π) = [1/2πI0(m)] exp{m cos(θ - θ0 + 2π)} đúng là bằng f(θ) vì
+> cos(α + 2π) = cos(α)
+>
+> Rồi, như trên là mình đã ôn lại ý tưởng chính giúp derive ra pdf của **Von Mises**, quay lại đây,
+> hình này sẽ hiểu như sau:
+>
+> Bên trái: khi thay đổi θ: chạy từ trái sang phải, chính là thay đổi θ, thì pdf của Von Mises (π/4, 5)
+> sẽ có giá trị cao nhất tại π/4, và của Von Miese (3 π/4, 1) là tại 3π/4, rất dễ hiểu. Tham số m,
+> concentration, có thể thấy, chi phối sự dàn trải của xác suất, với màu đỏ (m = 5), nó có sự tập
+> trung xác suất cao, dẫn đến hình chuông đỏ ốm, cao, ngược lại với màu xanh. Và cả hai đều thể
+> hiện tính chu kì, khi có thể thấy khi tại 2π, đường cong giống như tiếp nối với khúc đầu.
+>
+> Còn cái hình bên phải thì thật ra là mình đang nhìn theo tọa độ cực. Có nghĩa là với hình bên trái
+> là khi mình chạy từ trái sang phải, có nghĩa là mình sẽ thay đổi cái góc theta từ 0 đến 2 pi.
+> Nhưng mà ở bên phải là mình sẽ hiểu rằng là mình **xoay cái góc theta quanh cái điểm gốc tọa
+> độ**. Mình xoay cái góc để từ 0 radian đến 2 pi radian. Thì với cái góc nhìn đó thì mình sẽ thấy
+> rằng là cái khoảng cách từ một cái điểm ở trên đường màu đỏ với cái tâm nó chính là giá trị của
+> density function. Để rồi mình thấy rằng khi mình xoay mình tăng cái góc theta lên thì nó sẽ khi từ
+> 0 radian tăng lên dần đến pi/4 thì nó sẽ đạt giá trị lớn nhất. và tiếp tục cho cái điểm giao điểm
+> với cái của cái đường mà mình vẽ với cái đường Elip màu đỏ nó di chuyển trên cái đường Elip
+> thì mình sẽ thấy rằng nó sẽ cái góc nó sẽ tăng lên nó sẽ tiếp tục tăng lên và quét hết toàn bộ
+> một vòng từ 0 pi 0 đến 2pi.
+>
+> Cần hiểu đường màu đỏ đi rất sát gốc tọa độ, nhưng thật ra nó hơi vòng xuống dưới, vì góc θ sẽ
+> quét từ 0 → 2π, chỉ là ở phía đối diện với π/4, giá trị xác suất ≈ 0. Cho dễ hình dung, cứ tưởng
+> tượng ta có sợ dây thun, và cây đinh là gốc tọa độ, thì thực tế là tròng sợi dây thun vào cây đinh,
+> và giữ ngón tay ở đầu π/4.
+
+<br>
+
+<a id="node-269"></a>
+
+<p align="center"><kbd><img src="assets/263d2e44a905e081479b7e74e1fb6a0007414f20.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9049899ecb84bb3ddbaa009ed1b5eb6733354ab6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tới đây, đại khái là ta sẽ đi tìm công thức của ML estimator của Von Mises
+> mean θ.
+>
+> Có nghĩa là, ta lại quay lại bài toán inference: point estimation θ, của một
+> random sample θ1, θ2,....θn (gom tụi này lại kí hiệu là D) iid ~ Von Mises (θ0,
+> m).
+>
+> Như đã biết, chính là ta giải bài toán tối ưu sau:
+>
+> maximize over θ {L(θ|D)} với L là likelihood function, theo định nghĩa là hàm
+> của tham số θ, được tính bởi joint pdf của các random variable của random
+> sample, evaluate tại observed value, L(θ|D) = f(D|θ)
+>
+> (chỗ này dễ lú, nên nhắc lại lí thuyết chút: trong cách thể hiện theo lí thuyết
+> trong sách Casella, ta có random sample X = X1,X2,...Xn, độc lập, và có cùng
+> phân phối f(x|θ), và ta muốn infer θ, tức là xây dựng hàm W(**X**), sao cho giá
+> trị W(**x**), tức W(**X**) evaluate tại giá trị quan sát **X** = **x** = (x1,x2,....xn)
+> sẽ có thể estimate tốt cho giá trị θ chưa biết. Và một trong cách làm, đó là dùng
+> hàm W(**X**) = argmax L(θ|**X**), gọi là maximum likelihood, có nghĩa là, viêc
+> đi giải bài tóan tối ưu này sẽ cho ta ra một cái hàm theo **X**, mà khi lắp giá trị
+> quan sát được của **X** vào, tức W(**x**) = argmax L(θ|**x**), thì ta sẽ có giá trị
+> θ hợp lí nhất giải thích cho sự kiện **X** = **x**.
+>
+> Vậy thì ở đây, nên hiểu là ta có các random variable θ1, θ2,...θn độc lập, và có
+> cùng distribution f(θ|θ0, m), với f là pdf của Von Mises distribution. Và ta sẽ làm
+> cái việc là suy luận / point estimate giá trị của (θ0,m) (θ trong bài toán khái quát
+> chỉ mọi tham số của population, thì ở đây là (θ0, m). Vậy thì cũng y như trên,
+> nhiệm vụ là đi xây dựng một hàm W(θ1, θ2,....), tức W(D) sao cho khi lắp các
+> giá trị quan sát được của D vào thì ta sẽ có một estimate tốt cho (θ0,m). Và
+> cách làm là ta sẽ dùng hàm W(D) = argmax L(θ0,m|D), để khi đó, W(D) sẽ
+> mang giá trị θ0, m hợp lí nhất, giúp giải thích cho việc quan sát thấy giá trị cụ
+> thể của D.
+>
+> Rồi, vậy ta có bài toán maximize over θ0,m {L(θ0,m|D)}
+>
+> xét hàm mục tiêu L(θ0,m|D), như định nghĩa, nó là joint pdf của θ1, ...θn (với tư
+> cách tên biến) tại observed value của D, và vì tính chất iid, nên joint pdf có thể
+> tách thành tích các marginal pdf:
+>
+> = Πi=1:n f(θi|θ0, m)
+>
+> = Πi=1:n [1/2πI0(m)] exp{m cos(θi - θ0)}
+>
+> = [1/2πI0(m)]^n Πi=1:n [exp{m cos(θi - θ0)}]
+>
+> = {[1/2πI0(m)]^n} × exp{m Σi=1:n cos(θi - θ0)}
+>
+> Tiếp, như đã biết, ta có thể dùng hàm log để chuyển thành bài toán tương
+> đương vì nó là hàm monotone:
+>
+> Hay dùng kí hiệu tỉ lệ thuận, ta nói hàm mục tiêu gốc (likelihood, tỉ lệ thuận với)
+>
+> ∝ ln { [1/2πI0(m)]^n × exp{m Σi=1:n cos(θi - θ0)}}
+>
+> = n ln [1/2πI0(m)] + ln exp{m Σi=1:n cos(θi - θ0)}
+>
+> = -n ln [2πI0(m)] + m Σi=1:n cos(θi - θ0)
+>
+> = -n ln(2π) - n ln[I0(m)] + m Σi=1:n cos(θi - θ0) → đây là 2.181
+>
+> Có nghĩa là lúc này, ta sẽ có bài toán tối ưu tương đương (equivalent
+> optmization problem):
+>
+> maximize over θ0,m ln f(D|θ0, m) = -n ln(2π) - n ln[I0(m)] + m Σi=1:n cos(θi -
+> θ0)
+>
+> Rồi, đây là bài toán tối ưu với hai biến tối ưu, θ0, m. Ta có thể giải theo từng
+> biến, giải theo θ0 trước. Dùng first order necessary condition, tìm stationary
+> point:
+>
+> d/dθ0 [-n ln(2π) - n ln[I0(m)] + m Σi=1:n cos(θi - θ0)] = 0
+>
+> ⇔ m [Σi=1:n d/dθ0 cos(θi - θ0)] = 0
+>
+> ⇔ m [Σi=1:n {d/d(θi - θ0) cos(θi - θ0) . d/dθ0 (θi - θ0)] = 0 | chain rule
+>
+> ⇔ m [Σi=1:n {- sin(θi - θ0) . (-1)] = 0
+>
+> ⇔ m Σi=1:n {sin(θi - θ0)} = 0
+>
+> ⇔ Σi=1:n {sin(θi - θ0)} = 0
+>
+> Dùng lượng giác: sin(A - B) = cosBsinA - cosAsinB
+>
+> ..⇔ Σi=1:n {sin(θi)cos(θ0) - cos(θi)sin(θ0)} = 0
+>
+> ⇔ cos(θ0) Σi=1:n[sin(θi)] - Σi=1:n[cos(θi)]sin(θ0) = 0
+>
+> ⇔ cos(θ0) Σi=1:n[sin(θi)] = Σi=1:n[cos(θi)]sin(θ0)
+>
+> ⇔ Σi=1:n[sin(θi)]/Σi=1:n[cos(θi)] = sin(θ0)/cos(θ0)
+>
+> ⇔ Σi=1:n[sin(θi)]/Σi=1:n[cos(θi)] = tan(θ0)
+>
+> ⇔ argtan {Σi=1:n[sin(θi)]/Σi=1:n[cos(θi)]} = θ0 ⇨ đây chính là công thức sample
+> mean 2.169.
+>
+> (ở đây nếu chặt chẽ phải xét đạo hàm bậc 2 của hàm objective tại θ0^_ml để
+> cho thấy nó âm thì mới kết luận là maximizer được, nhưng dài quá thì thôi khỏi
+> làm)
+
+<br>
+
+<a id="node-270"></a>
+
+<p align="center"><kbd><img src="assets/9eead1417cd35e759949d6f05672813e242cbb78.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/09a6f297ecb897d8c24bedd97fdcf8b7562bf5a7.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/85568ce51677f527556cd2ad068ee1b0d39b6753.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, giải tìm m^ml (ML estimator của m):
+>
+> d/dm [-n ln(2π) - n ln[I0(m)] + m Σi=1:n cos(θi - θ0)] = 0
+>
+> ⇔ d/dm [- n ln[I0(m)] + d/dm [mΣi=1:n cos(θi - θ0)] = 0
+>
+> ⇔ - n d/dm [ln[I0(m)] + Σi=1:n cos(θi - θ0) = 0
+>
+> ⇔ - n [d/d(I0(m)) [ln[I0(m)] . d/dm I0(m)] + Σi=1:n cos(θi - θ0) = 0
+>
+> Dùng d/dx ln(x) = 1/x. và d/dm I0(m) = I1(m) (trong sách cho biết "make use of I'0(m), tức
+> d/dm I0(m) = I1(m))
+>
+> ⇔ - n [1/I0(m) . I1(m)] + Σi=1:n cos(θi - θ0) = 0
+>
+> ⇔ I1(m)/I0(m) = (1/n) Σi=1:n cos(θi - θ0)
+>
+> Đặt A(m) = I1(m)/I0(m), ta có:
+>
+> A(m) = (1/n) Σi=1:n cos(θi - θ0)
+>
+> Và áp công thức lượng giác vào, phá cái cos(θi - θ0) ra, gom lại, ta sẽ có công thức 2.
+> 187, ko khó lắm.
+>
+> Cuối cùng gs Bishop nói sơ qua vài cách tiếp cận khác để xây dựng pdf của phân phối
+> dành cho biến periodic.
 
 <br>
 
