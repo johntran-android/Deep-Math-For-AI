@@ -1,8 +1,12 @@
 # A.1 Matrix Factorizations: Cholesky, LU, QR
 
-📊 **Progress:** `8` Notes | `11` Screenshots | `6` AI Reviews
+📊 **Progress:** `9` Notes | `11` Screenshots | `7` AI Reviews
 
 ---
+
+<a id="node-849jazn"></a>
+## Phân tách ma trận và hoán vị
+
 <p align="center"><kbd><img src="assets/img_849jazn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -14,6 +18,10 @@
 > Bạn đã giải thích rất xuất sắc về ma trận hoán vị, cách tạo và cơ chế hoạt động của chúng để hoán đổi hàng hoặc cột của ma trận. Việc liên hệ với kiến thức đã học (MIT 1806) để làm rõ lý do tại sao phép nhân ma trận hoán vị lại hoạt động là một điểm cộng lớn, thể hiện sự hiểu biết sâu sắc.
 
 <br>
+
+
+<a id="node-urjdyzl"></a>
+### Khử Gauss và phân tích PA=LU
 
 <p align="center"><kbd><img src="assets/img_urjdyzl.png" width="80%"></kbd></p>
 
@@ -81,6 +89,10 @@
 
 <br>
 
+
+<a id="node-jystblw"></a>
+#### Khử Gauss: Hoán vị và Khử
+
 <p align="center"><kbd><img src="assets/img_jystblw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -136,6 +148,10 @@
 > Bài giải thích rất chi tiết và dễ hiểu, đặc biệt là phần tìm phần tử pivot và các bước khử Gauss. Bạn đã nắm rất vững các bước và ý nghĩa của chúng, đồng thời giải thích rõ ràng lý do dừng thuật toán khi ma trận suy biến. Một điểm nhỏ có thể bổ sung là việc gán L_ii = 1 trong quá trình tạo ma trận L.
 
 <br>
+
+
+<a id="node-bjwjvof"></a>
+##### Ưu điểm xoay cột ma trận thưa
 
 <p align="center"><kbd><img src="assets/img_bjwjvof.png" width="80%"></kbd></p>
 
@@ -248,6 +264,8 @@
 
 <br>
 
+<a id="node-xbi82tp"></a>
+- **Phân tích Cholesky và công thức**
 <p align="center"><kbd><img src="assets/img_xbi82tp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -412,6 +430,8 @@
 
 <br>
 
+<a id="node-dqryyvr"></a>
+- **Hoán vị ma trận trong Cholesky**
 <p align="center"><kbd><img src="assets/img_dqryyvr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -441,7 +461,195 @@
 
 <br>
 
+<a id="node-1eq3gxk"></a>
+- **Phân tích QR và Gram-Schmidt**
 <p align="center"><kbd><img src="assets/img_1eq3gxk.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, ta gặp lại cái QR factorization đã học qua trong EE263a: Phương trình của nó là AP = QR
+>
+>
+>
+> Còn nhớ, có thể xét dạng đơn giản hơn: A = QR (với matrix A full column rank (mọi cột đều độc lập)) để hiểu cái này có liên quan đến Gram - Smidth đã học trong MIT 1806, ôn lại nhanh:
+>
+>
+>
+> G-S đặt ra bài toán tạo một orthogonal basis q1,q2,...qn của C(A), gọi a1, a2,...an là các cột của A, ta sẽ làm như sau:
+>
+>
+>
+> Cho q1 = a1,normalize để có unit norm: q1 = a1 / ||a1|| ⇔ a1 = ||a1|| q1
+>
+>
+>
+> q2: Chiếu a2 lên span{q1}, lấy phần dư đem chuẩn hóa: gọi p = αq1 là hình chiếu của a2 lên q1, phần dư r = a2 - p sẽ vuông góc span{q1}:
+>
+>
+>
+> q1Tr = 0 ⇔ q1T(a2 - p) = 0
+>
+>
+>
+> ⇔ q1Ta2 = q1Tp
+>
+>
+>
+> ⇔ q1Ta2 = q1Tαq1 = αq1Tq1 = α
+>
+>
+>
+> ⇔ α = q1Ta2
+>
+>
+>
+> ⇨ q2 lấy bằng phần dư đã chuẩn hóa:
+>
+>
+>
+> r = a2 - p = a2 - αq1 = a2 - (q1Ta2)q1
+>
+>
+>
+> → q2 = r / ||r||
+>
+>
+>
+> (⇔ r = ||r||q2)
+>
+>
+>
+> Và r = a2 - (q1Ta2)q1
+>
+>
+>
+> ⇔ a2 = (q1Ta2)q1 + r = (q1Ta2)q1 + ||r||q2
+>
+>
+>
+> Để có q3, tương tự, chiếu a3 lên span{q1, q2} và lấy phần dư, đem chuẩn hóa:
+>
+>
+>
+> Chiếu q3 lên span{q1, q2} được p → p là linear combination các q1, q2, gọi Q là matrix tạo bởi hai cột q1, q2: p = Qx (x là vector hệ số) ⇨ phần dư r = a3 - p3 sẽ vuông góc với span{q1, q2} → r ∈ left nullspace của Q:
+>
+>
+>
+> QTr = 0 ⇔ QT(a3 - p) = 0
+>
+>
+>
+> ⇔ QTa3 = QTp
+>
+>
+>
+> ⇔ QTa3 = QTQx (Đây là normal equation)
+>
+>
+>
+> Mà vì Q có hai cột orthogonal và unit norm nên QTQ = I ⇨ Ta có QTa3 = x
+>
+>
+>
+> ⇨ x = QTa3
+>
+>
+>
+> ⇨ p = Qx = QQTa3 = (q1Ta3)q1 + (a2Ta3)q2
+>
+>
+>
+> r = a3 - p = a3 - (q1Ta3)q1 - (a2Ta3)q2
+>
+>
+>
+> và q3 = r/||r||
+>
+>
+>
+> ⇨ q3||r|| = a3 - (q1Ta3)q1 - (a2Ta3)q2
+>
+>
+>
+> ⇔ a3 = ||r||q3 + (q1Ta3)q1 + (a2Ta3)q2
+>
+>
+>
+> ⇔ a3 = (q1Ta3)q1 + (a2Ta3)q2 + ||r||q3
+>
+>
+>
+> Tương tự như vậy với q4, q5,...
+>
+>
+>
+> Nhưng với q1, q2, q3
+>
+>
+>
+> với a1 = ||a1|| q1
+>
+>
+>
+> a2 = (q1Ta2)q1 + ||r||q2
+>
+>
+>
+> a3 = (q1Ta3)q1 + (a2Ta3)q2 + ||r||q3
+>
+>
+>
+> Ta có thể đủ để thấy cấu trúc A = QR
+>
+>
+>
+> Vì MIT 1806 đã học, QR, góc nhìn nhân matrix với matrix thứ 3: cột j của A, là linear combination các cột của Q bởi hệ số là cột j của R.
+>
+>
+>
+> Nên a1 = ||a1|| q1 ⇨ cột 1 của R là \[||a1||, 0, 0,...0\]
+>
+>
+>
+> a2 = (q1Ta2)q1 + ||r||q2 ⇨ cột 2 của R là \[q1Ta2, |r||, 0, 0,....\] vói ||r|| = ||a2 - (q1Ta2)q1||
+>
+>
+>
+> a3 = (q1Ta3)q1 + (a2Ta3)q2 + ||r||q3 ⇨ cột 3 của R là \[q1Ta3, a2Ta3, ||r||, 0,....0\] với ||r|| = ||a3 - (q1Ta3)q1 - (a2Ta3)q2||\\
+>
+> Và như vậy giúp hiểu vì sao R là matrix tam giác trên
+>
+>
+>
+>  Nói chung là, thuật toán Gram-Smidth là một cách để tạo ra bộ orthogonal basis của C(A), cũng là giúp QR factorization.
+>
+>
+>
+> Và ta có thể ứng dụng nó trong việc giải hệ Ax = b đối với matrix vuông (dĩ nhiên điều kiện luôn là A full colum rank, nên nếu vuông thì sẽ full rank / invertible luôn)
+>
+>
+>
+> Là vì khi đó, x = Ainv b = (QR)inv b = Rinv Qinv b, từ đó cách giải hệ Ax = b như sau:
+>
+>
+>
+> 1. Factor A thành QR,
+>
+>
+>
+> 2. Tính Qinv b, mà vì Q là orthogonal matrix, nên Qinv = QT, tính Qinvb chỉ là tính QTb, là phép nhân matrix với vector. (gán kết quả thành b\~)
+>
+>
+>
+> 3. Giải Rinv b\~, dĩ nhiên là không phải đi tìm Rinv, mà là ta sẽ giải Rx = b\~, và đây là hệ có matrx tam giác ⇨ chỉ là back-substitution.
+>
+>
+>
+> Nếu nói về phân tách AP = QR, thì giải Ax = b ⇔ QR(PT)x = b thì như vậy sau khi giải bước 3 mới chỉ là Rz = b\~, cần làm thêm bước cuối: PTx = z ⇨ x = Pz
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **90/100**
+>
+> Ghi chú cung cấp một phân tích rất sâu sắc về phân tích QR, đặc biệt là việc liên hệ với quá trình Gram-Schmidt để giải thích cấu trúc của R, và trình bày chính xác các bước giải hệ Ax=b. Tuy nhiên, nó chưa đề cập đến chi phí tính toán và khả năng duy trì tính thưa của ma trận, những khía cạnh thực tiễn quan trọng từ tài liệu gốc.
 
 <br>
 

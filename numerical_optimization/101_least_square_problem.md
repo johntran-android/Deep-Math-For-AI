@@ -27,6 +27,10 @@
 
 <br>
 
+
+<a id="node-woorrym"></a>
+### Đạo hàm bình phương tối thiểu
+
 <p align="center"><kbd><img src="assets/img_woorrym.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -70,6 +74,10 @@
 > Bài làm thể hiện sự hiểu biết sâu sắc về mối quan hệ giữa hàm mục tiêu least-squares, vector dư và ma trận Jacobian. Tuy nhiên, cần chú ý hơn đến tính chính xác trong ký hiệu, đặc biệt là khi định nghĩa các hàng của Jacobian liên quan đến chuyển vị của vector gradient.
 
 <br>
+
+
+<a id="node-rhbo48g"></a>
+#### Gradient và Hessian của f(x)
 
 <p align="center"><kbd><img src="assets/img_rhbo48g.png" width="80%"></kbd></p>
 
@@ -183,6 +191,10 @@
 
 <br>
 
+
+<a id="node-4tij0lf"></a>
+##### Hessian miễn phí Least-square
+
 <p align="center"><kbd><img src="assets/img_4tij0lf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -281,6 +293,8 @@
 
 <br>
 
+<a id="node-c4csdge"></a>
+- **Mô hình hồi quy cố định và chuẩn**
 <p align="center"><kbd><img src="assets/img_c4csdge.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_ptyg051.png" width="80%"></kbd></p>

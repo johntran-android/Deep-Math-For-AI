@@ -71,6 +71,10 @@
 
 <br>
 
+
+<a id="node-5f1twtg"></a>
+### Thuật toán lặp đạo hàm cấp 1
+
 <p align="center"><kbd><img src="assets/img_5f1twtg.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -90,6 +94,10 @@
 > Bài phân tích đã nắm bắt được các ý chính và có độ sâu tương đối. Tuy nhiên, bạn chưa làm nổi bật đủ tầm quan trọng cụ thể của "line search procedure" ở đoạn mở đầu. Thêm vào đó, việc đưa ra so sánh với "cách giải analytic" không có trong văn bản gốc và cần tránh khi tóm tắt. Lời văn cần chính xác hơn khi diễn giải chi tiết "line search need not be invoked at all" để phản ánh đúng mức độ hoàn toàn tránh khỏi việc thực hiện quy trình tìm kiếm đường thẳng.
 
 <br>
+
+
+<a id="node-z2ai4wg"></a>
+#### Quy trình tìm kiếm đường thẳng
 
 <p align="center"><kbd><img src="assets/img_z2ai4wg.png" width="80%"></kbd></p>
 
@@ -185,6 +193,8 @@
 
 <br>
 
+<a id="node-ih52es1"></a>
+- **Phương pháp nội suy tìm α**
 <p align="center"><kbd><img src="assets/img_ih52es1.png" width="80%"></kbd></p>
 
 > [!NOTE]

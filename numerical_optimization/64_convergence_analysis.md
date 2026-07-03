@@ -121,6 +121,8 @@
 
 <br>
 
+<a id="node-e4msnnl"></a>
+- **Lý thuyết hội tụ thuật toán**
 <p align="center"><kbd><img src="assets/img_e4msnnl.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_nssjs7.png" width="80%"></kbd></p>

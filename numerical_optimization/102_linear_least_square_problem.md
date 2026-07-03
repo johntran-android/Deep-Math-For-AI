@@ -1,6 +1,6 @@
 # 10.2 Linear Least-Square Problem
 
-📊 **Progress:** `2` Notes | `3` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
 
 ---
 
@@ -254,11 +254,19 @@
 >
 >
 >
-> Nhân vế theo vế của ||Δx|| ≤ ||Ainv|| ||Δb|| và 1/||x|| ≤ ||A||/||b||, ta có: ||Δx|| / ||x|| ≤ ||Ainv|| ||Δb|| ||A|| / ||b|| = ||Ainv|| ||A|| (||Δb|| / ||b||).
+> Nhân vế theo vế của ||Δx|| ≤ ||Ainv|| ||Δb|| và 1/||x|| ≤ ||A||/||b||, ta có: 
 >
 >
 >
-> Như vậy, sai số tương đối ||Δx|| / ||x|| sẽ tỉ lệ thuận với ||Ainv|| ||A|| và cả ||Δb|| / ||b||, là biến động tương đối của b. Thì trong đó ||Ainv|| ||A|| chính là κ(A), nên giúp ta hiểu vì sao gs Nocedal nói "...Since the relative error in the computed solution of a problem is usually proportional to the condition num-ber.."
+> ||Δx|| / ||x|| ≤ ||Ainv|| ||Δb|| ||A|| / ||b|| = ||Ainv|| ||A|| (||Δb|| / ||b||)
+>
+>
+>
+> ⇔ relative error (=||Δx|| / ||x||) ≤ \[||Ainv|| ||A||\] × \[||Δb|| / ||b||\]
+>
+>
+>
+> Như vậy, **sai số tương đối ||Δx|| / ||x|| sẽ tỉ lệ thuận với ||Ainv|| ||A||** và **cả ||Δb|| / ||b||**, là biến động tương đối của b. Thì trong đó **||Ainv|| ||A|| chính là κ(A)**, nên giúp ta hiểu vì sao gs Nocedal nói "...Since the **relative error** in the computed solution of a problem is usually **proportional** to the **condition num-ber**.."
 >
 >
 >
@@ -368,6 +376,120 @@
 > **🤖 AI Feedback** — ✅ Score: **99/100**
 >
 > Phân tích của bạn cực kỳ sâu sắc và chính xác, đặc biệt với các chứng minh toán học chi tiết về điều kiện tồn tại của Cholesky factorization và mối quan hệ của số điều kiện. Tiếp tục duy trì mức độ đào sâu kiến thức và khả năng kết nối các khái niệm toán học này.
+
+<br>
+
+
+<a id="node-4qw5hsw"></a>
+#### Optimal x* Solution
+
+<p align="center"><kbd><img src="assets/img_4qw5hsw.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/att_qwvc2cn.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, tiếp, ta sẽ nói về cách tiếp cận thứ hai của việc giải bài toán linear least square:
+>
+>
+>
+> Nhắc lại nhiệm vụ: minimize residual ||Jx - y||
+>
+>
+>
+> Thì QR factorization cho ta một cách làm: GỈA SỬ (BẰNG THUẬT TOÁN NÀO ĐÓ, TA CÓ THỂ FACTOR J THÀNH: J Π = \[Q1, Q2\] \[R; 0\], ta sẽ áp dụng cái này vào việc giải bài toán tối ưu:
+>
+>
+>
+> Objective là norm của vector Jx - y, thì vì Q là orthogonal matrix, nên QT cũng vậy, nên nó không thay đổi norm. Nên ta có thể chuyển thành bài toán equivalient với objective,:
+>
+>
+>
+> ⇔ minimize ||QT(Jx - y)||
+>
+>
+>
+> Dĩ nhiên, vì norm ko âm, nên again, ta có thể minimize squared norm:
+>
+>
+>
+> ⇔ minimize ||QT(Jx - y)||^2
+>
+>
+>
+> Thay QT = \[Q1, Q2\]T = \[Q1T; Q2T\] và Jx = J Π ΠT x vào (vì Π là permutation matrix, nên Π ΠT = Π Πinv = I)
+>
+>
+>
+> QT(Jx - y) = \[Q1T; Q2T\](J Π ΠT x - y)
+>
+>
+>
+> = \[Q1T; Q2T\] J Π ΠT x - \[Q1T; Q2T\]y
+>
+>
+>
+> Thay J Π = \[Q1, Q2\] \[R; 0\]
+>
+>
+>
+> = \[Q1T; Q2T\] \[Q1, Q2\] \[R; 0\] ΠT x - \[Q1T; Q2T\]y
+>
+>
+>
+> = \[R; 0\] ΠT x - \[Q1T; Q2T\]y
+>
+>
+>
+> Vậy ||QT(Jx - y)||^2 = ||\[R; 0\] ΠT x - \[Q1T; Q2T\]y||^2 (đây là dấu bằng thứ 2)
+>
+>
+>
+> Tiếp, với argmented vector \[a;b\], ví dụ vector \[x1, x2, x3, x4\]T tách thành hai khúcp \[\[x1, x2\]; \[x3, x4\]\], thì norm của nó, tức ||\[x1, x2, x3, x4\]||^2 = x1^2 + x2^2 + x3^2 + x4^2 dĩ nhiên cũng là ||\[x1,x2\]||^2 + ||\[x3,x4\]||^2.
+>
+>
+>
+> Nên xét vector \[R; 0\] ΠT x - \[Q1T; Q2T\]y, nó cũng chính là hai vector này nối lại: \[RΠT x - Q1Ty\] và \[0 - Q2Ty\] 
+>
+>
+>
+> ⇨ ||\[R; 0\] ΠT x - \[Q1T; Q2T\]y||^2 
+>
+>
+>
+> = ||\[RΠT x - Q1Ty\]||^2 + ||\[0 - Q2Ty\]||^2
+>
+>
+>
+> = ||\[RΠT x - Q1Ty\]||^2 + ||\[Q2Ty\]||^2 → 10.18
+>
+>
+>
+> Và tới đây, vì biến tối ưu của bài toán này là x, term thứ hai chỉ là constant, nên bài toán tối ưu một lần nữa, equivalent với:
+>
+>
+>
+> minimize  ||\[RΠT x - Q1Ty\]||^2
+>
+>
+>
+> Và nó là square norm của \[RΠT x - Q1Ty\] đó, nên nó nhỏ nhất khi nó bằng 0: RΠT x - Q1Ty = 0 ⇔ RΠT x = Q1Ty
+>
+>
+>
+> Vậy là bài toán trở thành giải hệ RΠT x = Q1Ty
+>
+>
+>
+> Bước 1: giải R z = Q1Ty, ra z, đây là hệ có matrix hệ số tam giác → chỉ là back-subsititution, tốn O(n^2)
+>
+>
+>
+> Bước 2: Giải ΠT x = z, và hệ này matrix hệ số chỉ là permutation matrix, ⇨ x = Π z, chỉ là việc sắp xếp (hoán vị) lại các phần tử của z (ko tốn gì) (đây là ý mà gs Nocedal nói "perform triangular substitution to solve Rz = Q1Ty, then PERMUTE the component of z  to obtain x\*)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Phần ghi chú này cung cấp một quá trình dẫn xuất từng bước cực kỳ rõ ràng và chi tiết cho phương pháp phân tích QR trong bài toán bình phương tối thiểu tuyến tính, giải thích kỹ lưỡng từng phép biến đổi và lý do của nó. Việc liên hệ với các bước triển khai thực tế cũng được trình bày rất tốt.
 
 <br>
 

@@ -50,6 +50,10 @@
 
 <br>
 
+
+<a id="node-d70bo7e"></a>
+### Điều chỉnh phạm vi tin cậy
+
 <p align="center"><kbd><img src="assets/img_d70bo7e.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -69,6 +73,10 @@
 > Bài phân tích cho thấy sự hiểu biết sâu sắc về vai trò và cách điều chỉnh kích thước vùng tin cậy, đặc biệt là các trường hợp quá lớn hoặc quá nhỏ, phản ánh tốt nội dung tài liệu. Tuy nhiên, việc bổ sung thông tin về thứ tự tìm kiếm bước đi không có trong văn bản gốc, cần tập trung hơn vào việc phân tích trực tiếp từ nguồn đã cho.
 
 <br>
+
+
+<a id="node-8bgm8ab"></a>
+#### Vấn đề hướng Line Search
 
 <p align="center"><kbd><img src="assets/img_8bgm8ab.png" width="80%"></kbd></p>
 
@@ -91,6 +99,10 @@
 > Phân tích về nguyên lý của phương pháp trust region và ưu điểm của nó so với line search rất sâu sắc và chính xác, thể hiện sự hiểu biết tốt về khái niệm cốt lõi. Tuy nhiên, nhận định về việc hàm f tăng lên khi sử dụng line search là sai lệch so với thông tin được cung cấp ('at most a small reduction'), và bài viết bị đứt đoạn ở cuối.
 
 <br>
+
+
+<a id="node-cgxjlmd"></a>
+##### Ảnh hưởng bán kính vùng tin cậy
 
 <p align="center"><kbd><img src="assets/img_cgxjlmd.png" width="80%"></kbd></p>
 

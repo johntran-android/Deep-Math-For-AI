@@ -350,6 +350,8 @@
 
 <br>
 
+<a id="node-h1c2dgh"></a>
+- **Giao điểm quỹ đạo gấp khúc**
 <p align="center"><kbd><img src="assets/img_h1c2dgh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -373,6 +375,8 @@
 
 <br>
 
+<a id="node-6w87m5s"></a>
+- **Ma trận B trong Dogleg**
 <p align="center"><kbd><img src="assets/img_6w87m5s.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/att_4gcwb.png" width="80%"></kbd></p>

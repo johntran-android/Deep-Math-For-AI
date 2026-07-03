@@ -3,6 +3,10 @@
 📊 **Progress:** `1` Notes | `1` Screenshots | `1` AI Reviews
 
 ---
+
+<a id="node-l29rlht"></a>
+## Khái niệm Cơ bản Đại số tuyến tính
+
 <p align="center"><kbd><img src="assets/img_l29rlht.png" width="80%"></kbd></p>
 
 > [!NOTE]
