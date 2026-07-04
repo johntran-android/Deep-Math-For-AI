@@ -1,6 +1,6 @@
-# 2.4 The Exponential Family
+# 2.4.0 The Exponential Family
 
-📊 **Progress:** `5` Notes | `7` Screenshots
+📊 **Progress:** `6` Notes | `9` Screenshots
 
 ---
 <a id="node-278"></a>
@@ -327,6 +327,54 @@
 >
 > chính là công thức của exponential familty với u(**x**) = **x**, h(**x**) = 1,
 > g(η) = [1 + ∑k=1:M-1 exp(ηk)]^-1
+
+<br>
+
+<a id="node-283"></a>
+
+<p align="center"><kbd><img src="assets/bb8b1c70d3ee9c6480e4f5f6b69a52dbf0fccd55.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/307e34819dde3190878b9aa7e55248186c8bc941.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng là Normal, cái này bên Casella đã biết rồi. Cơ bản thì vì Normal nó đã có cái
+> exp sẵn, nên chỉ cần xử lí nó để lòi ra **η**Tu(**x**):
+>
+> Normal(x|μ, σ^2) = [1/√(2πσ^2)] exp{-(x-μ)^2/2σ^2}
+>
+> = [1/√(2πσ^2)] exp{-(x^2-2μx+μ^2)/2σ^2}
+>
+> = [1/√(2πσ^2)] exp{-x^2/2σ^2+2μx/2σ^2-μ^2/2σ^2)}
+>
+> = [1/√(2πσ^2)] exp{-x^2/2σ^2+μx/σ^2-μ^2/2σ^2)}
+>
+> = [1/√(2πσ^2)] exp{(-1/2σ^2)x^2+(μ/σ^2)x} × exp{-μ^2/2σ^2)}
+>
+> = [1/√(2πσ^2)] exp{-μ^2/2σ^2) exp{(-1/2σ^2)x^2+(μ/σ^2)x}}
+>
+> Đặt **η** = [-1/2σ^2, μ/σ^2]T
+>
+> u(x) = [x^2, x]
+>
+> ⇨ trong exponential chính là **η**Tu(x)
+>
+> và ở ngoài [1/√(2πσ^2)] exp{-μ^2/2σ^2) ta có thể tin là h(x) g(**η**) luôn cũng được.
+> Hoặc giải tìm cụ thể chúng là gì:
+>
+> Ta đặt **η** (= (η1, η2)) = [-1/2σ^2, μ/σ^2]T ⇨ η1 = -1/2σ^2 ⇨ σ^2 = -1/2η1
+>
+> η2 = μ/σ^2 ⇨ μ = σ^2 η2 = -η2/2η1
+>
+> ⇨ [1/√(2πσ^2)] exp{-μ^2/2σ^2) = [1/√(2π)] [1/√σ^2)] exp{-μ^2/2σ^2)
+>
+> = [1/√(2π)] [1/√(-1/2η1)] exp{-(-η2/2η1)^2/2(-1/2η1))
+>
+> = [1/√(2π)] [1/√1/(-2η1)] exp{-(η2^2/4η1^2)/(-η1))
+>
+> = [1/√(2π)] [√(-2η1)] exp{η2^2/4η1)
+>
+> = [1/√(2π)] (-2η1)^1/2 exp{η2^2/4η1) → 2.223 (mình đặt eta và u(x) thứ tự ngược lại với
+> trong sách nhưng ko quan trọng.
 
 <br>
 

@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,376 notes` · `~16,831 screenshots` · `19 courses`** · work in progress
+**`~12,381 notes` · `~16,837 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -575,7 +575,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 273 Notes | 📸 381 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 278 Notes | 📸 387 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -590,7 +590,8 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [2.3.7 Student' t](a0_bishop_prml/237_student_t.md) — `4n / 9i` 
 - [2.3.8 Preriodic variables](a0_bishop_prml/238_preriodic_variables.md) — `7n / 16i` 
 - [2.3.9 Mixtures Gaussian](a0_bishop_prml/239_mixtures_gaussian.md) — `5n / 9i` 
-- [2.4 The Exponential Family](a0_bishop_prml/24_the_exponential_family.md) — `5n / 7i` 
+- [2.4.0 The Exponential Family](a0_bishop_prml/240_the_exponential_family.md) — `6n / 9i` 
+- [2.4.1 MLE & Sufficient statistic](a0_bishop_prml/241_mle_sufficient_statistic.md) — `4n / 4i` 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
 - [1.2.0 Probability theory](a0_bishop_prml/120_probability_theory.md) — `13n / 21i` 
