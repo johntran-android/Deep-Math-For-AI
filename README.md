@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,381 notes` · `~16,837 screenshots` · `19 courses`** · work in progress
+**`~12,387 notes` · `~16,846 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -411,7 +411,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [Σ Lec 21](a0_stat110/σ_lec_21.md) — `0n / 8i` 
 - [Σ lec 22](a0_stat110/σ_lec_22.md) — `0n / 3i`
 
-### 📂 Casella & Berger — Statistical Inference (📝 895 Notes | 📸 1033 Screenshots)
+### 📂 Casella & Berger — Statistical Inference (📝 900 Notes | 📸 1041 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -457,7 +457,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
 - [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `53n / 61i` 
 - [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i` 
-- [Chap 10 Asymtotic Evaluation](a0_casella/chap_10_asymtotic_evaluation.md) — `8n / 8i`
+- [Chap 10 Asymtotic Evaluation](a0_casella/chap_10_asymtotic_evaluation.md) — `13n / 16i`
 
 ### 📂 ISL — Introduction to Statistical Learning (📝 95 Notes | 📸 233 Screenshots)
 
@@ -575,7 +575,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 278 Notes | 📸 387 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 279 Notes | 📸 388 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 

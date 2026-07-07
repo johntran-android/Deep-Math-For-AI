@@ -502,8 +502,25 @@
 <p align="center"><kbd><img src="assets/c0273ebd0805e93ec798cff086b431ff01bbd976.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> CHƯA HIỂU LẮM,
-> QUAY LẠI SAU
+> Đoạn này không có gì khó hiểu. Tác giả nhấn mạnh rằng chúng ta cần chú
+> ý đến loại hội tụ thứ ba, hội tụ theo phân phối (in distribution). Mặc dù
+> người ta nói một chuỗi các biến ngẫu nhiên hội tụ, nhưng thực chất, thứ
+> hội tụ chính là hàm phân phối tích lũy (CDF).
+>
+> Nếu nhìn nhận theo cách này, loại hội tụ thứ ba này khác biệt so với hai
+> loại hội tụ trước đó là hội tụ theo xác suất (convergence in probability) và
+> hội tụ hầu chắc chắn (convergence almost surely). Lý do là hai loại hội tụ
+> trước đề cập đến việc một chuỗi các biến ngẫu nhiên hội tụ về một biến
+> ngẫu nhiên. Trong khi đó, loại hội tụ thứ ba thực chất nói về việc hàm CDF
+> hội tụ về một hàm CDF, hay nói cách khác, một chuỗi các hàm CDF hội tụ
+> về một hàm CDF.
+>
+> Tuy nhiên, mặc dù bản chất khác biệt, Định lý 5.5.12 phát biểu rằng nếu
+> một chuỗi các biến ngẫu nhiên hội tụ theo xác suất (in probability) về một
+> biến ngẫu nhiên X (tức là chuỗi X1, X2, ..., Xn hội tụ về X theo xác suất),
+> thì điều này cũng đồng thời hàm ý sự hội tụ theo phân phối (in
+> distribution). Nói một cách nôm na, nếu một chuỗi các biến ngẫu nhiên hội
+> tụ về một biến ngẫu nhiên, thì nó cũng hội tụ theo phân phối.
 
 <br>
 
@@ -528,21 +545,22 @@
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-424)
 
 > [!NOTE]
-> Theorem này nói rằng cho X1, X2...là chuỗi iid random variables, mà mgf của 
-> chúng tồn tại trong lân cận của 0 (MXi(t) tồn tại với -h < t < h với h dương nào 
-> đó).
+> Theorem này nói rằng cho X1, X2...là chuỗi iid random variables, mà mgf
+> của chúng tồn tại trong lân cận của 0 (MXi(t) tồn tại với -h < t < h với h
+> dương nào đó).
 >
-> Rồi gọi EXi là μ, Var Xi = σ^2 > 0, Cả hai cái này đều finite vì đã nói mgf tồn tại.
-> (ta nhớ EXi là first moment, EXi^2 là second moment).
+> Rồi gọi E[Xi] là μ, Var Xi = σ^2 > 0, cả hai cái này đều finite vì đã nói mgf
+> tồn tại. (ta nhớ EXi là first moment, EXi^2 là second moment).
 >
-> Định nghiã sample mean của random sample size n: Xnbar = (1/n) Σi Xi.
+> Định nghiã sample mean của random sample size n: Xbar_n = ∑i=1:n Xi
 >
-> Dùng Gn(x) kí hiệu cho cdf của √n (Xnbar - μ) / σ.
+> Dùng Gn(x) kí hiệu cho cdf của √n (Xbar_n - μ) / σ.
 >
-> Khi đó với mọi x: thì lim x → inf Gn(x) = ∫-inf:x (1/√2π) e^-y^2/2 dy
+> Khi đó với mọi x: thì lim x→∞ Gn(x) = ∫-inf:x (1/√2π) e^-y^2/2 dy
 >
-> Và điều này có nghĩa là, n (Xnbar - μ) / σ converge in probability về standard
-> normal random variable
+> Và điều này có nghĩa là:
+>
+> **√n (Xnbar - μ) / σ hội tụ phân phối về standard normal random variable**
 
 <br>
 
@@ -555,19 +573,19 @@
 🔗 **Related:** [4.6 MULTI-VARIATE DISTRIBUTION](46_multi_variate_distribution.md#node-312)
 
 > [!NOTE]
-> đại khái là giáo sư Casella cho rằng, cái hay của theorem này là, ta hầu 
-> như xuất phát với ko có giả định nào trừ việc các random variable độc
-> lập và variance hữu hạn. Thế mà ta lại kết thúc với normal distribution,
+> đại khái là giáo sư Casella cho rằng, cái hay của theorem này là, ta **hầu
+> như xuất phát với ko có giả định nào trừ việc các random variable độc lập
+> và variance hữu hạn. Thế mà ta lại kết thúc với normal distribution**
 >
-> Gs nhấn mạnh, cái assumption về finite variance tuy có thể nới lỏng chút
-> ít nhưng bắt buộc phải có.
+> Gs nhấn mạnh, cái **assumption về finite variance** tuy **có thể nới lỏng
+> chút ít nhưng bắt buộc phải có**.
 >
-> Rồi, theorem này cũng có hạn chế là tuy  rằng nó cho ta một cách ước
+> Rồi, theorem này cũng có hạn chế là **tuy rằng nó cho ta một cách ước
 > lượng cũng hữu ích nhưng ko tự động cho biết sự ước lượng này tốt cỡ
-> nào.
+> nào**.
 >
-> Cuối cũng, với sức mạnh tính toán ngày càng lớn thì tầm quan trọng của 
-> theore này ngày càng ít
+> Cuối cũng, với **sức mạnh tính toán ngày càng lớn thì tầm quan trọng của
+> theorem này ngày càng ít**
 
 <br>
 
@@ -578,87 +596,89 @@
 🔗 **Related:** [3.5 LOCATION AND SCALE FAMILIES](35_location_and_scale_families.md#node-202)
 
 > [!NOTE]
-> Để chứng minh thì ta sẽ chứng minh mgf của √n(Xnba - μ) / σ converge về
-> e^t^2/2 (là mgf của standard normal)
+> Để chứng minh thì ta sẽ **chứng minh mgf của √n(Xn_bar - μ) / σ converge về
+> e^t^2/2 - là mgf của standard normal**.
 >
 > Đặt Yi = (Xi - μ) / σ. Gọi MY(t) là common mgf của Yis, theo theorem, thì nó
 > tồn tại với |t| < σh.
 >
 > Dừng lại chút chỗ này là sao?
 >
-> Ta nhớ location scale theorem. Nói rằng khi Z là standard member có pdf
-> f(z) thì X = σZ + μ sẽ là thành viên trong family có location μ, scale σ với
+> Ta nhớ **location scale** **theorem**. Nói rằng khi Z là standard member có
+> pdf f(z) thì X = σZ + μ sẽ là thành viên trong family có location μ, scale σ với
 > pdf là: fX(x) = f((x - μ)/σ)/σ
 >
 > Thử chứng minh:
 >
 > Chứng minh chiều đi: Z có pdf f(z) thì fX(x) = f((x - μ)/σ)/σ:
 >
-> FX(x) = P(X ≤ x) = P(σZ + μ ≤ x) = P({s: σZ(s) + μ ≤ x}) = P({s: Z(s) ≤ (x - μ)
-> / σ})
+> FX(x) = P(X ≤ x) = P(σZ + μ ≤ x) = P({s: σZ(s) + μ ≤ x}) = P({s: Z(s) ≤ (x - μ) /
+> σ})
 >
 > = P(Z ≤ (x - μ) / σ) = FZ[(x - μ) / σ]
 >
 > d/dx FX(x) = fX(x) = d/dx FZ[(x - μ) / σ] = d/d[(x - μ) / σ] FZ[(x - μ) / σ] . d/dx
-> [(x
-> \- μ) / σ]
+> [(x-μ) / σ]
 >
 > = fZ((x - μ) / σ) . 1/σ = f((x - μ) / σ) / σ. Chứng minh xong
 >
-> Ngược lại, nếu X là thành viên có location μ scale σ thì (X - μ) / σ sẽ là
-> thành viên chuẩn có location 0, scale 1
+> Ngược lại, nếu X là thành viên có location μ scale σ thì (X - μ) / σ sẽ là thành
+> viên chuẩn có location 0, scale 1
 >
-> Chứng minh chiều ngược lại: Cho X có pdf fX(x) = f((x - μ)/σ)/σ . Thì Z
-> quan hệ với X bởi equation: X = σZ + μ sẽ có pdf là f(z):
+> Chứng minh chiều ngược lại: Cho X có pdf fX(x) = f((x - μ)/σ)/σ . Thì Z quan
+> hệ với X bởi equation: X = σZ + μ sẽ có pdf là f(z):
 >
 > FZ(z) = P(Z ≤ z) = P[(X - μ)/σ ≤ z] = P(X ≤ σz + μ) = FX(σz + μ)
 >
-> ⇨ fZ(z) = d/dz FZ(z) = d/dz FX(σz + μ) = d/d(σz + μ) FX(σz + μ) . d/dz (σz
-> \+ μ)
+> ⇨ fZ(z) = d/dz FZ(z) = d/dz FX(σz + μ) = d/d(σz + μ) FX(σz + μ) . d/dz (σz-μ)
 >
 > = fX(σz + μ) σ = [f(σz + μ - μ) / σ)/σ] σ = f(z)
 >
 > =====
 >
-> Vậy thì ở đây Yi = (Xi - μ) / σ. Vì X1,X2...iid, có nghĩa là chúng chung
+> Vậy thì ở đây Yi = (Xi - μ) / σ. Vì X1, X2...iid, có nghĩa là chúng chung
 > marginal distribution, nên Y1,Y2,...là các g(X1), g(X2)...với g(u) = (u - μ) / σ
-> cũng sẽ là independent mutually. Và cũng sẽ có chung marginal
-> distribution (vì X1, X2.. có chung marginal pdf, nên nếu dùng
-> transformation theorem để tìm pdf của Y1,.. thì cũng ra giống nhau) thành
-> ra ta gọi MY(t) là mgf của Y1,...Yn
+> cũng sẽ là independent mutually. Và cũng sẽ có chung marginal distribution (vì
+> X1, X2.. có chung marginal pdf, nên nếu dùng transformation theorem để tìm
+> pdf của Y1,.. thì cũng ra giống nhau).
+>
+> Gọi MY(t) là mgf của Y1,...Yn
 >
 > Rồi, biến đổi chút xíu ta sẽ có quan hệ giữa Xnbar và Yi:
 >
 > Yi = (Xi - μ) / σ
 >
-> ⇨ Σi Yi = Σi (Xi - μ) / σ = (ΣXi - Σ μ) / σ
+> ⇨ Σi Yi = Σi (Xi - μ) / σ = (Σi Xi - Σi μ) / σ
 >
-> ⇔ Σi Yi / √n = (ΣXi - Σμ) / σ√n
+> ⇔ (Σi Yi) / √n = (Σi Xi - Σi μ) / σ√n
 >
-> ⇔ Σi Yi / √n = √n (ΣXi - Σμ) / σ√n√n = √n (ΣXi/n - Σμ/n) / σ = √n (Xnbar - μ) /
-> σ
+> ⇔ (Σi Yi) / √n = √n (Σi Xi - Σi μ) / σ√n√n
 >
-> ⇔ Σi Yi / √n = √n (Xnbar - μ) / σ
+> = √n [(Σi Xi)/n - Σμ/n] / σ
 >
-> Xét mgf của √n (Xnbar - μ) / σ, M_√n (Xnbar - μ) / σ(t)
+> = √n (Xbar_n - μ) / σ
 >
-> dĩ nhiên cũng là mgf của Σi Yi / √n, M_Σi Yi / √n (t)
+> ⇔ **(Σi Yi) / √n = √n (Xbar_n - μ) / σ**
 >
-> Áp dụng theorem 4.6.7, mgf của tổng các independent rv = tích các mgf:
+> Xét mgf của √n (Xbar_n - μ) / σ, kí hiệu là M_[√n(Xbar_n-μ)/σ](t)
 >
-> M_Σi Yi / √n (t) = Π M_Yi/√n(t)
+> dĩ nhiên cũng là mgf của (Σi Yi) / √n, kí hiệu M_[(Σi Yi) / √n](t)
 >
-> Xét M_Yi/√n(t), thì áp dụng theorem 2.3.15 nói rằng mgf của aX + b:
+> Áp dụng theorem 4.6.7, **mgf của tổng các independent rv = tích các mgf**:
 >
-> MaX + b(t) = e^btMX(at)
+> M_[(Σi Yi)/√n](t) = Πi M_(Yi/√n)(t)
 >
-> ⇨ MYi/√n(t) = M(1/√n)Yi + 0(t) = e^0t MYi(t/√n) = MYi(t /√n)
+> Xét M_(Yi/√n)(t), thì áp dụng theorem 2.3.15 nói rằng mgf của aX + b:
 >
-> Vậy M_Σi Yi / √n (t) = Π M_Yi/√n(t) = Π MYi(t /√n)
+> M_(aX + b)(t) = (e^bt)MX(at)
+>
+> ⇨ M_(Yi/√n)(t) = M[(1/√n)Yi + 0](t) = e^(0t) MYi(t/√n) = MYi(t /√n)
+>
+> Vậy M_[(Σi Yi)/√n](t) = Πi M_Yi/√n(t) = Πi MYi(t/√n)
 >
 > và MYi(t) đều giống nhau, đều là MY(t) nên
 >
-> ... = **[MY(t /√n)]^n**
+> ... = [MY(t /√n)]^n
 
 <br>
 
@@ -716,20 +736,22 @@
 <p align="center"><kbd><img src="assets/c49b561de52df992a4bf198e68171610cff69846.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái khái đây là phiên bản mạnh hơn của CLT, trong đó ko cần các 
-> giả thiết về mgf.Ở đây gs ko chứng minh.
+> Đại khái khái đây là **phiên bản mạnh hơn của CLT**, trong đó **ko cần các
+> giả thiết về mgf**. Ở đây gs ko chứng minh.
 >
-> Nội dung thì đại khái là cũng cho chuỗi rv X1,X2...iid, có population mean
-> μ, finite variance σ^2. Và Xnbar là sample mean size n. Gn(x) là cdf của
-> √n(Xnbar - μ) /  σ thì theorem nói rằng n → inf thì Gn(x) → ∫-inf:x 1/√2π e^-y^2/2dy
-> chính là cdf của normal(0,1)
+> Nội dung thì đại khái là cũng cho chuỗi rv X1,X2...iid, có population mean μ,
+> finite variance σ^2. Và Xbar_n là sample mean size n. Gn(x) là cdf của
+> √n(Xbar_n - μ) / σ thì theorem nói rằng n → inf thì Gn(x) → ∫-inf:x 1/√2π
+> e^-y^2/2dy chính là cdf của standard normal (normal(0,1))
 >
-> Thì gs nói thêm, là chứng minh cái này ko cần mgf, mà dùng characteristic
-> function, vốn là luôn tồn tại.
+> Chú ý là, hai cái chỉ khác nhau cái điều kiện, với phiên bản CLI thường, nó
+> yêu cầu mgf tồn tại (trong khoảng lân cận của 0), còn ở đây thì không cần
+> giả thiết đó, mà cái này dùng characteristic function, vốn là luôn tồn tại.
 >
-> Cái CLT này cho ta một công cụ hữu ích, all-purpose approximation, nhưng
-> phải lưu ý rằng chất lượng của approximation này phải xem lại. Trong thực tế,
-> nó luôn có  ích trong việc đưa ra những tính toán sơ bộ đầu tiên
+> Cái CLT này cho ta một công cụ hữu ích, **all-purpose approximation**,
+> nhưng phải lưu ý rằng **chất lượng của approximation này phải xem lại**.
+> Trong thực tế, nó luôn có ích trong việc đưa ra những tính toán sơ bộ đầu
+> tiên
 
 <br>
 
@@ -829,37 +851,44 @@
 <p align="center"><kbd><img src="assets/a2d53e0b220cf1869f60c4981eef726b4ca4f992.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, phần trước, là ta quan tâm đến điều kiện khi nào thì một
-> random variable đã chuẩn hóa sẽ có limit normal distribution (ý là,  kiểu
-> như ta được học rằng √n(Xnbar - μ) / σ sẽ → normal(0,1) Nhưng có
-> **nhiều khi ta ko care distribution của random variable, mà care
+> Đại khái là, phần trước, là ta quan tâm đến điều kiện **khi nào thì một random
+> variable đã chuẩn hóa sẽ có limit normal distribution** (ý là, kiểu như ta được
+> học rằng √n(Xbar_n- μ) / σ sẽ → normal(0,1)
+>
+> Nhưng có **nhiều khi ta ko care distribution của random variable, mà care
 > distribution của một function apply lên rv đó cơ.**
 >
-> Thế thì đầu tiên được học khái niệm odd (đã gặp trong ISL), bối cảnh là
-> ta có các random sample size n X1,X2...Xn từ Bern(p) distribution.
+> (random variable ở đây đang chỉ nhiều loại rv có limit distribution là normal(0,1)
+> trong đó có √n(Xbar_n - μ)/σ^2, chứ sample mean không phải là cái duy nhất
+> (nhưng là statistic quan trọng nhất) vậy thì ý là nhiều khi ta muốn tìm limit
+> distribution của g(Xbar_n) chứ không phải của Xbar, ví dụ 1/Xbar_n hoặc
+> Xbar_n / (1 - Xbar_n), là odd sẽ nói ở dưới đây)
 >
-> Thì ngoài p, là xác suất success, ta còn care p/1-p, đây chính là odd. ý
-> nghĩa của nó, nói xác suất khỏi bên là 2/3 thì cũng là nói ta có tỉ lệ cược
-> 2:1 cho việc khỏi bệnh (2 ăn 1 tức là ta tin rằng khả năng khỏi là 2 phần,
-> khả năng không khỏi là 1 phần)
+> Thế thì đầu tiên được học khái niệm **odd** (đã gặp trong ISL), bối cảnh là ta
+> có các random sample size n X1,X2...Xn từ Bern(p) distribution.
 >
-> Để rồi người ta có thể quan tâm đến  odds ratios tỉ lệ của tỉ lệ cược giữa
-> hai phương pháp chữa bệnh
+> Thì ngoài p, là xác suất success, ta còn care p/1-p, đây chính là odd, ý nghĩa
+> của nó, nói **xác suất khỏi bệnh là 2/3** thì cũng là nói ta có **tỉ lệ cược 2:1 cho
+> việc khỏi bệnh** (2 ăn 1 tức là ta tin rằng khả năng khỏi là 2 phần, khả năng
+> không khỏi là 1 phần)
 >
-> Đại khái là cũng giống như khi ta thường dùng ΣXi/n (sample mean) để
-> estimate cho population mean p.
+> Để rồi người ta có thể quan tâm đến **odds ratios**, là **tỉ lệ của tỉ lệ cược giữa
+> hai phương pháp chữa bệnh**
 >
-> Gọi p^ = ΣXi/n Thì ta có thể cũng dùng p^/(1-p^) để estimate cho p/(1-p)
-> Nhưng câu hỏi là việc ESTIMATE NÀY CHÍNH XÁC HAY KO? VÀ LÀM
-> SAO TÌM SAMPLING DISTRIBUTION CỦA p^/(1-p^)
+> Đại khái là cũng giống như khi ta thường dùng Xbar_n = (ΣiXi)/n (sample mean)
+> để estimate cho population mean p.
 >
-> (dừng lại tí, nói vài lời, dĩ nhiên p^ là sample mean, là một statistic,  là
-> function apply lên các random variable của random sample. Thế thì,
-> p^/(1-p^) cũng là function apply lên statistic, cũng là statistic, và
-> distribution của statistic được gọi là sampling distribution, để phân biệt với
-> population distribution)
+> Gọi p^ = (ΣiXi)/n, thì ta có thể **cũng dùng p^/(1-p^) để estimate cho p/(1-p)**
 >
-> Thế thì, đại ý là, Δ METHOD SẼ giúp trong việc này
+> Nhưng câu hỏi là **CÁCH** **ESTIMATE NÀY CHÍNH XÁC HAY KO**? và
+> **LÀM SAO TÌM SAMPLING DISTRIBUTION CỦA p^/(1-p^)**
+>
+> (dừng lại tí, ôn lại chút xíu, dĩ nhiên p^ là sample mean, là một statistic, là
+> function apply lên các random variable của random sample. Thế thì, p^/(1-p^)
+> cũng là function apply lên statistic, cũng là statistic, và distribution của statistic
+> được gọi là **sampling distribution,** để phân biệt với **population distribution**)
+>
+> Thế thì, đại ý là, **DELTA METHOD** sẽ giúp trong việc này
 
 <br>
 
@@ -868,18 +897,107 @@
 <p align="center"><kbd><img src="assets/4f164079fe187201d588a71ebccdbf7c3426d49c.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Nói về Taylor expansion, cái này thì đã gặp nhiều bên giải tích, tối ưu nên
-> cũng nhớ rồi. Cho hàm g(x) có đạo hàm cấp r, có nghĩa là tồn tại hàm 
-> g^(r)(x) = d^r/dx^r g(x). Khi đó với mọi hàm số a:
+> Nói về Taylor expansion, cái này thì đã gặp nhiều bên giải tích, tối ưu nên cũng nhớ rồi.
 >
-> Tr(x) = Σi=0:r g^(i)(a)/i! [x-a]^i
+> Cho hàm g(x) có **đạo hàm bậc r**, có nghĩa là **tồn tại hàm g^(r)(x) = d^r/dx^r g(x)**. Khi đó với
+> mọi constant a:
 >
-> Và giáo sư cho biết g(x) - Tr(x) sẽ hội tụ về 0 nhanh hơn là cái term có bậc
-> cao nhất (chưa hiểu lắm)
+> g(x) = Σi=0,1,2... (g^(i)(a)/i!) [x-a]^i
 >
-> Thể hiện bởi: lim x→a [g(x) - Tr(x)] / (x - a)^r = 0
+> Cái này gọi là Taylor expansion around x = a
 >
-> Và ta sẽ thường quan tâm đến xấp xỉ bậc nhất
+> Nhưng trong cuốn Numerical Optimization của J. Nocedal, mình cũng đã học Taylor's theorem:
+> Ta nhớ nó có gốc gác là Mean Value Theorem, nói rằng, cho hàm f(x), thì khi đi từ a → b, sẽ tồn
+> tại điểm c trong khoảng (a, b) sao cho độ dốc hàm số tại c bằng độ dốc trung bình: f'(c) =
+> [f(b)-f(a)]/(b-a).
+>
+> Nên từ x = x0 tới x0 + p sẽ tồn tại điểm x0 + tp với t ∈ (0,1) sao cho f'(x + tp) = [f(p) - f(x)]/p ⇔ f'(x
+> \+ tp)p = f(p) - f(x) ⇔ f(p) = f(x) + f'(x + tp)p.
+>
+> Tương tự, từ x = x0 tới x = x0 + p cũng sẽ tồn tại điểm x = x0 + tp với t ∈ (0,1) sao cho f(p) = f(x)
+> \+ f'(x)p + (1/2)f''(x + tp)p^2
+>
+> Và tương tự, từ x = x0 tới x = x0 + p cũng sẽ tồn tại điểm x = x0 + tp với t ∈(0,1) nào đó sao cho
+> f(p) + f'(x)p + (1/2)f''(x)p^2 + (1/6)f^(3)(x+tp)p^3
+>
+> Vậy thì ở đây, ta cũng sẽ có khi đi từ a → x cũng sẽ tồn tại điểm c nào đó trong khoảng (a,x) sao
+> cho:
+>
+> g(x) = g(a) + g'(a)(x-a) + (1/2)g''(a)(x-a)^2 + ...+ (1/r!)g^(r)(a)(x-a)^r +
+> [1/(r+1)!]g^(r+1)(c)(x-a)^(r+1)
+>
+> Thế thì nếu ta chỉ lấy r hạng tử đầu tiên (tới term bậc r), thì đó là định nghĩa của cái gọi là Taylor
+> polynomial of order r about a:
+>
+> Tr(x) = Σi=r (g^(i)(a)/i!) [x-a]^i
+>
+> Như vậy có thể thấy g(x) = Tr(x) + [1/(r+1)!]g^(r+1)(c)(x-a)^(r+1)
+>
+> ⇔ g(x) - Tr(x) = [1/(r+1)!]g^(r+1)(c)(x-a)^(r+1)
+>
+> Và ở đây mình được học kiến thức liên quan đến định lý Taylor nữa trong context thống kê, đại ý
+> là, gs nói rằng, định lý Taylor cho biết, phần dư (residual) có được sau khi trừ g(x) cho Tr(x), sẽ
+> converge về 0 NHANH HƠN là (x-a)^r converge về 0, khi x → a. Thể hiện bởi: lim x→a [g(x) -
+> Tr(x)] / (x - a)^r = 0
+>
+> Vậy thì nhờ đã biết Taylor theorem nên ta biết phần dư là [1/(r+1)!]g^(r+1)(c)(x - a)^(r+1), nên
+> chứng minh ý trong sách dễ ẹt:
+>
+> lim x → a {[1/(r+1)!]g^(r+1)(c)(x - a)^(r+1) / (x - a)^r}
+>
+> lim x → a {[1/(r+1)!]g^(r+1)(c)(x - a)}
+>
+> dĩ nhiên lim này = 0 → chứng minh xong
+>
+> Gs cho biết ta thường không quan tâm đến dạng tường minh của phần dư, tuy nhiên, có một
+> dạng công thức tường minh (explicit) mà sẽ tỏ ra hữu ích, đó là g(x) - Tr(x) = ∫a:x [g^(r+1)(t)/r!]
+> (x-t)^r dt, hiểu cái này như sau:
+>
+> Chứng minh cái này bằng tích phân toàn phần:
+>
+> Chứng minh với r = 0: g(x) - T0(x) = ∫a:x g'(t) dt ⇔ g(x) - g(a) = ∫a:x g'(t)dt. Cái này không cần
+> phải chứng minh, vì chỉ cần áp dụng FTC. Còn nhớ FTC 2 nói rằng, nếu G là nguyên hàm của f,
+> tức d/dt G(t) = f(t) thì ∫a:b f(t)dt = G(b) - G(a). Ở đây g(t) là nguyên hàm của g'(t) ⇨ ∫a:x g'(t)dt =
+> g(x) - g(a).
+>
+> Chứng minh với r = 1: g(x) - T1(x) = ∫a:x g''(t)(x-t)dt ⇔ g(x) - [g(a) + g'(a)(x-a)] = ∫a:x g''(t)(x-t)dt
+>
+> ⇔ g(x) - g(a) - g'(a)(x-a) = ∫a:x g''(t)(x-t)dt
+>
+> ⇔ g(x) = g(a) + g'(a)(x-a) + ∫a:x g''(t)(x-t)dt
+>
+> Bắt đầu với kết quả đã có: g(x) - g(a) = ∫a:x g'(t)dt
+>
+> ⇔ g(x) = g(a) + ∫a:x g'(t)dt
+>
+> Xét ∫a:x g'(t)dt. Dùng tích phân từng phần (integration by part), ôn lại nhanh IBP:
+>
+> Xuất phát từ product rule: d(uv) = (du)v + u(dv). Tích phân hai vế: ∫d(uv) = ∫vdu + ∫udv ⇔ uv =
+> ∫vdu + ∫udv ⇔ uv - ∫udv = ∫vdu
+>
+> Đặt g'(t) = v ⇨ dv = g''(t)dt
+>
+> Đặt du = dt ⇨ u = t + constant c, chọn c = -x
+>
+> Áp dụng IBP, ∫a:x g'(t)dt = g'(t)(t-x)|a:x - ∫(t-x)g''(t)dt
+>
+> = g'(x)(0) - g'(a)(a-x) - ∫(t-x)g''(t)dt
+>
+> = g'(a)(x-a) + ∫g''(t)(x-t)dt
+>
+> Vậy g(x) - g(a) = ∫a:x g'(t)dt ⇔ g(x) - g(a)
+>
+> = g'(a)(x-a) - ∫g''(t)(t-x)dt ⇔ g(x)
+>
+> = g(a) + g'(a)(x-a) + ∫g''(t)(x-t)dt
+>
+> = T1(x) + ∫g''(t)(x-t)dt → chứng minh xong g(x) - Tr(x) = ∫a:x [g^(r+1)(t)/r!] (x-t)^r dt cho r = 2.
+>
+> Tiếp tục như vậy ta sẽ chứng minh được quy luật
+>
+> g(x) = Tr(x) + ∫a:x [g^(r+1)(t)/r!] (x-t)^r dt
+>
+> ⇔ g(x) - Tr(x) = ∫a:x [g^(r+1)(t)/r!] (x-t)^r dt
 
 <br>
 
@@ -890,72 +1008,76 @@
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-430)
 
 > [!NOTE]
-> rồi, ở đây là nói qua case đa biến. Cho T1,...Tk là các random variable với
-> mean θ1, ..θk. Và đặt vector **T** = (T1,...Tk), và **θ** = (θ1,...θk).
+> rồi, ở đây là nói qua case đa biến. Cho T1,...Tk là các random variable với mean θ1, ..θk. Và đặt vector **T**
+> = (T1,...Tk), và **θ** = (θ1,...θk).
 >
-> Giả sử có hàm g(**T**) là hàm khả vi. và ta muốn ước lượng xấp xỉ variance.
-> (chưa hiểu ý này lắm)
+> Giả sử có hàm g(**T**) là hàm khả vi, đóng vai trò là estimator của some parameter.
 >
-> Define g'i(**θ**) = ∂/∂ti g(**t**)|ti = θ1,...,tk=θk. Cái này là sao, đơn giản thôi, g'
-> i(**θ**) ý là kí hiệu sẽ dùng để chỉ đạo hàm của hàm g đối với **θ**, và vì **θ**
-> là vector, nên g'(**θ**) cũng là vector (mà bên giải tích mình biết nó là
-> gradient vector). Và g'i(**θ**) ý là lấy component thứ i
+> (Trong chap 7 ta sẽ học bài toán point estimation, để hiểu khái niệm estimator của θ, được định nghĩa là một
+> hàm số của sample W(**X**). Nên ở đây g(**T**) có thể là một estimator cho parameter nào đó.
 >
-> Tất nhiên nó cũng là một hàm số, và cũng là hàm theo vector θ
+> Và vấn đề là ta muốn ước lượng variance, tức là, ta **muốn estimate Var(g(T)), variance của random
+> variable g(T)** này. Cái này sẽ liên quan đến việc **đánh giá chất lượng của estimator**, thông qua một tính
+> chất gọi là efficiency, kiểu như, nếu estimator W(X) của θ có variance ngày ngàng nhỏ khi kích thước mẫu
+> ngày càng lớn thì đó sẽ là một estimator efficient, đây ko phải định nghĩa chính xác nhưng có thể hiểu đại
+> khái là vậy)
 >
-> ∂/∂ti g(t)|t1 = θ1,...,tk=θk, ý là đạo hàm riêng (partial derivative) của g wrt
-> vector t, và evaluate tại t = **θ** Vậy thì ta có first order Taylor series expansion của g about **θ**:  
-> Thì cũng y như trong giải tích hay tối ưu ta hay nói first order approximation
-> của hàm f tại x0:
+> Define g'i(**θ**) = ∂/∂ti g(**t**)|ti = θ1,...,tk=θk.
 >
-> f(x) ≈ f(x0) + ∇f(x0)T(x-x0) 
+> Cái này là sao, đơn giản thôi, g'i(**θ**) là ∂/∂ti g(**t**)|**t**=**θ** ý là kí hiệu sẽ dùng để chỉ đạo hàm riêng của
+> g đối với **t**i, evaluate tại **t**=**θ**
 >
-> Thì ở đây là: 
+> Vậy thì ta có first order Taylor series expansion của g about **θ**:
+>
+> Thì cũng y như trong giải tích hay tối ưu ta hay nói first order approximation của hàm f tại x0:
+>
+> f(x) ≈ f(x0) + ∇f(x0)T(x-x0)
+>
+> Thì ở đây là:
 >
 > g(**t**) ≈ g(**θ**) + Σi=1:k g'i(**θ**)(ti - θi)
 >
-> Cái vế sau thật ra chính là ∇g(**θ**)T(**t** - **θ**) thôi
+> Cái vế sau chính là ∇g(**θ**)T(**t** - **θ**) thôi
 >
 > Rồi, bây giờ ta sẽ lấy expectation hai vế:
 >
 > Là sao nhỉ.
 >
-> Mình hiểu là, đã nói về việc lấy kì vọng, thì chỉ có thể nói về kì vọng của
-> random variable. Nên hiểu ở đây ý là, ta sẽ lấy expectation của g(T). Với T
-> là random variable vector **T** define ở trên, thì g(T) đương nhiên cũng là
-> random variable (hoặc random variable vector, ở đây ko nói g là vector 
-> hay scalar, nhưng dù là gì thì vẫn có thể lấy kì vọng)
+> Mình hiểu là, đã nói về việc lấy kì vọng, thì chỉ có thể nói về kì vọng của random variable. Nên hiểu ở đây ý
+> là, ta sẽ lấy expectation của g(**T**). Với **T** là random variable vector **T** define ở trên, thì g(**T**)
+> đương nhiên cũng là random variable (hoặc random variable vector, ở đây ko nói g là vector hay scalar,
+> nhưng dù là gì thì vẫn có thể lấy kì vọng)
 >
-> Eg(T), thế còn tại sao phải ghi là E_θ g(T)?
+> Eg(**T**), thế còn tại sao phải ghi là E_**θ** g(**T**)?
 >
-> Là vì trong hàm g, **θ**  đóng vai tham số, nên E_θ g(T) ý là ta sẽ tính với
-> một giá trị θ fixed nào đó.
+> Là vì g(**T**) là random variable được tạo bởi **T**, mà **T** = (T1,...Tk) là vector các random varible có
+> distribution với param θ1,..θk, nên distribution của g(**T**) cũng phụ thuộc **θ**, đóng vai tham số, nên E_θ
+> g(**T**) sẽ phụ thuộc **θ**.
 >
-> Và khi tính kì vọng, ta biết rằng mình sẽ weighted sum over mọi possible
-> value của T, nên kết quả sẽ là constant (phụ thuộc θ, coi như fixed)
+> Rồi, như vậy thì E_**θ**[g(**T**)], vì g(t) ≈ g(**θ**) + Σi=1:k g'i(**θ**)(ti - θi)
 >
-> Rồi, như vậy thì E_θ g(**T**), vì g(t) ≈ g(**θ**) + Σi=1:k g'i(**θ**)(ti - θi)
+> nên ta có E_**θ**[g(**T**)] ≈ E_**θ**[g(**θ**) + Σi=1:k g'i(**θ**)(Ti - θi)]
 >
-> nên ta có E_θ g(**T**) ≈ E_θ [g(θ) + Σi=1:k g'i(**θ**)(Ti - θi)]
+> = E_**θ**[g(**θ**)] + E_**θ**[Σi=1:k g'i(**θ**)(Ti - θi)] | linearity
 >
-> = E_θ g(**θ**) + E_θ [Σi=1:k g'i(**θ**)(Ti - θi)] | linearity
+> với **θ**, là tham số, dĩ nhiên trong bối cảnh thông thường, là Classical statistic,(không phải Bayesian), thì ta
+> sẽ coi như fixed & unknown nên g(**θ**) là constant ⇨ E_**θ**[g(**θ**)] = g(**θ**)
 >
-> với θ coi như fixed, thì g(θ) là constant, E_θ[g(θ)] = g(θ)
+> .. = g(**θ**) + E_**θ**[Σi=1:k g'i(**θ**)(Ti - θi)]
 >
-> .. = g(**θ**) + E_θ [Σi=1:k g'i(**θ**)(Ti - θi)] 
+> = g(**θ**) + Σi=1:k E_**θ**[g'i(**θ**)(Ti - θi)] | linearity
 >
-> = g(**θ**) + Σi=1:k E_θ[g'i(**θ**)(Ti - θi)] | linearity
+> = g(**θ**) + Σi=1:k g'i(**θ**) E_θ(Ti - θi) | g'i(**θ**) cũng là fixed → đưa ra ngoài kì vọng theo linearity
 >
-> = g(**θ**) + Σi=1:k g'i(**θ**) E_θ(Ti - θi)  | linearity
+> = g(**θ**) + Σi=1:k g'i(**θ**) [E_**θ**(Ti) - E_**θ**(θi)]
 >
-> = g(**θ**) + Σi=1:k g'i(**θ**) [E_θ(Ti) - E_θ(θi)]
->
-> = g(**θ**) + Σi=1:k g'i(**θ**) [θi - θi]   |  Do E_θ(Ti) = θi, và E_θ(θi) = θi
+> = g(**θ**) + Σi=1:k g'i(**θ**) [θi - θi] | Do E_**θ**(Ti) = θi, và E_**θ**(θi) = θi
 >
 > = g(**θ**)
 >
-> Chú ý, vì ta đang dùng xấp xỉ bậc 1 cho g, nên cái ta có chỉ là approximated
-> của E_θ g(T).
+> Vậy E_**θ**[g(**T**)] ≈ g(**θ**)
+>
+> Chú ý, vì ta đang dùng xấp xỉ bậc 1 cho g, nên cái ta có chỉ là approximated của E_**θ** g(**T**).
 
 <br>
 
@@ -964,40 +1086,55 @@
 <p align="center"><kbd><img src="assets/44103059c8cb36cd44573d2d761ce78466587812.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, khi đã có E_θ[g(**T**)] rồi, tức là approx. mean của g(**T**) ta sẽ **đi tính
-> approximatyed variance**:
+> Rồi, khi đã có E_θ[g(**T**)] rồi, tức là approximated mean của g(**T**) ta sẽ
+> **đi tính approximated variance**:
 >
-> Var_θ g(**T**), theon công variance đã biết Var X = E[X - EX]^2
+> Var_**θ** g(**T**), theo công variance đã biết Var[X] = E[X - EX]^2
 >
-> ⇨ Var_θ g(**T**) = E[g(**T**) - Eg(**T**)]^2
+> ⇨ Var_θ[g(**T**)] = E_θ[g(**T**) - E_θ(g(**T**))]^2
 >
-> Với Eg(**T**) ta dùng approx. value tính ở trên, bởi vậy nên ở đây ta đang tính
-> approx. của variance của g(**T**)
+> Thay E_θ[g(**T**)] ≈ g(**θ**)
 >
-> ≈  E[g(**T**) - g(**θ**)]^2
+> .. ≈ E[g(**T**) - g(**θ**)]^2 (ta dùng approx. value tính ở trên, bởi vậy nên ở
+> đây ta phải dùng kí hiệu approx)
 >
-> ≈ E[g(**θ**) + Σi=1:k g'i(**θ**)(Ti - θi) - g(θ)]^2 | thay g(**T**) bởi linear approx
+> Tới đây, ta dùng lại xấp xỉ 5.5.7 g(**t**) ≈ g(**θ**) + Σi=1:k g'i(**θ**)(ti - θi) ⇨
+> g(**T**) ≈ g(**θ**) + Σi=1:k g'i(**θ**)(Ti - θi)
+>
+> ≈ E[g(**θ**) + Σi=1:k g'i(**θ**)(Ti - θi) - g(**θ**)]^2
 >
 > ≈ E[Σi=1:k g'i(**θ**)(Ti - θi)]^2
+>
+> Đây là kì vọng của bình phương một cái tổng k hạng tử, dùng công thức
+> Newton mở cái tổng này ra thì nó sẽ trở thành tổng của k hạng tử có dạng g'
+> i(**θ**)(Ti - θi), còn lại là các cross-term g'i(**θ**)(Ti - θi)g'j(**θ**)(Tj - θj), i khác
+> j. Dùng tính linearity đưa E vào trong tổng.
 >
 > = Σi=1:k E[g'i(**θ**)(Ti - θi)]^2 + 2Σi>j E[g'i(**θ**)(Ti - θi)g'j(**θ**)(Tj - θj)]
 >
 > = Σi=1:k g'i(**θ**)^2 E[(Ti - θi)]^2 + 2Σi>j g'i(**θ**)g'j(**θ**) E[(Ti - θi)(Tj - θj)]
 >
-> (linearity, đưa constant ra)
+> (tiếp tục dùng tính linearity, đưa constant ra)
 >
 > = Σi=1:k g'i(**θ**)^2 E[(Ti - ETi)]^2 + 2Σi>j g'i(**θ**)g'j(**θ**) E[(Ti - ETi)(Tj - ETj)]
 >
-> (θi = ETi)
+> (Thay θi = ETi)
+>
+> Thì E[(Ti - ETi)]^2 chính là Var(Ti) và E[(Ti - ETi)(Tj - ETj)] chính là Cov(Ti, Tj)
 >
 > = Σi=1:k g'i(**θ**)^2 VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)
 >
-> VÀ CÔNG THÚC APPROX NÀY SẼ RẤT HỮU ÍCH, vì nó cho phép ta công
-> thức tính ƯỚC LƯỢNG VARIANCE CỦA MỘT HÀM CHUNG CHUNG NÀO ĐÓ, 
+> Vậy ta có kết quả:
 >
-> (ý là tính approx variance của một random variable khi apply hàm g chung chung 
-> nào đó lên các rv đã biết) MÀ CHỈ CẦN DÙNG VARIANCE VÀ COVARIANCE CỦA
-> Rvs
+> Var_θ[g(**T**)] ≈ Σi=1:k g'i(**θ**)^2 VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)
+>
+> VÀ gs cho biết **công thức approx cho var[g(t)] này sẽ rất hữu ích, vì nó cho
+> phép ta công thức tính ước lượng variance của một hàm chung chung nào
+> đó**
+>
+> (ý là tính approx variance của một random variable khi apply hàm g chung
+> chung nào đó lên các rv đã biết) mà chỉ cần dùng variance và covariance của
+> rvs)
 
 <br>
 
@@ -1005,58 +1142,60 @@
 
 <p align="center"><kbd><img src="assets/3d3ac427b97487fe416332bc7cf71ca8b801ce9e.png" width="100%"></kbd></p>
 
+🔗 **Related:** [10.1 POINT ESTIMATION](101_point_estimation.md#node-860)
+
 > [!NOTE]
-> Rồi, học cái vừa rồi là để áp dụng cho cái này. Là vì như đã nói, ta đang
-> quan tâm đến odd: p / (1-p). Tức là ta đang quan tâm đến bối cảnh là  ta có
-> một random sample size n từ population là Bern(p). Thì dĩ nhiên ta quan
-> tâm đến p, nhưng với Bern(p) thì ta cũng quan tâm đến một tham số khác là
-> odd: = p/(1-p)
+> Rồi, cái vừa rồi là **để áp dụng cho cái này**. Là vì như đã nói, ta **đang quan tâm đến odd**:
+> **p / (1-p)**. Tức là, bối cảnh là ta có một random sample X1,X2,...Tn size n từ population là
+> Bern(p). Thì dĩ nhiên ta quan tâm đến p, nhưng với Bern(p) thì ta cũng quan tâm đến một tham
+> số khác là odd: = p/(1-p).
 >
-> Thế thì với p, ta dùng sample mean Xbar, hay p^ để estimate cho nó. Thì
-> với odd, ta dùng p^/(1-p^) để estimate cho nó.
+> Thế thì với **p, ta dùng sample mean Xbar = Σi Xi**, hay kí hiệu khác **p^** để estimate cho
+> nó. Thì với **odd, ta dùng p^/(1-p^) để estimate cho nó.**
 >
-> Vậy thì ta sẽ muốn tìm sampling distribution cũng như các properties của
-> p^/(1-p^)
+> Sau khi học chap 7 quay lại đây mình thấy hiểu hơn những chỗ này, p^,hay Xbar, là các
+> statistic, là estimator của parameter. Với Tbar, hay, cũng có thể viết là Xbar(**X**) hay p^(**X**)
+> để nhấn mạnh nó là hàm số của sample **X**, và ta dùng làm estimator cho p, và như đã biết,
+> nó là một sufficient statistic của p (vì khi kích thước mẫu tăng lên n → inf, thì Xbar, (hay
+> Xbar_n để thể hiện sample mean từ mẫy size n) sẽ hội tụ phân phối và cả xác suất về p)
 >
-> Và đây là lúc mà cái công cụ vừa rồi phát huy tác dụng. Vì nó cho phép
-> tính ước lượng variance của g(**T**) (T là random variable vector, nhưng đó
-> là khái quát thôi, ta vẫn có thể dùng với T là random variable)
+> Vậy thì ta sẽ muốn tìm sampling distribution, hay ít nhất là các properties của estimator của
+> odd: W(**X**) = p^/(1-p^), cụ thể là Variance của cái estimator của odd này.
 >
-> Thì ở đây, g là hàm: g(u) = u / (1-u) 
+> Nên hiểu, p^ hay p^/(1-p^) đều đóng tư cách là hàm của sample **X**. Nên ta có thể ghi là
+> p^(**X**) (y như Xbar(**X**), với p^(**X**) = (ΣiXi/n), và [p^/(1-p^)](**X**), với ý nghĩa [p^/(1-p^)]
+> là hàm của **X**, = (ΣiXi/n)/(1-(ΣiXi/n)).
 >
-> Áp dụng kết quả trên,
+> Áp dụng kết quả: Var_θ[g(**T**)] ≈ Σi=1:k g'i(**θ**)^2 VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)..
 >
-> Var_θ g(**T**) = Σi=1:k g'i(**θ**)^2 VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)
+> ..sẽ giúp ta tính được estimated variance của là p^/(1 - p^) vốn dĩ là một hàm phức tạp của
+> **X**, = ((ΣiXi/n)/(1-(ΣiXi/n)), nhưng ta sẽ coi nó là hàm của p^, để áp dụng cái trên, cho p^
+> đóng vai T, và giúp ta estimate variance của g(**T**). Tức là ta hiểu đại khái là ở đây **T**
+> chính là vector có 1 component là p^, và vector **θ** = p.
 >
-> Ta sẽ tính estimated variance của p^/(1 - p^), và cái này được nhìn nhận
-> dưới dạng g(p^)
->
-> Tức là ta hiểu đại khái là Ở đây **T** chỉ có 1 component, = (p^), và vector **θ** 
-> cũng vậy, chỉ có = (p). Và công thức trên cho ta cách tính Var g(p^)  Var p^/(1-p^) = Var g(p^) theo công thức trên, thì nó sẽ là gì:
+> Áp dụng:
 >
 > term 1: Σi=1:k g'i(**θ**)^2 VarTi, ở đây chỉ có k = 1, nên ta có g'(**θ**)^2 Var(T)
 >
->  g'(**θ**) là gì, tức là đạo hàm hàm g, evaluate tại **θ**, mà **θ** ở đây cũng chỉ là 
-> có một component, chính là p. (theo theorem, Ti có mean θi)
+> g'(**θ**) là gì, tức là đạo hàm hàm g, evaluate tại **θ**, mà **θ** ở đây cũng chỉ là, là p.
 >
-> Nên g'(**θ**) ở đây chính là g'(p), hay ghi kiểu này cũng được g'(u) | u = p để
-> nhấn mạnh ta sẽ evaluate thàm g' tại p
+> Nên g'(**θ**) ở đây chính là g'(p), hay ghi kiểu này cũng được g'(u) | u = p để nhấn mạnh ta sẽ
+> evaluate thàm g' tại p
 >
 > Còn Var(T) dĩ nhiên là Var(p^) rồi.
 >
 > Nên term 1 là g'(p)^2 Var(p^)
 >
-> Còn term 2: thì ko có, vì ở đây ta chỉ có vector **T** có một random variable p^
-> thôi
+> Còn term 2: thì ko có, vì ở đây ta chỉ có vector **T** có một random variable p^ thôi
 >
 > ====
 >
-> Vậy **Var (p^ / 1 - p^) ≈ g'(p)^2 Var(p^)**
+> Vậy Var[(p^/1 - p^)] ≈ g'(p)^2 Var(p^)
 >
 > g(u) = u/1-u ⇨ g'(u) = 1/(1-u)^2 (chỉ là dùng quotient rule, ko khó)
 >
-> Và **Var(p^)** thì là gì, nó chính là **Var(Xbar)**, tức **variance của sample mean** đó, 
-> có công thức là **σ^2/n** tức là **population variance / n** 
+> Và **Var(p^)** thì là gì, nó chính là **Var(Xbar)**, tức **variance của sample mean** đó, có công
+> thức là **σ^2/n** tức là **population variance chia n**
 >
 > Và ở đây, với X ~ Bern(p) thì variance Var(X) là gì? Thử tính lại đơn giản:
 >
@@ -1064,9 +1203,30 @@
 >
 > = p - p^2 = **p(1-p)**
 >
-> ⇨ Ta có kết quả [1/(1-p)^2]^2 p(1-p)/n = **p/[n(1-p)^3]
+> ⇨ Ta có kết quả Var[(p^/1 - p^)] ≈ [1/(1-p)^2]^2 p(1-p)/n ≈ p/[n(1-p)^3]
 >
-> Nhắc lại, đây chính là estimated mà ta có cho variance của p^/(1-p^)**
+> ⇨ Var[(p^/1 - p^)] ≈ p/[n(1-p)^3]
+>
+> Nói thêm chút, mình nên hiểu thế này: Nãy giờ, là muốn tính, hay đang nói về việc ta quan tâm
+> đến Variance của một statistic: W(**X**) được tính bởi công thức sau đây W(**X**) =
+> ((ΣiXi/n)/(1-(ΣiXi/n)). (Hay thể hiện nó theo p^ (=Xbar) = p^/(1-p^), thì ta cần tính variance của
+> p^/(1-p^) để mà đánh giá nó, xem nó có tốt hay không.
+>
+> Thế nhưng gs Casella, trong đoạn mở màn về Delta Method nói rằng, đại khái là ta sẽ rất khó
+> để tính chính xác cái variance của p^/(1-p^) (ông nói: exact calculation is hopeless), đó chỉ có
+> thể tính gần đúng, và Delta method cho phép ta tính gần đúng.
+>
+> Vậy thì vì sao tính chính xác lại hopeless: → Cứ theo công thức mà tính:
+>
+> E[p^/(1-p^)], giả sử ta có f là pdf của p^, theo LOTUS, cho ta tính cái này như sau:
+>
+> ∫-inf:inf [p^/(1-p^)] f(p^)dp^
+>
+> mang ý nghĩa là tổng của các possible value của p^/(1-p^), với weight là xác suất f(p^). Vì p^,
+> là sample mean, có distribution (tại limit) là normal(p, σ^2/n), nên trong cái tổng (tích phân coi
+> như tổng vô hạn phần tử) này, sẽ có lúc p^ = 1 khiến [p^/(1-p^)] = inf, nhưng f(p^) vẫn dương.
+> vì phân phối normal tại p^ = 1 sẽ luôn dương dù rất nhỏ. Như vậy E[p^/(1-p^)] sẽ = inf. Và đại
+> khái là sẽ khiến Var cũng vậy. Mình sẽ gặp lại cái này trong Chap 10. Xem link
 
 <br>
 
@@ -1129,73 +1289,66 @@
 > Và Var_μ(1/X) ≈ (1 / μ)^4 Var_μ X
 
 > [!NOTE]
-> rồi, làm rõ chỗ này
+> Tổng hợp lại bối cảnh chút xíu:
 >
-> Trong ví dụ trước đó, đại khái là người ta quan tâm đến p/(1-p), với bối cảnh là ta
-> có random sample từ population distribution thuộc loại Bern. Dĩ nhiên ta ko biết
-> population mean p. Và ta dùng sample mean p^ =(1/n) Σ Xi để estimate cho p.
-> Nhưng như đã nói, ta còn quan tâm để population odd, p/(1-p). Và lẽ tự nhiên ta
-> sẽ muốn đặt câu hỏi về tính chất của cách làm này, kiểu như là, cũng giống như
-> việc dùng sample mean để estimate cho population mean thì mình đã có nhiều
-> hiểu biết rồi, cũng như đã có nhiều theorem cho ta công cụ để tìm hiểu sampling
-> distribution của sample mean. Thì bây giờ, ta muốn tìm hiểu là việc dùng
-> p^/(1-p^) để estimate cho p/(1-p) là tốt đến mức nào, cũng như sampling
+> Trong ví dụ trước đó, đại khái là người ta quan tâm đến p/(1-p), với bối cảnh là ta có random
+> sample từ population distribution thuộc loại Bern. Dĩ nhiên ta ko biết population mean p. Và ta
+> dùng sample mean p^ =(1/n) Σi Xi để estimate cho p. Nhưng như đã nói, ta còn quan tâm một
+> population paramter khác: odd = p/(1-p). Và lẽ tự nhiên ta sẽ muốn đặt câu hỏi về tính chất
+> của cách làm này, kiểu như là, cũng giống như việc dùng sample mean để estimate cho
+> population mean thì mình đã có nhiều hiểu biết rồi, cũng như đã có nhiều theorem cho ta
+> công cụ để tìm hiểu sampling distribution của sample mean. Thì bây giờ, ta muốn tìm hiểu là
+> việc dùng p^/(1-p^) để estimate cho p/(1-p) là tốt đến mức nào, cũng như sampling
 > distribution của p^/(1-p^) là gì.
 >
-> Thế thì, ta mới dùng công cụ này: First order Taylor expansion.
+> Thế thì, vấn đề là với một statistic như p^/(1-p^), nếu dùng công thức tính variance của nó, ta
+> sẽ ra ∞ (vì sao thì bữa nói rồi), nên ta mới dùng công cụ này: first order Taylor expansion.
 >
-> Sở dĩ như vậy là vì, ta nhìn cái p^/(1-p^) theo cách nhìn thế này: Nó là một hàm
-> số của p^, tức là ta đang quan tâm g(p^), với hàm g(.) có công thức là g(t) =
-> t/(1-t).
+> Sở dĩ như vậy là vì, ta nhìn cái p^/(1-p^) theo cách nhìn thế này: Nó là một hàm số của p^,
+> tức là ta đang quan tâm g(p^), với hàm g(.) có công thức là g(t) = t/(1-t).
 >
-> Mà đối với hàm số f(x),  thì first order Taylor expansion nó cho ta biết rằng: với x
-> ≈ x0 thì ta có thể có sự xấp xỉ sau đây: f(x) ≈ f(x0) + f'(x0)(x-x0). Đây là thứ mà
-> Calculus cho ta. Vậy thì áp dụng vào đây, ta sẽ có g(t) ≈ g(t0) + g'(t0)(t-t0). Và
-> dùng X cho vai trò của t, p^ cho vai trò của x0 (là điểm cố định cho trước) thì ta
-> có:
+> Mà đối với hàm số f(x), thì first order Taylor expansion nó cho ta biết rằng: với x ≈ x0 thì ta có
+> thể có sự xấp xỉ sau đây: f(x) ≈ f(x0) + f'(x0)(x-x0). Đây là thứ mà Calculus cho ta. Vậy thì áp
+> dụng vào đây, ta sẽ có g(t) ≈ g(t0) + g'(t0)(t-t0). Và dùng X cho vai trò của t, p^ cho vai trò của
+> x0 (là điểm cố định cho trước) thì ta có:
 >
 > g(X) ≈ g(p^) + g'(p^)(X - p^)
 >
-> Thế thì, tới đây, mới quay lại vấn đề đã nói, cái mà ta quan tâm là tính chất của
-> việc dùng p^/(1-p^) để estimate cho p/(1-p), và hơn nữa, ta quan tâm đến
-> sampling distribution của nó.
+> Thế thì, tới đây, mới quay lại vấn đề đã nói, cái mà ta quan tâm là tính chất của việc dùng
+> p^/(1-p^) để estimate cho p/(1-p), và hơn nữa, ta quan tâm đến sampling distribution của nó.
 >
-> Thế thì, p^ là sample mean, là một statistic, là một random variable có được từ
-> việc áp dụng function f(x1,x2...xn) = (x1 + x2 + ...xn) / n lên các random variable
-> X1,..Xn của random sample. Và vì là random variable, nên ta có quyền đặt vấn
-> đề tìm kì vọng, variance và distribution của nó (mà vì nó là statistic, nên người ta
-> gọi distribution này là sampling distribution)
+> Thế thì, p^ là sample mean, là một statistic, là một random variable có được từ việc áp dụng
+> function f(x1,x2...xn) = (x1 + x2 + ...xn) / n lên các random variable X1,..Xn của random
+> sample. Và vì là random variable, nên ta có quyền đặt vấn đề tìm kì vọng, variance và
+> distribution của nó (mà vì nó là statistic, nên người ta gọi distribution này là sampling
+> distribution)
 >
-> Vậy thì p^/(1-p^) cũng là một random variable có được khi apply function g(t) =
-> t/(1-t) lên statistic p^, nên dĩ nhiên nó cũng có quyền có mean, variance,
-> sampling distribution.
+> Vậy thì p^/(1-p^) cũng là một random variable có được khi apply function g(t) = t/(1-t) lên
+> statistic p^, nên dĩ nhiên nó cũng có quyền có mean, variance, sampling distribution.
 >
-> Do đó ta mới đặt vấn đề tìm E[p^/(1-p^)] cũng như Var[p^/(1-p^)] mà cái chính là
-> cái này Var[p^/(1-p^)]
+> Do đó ta mới đặt vấn đề tìm E[p^/(1-p^)] cũng như Var[p^/(1-p^)] mà cái chính là cái này
+> Var[p^/(1-p^)]
 >
 > và từ cái xấp xỉ ở trên: g(X) ≈ g(p^) + g'(p^)(X - p^), ta sẽ có được:
 >
 > Var[p^/(1-p^)] ≈ g'(p)^2 Var p^ = p/[n(1-p)^3]
 >
-> Và như vậy,  dù cũng đếch biết nó là gì, vì ta ko biết p, nhưng nó cho ta cái
-> khung để làm, ví dụ như đưa p^ thay cho p (estimate cho p) thì ta sẽ có estimate
-> cho Var[p^/(1-p^)]
+> Và như vậy, dù cũng đếch biết nó là gì, vì ta ko biết p, nhưng nó cho ta cái khung để làm, ví
+> dụ như đưa p^ thay cho p (estimate cho p) thì ta sẽ có estimate cho Var[p^/(1-p^)]
 >
-> Vậy thì tiếp theo qua ví dụ này, 5.5.23: Thì vấn đề đặt ra là ta có random variable
-> X và gọi μ là mean của nó (và ta chưa biết μ). Và cái ta quan tâm là g(μ), ví dụ,
-> 1/mu.
+> Vậy thì tiếp theo qua ví dụ này, 5.5.23: Thì vấn đề đặt ra là ta có random variable X và gọi μ
+> là mean của nó (và ta chưa biết μ). Và cái ta quan tâm là g(μ), ví dụ, 1/μ.
 >
-> Vậy thì, again, ta cũng nhìn 1/mu dưới dạng, ...(dĩ nhiên) ..là function của μ: g(μ).
+> Vậy thì, again, ta cũng nhìn 1/μ dưới dạng, ...(dĩ nhiên) ..là function của μ: g(μ).
 >
 > Để rồi ta cũng áp dụng cái công cụ mà Giải tích cho ta: g(X) ≈ g(μ) + g'(μ)(X - μ)
 >
 > Để từ đó ta có Eg(X) ≈ g(μ) và Var g(X) ≈ g'(μ)^2 Var(X)
 >
-> Và cái chính muốn nói là, cũng giống như ở ví dụ trước, ta có được cái khung,
-> rằng Var [p^/(1-p^)] = p/[n(1-p)^3], đặng từ đó mà có thể làm tiếp (lắp p^ vào thay
-> cho p), thì ở đây cũng vậy, kết quả từ Taylor expansion cho ta rằng, nếu ta quyết
-> định dùng g(X) để estimate cho g(μ) thì ta có thì đi tính Var g(X) dựa theo cái
-> khung là g'(μ)^2 Var(X).
+> Và cái chính muốn nói là, cũng giống như ở ví dụ trước, ta có được cái khung, rằng Var
+> [p^/(1-p^)] ≈ p/[n(1-p)^3], đặng từ đó mà có thể làm tiếp (lắp p^ vào thay cho p), thì ở đây
+> cũng vậy, kết quả từ Taylor expansion cho ta rằng, nếu ta quyết định dùng g(X) để estimate
+> cho g(μ) thì ta có thì đi tính Var[g(X)] dựa theo cái khung là g'(μ)^2 Var(X).
 
 <br>
 
@@ -1289,39 +1442,40 @@
 > Ok, chỗ này là vầy:
 >
 > Theo Central Limit Theorem ta có (cho X1,X2...là các rv có population
-> mean là μ, population variance là σ^2) và Xnbar là sample mean size
-> n, viết Xbar cho gọn) thì ta có:
+> mean là μ, population variance là σ^2) và Xbar_n là sample mean size n,
+> viết Xbar cho gọn) thì ta có:
 >
 > **√n(Xbar - μ) / σ → n(0,1)** in distribution
 >
-> Dựa vào Slutsky theorem: 
+> Dựa vào Slutsky theorem:
 >
-> √n(Xbar - μ) / σ →  Z ~ n(0,1) và σ → σ, 
+> √n(Xbar - μ) / σ → Z ~ n(0,1) và σ → σ,
 >
-> theo Slutsky theorem σ √n(Xbar - μ) / σ → σZ và σZ thì ~ (n, σ^2)  
+> theo Slutsky theorem σ √n(Xbar - μ) / σ → σZ và σZ thì ~ (n, σ^2)
 >
-> Vậy: **√n(Xbar - μ)  → n(0, σ^2)** in distribution 
+> Vậy: **√n(Xbar - μ) → n(0, σ^2)** in distribution
 >
 > ====
 >
-> Tiếp, dùng cái delta method theorem vừa rồi, nói rằng: 
+> Tiếp, dùng cái delta method theorem vừa rồi, nói rằng:
 >
-> Nếu **√n(Yn - θ) →**(d) **N(0, θ^2)** thì 
+> Nếu **√n(Yn - θ) →**(d) **N(0, θ^2)** thì
 >
-> √**n(g(Yn) - g(θ))** →(d) **n(0, σ^2 g'(θ)^2)** 
+> √**n(g(Yn) - g(θ))** →(d) **n(0, σ^2 g'(θ)^2)**
 >
-> Nên áp dụng vào đây, ta đang có: 
+> Nên áp dụng vào đây, ta đang có:
 >
 > √n(Xbar - μ) →(d) n(0, σ^2)
 >
-> Và ta có hàm g(t) = 1/t, g'(t) = 1/t^2
+> Và ta có hàm g(t) = 1/t, g'(t) = -1/t^2
 >
-> ⇨ √n(g(Xbar) - g(μ))  →(d) n(0, σ^2 g'(μ)^2)  
+> ⇨ √n(g(Xbar) - g(μ)) →(d) n(0, σ^2 g'(μ)^2)
 >
-> Và có nghĩa là: 
+> Và có nghĩa là:
 >
-> **√n(1/Xbar - 1/μ)** →(d) n(0, σ^2 (1/μ^2)^2) = **n(0, σ^2 (1/μ^4))** 
-> Với σ^2 là population variance, người ta ghi là Var X1 cũng có thể hiểu
+> **√n(1/Xbar - 1/μ)** →(d) n(0, σ^2 (-1/μ^2)^2) = **n(0, σ^2 (1/μ^4))**
+>
+> Với σ^2 là population variance, người ta ghi là Var[X1] cũng có thể hiểu
 > được
 >
 > Vậy ta có **√n(1/Xbar - 1/μ) → n(0, (1/μ^4) Var X1)** là vậy

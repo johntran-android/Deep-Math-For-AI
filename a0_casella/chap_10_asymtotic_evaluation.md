@@ -1,6 +1,6 @@
 # Chap 10 Asymtotic Evaluation
 
-📊 **Progress:** `8` Notes | `8` Screenshots
+📊 **Progress:** `13` Notes | `16` Screenshots
 
 ---
 
@@ -247,6 +247,280 @@
 >
 > Như vậy, mọi Xbar_n của một sample iid có population với variance hữu
 > hạn sẽ đều là consistent estimator của μ
+
+<br>
+
+<a id="node-857"></a>
+
+<p align="center"><kbd><img src="assets/50a2391a6a4a91fda6b7e160db62d4b911481260.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, gs nói rằng, hồi đầu ta đã đề cập đến việc, có đáng để phải để tâm
+> đến  một inconsistent estimator không. Thì ở đây ông nói đại ý là, sở dĩ nói
+> vậy là vì theoerem sau đây ta sẽ thấy là, nếu Wm là một consistent estimator
+> thì với chuỗi a1,a2,...và b1,b2,...thỏa điều kiện chuỗi a hội tụ về 1, chuỗi b
+> hội tụ về 0 thì Un = anWn + bn sẽ cũng là một consistent estimator. Ý nói, có
+> rất nhiều consistent estimator, nên ko việc gì phải xem xét một inconsistent
+
+<br>
+
+<a id="node-858"></a>
+
+<p align="center"><kbd><img src="assets/08299323c5a22eb1eb0afeb9947f8d37847f0cc1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e4bc976c892fbc161baac3940b8d3a1d678ebc04.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, cuối cùng, gs nói về một theorem nói rằng, bất kì một ML estimator
+> θ^ml(**X**) của một parameter θ nào cũng là consistent sequence of
+> estimator của θ, và ông nói đây là lần đầu tiên ta gặp một trường hợp trong
+> đó một cách tiếp cận cụ thể lại đảm bảo ta sẽ có được một estimator có
+> được một tiêu chí tối ưu nào đó. (ông nói vậy là vì, cho đến nay, các
+> phương pháp mà ta học để đi xây dựng một estimator chưa đảm bảo là nó
+> sẽ là cái tốt nhất theo các tiêu chí nào đó, thì ở đây, với tiêu chí consistent,
+> thì MLE approach lại đảm bảo là ta sẽ có được một consistent estimator)
+>
+> Theorem 10.1.6 nói rằng, nếu hàm likelihood mà thỏa tính chất gọi là "
+> regularity conditions" thì τ(θ^) sẽ là consistent estimator của τ(θ) với τ là
+> hàm liên tục của θ.
+>
+> Quay lại xem kĩ hơn phần regularity condition sau.
+
+<br>
+
+<a id="node-859"></a>
+
+<p align="center"><kbd><img src="assets/8b69ae999a66883fc2c529a167b034c404f792c2.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là đánh giá chuỗi estimator theo tiêu chí consistency là nói đến
+> tính chất liên quan đến việc estimator đó chính xác đến mức nào trong việc
+> estimate cái param mà nó đang estimate.
+>
+> Để rồi, ta sẽ xét một tiêu chí khác, đánh giá estimator ở khía cạnh:
+> asymptotic variance của nó.
+>
+> Có nghĩa là, hiểu đại khái là consistency nói đến việc: à, chuỗi estimator
+> (với sample size tăng dần) sẽ có thể ngày càng estimate chính xác giá trị
+> của param không. Thì efficiency sẽ đánh giá rằng khi sample size tăng dần
+> thì mức biến động của estimator sẽ thế nào.
+
+<br>
+
+<a id="node-860"></a>
+
+<p align="center"><kbd><img src="assets/494a1fe3c6dda96980596685b9b85229a0fe16d1.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e63878636e2e8347c61b261907dcea27bb119c65.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/d17c778ccf26ecec2044fcf7b41ae2e22a105696.png" width="100%"></kbd></p>
+
+🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-421)
+
+> [!NOTE]
+> Rồi, thế thì gs nói đại khái là khi tính **phương sai tiệm cận (asymptotic
+> variance)**, TA CÓ THỂ SẼ BỊ CÁM DỖ BỞI (TEMPTING) cách làm như
+> sau: Gọi Tn là estimator (dựa trên sample size n), thì Var(Tn) là variance
+> của Tn, khi đó ta xem xét variance của Tn tại limit:
+>
+> lim n → ∞ {kn Var(Tn)}
+>
+> Với kn là chuỗi các constant đóng vai trò normalizing constant (chưa hiểu
+> lắm)
+>
+> Thế thì ta định nghĩa ra một khái niệm khác: giới hạn phương sai (limiting
+> variance) được định nghĩa bởi: Nếu một (sequence of estimator) có phương
+> sai tiệm cận lim n→∞ kn Var(Tn) = τ^2 < ∞, thì τ^2 được gọi là **limiting
+> variance**.
+>
+> Lấy ví dụ, Xbar_n, là sample mean của iid normal(μ, σ^2) sample size n,
+> như đã biết, nó sẽ một normal(μ, σ^2/n). Như vậy Var(Xbar_n) = σ^2/n ⇨ n
+> Var(Xbar_n) = σ^2. Do đó, với Xbar_n thì lim n → ∞ n Var(Xbar_n) = σ^2, là
+> con số hữu hạn (finite), < ∞. Do đó theo định nghĩa trên, σ^2 chính là
+> limiting variance. (trong trường hợp này, chuỗi {kn} chính là {1,2,....n}.
+>
+> Thế thì đại ý là, việc đánh giá asymptotic variance bằng cách lấy giới hạn
+> của variance của Tn sẽ không vấn đề gì khi Tn là sample mean, vì lim n →
+> inf Var(Tn) = lim n → inf σ^2/n = 0. Và với một số Tn khác cũng vậy.
+>
+> Nhưng nếu ta quan tâm đến asymtotic variance của Tn = 1/Xbar_n, thì ta sẽ
+> gặp vấn để vì Var(Tn) sẽ = inf, vì sao nhỉ?
+>
+> Chỉ cần hiểu đại khái, theo định nghĩa Var(Tn) = E[Tn^2] - (ETn)^2 =
+> E[(1/Xbar_n)^2] - [E(1/Xbar_n)]^2
+>
+> Với E[(1/Xbar_n)^2], theo LOTUS, = ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) với f
+> là pdf của xbar_n. Ta đã biết, Xbar_n của sample ~ normal(μ, σ) sẽ có
+> limiting distribution là normal(μ, σ^2/n), tức là Xbar_n sẽ hội tụ distribution
+> về một rv thuộc phân phối normal(μ, σ^2). thế thì với phân phối này, trong
+> tích phân ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) đang nói, tồn tại xác suất dương
+> nào đó để xbar_n = 0, khiến tích phân này = inf (explode), vì sao, vì range
+> của normal là từ -inf, inf, nên có nghĩa là tại xbar_n=0, vẫn tồn tại giá trị pdf
+> không âm.
+>
+> Không cần xét cái term thứ hai, lập luận trên cũng đủ để nói Var(1/Xbar_n)
+> = ∞.
+>
+> Vấn đề là, trong ví dụ 5.5.23, mình đã học về Delta method giúp ta có công
+> thức tính xấp xỉ mean và variance của 1/Xbar_n, có thể ôn lại chút xíu như
+> sau:
+>
+> Delta method rất đơn giản thôi: Giả sử ta đang muốn xem xét random
+> variable g(T) (T là random variable nào đó ~ f(t|μ). Thì lập luận như vầy:
+> Theo giải tích, nếu xét phạm vi t ~ μ, thì ta có xấp xỉ bậc một: g(t) ≈ g(μ) + g'
+> (μ)(t-μ) Áp dụng hai cái hàm số xấp xỉ nhau này lên random variable T, ta sẽ
+> có hai random variable xấp xỉ:
+>
+> g(T) ≈ g(μ) + g'(μ)(T-μ)
+>
+> Thế thì xét E_μ[g(T)], vì xấp xỉ trên nên ta có:
+>
+> E_μ[g(T)] ≈ E_μ[g(μ) + g'(μ)(T-μ)] = E_μ[g(μ)] + E_μ[g'(μ)(T-μ)]
+>
+> = g(μ) + g'(μ) E_μ[T-μ]
+>
+> = g(μ) + g'(μ) (E_μ[T]-μ)
+>
+> = g(μ) + g'(μ) (μ-μ)
+>
+> = g(μ)
+>
+> Vậy E_μ[g(T)] ≈ g(μ)
+>
+> Còn Var_μ[g(T)] = E_μ{g(T) - E_μ[g(T)]}^2
+>
+> ≈ E_μ{g(T) - g(μ)}^2 (thay E_μ[g(T)] ≈ g(μ))
+>
+> ≈ E_μ{g(μ) + g'(μ)(T-μ) - g(μ)}^2 (thay g(T) ≈ g(μ) + g'(μ)(T-μ))
+>
+> = E_μ[g'(μ)(T-μ)]^2
+>
+> = (g'(μ))^2 E_μ[(T-μ)]^2
+>
+> = (g'(μ))^2 Var_μ[T]
+>
+> Áp dụng với T = Xbar_n là có mean E(Xbar_n) = μ và variance Var(Xbar_n)
+> và g(Xbar_n) = 1/Xbar_n:
+>
+> ⇨ g'(t) = -1/t^2
+>
+> E[1/Xbar_n] = 1/E[Xbar_n] = 1/μ
+>
+> Var[1/Xbar_n] = (-1/μ^2)^2Var_μ[Xbar] = **(1/μ^4) Var_μ[Xbar]**
+>
+> Và như vậy, ý chính muốn nói, với Tn = 1/Xbar_n, thì khi ta t**ính chính xác
+> variance của nó, được ∞**. Nhưng tính xấp xỉ, thì lại là **(1/μ^4)
+> Var_μ[Xbar]**
+>
+> Như vậy, tóm lại, việc tính asymptotic variance của Tn theo kiểu lấy
+> Variance của Tn tại limit (lim n → inf Var(Tn), gọi là limiting variance không
+> ổn, trong khi đó, dùng cách làm xấp xỉ thì lại thực tế hơn và hữu ích hơn.
+> Thành ra ta sẽ có định nghĩa chính thức của asymptotic variance như sau:
+>
+> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn -
+> τ(θ)) hội tụ phân phối về n(0, σ^2), khi đó σ^2 gọi là asymptotic variance của
+> Tn. Nói dễ hiểu, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái
+> phân phối limit của Tn làm asymptotic variance**. Như vậy, với Tn = 1/Xbar,
+> thay vì dùng Var(1/Xbar) tại limit (=inf), ta dùng (1/μ^4) Var_μ[Xbar]
+>
+> Và một điểm thú vị nữa, đó là asymptotic variance thì luôn nhỏ hơn limiting
+> variance.
+
+<br>
+
+<a id="node-861"></a>
+
+<p align="center"><kbd><img src="assets/deb8e722a632fa3051fb8cfccf4f6fc50dfeab6b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ này ta có một hierarchical modal:
+>
+> Yn|Wn = wn ~ n(0, wn + (1-wn)σn^2)
+>
+> Wn ~ Bern(pn)
+>
+> Đã gặp cái này ở mấy chương trước có nghĩa là nếu biết giá trị của Wn (= wn) thì Yn là normal mean 0 có
+> variance wn + (1-wn) σn^2. Và bản thân Wn thì là một rn ~ Bern(pn).
+>
+> Vậy thì ở đây, gs nói cái này cũng chính là mixture model khi ta thấy Yn ~ n(0,1) với xác suất pn và Yn ~
+> n(0, σn^2) với xác suất 1 - pn. Là sao ta:
+>
+> Khái niệm mixture model, trong sách này (Casella) cho đến giờ chưa được nghe. Nhưng, quachapter 2
+> của PRML của C.Bishop đã biết khái niệm mixture model, cũng đơn giản, đại khái như sau: f(x) = convex
+> combination của các fi(x): ∑i αi fi(x). với fi(x) là các pdf của distribution. Ví dụ f(x|**μ**, **σ^2**) = αi fi(x|μi,
+> σi^2) với fi là pdf của Normal(μi, σi^2), và αi ≥ 0 ∀i, và ∑i αi = 1, thì ta sẽ có một Gaussian (normal) mixture.
+>
+> Vậy thì ở đây, ta có f1(x|0,1) là pdf của Normal(0,1) và f2(x|0, σn^2) là pdf của Normal(0, σn^2) và convex
+> combination coefficient là α1 = pn và α2 = 1-pn.
+>
+> Chú ý là Yn|(Wn=wn) ~ n(0, wn + (1 - wn) σn^2) & Wn ~ Bern(pn), cũng là cái Gaussian mixture nói trên,
+> KHÔNG PHẢI LÀ MỘT NORMAL DISTRIBUTION có variance là wn + (1 - wn) σn^2. Mà cách viết n(0, wn
+> \+ (1 - wn) σn^2) chỉ có nghĩa là, nếu Wn = 1 (vốn là sự kiện có xác suất xảy ra là pn) thì Yn|Wn=1 sẽ là rv
+> ~ normal(0,1), và nếu Wn = 0, là sự kiện có xác suất xảy ra là 1-pn, thì Yn|Wn=1 sẽ là rv ~ normal(0,
+> σn^2). Nên gs mới nói câu "ta quan sát thấy Yn ~n(0,1) với xác suất pn và Yn~n(0, σn^2) với xác suất
+> 1-pn.
+>
+> Dùng công thức 4.4.7 (xem link) ta có thể có công thức của Var(Yn) = pn + (1 - pn)σn^2, để rồi ta sẽ nhận
+> định rằng cái này tại limit (tức limiting variance) chỉ hữu hạn nếu giá trị tại limit của (1 - pn)σn^2 cũng hữu
+> hạn.
+>
+> Nhưng với asymptotic variance thì ta sẽ tính được = 1. Thử xem họ tính vậy là sao?
+>
+> P(Yn < a) = pnP(Z < a) + (1-pn) P(Z < a/σn), dòng này là sao?
+>
+> P(Yn < a) tức là FYn(a) (cdf của Yn tại a)
+>
+> gọi fYn là pdf của Yn, ta biết theo định nghĩa của cdf và pdf, ta có:
+>
+> FYn(a) = ∫-inf:a fYn(t)dt
+>
+> Vì Yn ~ Gaussian mixture → fYn(t) = pn N(t|0,1) + (1-pn) N(t|0, σn^2)
+>
+> ⇨ FYn(a) = ∫-inf:a fYn(t)dt = ∫-inf:a[pn N(t|0,1) + (1-pn) N(t|0, σn^2)] dt
+>
+> = ∫-inf:a [pn N(t|0,1)] dt + ∫-inf:a [(1-pn) N(t|0, σn^2)] dt
+>
+> = pn ∫-inf:a N(t|0,1) dt + (1-pn) ∫-inf:a N(t|0, σn^2) dt
+>
+> = pn ∫-inf:a N(t|0,1) dt + (1-pn) ∫-inf:a N(t|0, σn^2) dt
+>
+> ∫-inf:a N(t|0,1) dt chính là cdf tại a của Z ~ normal(0,1), tức FZ(a), cũng là P(Z < a)
+>
+> còn ∫-inf:a N(t|0, σn^2) dt chính là cdf tại a của W ~ normal(0, σn^2), tức FW(a), và cũng là P(W < a)
+>
+> Mà theo location scale theorem ta cũng biết W chính là Zσn, nên P(W < a) = P(Zσn < a) = P(Z < a/σn)
+>
+> Vậy ta có P(Yn < a) = pn P(Z < a) + (1-pn) P(Z < a/σn).
+>
+> Thế thì, hồi nãy, với limiting variance ta nói, chỉ khi (1-pn)σn^2 → giá trị hữu hạn khi n → inf thì limiting
+> variance mới finite.
+>
+> Vậy thì ở đây, ta thử cho (1-pn)σn^2 → inf luôn (bằng cách cho pn → 1 và σn → ∞, thì ta sẽ thấy khi đó:
+>
+> P(Yn < a) = pn P(Z < a) + (1-pn) P(Z < a/σn) sẽ → 1 × P(Z < a) + 0 × P(Z < 0) = P(Z < a)
+>
+> Mà P(Yn < a) → P(Z < a) tức là FYn(a) → FZ(a), theo định nghĩa cuả hội tụ phân phối (converge in
+> distribution), đây chính là nói Yn → (d) Z. Và theo định nghĩa của asysmtotic variance, là variance của
+> limiting distribution, thì ta có asymtotic variance của Yn = Var(Z) = 1.
+>
+> Như vậy, khi ta cho pn → 1, σn → ∞ thì:
+>
+> limiting variance = inf (vì pn + (1-pn)σn^2 → inf)
+>
+> nhưng
+>
+> asymptotic variance = 1
+>
+> Và điều này chỉ rõ một điều nói ở trên: là dùng limiting variance (tức giá trị của Var(Tn) tại limit) là không
+> hữu ích và cũng không thực tế bằng việc dùng asymptotic variance (variance của limiting distribution). Mà
+> việc khi ta cho pn → 1 và σn → ∞ với hai kết quả trái ngược nhau ở trên có ý nghĩa rất hay như sau:
+>
+> Cho pn → 1, tức là cho xác suất chọn được n(0,1) là rất rất lớn, đồng nghĩa rất rất hiếm xảy ra việc chọn
+> được n(0, σn^2). Nhưng đồng thời cho σn → ∞ tức là cho nó rất rất lớn. Thì cái limiting variance ngu ngốc
+> ở chỗ, nó vẫn cho rằng có xác suất dương nào đó (dù vô cùng nhỏ) xảy ra việc chọn cái normal có
+> variance khổng lồ, nên nó cho rằng variance tổng (ý là limiting variance) là khổng lồ. Trong khi đó, thực tế
+> thì, thật ra với xác suất cực lớn của việc chọn được n(0,1) thì variance = 1 sẽ hợp lí hơn, cũng là nói
+> asymptotic variance sẽ thực tế hơn.
 
 <br>
 
