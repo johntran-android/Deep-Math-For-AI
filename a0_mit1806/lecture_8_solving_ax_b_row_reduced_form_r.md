@@ -21,23 +21,20 @@
 <p align="center"><kbd><img src="assets/2d130e9d46cb7b464e4c681a3fc4dba647ed68a1.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> đại khái gs nói, nhìn bên trái có thể thấy row 1 + row 2 =
-> row 3
+> đại khái gs nói, nhìn bên trái có thể thấy row 1 + row 2 = row 3
 >
-> Thế thì, ta có thể **đoán** được là, **muốn hệ phương
-> trình có nghiệm** thì các giá trị của b **phải sao cho b1 +
-> b2 phải bằng b3**. Tí nữa mình **sẽ** **xem elimination
-> cho thấy điều đó**.
+> Thế thì, ta có thể **đoán** được là, **muốn hệ phương trình có
+> nghiệm** thì các giá trị của b **phải sao cho b1 + b2 phải bằng
+> b3**. Tí nữa mình **sẽ** **xem elimination cho thấy điều đó**.
 >
-> Còn bây giờ, có thể hiểu được điều này là vì, **vì hàng 3
-> không độc lập** nên như đã thấy ở những bài trước, **quá
-> trình elimination sẽ biến nó thành [0 0 0].** 
+> Còn bây giờ, có thể hiểu được điều này là vì, **vì hàng 3 không
+> độc lập** nên như đã thấy ở những bài trước, **quá trình
+> elimination sẽ biến nó thành [0 0 0].** 
 >
-> Và với Ax=b thì ở **vế bên phải cũng áp dụng các bước
-> của quá trình elimination** như bên trái, nên **nếu b3
-> không bằng b1 + b2** thì sau khi elimination ở equation
-> thứ 3, **bên trái bằng 0 nhưng bên phải khác 0** ->
-> phương trình vô nghiệm
+> Và với Ax=b thì ở **vế bên phải cũng áp dụng các bước của quá
+> trình elimination** như bên trái, nên **nếu b3 không bằng b1 + b2**
+> thì sau khi elimination ở equation thứ 3, **bên trái bằng 0 nhưng
+> bên phải khác 0** -> phương trình vô nghiệm
 
 <br>
 

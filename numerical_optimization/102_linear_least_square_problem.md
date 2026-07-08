@@ -1,6 +1,6 @@
 # 10.2 Linear Least-Square Problem
 
-📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `7` Notes | `10` Screenshots | `6` AI Reviews
 
 ---
 
@@ -254,7 +254,7 @@
 >
 >
 >
-> Nhân vế theo vế của ||Δx|| ≤ ||Ainv|| ||Δb|| và 1/||x|| ≤ ||A||/||b||, ta có: 
+> Nhân vế theo vế của ||Δx|| ≤ ||Ainv|| ||Δb|| và 1/||x|| ≤ ||A||/||b||, ta có:
 >
 >
 >
@@ -363,6 +363,18 @@
 >
 >
 > Vậy ta đã thấy κ(ATA) = \[κ(A)\]^2 ⇨ giúp hiểu vì sao gs nói "the condition number of JTJ is the square of the condition number of J"
+>
+>
+>
+> Vậy kết hợp hai ý: 
+>
+>
+>
+> i) sai số tương đối của hệ Ax = b sẽ tỉ lệ thuận với condition number của A, vậy sai số tương đối khi ta giải hệ normal equation JTJx = JTy sẽ tỉ lệ thuận với condition number của JTJ.
+>
+>
+>
+> ii) mà condition number của JTJ lại là bình phương condition number của J, nên nếu J ill-condition, tức có condition number lớn → condition number của JTJ càng lớn bạo → sai số tương đối của việc giải hệ JTJx = JTy, sẽ rất lớn. Đây chính là nhược điểm của cách làm thứ nhất này.
 >
 >
 >
@@ -490,6 +502,429 @@
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Phần ghi chú này cung cấp một quá trình dẫn xuất từng bước cực kỳ rõ ràng và chi tiết cho phương pháp phân tích QR trong bài toán bình phương tối thiểu tuyến tính, giải thích kỹ lưỡng từng phép biến đổi và lý do của nó. Việc liên hệ với các bước triển khai thực tế cũng được trình bày rất tốt.
+
+<br>
+
+
+<a id="node-jhu33ml"></a>
+##### Singular-Value Decomposition (SVD)
+
+<p align="center"><kbd><img src="assets/img_jhu33ml.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, các làm theo QR-based có ưu điểm là sai số tương đối chỉ tỉ lệ thuận với condition number của J chứ ko phải bình phương condition number, nên kết quả tính toán sẽ đáng tin cậy hơn so với phương pháp giải bằng cách giải normal equation.
+>
+>
+>
+> Tuy nhiên, có khi ta cần một cách làm mạnh mẽ hơn cũng như cho nhiều thông tin về độ nhạy cảm của nghiệm đối với sự thay đổi (pertubation) của data, thì phương pháp thứ 3, dựa trên SVD sẽ cho ta điều đó.
+>
+>
+>
+> Nhờ MIT 1806, mình hoàn toàn hiểu công thức 10.19 trong sách. Review nhanh: Trong bài về SVD, thầy Strang cho biết bản chất của bài toán chỉ là: Ta biết rằng, một vector khác không trong rowspace sẽ được map với một vector khác 0 trong column space bởi matrix A. Và một bộ basis của rowspace sẽ được map với một basis của column space. Và SVD bắt nguồn từ ý tưởng ta muốn tìm một bộ orthogonal basis của rowspace được map với một orthogonal basis của columnsspace.
+>
+>
+>
+> Vói vi, i=1,...r là orthogonal basis của rowspace, được map tương ứng với ui, i=1,...r là orthogonal basis của columnspace:
+>
+>
+>
+> Avi = σiui, i=1,2...r
+>
+>
+>
+> Đặt vi làm thành các cột của Vr, ui thành các cột của Ur, thì hệ các phương trình trên trở thành:
+>
+>
+>
+> AVr = UrΣr
+>
+>
+>
+> Σr là diagonal matrix (shape (m × r), có thể thể hiện ở dạng \[S; 0\] với S là diagonal matrix diag(σ1,...,σr), (r × r) và 0 là matrix zero shape (m-r × r)
+>
+>
+>
+> Rồi, tới đây, thử derive lại matrix chiếu lên C(A), đặt là P.
+>
+>
+>
+> chiếu b lên C(A) được p ⇨ p = linear combination của A's column: p = Ax, phần dư r = b - p sẽ vuông góc C(A) ⇨ ∈ left nullspace do hai subspace này orthogonal complement ⇨ AT(b - p) = 0 ⇔ ATb = ATp ⇔ ATb = ATAx. Nếu A full column rank, thì ATA full rank ⇨ ATb = ATAx ⇔ x = (ATA)invATAb ⇨ p = Ax = A(ATA)invATb. Và như vậy matrix chiếu lên C(A) là P = A(ATA)invAT.
+>
+>
+>
+> Bây giờ, nếu thay A bằng Vr, cũng là một full column rank do đã nói các cột của V là basis của rowspace của A, ta sẽ có matrix chiếu lên C(V):
+>
+>
+>
+> Vr(VrTVr)invVrT = VrVrT (do các cột của Vr orthogonal (dĩ nhiên là cũng chuẩn hóa thành orthonormal) nên VrTVr = Ir)
+>
+>
+>
+> Như vậy VrVrT chính là matrix chiếu lên columnspace của V nhưng vì column của V là row của A nên đây cũng chính là matrix chiếu lên rowspace của A.
+>
+>
+>
+> Thế thì nếu chiếu một vector đã thuộc rowspace của A lên rowspace của A thì dĩ nhiên được chính nó: ⇨ VrVrT (A's row)T = (A's row)T
+>
+>
+>
+> (A's row là một row vector, nên phải transpose để có column vector)
+>
+>
+>
+> Gọi a1, a2,...am là các row của A, ta có VrVrT a1T = a1T, VVT a2T = a2T,...
+>
+>
+>
+> gom lại dưới dạng matrix: VrVrT AT = AT
+>
+>
+>
+> Và tranpose hai vế ta có: (AT)T (VrVrT)T = (AT)T ⇔ A VrVrT = A.
+>
+>
+>
+> Vậy, điều này giải thích vì sao khi ta có AVr = UrΣr, nhân hai vế với VrT ta lại có A = Ur Σr VrT, là reduced SVD
+>
+>
+>
+> Và khi bổ sung thêm vào V một bộ orthogonal basis của rowspace, và vào U một bộ orthogonal basis của left nullspace, khi đó V, U sẽ là orthogonal matrix và Σ sẽ có là matrix m × m có dạng \[diag(σ1,..,σr), 0; 0, 0\]
+>
+>
+>
+> Vậy thì quay lại đây, ta sẽ hiểu rằng, dùng full SVD với J, ta có:
+>
+>
+>
+> J = U \[S; 0\] VT
+>
+>
+>
+> với U = \[U1, U2\] trong đó U1 là matrix các orthogonal basis của column space C(J), U2 là matrix các orthogonal basis của left nullspace N(JT)
+>
+>
+>
+> và V = \[V1, V2\], V1 là matrix các orthogonal basis của rowspace C(JT) và V2 là matrix các orthogonal basis của nullspace N(J)
+>
+>
+>
+> (viết Σ = \[S; 0\] là vì đáng lẽ ra phải là \[S, 0; 0, 0\] vì Σ có size m × m, S có size r × r. nhưng ở đây r = n, nên Σ = \[S; 0\])
+>
+>
+>
+> Một ý nữa đó là, JTJ = \[U \[S; 0\] VT\]T U \[S; 0\] VT
+>
+>
+>
+> = V \[S; 0\]T UT U \[S; 0\] VT
+>
+>
+>
+> = V \[S; 0\]T \[S; 0\] VT
+>
+>
+>
+> = V S^2 VT
+>
+>
+>
+> Và như đã biết cái vụ này từ MIT 1806, đó là, kết quả này cho thấy với JTJ, thì SVD cũng là eigendecomposition, nên eigenvector của JTJ chính là các cột của V, và eigenvalue của JTJ chính là các σi^2 (bình phương singular value của J)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bạn đã thể hiện sự hiểu biết rất sâu sắc và chính xác về Phân tích Giá trị Kỳ dị (SVD), mở rộng rõ ràng các khái niệm trong văn bản gốc. Việc liên hệ với kiến thức từ MIT 1806 giúp làm rõ bản chất công thức (10.19) một cách xuất sắc.
+
+<br>
+
+<a id="node-xupdku2"></a>
+- **Phương pháp SVD bình phương tối thiểu**
+<p align="center"><kbd><img src="assets/img_xupdku2.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi thế thì dựa vào cái này, ta sẽ xây dựng phương pháp giải thứ 3 cho bài toán linear least square. Có lẽ nên ôn lại nhanh về bối cảnh:
+>
+>
+>
+> Xuất phát từ việc ta muốn giải bài toán minimize hàm error với error = Σi ri(x)^2. Gọi r(x) là hàm nhận vào x trả ra vector chứa các residual (hay còn gọi là error) ri(x), mà cụ thể cho dễ hiểu thì ví dụ ri(x) = Φ(x, ti) - yi với ti có thể là một vector hoặc scalar input, x là tham số cần điều chỉnh, yi là observed value (target variable). Khi đó, objective có thể thể hiện = ||r(x)||^2.
+>
+>
+>
+> Tiếp, khi hàm Φ(x,t) là hàm tuyến tính theo x, thì r(x) khi đó có thể thể hiện bởi Jx - y, dẫn đến bài toán có objective là ||Jx - y||^2
+>
+>
+>
+> Nhớ lại cái phương pháp dựa trên QR factor ta đã nói rằng vì Q là orthogonal matrix nên nó ko làm thay đổi norm, nên có thể chuyển bài toán về tương đương minimize ||Q(Jx - y)||^2. Thì ở đây cũng vậy, ta dùng UT, cũng là orthogonal matrix (do U là orthogonal matrix: Chứng minh rất nhanh: U orthogonal ⇨ UT = Uinv ⇨ (UT)T(UT) = UUT = UUinv = I ⇨ UT cũng là orthogonal matrix)
+>
+>
+>
+> Nên ta sẽ có objective của bài toán tương đương là
+>
+>
+>
+> ||UT(Jx - y)||^2 = ||UTJx - UTy||^2
+>
+>
+>
+> Thay J = U \[S; 0\] VT
+>
+>
+>
+> ..= ||UT U \[S; 0\] VT x - UTy||^2
+>
+>
+>
+> = || \[S; 0\] VT x - UTy||^2
+>
+>
+>
+> U = \[U1, U2\] ⇨ UT = \[U1T; U2T\]
+>
+>
+>
+> ...= || \[S; 0\] VT x - \[U1T; U2T\]y||^2 
+>
+>
+>
+> Dùng tính chất  ||\[a;b\]||^2 = ||a||^2 + ||b||^2 (\[a,b\] là vector tạo bởi việc ghép vector a và b chồng lên nhau)
+>
+>
+>
+> .. = ||S(VTx) - U1Ty||^2 + ||\[0\]VTx - \[U2T\]y||^2 
+>
+>
+>
+> = ||S(VTx) - U1Ty||^2 + ||\[U2T\]y||^2  → 10.20
+>
+>
+>
+> Đến đây, tiếp tục chuyển thành bài toán tương đương với objective khác bằng cách bỏ đi hằng số: minimize ||S(VTx) - U1Ty||^2, và cái này là hàm không âm, nên minimize khi nó bằng 0: S(VTx) - U1Ty = 0
+>
+>
+>
+> ⇔ S(VTx) = U1Ty
+>
+>
+>
+> ⇔ x = \[S(VT)\]inv U1Ty
+>
+>
+>
+> ⇔ x = (VTinv Sinv) U1Ty
+>
+>
+>
+> Vì V cũng là orthogonal matrix ⇨ VT = Vinv
+>
+>
+>
+> ⇔ x = V Sinv U1Ty → chính là solution x\*
+>
+>
+>
+> Xem thử vì sao lại thể hiện ở dạng 10.21:
+>
+>
+>
+> Đầu tiên xem thử Sinv U1Ty là gì:
+>
+>
+>
+> U1 là matrix có các cột là các singular vector ứng với singular value ko âm: u1,...un → U1Ty là vector có các phần tử là u1Ty, u2Ty,...
+>
+>
+>
+> S là diag(σ1, σ2,...σn) ⇨ Sinv là diag(1/σ1, 1/σ2,...1/σn)
+>
+>
+>
+> ⇨ Sinv U1Ty sẽ là vector có các phần tử là u1Ty/σ1, u2Ty/σ2,...unTy/σn.
+>
+>
+>
+> Và với góc nhìn nhân matrix với vector là linear combination các cột của matrix bởi hệ số là các phần tử của vector. nên matrix V nhân vector (Sinv U1Ty) sẽ là linear combination của các cột của V, tức v1,...vn với các hệ số là các phần tử của Sinv U1Ty, tức u1Ty/σ1, u2Ty/σ2,...unTy/σn.
+>
+>
+>
+> ⇨ V Sinv U1Ty = ∑i=1:n (uiTy/σi) vi → 10.21
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Phần giải thích rất rõ ràng, chính xác và có chiều sâu, đặc biệt là cách bạn đã phân tích từng bước để chuyển đổi bài toán và đi đến công thức cuối cùng. Việc giải thích chi tiết các tính chất của ma trận trực giao và cách mở rộng công thức tổng là một điểm mạnh lớn, giúp người đọc dễ dàng hiểu được các phương trình trong hình ảnh.
+
+<br>
+
+<a id="node-2tsnkwj"></a>
+- **Formula (10.21) Sensitivity**
+<p align="center"><kbd><img src="assets/img_2tsnkwj.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì kết quả này cho ta nhận định như thế này: nếu một σi nào đó nhỏ, ví dụ i=2, thì 1/σ2 sẽ lớn. Vậy thì có nghĩa là, chỉ cần y thay đổi chút xíu, thì cũng làm u2Ty/σ2 thay đổi lớn → kéo theo solution x thay đổi lớn.
+>
+>
+>
+> Bên cạnh đó, nếu y không thay đổi nhưng matrix J thay đổi (thay đổi nhỏ, perturb thôi) thì cũng làm u2 thay đổi → cũng lại khiến kéo theo u2Ty/σ2 thay đổi lớn → x thay đổi lớn.
+>
+>
+>
+> Do đó mới nói một singular value σi nào đó của J mà nhỏ thì sẽ khiến solution rất nhạy cảm với biến động nhỏ (perturbation) của y (dữ liệu) hoặc J.
+>
+>
+>
+> Và gs cho biết thông tin này rất hữu ích khi ta có J nearly rank - deficit, tức là khi nó có σn/σ1 << 1. Ý này là sao?
+>
+>
+>
+> Ôn nhanh:
+>
+>
+>
+> ||Ax||^2 = (Ax)T(Ax) = xTATAx
+>
+>
+>
+> Với ATA luôn đối xứng ⇨ luôn tồn tại đủ một bộ eigenvector độc lập, trong đó có thể chọn một bộ orthogonal để phân ra ATA thành Q Λ QT, với Λ là diagonal matrix chứa các eigenvalue của ATA.
+>
+>
+>
+> = xT(Q Λ QT)x = (QTx)T Λ (QTx)
+>
+>
+>
+> = yT Λ y (đặt y = QTx, vì Q orthogonal ||y|| = ||x||)
+>
+>
+>
+> = Σi λi yi^2
+>
+>
+>
+> Σi λmin yi^2 ≤ Σi λi yi^2 ≤ Σi λmax yi^2
+>
+>
+>
+> ⇔ λmin Σi yi^2 ≤ Σi λi yi^2 ≤ λmax Σi yi^2
+>
+>
+>
+> ⇔ λmin ≤ \[Σi λi yi^2\] / Σi yi^2≤ λmax
+>
+>
+>
+> ⇔ λmin ≤ ||Ax||^2 / ||y||^2≤ λmax (thay lại Σi λi yi^2 = ||Ax||
+>
+>
+>
+> ⇔ λmin ≤ ||Ax||^2 / ||x||^2≤ λmax (||y|| = ||x||)
+>
+>
+>
+> ⇔ √λmin ≤ ||Ax|| / ||x|| ≤ √λmax
+>
+>
+>
+> viết rõ hơn để nhấn mạnh λ đây là eigenvalue của ATA
+>
+>
+>
+> √λmin(ATA) ≤ ||Ax|| / ||x|| ≤ √λmax(ATA)
+>
+>
+>
+> Và cái này cũng chính là: ||A|| = max_x ||Ax|| / ||x|| = √λmax(ATA)
+>
+>
+>
+> Và ta cũng đã biết eigenvalue của ATA cũng chính là bình phương singular value của A
+>
+>
+>
+> nên √λmin(ATA) ≤ ||Ax|| / ||x|| ≤ √λmax cũng
+>
+>
+>
+> ⇔ σmin(A) ≤ ||Ax|| / ||x|| ≤ σmax(A)
+>
+>
+>
+> Thế thì, từ đây sẽ giúp ta hiểu điều trong sách nói:
+>
+>
+>
+> Khi σmin(A) / σmax(A) << 1 (khi thể hiện singular value của A là σ1,...σn thì người ta thường hàm ý sắp xếp theo giá trị nhỏ dần)
+>
+>
+>
+> điều này có nghĩa là, tỉ lệ của scale factor nhỏ nhất của A (tức σmin(A), hay cũng là min_x ||Ax|| / ||x||) so với scale factor lớn nhất của A (tức σmax(A), hay cũng là max_x ||Ax|| / ||x||) rất chênh lệch. Để rồi giả sử ta xét một matrix A cụ thể có σmax = 1, thì σmin sẽ rất nhỏ (≈ 0). Khi đó, nếu lấy u là argmin ||Ax||/||x|| thì ||Au|| = σmin ||u|| sẽ gần như là = 0, đồng nghĩa vector u gần như thuộc nullspace của A → Và như vậy A tồn tại nullspace vector → đây chính là rank-deficient
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài viết giải thích xuất sắc và chính xác về độ nhạy của công thức, đặc biệt là khi các giá trị σi nhỏ. Phần trình bày chi tiết và diễn giải rõ ràng về khái niệm "gần như thiếu hạng" dựa trên các giá trị kỳ dị đã nâng cao đáng kể sự hiểu biết về vấn đề.
+
+<br>
+
+<a id="node-na2d7pw"></a>
+- **Cholesky and QR Approaches**
+<p align="center"><kbd><img src="assets/att_g32dk45.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Như vậy ở đây, ta sẽ đánh giá lại ưu nhược điểm của cả bai phương pháp như sau:
+>
+>
+>
+> Cách làm thứ nhất, giải normal equation JTJx = JTy gồm 3 bước: tính JTJ, phân tách Cholesky thành L(LT), và giải hai hệ matrix tam giác Lu = JTy, và LTx = u.
+>
+>
+>
+> Cách này có ưu điểm nếu m >> n ⇨ J là matrix cao ốm, thì rõ ràng lưu trữ JTJ (shape n × n) sẽ ít tốn hơn J (shape m × n). Và thậm chí nếu J spares thì chi phí còn rẻ hơn.
+>
+>
+>
+> Nhưng nhược điểm là nếu J ill-condition hoặc rank-deficient.
+>
+>
+>
+> Nếu ill-condition tức κ(J) lớn ⇨ Cholesky factor có thể fail luôn khi singular value bằng 0 (nhớ ko, bình phương singular value của J chính là eigenvalue của JTJ, nếu singular value của J = 0 (ví dụ như xét J ill condition, tức có σmax / σmin << 1 và gỉa sử σmax = 1 thì **σmin ≈ 0** → λ(JTJ) tương ứng sẽ ≈ 0 → JTJ sẽ không positive definite khiến không thể phân rã Cholesky mà cụ thể là thuật toán phân rã Cholesky sẽ có bước chia cho 0 → tạch.
+>
+>
+>
+> Nếu rank-definite thì cũng vậy, trường hợp này là có nullspace vector của J → stretching factor nhỏ nhất = 0 → singular value **σmin(J) = 0** → cũng là λmin(JTJ) = 0 → y như trên.
+>
+>
+>
+> Do đó trong hai case này, ta phải thực hiện việc chỉnh sửa.
+>
+>
+>
+> ---
+>
+>
+>
+> Tíếp, với cái cách thứ 2 dựa trên QR factor
+>
+>
+>
+> i) Factor J thành: J Π = \[Q1, Q2\] \[R; 0\]
+>
+>
+>
+> bài toán trở thành giải hệ RΠΠT x = Q1Ty\
+> \
+> ii) giải R z = Q1Ty, ra z, đây là hệ có matrix hệ số tam giác →→ chỉ là back-subsititution, tốn O(n^2)\
+> \
+> iii) Giải ΠΠT x = z, và hệ này matrix hệ số chỉ là permutation matrix, ⇨ x = ΠΠ z, chỉ là việc sắp xếp (hoán vị) lại các phần tử của z (ko tốn gì) (đây là ý mà gs Nocedal nói "perform triangular substitution to solve Rz = Q1Ty, then PERMUTE the component of z to obtain x\*)
+>
+>
+>
+> Thì ưu điểm là nó có sai số tương đối chỉ tỉ lệ thuận vào condition number của J, không phải của JTJ nên sai số tương đối của nó nhỏ hơn của cách một → độ chính xác của solution đáng tin cậy hơn
+
+<br>
+
+<a id="node-0hoe8tb"></a>
+- **SVD Approach and Singular Values**
+<p align="center"><kbd><img src="assets/att_psqualk.png" width="80%"></kbd></p>
 
 <br>
 

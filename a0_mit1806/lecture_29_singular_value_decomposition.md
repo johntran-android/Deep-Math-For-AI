@@ -346,8 +346,51 @@
 <p align="center"><kbd><img src="assets/ffe77cf37b51a0d4c839d87ffd9bb90c58970b69.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Và ta có thể **nhân (vào bên phải) hai vế cho VT** (Dù full svd hay svd thu gọn thì VVT luôn = I, do
-> các cột của V orthornormal)  để ta có  **A = UΣVT**
+> Và ta có thể **nhân (vào bên phải) hai vế cho VT**
+>
+> để ta có **AVVT = UΣVT**
+>
+> Và vế phải VVT chính là matrix chiếu lên rowspace của A.
+>
+> Nên A (VVT) sẽ là matrix có hàng i hình chiếu của hàng i của A lên
+> C(AT), dĩ nhiên là chính nó. Do đó A (VVT) = A.
+>
+> Cụ thể là vầy:
+>
+> Rồi, tới đây, thử derive lại matrix chiếu lên C(A), đặt là P.
+>
+> chiếu b lên C(A) được p ⇨ p = linear combination của A's column: p
+> = Ax, phần dư r = b - p sẽ vuông góc C(A) ⇨ ∈ left nullspace do hai
+> subspace này orthogonal complement ⇨ AT(b - p) = 0 ⇔ ATb = ATp
+> ⇔ ATb = ATAx. Nếu A full column rank, thì ATA full rank ⇨ ATb =
+> ATAx ⇔ x = (ATA)invATAb ⇨ p = Ax = A(ATA)invATb. Và như vậy
+> matrix chiếu lên C(A) là P = A(ATA)invAT.
+>
+> Bây giờ, nếu thay A bằng Vr, cũng là một full column rank do đã nói
+> các cột của V là basis của rowspace của A, ta sẽ có matrix chiếu lên
+> C(V):
+>
+> Vr(VrTVr)invVrT = VrVrT (do các cột của Vr orthogonal (dĩ nhiên là
+> cũng chuẩn hóa thành orthonormal) nên VrTVr = Ir)
+>
+> Như vậy VrVrT chính là matrix chiếu lên columnspace của V nhưng
+> vì column của V là row của A nên đây cũng chính là matrix chiếu lên
+> rowspace của A.
+>
+> Thế thì nếu chiếu một vector đã thuộc rowspace của A lên rowspace
+> của A thì dĩ nhiên được chính nó: ⇨ VVT (A's row)T = (A's row)T
+>
+> (A's row là một row vector, nên phải transpose để có column vector)
+>
+> Gọi a1, a2,...am là các row của A, ta có VVT a1T = a1T, VVT a2T =
+> a2T,...
+>
+> gom lại dưới dạng matrix: VVT AT = AT
+>
+> Và tranpose hai vế ta có: (AT)T (VVT)T = (AT)T ⇔ A VVT = A.
+>
+> Vậy, điều này giải thích vì sao khi ta có AV = UΣ, nhân hai vế với VT
+> ta lại có A = U Σ VT
 
 <br>
 

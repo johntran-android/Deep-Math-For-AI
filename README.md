@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,394 notes` · `~16,854 screenshots` · `19 courses`** · work in progress
+**`~12,405 notes` · `~16,866 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -537,7 +537,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 Numerical Optimization — Nocedal & Wright (📝 359 Notes | 📸 500 Screenshots)
+### 📂 Numerical Optimization — Nocedal & Wright (📝 363 Notes | 📸 505 Screenshots)
 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
 - [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i` 
@@ -561,7 +561,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx.md) — `20n / 29i` 
 - [8.2 Automatic differentiation(*extremely important for AI)](numerical_optimization/82_automatic_differentiationextremely_important_for_ai.md) — `36n / 46i` 
 - [10.1 Least-square problem](numerical_optimization/101_least_square_problem.md) — `11n / 13i` 
-- [10.2 Linear Least-Square Problem](numerical_optimization/102_linear_least_square_problem.md) — `3n / 5i` 
+- [10.2 Linear Least-Square Problem](numerical_optimization/102_linear_least_square_problem.md) — `7n / 10i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i` 
 - [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization/a1_matrix_factorizations_cholesky_lu_qr.md) — `9n / 11i`
 
@@ -575,7 +575,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 286 Notes | 📸 396 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 293 Notes | 📸 403 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -593,6 +593,8 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [2.4.0 The Exponential Family](a0_bishop_prml/240_the_exponential_family.md) — `6n / 9i` 
 - [2.4.1 MLE & Sufficient statistic](a0_bishop_prml/241_mle_sufficient_statistic.md) — `4n / 4i` 
 - [2.4.3 Non-informative priors](a0_bishop_prml/243_non_informative_priors.md) — `7n / 8i` 
+- [2.5.0 Non-parametric model](a0_bishop_prml/250_non_parametric_model.md) — `5n / 5i` 
+- [2.5.1 Kernel density estimator](a0_bishop_prml/251_kernel_density_estimator.md) — `2n / 2i` 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
 - [1.2.0 Probability theory](a0_bishop_prml/120_probability_theory.md) — `13n / 21i` 
