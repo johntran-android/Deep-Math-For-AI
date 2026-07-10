@@ -1,6 +1,6 @@
-# Chap 10 Asymtotic Evaluation
+# 10.1 Asymtotic Evaluation - Point Estimation
 
-📊 **Progress:** `13` Notes | `16` Screenshots
+📊 **Progress:** `14` Notes | `17` Screenshots
 
 ---
 
@@ -273,18 +273,26 @@
 > [!NOTE]
 > Rồi, cuối cùng, gs nói về một theorem nói rằng, bất kì một ML estimator
 > θ^ml(**X**) của một parameter θ nào cũng là consistent sequence of
-> estimator của θ, và ông nói đây là lần đầu tiên ta gặp một trường hợp trong
-> đó một cách tiếp cận cụ thể lại đảm bảo ta sẽ có được một estimator có
-> được một tiêu chí tối ưu nào đó. (ông nói vậy là vì, cho đến nay, các
-> phương pháp mà ta học để đi xây dựng một estimator chưa đảm bảo là nó
-> sẽ là cái tốt nhất theo các tiêu chí nào đó, thì ở đây, với tiêu chí consistent,
-> thì MLE approach lại đảm bảo là ta sẽ có được một consistent estimator)
+> estimator của θ, và ông nói đây là lần đầu tiên ta gặp một trường hợp
+> trong đó một cách tiếp cận cụ thể lại đảm bảo ta sẽ có được một
+> estimator có được một tiêu chí tối ưu nào đó. (ông nói vậy là vì, cho đến
+> nay, các phương pháp mà ta học để đi xây dựng một estimator chưa đảm
+> bảo là nó sẽ là cái tốt nhất theo các tiêu chí nào đó, thì ở đây, với tiêu chí
+> consistent, thì MLE approach lại đảm bảo là ta sẽ có được một consistent
+> estimator)
 >
 > Theorem 10.1.6 nói rằng, nếu hàm likelihood mà thỏa tính chất gọi là "
-> regularity conditions" thì τ(θ^) sẽ là consistent estimator của τ(θ) với τ là
-> hàm liên tục của θ.
+> regularity conditions" thì: τ(θ^) sẽ hội tụ xác suất về τ(θ), thể hiện bởi lim n
+> → inf P_θ(|τ(θ^) - τ(θ)| ≥ ε) = 0
 >
-> Quay lại xem kĩ hơn phần regularity condition sau.
+> Và theo định nghĩa của consistent sequence of estimator rằng: Nếu chuỗi
+> Wn, là estimator của θ hội tụ xác suất về θ thì Wn là consistent sequence
+> of estimator của θ.
+>
+> Thì dĩ nhiên ở đâu nếu ta có chuỗi τ(θ^) hội tụ xác suất về τ(θ) thì chuỗi
+> τ(θ^) sẽ là consistent sequence of estimator của τ(θ).
+>
+> Quay lại xem kĩ hơn phần chứng minh và regularity condition sau.
 
 <br>
 
@@ -318,58 +326,49 @@
 🔗 **Related:** [5.5 CONVERGENCE CONCEPTS](55_convergence_concepts.md#node-421)
 
 > [!NOTE]
-> Rồi, thế thì gs nói đại khái là khi tính **phương sai tiệm cận (asymptotic
-> variance)**, TA CÓ THỂ SẼ BỊ CÁM DỖ BỞI (TEMPTING) cách làm như
-> sau: Gọi Tn là estimator (dựa trên sample size n), thì Var(Tn) là variance
-> của Tn, khi đó ta xem xét variance của Tn tại limit:
+> Rồi, thế thì gs nói đại khái là khi tính **phương sai tiệm cận (asymptotic variance)**, TA CÓ THỂ SẼ
+> BỊ CÁM DỖ BỞI (TEMPTING) cách làm như sau: Gọi Tn là estimator (dựa trên sample size n), thì
+> Var(Tn) là variance của Tn, khi đó ta xem xét variance của Tn tại limit:
 >
 > lim n → ∞ {kn Var(Tn)}
 >
-> Với kn là chuỗi các constant đóng vai trò normalizing constant (chưa hiểu
-> lắm)
+> Với kn là chuỗi các constant đóng vai trò normalizing constant (chưa hiểu lắm)
 >
-> Thế thì ta định nghĩa ra một khái niệm khác: giới hạn phương sai (limiting
-> variance) được định nghĩa bởi: Nếu một (sequence of estimator) có phương
-> sai tiệm cận lim n→∞ kn Var(Tn) = τ^2 < ∞, thì τ^2 được gọi là **limiting
-> variance**.
+> Thế thì ta định nghĩa ra một khái niệm khác: giới hạn phương sai (limiting variance) được định
+> nghĩa bởi: Nếu một (sequence of estimator) có phương sai tiệm cận lim n→∞ kn Var(Tn) = τ^2 < ∞,
+> thì τ^2 được gọi là **limiting variance**.
 >
-> Lấy ví dụ, Xbar_n, là sample mean của iid normal(μ, σ^2) sample size n,
-> như đã biết, nó sẽ một normal(μ, σ^2/n). Như vậy Var(Xbar_n) = σ^2/n ⇨ n
-> Var(Xbar_n) = σ^2. Do đó, với Xbar_n thì lim n → ∞ n Var(Xbar_n) = σ^2, là
-> con số hữu hạn (finite), < ∞. Do đó theo định nghĩa trên, σ^2 chính là
+> Lấy ví dụ, Xbar_n, là sample mean của iid normal(μ, σ^2) sample size n, như đã biết, nó sẽ một
+> normal(μ, σ^2/n). Như vậy Var(Xbar_n) = σ^2/n ⇨ n Var(Xbar_n) = σ^2. Do đó, với Xbar_n thì lim n
+> → ∞ n Var(Xbar_n) = σ^2, là con số hữu hạn (finite), < ∞. Do đó theo định nghĩa trên, σ^2 chính là
 > limiting variance. (trong trường hợp này, chuỗi {kn} chính là {1,2,....n}.
 >
-> Thế thì đại ý là, việc đánh giá asymptotic variance bằng cách lấy giới hạn
-> của variance của Tn sẽ không vấn đề gì khi Tn là sample mean, vì lim n →
-> inf Var(Tn) = lim n → inf σ^2/n = 0. Và với một số Tn khác cũng vậy.
+> Thế thì đại ý là, việc đánh giá asymptotic variance bằng cách lấy giới hạn của variance của Tn sẽ
+> không vấn đề gì khi Tn là sample mean, vì lim n → inf Var(Tn) = lim n → inf σ^2/n = 0. Và với một
+> số Tn khác cũng vậy.
 >
-> Nhưng nếu ta quan tâm đến asymtotic variance của Tn = 1/Xbar_n, thì ta sẽ
-> gặp vấn để vì Var(Tn) sẽ = inf, vì sao nhỉ?
+> Nhưng nếu ta quan tâm đến asymtotic variance của Tn = 1/Xbar_n, thì ta sẽ gặp vấn để vì Var(Tn)
+> sẽ = inf, vì sao nhỉ?
 >
-> Chỉ cần hiểu đại khái, theo định nghĩa Var(Tn) = E[Tn^2] - (ETn)^2 =
-> E[(1/Xbar_n)^2] - [E(1/Xbar_n)]^2
+> Chỉ cần hiểu đại khái, theo định nghĩa Var(Tn) = E[Tn^2] - (ETn)^2 = E[(1/Xbar_n)^2] -
+> [E(1/Xbar_n)]^2
 >
-> Với E[(1/Xbar_n)^2], theo LOTUS, = ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) với f
-> là pdf của xbar_n. Ta đã biết, Xbar_n của sample ~ normal(μ, σ) sẽ có
-> limiting distribution là normal(μ, σ^2/n), tức là Xbar_n sẽ hội tụ distribution
-> về một rv thuộc phân phối normal(μ, σ^2). thế thì với phân phối này, trong
-> tích phân ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) đang nói, tồn tại xác suất dương
-> nào đó để xbar_n = 0, khiến tích phân này = inf (explode), vì sao, vì range
-> của normal là từ -inf, inf, nên có nghĩa là tại xbar_n=0, vẫn tồn tại giá trị pdf
-> không âm.
+> Với E[(1/Xbar_n)^2], theo LOTUS, = ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) với f là pdf của xbar_n. Ta
+> đã biết, Xbar_n của sample ~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ^2/n), tức là
+> Xbar_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ^2). thế thì với phân phối này,
+> trong tích phân ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) đang nói, tồn tại xác suất dương nào đó để
+> xbar_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có
+> nghĩa là tại xbar_n=0, vẫn tồn tại giá trị pdf không âm.
 >
-> Không cần xét cái term thứ hai, lập luận trên cũng đủ để nói Var(1/Xbar_n)
-> = ∞.
+> Không cần xét cái term thứ hai, lập luận trên cũng đủ để nói Var(1/Xbar_n) = ∞.
 >
-> Vấn đề là, trong ví dụ 5.5.23, mình đã học về Delta method giúp ta có công
-> thức tính xấp xỉ mean và variance của 1/Xbar_n, có thể ôn lại chút xíu như
-> sau:
+> Vấn đề là, trong ví dụ 5.5.23, mình đã học về Delta method giúp ta có công thức tính xấp xỉ mean
+> và variance của 1/Xbar_n, có thể ôn lại chút xíu như sau:
 >
-> Delta method rất đơn giản thôi: Giả sử ta đang muốn xem xét random
-> variable g(T) (T là random variable nào đó ~ f(t|μ). Thì lập luận như vầy:
-> Theo giải tích, nếu xét phạm vi t ~ μ, thì ta có xấp xỉ bậc một: g(t) ≈ g(μ) + g'
-> (μ)(t-μ) Áp dụng hai cái hàm số xấp xỉ nhau này lên random variable T, ta sẽ
-> có hai random variable xấp xỉ:
+> Delta method rất đơn giản thôi: Giả sử ta đang muốn xem xét random variable g(T) (T là random
+> variable nào đó ~ f(t|μ). Thì lập luận như vầy: Theo giải tích, nếu xét phạm vi t ~ μ, thì ta có xấp xỉ
+> bậc một: g(t) ≈ g(μ) + g' (μ)(t-μ) Áp dụng hai cái hàm số xấp xỉ nhau này lên random variable T, ta
+> sẽ có hai random variable xấp xỉ:
 >
 > g(T) ≈ g(μ) + g'(μ)(T-μ)
 >
@@ -399,8 +398,8 @@
 >
 > = (g'(μ))^2 Var_μ[T]
 >
-> Áp dụng với T = Xbar_n là có mean E(Xbar_n) = μ và variance Var(Xbar_n)
-> và g(Xbar_n) = 1/Xbar_n:
+> Áp dụng với T = Xbar_n là có mean E(Xbar_n) = μ và variance Var(Xbar_n) và g(Xbar_n) =
+> 1/Xbar_n:
 >
 > ⇨ g'(t) = -1/t^2
 >
@@ -408,23 +407,23 @@
 >
 > Var[1/Xbar_n] = (-1/μ^2)^2Var_μ[Xbar] = **(1/μ^4) Var_μ[Xbar]**
 >
-> Và như vậy, ý chính muốn nói, với Tn = 1/Xbar_n, thì khi ta t**ính chính xác
-> variance của nó, được ∞**. Nhưng tính xấp xỉ, thì lại là **(1/μ^4)
-> Var_μ[Xbar]**
+> Và như vậy, ý chính muốn nói, với Tn = 1/Xbar_n, thì khi ta t**ính chính xác variance của nó, được
+> ∞**. Nhưng tính xấp xỉ, thì lại là **(1/μ^4) Var_μ[Xbar]**
 >
-> Như vậy, tóm lại, việc tính asymptotic variance của Tn theo kiểu lấy
-> Variance của Tn tại limit (lim n → inf Var(Tn), gọi là limiting variance không
-> ổn, trong khi đó, dùng cách làm xấp xỉ thì lại thực tế hơn và hữu ích hơn.
-> Thành ra ta sẽ có định nghĩa chính thức của asymptotic variance như sau:
+> Như vậy, tóm lại, việc tính asymptotic variance của Tn theo kiểu lấy Variance của Tn tại limit (lim n
+> → inf Var(Tn), gọi là limiting variance không ổn, trong khi đó, dùng cách làm xấp xỉ thì lại thực tế
+> hơn và hữu ích hơn. Thành ra ta sẽ có **định nghĩa chính thức của asymptotic variance** như sau:
 >
-> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn -
-> τ(θ)) hội tụ phân phối về n(0, σ^2), khi đó σ^2 gọi là asymptotic variance của
-> Tn. Nói dễ hiểu, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái
-> phân phối limit của Tn làm asymptotic variance**. Như vậy, với Tn = 1/Xbar,
-> thay vì dùng Var(1/Xbar) tại limit (=inf), ta dùng (1/μ^4) Var_μ[Xbar]
+> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn - τ(θ)) hội tụ phân phối về
+> n(0, σ^2), khi đó σ^2 gọi là asymptotic variance của Tn.
 >
-> Và một điểm thú vị nữa, đó là asymptotic variance thì luôn nhỏ hơn limiting
-> variance.
+> Có nghĩa là, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái phân phối normal là limit
+> distribution của kn (Tn - τ(θ)) làm asymptotic variance**.
+>
+> Như vậy, với Tn = 1/Xbar, thay vì dùng Var(1/Xbar) tại limit (=inf), ta dùng (1/μ^4) Var_μ[Xbar]. Như
+> vậy, với Tn = 1/Xbar, thay vì dùng Var(1/Xbar) tại limit (=inf), ta dùng (1/μ^4) Var_μ[Xbar]
+>
+> Và một điểm thú vị nữa, đó là asymptotic variance thì luôn nhỏ hơn limiting variance.
 
 <br>
 
@@ -521,6 +520,63 @@
 > variance khổng lồ, nên nó cho rằng variance tổng (ý là limiting variance) là khổng lồ. Trong khi đó, thực tế
 > thì, thật ra với xác suất cực lớn của việc chọn được n(0,1) thì variance = 1 sẽ hợp lí hơn, cũng là nói
 > asymptotic variance sẽ thực tế hơn.
+
+<br>
+
+<a id="node-862"></a>
+
+<p align="center"><kbd><img src="assets/6389e9e23f3425fb0cbff838a9d90be1e4479079.png" width="100%"></kbd></p>
+
+🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-617)
+
+> [!NOTE]
+> Nói ngắn gọn, ở đây người ta định nghĩa ra cái gọi là khi nào thì chuỗi estimator
+> Wn được gọi là ASYMPTOTICALLY EFFICIENT của một parameter τ(θ), đó là
+> nếu như asymptotic variance của nó có thể đạt được giá trị variance nhỏ nhất
+> được thể hiện bởi giá trị chặn dưới Cramer-Rao (lower bound).
+>
+> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower
+> Bound là cái gì), đã học ở chap 7, trong phần đánh giá chất lượng của các point
+> estimator. Nói ngắn gọn, khi cần phải đánh giá các estimator (evaluating
+> estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là một
+> hàm của estimator: MSE(W(**X**)) = E_θ[(W(**X**) - θ)^2], và ta muốn cái này
+> càng nhỏ càng tốt. Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var_θ
+> [W(**X**)] + [Bias(W(**X**)]^2 với Bias(W(**X**)) = E_θ[W(**X**)] - θ. Để rồi, câu
+> chuyện tiếp theo là, giả sử ta xét một đám các estimator có cùng bias (đồng
+> nghĩa có cùng kì vọng E_θ[W(**X**)]), thì thằng nào có Var_θ[W(**X**)] nhỏ nhất
+> sẽ là tốt nhất.
+>
+> Thế thì, việc tính variance có thể phức tạp, và quan trọng hơn, trong nhiều
+> trường hợp, ta cũng không thể biết được rằng, một estimator có variance nào đó
+> có phải là nhỏ nhất hay không. Từ đó, mới nói đến một công cụ cho vấn đề này:
+> Cramer Rao Lower Bound. Đây chỉ đơn giản là một theorem, nói rằng, giả sử ta
+> có bối cảnh thỏa mãn yêu cầu đề ra nào đó (xem cụ thể trong theorem) thì khi
+> đó, ta có thể xác định được cái lower bound của Var_θ(W(**X**)), từ đó, nếu ta
+> có một estimator có variance bằng với chặn dưới này, thì có thể kết luận nó
+> chính là cái tốt nhất (cái tốt nhất trong đám các estimator có chung bias, và nếu
+> đang xét đám các unbiased estiamtor thì ta gọi nó là uniformly minimum variance
+> unbiased estimator)
+>
+> Thế thì, cái lower bound theo công thức Cramer Rao:
+>
+> Var_θ(W(**X**)) ≥ [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]]
+>
+> Qua lại đây, nhớ rằng 10.1.11, là người ta đang định nghĩa ra cái sequence
+> estimator gọi là asymptotically efficient cho τ(θ), rằng nếu asymptotic variance
+> của nó bằng [τ'(θ)]^2 / [E_θ[(∂/∂θ log f(**X**|θ))^2]].
+>
+> Thì có thể nhận ra cái này ([τ'(θ)]^2 / [E_θ[(∂/∂θ log f(**X**|θ))^2]]) chính là gì?
+>
+> → Chính là Cramer Rao Lower Bound của variance của estimator W(**X**) nào
+> có E_θ[W(**X**)] = τ(θ)
+>
+> Như vậy, về cơ bản, nếu Wn, muốn trở thành một asymptotically efficient
+> estimator của τ(θ), thì nó phải thỏa:
+>
+> Phương sai tiệm cận của nó (asymptotical variance, được define là cái variance
+> của phân phối normal kết quả hội tụ phân phối của kn (Tn - τ(θ)) bằng với
+> Cramer Rao Lower Bound của variance của estimator W(**X**) nào có
+> E_θ[W(**X**)] = τ(θ)
 
 <br>
 

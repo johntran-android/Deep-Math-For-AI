@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,405 notes` · `~16,866 screenshots` · `19 courses`** · work in progress
+**`~12,408 notes` · `~16,871 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -411,7 +411,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [Σ Lec 21](a0_stat110/σ_lec_21.md) — `0n / 8i` 
 - [Σ lec 22](a0_stat110/σ_lec_22.md) — `0n / 3i`
 
-### 📂 Casella & Berger — Statistical Inference (📝 900 Notes | 📸 1041 Screenshots)
+### 📂 Casella & Berger — Statistical Inference (📝 901 Notes | 📸 1043 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -450,14 +450,14 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [6.4 The Equivariance Principle](a0_casella/64_the_equivariance_principle.md) — `12n / 14i` 
 - [7.1 Introduction](a0_casella/71_introduction.md) — `3n / 3i` 
 - [7.2 Method Of Finding Estimators](a0_casella/72_method_of_finding_estimators.md) — `48n / 52i` 
-- [7.3 Methods Of Evaluating Estimators](a0_casella/73_methods_of_evaluating_estimators.md) — `68n / 73i` 
+- [7.3 Methods Of Evaluating Estimators](a0_casella/73_methods_of_evaluating_estimators.md) — `68n / 74i` 
 - [8.1 Introduction](a0_casella/81_introduction.md) — `5n / 5i` 
 - [8.2 Method Of Finding Tests](a0_casella/82_method_of_finding_tests.md) — `21n / 26i` 
 - [8.3 Methods Of Evaluating Test](a0_casella/83_methods_of_evaluating_test.md) — `53n / 64i` 
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
 - [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `53n / 61i` 
 - [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i` 
-- [Chap 10 Asymtotic Evaluation](a0_casella/chap_10_asymtotic_evaluation.md) — `13n / 16i`
+- [10.1 Asymtotic Evaluation - Point Estimation](a0_casella/101_asymtotic_evaluation_point_estimation.md) — `14n / 17i`
 
 ### 📂 ISL — Introduction to Statistical Learning (📝 95 Notes | 📸 233 Screenshots)
 
@@ -575,7 +575,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 293 Notes | 📸 403 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 295 Notes | 📸 406 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -594,7 +594,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [2.4.1 MLE & Sufficient statistic](a0_bishop_prml/241_mle_sufficient_statistic.md) — `4n / 4i` 
 - [2.4.3 Non-informative priors](a0_bishop_prml/243_non_informative_priors.md) — `7n / 8i` 
 - [2.5.0 Non-parametric model](a0_bishop_prml/250_non_parametric_model.md) — `5n / 5i` 
-- [2.5.1 Kernel density estimator](a0_bishop_prml/251_kernel_density_estimator.md) — `2n / 2i` 
+- [2.5.1 Kernel density estimator](a0_bishop_prml/251_kernel_density_estimator.md) — `4n / 5i` 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
 - [1.2.0 Probability theory](a0_bishop_prml/120_probability_theory.md) — `13n / 21i` 

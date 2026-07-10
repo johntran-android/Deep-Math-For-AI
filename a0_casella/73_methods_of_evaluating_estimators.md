@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `68` Notes | `73` Screenshots
+📊 **Progress:** `68` Notes | `74` Screenshots
 
 ---
 <a id="node-599"></a>
@@ -703,7 +703,7 @@
 >
 > T*(y) = T*(n - x) estimate 1 - p (2)
 >
-> ⇔ 1 - T*(n - p) estimate p (3)
+> ⇔ 1 - T*(n - x) estimate p (3)
 >
 > Từ (1) (3) suy ra T(x) = 1 - T*(n - x) 
 >
@@ -1083,6 +1083,8 @@
 > biased_θ(W(**X**)) = E_θ(W(**X**)) - θ, 
 >
 > và khi biased_θ(W(**X**)) = 0 tức E_θ(W(**X**)) = θ thì W gọi là unbiased estimator
+>
+> nên với trường hợp này cả Xbar và S^2 đều là unbiased estimator của λ
 
 <br>
 
@@ -1128,11 +1130,13 @@
 
 <p align="center"><kbd><img src="assets/15b0e016d7f2c7afd63cf118cd25ec7af06b132e.png" width="100%"></kbd></p>
 
+🔗 **Related:** [10.1 POINT ESTIMATION](101_point_estimation.md#node-862)
+
 > [!NOTE]
 > Cramer-Rao inequality, cho X1,...Xn là random sample với pdf f(**x**|θ), và
 > W(**X**) = W(X1,...Xn) là ANY estimator THỎA:
 >
-> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂ [W(**x**)f(**x**|θ)]d**x** và Var_θ(W(**X**)) < infinity
+> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂θ [W(**x**)f(**x**|θ)]d**x** và Var_θ(W(**X**)) < infinity
 >
 > Thì Var_θ(W(**X**)) ≥ [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]]
 
@@ -1143,7 +1147,8 @@
 <p align="center"><kbd><img src="assets/7df81200f5704b8e4c6c0a78a6244f72f4b216dc.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên ta sẽ nhớ lại Cauchy-Schwarz Inequality
+> Để hiểu chứng minh, đầu tiên ta sẽ nhớ lại Cauchy-Schwarz Inequality
+>
 >
 > [Cov(X,Y)]^2 ≤ Var(X)Var(Y)
 >
@@ -1167,6 +1172,9 @@
 > = EX^2 - (EX)^2
 >
 > = VarX
+>
+> (thật ra không cần dài dòng vậy, U = X - EX, thì E(U^2) = E[(X - EX)^2], theo 
+> định nghĩa cái này chính là Var(X) rồi)
 >
 > Tương tự V = Y - EY, ⇨ E[V^2] = VarY
 >
@@ -1212,10 +1220,11 @@
 
 <p align="center"><kbd><img src="assets/203626a4b79ebd557dda3f6e2c4aeecbd25ea0b0.png" width="100%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/b360c29f780a0ed13d182792d1df7adf3d724f96.png" width="100%"></kbd></p>
+
 > [!NOTE]
-> Rồi, khi đã hiểu cái nguồn gốc của Cauchy-Schwarz inequality, ta không lăn
-> tăn về nó nữa, áp dụng thôi. Đây sẽ là cái gốc để chứng minh theorem 
-> Cramer-Rao này:
+> Rồi, khi đã hiểu cái nguồn gốc của Cauchy-Schwarz inequality, ta không lăn tăn về nó nữa,
+> áp dụng thôi. Đây sẽ là cái gốc để chứng minh theorem Cramer-Rao này:
 >
 > Viết lại Cauchy-Schwarz inequality:
 >
@@ -1223,27 +1232,26 @@
 >
 > ⇔ VarX ≥ [Cov(X,Y)]^2 / VarY
 >
-> Giờ ta sẽ chọn X là W(**X**), và Y là ∂/∂θ log f(**X**|θ). Dừng lại chút: Là vì inequality
-> trên là nói về / áp dụng cho hai random variable X, Y bất kì.
+> Giờ ta sẽ chọn X là W(**X**), và Y là ∂/∂θ log f(**X**|θ). Dừng lại chút: Là vì inequality trên
+> là nói về / áp dụng cho hai random variable X, Y bất kì. Và W(**X**), như đã biết, cũng là
+> một random variable, có được bằng cách apply function W(.) lên random variable vector
+> **X**.
 >
-> Vì W(**X**), như đã biết, cũng là một random variable, có được bằng cách apply
-> function W(.) lên random variable vector **X**.
+> Còn ∂/∂θ log f(**X**|θ)? Đầu tiên nên hiểu nó là ∂/∂θ [log f(**x**|θ)], là đạo hàm log f(**x**|θ)
+> theo θ, nó sẽ vẫn là một hàm g(**x**|θ) nào đó. Xong ta áp hàm này lên random variable
+> vector **X**, dĩ nhiên được ∂/∂θ log f(**X**|θ) sẽ vẫn là một random variable
 >
-> Còn ∂/∂θ log f(**X**|θ)? Đầu tiên nên hiểu nó là ∂/∂θ [log f(**x**|θ)], là đạo hàm log f(x|θ)
-> theo θ, nó sẽ vẫn là một hàm g(**x**|θ) nào đó. Xong ta áp hàm này lên random
-> variable vector **X**, dĩ nhiên được một random variable: ∂/∂θ log f(**X**|θ) 
->
-> Vậy ta có: Var[W(**X**)] ≥ [Cov(W(**X**),∂/∂θ log f(**X**|θ))]^2 / Var_θ[∂/∂θ log f(**X**|θ)] 
+> Vậy ta có: Var[W(**X**)] ≥ [Cov(W(**X**),∂/∂θ log f(**X**|θ))]^2 / Var_θ[∂/∂θ log f(**X**|θ)]
 >
 > Thế thì vì cái mình cần chứng minh là:
 >
 > Var_θ[W(**X**)] ≥ {d/dθ E_θ[W(**X**)]}^2 / E_θ[(∂/∂θ log f(**X**|θ)^2]
 >
-> nên ta sẽ xem: 
+> nên ta sẽ xem:
 >
-> 1) Cov {W(**X**) , ∂/∂θ log f(**X**|θ)} có phải là d/dθ E_θ W(**X**)
+> 1 Cov {W(**X**) , ∂/∂θ log f(**X**|θ)} có phải là d/dθ E_θ W(**X**)
 >
-> 2) Var_θ[∂/∂θ log f(**X**|θ)] có phải là E_θ[(∂/∂θ log f(**X**|θ)^2]
+> 2 Var_θ[∂/∂θ log f(**X**|θ)] có phải là E_θ[(∂/∂θ log f(**X**|θ)^2]
 >
 > ====
 >
@@ -1251,28 +1259,36 @@
 >
 > Thế thì theo cái tính chất ta có estimator W(**X**) thỏa:
 >
-> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂θ [W(**x**)f(**x**|θ)]d**x** =  ∫_range of **X** W(**x**) ∂/∂θ[f(**x**|θ)] d**x** =  ∫_range of **X** [W(**x**) ∂/∂θ[f(**x**|θ)] /f(**x**|θ)] f(**x**|θ) d**x**   
+> d/dθ E_θ W(**X**) = ∫_range of **X** ∂/∂θ [W(**x**)f(**x**|θ)]d**x**
 >
-> (nhân và chia đi cho f(**x**|θ, mình cho rằng chỗ này sách ghi sai, khi ghi là nhân 
-> và chia cho f(**X**|θ))
+> W(**x**), đối với đạo hàm theo θ, là constant, đưa ra ngoài đạo hàm: ∂/∂θ [W(**x**)f(**x**|θ)]
+> = W(**x**) ∂/∂θ [f(**x**|θ)]
 >
-> thì cái ta có sẽ có dạng ∫_range of **X** h_θ(**x**) f(**x**|θ)d**x** ,
+> .. = ∫_range of **X** W(**x**) ∂/∂θ[f(**x**|θ)] d**x**
 >
-> thì đó chính là E_θ[h_θ(**X**)]
+> nhân và chia đi cho f(**x**|θ
 >
-> vậy .. = E_θ [W(**X**) ∂/∂θ[f(**X**|θ)] / f(**X**|θ)] 
+> ..= ∫_range of **X** [W(**x**) ∂/∂θ[f(**x**|θ)] /f(**x**|θ)] f(**x**|θ) d**x**
 >
-> Rồi, xét cái W(**X**) ∂/∂θ[f(**X**|θ)] / f(**X**|θ) cũng không khó để thấy nó chính là:
+> Ta thấy cái này thì cái ta có sẽ có dạng ∫_range of **X** h_θ(**x**) f(**x**|θ)d**x** , với
+> h_θ(**x**) = W(**x**) ∂/∂θ[f(**x**|θ)] / f(**x**|θ)
 >
-> W(**X**) ∂/∂θ log f(**X**|θ)  
+> Do đó cái ta có chính là E_θ[h_θ(**X**)]
 >
-> Vậy, d/dθ E_θ W(**X**) = E_θ [W(**X**) [∂/∂θ log f(**X**|θ)]], 
+> vậy d/dθ E_θ W(**X**) = E_θ [W(**X**) ∂/∂θ[f(**X**|θ)] / f(**X**|θ)]
 >
-> nhưng cái ta cần là Cov(W(**X**), [∂/∂θ log f(**X**|θ)]), mà công thức sẽ cần thêm
+> Rồi, xét cái W(**X**) ∂/∂θ [f(**X**|θ)] / f(**X**|θ) cũng không khó để thấy nó chính là W(**X**)
+> ∂/∂θ log f(**X**|θ), vì dùng chain rule, ∂/∂θ log f(**X**|θ) = ∂/∂[f(**X**|θ)] log f(**X**|θ) . ∂/∂θ
+> f(**X**|θ) = [1/f(**X**|θ)] ∂/∂θ[f(**X**|θ) = ∂/∂θ[f(**X**|θ)] / f(**X**|θ)
 >
-> E[W(**X**)] E[∂/∂θ log f(**X**|θ)]]. 
+> Vậy, d/dθ E_θ W(**X**) = E_θ [W(**X**) [∂/∂θ log f(**X**|θ)]],
 >
-> Vì ta nhớ công thức Cov(X,Y) = EXEY - EXY:
+> nhưng cái ta cần là Cov(W(**X**), [∂/∂θ log f(**X**|θ)]), mà công thức của cái này sẽ cần
+> thêm
+>
+> E[W(**X**)] E[∂/∂θ log f(**X**|θ)]].
+>
+> Vì sao, vì ta nhớ công thức Cov(X,Y) = EXEY - EXY:
 >
 > Ôn lại nhanh Cov(X,Y) = E[(X - EX)(Y - EY)] = E[XY - (EX)Y - XEY - EXEY]
 >
@@ -1280,38 +1296,44 @@
 >
 > = E(XY) - EXEY
 >
-> Vậy ta cần thêm E[W(**X**)] E[∂/∂θ log f(**X**|θ)]]
+> Vậy ta cần thêm E[W(**X**)] E[∂/∂θ log f(**X**|θ)]] để từ đó có:
 >
-> Tuy nhiên ta sẽ chứng minh cái này bằng 0: 
+> E_θ [W(**X**) [∂/∂θ log f(**X**|θ)]] - E[W(**X**)] E[∂/∂θ log f(**X**|θ)]] = Cov(W(**X**), [∂/∂θ
+> log f(**X**|θ)])
 >
-> Bằng cách dùng kết qủa đang có: d/dθ E_θ W(**X**) = E_θ [W(**X**) [∂/∂θ log f(**X**|θ)]], 
+> Tuy nhiên ta sẽ chứng minh cái term thứ 2 cần thêm này bằng 0, để suy ra E_θ [W(**X**)
+> [∂/∂θ log f(**X**|θ)]] chính là Cov(W(**X**), [∂/∂θ log f(**X**|θ)])
 >
-> Và áp dụng nó với W(**X**) = 1, vì kết quả này luôn đúng với mọi W thỏa 7.3.4, và
-> W(**X**) = 1 là một cái thỏa (mà ta sẽ nói ở sau), nên phải đúng với W(**X**) = 1:
+> Chứng minh E[W(**X**)] E[∂/∂θ log f(**X**|θ)]] bằng 0: Bằng cách dùng kết qủa đang có:
+> d/dθ E_θ W(**X**) = E_θ [W(**X**) [∂/∂θ log f(**X**|θ)]],
 >
-> d/dθ E_θ [1] = E_θ [[∂/∂θ log f(**X**|θ)]], 
+> Và áp dụng nó với W(**X**) = 1, vì kết quả này luôn đúng với mọi W thỏa 7.3.4, và W(**X**)
+> = 1 là một cái thỏa (mà ta sẽ nói ở sau), nên phải đúng với W(**X**) = 1:
+>
+> d/dθ E_θ [1] = E_θ [[∂/∂θ log f(**X**|θ)]],
 >
 > ⇔ 0 = E_θ [∂/∂θ log f(**X**|θ)]
 >
 > Vậy E[W(**X**)] E[∂/∂θ log f(**X**|θ)]] cũng = 0
 >
-> Và d/dθ E_θ W(**X**) = E_θ [W(**X**) [∂/∂θ log f(**X**|θ)]]
+> Và như vậy d/dθ E_θ W(**X**) = E_θ [W(**X**) [∂/∂θ log f(**X**|θ)]]
 >
 > = E_θ [W(**X**) [∂/∂θ log f(**X**|θ)]] - E[W(**X**)] E[∂/∂θ log f(**X**|θ)]]
 >
 > = Cov(W(**X**), [∂/∂θ log f(**X**|θ)])
 >
-> Vậy chứng minh xong (1) {d/dθ E_θ[W(**X**)]}^2 = {Cov(W(**X**), [∂/∂θ log f(**X**|θ)])}^2
+> Vậy chứng minh xong ý thứ 1): Cov {W(**X**) , ∂/∂θ log f(**X**|θ)} đúng là d/dθ E_θ W(**X**)
 >
 > ====
 >
 > Tiếp, cái (2): E_θ[(∂/∂θ log f(**X**|θ)^2] có phải là Var_θ[∂/∂θ log f(**X**|θ)] :
 >
->  Thì rõ ràng, vì: 
+> Thì rõ ràng, vì:
 >
-> Var_θ[∂/∂θ log f(**X**|θ)] = E[(∂/∂θ log f(**X**|θ)]^2 - (E[(∂/∂θ log f(**X**|θ)^2])^2
+> Var_θ[∂/∂θ log f(**X**|θ)] = E[(∂/∂θ log f(**X**|θ)]^2 - (E[(∂/∂θ log f(**X**|θ)^2])^2 (dùng công
+> thức Var(X) = E(X^2) - (EX)^2)
 >
-> = E[(∂/∂θ log f(**X**|θ)]^2 - (0)^2
+> = E[(∂/∂θ log f(**X**|θ)]^2 - (0)^2 (ở trên đã chứng minh E_θ [∂/∂θ log f(**X**|θ)] = 0)
 >
 > = E[(∂/∂θ log f(**X**|θ)]^2
 >
@@ -1319,19 +1341,19 @@
 >
 > Tóm tắt:
 >
-> 1) Bắt đầu với Cauchy-Schwarz inequality [Cov(X,Y)]^2 ≤ VarX VarY 
+> 1 Bắt đầu với Cauchy-Schwarz inequality [Cov(X,Y)]^2 ≤ VarX VarY
 >
 > ⇔ VarX ≥ [Cov(X,Y)]^2 / VarY
 >
-> 2) Áp dụng nó với W(**X**) (trong vai X) và [∂/∂θ log f(**X**|θ)] (trong vai Y)
+> 2 Áp dụng nó với W(**X**) (trong vai X) và [∂/∂θ log f(**X**|θ)] (trong vai Y)
 >
 > Để có Var[W(**X**)] ≥ [Cov(W(**X**), ∂/∂θ log f(**X**|θ))]^2 / Var_θ[∂/∂θ log f(**X**|θ)]
 >
-> 3) Và sau đó ta chứng minh:
+> 3 Và sau đó ta chứng minh:
 >
-> 1) Cov {W(**X**), ∂/∂θ log f(**X**|θ)} chính là d/dθ E_θ[W(**X**)]
+> 1 Cov {W(**X**), ∂/∂θ log f(**X**|θ)} chính là d/dθ E_θ[W(**X**)]
 >
-> 2) Var_θ[∂/∂θ log f(**X**|θ)] chính là E_θ[(∂/∂θ log f(**X**|θ)^2]
+> 2 Var_θ[∂/∂θ log f(**X**|θ)] chính là E_θ[(∂/∂θ log f(**X**|θ)^2]
 
 <br>
 
@@ -1343,8 +1365,8 @@
 
 > [!NOTE]
 > Tiếp, nếu các samples độc lập (mình hiểu là random variable X1,...Xn trong
-> random sample độc lập, thì cái kì vọng trong mẫu số sẽ trở thành chỉ dính tới
-> các univariate:
+> random sample độc lập, thì cái kì vọng trong mẫu số sẽ trở thành chỉ dính tới các
+> univariate:
 >
 > Dễ hiểu thôi: Bổ đề này nói rằng nếu ta có iid X1,...Xn và W(**X**) thỏa các điều
 > kiện của Theorem Cramer Rao thì ta sẽ có kết quả 7.3.10
@@ -1353,21 +1375,24 @@
 >
 > Var_θ[W(**X**)] ≥ {d/dθ E_θ[W(**X**)]}^2 / E_θ[(∂/∂θ log f(**X**|θ)^2]
 >
-> Và xét cái mẫu số ở vế phải E_θ[(∂/∂θ log f(**X**|θ)^2]:
+> Và xét cái mẫu số ở vế phải E_θ[(∂/∂θ log f(**X**|θ))^2]:
 >
-> = E_θ[(∂/∂θ log fX1,..Xn(X1,...Xn|θ)^2]
+> = E_θ{[ ∂/∂θ log fX1,..Xn(X1,...Xn|θ) ]^2}
 >
-> = E_θ[(∂/∂θ log Πi fXi(Xi|θ)^2]  (do iid, tách joint pdf thành tích marginal pdf)
+> = E_θ{[ ∂/∂θ log Πi fXi(Xi|θ) ]^2} (do iid, tách joint pdf thành tích marginal pdf)
 >
-> = E_θ[(∂/∂θ Σi log fXi(Xi|θ)^2]
+> = E_θ{[ ∂/∂θ Σi log fXi(Xi|θ) ]^2} (log A log B = log (A+B))
 >
-> = E_θ[(Σi ∂/∂θ log fXi(Xi|θ)^2]
+> = E_θ{[ Σi ∂/∂θ log fXi(Xi|θ)]^2} (đưa đạo hàm vào trong tổng)
 >
-> = E_θ[(Σi ∂/∂θ log fXi(Xi|θ)^2 + Σi≠j (∂/∂θ log fXi(Xi|θ)) (∂/∂θ log fXj(Xj|θ)) ]
+> = E_θ{Σi ∂/∂θ log fXi(Xi|θ)^2 + Σi≠j (∂/∂θ log fXi(Xi|θ)) (∂/∂θ log fXj(Xj|θ)) } (khai triển
+> cái bình phương
 >
-> = E_θ[(Σi ∂/∂θ log fXi(Xi|θ)^2] + E_θ { Σi≠j [∂/∂θ log fXi(Xi|θ)] [∂/∂θ log fXj(Xj|θ) }
+> = E_θ{Σi ∂/∂θ log fXi(Xi|θ)^2} + E_θ { Σi≠j [∂/∂θ log fXi(Xi|θ)] [∂/∂θ log fXj(Xj|θ) }
+> (tách kì vọng ra dùng linearity)
 >
-> = Σi E_θ[(∂/∂θ log fXi(Xi|θ)^2] + Σi≠j E_θ[∂/∂θ log fXi(Xi|θ) log fXj(Xj|θ) ]
+> = Σi { E_θ[∂/∂θ log fXi(Xi|θ)^2] } + Σi≠j { E_θ[∂/∂θ log fXi(Xi|θ) log fXj(Xj|θ) } (đưa kì
+> vọng vô tổng dùng linearity)
 >
 > = Σi E_θ[(∂/∂θ log fXi(Xi|θ)^2] + Σi≠j E_θ[∂/∂θ log fXi(Xi|θ)] E_θ[ log fXj(Xj|θ) ]
 >
@@ -1375,24 +1400,22 @@
 >
 > = Σi E_θ[(∂/∂θ log fXi(Xi|θ)^2] + Σi≠j E_θ[∂/∂θ log f(Xi|θ)] E_θ[ log f(Xj|θ) ]
 >
-> Và vì tính độc lập, tức Xi, Xj i khác j, độc lập, thì hai cái rv ∂/∂θ log f(Xi|θ) và 
-> ∂/∂θ log f(Xj|θ) cũng độc lập ⇨ E_θ[∂/∂θ log f(Xi|θ)] E_θ[ log f(Xj|θ) ] = 0
+> Và vì tính độc lập, tức Xi, Xj i khác j, độc lập, thì hai cái rv ∂/∂θ log f(Xi|θ) và ∂/∂θ
+> log f(Xj|θ) cũng độc lập ⇨ E_θ[∂/∂θ log f(Xi|θ)] E_θ[ log f(Xj|θ) ] = 0
 >
-> Vậy chỉ còn Σi E_θ[(∂/∂θ log fXi(Xi|θ)^2] 
+> Vậy chỉ còn Σi E_θ[(∂/∂θ log fXi(Xi|θ)^2]
 >
-> Σi E_θ[(∂/∂θ log f(Xi|θ)^2]
+> = Σi E_θ[(∂/∂θ log f(Xi|θ)^2]
 >
-> Σi E_θ[(∂/∂θ log f(Xi|θ)^2]
+> Và E_θ[(∂/∂θ log f(Xi|θ)^2], với i bằng bao nhiêu thì cũng ra constant, và nó đều
+> giống nhau, vì đều là đang tính:
 >
-> Và E_θ[(∂/∂θ log f(Xi|θ)^2], với i bằng bao nhiêu thì cũng ra constant, và nó 
-> đều giống nhau, vì đều là đang tính: 
+> Eg(Xi) với g(Xi) = (∂/∂θ log f(Xi|θ)^2, thì theo lotus nó sẽ
 >
-> Eg(Xi) với g(Xi) = (∂/∂θ log f(Xi|θ)^2, thì theo lotus nó sẽ 
+> = ∫-inf:inf (∂/∂θ log f(xi|θ)^2 f(xi|θ) dxi
 >
-> = ∫-inf:inf (∂/∂θ log f(xi|θ)^2 f(xi|θ) dxi 
->
-> Và kết quả sẽ giống nhau với mọi i, vì hàm trong tích phân giống nhau, và
-> range tích phân giống nhau.
+> Và kết quả sẽ giống nhau với mọi i, vì hàm trong tích phân giống nhau, và range
+> tích phân giống nhau.
 >
 > nên kết quả là
 >
@@ -1414,7 +1437,7 @@
 > unbiased estimator of θ. Ta sẽ có chặn của variance càng nhỏ nếu như
 > thông tin càng lớn.
 >
-> Rồi, tóm lại đều đây ta có:
+> Rồi, tóm lại đến đây ta có:
 >
 > Với mọi hàm khả vi τ(θ), thì ta đã có chặn dưới về variance của bất kì 
 > estimator W thỏa  7.3.4 và E_θ(W) = τ(θ). Và cái bound chỉ phụ thuộc 
@@ -1473,7 +1496,7 @@
 > Vậy ở đây nếu xét W(**X**), là unbiased estimator của τ(θ), thì đương nhiên
 > E_θ[W(**X**)] = τ(θ).
 >
-> Và trong ví dụ này, ta đang xét unbiases estimator của λ, tức τ(λ) = 1. Lấy đạo
+> Và trong ví dụ này, ta đang xét unbiases estimator của λ, tức τ(λ) = λ. Lấy đạo
 > hàm theo λ, ta có τ'(λ) = 1 (vẫn là hàm theo λ, có điều là constant function)
 >
 > Vậy ở tử số là 1^2 = 1.
