@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,408 notes` · `~16,871 screenshots` · `19 courses`** · work in progress
+**`~12,411 notes` · `~16,875 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -575,7 +575,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 295 Notes | 📸 406 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 298 Notes | 📸 410 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -594,7 +594,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [2.4.1 MLE & Sufficient statistic](a0_bishop_prml/241_mle_sufficient_statistic.md) — `4n / 4i` 
 - [2.4.3 Non-informative priors](a0_bishop_prml/243_non_informative_priors.md) — `7n / 8i` 
 - [2.5.0 Non-parametric model](a0_bishop_prml/250_non_parametric_model.md) — `5n / 5i` 
-- [2.5.1 Kernel density estimator](a0_bishop_prml/251_kernel_density_estimator.md) — `4n / 5i` 
+- [2.5.1 Kernel density estimator](a0_bishop_prml/251_kernel_density_estimator.md) — `7n / 9i` 
 - [1.0 Into](a0_bishop_prml/10_into.md) — `8n / 8i` 
 - [1.1 Example: Polynomial Curve Fitting](a0_bishop_prml/11_example_polynomial_curve_fitting.md) — `13n / 20i` 
 - [1.2.0 Probability theory](a0_bishop_prml/120_probability_theory.md) — `13n / 21i` 

@@ -1,6 +1,6 @@
 # 2.5.1 Kernel density estimator
 
-📊 **Progress:** `4` Notes | `5` Screenshots
+📊 **Progress:** `7` Notes | `9` Screenshots
 
 ---
 <a id="node-306"></a>
@@ -221,7 +221,7 @@
 > [!NOTE]
 > Thế thì ở đây nói ta có thể khai thác kết quả f(**x**) ≈ K / NV theo hai cách:
 >
-> Giữ K cố định và dùng data để xác định V, cách này sẽ dẫn đến phương pháo
+> Giữ K cố định và dùng data để xác định V, cách này sẽ dẫn đến phương pháp
 > K-nearest neigbor
 >
 > Và Giữ V cố định và tính K từ data sẽ dẫn ta đến kernel approach.
@@ -229,6 +229,131 @@
 > Và người ta đã chứng minh là khi N → inf và cho V nhỏ một cách phù hợp
 > theo N, Và K → N thì cả hai kết quả từ hai cách làm để sẽ hội tụ về distribution
 > thật.
+
+<br>
+
+<a id="node-310"></a>
+
+<p align="center"><kbd><img src="assets/3dc4161c4410b150120a2976dca22ec4fdad8b30.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đại khái là đoạn này ta sẽ bàn chi tiết về cách tiếp cận kernel method
+> (nơi ta sẽ dựa vào f(**x**) ≈ K / NV, và fixed V, và tính K từ data)
+>
+> Thế thì, như vậy ta sẽ làm gì? → Dựa vào công thức f(**x**) ≈ K / NV thôi,
+> như đã nói, ta sẽ coi như V đã biết, thì xác định K thì ta sẽ có được f(**x**).
+> Và K là gì, còn nhớ, nó là Σj I_(xi ∈ R), tức số observed value xi thuộc vùng
+> R.
+>
+> Đầu tiên, ta sẽ chọn vùng R, là một hypercube (tương tự như trong case D=3
+> thì là một khối lập phương tâm tại **x**, cạnh là h). Vì việc tiếp theo cần làm
+> là tính K, tức là đếm số data point rơi vào vùng R, nên gs cho rằng sẽ tiện
+> hơn nếu ta định nghĩa một function k(**u**) như công thức 2.247, mà mình có
+> thể dùng cách diễn đạt indicator cho gọn: k(**u**) = I_{ui ≤ 1/2, i=1,2...D}. Dễ
+> hiểu ý nghĩa của hàm này đó là nếu input vector có mọi phần tử để có trị
+> tuyệt đối ≤ 1/2 thì trả ra 1 hoặc ngược lại thì trả ra 0. Và đây là một ví dụ của
+> cái gọi là **kernel function**, cụ thể trong bối cảnh này, nó có tên là **Parzen
+> window**
+>
+> Nhờ có k(**u**), số data point rơi vào một vùng R quanh điểm **x** (nơi cần
+> estiamate density, tức f(**x**)) sẽ là:
+>
+> K = Σn=1:N k((**x**-**x**n)/h)
+>
+> Và vì vùng R là hypercube cạnh h, nên volume của nó sẽ là h^D (như thể tích
+> hình khối lập phương trong case D=3 thì là h^3 vậy)
+>
+> Và như vậy density tại **x** sẽ là f(**x**) ≈ K/NV = Σn=1:N k((**x**-**x**n)/h) /
+> (Nh^D)
+>
+> = (1/N) Σn=1:N (1/h^D) k((**x**-**x**n)/h)
+>
+> Và xét cái tổng Σn=1:N k((**x**-**x**n)/h), hoàn toàn có thể nhìn nó theo hai
+> cách: là check xem có bao nhiêu **x**i thuộc cái hộp (hypercubic) có tâm
+> **x**. Nhưng cũng có thể nhìn theo cách khác: là check xem **x** thuộc bao
+> nhiêu cái hộp tậm **x**i.
+
+<br>
+
+<a id="node-311"></a>
+
+<p align="center"><kbd><img src="assets/dabb13e5d11cd663c8215b8df23eaddf63f82679.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c374966df17e9feb476fe83900a309dc1bf6a609.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Như vậy thì mình hình dung việc "vẽ" cái density function f(**x**) theo
+> phương pháp kernel sẽ là như sau:
+>
+> (tưởng tượng ta trong case 1D, và cho **x** đi từ -inf tới inf, tại mỗi điểm ta
+> sẽ vẽ giá trị của f(**x**) = (1/N) Σn=1:N (1/h^D) k((**x**-**x**n)/h)
+>
+> Thì như đã nói, với công thức này, đại khái là ta sẽ đếm, xem điểm **x
+> đang xét thuộc cái hộp cubic của mấy data point** rồi nhân cho constant
+> 1/Nh^D. Điều này có nghĩa là, chiều cao của hàm số tại các điểm **x khác
+> nhau ăn thua là ở việc điểm x đó nằm gần nhiều các data point không**,
+> còn cái hằng số thì "ai cũng như ai" chỉ đóng vai trò normalizing constant.
+>
+> Với D=1, thì hypercubic, thật ra chỉ là 1 đoạn thẳng có tâm tại x, (lúc này x
+> là 1D nên không cần viết bold font), và dài h.Nên không cần vẽ ra cũng có
+> thể tượng tưởng trong đầu là ta đi từ trái sang phải, ban đầu chưa có data
+> point nào, thì f(x) = 0 khi vào phạm vi của một data point, ví dụ x1, thì lập
+> tức đồ thị dựng đứng lên, và đi ngang, nếu chưa ra khỏi box của x1 mà đã
+> vào box x2, thì đồ thị tiếp tục nhảy lên để đạt độ cao bằng tổng của hai cái.
+> Như vậy có thể thấy, hàm density estimate này là step function, không
+> được trơn (smooth) cho lắm.
+>
+> Thế thì người ta mới nghĩ đến việc dùng một hàm kernel k(**u**) khác,
+> smooth hơn, để thay vì có cái rule cục xúc như hàm Parzen window: bằng
+> 1 hoặc 0 khi đủ gần hoặc không. Ta sẽ dùng hàm khác, có hành vi giống
+> pdf của Normal: Để nó có tính chất là, khi đến gần **x thì hàm sẽ tăng để
+> đạt đỉnh tại ngay x và giảm xuống khi ra xa**. Như vậy, sẽ mang lại sự
+> mềm mại hơn.
+>
+> Vậy thì quay lại ví dụ "vẽ đồ thị" ở trên, thì ta chỉ khác là khi đứng tại x, f(x)
+> đã bằng tổng kernel của mọi điểm dù ở xa hay gần, chỉ là những điểm ở
+> xa thì mức đóng góp ít, giống như tầm ảnh hưởng ít, còn ở gần thì đóng
+> góp nhiều. Để rồi tiến gần tới x1, thì đóng góp của x1, (và cả các x2, x3,...)
+> đều tăng lên, khiến hàm f(x) đi lên. Khi đi qua khỏi x1, mức đóng góp của
+> x1, giảm xuống, nhưng x2 tăng lên,...nhưng dễ hiểu là sự lên xuống sẽ
+> mượt, chứ không sudden như dùng Parzen window. Giúp ta hiểu cái đoạn
+> gs nói "placing a Gaussian over each data oiint and then adding up the
+> contributions over the whole data set, and then devidinf by N so that the
+> density is correctly normalized"
+>
+> Nói chung, mình hiểu cái việc chọn hàm Gaussian kernel **chả liên quan
+> gì với Gaussian distribution gì ở đây**, mà **chỉ là ta muốn hàm kernel nó
+> có hành vi của Gaussian distribution, hay nói đơn giản là ta muốn nó có
+> dạng cái chuông Normal và từ đó có tính smooth mà thôi**. Nên ta hiểu cái
+> 2.250 **không liên quan gì tới phân phối normal cả**, nó chỉ có bản chất là
+> (1/N) Σi k(x - xi) với k(u) là một kernel function, mà ta thay vì dùng Parzen
+> function, thì ở đây ta dùng Gaussian kernel function, =
+> (1/√2πh^2)exp{-(x-xi)^2/2h^2}.
+>
+> Cuối cùng, gs cho minh họa để thấy rằng h cũng đóng vai trò là smoothing
+> parameter, khi h nhỏ quá thì hàm density cũng sẽ noisy mà lớn quá thì nó
+> lại quá smooth khiến mất đi, lu mờ đi hai cái đỉnh của hàm pdf gốc
+> (bimodal, màu xanh lá). Dĩ nhiên điều này đồng nghĩa h nhỏ quá hay lớn
+> quá đều khiến estimate density không capture được pattern của true
+> density. Cái này rất tương ứng với việc chọn bề rộng bins của histogram
+> density cũng như chọn bậc của polynomial function trong bài toán curve
+> fitting của chap 1.
+
+<br>
+
+<a id="node-312"></a>
+
+<p align="center"><kbd><img src="assets/0161005472fdeb42838c527ea72ddbb81b4da193.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Rồi, cuối cùng, ta có thể chọn các kernel function khác, miễn thỏa hai tính chất
+> ko âm và tích phân = 1.
+>
+> Một ý quan trọng đó là, rõ ràng với phương pháp này, không có cái gì gọi là
+> training phase cả, vì tất cả những gì ta cần là lưu trữ bộ dataset. Và khi cần
+> tính density, thì chỉ việc chạy hàm để tính thôi. Nhưng gs cho rằng đây cũng là
+> điểm yếu lớn nhất, khi chi phí tính toán sẽ tỉ lệ tuyến tính với kích thước
+> dataset.
 
 <br>
 
