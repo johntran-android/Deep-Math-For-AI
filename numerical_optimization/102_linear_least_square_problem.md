@@ -1,6 +1,6 @@
 # 10.2 Linear Least-Square Problem
 
-📊 **Progress:** `7` Notes | `10` Screenshots | `6` AI Reviews
+📊 **Progress:** `9` Notes | `11` Screenshots | `8` AI Reviews
 
 ---
 
@@ -925,6 +925,152 @@
 <a id="node-0hoe8tb"></a>
 - **SVD Approach and Singular Values**
 <p align="center"><kbd><img src="assets/att_psqualk.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> x **= V Sinv U1Ty = ∑i=1:n (uiTy/σi) vi
+>
+>
+>
+> khi J rank-deficient thì tức tồn tại ít nhất stretching factor σi = 0 (để khi đó tồn tại non-zero nullspace vector, hay rank < n)
+>
+>
+>
+> Tất nhiên lục này x** không thể bằng ∑i=1:n (uiTy/σi) vi. Vậy ta sẽ bắt đầu tìm x **lại từ bài toán minimize ||S(VTx) - U1Ty||^2 (mà nếu J full column rank thì x** có công thức trên)
+>
+>
+>
+> Xem xét ||S(VTx) - U1Ty||^2
+>
+>
+>
+> Với S, diagonal matrix các singular value của J, thì lúc này đường chéo sẽ tồn tại phần tử = 0
+>
+>
+>
+> VTx = là vector có các phần tử là v1Tx, v2Tx,...vnTx. Nhân với S là diagonal matrix, ta sẽ có vector S(VTx) có các phần tử là σ1v1Tx, σ2v2Tx,...
+>
+>
+>
+> Còn U1Ty là vector có các phần tử là u1Ty, u2Ty,...,unTy
+>
+>
+>
+> ⇨ S(VTx) - U1Ty là vector có các phần tử là σ1v1Tx - u1Ty, σ2v2Tx - u2Ty, ...
+>
+>
+>
+> ⇨ ||S(VTx) - U1Ty||^2 = ∑i (σiviTx - uiTy)^2
+>
+>
+>
+> Tách ra thành hai group ứng với σi khác 0 và σi = 0
+>
+>
+>
+> ..= ∑i,σi≠0 (σiviTx - uiTy)^2 + ∑i,σi=0 (σiviTx - uiTy)^2 
+>
+>
+>
+> = ∑i,σi≠0 (σiviTx - uiTy)^2 + ∑i,σi=0 (- uiTy)^2
+>
+>
+>
+> = ∑i,σi≠0 (σiviTx - uiTy)^2 + ∑i,σi=0 (uiTy)^2
+>
+>
+>
+> Rồi, tới đây, để minimize cái này, ta sẽ minimize term 1: và term 1 là tổng các bình phương, nên nó nhỏ nhất khi σiviTx - uiTy = 0 ∀i với σi ≠ 0
+>
+>
+>
+> ⇔ σiviTx = uiTy
+>
+>
+>
+> ⇔ viTx = uiTy/σi ∀i với σi ≠ 0
+>
+>
+>
+> Tới đây, vì x ∈ R^n, và V là orthogonal matrix chứa với các cột là orthogonal basis của R^n, nên x = linear combination của vi: x = Σi civi
+>
+>
+>
+> Và vì đây là orthogonal basis, nên tọa độ ci cũng chính là xTvi = viTx
+>
+>
+>
+> Với các i sao cho σi ≠ 0 ci = viTx = uiTy/σi, còn các i với σi = 0 thì ta ko có ràng buộc gỉ cả.
+>
+>
+>
+> Do đó solution x = Σi, σi≠0 (uiTy/σi)vi + Σi,σi=0 civi ta có thể thay ci bằng τi cho giống trong sách.
+>
+>
+>
+> Như vậy có nghĩa là, ta có vô số solution, vì có thể chọn tùy ý các τi.
+>
+>
+>
+> Và trong vô số solution này, ta có thể dùng cái có norm nhỏ nhất, dễ hiểu bằng cách chọn τi = 0.
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì đó là với rank deficient, khi có vài σi = 0 luôn. Nhưng nếu chỉ ill-condition, tức các σ nhỏ nhất của nó nhỏ hơn nhiều σmax. Thì đại khái là solution quay lại là công thức này ∑i=1:n (uiTy/σi) vi
+>
+>
+>
+> Lúc này rất dễ hiểu rằng, các hạng tử (uiTy/σi) vi ứng với σi rất nhỏ, sẽ rất sensitive với perturbation của y hay của J (ảnh hưởng tới U), kéo theo sự  sensitive của solution x\*. Thành ra người ta nói, nếu ta chấp nhận dùng nghiệm xấp xỉ (bằng cách bỏ đi các (uiTy/σi) ứng với σi nhỏ) thì ta sẽ có solution ít sensitive so với solution chính xác nhưng rất nhạy cảm như vừa nói.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Điểm mạnh: Bài viết rất chính xác và có chiều sâu, đặc biệt là phần dẫn giải chi tiết công thức x* cho trường hợp J thiếu hạng, giúp người đọc hiểu rõ bản chất. Điểm yếu: Bài viết rất tốt và không có điểm yếu rõ ràng nào cần cải thiện.
+
+<br>
+
+<a id="node-x7aktmm"></a>
+- **Conjugate Gradient Method Iterations**
+<p align="center"><kbd><img src="assets/att_kxbs7o0.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì đại ý là gs nói rằng khi bài toán trở nên lớn thì sẽ hiệu quả hơn khi ta dùng các iterative technique, ví dụ conjugate gradient đã học trong phần trước.
+>
+>
+>
+>  Thử recall lại chút xíu về conjugate gradient:
+>
+>
+>
+> Điều đầu tiên còn nhớ, đó là, CG là một thuật toán chuyên trị việc giải hệ Ax = b. Và bản chất của nghiệm x **của Ax = b chỉ là: Nó thỏa Ax** - b = 0. Và khi nhìn nhận cái Ax - b như gradient của hàm số quadratic g(x) = (1/2)xTAx -bTx, thì việc tìm x\* thỏa Ax - b = 0 chính là tìm x khiến gradient ∇g(x) vanish, tức first order necessary condition. Thành ra, việc giải hệ Ax = b có thể được nhìn nhận như giải bài toán tối ưu: minimize g(x).
+>
+>
+>
+> Thế thì, đại ý của conjugate gradient là, bắt đầu từ một điểm x0, ta sẽ xuất hành theo hướng steepest descent, để đến được điểm tiếp theo (cụ thể thế nào thì đơn giản là vì đây chỉ là bài toán minimize hàm bậc hai đơn biến, nên có công thức closed-form). Sau đó, ta sẽ đi theo một con đường mà hướng đi ở bước đi hiện tại sẽ là conjugate vector với cái hướng trước đó (về hướng, còn step-size thì vẫn là dùng công thức close-form). Lí thuyết có thể chứng minh rằng, bằng cách này, ta sẽ tới được điểm optimal nhiều nhất là trong n bước.
+>
+>
+>
+> Và thông qua một số kĩ thuật, ta thậm chí có thể rút ngắn số bước (để về đích) hơn nữa.
+>
+>
+>
+> Nói chung ý tưởng thuật toán chỉ có vậy thôi. Các bước trong thuật toán 5.2 chỉ là phản ánh ý tưởng này.
+>
+>
+>
+> Và ở đây, thì JTJ đóng vai A, nếu xem lại thuật toán 5.2 ta sẽ thấy trong đó ta cần tính Apk, là nhân một matrix với vector. Vậy thì ở đây đại ý gs nói là, ta chỉ việc tính lần lượt Jpk và JT(Jpk) cũng như có thể có một số cách làm khác.
+>
+>
+>
+> Tóm lại. Về cơ bản, việc giải normal equation với bài toán lớn thì dùng conjugate gradient sẽ nhanh hơn, nhưng với bài toán nhỏ, thì dùng 3 phương pháp nói trên sẽ nhanh hơn.
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+>
+> Bạn đã nắm vững các ý chính về việc sử dụng phương pháp gradient liên hợp (CG) cho các bài toán lớn và đặc biệt là cách triển khai tối ưu khi không cần hình thành ma trận JTJ trực tiếp. Phần giải thích sâu về nền tảng của CG cũng rất ấn tượng. Tuy nhiên, phần kết luận về "3 phương pháp nói trên" cho bài toán nhỏ không được đề cập trong đoạn văn bản gốc.
 
 <br>
 
