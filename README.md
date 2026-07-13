@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,427 notes` · `~16,896 screenshots` · `19 courses`** · work in progress
+**`~12,430 notes` · `~16,899 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -411,7 +411,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [Σ Lec 21](a0_stat110/σ_lec_21.md) — `0n / 8i` 
 - [Σ lec 22](a0_stat110/σ_lec_22.md) — `0n / 3i`
 
-### 📂 Casella & Berger — Statistical Inference (📝 901 Notes | 📸 1043 Screenshots)
+### 📂 Casella & Berger — Statistical Inference (📝 904 Notes | 📸 1046 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -457,7 +457,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
 - [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `53n / 61i` 
 - [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i` 
-- [10.1 Asymtotic Evaluation - Point Estimation](a0_casella/101_asymtotic_evaluation_point_estimation.md) — `14n / 17i`
+- [10.1 Asymtotic Evaluation - Point Estimation](a0_casella/101_asymtotic_evaluation_point_estimation.md) — `17n / 20i`
 
 ### 📂 ISL — Introduction to Statistical Learning (📝 95 Notes | 📸 233 Screenshots)
 

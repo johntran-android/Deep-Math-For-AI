@@ -1,6 +1,6 @@
 # 10.1 Asymtotic Evaluation - Point Estimation
 
-📊 **Progress:** `14` Notes | `17` Screenshots
+📊 **Progress:** `17` Notes | `20` Screenshots
 
 ---
 
@@ -530,53 +530,132 @@
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-617)
 
 > [!NOTE]
-> Nói ngắn gọn, ở đây người ta định nghĩa ra cái gọi là khi nào thì chuỗi estimator
-> Wn được gọi là ASYMPTOTICALLY EFFICIENT của một parameter τ(θ), đó là
-> nếu như asymptotic variance của nó có thể đạt được giá trị variance nhỏ nhất
-> được thể hiện bởi giá trị chặn dưới Cramer-Rao (lower bound).
+> Nói ngắn gọn, ở đây người ta **định nghĩa** ra cái gọi là khi nào thì **chuỗi estimator Wn** được gọi là
+> **ASYMPTOTICALLY EFFICIENT** của một parameter τ(θ), đó là nếu như **asymptotic variance của
+> nó có thể đạt được giá trị variance nhỏ nhất được thể hiện bởi giá trị chặn dưới Cramer-Rao (lower
+> bound)**.
 >
-> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower
-> Bound là cái gì), đã học ở chap 7, trong phần đánh giá chất lượng của các point
-> estimator. Nói ngắn gọn, khi cần phải đánh giá các estimator (evaluating
-> estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là một
-> hàm của estimator: MSE(W(**X**)) = E_θ[(W(**X**) - θ)^2], và ta muốn cái này
-> càng nhỏ càng tốt. Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var_θ
-> [W(**X**)] + [Bias(W(**X**)]^2 với Bias(W(**X**)) = E_θ[W(**X**)] - θ. Để rồi, câu
-> chuyện tiếp theo là, giả sử ta xét một đám các estimator có cùng bias (đồng
-> nghĩa có cùng kì vọng E_θ[W(**X**)]), thì thằng nào có Var_θ[W(**X**)] nhỏ nhất
-> sẽ là tốt nhất.
+> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower Bound là cái gì), đã học
+> ở chap 7, trong phần đánh giá chất lượng của các point estimator. Nói ngắn gọn, khi cần phải đánh
+> giá các estimator (evaluating estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là
+> một hàm của estimator: MSE(W(**X**)) = E_θ[(W(**X**) - θ)^2], và ta muốn cái này càng nhỏ càng tốt.
+> Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var_θ [W(**X**)] + [Bias(W(**X**)]^2 với
+> Bias(W(**X**)) = E_θ[W(**X**)] - θ. Để rồi, câu chuyện tiếp theo là, giả sử ta **xét một đám các
+> estimator có cùng bias** (đồng nghĩa có cùng kì vọng E_θ[W(**X**)]), thì thằng nào có Var_θ[W(**X**)]
+> nhỏ nhất sẽ là tốt nhất.
 >
-> Thế thì, việc tính variance có thể phức tạp, và quan trọng hơn, trong nhiều
-> trường hợp, ta cũng không thể biết được rằng, một estimator có variance nào đó
-> có phải là nhỏ nhất hay không. Từ đó, mới nói đến một công cụ cho vấn đề này:
-> Cramer Rao Lower Bound. Đây chỉ đơn giản là một theorem, nói rằng, giả sử ta
-> có bối cảnh thỏa mãn yêu cầu đề ra nào đó (xem cụ thể trong theorem) thì khi
-> đó, ta có thể xác định được cái lower bound của Var_θ(W(**X**)), từ đó, nếu ta
-> có một estimator có variance bằng với chặn dưới này, thì có thể kết luận nó
-> chính là cái tốt nhất (cái tốt nhất trong đám các estimator có chung bias, và nếu
-> đang xét đám các unbiased estiamtor thì ta gọi nó là uniformly minimum variance
-> unbiased estimator)
+> Thế thì, việc tính variance có thể phức tạp, và quan trọng hơn, trong nhiều trường hợp, ta cũng không
+> thể biết được rằng, một estimator có variance nào đó có phải là nhỏ nhất hay không. Từ đó, mới nói
+> đến một công cụ cho vấn đề này: **Cramer Rao Lower Bound**. Đây chỉ đơn giản là một theorem, nói
+> rằng, giả sử ta có bối cảnh thỏa mãn yêu cầu đề ra nào đó (xem cụ thể trong theorem) thì khi đó, ta
+> có thể **xác định được cái lower bound của** Var_θ(W(**X**)), từ đó, **nếu ta có một estimator có
+> variance bằng với chặn dưới này, thì có thể kết luận nó chính là cái tốt nhất** (cái tốt nhất trong đám
+> các estimator có chung bias, và nếu đang xét đám các unbiased estiamtor thì ta gọi nó là uniformly
+> minimum variance unbiased estimator)
 >
 > Thế thì, cái lower bound theo công thức Cramer Rao:
 >
 > Var_θ(W(**X**)) ≥ [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]]
 >
-> Qua lại đây, nhớ rằng 10.1.11, là người ta đang định nghĩa ra cái sequence
-> estimator gọi là asymptotically efficient cho τ(θ), rằng nếu asymptotic variance
-> của nó bằng [τ'(θ)]^2 / [E_θ[(∂/∂θ log f(**X**|θ))^2]].
+> Qua lại đây, nhớ rằng 10.1.11, là người ta đang định nghĩa ra cái sequence estimator gọi là
+> **asymptotically efficient cho τ(θ)**, rằng nếu asymptotic variance của nó bằng [τ'(θ)]^2 / [E_θ[(∂/∂θ log
+> f(**X**|θ))^2]].
 >
-> Thì có thể nhận ra cái này ([τ'(θ)]^2 / [E_θ[(∂/∂θ log f(**X**|θ))^2]]) chính là gì?
+> Theo Cramer Rao Lower Bound theorem, nói rằng một estimator W(**X**) sẽ có variance bị chặn dưới
+> bởi: Var_θ(W(**X**)) ≥ [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]]
 >
-> → Chính là Cramer Rao Lower Bound của variance của estimator W(**X**) nào
-> có E_θ[W(**X**)] = τ(θ)
+> Vậy thì, ở đây lại cho ta có √n[Wn - τ(θ)] → (d) n[0, ν(θ)], thì riêng điều này, theo như định nghĩa của
+> asymptotically variance, là variance của limiting distribution, thì như vậy, ν(θ) là asymptotically
+> variance của Wn.
 >
-> Như vậy, về cơ bản, nếu Wn, muốn trở thành một asymptotically efficient
-> estimator của τ(θ), thì nó phải thỏa:
+> Sau đó, nếu giá trị này lại bằng ([τ'(θ)]^2 / [E_θ[(∂/∂θ log f(**X**|θ))^2]])
 >
-> Phương sai tiệm cận của nó (asymptotical variance, được define là cái variance
-> của phân phối normal kết quả hội tụ phân phối của kn (Tn - τ(θ)) bằng với
-> Cramer Rao Lower Bound của variance của estimator W(**X**) nào có
-> E_θ[W(**X**)] = τ(θ)
+> mà cái này, nếu xét W(**X**) là unbiased estimator của τ(θ), tức E[W(**X**)] = τ(θ), ⇨ τ'(θ) = d/dθ
+> E[W(**X**)] ⇔ τ'(θ)^2 = [d/dθ E[W(**X**)]]^2
+>
+> hoặc, kể của W(**X**) là biased estimator của τ(θ), nhưng tại limit, bias = 0: lim n → inf E[Wn(**X**)] =
+> τ(θ) thì trong trường hợp này và trường hợp trên ta đều có:
+>
+> ([τ'(θ)]^2 / [E_θ[(∂/∂θ log f(**X**|θ))^2]]) chính là [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]],
+> tức Cramer Rao Lower Bound.
+>
+> Như vậy, về cơ bản, cái định nghĩa này nói rằng nếu một chuỗi estimator Wn của τ(θ) muốn được gọi
+> là asymptotically efficient, thì nó phải unbias: E[Wn(**X**)] = τ(θ) đồng thời, asymptotically variance
+> của nó, phải bằng đúng Cramer Rao Lower Bound.
+
+<br>
+
+<a id="node-863"></a>
+
+<p align="center"><kbd><img src="assets/9d91dae36abde2d0f58291d343701330510a9d1a.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Thế thì, tiếp theo là một theorem nói rằng, dưới một số điều kiện nhất định
+> (xem thêm trong phần Miscellanea) của hàm f(x|θ) và gọi θ^ là ML estimator
+> của θ, τ là hàm liên tục nào đó. Theorem này nói rằng:
+>
+> √n (τ(θ^) - τ(θ)) sẽ hội tụ phân phối về n(0, ν(θ)) với ν(θ) là Cramer Rao Lower
+> Bound (1)
+>
+> Điều này có nghĩa là dưới những điều kiện nhất định nói trên, thì **τ(θ^)** **sẽ
+> là một consistent và asymptotically efficient estimator** **của** **τ(θ)**.
+>
+> Nên hiểu, (1) hàm ý hai thứ:
+>
+> i) τ(θ^) → (p) τ(θ), và theo định nghĩa, đây cho thấy τ(θ^) là consistent
+> sequence of estimator của τ(θ). Chứng minh nhanh:
+>
+> Ta có √n (τ(θ^) - τ(θ)) → (d) n(0, ν(θ)) thì phải hiểu là √n (τ(θ^) - τ(θ)) → (d) Z ~
+> n(0, ν(θ)) (√n (τ(θ^) - τ(θ)) sẽ trở thành một random variable có phân phối n(0,
+> ν(θ)).
+>
+> Và 1/√n → 0 (đơn giản là vì lim n→inf 1/√n = 0
+>
+> Theo Slusky theorem: nếu Xn → (d) X, Yn → constant a thì XnYn → (d) aX,
+> vậy áp dụng vào đây √n (τ(θ^) - τ(θ)) × 1/√n → (d) 0 × Z = 0.
+>
+> Mà theo một theorem 5.5.13, nói rằng, nếu Xn → (d) constant μ ⇔ Xn → (p)
+> constant μ. Nên áp dụng theorem này, ta có √n (τ(θ^) - τ(θ)) × 1/√n = τ(θ^) -
+> τ(θ) cũng → (p) contant
+> 0. Và theo định nghĩa của consistent sequence of estimator, nếu P_θ(|Wn - θ|
+> < ε) = 1 ∀ε, cũng chính là nói Wn → (p) θ, thì Wn là consistent sequence of
+> estimator. Vậy, theo đó, τ(θ^) là consistent sequence of estimator của τ(θ)
+>
+> (nói là chuỗi là bởi vì phải tự hiểu θ^ là MLE, có bản chất cũng là một statistic,
+> một hàm của sample size n).
+>
+> ii) phân phối đích có variance là ν(θ), tức là cái này chính là asymptotically
+> variance của τ(θ^), mà cái này là CRLB, thì theo định nghĩa của asymtoptically
+> efficient, thì τ(θ^) chính là một asymtoptically efficient sequence of estimator
+> của τ(θ)
+>
+> Và nhờ phân tích trên mình cũng sẽ thấy rằng, thật ra efficient chính là sẽ
+> consistent. Là sao? Là vì theo định nghĩa của efficient: √n (τ(θ^) - τ(θ)) sẽ hội tụ
+> phân phối về n(0, ν(θ)) với ν(θ) là Cramer Rao Lower Bound, thì dựa vào cái
+> định nghĩa này, ta chứng minh như ở trên để cho thấy tính consistent. Vậy thì
+> một sequence estimator thỏa định nghĩa này, sẽ là efficient và cũng tự nhiên là
+> consistent, nên nói cách khác, efficient bao hàm consistent, thành ra nói vừa
+> efficient vừa consistent là thừa (redundant), mà trong phần sau gs nói chính là
+> này.
+
+<br>
+
+<a id="node-864"></a>
+
+<p align="center"><kbd><img src="assets/1f72e00d8c300a79b9a2e23ff65b0ebc4c5370c6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau
+
+<br>
+
+<a id="node-865"></a>
+
+<p align="center"><kbd><img src="assets/89f1293b599cc95063f151ac1b33215b00e63b9e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Phần này như trong note
+> trước đã hiểu rồi
 
 <br>
 

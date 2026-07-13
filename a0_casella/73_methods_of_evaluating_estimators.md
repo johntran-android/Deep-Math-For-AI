@@ -1428,22 +1428,26 @@
 <p align="center"><kbd><img src="assets/d01a70f295b920202c69f0db8deba8bc46a6adb2.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là tác giả nói dù Cramer - Rao Lower Bound được state với biến 
-> liên tục nhưng dĩ nhiên có thể apply với biến rời rạc, Thế thì yêu cầu sẽ
-> là có thể đổi chỗ sum và đạo hàm 
+> Đại khái là tác giả nói dù Cramer - Rao Lower Bound được state với biến liên tục
+> nhưng dĩ nhiên có thể apply với biến rời rạc, thì yêu cầu sẽ là có thể đổi chỗ
+> sum và đạo hàm.
 >
-> Một cái nữa là, nói về cái đại lượng E_θ[(∂/∂θ log f(**X**|θ))^2] được gọi là 
-> information number. Và nó phản ánh cái chặn dưới của variance của best
-> unbiased estimator of θ. Ta sẽ có chặn của variance càng nhỏ nếu như
-> thông tin càng lớn.
+> Một cái nữa là, nói về cái đại lượng E_θ[(∂/∂θ log f(**X**|θ))^2] được gọi là
+> **information number** hoặc **Fisher information**. Và nó phản ánh **giá trị chặn
+> dưới của variance của best unbiased estimator of θ**. Ta sẽ có chặn của
+> variance càng nhỏ nếu như thông tin càng lớn.
+>
+> Một ý nữa, đó là, một phiên bản mở rộng hơn của Cramer-Rao inequality gọi là
+> Information Inequality, trong đó, ta sẽ dở bỏ mọi assumption đới với candidata
+> estimator, và thay bằng giả định đối với density bên dưới. Và cái này tỏ ra rất
+> hữu ích trong việc so sánh các estimator.
 >
 > Rồi, tóm lại đến đây ta có:
 >
-> Với mọi hàm khả vi τ(θ), thì ta đã có chặn dưới về variance của bất kì 
-> estimator W thỏa  7.3.4 và E_θ(W) = τ(θ). Và cái bound chỉ phụ thuộc 
-> τ(θ) và f(x|θ). Mọi candidate estimator thỏa E_θ(W) = τ(θ) (tức là unbiased
-> estimator của τ(θ)) và có variance đạt mức này đều sẽ là BEST UNBIASED 
-> ESTIMATOR
+> Với mọi hàm khả vi τ(θ), thì ta đã có chặn dưới về variance của bất kì estimator
+> W thỏa 7.3.4 và E_θ(W) = τ(θ). Và cái bound chỉ phụ thuộc τ(θ) và f(x|θ). Mọi
+> candidate estimator thỏa E_θ(W) = τ(θ) (tức là unbiased estimator của τ(θ)) và
+> có variance đạt mức này đều sẽ là BEST UNBIASED ESTIMATOR
 
 <br>
 
