@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,436 notes` · `~16,907 screenshots` · `19 courses`** · work in progress
+**`~12,438 notes` · `~16,910 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -576,7 +576,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 315 Notes | 📸 434 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 317 Notes | 📸 437 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -611,7 +611,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [1.6 Information Theory](a0_bishop_prml/16_information_theory.md) — `26n / 32i` 
 - [Appendix D. Calculus of Variation](a0_bishop_prml/appendix_d_calculus_of_variation.md) — `5n / 7i` 
 - [3.0 & 3.1.0 Linear Basis Function Models](a0_bishop_prml/30_310_linear_basis_function_models.md) — `7n / 8i` 
-- [3.1.1 Maximum likelihood and least squares](a0_bishop_prml/311_maximum_likelihood_and_least_squares.md) — `5n / 6i` 
+- [3.1.1 Maximum likelihood and least squares](a0_bishop_prml/311_maximum_likelihood_and_least_squares.md) — `7n / 9i` 
 - [Appendix C - Matrices](a0_bishop_prml/appendix_c_matrices.md) — `19n / 20i`
 
 ### 📂 CS50X — Programming Foundations (📝 1259 Notes | 📸 1845 Screenshots)

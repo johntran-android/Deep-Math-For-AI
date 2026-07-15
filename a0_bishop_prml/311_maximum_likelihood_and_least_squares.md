@@ -1,6 +1,6 @@
 # 3.1.1 Maximum likelihood and least squares
 
-📊 **Progress:** `5` Notes | `6` Screenshots
+📊 **Progress:** `7` Notes | `9` Screenshots
 
 ---
 <a id="node-329"></a>
@@ -526,6 +526,140 @@
 > Trong cả hai ta đều dùng tính chất (AB)inv = Binv Ainv (identity này chỉ đúng khi A, B invertible)
 >
 > Điều này giải thích câu cuối, khi gs nói nếu **Φ** vuông và invertible, thì thì **Φ**^(+) = **Φ**inv
+
+<br>
+
+<a id="node-334"></a>
+
+<p align="center"><kbd><img src="assets/73390c4599f18573bc45944b4ecbce16fc438a99.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ý tưởng đoạn này đại khái là muốn xem thử với **w**ML, tức maximum likelihood estimator
+> của **w** thì **w**0 là cái gì?
+>
+> Thì lôi cái phần từ đầu tiên của **w**ML ra (chính là w0_ML) sẽ khó hơn là làm theo cách
+> này: Dù gì thì **w**ML cũng là cái có được khi ta giải first condition d/d**w** log Likelihood =
+> 0, và cũng tương đương d/d**w** E_D(**w**) = 0. Và bản chất cái này cũng chỉ là hệ các
+> phương trình ∂/∂wi E_D(**w**) = 0. Trong đó có ∂/∂w0 E_D(**w**) = 0. Nên bằng cách giải
+> ∂/∂w0 E_D(**w**) = 0, ta sẽ có w0_ML (phần tử đầu tiên của **w**ML), từ đó thông qua việc
+> xem nó là gì sẽ giúp ta hiểu về vai trò của w0, vốn là tham số không gắn với hàm Φi(**x**)
+> nào.
+>
+> Tự làm để hiểu: E_D(**w**), còn nhớ, là hàm đặt cho (1/2) Σi (ti - **w**T**Φ**(**x**))^2 = (1/2)
+> Σi (ti - Σj=0:M-1 wj × Φ(**x**i))^2
+>
+> Dưới đây để cho gọn Σj tức là Σj=1:M-1, Σi tức là Σi=1:N
+>
+> = (1/2) Σi (ti - w0 × Φ0(**x**j) - Σj wj × Φj(**x**i))^2
+>
+> = (1/2) Σi (ti - w0 × 1 - Σj wj × Φj(**x**i))^2 (Φ0(**x**j) = 1, nhớ không)
+>
+> = (1/2) Σi (ti - w0 - Σj wj × Φj(**x**i))^2
+>
+> d/dw0 = 0
+>
+> ⇔ d/dw0 [(1/2) Σi (ti - w0 - Σj wj × Φj(**x**i))]^2 = 0
+>
+> ⇔ (1/2) (-2) (Σi ti - Σi w0 - Σi[Σj wj × Φj(**x**i))] ) = 0
+>
+> ⇔ (Σi ti - Σi w0 - Σi[Σj wj × Φj(**x**i))] ) = 0
+>
+> ⇔ Σi w0 = Σi ti - Σi[Σj wj × Φj(**x**i))]
+>
+> ⇔ N w0 = Σi ti - Σj [wj × Σi Φj(**x**i)]
+>
+> ⇔ w0 = (Σi ti)/N - Σj [wj × (1/N)Σi Φj(**x**i)]
+>
+> Đặt (Σi ti)/N là t^ (trong sách là t bar) là trung bình của các t
+>
+> và (1/N)Σi Φj(**x**i) là Φj^, là trung bình của các phần tử j của các vector Φ(**x**i). Mà Φ(**x**)
+> như đã nói, là basis function, là function mà ta dùng để tạo ra một set các non-linear feature,
+> nên Φj(**x**) có thể coi là feature thứ j của sample **x**. Vậy (1/N)Σi Φj(**x**i) là trung bình
+> các feature thứ j
+>
+> Như vậy Σj [wj × (1/N)Σi Φj(**x**i)] sẽ là weighted sum của các trung bình của các feature.
+>
+> Nói cụ thể cho dễ hiểu, giả sử x1 là diện tích nhà, x2 là chiều dài nhà, x3 là số lầu,...thì
+> Φ1(**x**) là quy mô căn nhà (là hàm phi tuyến nào đó dựa trên các feature gốc x1, x2,...,
+> Φ2(**x**) là ưu thế về vị trí của căn nhà (cũng là hàm phi tuyến nào đó của feature gốc). Khi
+> đó (1/N) Σi Φ1(**x**i) sẽ là trung bình các quy mô căn nhà trong mọi căn nhà (**x**i) trong
+> dataset, (1/N) Σi Φ2(**x**i) là trung bình ưu thế về vị trí của mọi căn nhà. Và Σj [wj × (1/N)Σi
+> Φj(**x**i)] = w1 × (1/N) Σi Φ1(**x**i) + w2 × (1/N) Σi Φ2(**x**i) + ...chính là tổng tất cả các trung
+> bình trên, nhưng có trọng số là w1,w2,....
+>
+> Do đó, từ việc w0 = (Σi ti)/N - Σj [wj × (1/N)Σi Φj(**x**i)]  cho thấy rằng mô hình sẽ học ra cách
+> (nói vậy là vì, w0 ta đang xét chính là maximum likelihood estimator của w0, là thứ mà ta tìm
+> được để tối ưu likelihood) để BÙ ĐẮP (compensate) cho sự thiếu hụt giữa trung bình target
+> value (t^) và weighted sum của trung bình các basis function values.
+
+<br>
+
+<a id="node-335"></a>
+
+<p align="center"><kbd><img src="assets/57749c70b2868c71feac9f283d229b90f6e6bb75.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/99cfbbd39769aace45bb0467eb427d0d84289f44.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ok, nãy giờ là ta chỉ nói về **w**ML, đương nhiên tham số mô hình còn có
+> β - precision của distribution Normal mà ta assump rằng noise ε = T -
+> y(**w**,**x**) sẽ theo phân phối này.
+>
+> Để tìm βML, thì cũng chỉ đơn giản là cho đạo hàm của hàm log likelihood
+> (**w** ở đây đều là **w**ML) đối với β = 0:
+>
+> d/dβ [(N/2) ln(β) -( N/2) ln(2π) - β E_D(**w**)] = 0
+>
+> ⇔ d/dβ [(N/2) ln(β)] - d/dβ [β E_D(**w**)] = 0
+>
+> ⇔ d/dβ [(N/2) ln(β)] = d/dβ [β E_D(**w**)]
+>
+> ⇔(N/2) (1/β) = E_D(**w**)
+>
+> ⇔ 1/β = 2E_D(**w**)/N = (2/N) (1/2) Σi (ti - Σj=0:M-1 wj × Φj(**x**i))^2
+>
+> = (1/N) Σi (ti - Σj=0:M-1 wj × Φj(**x**i))^2
+>
+> Và đây chính là (1/β)ML (tức maximum likelihood estimator của 1/β, hay
+> cũng là σ^2_ML)
+>
+> Chỗ này nói rõ chút: Nên nhớ từ đầu đến giờ ta dựa trên assumption là
+> noise, cũng là residual = phần dư, phần sai lệch của T sau khi trừ đi
+> y(**w**,**x**), sẽ là random variable tuân theo normal(0, 1/β), và đièu này
+> cũng đồng nghĩa rằng ta đang assume T ~ normal(y(**w**,**x**), 1/β). Với
+> 1/β là ngịch đảo của precision, cũng chính là variance. Nên giờ khi ta
+> dùng maximum likelihood esimator approach để tìm esimator cho 1/β
+> (1/β)ML, thì cũng chính là maximum likelihood estimator cho variance của
+> Normal distribution noise.
+>
+> Và kết quả cho ra (1/β)ML = σ^2_ml = (1/N) Σi (ti - Σj=0:M-1 wj ×
+> Φj(**x**i))^2, thì cho ta gì?
+>
+> kết quả này là trung bình bình phương residual, nhưng nhìn theo góc nhìn
+> thống kê thì sẽ thấy nó chính là sample variance của ε
+>
+> Đầu bài ta đã nói rằng T là random variable, nên các data sample hình
+> thành một bộ các random variable T1,T2,...TN. Và tương ứng với mỗi T ta
+> có εi = Ti - y(w, **x**i), cũng là các random variable.
+>
+> Như vậy ta cũng có một bộ ε1, ε2,...εN, làm thành một sample, có
+> distribution đều là N(0, 1/β). Và ε1,...εN độc lập, nên theo khung xác suất
+> thống kê thì ta đang có một random sample size N ε1, ..εN iid independent
+> identically distribution, có cùng distribution N(0, 1/β)
+>
+> Variance, Var(ε) = E[ε^2] - [E(ε)]^2
+>
+> Nhưng vì residual ε có mean là 0: E[ε] = 0, nên: Var(ε) = E[ε^2]
+>
+> và (1/N) Σi (εi^2) có thể coi như một giá trị thực nghiệm ước lượng mức
+> biến động của ε
+>
+> và mang ý nghĩa cho thấy trung bình độ biến động của Ti xung quanh
+> mean y(**x**i,w)
+>
+> Và cái này giúp ta hiểu vì sao mr Bishop nói "we see that the inverse of
+> the noise precision is given by the residual variance of the target values
+> around the regression function"
 
 <br>
 
