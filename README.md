@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,435 notes` · `~16,905 screenshots` · `19 courses`** · work in progress
+**`~12,436 notes` · `~16,907 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -537,7 +537,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [Lec 10](a0_ee364a/lec_10.md) — `35n / 64i` 
 - [Chap 11:1,2,3,4,5](a0_ee364a/chap_1112345.md) — `53n / 95i`
 
-### 📂 Numerical Optimization — Nocedal & Wright (📝 367 Notes | 📸 508 Screenshots)
+### 📂 Numerical Optimization — Nocedal & Wright (📝 368 Notes | 📸 510 Screenshots)
 
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i` 
 - [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i` 
@@ -562,7 +562,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [8.2 Automatic differentiation(*extremely important for AI)](numerical_optimization/82_automatic_differentiationextremely_important_for_ai.md) — `36n / 46i` 
 - [10.1 Least-square problem](numerical_optimization/101_least_square_problem.md) — `11n / 13i` 
 - [10.2 Linear Least-Square Problem](numerical_optimization/102_linear_least_square_problem.md) — `9n / 11i` 
-- [10.3 Algorithms for nonlinear least-squares problem](numerical_optimization/103_algorithms_for_nonlinear_least_squares_problem.md) — `2n / 2i` 
+- [10.3 Algorithms for nonlinear least-squares problem](numerical_optimization/103_algorithms_for_nonlinear_least_squares_problem.md) — `3n / 4i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i` 
 - [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization/a1_matrix_factorizations_cholesky_lu_qr.md) — `9n / 11i`
 
