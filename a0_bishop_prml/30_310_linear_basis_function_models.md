@@ -1,18 +1,8 @@
-# Chap 3 - Linear Model for Regression
+# 3.0 & 3.1.0 Linear Basis Function Models
 
 📊 **Progress:** `7` Notes | `8` Screenshots
 
 ---
-
-<a id="node-320"></a>
-## 3.0 & 3.1 Linear Basis
-
-> [!NOTE]
-> 3.0 & 3.1 Linear Basis
-> Function Models
-
-<br>
-
 <a id="node-321"></a>
 
 <p align="center"><kbd><img src="assets/8da16ae5865e933e67fb7bd067e4219fe8253384.png" width="100%"></kbd></p>
@@ -47,69 +37,86 @@
 <p align="center"><kbd><img src="assets/2e9f42fcd7f222a7ddf95ff7f901b0320a581461.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là, đề bài sẽ là. ta có N giá trị quan sát {**x**1, ....**x**N} (**x**i là vector D chiều), cũng như đi kèm
-> là các giá trị target t1, ...tN tương ứng. Mục tiêu sẽ là xây dựng hàm dựa đoán t từ một vector **x** mới.
+> Đại ý là, đề bài sẽ là. ta có N giá trị quan sát {**x**1, ....**x**N} (**x**i là
+> vector D chiều), cũng như đi kèm là các giá trị target t1, ...tN tương ứng.
+> Mục tiêu sẽ là xây dựng hàm dựa đoán t từ một vector **x** mới.
 >
-> Vậy thì đại khái là, ông nói, nếu làm đơn giản, ta có thể xây dựng hàm dự đoán y(**x**) để dự đoán t
-> một cách trực tiếp.
+> Vậy thì đại khái là, ông nói, nếu làm đơn giản, ta có thể xây dựng hàm dự
+> đoán y(**x**) để dự đoán t một cách trực tiếp.
 >
-> Tuy nhiên, với góc nhìn xác suất, ta sẽ muốn xây dựng một cái gọi là predictive distribution (khái niệm
-> đã gặp ở chap 1) f(t|**x**), vì nó sẽ giúp thể hiện tính uncetainty. Và từ đó, ta sẽ đưa ra dự đoán t, theo
-> cách thức giúp giảm thiểu giá trị trung bình của loss mà ta chọn. Phổ biến hay dùng là squared loss, khi
-> đó, cái cách để đưa ra dự đoán t giúp giảm trung bình squared error loss chính là dùng mean của cái
-> predictive distribution này (chính là cái mà gs nói - conditional expectation of t, E[t|**x**], chính là mean
-> của phân phối f(t|**x**))
+> Tuy nhiên, với góc nhìn xác suất, ta sẽ muốn xây dựng một cái gọi là
+> predictive distribution (khái niệm đã gặp ở chap 1) f(t|**x**), vì nó sẽ giúp
+> thể hiện tính uncetainty. Và từ đó, ta sẽ đưa ra dự đoán t, theo cách thức
+> giúp giảm thiểu giá trị trung bình của loss mà ta chọn. Phổ biến hay dùng
+> là squared loss, khi đó, cái cách để đưa ra dự đoán t giúp giảm trung bình
+> squared error loss chính là dùng mean của cái predictive distribution này
+> (chính là cái mà gs nói - conditional expectation of t, E[t|**x**], chính là
+> mean của phân phối f(t|**x**))
 >
-> Cuối cùng, ông nói tuy linear model có nhiều hạn chế đáng kể trong bài toán pattern recognition, ví dụ
-> như khi input space là không gian cao chiều (D lớn), tuy nhiên, mô hình này có những đặc điểm tốt về
-> mặt phân tích (analytical properties) và do đó, nó đóng vai trò nền tảng cho nhiều mô hình phức tạp sau
-> này.
+> Cuối cùng, ông nói tuy linear model có nhiều hạn chế đáng kể trong bài
+> toán pattern recognition, ví dụ như khi input space là không gian cao chiều
+> (D lớn), tuy nhiên, mô hình này có những đặc điểm tốt về mặt phân tích
+> (analytical properties) và do đó, nó đóng vai trò nền tảng cho nhiều mô
+> hình phức tạp sau này.
 >
-> Dù mình đoán gs Bishop cũng sẽ nhắc lại, nói lại về cái ý vừa nói ở trên - cái gì mà thay vì xây dựng
-> hàm y(x) dự đoán t, ta xây dựng predictive distribution, và từ đó đưa ra dự đoán, theo cái cách thức nào
-> đó giúp giảm kì vọng (trung bình) loss. Để rồi nếu làm theo cách phổ biến - dùng loss là squared loss thì
-> ta sẽ lấy conditional expectation để dùng dự đoán cho t. Có thể nhớ lại cái này chút xíu:
+> Dù mình đoán gs Bishop cũng sẽ nhắc lại, nói lại về cái ý vừa nói ở trên -
+> cái gì mà thay vì xây dựng hàm y(x) dự đoán t, ta xây dựng predictive
+> distribution, và từ đó đưa ra dự đoán, theo cái cách thức nào đó giúp giảm
+> kì vọng (trung bình) loss. Để rồi nếu làm theo cách phổ biến - dùng loss là
+> squared loss thì ta sẽ lấy conditional expectation để dùng dự đoán cho t.
+> Có thể nhớ lại cái này chút xíu:
 >
-> Đầu tiên, cái ý mà gs nói xây dựng hàm y(x) dự đoán thẳng ra t, thì đại ý là, ta xây dựng một function
-> dựa trên tham số nào đó, để rồi với x đưa vào, lấy ra t luôn. Nhưng làm như vậy, không phản ánh được
-> tính chất không chắc chắn. Ví dụ, làm sao để ta thể hiện ý "với x này, tôi đoán t sẽ bằng như này,
-> nhưng không chắc lắm, nhưng tôi tin t sẽ bằng như kia hơn, tức tôi chắc chắn hơn". Do đó, để thể hiện
-> cái ý rằng, sự dự đoán của ta có yếu tố không chắc, thì ta sẽ dùng một probability distribution, gọi là
+> Đầu tiên, cái ý mà gs nói xây dựng hàm y(x) dự đoán thẳng ra t, thì đại ý
+> là, ta xây dựng một function dựa trên tham số nào đó, để rồi với x đưa vào,
+> lấy ra t luôn. Nhưng làm như vậy, không phản ánh được tính chất không
+> chắc chắn. Ví dụ, làm sao để ta thể hiện ý "với x này, tôi đoán t sẽ bằng
+> như này, nhưng không chắc lắm, nhưng tôi tin t sẽ bằng như kia hơn, tức
+> tôi chắc chắn hơn". Do đó, để thể hiện cái ý rằng, sự dự đoán của ta có
+> yếu tố không chắc, thì ta sẽ dùng một probability distribution, gọi là
 > predictive distribution f(t|**x**).
 >
-> Thế thì f(t|**x**), tất nhiên, đã học xác suất từ Casella hay Stat110, nó là conditional probability
-> distribution, hay nếu nói theo kiểu prior/posterior, thì nó chính là posterior distribution của T.
+> Thế thì f(t|**x**), tất nhiên, đã học xác suất từ Casella hay Stat110, nó là
+> conditional probability distribution, hay nếu nói theo kiểu prior/posterior, thì
+> nó chính là posterior distribution của T.
 >
-> Rồi, mình còn nhớ bài toán polynomial curfitting, cũng có bối cảnh chung của bài toán linear regression
-> cho các observed data (**x**1, t1), ....(**x**N, tN).
+> Rồi, mình còn nhớ bài toán polynomial curfitting, cũng có bối cảnh chung
+> của bài toán linear regression cho các observed data (**x**1, t1), ....(**x**N,
+> tN).
 >
-> Đầu tiên sẽ có ích khi ôn lại bài toán point estimation của Casella: Cho random sample **X** = (X1,....
-> Xn) iid ~ f(x|θ). Nhiệm vụ là muốn xây dựng một hàm của sample W(**X**), sao cho tại observed value
-> của **X**, ta có W(**x**) estimate tốt cho θ. Sau đó, vì định nghĩa của point estimator quá mơ hồ (bất cứ
-> hàm của sample nào cũng có thể là một point estiamator cho θ (nhưng có là estimator tốt hay không thì
-> chưa biết) nên ta mới có vài phương pháp tiếp cận chính: Method of Moment, Maximum Likelihood,
+> Đầu tiên sẽ có ích khi ôn lại bài toán point estimation của Casella: Cho
+> random sample **X** = (X1,.... Xn) iid ~ f(x|θ). Nhiệm vụ là muốn xây dựng
+> một hàm của sample W(**X**), sao cho tại observed value của **X**, ta có
+> W(**x**) estimate tốt cho θ. Sau đó, vì định nghĩa của point estimator quá
+> mơ hồ (bất cứ hàm của sample nào cũng có thể là một point estiamator
+> cho θ (nhưng có là estimator tốt hay không thì chưa biết) nên ta mới có vài
+> phương pháp tiếp cận chính: Method of Moment, Maximum Likelihood,
 > Bayes estimator.
 >
-> Thế thì tạm gác lại hai cái đầu, mình nói luôn sang Bayes estimator. Đã đụng tới chữ Bayes, dĩ nhiên là
-> ta dùng quan điểm (perspective) của trường phái Bayesian - coi θ không phải là fixed nhưng unknown
-> như trường phải classic (hay Frequentist), mà ta coi nó là random variable (vector). Để rồi, khi chưa có
-> data gì, ta chọn cho nó distribution nào đó, dựa vào niềm tin ban đầu (prior knowledge), ví dụ như kinh
-> nghiệm hay sao đó, gọi là prior distribution của θ, f(θ), hay trong sách Casella dùng π(θ). Sau đó, dựa
-> vào Bayes theorem, ta sẽ xây dựng posterior distribution của θ, chính là f(θ|**x**), hay π(θ|**x**) =
-> f(x|θ)π(θ)/f(**x**).
+> Thế thì tạm gác lại hai cái đầu, mình nói luôn sang Bayes estimator. Đã
+> đụng tới chữ Bayes, dĩ nhiên là ta dùng quan điểm (perspective) của
+> trường phái Bayesian - coi θ không phải là fixed nhưng unknown như
+> trường phải classic (hay Frequentist), mà ta coi nó là random variable
+> (vector). Để rồi, khi chưa có data gì, ta chọn cho nó distribution nào đó,
+> dựa vào niềm tin ban đầu (prior knowledge), ví dụ như kinh nghiệm hay
+> sao đó, gọi là prior distribution của θ, f(θ), hay trong sách Casella dùng
+> π(θ). Sau đó, dựa vào Bayes theorem, ta sẽ xây dựng posterior distribution
+> của θ, chính là f(θ|**x**), hay π(θ|**x**) = f(x|θ)π(θ)/f(**x**).
 >
-> Và lúc này, với một distribution, thì nhiệm vụ vẫn là, cần đưa ra một point estimator, là một hàm của
-> sample W(**X**). Vậy thì point estimator là cái gì đây?
+> Và lúc này, với một distribution, thì nhiệm vụ vẫn là, cần đưa ra một point
+> estimator, là một hàm của sample W(**X**). Vậy thì point estimator là cái gì
+> đây?
 >
-> Câu trả lời, là, ta sẽ cần viện tới decision theory, trong đó ta sẽ tính có các khái niệm như loss function,
-> risk function. Vì thứ mà ta có là một distribution, vốn phản ánh tính không chắc chắn, nên cần dựa vào lí
-> thuyết này để đưa ra quyết định tối ưu.
+> Câu trả lời, là, ta sẽ cần viện tới decision theory, trong đó ta sẽ tính có các
+> khái niệm như loss function, risk function. Vì thứ mà ta có là một
+> distribution, vốn phản ánh tính không chắc chắn, nên cần dựa vào lí thuyết
+> này để đưa ra quyết định tối ưu.
 >
-> Vậy thì, loss function, là hàm của một estimator, được định nghĩa phản ánh độ sai lệch, của estimator
-> và giá trị param. Cái này nó giống định nghĩa của MSE, MSE cũng là một hàm của estimator, được định
-> nghĩa bằng trung bình của W(**X**) - θ:
+> Vậy thì, loss function, là hàm của một estimator, được định nghĩa phản ánh
+> độ sai lệch, của estimator và giá trị param. Cái này nó giống định nghĩa
+> của MSE, MSE cũng là một hàm của estimator, được định nghĩa bằng
+> trung bình của W(**X**) - θ:
 >
-> Bias(W(**X**) = E_θ[(W - θ)^2], để rồi triển khai ra, ta sẽ có:
+> MSE(W(**X**) = E_θ[(W - θ)^2], để rồi triển khai ra, ta sẽ có:
 >
 > = E_θ[W^2 - 2Wθ + θ^2]
 >
@@ -125,72 +132,97 @@
 >
 > = Var(W) + [Bias(W)]^2
 >
-> Quay lại với hàm loss, L(W, θ), như đã nói, có thể có nhiều loại, một loại cụ thể là ta có thể có square
-> error loss: L(W(**X**), θ) = (W(**X**) - θ)^2
+> Quay lại với hàm loss, L(W, θ), như đã nói, có thể có nhiều loại, một loại cụ
+> thể là ta có thể có square error loss: L(W(**X**), θ) = (W(**X**) - θ)^2
 >
-> lấy trung bình: E_θ[L(W, θ)], đây chính là risk function. (có nghĩa là với loss là squared error loss thì
-> MSE chính là risk function thôi)
+> lấy trung bình: E_θ[L(W, θ)], đây chính là risk function. (có nghĩa là với loss
+> là squared error loss thì MSE chính là risk function thôi)
 >
-> Lưu ý, W(**X**) là statistic, tức cũng là random variable, thì L(W(**X**), θ) cũng là random variable, nên
-> dĩ nhiên ta có quyền lấy trung bình / expected value của nó, và vì bản chất đều là function của sample
-> **X** ~ f(**x**|θ), nên distribution của L(W(**X**), θ) sẽ phụ thuộc θ, nên ta mới ghi là E_θ[L(W(**X**), θ)],
-> ám chỉ kì vọng này, sẽ là hàm phụ thuộc θ do distribution của của L(W(**X**), θ) sẽ phụ thuộc θ.
+> Lưu ý, W(**X**) là statistic, tức cũng là random variable, thì L(W(**X**), θ)
+> cũng là random variable, nên dĩ nhiên ta có quyền lấy trung bình /
+> expected value của nó, và vì bản chất đều là function của sample **X** ~
+> f(**x**|θ), nên distribution của L(W(**X**), θ) sẽ phụ thuộc θ, nên ta mới ghi
+> là E_θ[L(W(**X**), θ)], ám chỉ kì vọng này, sẽ là hàm phụ thuộc θ do
+> distribution của của L(W(**X**), θ) sẽ phụ thuộc θ.
 >
-> Và với risk function, hay loss function, nó không phân biệt classic hay Bayessian, vì việc ta lấy kì vọng,
-> là đang kì vọng của random variable L(W(**X**), θ). Và điềy này mang ý nghĩa bằng lời là, ta đã biết
-> loss của W(**X**) khi estimate cho θ, thì bây giờ ta tính trung bình trên mọi giá trị của **X**:
+> Và với risk function, hay loss function, nó không phân biệt classic hay
+> Bayessian, vì việc ta lấy kì vọng, là đang kì vọng của random variable
+> L(W(**X**), θ). Và điềy này mang ý nghĩa bằng lời là, ta đã biết loss của
+> W(**X**) khi estimate cho θ, thì bây giờ ta tính trung bình trên mọi giá trị
+> của **X**:
 >
 > R(θ, W(**X**)) = E[L(W(**X**), θ)] = ∫L(W(**x**), θ)f(**x**|θ)d**x**
 >
-> Thế thì, nếu giờ ta quay lại với việc đang xét Bayesian approach, và có θ ~ prior distribution f(θ).
+> Thế thì, nếu giờ ta quay lại với việc đang xét Bayesian approach, và có θ ~
+> prior distribution f(θ).
 >
-> Thì lúc này E_θ[L(W(**X**), θ)], hay R(θ, W(**X**)) với tư cách là function của θ, cũng lại là random
-> variable. Từ đó ta được quyền lấy kì vọng của nó: E[R(θ, W(**X**))] và lần này, đây là kì vọng của một
-> random variable có được bằng cách áp một hàm lên θ, vốn dĩ là một random variable có phân phối
-> π(θ). Và đây chính là **Bayes risk**, nó sẽ không còn là một random variable nữa, mà là một fixed
-> number, vì ta đã intergrate mọi possible value của θ rồi.
+> Thì lúc này E_θ[L(W(**X**), θ)], hay R(θ, W(**X**)) với tư cách là function
+> của θ, cũng lại là random variable. Từ đó ta được quyền lấy kì vọng của
+> nó: E[R(θ, W(**X**))] và lần này, đây là kì vọng của một random variable có
+> được bằng cách áp một hàm lên θ, vốn dĩ là một random variable có phân
+> phối π(θ). Và đây chính là **Bayes risk**, nó sẽ không còn là một random
+> variable nữa, mà là một fixed number, vì ta đã intergrate mọi possible value
+> của θ rồi.
 >
 > Bayes risk = ∫[risk function] π(θ) dθ = ∫R(θ, W(**X**)) π(θ) dθ
 >
-> Điều này cũng có thể hiểu theo cách khác, là ta có L(W(**X**), θ) là function của random variable **X**
-> và θ. Và kì vọng của nó chính là ta tính trung bình của L, dựa trên **joint distribution** của **X** và θ
+> Điều này cũng có thể hiểu theo cách khác, là ta có L(W(**X**), θ) là
+> function của random variable **X** và θ. Và kì vọng của nó chính là ta tính
+> trung bình của L, dựa trên **joint distribution** của **X** và θ
 >
-> E[L(W(**X**), θ)] = ∫∫ L(W(**X**), θ) f(**x**, θ) d**x** dθ
+> E[L(W(**X**), θ)] = ∫∫ L(W(**x**), θ) f(**x**, θ) d**x** dθ
 >
-> = ∫∫L(W(**X**), θ) f(**x**|θ) π(θ) d**x** dθ
+> = ∫∫L(W(**x**), θ) f(**x**|θ) π(θ) d**x** dθ
 >
-> = ∫ [∫L(W(**X**), θ) f(**x**|θ) d**x**] π(θ) d**x** dθ
+> = ∫ [∫L(W(**x**), θ) f(**x**|θ) d**x**] π(θ) d**x** dθ
 >
 > ∫L(W(**x**), θ)f(**x**|θ)d**x** chính là risk function R(W(**X**), θ)
 >
-> .. = ∫ [R(W(**X**), θ)] π(θ) dθ → Bayes risk
+> .. = ∫ [R(W(**x**), θ)] π(θ) dθ → Bayes risk
 >
 > Do đó nếu biến đổi tí ta sẽ thấy nó cũng là:
 >
-> ∫∫ L(W(**X**), θ) f(**x**|θ) π(θ) d**x** dθ
+> ∫∫ L(W(**x**), θ) f(**x**|θ) π(θ) d**x** dθ
 >
-> = ∫ [∫L(W(**X**), θ) f(θ|**x**) dθ] f(**x**) d**x**
+> = ∫ [∫L(W(**x**), θ) f(θ|**x**) dθ] f(**x**) d**x**
 >
-> Thì ∫L(W(**X**), θ) f(θ|**x**) dθ chính là **posterior expected loss**
+> Thì ∫L(W(**x**), θ) f(θ|**x**) dθ chính là **posterior expected loss**
 >
-> để rồi ta sẽ nhìn nhận bayes risk như việc ta tính trung bình posterior expected loss over mọi possible
-> value của **X**.
+> để rồi ta sẽ nhìn nhận bayes risk như việc ta tính trung bình posterior
+> expected loss over mọi possible value của **X**.
 >
-> Và quay lại mục tiêu đưa ra point estimator từ posterior distribution, thì mục tiêu sẽ là giảm thiểu Bayes
-> risk: minimize_θ ∫ [∫L(W(**X**), θ) f(θ|**x**) dθ] f(**x**) d**x**
+> Và quay lại mục tiêu đưa ra point estimator từ posterior distribution, thì
+> mục tiêu sẽ là giảm thiểu Bayes risk: minimize_W ∫ [∫L(W(**X**), θ) f(θ|**x**)
+> dθ] f(**x**) d**x**
 >
-> Và điều này (với vài lập luận) sẽ tương đương minimize ∫L(W(**X**), θ) f(θ|**x**) dθ, tức minimize
-> posterior expect loss.
+> Và điều này (với vài lập luận) sẽ tương đương minimize ∫L(W(**X**), θ)
+> f(θ|**x**) dθ, tức minimize posterior expect loss.
 >
-> Giả sử dùng squared error loss, thì solution chính là E[θ|**x**], tức posterior mean
+> Ta có bài toán: minimize (over W(x)) ∫L(W(x), θ) f(θ|x) dθ
+>
+> Giả sử dùng squared error loss: ∫L(W(x), θ) f(θ|x) dθ = ∫[W(x) - θ]^2 f(θ|x)
+> dθ,
+>
+> dễ thấy, đây chính là E[(W(x) - θ)^2] với θ ~ f(θ|x).
+>
+> Và bài toán lúc này tương đương: tìm a để E[(X - a)^2] nhỏ nhất. Ta có
+> E[(X - a)^2] = E[X^2 - 2aEX + a^2] = E[X^2] - E[2aEX] + E[a^2] = E[X^2] -
+> 2a(EX) + a^2. Để cái này nhỏ nhất, thì -2a EX + a^2 nhỏ nhất. Đây là hàm
+> bậc hai của a. Đạo hàm: 2a - 2EX. Cho đạo hàm bằng 0, ta có a = EX,
+> chính là minimizer.
+>
+> Áp dụng vào bài toán tìm W để E[(W(x) - θ)^2] nhỏ nhất với θ ~ f(θ|x), thì
+> solution là W(X) = E[θ] với θ ~ f(θ|x), thì cũng có thể ghi là W(X) = E[θ|X],
+> tức posterior mean, và đây chính là Bayes estimator minimize Bayes risk
+> với squared error loss
 >
 > Vậy thì nãy giờ là nói về bài toán inference: suy luận θ từ data.
 >
-> Với bài toán prediction, ta không quan tâm θ, mà ta quan tâm đến việc dự đoán T, nên đại ý là ta sẽ xây
-> dựng predictive distribution f(t|θ,**x**)
+> Với bài toán prediction, ta không quan tâm θ, mà ta quan tâm đến việc dự
+> đoán T, nên đại ý là ta sẽ xây dựng predictive distribution f(t|θ,**x**)
 >
-> Và để ra quyết định tối ưu, hoàn toàn tương tự, ta cũng giải bài toán minimize expected loss, và kết quả
-> nếu loss là squared error, sẽ là E[t|**x**]
+> Và để ra quyết định tối ưu, hoàn toàn tương tự, ta cũng giải bài toán
+> minimize expected loss, và kết quả nếu loss là squared error, sẽ là E[t|**x**]
 
 <br>
 
