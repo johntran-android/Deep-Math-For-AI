@@ -3511,8 +3511,9 @@
 >
 > = ∫\/X\/ { ∫Θ L(θ,δ(**x**) π(θ|**x**) m(**x**) dθ } d**x** = ∫X { ∫Θ L(θ,δ(**x**) π(θ|**x**) dθ } m(**x**) d**x** Và **∫**Θ L(θ,δ(**x**) π(θ|**x**)dθ chính là cái gọi là posterior expected loss
 >
-> Nó không phụ thuộc θ, và với một giá trị cụ thể **x**, thì nó có một giá trị cụ
-> thể, thành ra bài toán chỉ là, tìm δ để minimize cái này.
+>
+> Nên nhớ, biến tối ưu là δ, nên với một giá trị cụ thể **x**, thì ∫Θ L(θ,δ(**x**) π(θ|**x**)dθ
+>  có một giá trị cụ thể, thành ra bài toán chỉ là, tìm δ để minimize  ∫Θ L(θ,δ(x) π(θ|**x**)dθ
 >
 > Quay lại đây, khi dùng square error loss cho L ta sẽ có:
 >

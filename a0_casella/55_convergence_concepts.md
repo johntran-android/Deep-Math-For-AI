@@ -1359,33 +1359,31 @@
 <p align="center"><kbd><img src="assets/8269f23bd843019ff9bdc0fec78795d2134fa599.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là khi dùng Taylor series approximation để estimate mean và
-> variance ta có Theorem Δ Method rất hữu ích: Đại khái là, 
+> Qua Delta Method, theorem này nói rằng:
 >
-> cho Yn là một chuỗi các random variables thỏa √n(Yn - θ) → (d) n(0, σ^2)  
+> Cho Yn là một chuỗi các random variables thỏa √n(Yn - θ) → (d) n(0, σ^2) (có
+> nghĩa là n → inf thì cdf của √n(Yn - θ) → cdf của n(0, σ^2)).
 >
-> (có nghĩa là n → inf thì cdf của √n(Yn - θ) → cdf của n(0, σ^2)). 
+> Cho hàm g và giá trị cụ thể của θ, giả thiết g'(θ) tồn tại và khác 0. theorem này
+> nói rằng:
 >
-> Ví dụ như ta có một random sample X1,...Xn có population mean μ,
-> population variance σ^2
+> √n[g(Yn) - g(θ)] → (d) n(0, σ^2[g'(θ)]^2)
 >
-> Và ta lấy sample mean Xnbar = Σi Xi, thì theo CLI, √n(Xnbar - μ) / σ
-> sẽ → (d) n(0,1). 
+> Ví dụ như ta có một random sample X1,...Xn có population mean μ, population
+> variance σ^2
 >
-> Thì bối cảnh ở đây chính là, có thể áp dụng cho chuỗi Xnbar đó. Vì chuỗi
-> Xnbar cũng thỏa mãn yêu cầu.  
+> Và ta lấy sample mean Xbar_n = (Σi Xi)/n, thì theo CLI, √n (Xnbar - μ) / σ sẽ →
+> (d) n(0,1).
 >
-> Cho hàm g và
-> giá trị cụ thể của θ, giả thiết g'(θ) tồn tại và khác 0. theorem  này nói rằng:
->
-> **√n[g(Yn) - g(θ)] → n(0, σ^2[g'(θ)]^2) in distribution**
+> Thì bối cảnh ở đây chính là, có thể áp dụng cho chuỗi Xbar_n đó. Vì chuỗi
+> Xnbar cũng thỏa mãn yêu cầu.
 >
 > Chứng minh:
 >
-> Slutsky theorem nói rằng cho Xn → X in distribution và Yn → a in
-> probability thì XnYn → aX in distribution.
+> Slutsky theorem nói rằng cho Xn → X in distribution và Yn → a in probability thì
+> XnYn → aX in distribution.
 >
-> Thế thì ở đây ta có Taylor expansion của g(Yn) quanhh θ:
+> Thế thì ở đây ta có Taylor expansion của g(Yn) quanh θ:
 >
 > g(Yn) = g(θ) + g'(θ)(Yn - θ) + remainder
 >
@@ -1393,42 +1391,44 @@
 >
 > Vậy thì Yn → θ in probability, và remainder → 0 in probability.
 >
-> Rồi, ta có √n(Yn - θ) → X với X ~ n(0, σ^2)
+> Rồi, ta có đề bài cho chuỗi Yn thỏa √n(Yn - θ) → X với X ~ n(0, σ^2) (chuỗi Yn
+> ở đây có thể là chuỗi sample mean của sample có mean θ, nên theo CLT thì
+> √n(Yn - θ) → (d) n(0, σ^2)
 >
-> Ta có approx. g(Yn) ≈ g(θ) + g'(θ)(Yn - θ) ⇔ g'(θ)(Yn - θ) ≈ g(Yn) - g(θ)
+> Ta có approx:
+>
+> g(Yn) ≈ g(θ) + g'(θ)(Yn - θ)
+>
+> ⇔ g'(θ)(Yn - θ) ≈ g(Yn) - g(θ)
 >
 > ⇔ √n g'(θ)(Yn - θ) ≈ √n (g(Yn) - g(θ))
 >
 > ⇔ g'(θ) √n (Yn - θ) ≈ √n (g(Yn) - g(θ))
 >
-> Vậy thì xét vế trái, nó có:
+> Vậy thì xét vế trái, nó gồm g'(θ) nhân √n(Yn - θ) :
 >
-> √n(Yn - θ) → X ~ n(0, σ^2)
+> √n(Yn - θ) → (d) X ~ n(0, σ^2)
 >
-> còn g'(θ), thì nó là constant, mà constant thì cũng → chính nó.
+> g'(θ) → (p) g'(θ) (vì g'(θ) là constant, mà constant thì cũng → chính nó)
 >
-> Theo Slutsky, Xn → X in distribution, và Yn → a in probability
-> thì XnYn → (d) Xa 
+> Theo Slutsky, Xn → (d) X in distribution, và Yn → (p) a in probability thì XnYn →
+> (d) Xa
 >
-> ở đây, √n(Yn - θ) →(d) n(0,1), hay cũng là →(d) Z ~ n(0,1)
->
-> và g'(θ) là constant, cũng coi như →(p) g'(θ)
->
-> Do đó theo theorem này, g'(θ) √n (Yn - θ) sẽ → g'(θ) X với X ~ n(0, σ^2) in
+> Do đó theo theorem này, g'(θ) √n (Yn - θ) sẽ → (d) g'(θ) X với X ~ n(0, σ^2) in
 > distribution
 >
 > Mà xét random variable U = g'(θ) X:
 >
-> nhớ lại location scale, có một theorem nói rằng nếu ta có Z là standard
-> member của family với location 0, scale 1, có pdf là f(z)  thì X = σZ + μ sẽ
-> là member có location μ, scale σ. Nên ở đây X là thành  viên có location 0,
-> scale σ, tại nó là n(0, σ^2) Nên nhất định nó có dạng = σZ
+> nhớ lại location scale, có một theorem nói rằng nếu ta có Z là standard member
+> của family với location 0, scale 1, có pdf là f(z) thì X = σZ + μ sẽ là member có
+> location μ, scale σ. Nên ở đây X là thành viên có location 0, scale σ, tại nó là
+> n(0, σ^2) Nên nhất định nó có dạng = σZ
 >
-> Rồi, bây giờ ta có U = g'(θ)X = g'(θ) σ Z, thì dĩ nhiên U chính là ~ thành
-> viên của family có location 0, scale = g'(θ) σ. Và với normal distribution thì
-> location cũng là mean và scale cũng chính là standard deviation.
+> Rồi, bây giờ ta có U = g'(θ)X = g'(θ) σ Z, thì dĩ nhiên U chính là ~ thành viên
+> của family có location 0, scale = g'(θ) σ. Và với normal distribution thì location
+> cũng là mean và scale cũng chính là standard deviation.
 >
-> Từ đó kết luận U ~ n(0, g'(θ)^2 σ^2)
+> Từ đó kết luận U ~ n(0, g'(θ)^2 × σ^2)
 
 <br>
 

@@ -1,6 +1,6 @@
 # 10.1 Asymtotic Evaluation - Point Estimation
 
-📊 **Progress:** `17` Notes | `20` Screenshots
+📊 **Progress:** `18` Notes | `21` Screenshots
 
 ---
 
@@ -530,58 +530,65 @@
 🔗 **Related:** [7.3 METHODS OF EVALUATING ESTIMATORS](73_methods_of_evaluating_estimators.md#node-617)
 
 > [!NOTE]
-> Nói ngắn gọn, ở đây người ta **định nghĩa** ra cái gọi là khi nào thì **chuỗi estimator Wn** được gọi là
-> **ASYMPTOTICALLY EFFICIENT** của một parameter τ(θ), đó là nếu như **asymptotic variance của
-> nó có thể đạt được giá trị variance nhỏ nhất được thể hiện bởi giá trị chặn dưới Cramer-Rao (lower
+> Nói ngắn gọn, ở đây người ta **định nghĩa** ra cái gọi là khi nào thì **chuỗi
+> estimator Wn** được gọi là **ASYMPTOTICALLY EFFICIENT** của một
+> parameter τ(θ), đó là nếu như **asymptotic variance của nó có thể đạt được giá
+> trị variance nhỏ nhất được thể hiện bởi giá trị chặn dưới Cramer-Rao (lower
 > bound)**.
 >
-> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower Bound là cái gì), đã học
-> ở chap 7, trong phần đánh giá chất lượng của các point estimator. Nói ngắn gọn, khi cần phải đánh
-> giá các estimator (evaluating estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là
-> một hàm của estimator: MSE(W(**X**)) = E_θ[(W(**X**) - θ)^2], và ta muốn cái này càng nhỏ càng tốt.
-> Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var_θ [W(**X**)] + [Bias(W(**X**)]^2 với
-> Bias(W(**X**)) = E_θ[W(**X**)] - θ. Để rồi, câu chuyện tiếp theo là, giả sử ta **xét một đám các
-> estimator có cùng bias** (đồng nghĩa có cùng kì vọng E_θ[W(**X**)]), thì thằng nào có Var_θ[W(**X**)]
-> nhỏ nhất sẽ là tốt nhất.
+> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower
+> Bound là cái gì), đã học ở chap 7, trong phần đánh giá chất lượng của các point
+> estimator. Nói ngắn gọn, khi cần phải đánh giá các estimator (evaluating
+> estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là một
+> hàm của estimator: MSE(W(**X**)) = E_θ[(W(**X**) - θ)^2], và ta muốn cái này
+> càng nhỏ càng tốt. Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var_θ
+> [W(**X**)] + [Bias(W(**X**)]^2 với Bias(W(**X**)) = E_θ[W(**X**)] - θ. Để rồi, câu
+> chuyện tiếp theo là, giả sử ta **xét một đám các estimator có cùng bias** (đồng
+> nghĩa có cùng kì vọng E_θ[W(**X**)]), thì thằng nào có Var_θ[W(**X**)] nhỏ nhất
+> sẽ là tốt nhất.
 >
-> Thế thì, việc tính variance có thể phức tạp, và quan trọng hơn, trong nhiều trường hợp, ta cũng không
-> thể biết được rằng, một estimator có variance nào đó có phải là nhỏ nhất hay không. Từ đó, mới nói
-> đến một công cụ cho vấn đề này: **Cramer Rao Lower Bound**. Đây chỉ đơn giản là một theorem, nói
-> rằng, giả sử ta có bối cảnh thỏa mãn yêu cầu đề ra nào đó (xem cụ thể trong theorem) thì khi đó, ta
-> có thể **xác định được cái lower bound của** Var_θ(W(**X**)), từ đó, **nếu ta có một estimator có
-> variance bằng với chặn dưới này, thì có thể kết luận nó chính là cái tốt nhất** (cái tốt nhất trong đám
-> các estimator có chung bias, và nếu đang xét đám các unbiased estiamtor thì ta gọi nó là uniformly
-> minimum variance unbiased estimator)
+> Thế thì, việc tính variance có thể phức tạp, và quan trọng hơn, trong nhiều
+> trường hợp, ta cũng không thể biết được rằng, một estimator có variance nào đó
+> có phải là nhỏ nhất hay không. Từ đó, mới nói đến một công cụ cho vấn đề này:
+> **Cramer Rao Lower Bound**. Đây chỉ đơn giản là một theorem, nói rằng, giả sử
+> ta có bối cảnh thỏa mãn yêu cầu đề ra nào đó (xem cụ thể trong theorem) thì khi
+> đó, ta có thể **xác định được cái lower bound của** Var_θ(W(**X**)), từ đó, **nếu
+> ta có một estimator có variance bằng với chặn dưới này, thì có thể kết luận nó
+> chính là cái tốt nhất** (cái tốt nhất trong đám các estimator có chung bias, và nếu
+> đang xét đám các unbiased estiamtor thì ta gọi nó là uniformly minimum variance
+> unbiased estimator)
 >
-> Thế thì, cái lower bound theo công thức Cramer Rao:
+> Cramer Rao Inequality:
 >
-> Var_θ(W(**X**)) ≥ [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]]
+> Var_θ(W(**X**)) ≥ [d/dθ E_θ[W(**X**)]]^2 / E_θ[(∂/∂θ log f(**X**|θ))^2]
 >
-> Qua lại đây, nhớ rằng 10.1.11, là người ta đang định nghĩa ra cái sequence estimator gọi là
-> **asymptotically efficient cho τ(θ)**, rằng nếu asymptotic variance của nó bằng [τ'(θ)]^2 / [E_θ[(∂/∂θ log
-> f(**X**|θ))^2]].
+> = [d/dθ E_θ[W(**X**)]]^2 / In(θ)
 >
-> Theo Cramer Rao Lower Bound theorem, nói rằng một estimator W(**X**) sẽ có variance bị chặn dưới
-> bởi: Var_θ(W(**X**)) ≥ [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]]
+> với In(θ) = E_θ[(∂/∂θ log f(**X**|θ))^2], do iid = n E_θ[(∂/∂θ log f(Xi|θ))^2] = n I1(θ)
 >
-> Vậy thì, ở đây lại cho ta có √n[Wn - τ(θ)] → (d) n[0, ν(θ)], thì riêng điều này, theo như định nghĩa của
-> asymptotically variance, là variance của limiting distribution, thì như vậy, ν(θ) là asymptotically
-> variance của Wn.
+> Vậy Var_θ(W(**X**)) ≥ [d/dθ E_θ(W(**X**))]^2 / n I1(θ)
 >
-> Sau đó, nếu giá trị này lại bằng ([τ'(θ)]^2 / [E_θ[(∂/∂θ log f(**X**|θ))^2]])
+> Và CRLB của Var_θ(W(**X**)) là [d/dθ E_θ(W(**X**))]^2 / n I1(θ)
 >
-> mà cái này, nếu xét W(**X**) là unbiased estimator của τ(θ), tức E[W(**X**)] = τ(θ), ⇨ τ'(θ) = d/dθ
-> E[W(**X**)] ⇔ τ'(θ)^2 = [d/dθ E[W(**X**)]]^2
+> Quay lại đây, định nghĩa Wn của chuỗi estimator cho τ(θ) có tính tiệm cận hiệu
+> quả đó là khi √n(Wn - τ(θ)) → (d) n(0, [τ' (θ)]^2 / I1(θ))
 >
-> hoặc, kể của W(**X**) là biased estimator của τ(θ), nhưng tại limit, bias = 0: lim n → inf E[Wn(**X**)] =
-> τ(θ) thì trong trường hợp này và trường hợp trên ta đều có:
+> Mà theo định nghĩa Wn (là estimator của τ(θ)) có phương sai tiệm cận là σ^2:
+> nếu kn(Wn - τ(θ)) → (d) n(0, σ^2). Nên ở đây việc ta có √n(Wn - τ(θ)) → (d) n(0,
+> [τ'(θ)]^2 / I1(θ)) chính là nói AsympVar(Wn) = [τ'(θ)]^2 / I1(θ)
 >
-> ([τ'(θ)]^2 / [E_θ[(∂/∂θ log f(**X**|θ))^2]]) chính là [d/dθ E_θ[W(**X**)]^2] / [E_θ[(∂/∂θ log f(**X**|θ))^2]],
-> tức Cramer Rao Lower Bound.
+> Nếu Wn là unbiased estimator cho τ(θ): E[Wn] = τ(θ) ⇨ τ'(θ) = d/dθ E[Wn], và từ
+> đó việc √n(Wn - τ(θ)) → (d) n(0, [τ'(θ)]^2 / I1(θ)) chính là nói rằng:
 >
-> Như vậy, về cơ bản, cái định nghĩa này nói rằng nếu một chuỗi estimator Wn của τ(θ) muốn được gọi
-> là asymptotically efficient, thì nó phải unbias: E[Wn(**X**)] = τ(θ) đồng thời, asymptotically variance
-> của nó, phải bằng đúng Cramer Rao Lower Bound.
+> AsympVar(Wn) = [d/dθ E(Wn)]^2 / I1(θ), và cái này thì bằng n × [d/dθ E(Wn)]^2 /
+> nI1(θ), tức n × CRLB.
+>
+> Vậy thì thế quái nào trong sách lại tương vào câu "that is, asym var(Wn)
+> archivese CRLB, trong khi nó gấp n lần CRLB?
+>
+> Câu trả lời là ông Casella buộc ta hiểu đang nói đến không phải là CRLB của
+> Var(Wn) có công thức [d/dθ E[Wn]]^2 / n I1(θ). Mà sự thật là đang nói về CRLB
+> của √n Wn, có công thức là [d/dθ E[Wn]]^2 / I1(θ).
 
 <br>
 
@@ -656,6 +663,109 @@
 > [!NOTE]
 > Phần này như trong note
 > trước đã hiểu rồi
+
+<br>
+
+<a id="node-866"></a>
+
+<p align="center"><kbd><img src="assets/11feb8e9e790676762f7f27fb6bb976254abe9bf.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Cùng giải nghĩa đoạn này:
+>
+> Đại ý là, từ các mảnh ghép: i) CRLB của Wn, ii) định nghĩa của một estimator hiệu quả tiệm cận và iii)
+> MLE là estimator hiệu quả tiệm cận thì ta có thể dùng chúng để giải quyết vấn đề sau đây: Estimate,
+> ước lượng xấp xỉ giá trị của variance của một MLE, θ^, hoặc nói chung hơn, là h(θ^).
+>
+> Lập luận như sau:
+>
+> Đầu tiên, cùng ôn lại CRLB, nói đơn giản, theorem này cho biết, nếu ta có một statistic Wn là estimator
+> của θ thỏa vài điều kiện nhất định thì Var(Wn) ≥ [d/dθ E[Wn]]^2 / In(θ) với In(θ) là information number
+> của n observation. Công thức của nó có thể nhìn trong sách, nhưng viết In(θ) cho gọn, và không khó
+> để thấy nhờ tính iid, In(θ) = n I1(θ).
+>
+> Gút lại, kết quả này chỉ là: nếu ta có Wn là estimator của θ thì CRLB của Var(Wn) là [d/dθ E[Wn]]^2 / n
+> I1(θ), và nếu xét Wn có E[Wn] = h(θ) thì cái CRLB là **[h'(θ)]^2 / n I1(θ)**.
+>
+> Kết quả này chỉ là để đây tí nữa xài.
+>
+> Tiếp theo ta xét định nghĩa của một Wn estimator **hiệu quả tiệm cận** của g(θ), thì theo định nghĩa:
+>
+> √n(Wn - θ) → (d) n(0, ν(θ)) với ν(θ) = [g'(θ)]^2 / I1(θ).
+>
+> Và ta lại đã chứng minh mle θ^ của θ, cũng coi như của g(θ) với g là identity function, là một estimator
+> hiệu quả tiệm cận (cũng là nhất quán (consistent) luôn), nên theo định nghĩa trên ta có:
+>
+> √n(θ^ - θ) → (d) n(0, 1/I1(θ)), và với định nghĩa của phương sai tiệm cậnv thì đây cũng chính là nói
+> Avar(θ^) = 1/I1(θ))
+>
+> Rồi, tiếp, ta xét delta method theorem, nó nói rằng:
+>
+> nếu √n(Yn - θ) → (d) n(0, σ^2) thì √n(g(Yn) - g(θ)) → (d) n(0, [g'(θ)]^2 σ^2))
+>
+> Và cái trên cũng tương đương với việc nói Avar(Yn) = σ^2 thì Avar(g(Yn)) = [g'(θ)]^2 σ^2 = [g'(θ)]^2
+> Avar(Yn)
+>
+> Và việc nói Avar(g(Yn)) = [g'(θ)]^2 Avar(Yn) thì cũng có nghĩa là
+>
+> khi n lớn thì Var(g(Yn)) ≈ [g'(θ)]^2 Avar(Yn) / n
+>
+> vì sao, vì √n(g(Yn) - g(θ)) → (d) n(0, [g'(θ)]^2 σ^2)) = n(0, [g'(θ)]^2 Avar(Yn))) có bản chất ý nghĩa là: khi
+> n vô cùng thì random variable √n(g(Yn) - g(θ)) sẽ có distribution là n(0, [g'(θ)]^2 Avar(Yn))).
+>
+> Nên dĩ nhiên khi n lớn thì ta có xấp xỉ:
+>
+> Var[√n(g(Yn) - g(θ))] ≈ [g'(θ)]^2 Avar(Yn)
+>
+> (ủa ko phải sao, vì nói distribution khi n vô cùng của X là n(μ, ε^2), tức cũng là nói khi n lớn X có
+> distribution là normal, mean là μ, variance là ε^2, vậy thì khi n lớn ta sẽ có Var(X) ≈ ε^2 chứ, hoàn toàn
+> logic)
+>
+> ⇔ n Var(g(Yn)) - n Var(g(θ)) ≈ [g'(θ)]^2 Avar(Yn)
+>
+> ⇔ n Var(g(Yn)) - 0 ≈ [g'(θ)]^2 Avar(Yn)
+>
+> ⇔ Var(g(Yn)) ≈ [g'(θ)]^2 Avar(Yn) / n
+>
+> Như vậy, nếu ta áp dụng delta method cho Yn = θ^ và g = h thì sao:
+>
+> Var(h(θ^)) ≈ [h'(θ)]^2 Avar(θ^) / n.
+>
+> Và với việc ta đã chỉ ra với θ^ là mle của θ, nên là estimator hiệu quả tiệm cận, nên Avar(θ^) = 1/I1(θ)
+>
+> ⇨ Var(h(θ^)) ≈ [h'(θ)]^2 (1/I1(θ)) / n
+>
+> ⇔ Var(h(θ^)) ≈ **[h'(θ)]^2 /nI1(θ))**, đây chính là 10.1.7
+>
+> Và vế phải như trên đã nói, chính là CRLB của một estimator Wn nào đó có E[Wn] = h(θ)
+>
+> **Từ đó ta có thể tính CRLB của một estimator Wn nào đó có E[Wn] = h(θ), và dùng nó để estimate cho
+> Var(h(θ^))**
+>
+> Tóm lại, nếu nói cực ngắn gọn thì chỉ là 3 bước lập luận:
+>
+> i) Delta method cho Avar(h(θ^)) = [h'(θ)]^2 Avar(θ^).
+>
+> Và cái này cũng là cho ta: khi n lớn, Var(h(θ^)) ≈ [h'(θ)]^2 Avar(θ^) / n
+>
+> ii) θ^ là mle của θ, nên hiệu quả tiệm cận, theo định nghĩa của hiệu quả tiệm cận cho ta: Avar(θ^) =
+> 1/I1(θ))
+>
+> i) và ii) ⇨ khi n lớn, Var(h(θ^)) ≈ [h'(θ)]^2 [1/I1(θ))] / n = [h'(θ)]^2/ nI1(θ))
+>
+> ⇔ Var(h(θ^)) ≈ [h'(θ)]^2/ nI1(θ)) (1)
+>
+> Cuối cùng:
+>
+> iii) CRLB theorem nói rằng với Wn thỏa vì điều kiện Var(Wn) ≥ [d/dθ E_θ[Wn]]^2 / nI1(θ).
+>
+> nên nếu chọn Wn có E_θ[Wn] = h(θ) thì:
+>
+> CRLB của Var(Wn) = [h'(θ)]^2 / nI1(θ) (2)
+>
+> Từ (1) và (2), ta suy ra Var(h(θ^)) ≈ CRLB của Var(Wn) với Wn có E_θ[Wn] = h(θ).
+>
+> Phần tiếp theo chỉ là dùng công thức để thế vào In(θ), nhưng ý tưởng chính thì mình đã thông.
 
 <br>
 
