@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,441 notes` · `~16,914 screenshots` · `19 courses`** · work in progress
+**`~12,451 notes` · `~16,928 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -411,7 +411,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [Σ Lec 21](a0_stat110/σ_lec_21.md) — `0n / 8i` 
 - [Σ lec 22](a0_stat110/σ_lec_22.md) — `0n / 3i`
 
-### 📂 Casella & Berger — Statistical Inference (📝 905 Notes | 📸 1047 Screenshots)
+### 📂 Casella & Berger — Statistical Inference (📝 909 Notes | 📸 1051 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -457,7 +457,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
 - [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `53n / 61i` 
 - [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i` 
-- [10.1 Asymtotic Evaluation - Point Estimation](a0_casella/101_asymtotic_evaluation_point_estimation.md) — `18n / 21i`
+- [10.1 Asymtotic Evaluation - Point Estimation](a0_casella/101_asymtotic_evaluation_point_estimation.md) — `22n / 25i`
 
 ### 📂 ISL — Introduction to Statistical Learning (📝 95 Notes | 📸 233 Screenshots)
 
@@ -576,7 +576,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 319 Notes | 📸 440 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 325 Notes | 📸 450 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -613,6 +613,8 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [3.0 & 3.1.0 Linear Basis Function Models](a0_bishop_prml/30_310_linear_basis_function_models.md) — `7n / 8i` 
 - [3.1.1 Maximum likelihood and least squares](a0_bishop_prml/311_maximum_likelihood_and_least_squares.md) — `7n / 9i` 
 - [3.1.3 Sequential learning](a0_bishop_prml/313_sequential_learning.md) — `1n / 2i` 
+- [3.1.4 Regularization](a0_bishop_prml/314_regularization.md) — `3n / 7i` 
+- [3.1.5 Multiple outputs](a0_bishop_prml/315_multiple_outputs.md) — `3n / 3i` 
 - [Appendix C - Matrices](a0_bishop_prml/appendix_c_matrices.md) — `19n / 20i`
 
 ### 📂 CS50X — Programming Foundations (📝 1259 Notes | 📸 1845 Screenshots)
