@@ -16,13 +16,13 @@ Learning Objectives
  • Implement context-based question answering with T5
  • Interpret the GLUE benchmark
 
-<a id="node-3166"></a>
+<a id="node-3136"></a>
 ## Week 3 Overview
 
 <br>
 
 
-<a id="node-3167"></a>
+<a id="node-3137"></a>
 ### Here are the main ideas extracted from the lecture text in numerical order:
 
 > [!NOTE]
@@ -57,80 +57,80 @@ Learning Objectives
 
 <br>
 
-<a id="node-3168"></a>
+<a id="node-3138"></a>
 
 <p align="center"><kbd><img src="assets/97902bfc8185097fd557abe7d1c2972de4458b64.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3169"></a>
+<a id="node-3139"></a>
 
 <p align="center"><kbd><img src="assets/f8848108e4a6263f2bba0f59cc031ad9a9892c28.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3170"></a>
+<a id="node-3140"></a>
 
 <p align="center"><kbd><img src="assets/12c8d8c9fc0e271ee8a2c9a1b6f5d3705432d9dd.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3171"></a>
+<a id="node-3141"></a>
 
 <p align="center"><kbd><img src="assets/d1e3b8c1f2c67288aaac43a7ca48c7f7c4e855a9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3172"></a>
+<a id="node-3142"></a>
 
 <p align="center"><kbd><img src="assets/001cd961870babd222e5df699906a3140130c693.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3173"></a>
+<a id="node-3143"></a>
 
 <p align="center"><kbd><img src="assets/370342d4b8b953ab6ce4901bdd57015828211770.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3174"></a>
+<a id="node-3144"></a>
 
 <p align="center"><kbd><img src="assets/79ea358ee708b30c3245ef060d279e1c3062952a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3175"></a>
+<a id="node-3145"></a>
 
 <p align="center"><kbd><img src="assets/44ca071e40844886e980b4e825ad59c31132daed.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3176"></a>
+<a id="node-3146"></a>
 
 <p align="center"><kbd><img src="assets/4fea813ac7509cd8a49faa4658bde835469bba59.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3177"></a>
+<a id="node-3147"></a>
 
 <p align="center"><kbd><img src="assets/717aa73fe2247e5ba02d679d54c65bfe6374b74a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3178"></a>
+<a id="node-3148"></a>
 
 <p align="center"><kbd><img src="assets/9b64c3032197fd1b5e7c1c17780a0529c85458a6.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3179"></a>
+<a id="node-3149"></a>
 ## Transfer Learning In NLP
 
 <br>
 
 
-<a id="node-3180"></a>
+<a id="node-3150"></a>
 ### Here are the main ideas extracted from the lecture text in numerical order:
 
 > [!NOTE]
@@ -176,7 +176,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3181"></a>
+<a id="node-3151"></a>
 
 <p align="center"><kbd><img src="assets/019140e046190ba7748c59bc9bcf000466fafa66.png" width="100%"></kbd></p>
 
@@ -189,7 +189,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3182"></a>
+<a id="node-3152"></a>
 
 <p align="center"><kbd><img src="assets/26b26f99a27540c2a95a9f4932c67d57e3d6f478.png" width="100%"></kbd></p>
 
@@ -201,7 +201,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3183"></a>
+<a id="node-3153"></a>
 
 <p align="center"><kbd><img src="assets/b681a5592ab8a0f9c87c37901718662fe491d11b.png" width="100%"></kbd></p>
 
@@ -213,7 +213,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3184"></a>
+<a id="node-3154"></a>
 
 <p align="center"><kbd><img src="assets/d5171711295cf318967ed47c49a861f72f6904de.png" width="100%"></kbd></p>
 
@@ -224,7 +224,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3185"></a>
+<a id="node-3155"></a>
 
 <p align="center"><kbd><img src="assets/22a77d49d0d8e49cd34efd9ee9dd347a1ac6cbc4.png" width="100%"></kbd></p>
 
@@ -235,7 +235,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3186"></a>
+<a id="node-3156"></a>
 
 <p align="center"><kbd><img src="assets/e75121fa24ed0099a50e72ee7989406eebc5fbca.png" width="100%"></kbd></p>
 
@@ -245,7 +245,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3187"></a>
+<a id="node-3157"></a>
 
 <p align="center"><kbd><img src="assets/f8cb03113c21ef24bf581dc778ac96b97a94a91f.png" width="100%"></kbd></p>
 
@@ -257,7 +257,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3188"></a>
+<a id="node-3158"></a>
 
 <p align="center"><kbd><img src="assets/380ed6345d873cea04510dfae9f58054f7bf2e4e.png" width="100%"></kbd></p>
 
@@ -268,7 +268,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3189"></a>
+<a id="node-3159"></a>
 
 <p align="center"><kbd><img src="assets/04a5b15ce2c08092532ad9065150fae46634254b.png" width="100%"></kbd></p>
 
@@ -279,31 +279,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-3190"></a>
+<a id="node-3160"></a>
 
 <p align="center"><kbd><img src="assets/fda07179c6b93c2227ae52cc3525cc2a0118dcd1.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3191"></a>
+<a id="node-3161"></a>
 ## (reading) Transfer Learning
 
 <br>
 
 
-<a id="node-3192"></a>
+<a id="node-3162"></a>
 ## Elmo, Gpt, Bertm T5
 
 <br>
 
-<a id="node-3193"></a>
+<a id="node-3163"></a>
 
 <p align="center"><kbd><img src="assets/afdc78401a4cce62bc24de5d97ed697a4764bbd5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3194"></a>
+<a id="node-3164"></a>
 
 <p align="center"><kbd><img src="assets/1532e4d2e9d15aab92c8bd13a40aed6b8cb6119d.png" width="100%"></kbd></p>
 
@@ -313,7 +313,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3195"></a>
+<a id="node-3165"></a>
 
 <p align="center"><kbd><img src="assets/478b02db45215e7fb7fac05bac6e8546d8ec6ba9.png" width="100%"></kbd></p>
 
@@ -324,7 +324,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3196"></a>
+<a id="node-3166"></a>
 
 <p align="center"><kbd><img src="assets/0e73ccc9ab3ba2be1d608eaab58d636a842f7765.png" width="100%"></kbd></p>
 
@@ -334,7 +334,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3197"></a>
+<a id="node-3167"></a>
 
 <p align="center"><kbd><img src="assets/5028f5805a347e9742169874c25e95346c092128.png" width="100%"></kbd></p>
 
@@ -343,7 +343,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3198"></a>
+<a id="node-3168"></a>
 
 <p align="center"><kbd><img src="assets/31f64ff193146abd735dabee1205b71f0dac241c.png" width="100%"></kbd></p>
 
@@ -353,31 +353,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-3199"></a>
+<a id="node-3169"></a>
 
 <p align="center"><kbd><img src="assets/c891295d29d48542bb427e7814b3264c1325cc7b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3200"></a>
+<a id="node-3170"></a>
 
 <p align="center"><kbd><img src="assets/9bfc1505c51cf4ea67e5d7151b0d20d35f23eff3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3201"></a>
+<a id="node-3171"></a>
 
 <p align="center"><kbd><img src="assets/208da97efb36df93345bf4ab3a764998a07fae85.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3202"></a>
+<a id="node-3172"></a>
 
 <p align="center"><kbd><img src="assets/7084321fc076114b55e8df58bd1abce276c922b8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3203"></a>
+<a id="node-3173"></a>
 
 <p align="center"><kbd><img src="assets/ee83d2f48860c2c258f0f8f356c2a92a6bd36eb5.png" width="100%"></kbd></p>
 
@@ -388,14 +388,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-3204"></a>
+<a id="node-3174"></a>
 
 <p align="center"><kbd><img src="assets/6841e0321df270e7ccfbcd636dc2a1261f36bd2c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3205"></a>
+<a id="node-3175"></a>
 ## Bidirectional Encoder
 
 > [!NOTE]
@@ -406,7 +406,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3206"></a>
+<a id="node-3176"></a>
 ### 1. **Introduction to BERT**: **Bidirectional Encoder Representations for Transformers**.
 
 > [!NOTE]
@@ -442,13 +442,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3207"></a>
+<a id="node-3177"></a>
 
 <p align="center"><kbd><img src="assets/7b53696affdf64fd486719f73ec60fb4ab40fe37.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3208"></a>
+<a id="node-3178"></a>
 
 <p align="center"><kbd><img src="assets/511c81b539036c2c14a37166cfabd01aa18a1c70.png" width="100%"></kbd></p>
 
@@ -483,7 +483,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3209"></a>
+<a id="node-3179"></a>
 
 <p align="center"><kbd><img src="assets/be317c9deffac98662ccebcb283baf5c65ffa6b0.png" width="100%"></kbd></p>
 
@@ -491,7 +491,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3210"></a>
+<a id="node-3180"></a>
 
 <p align="center"><kbd><img src="assets/c42f504018fa1fd0da470464e5dcbf2d223ca65d.png" width="100%"></kbd></p>
 
@@ -505,7 +505,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3211"></a>
+<a id="node-3181"></a>
 
 <p align="center"><kbd><img src="assets/aed90459707a48a606dc9d15ddacb501d56e516b.png" width="100%"></kbd></p>
 
@@ -522,7 +522,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3212"></a>
+<a id="node-3182"></a>
 
 <p align="center"><kbd><img src="assets/599ea71cb4d7201f5fe8984d3fae230cdaa4d7b9.png" width="100%"></kbd></p>
 
@@ -645,18 +645,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-3213"></a>
+<a id="node-3183"></a>
 ## Bert Objective
 
 <br>
 
-<a id="node-3214"></a>
+<a id="node-3184"></a>
 
 <p align="center"><kbd><img src="assets/4aa3f68aa35684202d49eb06c4f51820e2b24106.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3215"></a>
+<a id="node-3185"></a>
 
 <p align="center"><kbd><img src="assets/e3e887d9031fc0283ba6c766c6bde3b4adf0148d.png" width="100%"></kbd></p>
 
@@ -669,7 +669,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3216"></a>
+<a id="node-3186"></a>
 
 <p align="center"><kbd><img src="assets/b7eb68c6cb91df15d6852cd875933b7fafde29d8.png" width="100%"></kbd></p>
 
@@ -682,7 +682,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3217"></a>
+<a id="node-3187"></a>
 
 <p align="center"><kbd><img src="assets/bcd041cf86a8a449f5c3eaab3747c4a4eefea050.png" width="100%"></kbd></p>
 
@@ -699,7 +699,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3218"></a>
+<a id="node-3188"></a>
 
 <p align="center"><kbd><img src="assets/3b7b64cc38311dad8185fb4e4bdc5a11872614fa.png" width="100%"></kbd></p>
 
@@ -763,18 +763,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-3219"></a>
+<a id="node-3189"></a>
 ## Bert Objective (reading)
 
 <br>
 
-<a id="node-3220"></a>
+<a id="node-3190"></a>
 
 <p align="center"><kbd><img src="assets/98cc80a9413ed57831440c1b0ccbb19aecfec93d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3221"></a>
+<a id="node-3191"></a>
 
 <p align="center"><kbd><img src="assets/74d3e3a25c4f2bade232d8da93dbdc761664c5c8.png" width="100%"></kbd></p>
 
@@ -787,19 +787,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-3222"></a>
+<a id="node-3192"></a>
 
 <p align="center"><kbd><img src="assets/0b0a4d1c0886ba03e4743fd3f9e8fe88f86740b4.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3223"></a>
+<a id="node-3193"></a>
 ## Fine Tuning Bert
 
 <br>
 
-<a id="node-3224"></a>
+<a id="node-3194"></a>
 
 <p align="center"><kbd><img src="assets/0ef5567eb7dacf32afe1555eab436a19fed8f6f7.png" width="100%"></kbd></p>
 
@@ -810,19 +810,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-3225"></a>
+<a id="node-3195"></a>
 
 <p align="center"><kbd><img src="assets/1d848f576888447f056dcf05a3f17e8fce7f4828.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3226"></a>
+<a id="node-3196"></a>
 
 <p align="center"><kbd><img src="assets/aadaf53f03084dfbd3780dd7a8b5471272333096.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3227"></a>
+<a id="node-3197"></a>
 
 <p align="center"><kbd><img src="assets/7d6ffc1f140e6c349daaa772e74635a259a870b1.png" width="100%"></kbd></p>
 
@@ -834,24 +834,24 @@ Learning Objectives
 <br>
 
 
-<a id="node-3228"></a>
+<a id="node-3198"></a>
 ## (reading) Fine Tuning Bert
 
 <br>
 
 
-<a id="node-3229"></a>
+<a id="node-3199"></a>
 ## Transformer: T5
 
 <br>
 
-<a id="node-3230"></a>
+<a id="node-3200"></a>
 
 <p align="center"><kbd><img src="assets/75853aa1ae7d56880d46865abc968a35a8d383a9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3231"></a>
+<a id="node-3201"></a>
 
 <p align="center"><kbd><img src="assets/02b0f9362144d08627e83e146c951377f9c8d05e.png" width="100%"></kbd></p>
 
@@ -870,7 +870,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3232"></a>
+<a id="node-3202"></a>
 
 <p align="center"><kbd><img src="assets/e2379b4e9ec9a81ed0d0ad194063f2b4ad56f0a8.png" width="100%"></kbd></p>
 
@@ -892,31 +892,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-3233"></a>
+<a id="node-3203"></a>
 
 <p align="center"><kbd><img src="assets/dfa5c44cbdc4b6f1b126d7a17889f1ebb9156ece.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3234"></a>
+<a id="node-3204"></a>
 
 <p align="center"><kbd><img src="assets/bbd2fc41d1993a7a739792168bfc7e0918b1f583.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3235"></a>
+<a id="node-3205"></a>
 ## (reading) Transformer T5
 
 <br>
 
 
-<a id="node-3236"></a>
+<a id="node-3206"></a>
 ## Multi-task Training Strategy
 
 <br>
 
-<a id="node-3237"></a>
+<a id="node-3207"></a>
 
 <p align="center"><kbd><img src="assets/ac294ffcfdf316661fbbad502e339758d3cc2925.png" width="100%"></kbd></p>
 
@@ -926,44 +926,44 @@ Learning Objectives
 
 <br>
 
-<a id="node-3238"></a>
+<a id="node-3208"></a>
 
 <p align="center"><kbd><img src="assets/faec5cf6dd16ce425cb1970bac63a0865f952e48.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3239"></a>
+<a id="node-3209"></a>
 
 <p align="center"><kbd><img src="assets/6b04c932f3518031cb4ffa5e717895a139b8aaf8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3240"></a>
+<a id="node-3210"></a>
 
 <p align="center"><kbd><img src="assets/ecb1881495e1ba341e9c755a1e2df784c45d60a6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3241"></a>
+<a id="node-3211"></a>
 
 <p align="center"><kbd><img src="assets/dff044b06b9d9a74c5429c6b5b0be6c35716053e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3242"></a>
+<a id="node-3212"></a>
 
 <p align="center"><kbd><img src="assets/4eb9b53745c3e8cf3c1cf3452750d4bc5fe4e776.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3243"></a>
+<a id="node-3213"></a>
 
 <p align="center"><kbd><img src="assets/6f83cff5ed70657ebe3c411d831fa4a4896b5b05.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3244"></a>
+<a id="node-3214"></a>
 ## (reading) Multi-task Training
 
 > [!NOTE]
@@ -973,12 +973,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-3245"></a>
+<a id="node-3215"></a>
 ## Glue Bench-mark
 
 <br>
 
-<a id="node-3246"></a>
+<a id="node-3216"></a>
 
 <p align="center"><kbd><img src="assets/d8b4b6ba108647a962ff7a6479559d6aa938c78e.png" width="100%"></kbd></p>
 
@@ -989,13 +989,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3247"></a>
+<a id="node-3217"></a>
 
 <p align="center"><kbd><img src="assets/5f7aa746c7fafaddf4735950be6ec71964348863.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3248"></a>
+<a id="node-3218"></a>
 
 <p align="center"><kbd><img src="assets/f7d5170f6b7cc6b06c51520c75e15f4668289908.png" width="100%"></kbd></p>
 
@@ -1008,36 +1008,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-3249"></a>
+<a id="node-3219"></a>
 ## (reading) Glue Benchmark
 
 <br>
 
-<a id="node-3250"></a>
+<a id="node-3220"></a>
 
 <p align="center"><kbd><img src="assets/2dc9637c412ddbc9dac0a9396f60ecde8bb5e098.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3251"></a>
+<a id="node-3221"></a>
 ## Question Answering
 
 <br>
 
-<a id="node-3252"></a>
+<a id="node-3222"></a>
 
 <p align="center"><kbd><img src="assets/a22aadf6b2f2f6bbc302afde3ec5b23a4f13b0da.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3253"></a>
+<a id="node-3223"></a>
 
 <p align="center"><kbd><img src="assets/6ce997f13227c85b7b3b153d343d1663dd04f149.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3254"></a>
+<a id="node-3224"></a>
 
 <p align="center"><kbd><img src="assets/1956eda90a38175c545c13d57737c210e97e0efc.png" width="100%"></kbd></p>
 
@@ -1047,7 +1047,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3255"></a>
+<a id="node-3225"></a>
 
 <p align="center"><kbd><img src="assets/c8d507257f23945ac5656bbeec6ff30af4badc3b.png" width="100%"></kbd></p>
 
@@ -1059,13 +1059,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-3256"></a>
+<a id="node-3226"></a>
 ## Lab: **sentencepiece** And **bpe**
 
 <br>
 
 
-<a id="node-3257"></a>
+<a id="node-3227"></a>
 ### Introduction to
 
 > [!NOTE]
@@ -1074,7 +1074,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3258"></a>
+<a id="node-3228"></a>
 
 <p align="center"><kbd><img src="assets/547c04f3c138aff0d3dbdc65b8b2b54f12c0cc4f.png" width="100%"></kbd></p>
 
@@ -1088,7 +1088,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3259"></a>
+<a id="node-3229"></a>
 
 <p align="center"><kbd><img src="assets/c55162592c280a2c85c3f110d1370e0163572d13.png" width="100%"></kbd></p>
 
@@ -1099,7 +1099,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3260"></a>
+<a id="node-3230"></a>
 
 <p align="center"><kbd><img src="assets/f419a30efa0d6f4de67f2204c3c2ff1a4fe13757.png" width="100%"></kbd></p>
 
@@ -1118,7 +1118,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3261"></a>
+<a id="node-3231"></a>
 ### SentencePiece
 
 > [!NOTE]
@@ -1127,7 +1127,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3262"></a>
+<a id="node-3232"></a>
 
 <p align="center"><kbd><img src="assets/9591991fb0cabf8a1b27d569e947dfe25c3bc483.png" width="100%"></kbd></p>
 
@@ -1139,7 +1139,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3263"></a>
+<a id="node-3233"></a>
 
 <p align="center"><kbd><img src="assets/05b4a07e775c3a433b381df4d5401427fbfc4503.png" width="100%"></kbd></p>
 
@@ -1154,7 +1154,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3264"></a>
+<a id="node-3234"></a>
 
 <p align="center"><kbd><img src="assets/4c78a538a6abfdf40f7f77fdaeab6df7e304eec1.png" width="100%"></kbd></p>
 
@@ -1166,25 +1166,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-3265"></a>
+<a id="node-3235"></a>
 
 <p align="center"><kbd><img src="assets/f6dbc3b6bd4096d77e30b3c01b2b22a01f0d4d43.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3266"></a>
+<a id="node-3236"></a>
 
 <p align="center"><kbd><img src="assets/7547797f48c9f5bdb0031ecd2e8978f3dbc13394.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3267"></a>
+<a id="node-3237"></a>
 ### BPE Algorithm
 
 <br>
 
-<a id="node-3268"></a>
+<a id="node-3238"></a>
 
 <p align="center"><kbd><img src="assets/111cb798fd30d1922ab8d5f26dbd6fc1f614052f.png" width="100%"></kbd></p>
 
@@ -1223,13 +1223,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3269"></a>
+<a id="node-3239"></a>
 
 <p align="center"><kbd><img src="assets/88fc59dde676cb0849eb72e1a5a21ddfde22be23.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3270"></a>
+<a id="node-3240"></a>
 
 <p align="center"><kbd><img src="assets/49fc5e3b3118eeaef2db19afd87674bea98cf40a.png" width="100%"></kbd></p>
 
@@ -1260,7 +1260,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3271"></a>
+<a id="node-3241"></a>
 
 <p align="center"><kbd><img src="assets/43388aa9df5176dceb7f780901cf87f717249c12.png" width="100%"></kbd></p>
 
@@ -1328,7 +1328,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3272"></a>
+<a id="node-3242"></a>
 
 <p align="center"><kbd><img src="assets/13a442ce93d22bf89d6f12875900a9fd944cc614.png" width="100%"></kbd></p>
 
@@ -1370,19 +1370,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-3273"></a>
+<a id="node-3243"></a>
 
 <p align="center"><kbd><img src="assets/274c36d07ba877631158e42bc9ec8d04413b5b1b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3274"></a>
+<a id="node-3244"></a>
 
 <p align="center"><kbd><img src="assets/0cc9abe7917b35111642440c58237117bc3e7f92.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3275"></a>
+<a id="node-3245"></a>
 
 <p align="center"><kbd><img src="assets/a2d8ee448b95c3c79cfc2f8c38ce14502cdc3205.png" width="100%"></kbd></p>
 
@@ -1394,7 +1394,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3276"></a>
+<a id="node-3246"></a>
 ### Train SentencePiece BPE
 
 > [!NOTE]
@@ -1403,7 +1403,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3277"></a>
+<a id="node-3247"></a>
 
 <p align="center"><kbd><img src="assets/880edbe7bc7c210f4e8607dfe3dc41b763ef51f0.png" width="100%"></kbd></p>
 
@@ -1417,13 +1417,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3278"></a>
+<a id="node-3248"></a>
 
 <p align="center"><kbd><img src="assets/aaf996ed42adb62449b1a0df38151ed2aca1d8f7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3279"></a>
+<a id="node-3249"></a>
 
 <p align="center"><kbd><img src="assets/7a600b40328e068843efc2e3b29f7402714cb1e0.png" width="100%"></kbd></p>
 
@@ -1434,7 +1434,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3280"></a>
+<a id="node-3250"></a>
 
 <p align="center"><kbd><img src="assets/02c2c2b773d8480761ddb19ede08c95c7bde8a18.png" width="100%"></kbd></p>
 
@@ -1443,7 +1443,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3281"></a>
+<a id="node-3251"></a>
 
 <p align="center"><kbd><img src="assets/7a5a46eb1f4c91326da174d223f04fde9af40f8e.png" width="100%"></kbd></p>
 
@@ -1459,7 +1459,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3282"></a>
+<a id="node-3252"></a>
 ### Optionally try to implement BPE
 
 > [!NOTE]
@@ -1468,44 +1468,44 @@ Learning Objectives
 
 <br>
 
-<a id="node-3283"></a>
+<a id="node-3253"></a>
 
 <p align="center"><kbd><img src="assets/6fc2474ffad029a2136627530b77164387fc7f16.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3284"></a>
+<a id="node-3254"></a>
 ## (reading) Welcome To Hugging Face
 
 <br>
 
 
-<a id="node-3285"></a>
+<a id="node-3255"></a>
 ## Hugging Face Introduction
 
 <br>
 
 
-<a id="node-3286"></a>
+<a id="node-3256"></a>
 ## Hugging Face I
 
 <br>
 
 
-<a id="node-3287"></a>
+<a id="node-3257"></a>
 ## Hugging Face Ii
 
 <br>
 
 
-<a id="node-3288"></a>
+<a id="node-3258"></a>
 ## Hugging Face Iii
 
 <br>
 
 
-<a id="node-3289"></a>
+<a id="node-3259"></a>
 ## Lab: Question
 
 > [!NOTE]
@@ -1515,7 +1515,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3290"></a>
+<a id="node-3260"></a>
 ### You've seen how to use **BERT**, and other **transformer models** for a wide range of \\*natural
 
 > [!NOTE]
@@ -1550,14 +1550,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-3291"></a>
+<a id="node-3261"></a>
 
 <p align="center"><kbd><img src="assets/e2879e66125707b8c2db028af6d48bfd485353f8.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3292"></a>
+<a id="node-3262"></a>
 #### **Before fine-tuning a model**, you will look to the **pipelines** from Hugging Face to **use pre-trained transformer models** for **specific tasks**. The transformers library **provides pipelines for popular tasks** like sentiment analysis, summarization, and text generation. A pipeline consists of a **tokenizer**, a **model**, and the **model configuration**. All these are packaged together into an easy-to-use object. Hugging Face makes life easier.  Pipelines are intended **to be used without fine-tuning** and will **often be immediately helpful** in your projects. For example, transformers provides a pipeline for question answering that you can directly use to answer your questions if you give some context. Let's see how to do just that.  You will import pipeline from transformers for creating pipelines.
 
 > [!NOTE]
@@ -1567,7 +1567,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3293"></a>
+<a id="node-3263"></a>
 
 <p align="center"><kbd><img src="assets/c2277d85a83e23fd9827efc60e1d8f8357e09ca5.png" width="100%"></kbd></p>
 
@@ -1578,7 +1578,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3294"></a>
+<a id="node-3264"></a>
 
 <p align="center"><kbd><img src="assets/82a61c432be04ad007ef23b44578eff62264fc7e.png" width="100%"></kbd></p>
 
@@ -1590,7 +1590,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3295"></a>
+<a id="node-3265"></a>
 
 <p align="center"><kbd><img src="assets/099aaa20428087f651d7043fb7763ce5a1c2732e.png" width="100%"></kbd></p>
 
@@ -1600,7 +1600,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3296"></a>
+<a id="node-3266"></a>
 
 <p align="center"><kbd><img src="assets/19c18482b006cd5c7f9f1213e1c28f0f6f2267ad.png" width="100%"></kbd></p>
 
@@ -1610,13 +1610,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3297"></a>
+<a id="node-3267"></a>
 
 <p align="center"><kbd><img src="assets/8ba0c1939038226cc5705bba4aea3e03a2776fc5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3298"></a>
+<a id="node-3268"></a>
 
 <p align="center"><kbd><img src="assets/6196d55046c842315d40fbf58829f36ead479fb0.png" width="100%"></kbd></p>
 
@@ -1626,14 +1626,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-3299"></a>
+<a id="node-3269"></a>
 
 <p align="center"><kbd><img src="assets/55555e148d4826e1107b94e26ce0ab36e0ec2408.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3300"></a>
+<a id="node-3270"></a>
 #### It seems like this model is a huge fan of Archie Andrews. It even considers him a superhero!  The example that fooled your question_answerer belongs to the TyDi QA dataset, a dataset from Google for question/answering in diverse languages. To achieve better results when you know that the pipeline isn't working as it should, you need to consider fine-tuning your model.  In the next ungraded lab, you will get the chance to fine-tune the DistilBert model using the TyDi QA dataset.
 
 > [!NOTE]
@@ -1643,7 +1643,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3301"></a>
+<a id="node-3271"></a>
 ## Lab: Question
 
 > [!NOTE]
@@ -1653,7 +1653,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3302"></a>
+<a id="node-3272"></a>
 ### In the previous Hugging Face ungraded lab, you saw how to **use the pipeline objects** to
 
 > [!NOTE]
@@ -1684,18 +1684,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-3303"></a>
+<a id="node-3273"></a>
 #### Dataset
 
 <br>
 
-<a id="node-3304"></a>
+<a id="node-3274"></a>
 
 <p align="center"><kbd><img src="assets/2fde6cdc12c51e37eb8dd64ba6169eb1f6bf9ab4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3305"></a>
+<a id="node-3275"></a>
 
 <p align="center"><kbd><img src="assets/e5842f445301364327b5aeb17c3fb238ef06877b.png" width="100%"></kbd></p>
 
@@ -1709,7 +1709,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3306"></a>
+<a id="node-3276"></a>
 
 <p align="center"><kbd><img src="assets/39b1e2dc187e5072a69658901c230ff66483eded.png" width="100%"></kbd></p>
 
@@ -1723,7 +1723,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3307"></a>
+<a id="node-3277"></a>
 
 <p align="center"><kbd><img src="assets/3dc83235eacc6254b8fe434fd844f1f88a0477cb.png" width="100%"></kbd></p>
 
@@ -1732,13 +1732,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3308"></a>
+<a id="node-3278"></a>
 
 <p align="center"><kbd><img src="assets/705d0e856a744487b69bc985f79e92741ca7cc24.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3309"></a>
+<a id="node-3279"></a>
 
 <p align="center"><kbd><img src="assets/f9cef54370962db32331d771e5bea163b237700e.png" width="100%"></kbd></p>
 
@@ -1747,7 +1747,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3310"></a>
+<a id="node-3280"></a>
 
 <p align="center"><kbd><img src="assets/4297d65aba3ba51dec17bbffd6a81abd9640da34.png" width="100%"></kbd></p>
 
@@ -1758,12 +1758,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-3311"></a>
+<a id="node-3281"></a>
 #### You can see that **each example** is like a **dictionary object.** This dataset consists of **questions**, **contexts**, and **indices** that **point to the start and end position** of the answer **inside the context**. You can **access the index using the annotations key**, which is a kind of dictionary.
 
 <br>
 
-<a id="node-3312"></a>
+<a id="node-3282"></a>
 
 <p align="center"><kbd><img src="assets/d29cc6a85c44ce3bbb9af78ad76659799431194a.png" width="100%"></kbd></p>
 
@@ -1778,7 +1778,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3313"></a>
+<a id="node-3283"></a>
 #### The **question answering model** predicts **a start and endpoint in the context to extract as the answer**. That's why **this NLP task is known as extractive question answering.**  To train your model, you need to **pass start and endpoints as labels**. So, you need to **implement a function that extracts the start and end positions** from the dataset.  The dataset contains **unanswerable questions**. For these, the **start and end indices for the answer are equal to -1**
 
 > [!NOTE]
@@ -1794,13 +1794,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3314"></a>
+<a id="node-3284"></a>
 
 <p align="center"><kbd><img src="assets/b09c23ae66cc92efff063c1f4762baf85b6ea0fc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3315"></a>
+<a id="node-3285"></a>
 
 <p align="center"><kbd><img src="assets/554457f77205eaad4248ae8eb40366f0f47ea102.png" width="100%"></kbd></p>
 
@@ -1814,13 +1814,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-3316"></a>
+<a id="node-3286"></a>
 #### Tokenizer
 
 <br>
 
 
-<a id="node-3317"></a>
+<a id="node-3287"></a>
 #### Now, you will use the \\_**tokenizer**\\_ object from Hugging Face. You can **load a tokenizer** using  different methods. Here, you will **retrieve it from the pipeline object** you created in the  previous Hugging Face lab. With this tokenizer, you can **ensure that the tokens you get  for the dataset** will **match the tokens used in the original DistilBERT** implementation.  When **loading a tokenizer** with any method, you must **pass the model checkpoint** that you  want to fine-tune. Here, you are using the **'distilbert-base-cased-distilled- squad'** checkpoint.
 
 > [!NOTE]
@@ -1831,7 +1831,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3318"></a>
+<a id="node-3288"></a>
 #### # Import the AutoTokenizer from the transformers library from transformers import **AutoTokenizer** tokenizer = **AutoTokenizer**.**from_pretrained**("distilbert-base-cased-distilled-squad")
 
 > [!NOTE]
@@ -1841,30 +1841,30 @@ Learning Objectives
 <br>
 
 
-<a id="node-3319"></a>
+<a id="node-3289"></a>
 #### Given the **characteristics of the dataset** and the **question-answering task**, you will need to **add some steps to pre-process the data** after the tokenization:  When **there is no answer to a question** given a context, you will use the **CLS token**, a unique token used to represent the **start of the sequence.**  **Tokenizers** can **split a given string into substrings**, resulting in a subtoken for each substring, **creating misalignment between the list of dataset tags and the labels generated by the tokenizer**. Therefore, you will need to **align the start and end indices with the tokens associated with the target answer word.**  Finally, a tokenizer can **truncate a very long sequence**. So, if the **start/end position of an answer is None**, you will **assume that it was truncated** and **assign the maximum length of the tokenizer to those positions.**
 
 <br>
 
 
-<a id="node-3320"></a>
+<a id="node-3290"></a>
 #### # Processing samples using the 3 steps described. def **process_samples**(sample):     tokenized_data = tokenizer(sample['document_plaintext'], sample['question_text'], truncation="only_first", padding="max_length")      input_ids = tokenized_data["input_ids"]      # We will label impossible answers with the index of the CLS token.     cls_index = input_ids.index(tokenizer.cls_token_id)      # If no answers are given, set the cls_index as answer.     if sample["annotations.minimal_answers_start_byte"][0] == -1:         start_position = cls_index         end_position = cls_index     else:         # Start/end character index of the answer in the text.         gold_text = sample["document_plaintext"][sample['annotations.minimal_answers_start_byte'][0]:sample['annotations.minimal_answers_end_byte'][0]]         start_char = sample["annotations.minimal_answers_start_byte"][0]         end_char = sample['annotations.minimal_answers_end_byte'][0] #start_char + len(gold_text)          # sometimes answers are off by a character or two – fix this         if sample['document_plaintext'][start_char-1:end_char-1] == gold_text:             start_char = start_char - 1             end_char = end_char - 1     # When the gold label is off by one character         elif sample['document_plaintext'][start_char-2:end_char-2] == gold_text:             start_char = start_char - 2             end_char = end_char - 2     # When the gold label is off by two characters          start_token = tokenized_data.char_to_token(start_char)         end_token = tokenized_data.char_to_token(end_char - 1)          # if start position is None, the answer passage has been truncated         if start_token is None:             start_token = tokenizer.model_max_length         if end_token is None:             end_token = tokenizer.model_max_length          start_position = start_token         end_position = end_token      return {'input_ids': tokenized_data['input_ids'],           'attention_mask': tokenized_data['attention_mask'],           'start_positions': start_position,           'end_positions': end_position} 
 
 <br>
 
-<a id="node-3321"></a>
+<a id="node-3291"></a>
 
 <p align="center"><kbd><img src="assets/cc06218ff9b4bf370f26d8e9d23198401d8a5d38.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3322"></a>
+<a id="node-3292"></a>
 #### Transformer
 
 <br>
 
-<a id="node-3323"></a>
+<a id="node-3293"></a>
 
 <p align="center"><kbd><img src="assets/8c74f5094bd278567afabe03d3414171ea1432fb.png" width="100%"></kbd></p>
 
@@ -1875,7 +1875,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3324"></a>
+<a id="node-3294"></a>
 
 <p align="center"><kbd><img src="assets/f09e574f3d433892c28acc6e23dfc3270c7933f3.png" width="100%"></kbd></p>
 
@@ -1886,7 +1886,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3325"></a>
+<a id="node-3295"></a>
 #### Here, we give you the **F1 score** as a **metric to evaluate** your model's performance. We will use this metric for simplicity, although it is based on the start and end values predicted by the model. If you want to dig deeper on other metrics that can be used for a question and answering task, you can also check this **colab notebook resource from the Hugging Face team.**
 
 > [!NOTE]
@@ -1898,7 +1898,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3326"></a>
+<a id="node-3296"></a>
 
 <p align="center"><kbd><img src="assets/7d94ec50caa7477369af56bd58121e4bddd35b5c.png" width="100%"></kbd></p>
 
@@ -1908,7 +1908,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3327"></a>
+<a id="node-3297"></a>
 
 <p align="center"><kbd><img src="assets/5277b6ac8f5b3c18dbe735054435c3c4c585143f.png" width="100%"></kbd></p>
 
@@ -1927,7 +1927,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3328"></a>
+<a id="node-3298"></a>
 
 <p align="center"><kbd><img src="assets/d5cf7e4b599aca615bd912e460865f38f7222102.png" width="100%"></kbd></p>
 
@@ -1937,25 +1937,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-3329"></a>
+<a id="node-3299"></a>
 #### Using Your Fine-tunied Model
 
 <br>
 
 
-<a id="node-3330"></a>
+<a id="node-3300"></a>
 #### After **training and evaluating** your **fine-tuned model**, you can **check its results** for the same questions from the previous lab.  For that, you will tell **Pytorch** to use your **GPU or your CPU** to run the model. Additionally, you will need to t**okenize your input context and questions**.  Finally, you need to **post-process the output results to transform them from tokens to human-readable strings using the tokenizer.**
 
 <br>
 
-<a id="node-3331"></a>
+<a id="node-3301"></a>
 
 <p align="center"><kbd><img src="assets/9dd6d25257fca2c4bdc9aed04ac99980a5626204.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3332"></a>
+<a id="node-3302"></a>
 #### questions = ["What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company?",              "What comic book characters were created between 1939 and 1941?",              "What well-known characters were created between 1939 and 1941?",              "What well-known superheroes were introduced between 1939 and 1941 by Detective Comics?"]  for question in questions:     inputs = tokenizer**.encode_plus**(question, text, **return_tensors="pt"**)     #print("inputs", inputs)     #print("inputs", type(inputs))     **input_ids** = **inputs["input_ids"].tolist()[0]**     **inputs.to("cuda")**      text_tokens = tokenizer.**convert_ids_to_tokens**(input_ids)     **answer_model** = **model(**inputs)**      # **Get the most likely beginning of answer** with the argmax of the score     answer_start = **torch.argmax(**         **answer_model['start_logits']**     )        # Get the most likely end of answer with the argmax of the score     answer_end = **torch.argmax**(answer_model['end_logits']) + 1        answer = tokenizer.**convert_tokens_to_string**(                                          tokenizer.**convert_ids_to_tokens**(                                                             input_ids[answer_start:answer_end]))      print(f"Question: {question}")     print(f"Answer: {answer}\\\ ") 
 
 > [!NOTE]
@@ -1973,12 +1973,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-3333"></a>
+<a id="node-3303"></a>
 #### Question: What superheroes were introduced between 1939 and 1941 by Detective Comics and its sister company? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What comic book characters were created between 1939 and 1941? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What well-known characters were created between 1939 and 1941? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman  Question: What well-known superheroes were introduced between 1939 and 1941 by Detective Comics? Answer: Superman, Batman, Captain Marvel ( later known as SHAZAM! ), Captain America, and Wonder Woman
 
 <br>
 
-<a id="node-3334"></a>
+<a id="node-3304"></a>
 
 <p align="center"><kbd><img src="assets/d504d3d37760348280b6951613d9330077c88fbb.png" width="100%"></kbd></p>
 
@@ -1989,19 +1989,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-3335"></a>
+<a id="node-3305"></a>
 ## Week Conclusion
 
 <br>
 
 
-<a id="node-3336"></a>
+<a id="node-3306"></a>
 ## Reference
 
 <br>
 
 
-<a id="node-3337"></a>
+<a id="node-3307"></a>
 ### This course drew from the following resources:
 
 > [!NOTE]
@@ -2035,19 +2035,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-3338"></a>
+<a id="node-3308"></a>
 ## Quiz
 
 <br>
 
 
-<a id="node-3339"></a>
+<a id="node-3309"></a>
 ## P.a: Question Answering
 
 <br>
 
 
-<a id="node-3340"></a>
+<a id="node-3310"></a>
 ### Welcome to this week's assignment of course 4. In this you will
 
 > [!NOTE]
@@ -2060,13 +2060,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-3341"></a>
+<a id="node-3311"></a>
 #### Overview
 
 <br>
 
 
-<a id="node-3342"></a>
+<a id="node-3312"></a>
 #### This assignment will be different from the two previous ones. Due to **memory and time constraints** of this environment you will not be **able to train a model and use it for inference**. Instead you will **create the necessary building blocks** for the **transformer encoder model** and will use a **pretrained version of the same model** in two ungraded labs after this assignment.  After **completing these 3** (1 graded and 2 ungraded) labs you will:  • Implement the **code necessary** for **Bidirectional Encoder Representation from Transformer (BERT).**  • **Understand how the C4 dataset is structured**.  • **Use a pre-trained model** for **inference**.  • Understand how the **"Text to Text Transfer from Transformers"** or T5 model works.
 
 > [!NOTE]
@@ -2081,75 +2081,30 @@ Learning Objectives
 <br>
 
 
-<a id="node-3343"></a>
+<a id="node-3313"></a>
 #### Importing the Packages
 
 <br>
 
-<a id="node-3344"></a>
+<a id="node-3314"></a>
 
 <p align="center"><kbd><img src="assets/80b4fa8ba932ef9767bdfedd1fa6bfe3195ab090.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3345"></a>
+<a id="node-3315"></a>
 #### 1 - C4 Dataset
 
 <br>
 
-<a id="node-3346"></a>
 
-<p align="center"><kbd><img src="assets/eeabda31d5c70f45ad3f597b27aa5e7e653c9b86.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Đại khái **C4 là một bộ dữ liệu khổng lồ** được thu thập từ **internet**.
-> Nó chính là b**ộ dữ liệu cơ bản để training ra các LLM như BERT,
-> GPT.**..
->
-> Ở đây ta sẽ chỉ **sử dụng một vài example của nó** (trong file **data.
-> txt**)
->
-> **Open file và tạo list**
-
-<br>
-
-<a id="node-3347"></a>
-
-<p align="center"><kbd><img src="assets/fb4c0a1caf8b3a8073ea491cdd65e36b41414db5.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/eaba5168c1f328db59eeecb2785d18411cb82431.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-3348"></a>
-
-<p align="center"><kbd><img src="assets/93291bdef3b12978017274100a037a8ba15330f6.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Có thể thấy mỗi data sample là map với các key
-> **content-length, content-type, text, timestamp, url**
-
-<br>
-
-<a id="node-3349"></a>
-
-<p align="center"><kbd><img src="assets/06dfe4cfcc0da441595a7fe338d18030c70d77a5.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Họ nói để ý sẽ thấy **kí tự 'b'** ở trước mỗi string ví dụ b'
-> 1970', b'text/plain'....Đó là vì thật ra nó là **dạng bytes**
-> (nhớ lại CS50 - byte=8 bit nhị phân)
-
-<br>
-
-
-<a id="node-3350"></a>
+<a id="node-3320"></a>
 #### 1.1 - Pre-Training Objective
 
 <br>
 
-<a id="node-3351"></a>
+<a id="node-3321"></a>
 
 <p align="center"><kbd><img src="assets/3eb9324acb3582a1e3ecf6aad8903ce4814c3dce.png" width="100%"></kbd></p>
 
@@ -2161,12 +2116,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-3352"></a>
+<a id="node-3322"></a>
 #### 1.2 - Process C4
 
 <br>
 
-<a id="node-3353"></a>
+<a id="node-3323"></a>
 
 <p align="center"><kbd><img src="assets/f53c39f0c612392b1efe3afc54150d3eec8ab549.png" width="100%"></kbd></p>
 
@@ -2186,13 +2141,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-3354"></a>
+<a id="node-3324"></a>
 #### 1.2.1 - Decode to Natural Language
 
 <br>
 
 
-<a id="node-3355"></a>
+<a id="node-3325"></a>
 #### The following functions will help you **detokenize** and **tokenize** the text data.  The **sentencepiece** vocabulary was used to **convert from text to ids**. This vocabulary file  is **loaded and used in these helper functions**.  **natural_language_texts** has the **text from the examples we gave you.**  Run the cells below to see what is going on.
 
 > [!NOTE]
@@ -2205,13 +2160,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3356"></a>
+<a id="node-3326"></a>
 
 <p align="center"><kbd><img src="assets/dd0143f45576f2c1ff0527182c10513672d2d41c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3357"></a>
+<a id="node-3327"></a>
 
 <p align="center"><kbd><img src="assets/cbd9c9448c780a72ff7d1d6d66da795f898bd73f.png" width="100%"></kbd></p>
 
@@ -2229,13 +2184,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-3358"></a>
+<a id="node-3328"></a>
 
 <p align="center"><kbd><img src="assets/37c004ca0f30e86711d9bde87f257047af7585d1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3359"></a>
+<a id="node-3329"></a>
 
 <p align="center"><kbd><img src="assets/de57994376cb86983b181c1612d29e459ffa9b77.png" width="100%"></kbd></p>
 
@@ -2282,12 +2237,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-3360"></a>
+<a id="node-3330"></a>
 #### i: 1, char: **Z** [vocab_size - i] = [**31999**] -> decoded_text = **Internațional** The sentinel is <Z> and the decoded token is: Internațional i: 2, char: Y [vocab_size - i] = [31998] -> decoded_text = erwachsene The sentinel is <Y> and the decoded token is: erwachsene i: 3, char: X [vocab_size - i] = [31997] -> decoded_text = Cushion The sentinel is <X> and the decoded token is: Cushion i: 4, char: W [vocab_size - i] = [31996] -> decoded_text = imunitar The sentinel is <W> and the decoded token is: imunitar i: 5, char: V [vocab_size - i] = [31995] -> decoded_text = Intellectual The sentinel is <V> and the decoded token is: Intellectual i: 6, char: U [vocab_size - i] = [31994] -> decoded_text = traditi The sentinel is <U> and the decoded token is: traditi i: 7, char: T [vocab_size - i] = [31993] -> decoded_text = disguise The sentinel is <T> and the decoded token is: disguise i: 8, char: S [vocab_size - i] = [31992] -> decoded_text = exerce The sentinel is <S> and the decoded token is: exerce i: 9, char: R [vocab_size - i] = [31991] -> decoded_text = nourishe The sentinel is <R> and the decoded token is: nourishe i: 10, char: Q [vocab_size - i] = [31990] -> decoded_text = predominant The sentinel is <Q> and the decoded token is: predominant i: 11, char: P [vocab_size - i] = [31989] -> decoded_text = amitié The sentinel is <P> and the decoded token is: amitié i: 12, char: O [vocab_size - i] = [31988] -> decoded_text = erkennt The sentinel is <O> and the decoded token is: erkennt i: 13, char: N [vocab_size - i] = [31987] -> decoded_text = dimension The sentinel is <N> and the decoded token is: dimension i: 14, char: M [vocab_size - i] = [31986] -> decoded_text = inférieur The sentinel is <M> and the decoded token is: inférieur
 
 <br>
 
-<a id="node-3361"></a>
+<a id="node-3331"></a>
 
 <p align="center"><kbd><img src="assets/be6f71b847498b343b230c7f5269ccb819636e78.png" width="100%"></kbd></p>
 
@@ -2326,7 +2281,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3362"></a>
+<a id="node-3332"></a>
 
 <p align="center"><kbd><img src="assets/8db2f088d1ddb94d47f48dd88eaae9e0476b2bca.png" width="100%"></kbd></p>
 
@@ -2339,24 +2294,24 @@ Learning Objectives
 <br>
 
 
-<a id="node-3363"></a>
+<a id="node-3333"></a>
 #### 1.3 - Tokenizing and Masking
 
 <br>
 
 
-<a id="node-3364"></a>
+<a id="node-3334"></a>
 #### Exercise 1 - tokenize_and_mask
 
 <br>
 
-<a id="node-3365"></a>
+<a id="node-3335"></a>
 
 <p align="center"><kbd><img src="assets/35c5970ab9a62522f9e97f321a00ea205f728ebf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3366"></a>
+<a id="node-3336"></a>
 
 <p align="center"><kbd><img src="assets/5ab83ab9dd50fc3904735e6dfca37665ac156225.png" width="100%"></kbd></p>
 
@@ -2457,25 +2412,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-3367"></a>
+<a id="node-3337"></a>
 
 <p align="center"><kbd><img src="assets/0455408a95d89a403fef6f2d8608e441bef532b4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3368"></a>
+<a id="node-3338"></a>
 
 <p align="center"><kbd><img src="assets/43915b1a3f6ae8b286778f27dd08799f0374c56e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3369"></a>
+<a id="node-3339"></a>
 
 <p align="center"><kbd><img src="assets/abc05834dca5ddb91a7003962b38a21a24676035.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3370"></a>
+<a id="node-3340"></a>
 
 <p align="center"><kbd><img src="assets/6d71340b66b329f3800532ae516913b0e107134d.png" width="100%"></kbd></p>
 
@@ -2599,96 +2554,141 @@ Learning Objectives
 <br>
 
 
-<a id="node-3371"></a>
+<a id="node-3341"></a>
 #### 1.4 - Creating the Pairs
 
 <br>
 
-<a id="node-3372"></a>
+<a id="node-3342"></a>
 
 <p align="center"><kbd><img src="assets/ffb210cd47d0f9b7a882c24e7492b60131a41058.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3373"></a>
+<a id="node-3343"></a>
 #### token: **Internațional**, char **<Z>**  after replacing: Beginners BBQ Class Taking Place in Missoula! Do you **<Z>** to get better at making delicious BBQ? You will have the opportunity, put this on your calendar now. Thursday, September 22nd join World Class erwachsene Champion, Tony Ba Cushion from Lone imunitare Rangers. He will be teaching  Intellectual beginner level class for everyone who wants traditi get better with their culinary disguise. Heexerce teach you everything younourishe to know to compete in a KCBS BBQ competition, including techniques, predominant, timelines, amitié selection and erkennt, plus smoker and fire information. The cost to be in the class is $35 perdimension and for inférieurs it refugi free. cheddard in unterlieg will be either a t-shirt or  garanteazpron and you will be tasting samples of each meat that is prepared.  token: **erwachsene**, char **<Y>**  after replacing: Beginners BBQ Class Taking Place in Missoula! Do you **<Z>** to get better at making delicious BBQ? You will have the opportunity, put this on your calendar now. Thursday, September 22nd join World Class **<Y>** Champion, Tony Ba Cushion from Lone imunitare Rangers. He will be teaching  Intellectual beginner level class for everyone who wants traditi get better with their culinary disguise. Heexerce teach you everything younourishe to know to compete in a KCBS BBQ competition, including techniques, predominant, timelines,amitié selection and erkennt, plus smoker and fire information. The cost to be in the class is $35 perdimension and for inférieurs it refugi free. cheddard in unterlieg will be either a t-shirt or  garanteazpron and you will be tasting samples of each meat that is prepared.
 
 <br>
 
+<a id="node-3316"></a>
 
-<a id="node-3374"></a>
+<p align="center"><kbd><img src="assets/eeabda31d5c70f45ad3f597b27aa5e7e653c9b86.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái **C4 là một bộ dữ liệu khổng lồ** được thu thập từ **internet**.
+> Nó chính là b**ộ dữ liệu cơ bản để training ra các LLM như BERT,
+> GPT.**..
+>
+> Ở đây ta sẽ chỉ **sử dụng một vài example của nó** (trong file **data.
+> txt**)
+>
+> **Open file và tạo list**
+
+<br>
+
+<a id="node-3317"></a>
+
+<p align="center"><kbd><img src="assets/fb4c0a1caf8b3a8073ea491cdd65e36b41414db5.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eaba5168c1f328db59eeecb2785d18411cb82431.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-3318"></a>
+
+<p align="center"><kbd><img src="assets/93291bdef3b12978017274100a037a8ba15330f6.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Có thể thấy mỗi data sample là map với các key
+> **content-length, content-type, text, timestamp, url**
+
+<br>
+
+<a id="node-3319"></a>
+
+<p align="center"><kbd><img src="assets/06dfe4cfcc0da441595a7fe338d18030c70d77a5.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Họ nói để ý sẽ thấy **kí tự 'b'** ở trước mỗi string ví dụ b'
+> 1970', b'text/plain'....Đó là vì thật ra nó là **dạng bytes**
+> (nhớ lại CS50 - byte=8 bit nhị phân)
+
+<br>
+
+
+<a id="node-3344"></a>
 #### 2 - Transformer
 
 <br>
 
-<a id="node-3375"></a>
+<a id="node-3345"></a>
 
 <p align="center"><kbd><img src="assets/01cd7be8ffb2212393b6786f02e4f27767764db2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3376"></a>
+<a id="node-3346"></a>
 
 <p align="center"><kbd><img src="assets/0c28221276d7af975a8a6e26e8c6df42fc6ad334.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3377"></a>
+<a id="node-3347"></a>
 #### 2.1 - Transformer Encoder
 
 <br>
 
-<a id="node-3378"></a>
+<a id="node-3348"></a>
 
 <p align="center"><kbd><img src="assets/abd0a27669a061ac850b4fa19a8348f5ae965923.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3379"></a>
+<a id="node-3349"></a>
 #### 2.1.1 - The Feedforward Block
 
 <br>
 
 
-<a id="node-3380"></a>
+<a id="node-3350"></a>
 #### Exercise 2 - FeedForwardBlock
 
 <br>
 
-<a id="node-3381"></a>
+<a id="node-3351"></a>
 
 <p align="center"><kbd><img src="assets/b0d3d57b53e786c93084f14908146fa2821b47b0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3382"></a>
+<a id="node-3352"></a>
 
 <p align="center"><kbd><img src="assets/2dcc760d1269a56aa7bfc1705497d8aafba27399.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3383"></a>
+<a id="node-3353"></a>
 #### 2.1.2 - The Encoder Block
 
 <br>
 
-<a id="node-3384"></a>
+<a id="node-3354"></a>
 
 <p align="center"><kbd><img src="assets/5053b0c03b0004b7dcfd65cb178122f75ad56746.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3385"></a>
+<a id="node-3355"></a>
 #### Exercise 3 - EncoderBlock
 
 <br>
 
-<a id="node-3386"></a>
+<a id="node-3356"></a>
 
 <p align="center"><kbd><img src="assets/418ff92a609a100455e93f533b6e76408c2c7c77.png" width="100%"></kbd></p>
 
@@ -2696,37 +2696,37 @@ Learning Objectives
 
 <br>
 
-<a id="node-3387"></a>
+<a id="node-3357"></a>
 
 <p align="center"><kbd><img src="assets/4e30943eb213977e5944d89dfabf3cb22d734473.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3388"></a>
+<a id="node-3358"></a>
 
 <p align="center"><kbd><img src="assets/a67040cc225a23e3ae15764348782d746f0492c0.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3389"></a>
+<a id="node-3359"></a>
 #### 2.1.3 - The Transformer Encoder
 
 <br>
 
 
-<a id="node-3390"></a>
+<a id="node-3360"></a>
 #### Exercise 4 - TransformerEncoder
 
 <br>
 
-<a id="node-3391"></a>
+<a id="node-3361"></a>
 
 <p align="center"><kbd><img src="assets/0235493889c5f66473d2e615a81f3aacb7d2cfba.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3392"></a>
+<a id="node-3362"></a>
 
 <p align="center"><kbd><img src="assets/2f8b849cf46a021a4a19bfad873e746f3b5485b6.png" width="100%"></kbd></p>
 
@@ -2734,7 +2734,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3393"></a>
+<a id="node-3363"></a>
 
 <p align="center"><kbd><img src="assets/0cb84b450c07a1b61552056a983fd1045e209fda.png" width="100%"></kbd></p>
 
@@ -2743,30 +2743,30 @@ Learning Objectives
 <br>
 
 
-<a id="node-3394"></a>
+<a id="node-3364"></a>
 ## Lab: Bert Loss
 
 <br>
 
-<a id="node-3395"></a>
+<a id="node-3365"></a>
 
 <p align="center"><kbd><img src="assets/c4b16a39787fde717c224540788957049c167593.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3396"></a>
+<a id="node-3366"></a>
 
 <p align="center"><kbd><img src="assets/aa6e53078551e78856faf23fc6fbc7d3feaf399d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3397"></a>
+<a id="node-3367"></a>
 
 <p align="center"><kbd><img src="assets/0760014e2ec8e422e406b1a5e81a3df84f036aed.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3398"></a>
+<a id="node-3368"></a>
 
 <p align="center"><kbd><img src="assets/5d2400a67c2e6d4e789bd3711a09974ee6a8f874.png" width="100%"></kbd></p>
 
@@ -2779,7 +2779,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3399"></a>
+<a id="node-3369"></a>
 
 <p align="center"><kbd><img src="assets/78f22adb1bef8eb7d0ece1424cca546559adff4d.png" width="100%"></kbd></p>
 
@@ -2809,7 +2809,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3400"></a>
+<a id="node-3370"></a>
 
 <p align="center"><kbd><img src="assets/4aeaf3ffc35b02d1a86b4a196aacdec0dbf89836.png" width="100%"></kbd></p>
 
@@ -2848,31 +2848,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-3401"></a>
+<a id="node-3371"></a>
 
 <p align="center"><kbd><img src="assets/2211f6678488b6493d52b18e07632d93e46f98f5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3402"></a>
+<a id="node-3372"></a>
 
 <p align="center"><kbd><img src="assets/82292111e2ca319039b248088ef62f27bb74f1a5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3403"></a>
+<a id="node-3373"></a>
 
 <p align="center"><kbd><img src="assets/a7c50a3dee8b38a0ca1305c7bd4684449226a1cf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3404"></a>
+<a id="node-3374"></a>
 
 <p align="center"><kbd><img src="assets/0adcbe036952918da06d140a488aadc1f83ccf06.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3405"></a>
+<a id="node-3375"></a>
 
 <p align="center"><kbd><img src="assets/78863be059c0959d4c99e5d9ce0f33af19415dda.png" width="100%"></kbd></p>
 
@@ -2906,7 +2906,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-3406"></a>
+<a id="node-3376"></a>
 ### Sure, here's an explanation for each of the hyper-parameters in the Transformer initialization using the Trax
 
 > [!NOTE]
@@ -2955,7 +2955,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3407"></a>
+<a id="node-3377"></a>
 
 <p align="center"><kbd><img src="assets/3a241026c50e79e49d788a88fbbaacab060c7627.png" width="100%"></kbd></p>
 
@@ -2965,7 +2965,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3408"></a>
+<a id="node-3378"></a>
 
 <p align="center"><kbd><img src="assets/f647230a9fb2ead33c536ed7cb4866c26686339a.png" width="100%"></kbd></p>
 
@@ -2985,12 +2985,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-3409"></a>
+<a id="node-3379"></a>
 #### **pretty_decoded input:**  Fo **<Z>** plaid ly **<Y>** and **<X>**dex shortall with metallic slinky insets. Attached metallic elastic **<W>** with O-ring. **<V>**band **<U>**. Great hip hop **<T>** dance costume. Made in the USA.  **pretty_decoded target:**  **<Z>il <Y>cra <X> span <W> belt <V> Head <U> included <T> or jazz**  c4_input:  [4452, 31999, 30772, 3, 120, 31998, 11, 31997, 26, 994, 710, 1748, 28, 18813, 3, 7, 4907, 63, 16, 2244, 7, 5, 28416, 15, 26, 18813, 15855, 31996, 28, 411, 18, 1007, 5, 31995, 3348, 31994, 5, 1651, 5436, 13652, 31993, 2595, 11594, 5, 6465, 16, 8, 2312, 5]  c4_target:  [31999, 173, 31998, 2935, 31997, 8438, 31996, 6782, 31995, 3642, 31994, 1285, 31993, 42, 9948] 15 64
 
 <br>
 
-<a id="node-3410"></a>
+<a id="node-3380"></a>
 
 <p align="center"><kbd><img src="assets/5052a3820f24bd139a54f98dfa8bb48ec440da1b.png" width="100%"></kbd></p>
 
@@ -3016,13 +3016,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-3411"></a>
+<a id="node-3381"></a>
 ## Lab: T5
 
 <br>
 
 
-<a id="node-3412"></a>
+<a id="node-3382"></a>
 ### Welcome to the part 2 of testing the models for this week's
 
 > [!NOTE]
@@ -3038,7 +3038,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3413"></a>
+<a id="node-3383"></a>
 
 <p align="center"><kbd><img src="assets/9d496378778488fcf5c70dcd4cd639ba0172ea81.png" width="100%"></kbd></p>
 
@@ -3047,19 +3047,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-3414"></a>
+<a id="node-3384"></a>
 
 <p align="center"><kbd><img src="assets/ab54434e975458e22a14f85e4c53c8afb66c0a03.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3415"></a>
+<a id="node-3385"></a>
 
 <p align="center"><kbd><img src="assets/f8f2d961fabb3a50a74ee4332ff48b2c3a6d8f96.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3416"></a>
+<a id="node-3386"></a>
 
 <p align="center"><kbd><img src="assets/f7bf53350f960bd7e85935548908efceb9855c59.png" width="100%"></kbd></p>
 
@@ -3068,14 +3068,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-3417"></a>
+<a id="node-3387"></a>
 
 <p align="center"><kbd><img src="assets/057ed9dc59c8701ba836cbe1c8637338774e9ba9.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3418"></a>
+<a id="node-3388"></a>
 #### Now let's try to **fine tune on SQuAD** and see what becomes of the model. For this, we need to **write a function** that will **create and process the SQuAD tf.data.Dataset**. Below is how **T5 pre-processes SQuAD dataset** as a **text2text example**. Before we jump in, we will have to **first load in the data.**
 
 > [!NOTE]
@@ -3084,7 +3084,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3419"></a>
+<a id="node-3389"></a>
 
 <p align="center"><kbd><img src="assets/81a26b009cc3d8405841b3aa616f5940f7f79fb3.png" width="100%"></kbd></p>
 
@@ -3101,7 +3101,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3420"></a>
+<a id="node-3390"></a>
 
 <p align="center"><kbd><img src="assets/2e7f349168dbe0563efbd474dc21ad08faa88f3f.png" width="100%"></kbd></p>
 
@@ -3115,7 +3115,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3421"></a>
+<a id="node-3391"></a>
 
 <p align="center"><kbd><img src="assets/e7163ccc259926b3f022ef04c52e0f7bf60ab828.png" width="100%"></kbd></p>
 
@@ -3125,12 +3125,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-3422"></a>
+<a id="node-3392"></a>
 #### **question**: What is the use of a transistor ?  **context**:  A transistor is a semiconductor device used to amplify or switch electronic signals and electrical power . It is composed of semiconductor material with at least three terminals for connection to an external circuit . A voltage or current applied to one pair of the transistor ' s terminals changes the current through another pair of terminals . Because the controlled ( output ) power can be higher than the controlling ( input ) power , a transistor can amplify a signal . Today , some transistors are packaged individually , but many more are found embedded in integrated circuits .  **target**: to amplify or switch electronic signals and electrical power
 
 <br>
 
-<a id="node-3423"></a>
+<a id="node-3393"></a>
 
 <p align="center"><kbd><img src="assets/8e49666b833fecc3719db1d3f6437e194adec1b6.png" width="100%"></kbd></p>
 
@@ -3140,7 +3140,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3424"></a>
+<a id="node-3394"></a>
 
 <p align="center"><kbd><img src="assets/5a876dc5966f1ec0ed007928fb163e1f116f3e8e.png" width="100%"></kbd></p>
 
@@ -3149,7 +3149,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3425"></a>
+<a id="node-3395"></a>
 
 <p align="center"><kbd><img src="assets/29e47f238a3b5430da35adbaaccdadaba02f876c.png" width="100%"></kbd></p>
 
@@ -3171,7 +3171,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-3426"></a>
+<a id="node-3396"></a>
 
 <p align="center"><kbd><img src="assets/199cd03506783eabfa01553d282f1765445a5b6c.png" width="100%"></kbd></p>
 

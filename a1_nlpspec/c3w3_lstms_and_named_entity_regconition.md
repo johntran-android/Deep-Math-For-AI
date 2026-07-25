@@ -18,13 +18,13 @@ Learning Objectives
  • Part-of-speech tagging
  • Data generators
 
-<a id="node-2344"></a>
+<a id="node-2314"></a>
 ## Welcom
 
 <br>
 
 
-<a id="node-2345"></a>
+<a id="node-2315"></a>
 ### This week explores named entity recognition or NAR for short, which is a sap task of
 
 > [!NOTE]
@@ -44,13 +44,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2346"></a>
+<a id="node-2316"></a>
 ## Rnns And Vanishing Gradients
 
 <br>
 
 
-<a id="node-2347"></a>
+<a id="node-2317"></a>
 ### 1 Introduction to LSTM: The text introduces **long short-term memory (LSTM) cells** as a solution to
 
 > [!NOTE]
@@ -79,7 +79,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2348"></a>
+<a id="node-2318"></a>
 
 <p align="center"><kbd><img src="assets/537634864e0e36fff7008b32f63ed19c7f66eb82.png" width="100%"></kbd></p>
 
@@ -91,7 +91,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2349"></a>
+<a id="node-2319"></a>
 
 <p align="center"><kbd><img src="assets/7ebeaece65e4d2031f5097bf6422c0ad09c31a3e.png" width="100%"></kbd></p>
 
@@ -102,7 +102,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2350"></a>
+<a id="node-2320"></a>
 
 <p align="center"><kbd><img src="assets/b3629cb2a5f6d15bde24102060fe5bdf6583efb1.png" width="100%"></kbd></p>
 
@@ -138,7 +138,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2351"></a>
+<a id="node-2321"></a>
 
 <p align="center"><kbd><img src="assets/57051b0dcc050fa9471c7ccace7753d2c628c0f0.png" width="100%"></kbd></p>
 
@@ -161,7 +161,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2352"></a>
+<a id="node-2322"></a>
 
 <p align="center"><kbd><img src="assets/073465b9b2c9897ab39cde2e222307facb9a8560.png" width="100%"></kbd></p>
 
@@ -172,7 +172,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2353"></a>
+<a id="node-2323"></a>
 
 <p align="center"><kbd><img src="assets/049b4276f6175ff7738e5f2bf16687bcf95146da.png" width="100%"></kbd></p>
 
@@ -184,7 +184,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2354"></a>
+<a id="node-2324"></a>
 
 <p align="center"><kbd><img src="assets/93ec2af9997dcb62efac6f6b1da0f6559fc748ab.png" width="100%"></kbd></p>
 
@@ -213,14 +213,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-2355"></a>
+<a id="node-2325"></a>
 
 <p align="center"><kbd><img src="assets/54262ea1b65da02a273676caa27e7157e0f05a0b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2356"></a>
+<a id="node-2326"></a>
 ## Rnns And Vanishing
 
 > [!NOTE]
@@ -229,13 +229,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2357"></a>
+<a id="node-2327"></a>
 
 <p align="center"><kbd><img src="assets/5cc4a5ebcf983debd164e58bce44cd2ca47bd597.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2358"></a>
+<a id="node-2328"></a>
 
 <p align="center"><kbd><img src="assets/fd40680aacad00f838cbaee517bdb90a19b9a6e2.png" width="100%"></kbd></p>
 
@@ -249,14 +249,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-2359"></a>
+<a id="node-2329"></a>
 
 <p align="center"><kbd><img src="assets/021ae1ef8d733010aade6cccebc7e14f0fbe449d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2360"></a>
+<a id="node-2330"></a>
 ## (optional) Reading Intro To
 
 > [!NOTE]
@@ -267,7 +267,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2361"></a>
+<a id="node-2331"></a>
 ### https://blog.paperspace.com/intro-to-optimization-in-deep-learning-gradient-descent/
 
 > [!NOTE]
@@ -276,49 +276,49 @@ Learning Objectives
 
 <br>
 
-<a id="node-2362"></a>
+<a id="node-2332"></a>
 
 <p align="center"><kbd><img src="assets/69ea8fcccf0c5de1a3ca96a5c13dee3c6f7fbbb6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2363"></a>
+<a id="node-2333"></a>
 
 <p align="center"><kbd><img src="assets/b20366397299066fca57af3f9168c07ba8d63228.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2364"></a>
+<a id="node-2334"></a>
 
 <p align="center"><kbd><img src="assets/4a44f5e18549cb7868c6d7dd7134fea472904059.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2365"></a>
+<a id="node-2335"></a>
 
 <p align="center"><kbd><img src="assets/4122ef04b4ab28f06bdaabd74cff592bee1110c8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2366"></a>
+<a id="node-2336"></a>
 
 <p align="center"><kbd><img src="assets/148935ea4658c146b3b514153c655a482943819c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2367"></a>
+<a id="node-2337"></a>
 
 <p align="center"><kbd><img src="assets/b72d43aaf1e138f9b8f4bb5ae4ac0a7ecdd546bf.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2368"></a>
+<a id="node-2338"></a>
 ## Lab: Exploding & Vanishing Gradients
 
 <br>
 
-<a id="node-2369"></a>
+<a id="node-2339"></a>
 
 <p align="center"><kbd><img src="assets/14566055909d951e04579d4eb24c2c0cc75b4460.png" width="100%"></kbd></p>
 
@@ -332,13 +332,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2370"></a>
+<a id="node-2340"></a>
 
 <p align="center"><kbd><img src="assets/e358c8874db34c1be112ee27d221d6f62995d3c4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2371"></a>
+<a id="node-2341"></a>
 
 <p align="center"><kbd><img src="assets/482d0506e71a5a19b3e93d7b92097fd10577729a.png" width="100%"></kbd></p>
 
@@ -349,7 +349,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2372"></a>
+<a id="node-2342"></a>
 
 <p align="center"><kbd><img src="assets/02243e343af6be2c0dab70ae068042672b27c556.png" width="100%"></kbd></p>
 
@@ -365,7 +365,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2373"></a>
+<a id="node-2343"></a>
 
 <p align="center"><kbd><img src="assets/05a73a6fe96359c1ef9ca0954a19bbe5ae76f578.png" width="100%"></kbd></p>
 
@@ -375,7 +375,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2374"></a>
+<a id="node-2344"></a>
 
 <p align="center"><kbd><img src="assets/2b3238fd0853f5afed671e33934bc18b73229728.png" width="100%"></kbd></p>
 
@@ -385,7 +385,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2375"></a>
+<a id="node-2345"></a>
 
 <p align="center"><kbd><img src="assets/6af10f343af12d4e704da9a9ac20aeefea01d255.png" width="100%"></kbd></p>
 
@@ -409,7 +409,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2376"></a>
+<a id="node-2346"></a>
 
 <p align="center"><kbd><img src="assets/1d833aa2d3ce1262560827d9ff9999116a0e1e41.png" width="100%"></kbd></p>
 
@@ -426,7 +426,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2377"></a>
+<a id="node-2347"></a>
 
 <p align="center"><kbd><img src="assets/5040ace25a23d57ca3d746dd843af35be12ba703.png" width="100%"></kbd></p>
 
@@ -447,7 +447,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2378"></a>
+<a id="node-2348"></a>
 
 <p align="center"><kbd><img src="assets/b3ed1afedb90bc778598587565561a7ac94c7f3f.png" width="100%"></kbd></p>
 
@@ -469,7 +469,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2379"></a>
+<a id="node-2349"></a>
 
 <p align="center"><kbd><img src="assets/7efc27ff3cb90e46d27eb91b515a3d872ad84099.png" width="100%"></kbd></p>
 
@@ -479,7 +479,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2380"></a>
+<a id="node-2350"></a>
 
 <p align="center"><kbd><img src="assets/8f16cfc809291b7d835c3fb7dd4110be6a25449a.png" width="100%"></kbd></p>
 
@@ -506,7 +506,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2381"></a>
+<a id="node-2351"></a>
 
 <p align="center"><kbd><img src="assets/87d8653354b8e0697321861705de42b65fae770f.png" width="100%"></kbd></p>
 
@@ -518,7 +518,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2382"></a>
+<a id="node-2352"></a>
 
 <p align="center"><kbd><img src="assets/449305bf2e5a10ebe062dfbf3159530dd47c5e00.png" width="100%"></kbd></p>
 
@@ -536,7 +536,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2383"></a>
+<a id="node-2353"></a>
 ### Now you are more familiar with the \\*conditions for vanishing and exploding
 
 > [!NOTE]
@@ -554,13 +554,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2384"></a>
+<a id="node-2354"></a>
 ## Introduction To Lstms
 
 <br>
 
 
-<a id="node-2385"></a>
+<a id="node-2355"></a>
 ### 1 **LSTMs** are the **best-known solution** to the **vanishing gradients problem** in \\*recurrent neural
 
 > [!NOTE]
@@ -594,13 +594,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2386"></a>
+<a id="node-2356"></a>
 
 <p align="center"><kbd><img src="assets/7b1d989a5a4ddaafe888559c5096ad8f777c7b2b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2387"></a>
+<a id="node-2357"></a>
 
 <p align="center"><kbd><img src="assets/079291d292b1f9b86b0faa7e3a1689c79d4f8a78.png" width="100%"></kbd></p>
 
@@ -615,7 +615,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2388"></a>
+<a id="node-2358"></a>
 
 <p align="center"><kbd><img src="assets/9091cf83d632f6e0e1bcfb0564ed3a0b06df9951.png" width="100%"></kbd></p>
 
@@ -639,26 +639,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-2389"></a>
+<a id="node-2359"></a>
 
 <p align="center"><kbd><img src="assets/9b2e9a792b144f58a98bee89a58ec6304cf4d318.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2390"></a>
+<a id="node-2360"></a>
 
 <p align="center"><kbd><img src="assets/1776c8640de0e0c08d83e492740c77534c3f4a0a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2391"></a>
+<a id="node-2361"></a>
 ## Lstm Architecture
 
 <br>
 
 
-<a id="node-2392"></a>
+<a id="node-2362"></a>
 ### 1 The architecture of an LSTM involves a cell state, a hidden state, input (x), and output (y).
 
 > [!NOTE]
@@ -697,13 +697,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2393"></a>
+<a id="node-2363"></a>
 
 <p align="center"><kbd><img src="assets/feaf142dfa42092117a8266d08f8dd57252798e1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2394"></a>
+<a id="node-2364"></a>
 
 <p align="center"><kbd><img src="assets/20a5d20ef7ef92aa3269b1c378913804496900d4.png" width="100%"></kbd></p>
 
@@ -716,7 +716,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2395"></a>
+<a id="node-2365"></a>
 
 <p align="center"><kbd><img src="assets/b791408db024d80cc345781ce2a060493c6da2e1.png" width="100%"></kbd></p>
 
@@ -727,7 +727,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2396"></a>
+<a id="node-2366"></a>
 
 <p align="center"><kbd><img src="assets/302e539431ad7439a5dc4f9afd1633b99e7b0bd2.png" width="100%"></kbd></p>
 
@@ -738,14 +738,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-2397"></a>
+<a id="node-2367"></a>
 
 <p align="center"><kbd><img src="assets/f6765508d78958c18a40425ec38f92fc5bee5039.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2398"></a>
+<a id="node-2368"></a>
 ## Introduction To Named
 
 > [!NOTE]
@@ -755,7 +755,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2399"></a>
+<a id="node-2369"></a>
 ### 1 Named Entity Recognition (NER) is an **essential problem in natural language processing (NLP)**, and many
 
 > [!NOTE]
@@ -785,56 +785,56 @@ Learning Objectives
 
 <br>
 
-<a id="node-2400"></a>
+<a id="node-2370"></a>
 
 <p align="center"><kbd><img src="assets/ce46d26d5345d6c3d56fabf79c6c6f5024ba43e6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2401"></a>
+<a id="node-2371"></a>
 
 <p align="center"><kbd><img src="assets/1bb98e0e5ce70c090153c48234c6247f31f86c6d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2402"></a>
+<a id="node-2372"></a>
 
 <p align="center"><kbd><img src="assets/f7a5073e66117a9482b516fefbeb8fca7d3debe3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2403"></a>
+<a id="node-2373"></a>
 
 <p align="center"><kbd><img src="assets/b358bce7dad7e98878911d17e5ec5f5b87231d96.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2404"></a>
+<a id="node-2374"></a>
 
 <p align="center"><kbd><img src="assets/05645b567e2c2f230d571d1cffb1c6f0c2859a53.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2405"></a>
+<a id="node-2375"></a>
 ## Lstm Equations
 
 <br>
 
-<a id="node-2406"></a>
+<a id="node-2376"></a>
 
 <p align="center"><kbd><img src="assets/ca64efdc5c0a7b66cd10751a4bfd158ad2771921.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2407"></a>
+<a id="node-2377"></a>
 ## Training Ners: Data Preprocessing
 
 <br>
 
 
-<a id="node-2408"></a>
+<a id="node-2378"></a>
 ### 1 To train a **Named Entity Recognition (NER) system**, the first step involves **converting entity classes** and
 
 > [!NOTE]
@@ -866,7 +866,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2409"></a>
+<a id="node-2379"></a>
 
 <p align="center"><kbd><img src="assets/fd2ece235602da93f27b3f9a348277fe28ed0806.png" width="100%"></kbd></p>
 
@@ -876,7 +876,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2410"></a>
+<a id="node-2380"></a>
 
 <p align="center"><kbd><img src="assets/df0cf369ebf564c927f5cc7807cfb7ffb4e2fd36.png" width="100%"></kbd></p>
 
@@ -886,7 +886,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2411"></a>
+<a id="node-2381"></a>
 
 <p align="center"><kbd><img src="assets/98b352de74c28d9587a19017b374467275448cfc.png" width="100%"></kbd></p>
 
@@ -897,7 +897,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2412"></a>
+<a id="node-2382"></a>
 
 <p align="center"><kbd><img src="assets/c02d0dd281c6d68905dbb9ec151388b342b6b0ad.png" width="100%"></kbd></p>
 
@@ -906,7 +906,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2413"></a>
+<a id="node-2383"></a>
 
 <p align="center"><kbd><img src="assets/264bdc2af28248fafec7fcf9b11833eadf0dda6a.png" width="100%"></kbd></p>
 
@@ -917,7 +917,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2414"></a>
+<a id="node-2384"></a>
 #### We use Log Softmax instead of Softmax in training the Named Entity Recognition (NER) neural network model mainly for **numerical stability** and **computational efficiency** during optimization.  The **Softmax** function is used to convert the **raw scores (logits)** produced by the last layer of the neural network **into probabilities**. However, **exponentiating large logits** in Softmax can **lead to numerical instability**, as exponential values can grow very quickly, potentially **causing overflow** or **loss of precision in floating-point representations**.  On the other hand, **Log Softmax** is a **more numerically stable** alternative. **Instead of exponentiating the logits**, Log Softmax computes the **logarithm of the Softmax probabilities**. This **avoids the issues of exponential growth** and helps **maintain numerical stability** during training.  Using Log Softmax also provides **computational advantages** during **optimization**, especially in deep neural networks like NER models. When computing gradients during backpropagation, **taking the logarithm of the Softmax probabilities allows for simpler and more efficient computations**. It **simplifies the calculations** when performing the chain rule to compute gradients, **reducing computational complexity** and **speeding up the training process.**  In summary, using Log Softmax in training NER neural network models ensures numerical stability and enhances computational efficiency during optimization, making the training process more reliable and faster.
 
 > [!NOTE]
@@ -930,7 +930,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2415"></a>
+<a id="node-2385"></a>
 
 <p align="center"><kbd><img src="assets/4416ae271543e04222fa93aab21d9d8af41d1668.png" width="100%"></kbd></p>
 
@@ -940,31 +940,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-2416"></a>
+<a id="node-2386"></a>
 
 <p align="center"><kbd><img src="assets/c092baa328c5a0597539fb2d9fca802326b23fae.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2417"></a>
+<a id="node-2387"></a>
 
 <p align="center"><kbd><img src="assets/21af1575d35dde5e9ba2e48aaca80a324988b7a5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2418"></a>
+<a id="node-2388"></a>
 ## Reading: Lstm (dlspec C5)
 
 <br>
 
 
-<a id="node-2419"></a>
+<a id="node-2389"></a>
 ## Compute Accuracy
 
 <br>
 
-<a id="node-2420"></a>
+<a id="node-2390"></a>
 
 <p align="center"><kbd><img src="assets/dd85873dfea2a348df2a2a98a5a7600d8b4fd12b.png" width="100%"></kbd></p>
 
@@ -990,7 +990,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2421"></a>
+<a id="node-2391"></a>
 
 <p align="center"><kbd><img src="assets/1bd01083943b5d169b6a5962ef2c86ee4afd474b.png" width="100%"></kbd></p>
 
@@ -1030,31 +1030,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-2422"></a>
+<a id="node-2392"></a>
 
 <p align="center"><kbd><img src="assets/d87c7c04d993ce8533f24ddaaca467c753f537b6.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2423"></a>
+<a id="node-2393"></a>
 ## Week Conclusion
 
 <br>
 
 
-<a id="node-2424"></a>
+<a id="node-2394"></a>
 ## Quiz
 
 <br>
 
-<a id="node-2425"></a>
+<a id="node-2395"></a>
 
 <p align="center"><kbd><img src="assets/af89f9c389ac5c7851a24f8403b7a701232cbc4d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2426"></a>
+<a id="node-2396"></a>
 
 <p align="center"><kbd><img src="assets/1aaf343a1239fb0193c1bbe5458adbcdf0add1c1.png" width="100%"></kbd></p>
 
@@ -1064,56 +1064,56 @@ Learning Objectives
 
 <br>
 
-<a id="node-2427"></a>
+<a id="node-2397"></a>
 
 <p align="center"><kbd><img src="assets/88cd79df6d6afe17bee0c760fd9663153aea42e7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2428"></a>
+<a id="node-2398"></a>
 
 <p align="center"><kbd><img src="assets/f68492aa627bfee98ac2a3dc97cc9fcb1be2a941.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2429"></a>
+<a id="node-2399"></a>
 
 <p align="center"><kbd><img src="assets/db10015cf77fbffae85c102cb100ea82806e0576.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2430"></a>
+<a id="node-2400"></a>
 
 <p align="center"><kbd><img src="assets/5d13c0e199ad559b2fcd39e6b72356f95a939e9d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2431"></a>
+<a id="node-2401"></a>
 
 <p align="center"><kbd><img src="assets/edc547eb70ccfed9daa229e6b101c4c229bcd746.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2432"></a>
+<a id="node-2402"></a>
 
 <p align="center"><kbd><img src="assets/b080cc05a9232312fdf13d68b38e267c68690cfe.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2433"></a>
+<a id="node-2403"></a>
 
 <p align="center"><kbd><img src="assets/82dd4a5b042860bead023cc2db134bedb81f04d9.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2434"></a>
+<a id="node-2404"></a>
 ## P.A: Named  Entity Recognition
 
 <br>
 
 
-<a id="node-2435"></a>
+<a id="node-2405"></a>
 ### Welcome to the third programming assignment of Course 3. In this assignment,
 
 > [!NOTE]
@@ -1128,12 +1128,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2436"></a>
+<a id="node-2406"></a>
 #### Introduction
 
 <br>
 
-<a id="node-2437"></a>
+<a id="node-2407"></a>
 
 <p align="center"><kbd><img src="assets/140efef332273e4c4b529e574acb53ef38f05e13.png" width="100%"></kbd></p>
 
@@ -1145,25 +1145,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-2438"></a>
+<a id="node-2408"></a>
 
 <p align="center"><kbd><img src="assets/a7f7605a20000c9f45a99f2d6a06d4898db630a8.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2439"></a>
+<a id="node-2409"></a>
 #### 1 - Exploring the Data
 
 <br>
 
 
-<a id="node-2440"></a>
+<a id="node-2410"></a>
 #### We will be using a dataset from **Kaggle**, which we will **preprocess** for you.  The **original data** consists of **four columns**: the **sentence number**, the **word**,  the **part of speech of the word**, and the **tags**. A few tags you might expect to see are:  **geo**: **geographical** entity **org**: **organization** **per**: **person** **gpe**: **geopolitical** entity **tim**: **time** indicator **art**: **artifact** **eve**: **event** **nat**: **natural phenomenon** O: **filler word**
 
 <br>
 
-<a id="node-2441"></a>
+<a id="node-2411"></a>
 
 <p align="center"><kbd><img src="assets/1ffeed554ecb49a55fe124edd9ca4aa283a829d2.png" width="100%"></kbd></p>
 
@@ -1179,12 +1179,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2442"></a>
+<a id="node-2412"></a>
 #### 1.1 - Importing the Data
 
 <br>
 
-<a id="node-2443"></a>
+<a id="node-2413"></a>
 
 <p align="center"><kbd><img src="assets/591e56959682b4075fc06ae7436d10b13278548f.png" width="100%"></kbd></p>
 
@@ -1196,7 +1196,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2444"></a>
+<a id="node-2414"></a>
 
 <p align="center"><kbd><img src="assets/dc8a1d7fb9e2187df3490df2eb6371cfffe75e40.png" width="100%"></kbd></p>
 
@@ -1209,7 +1209,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2445"></a>
+<a id="node-2415"></a>
 
 <p align="center"><kbd><img src="assets/4fc9970856348d79112553f7b1822adabc0522a9.png" width="100%"></kbd></p>
 
@@ -1219,7 +1219,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2446"></a>
+<a id="node-2416"></a>
 
 <p align="center"><kbd><img src="assets/235e6b504cd7b41dbf59b0db136498ba945ff00a.png" width="100%"></kbd></p>
 
@@ -1229,7 +1229,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2447"></a>
+<a id="node-2417"></a>
 
 <p align="center"><kbd><img src="assets/353d2b6184e8be60997e449b7c944030a0288609.png" width="100%"></kbd></p>
 
@@ -1243,7 +1243,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2448"></a>
+<a id="node-2418"></a>
 
 <p align="center"><kbd><img src="assets/4c9914778c7ab2c6a65f14cf071dac873a7dc6d8.png" width="100%"></kbd></p>
 
@@ -1256,7 +1256,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2449"></a>
+<a id="node-2419"></a>
 
 <p align="center"><kbd><img src="assets/d481884d97ac55e3ad866a7b2c036eb83e466adf.png" width="100%"></kbd></p>
 
@@ -1272,7 +1272,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2450"></a>
+<a id="node-2420"></a>
 
 <p align="center"><kbd><img src="assets/561d3301703eb9f6a6604eba6bcb8acba89b306f.png" width="100%"></kbd></p>
 
@@ -1283,12 +1283,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2451"></a>
+<a id="node-2421"></a>
 #### 1.2 - Data Generator
 
 <br>
 
-<a id="node-2452"></a>
+<a id="node-2422"></a>
 
 <p align="center"><kbd><img src="assets/237b66d9a02f32bb9cd6f525d96d6d5b2f441c5d.png" width="100%"></kbd></p>
 
@@ -1304,7 +1304,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2453"></a>
+<a id="node-2423"></a>
 #### Details:  Use this code as an outer loop  **while True:   ...   yield((X,Y))**    so your data generator runs continuously. Within that loop, **define 2** \\/**for loops**\\/:  The first stores **temporal lists** of the **data samples** **to be included** in the batch, and **finds  the maximum length** of the sentences contained in it.  The second one **moves the elements** from the **temporal list** into **NumPy arrays pre-filled  with pad values**.  There are three features useful for defining this generator:  The NumPy **full()** function to **fill the NumPy arrays** with a **pad value**. See full function  documentation.  **Tracking the current location** in the incoming lists of sentences. **Generators** **variables hold  their values between invocations**, so we **create an index variable**, **initialize to zero**, and  **increment by one for each sample included** in a batch. However, we **do not use the index**  to access the positions of the list of sentences **directly**. Instead, we **use it to select one  index** from **a list of indexes**. In this way, we can **change the order** in which we **traverse**  our original list, keeping untouched our original list.  Since **batch_size** and **the length of the input lists** are **not aligned**, gathering a batch_size  group of inputs may involve **wrapping back to the beginning of the input loop**. In our  approach, it is **just enough to reset the index to 0**. We can **re-shuffle the list of indexes** to  produce different batches each time.
 
 > [!NOTE]
@@ -1335,7 +1335,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2454"></a>
+<a id="node-2424"></a>
 
 <p align="center"><kbd><img src="assets/432ed14dcfbbd9340fda2e007bc6de42992c300e.png" width="100%"></kbd></p>
 
@@ -1344,18 +1344,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2455"></a>
+<a id="node-2425"></a>
 #### Exercise 1 - data_generator (UNQ_C1)
 
 <br>
 
-<a id="node-2456"></a>
+<a id="node-2426"></a>
 
 <p align="center"><kbd><img src="assets/b8a64fdc3cea309ea902f5111bf248c916d15bd0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2457"></a>
+<a id="node-2427"></a>
 
 <p align="center"><kbd><img src="assets/c3640145d4b25d550f18604e0b93f3fc660ee073.png" width="100%"></kbd></p>
 
@@ -1363,7 +1363,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2458"></a>
+<a id="node-2428"></a>
 
 <p align="center"><kbd><img src="assets/54ec2b8d6c682cfa3f73fc7a047350e60a1b538e.png" width="100%"></kbd></p>
 
@@ -1371,37 +1371,37 @@ Learning Objectives
 
 <br>
 
-<a id="node-2459"></a>
+<a id="node-2429"></a>
 
 <p align="center"><kbd><img src="assets/6018d60ce931391c76e446fe723337a510eca50e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2460"></a>
+<a id="node-2430"></a>
 #### 2 - Building the Model
 
 <br>
 
-<a id="node-2461"></a>
+<a id="node-2431"></a>
 
 <p align="center"><kbd><img src="assets/e2d7f9bfecec178b5e15a1c105aac72a298df7eb.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2462"></a>
+<a id="node-2432"></a>
 #### Exercise 2 - NER (UNQ_C2)
 
 <br>
 
-<a id="node-2463"></a>
+<a id="node-2433"></a>
 
 <p align="center"><kbd><img src="assets/7500d5da6e40047027beedf1d860c3b50a043c2c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2464"></a>
+<a id="node-2434"></a>
 
 <p align="center"><kbd><img src="assets/bbcb9bbd64506a7658ab1cd987e9bae3c2c0fd76.png" width="100%"></kbd></p>
 
@@ -1412,19 +1412,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-2465"></a>
+<a id="node-2435"></a>
 
 <p align="center"><kbd><img src="assets/ab9a6dde15c4e5db29b0f9a8216e76c8bcb3ba80.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2466"></a>
+<a id="node-2436"></a>
 #### 3 - Train the Model
 
 <br>
 
-<a id="node-2467"></a>
+<a id="node-2437"></a>
 
 <p align="center"><kbd><img src="assets/9cffa17db6dc5c08c328b97e93d336811c94ac7c.png" width="100%"></kbd></p>
 
@@ -1445,7 +1445,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2468"></a>
+<a id="node-2438"></a>
 
 <p align="center"><kbd><img src="assets/b8b14e105e7ad86c12f03bf3815b8b9fd6a08d82.png" width="100%"></kbd></p>
 
@@ -1459,18 +1459,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2469"></a>
+<a id="node-2439"></a>
 #### Exercise 3 - train_model (UNQ_C3)
 
 <br>
 
-<a id="node-2470"></a>
+<a id="node-2440"></a>
 
 <p align="center"><kbd><img src="assets/6b077cbfc42126f7c4c203e34efdc0cbb578cd28.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2471"></a>
+<a id="node-2441"></a>
 
 <p align="center"><kbd><img src="assets/a2e06d405a6c08e9e1685b077d2f13445bb5e78a.png" width="100%"></kbd></p>
 
@@ -1480,7 +1480,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2472"></a>
+<a id="node-2442"></a>
 
 <p align="center"><kbd><img src="assets/b5ee94cccf034e927dfcdb19e95e8c31a17c14b1.png" width="100%"></kbd></p>
 
@@ -1490,7 +1490,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2473"></a>
+<a id="node-2443"></a>
 
 <p align="center"><kbd><img src="assets/9923739d7a05456a2d6eae0ace5c8f7c5e583ba5.png" width="100%"></kbd></p>
 
@@ -1501,18 +1501,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2474"></a>
+<a id="node-2444"></a>
 #### 4 - Compute Accuracy
 
 <br>
 
-<a id="node-2475"></a>
+<a id="node-2445"></a>
 
 <p align="center"><kbd><img src="assets/36f6e6650f0a4c9c8e87ae489b39de8faf476312.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2476"></a>
+<a id="node-2446"></a>
 
 <p align="center"><kbd><img src="assets/452cdeb05dfc9724d4ff33014f3b148e1a7c389b.png" width="100%"></kbd></p>
 
@@ -1526,12 +1526,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2477"></a>
+<a id="node-2447"></a>
 #### Exercise 4 - evaluate_prediction (UNQ_C4)
 
 <br>
 
-<a id="node-2478"></a>
+<a id="node-2448"></a>
 
 <p align="center"><kbd><img src="assets/191fa1fb3f45cf7c22a7c81255ca49e80527f7d3.png" width="100%"></kbd></p>
 
@@ -1572,31 +1572,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-2479"></a>
+<a id="node-2449"></a>
 
 <p align="center"><kbd><img src="assets/f9da1843f96ffd9ec481578e6c285a5dd2fadb69.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2480"></a>
+<a id="node-2450"></a>
 
 <p align="center"><kbd><img src="assets/7560ac2a718850a4567e041ae2bfc7ff2642d451.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2481"></a>
+<a id="node-2451"></a>
 #### 5 - Testing with your Own Sentence
 
 <br>
 
-<a id="node-2482"></a>
+<a id="node-2452"></a>
 
 <p align="center"><kbd><img src="assets/803c648f7fa7495fb6745cee78ba6994ac353849.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2483"></a>
+<a id="node-2453"></a>
 
 <p align="center"><kbd><img src="assets/79ac41c4b6cbb0e7e1e3bfd7e94bc3f33a7cc316.png" width="100%"></kbd></p>
 

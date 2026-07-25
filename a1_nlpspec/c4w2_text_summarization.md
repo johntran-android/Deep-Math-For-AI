@@ -18,19 +18,19 @@ multi-head attention
 summarizer
  • Build a Transformer decoder model (GPT-2)
 
-<a id="node-2962"></a>
+<a id="node-2932"></a>
 ## Week Introduction
 
 <br>
 
 
-<a id="node-2963"></a>
+<a id="node-2933"></a>
 ## Transformers Vs RNN
 
 <br>
 
 
-<a id="node-2964"></a>
+<a id="node-2934"></a>
 ### 1. Introduction to Transformer Model:
 
 > [!NOTE]
@@ -76,7 +76,7 @@ summarizer
 
 <br>
 
-<a id="node-2965"></a>
+<a id="node-2935"></a>
 
 <p align="center"><kbd><img src="assets/18f2139e3d8ade0c2b12ece097566fc5b708e8e2.png" width="100%"></kbd></p>
 
@@ -92,7 +92,7 @@ summarizer
 
 <br>
 
-<a id="node-2966"></a>
+<a id="node-2936"></a>
 
 <p align="center"><kbd><img src="assets/8e983a1381e2fc8626ee8b0f5d76dff7c95cd201.png" width="100%"></kbd></p>
 
@@ -111,7 +111,7 @@ summarizer
 
 <br>
 
-<a id="node-2967"></a>
+<a id="node-2937"></a>
 
 <p align="center"><kbd><img src="assets/698c5654c1d07b450238a26e6c91668353767004.png" width="100%"></kbd></p>
 
@@ -123,7 +123,7 @@ summarizer
 
 <br>
 
-<a id="node-2968"></a>
+<a id="node-2938"></a>
 
 <p align="center"><kbd><img src="assets/637442e41663385086ef0e07e6a75f6d1782983e.png" width="100%"></kbd></p>
 
@@ -143,13 +143,13 @@ summarizer
 <br>
 
 
-<a id="node-2969"></a>
+<a id="node-2939"></a>
 ## Reading Transformer Vs RNN
 
 <br>
 
 
-<a id="node-2970"></a>
+<a id="node-2940"></a>
 ### In the image above, you can see a typical RNN that is used to translate the English
 
 > [!NOTE]
@@ -181,26 +181,26 @@ summarizer
 
 <br>
 
-<a id="node-2971"></a>
+<a id="node-2941"></a>
 
 <p align="center"><kbd><img src="assets/9ca8c304aab327709553643f9e6f06863bc35c61.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2972"></a>
+<a id="node-2942"></a>
 
 <p align="center"><kbd><img src="assets/b53dd2d66249ee4df4148691fb070a8a276c4115.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2973"></a>
+<a id="node-2943"></a>
 ## Transformers Overview
 
 <br>
 
 
-<a id="node-2974"></a>
+<a id="node-2944"></a>
 ### Here's a summarized list of the main points from the provided text:
 
 > [!NOTE]
@@ -256,13 +256,13 @@ summarizer
 
 <br>
 
-<a id="node-2975"></a>
+<a id="node-2945"></a>
 
 <p align="center"><kbd><img src="assets/d7d041e279aee9141b55ff4411a27e6708510580.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2976"></a>
+<a id="node-2946"></a>
 
 <p align="center"><kbd><img src="assets/80b395e4e6afde0ee7107ff2a98020129d52bcd1.png" width="100%"></kbd></p>
 
@@ -283,7 +283,7 @@ summarizer
 
 <br>
 
-<a id="node-2977"></a>
+<a id="node-2947"></a>
 
 <p align="center"><kbd><img src="assets/62ca5b2d2c371671d7915c0e1c8ef92958875007.png" width="100%"></kbd></p>
 
@@ -302,7 +302,7 @@ summarizer
 
 <br>
 
-<a id="node-2978"></a>
+<a id="node-2948"></a>
 
 <p align="center"><kbd><img src="assets/15eae9b2e2775016e04204a334ed44d069886972.png" width="100%"></kbd></p>
 
@@ -336,7 +336,7 @@ summarizer
 
 <br>
 
-<a id="node-2979"></a>
+<a id="node-2949"></a>
 
 <p align="center"><kbd><img src="assets/92ae1da2e2b15516da9c2667f73dc688356372ec.png" width="100%"></kbd></p>
 
@@ -361,7 +361,7 @@ summarizer
 
 <br>
 
-<a id="node-2980"></a>
+<a id="node-2950"></a>
 
 <p align="center"><kbd><img src="assets/079ff76a8ffa51fc054326136db9f0f5bc86e11b.png" width="100%"></kbd></p>
 
@@ -390,13 +390,13 @@ summarizer
 
 <br>
 
-<a id="node-2981"></a>
+<a id="node-2951"></a>
 
 <p align="center"><kbd><img src="assets/53351bc45104fb61bafb6eef626fdc5ad1b609bd.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2982"></a>
+<a id="node-2952"></a>
 
 <p align="center"><kbd><img src="assets/1996c31cd73419b284c58f45cf5ab9f9a50f2b97.png" width="100%"></kbd></p>
 
@@ -409,13 +409,13 @@ summarizer
 <br>
 
 
-<a id="node-2983"></a>
+<a id="node-2953"></a>
 ## Transformers Application
 
 <br>
 
 
-<a id="node-2984"></a>
+<a id="node-2954"></a>
 ### Sure, here's the content reorganized into indexed paragraphs without using titles:
 
 > [!NOTE]
@@ -461,7 +461,7 @@ summarizer
 
 <br>
 
-<a id="node-2985"></a>
+<a id="node-2955"></a>
 
 <p align="center"><kbd><img src="assets/9fcd1aff7c900f9c3ab937de5fce7374f9ed1d7b.png" width="100%"></kbd></p>
 
@@ -471,7 +471,7 @@ summarizer
 
 <br>
 
-<a id="node-2986"></a>
+<a id="node-2956"></a>
 
 <p align="center"><kbd><img src="assets/51054ce95dcd914d6f115e5eb14a3c4238f21a9a.png" width="100%"></kbd></p>
 
@@ -481,7 +481,7 @@ summarizer
 
 <br>
 
-<a id="node-2987"></a>
+<a id="node-2957"></a>
 
 <p align="center"><kbd><img src="assets/c3efecbdf40420f93e25dadc75ceec93d9f4f6a2.png" width="100%"></kbd></p>
 
@@ -501,7 +501,7 @@ summarizer
 
 <br>
 
-<a id="node-2988"></a>
+<a id="node-2958"></a>
 
 <p align="center"><kbd><img src="assets/849ce2af754f9ea7cf443ef589fffc68dbbe1f3b.png" width="100%"></kbd></p>
 
@@ -514,20 +514,20 @@ summarizer
 
 <br>
 
-<a id="node-2989"></a>
+<a id="node-2959"></a>
 
 <p align="center"><kbd><img src="assets/2b38143da2863e5f929891685b0ce4b273367f60.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2990"></a>
+<a id="node-2960"></a>
 ## Scaled And Dot-product Attention
 
 <br>
 
 
-<a id="node-2991"></a>
+<a id="node-2961"></a>
 ### Sure, here is the main information extracted from the transcript with numerical
 
 > [!NOTE]
@@ -560,7 +560,7 @@ summarizer
 
 <br>
 
-<a id="node-2992"></a>
+<a id="node-2962"></a>
 
 <p align="center"><kbd><img src="assets/5d2aefc0b2143e3ea00065c0a11119f824cc03a5.png" width="100%"></kbd></p>
 
@@ -593,7 +593,7 @@ summarizer
 
 <br>
 
-<a id="node-2993"></a>
+<a id="node-2963"></a>
 
 <p align="center"><kbd><img src="assets/15a438c268dd5bee75b25f8c7538ecc6ef4529e7.png" width="100%"></kbd></p>
 
@@ -605,7 +605,7 @@ summarizer
 
 <br>
 
-<a id="node-2994"></a>
+<a id="node-2964"></a>
 
 <p align="center"><kbd><img src="assets/54845c75c65f6563cd2dd02121dd32141e97e69e.png" width="100%"></kbd></p>
 
@@ -615,20 +615,20 @@ summarizer
 
 <br>
 
-<a id="node-2995"></a>
+<a id="node-2965"></a>
 
 <p align="center"><kbd><img src="assets/1f0f87d2a8e789d4124d251bb3d788d7a95f8d3a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2996"></a>
+<a id="node-2966"></a>
 ## Masked Self-attention
 
 <br>
 
 
-<a id="node-2997"></a>
+<a id="node-2967"></a>
 ### Sure, here are the main points from the text:
 
 > [!NOTE]
@@ -668,7 +668,7 @@ summarizer
 
 <br>
 
-<a id="node-2998"></a>
+<a id="node-2968"></a>
 
 <p align="center"><kbd><img src="assets/ac473d98e6937829e711f30f057608b1c00e474f.png" width="100%"></kbd></p>
 
@@ -679,7 +679,7 @@ summarizer
 
 <br>
 
-<a id="node-2999"></a>
+<a id="node-2969"></a>
 
 <p align="center"><kbd><img src="assets/30b5fe6ca733ee225add5c0eae6b4a877199f674.png" width="100%"></kbd></p>
 
@@ -691,7 +691,7 @@ summarizer
 
 <br>
 
-<a id="node-3000"></a>
+<a id="node-2970"></a>
 
 <p align="center"><kbd><img src="assets/200e1f6222b65c179e0f469c690b22f3a9a7c2a1.png" width="100%"></kbd></p>
 
@@ -702,7 +702,7 @@ summarizer
 
 <br>
 
-<a id="node-3001"></a>
+<a id="node-2971"></a>
 
 <p align="center"><kbd><img src="assets/797dcf28d964e207afcb2da0321da1b7f61ef811.png" width="100%"></kbd></p>
 
@@ -716,20 +716,20 @@ summarizer
 
 <br>
 
-<a id="node-3002"></a>
+<a id="node-2972"></a>
 
 <p align="center"><kbd><img src="assets/7497f3b6d946e0fc3cd92cb13358625a8d7a7924.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3003"></a>
+<a id="node-2973"></a>
 ## Multi-head Attention
 
 <br>
 
 
-<a id="node-3004"></a>
+<a id="node-2974"></a>
 ### Sure, here are the main ideas presented in the lecture, organized in numerical
 
 > [!NOTE]
@@ -788,7 +788,7 @@ summarizer
 
 <br>
 
-<a id="node-3005"></a>
+<a id="node-2975"></a>
 
 <p align="center"><kbd><img src="assets/9dbbb915f93ce30bde344b3b5dde262f03288a4f.png" width="100%"></kbd></p>
 
@@ -818,13 +818,13 @@ summarizer
 
 <br>
 
-<a id="node-3006"></a>
+<a id="node-2976"></a>
 
 <p align="center"><kbd><img src="assets/65de825951dcc97d4fca2a049cbf10103f262581.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3007"></a>
+<a id="node-2977"></a>
 
 <p align="center"><kbd><img src="assets/629b97dd52c6903506d4a1a555c0f9cc315c4b1a.png" width="100%"></kbd></p>
 
@@ -887,56 +887,56 @@ summarizer
 
 <br>
 
-<a id="node-3008"></a>
+<a id="node-2978"></a>
 
 <p align="center"><kbd><img src="assets/78a453603bb0a04dd03cf1063382436eea84c451.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3009"></a>
+<a id="node-2979"></a>
 ## Reading: Multi-head Attention
 
 <br>
 
-<a id="node-3010"></a>
+<a id="node-2980"></a>
 
 <p align="center"><kbd><img src="assets/a045a5e6567dc8b45df9af4e733a745b6ba2e1db.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3011"></a>
+<a id="node-2981"></a>
 
 <p align="center"><kbd><img src="assets/207b024d33a6ac6810ee406a2c010f76a17c7234.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3012"></a>
+<a id="node-2982"></a>
 
 <p align="center"><kbd><img src="assets/1e87437a4961ece8d5d6d5f15b8301b0fc9b0984.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3013"></a>
+<a id="node-2983"></a>
 
 <p align="center"><kbd><img src="assets/8f7490d51f82051ee838bfcb807403904b438b16.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3014"></a>
+<a id="node-2984"></a>
 
 <p align="center"><kbd><img src="assets/f380f00ebc7318f09c1d2e17b2cc1480a6b03f39.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3015"></a>
+<a id="node-2985"></a>
 ## Lab: Attention
 
 <br>
 
 
-<a id="node-3016"></a>
+<a id="node-2986"></a>
 ### In this notebook you'll explore the **three ways of attention**
 
 > [!NOTE]
@@ -947,82 +947,25 @@ summarizer
 
 <br>
 
-<a id="node-3017"></a>
-
-<p align="center"><kbd><img src="assets/2f9a215681ee036ded32c7535d24fed55b05d542.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Đại khái thì ta đã thấy **Attention có ưu điểm** như thế nào trong việc
-> giúp model learn từ nào thì **nên chú ý nhiều ít đến từ nào**, từ đó khắc
-> phục hiện tượng **vanishing gradient** tốt hơn cả LSTM cũng như là **mất
-> thông tin khi câu quá dài khiến performance giảm**
-
-<br>
-
-<a id="node-3018"></a>
-
-<p align="center"><kbd><img src="assets/1e7281131299d89d18e0a81755569b03de48375c.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Đại khái như ta đã biết, ngoài những những ưu điểm trên
-> Attention mechanism còn mang lại một khả năng là **sử lý song
-> song** vốn là điều mà sequence model bị hạn chế. Cùng với
-> **embedding, positional encoding, residual connection, attention** là
-> trái tim là **dot product attention**
-
-<br>
-
-<a id="node-3019"></a>
-
-<p align="center"><kbd><img src="assets/caf23725606edbf0669ceff4115687b2e46e60a2.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/1a36ff92dd7715357a69f1925f9ba117acd619cd.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-3020"></a>
-
-<p align="center"><kbd><img src="assets/a6d8bf90bb6197c96eaa88164a0fa996e37c6ef8.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Nếu Self-Attention mà trong đó mỗi từ attention với mọi từ
-> khác thì gọi là **Bi-directional Self-attention**, còn nếu chỉ
-> attention với những từ trước nó thì gọi là **Causal attention
-> (Future masked attention)**
-
-<br>
-
-<a id="node-3021"></a>
-
-<p align="center"><kbd><img src="assets/e06175494f3b36c1f241778852fc3bc9cb0b716e.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-3022"></a>
-#### Now let's see how to implement attention with NumPy. When you integrate attention into a transformer network defined with trax, you' ll have to use **trax.fastmath.numpy** instead, since trax's arrays are based on **JAX DeviceArrays**. Fortunately, the function interfaces are often identical.
-
-<br>
-
-<a id="node-3023"></a>
+<a id="node-2993"></a>
 
 <p align="center"><kbd><img src="assets/2ed15ac28db173bed769f2d8da5bef7cd71aa266.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3024"></a>
+<a id="node-2994"></a>
 
 <p align="center"><kbd><img src="assets/ab03dc8d2466699429caff00c79363b972f1701c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3025"></a>
+<a id="node-2995"></a>
 
 <p align="center"><kbd><img src="assets/decbd1c63491ff0d78abd93217526be03db5b9a9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3026"></a>
+<a id="node-2996"></a>
 
 <p align="center"><kbd><img src="assets/40475220d124e55b0ab5406c15a4d193573ad361.png" width="100%"></kbd></p>
 
@@ -1071,7 +1014,7 @@ summarizer
 
 <br>
 
-<a id="node-3027"></a>
+<a id="node-2997"></a>
 
 <p align="center"><kbd><img src="assets/d11e666941895d4f032955607d0b27dbcff231c0.png" width="100%"></kbd></p>
 
@@ -1085,25 +1028,82 @@ summarizer
 
 <br>
 
-<a id="node-3028"></a>
+<a id="node-2998"></a>
 
 <p align="center"><kbd><img src="assets/723aa6cdfb3b165463208b4c4c61eb41aedb5f57.png" width="100%"></kbd></p>
 
 <br>
 
+<a id="node-2987"></a>
 
-<a id="node-3029"></a>
+<p align="center"><kbd><img src="assets/2f9a215681ee036ded32c7535d24fed55b05d542.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái thì ta đã thấy **Attention có ưu điểm** như thế nào trong việc
+> giúp model learn từ nào thì **nên chú ý nhiều ít đến từ nào**, từ đó khắc
+> phục hiện tượng **vanishing gradient** tốt hơn cả LSTM cũng như là **mất
+> thông tin khi câu quá dài khiến performance giảm**
+
+<br>
+
+<a id="node-2988"></a>
+
+<p align="center"><kbd><img src="assets/1e7281131299d89d18e0a81755569b03de48375c.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái như ta đã biết, ngoài những những ưu điểm trên
+> Attention mechanism còn mang lại một khả năng là **sử lý song
+> song** vốn là điều mà sequence model bị hạn chế. Cùng với
+> **embedding, positional encoding, residual connection, attention** là
+> trái tim là **dot product attention**
+
+<br>
+
+<a id="node-2989"></a>
+
+<p align="center"><kbd><img src="assets/caf23725606edbf0669ceff4115687b2e46e60a2.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1a36ff92dd7715357a69f1925f9ba117acd619cd.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-2990"></a>
+
+<p align="center"><kbd><img src="assets/a6d8bf90bb6197c96eaa88164a0fa996e37c6ef8.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nếu Self-Attention mà trong đó mỗi từ attention với mọi từ
+> khác thì gọi là **Bi-directional Self-attention**, còn nếu chỉ
+> attention với những từ trước nó thì gọi là **Causal attention
+> (Future masked attention)**
+
+<br>
+
+<a id="node-2991"></a>
+
+<p align="center"><kbd><img src="assets/e06175494f3b36c1f241778852fc3bc9cb0b716e.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-2992"></a>
+#### Now let's see how to implement attention with NumPy. When you integrate attention into a transformer network defined with trax, you' ll have to use **trax.fastmath.numpy** instead, since trax's arrays are based on **JAX DeviceArrays**. Fortunately, the function interfaces are often identical.
+
+<br>
+
+
+<a id="node-2999"></a>
 ## Transformer Decoder
 
 <br>
 
-<a id="node-3030"></a>
+<a id="node-3000"></a>
 
 <p align="center"><kbd><img src="assets/020d69f9ce2e8613f9f17abcd041de07791628ad.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3031"></a>
+<a id="node-3001"></a>
 
 <p align="center"><kbd><img src="assets/e4eee5ef4d98514c36a5fb20dac6d8cc5937833b.png" width="100%"></kbd></p>
 
@@ -1134,7 +1134,7 @@ summarizer
 
 <br>
 
-<a id="node-3032"></a>
+<a id="node-3002"></a>
 
 <p align="center"><kbd><img src="assets/a28411a1244134260409dd964fde16da17266d64.png" width="100%"></kbd></p>
 
@@ -1146,7 +1146,7 @@ summarizer
 
 <br>
 
-<a id="node-3033"></a>
+<a id="node-3003"></a>
 
 <p align="center"><kbd><img src="assets/0b3161349076bb67213466a72bb6ec5ee55b92f9.png" width="100%"></kbd></p>
 
@@ -1177,7 +1177,7 @@ summarizer
 
 <br>
 
-<a id="node-3034"></a>
+<a id="node-3004"></a>
 
 <p align="center"><kbd><img src="assets/56504cf4d9b0952a1f4126cf49a7a5f59c8d0fd1.png" width="100%"></kbd></p>
 
@@ -1197,26 +1197,26 @@ summarizer
 
 <br>
 
-<a id="node-3035"></a>
+<a id="node-3005"></a>
 
 <p align="center"><kbd><img src="assets/a90e94278a16db09cdbdedae3787e3781b0f68dd.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3036"></a>
+<a id="node-3006"></a>
 ## Reading Transformers Decoder
 
 <br>
 
 
-<a id="node-3037"></a>
+<a id="node-3007"></a>
 ## Transformers Summarizer
 
 <br>
 
 
-<a id="node-3038"></a>
+<a id="node-3008"></a>
 ### Certainly, here are the main ideas presented in the lecture, organized in numerical index order:
 
 > [!NOTE]
@@ -1244,7 +1244,7 @@ summarizer
 
 <br>
 
-<a id="node-3039"></a>
+<a id="node-3009"></a>
 
 <p align="center"><kbd><img src="assets/0be379cf60bd07935185fc838b10d50f35374c32.png" width="100%"></kbd></p>
 
@@ -1258,7 +1258,7 @@ summarizer
 
 <br>
 
-<a id="node-3040"></a>
+<a id="node-3010"></a>
 
 <p align="center"><kbd><img src="assets/5bd7be531075af6cef2f443000fcffbcffc44b24.png" width="100%"></kbd></p>
 
@@ -1275,26 +1275,26 @@ summarizer
 
 <br>
 
-<a id="node-3041"></a>
+<a id="node-3011"></a>
 
 <p align="center"><kbd><img src="assets/c77a2c497b5ba87f55852d6ec1e7ba1de7d35d1b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3042"></a>
+<a id="node-3012"></a>
 
 <p align="center"><kbd><img src="assets/764b2e8558d14d4d02aecbc724b6d16dc2ab63ed.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3043"></a>
+<a id="node-3013"></a>
 
 <p align="center"><kbd><img src="assets/50fc4b15712f4e1c6540ca1368997094a9c17ba4.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3044"></a>
+<a id="node-3014"></a>
 #### As of my last update in September 2021, GPT-3 was trained using a method known as "unsupervised learning," which involves  predicting the next word in a sequence. However, I can certainly provide you with a step-by-step breakdown of how training for  summarization tasks typically works:  1. **Data Collection and Preprocessing**:    - Gather a large dataset of news articles along with their corresponding human-written summaries.    - Preprocess the text data by tokenizing it into smaller units, such as words or subwords. This is typically done using methods  like Byte-Pair Encoding (BPE) or SentencePiece.     2. **Data Format for Summarization**:    - Organize the data into pairs of articles and their corresponding summaries.    - Tokenize both the articles and summaries into numerical representations (tokens or IDs) using a tokenizer specific to the  language model.  3. **Model Architecture**:    - Choose a transformer-based architecture like GPT-3 for the summarization task.    - Decide whether to use the full transformer (encoder-decoder) architecture or a variant of it (e.g., decoder-only for autoregressive  language modeling).  4. **Input-Output Mapping**:    - In the context of summarization, the task is typically treated as a sequence-to-sequence problem.    - The article becomes the input sequence, and the goal is to generate the summary as the output sequence.  5. **Token Weighting for Summary Focus**:    - Assign different weights to tokens in the input sequence based on whether they belong to the article or the summary.    - This weighting scheme guides the model's focus during training, encouraging it to prioritize the summary generation.  6. **Loss Function**:    - Define a suitable loss function for the summarization task, often based on cross-entropy.    - Apply the weighted loss scheme, where tokens from the article might have zero weight and tokens from the summary have  non-zero weight.  7. **Training Process**:    - Initialize the transformer model's parameters randomly or using pretrained weights.    - Feed the article sequences into the model and train it to predict the summary sequences.    - Backpropagate the error through the network and update the model's parameters using optimization algorithms like Adam.  8. **Fine-Tuning and Evaluation**:    - After initial training, fine-tune the model on the summarization-specific task.    - Use evaluation metrics like ROUGE (Recall-Oriented Understudy for Gisting Evaluation) to assess the quality of generated  summaries.  9. **Iterative Training and Optimization**:    - Train the model iteratively, adjusting hyperparameters and architecture as needed.    - Monitor the model's performance on validation data to prevent overfitting.  10. **Inference**:     - After training, use the trained model for inference.     - Given an input article, generate a sequence of tokens for the summary using techniques like greedy decoding or beam search.  11. **Post-Processing**:     - Convert the generated token sequence back into human-readable text.     - Clean up the generated summary to ensure coherence and readability.  12. **Model Deployment**:     - Deploy the trained summarization model in applications that require automated summarization of news articles.  It's important to note that the training process can vary based on the specific architecture, dataset, and goals of the  summarization task. Additionally, advancements in AI and training methodologies might have occurred since my last  update in September 2021.
 
 > [!NOTE]
@@ -1304,31 +1304,31 @@ summarizer
 <br>
 
 
-<a id="node-3045"></a>
+<a id="node-3015"></a>
 ## Lab: The Transformers Decoder
 
 <br>
 
-<a id="node-3046"></a>
+<a id="node-3016"></a>
 
 <p align="center"><kbd><img src="assets/74de43f9cf875f8773d77957fbdc05010507e9ee.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3047"></a>
+<a id="node-3017"></a>
 ### Imports
 
 <br>
 
-<a id="node-3048"></a>
+<a id="node-3018"></a>
 
 <p align="center"><kbd><img src="assets/b197e219739bb3db276ace731c2c4b4238dfbc02.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3049"></a>
+<a id="node-3019"></a>
 ### Sentence gets embedded,
 
 > [!NOTE]
@@ -1337,7 +1337,7 @@ summarizer
 
 <br>
 
-<a id="node-3050"></a>
+<a id="node-3020"></a>
 
 <p align="center"><kbd><img src="assets/bf2aded05b0920f76f37ab194f19d3687e7b61ed.png" width="100%"></kbd></p>
 
@@ -1357,7 +1357,7 @@ summarizer
 <br>
 
 
-<a id="node-3051"></a>
+<a id="node-3021"></a>
 ### Multi-head
 
 > [!NOTE]
@@ -1366,7 +1366,7 @@ summarizer
 
 <br>
 
-<a id="node-3052"></a>
+<a id="node-3022"></a>
 
 <p align="center"><kbd><img src="assets/11306139ba0d579207567b38863be561347147e9.png" width="100%"></kbd></p>
 
@@ -1401,31 +1401,31 @@ summarizer
 <br>
 
 
-<a id="node-3053"></a>
+<a id="node-3023"></a>
 ### Feed-forward layer
 
 <br>
 
-<a id="node-3054"></a>
+<a id="node-3024"></a>
 
 <p align="center"><kbd><img src="assets/40ceaa3e7f89632ff0b9a7cfb69e0dcf4375cd90.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3055"></a>
+<a id="node-3025"></a>
 ### Decoder block
 
 <br>
 
-<a id="node-3056"></a>
+<a id="node-3026"></a>
 
 <p align="center"><kbd><img src="assets/1be35a8f52c62fc1458435b93690d4efb5ecb698.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3057"></a>
+<a id="node-3027"></a>
 ### The transformer decoder:
 
 > [!NOTE]
@@ -1434,7 +1434,7 @@ summarizer
 
 <br>
 
-<a id="node-3058"></a>
+<a id="node-3028"></a>
 
 <p align="center"><kbd><img src="assets/4d93163aaef9718b39c56c855a4c0c2ee58674c6.png" width="100%"></kbd></p>
 
@@ -1457,13 +1457,13 @@ summarizer
 <br>
 
 
-<a id="node-3059"></a>
+<a id="node-3029"></a>
 ### Concluding remarks
 
 <br>
 
 
-<a id="node-3060"></a>
+<a id="node-3030"></a>
 #### In this week's assignment, you'll see how to train a transformer decoder on the **cnn_dailymail** dataset, available from **TensorFlow Datasets** (part of TensorFlow Data Services). Because training such a model from scratch is **time-intensive**, you'll use a **pre-trained model to summarize documents** later in the assignment.  Due to time and storage concerns, we will also not train the decoder on a **different summarization dataset** in this lab. If you have the time and space, we **encourage you to explore the other summarization datasets at TensorFlow Datasets**. Which of them might **suit your purposes bette**r than the **cnn_dailymail** dataset? Where else can you find datasets for text summarization models?
 
 > [!NOTE]
@@ -1476,85 +1476,85 @@ summarizer
 <br>
 
 
-<a id="node-3061"></a>
+<a id="node-3031"></a>
 ## Week Conclusion
 
 <br>
 
 
-<a id="node-3062"></a>
+<a id="node-3032"></a>
 ## Quiz
 
 <br>
 
-<a id="node-3063"></a>
+<a id="node-3033"></a>
 
 <p align="center"><kbd><img src="assets/ea79f12894e8de3f54d841df097fe6908b217b31.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3064"></a>
+<a id="node-3034"></a>
 
 <p align="center"><kbd><img src="assets/0528cdfaa5da4bb1fd581d97e3c1c286d078a1cf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3065"></a>
+<a id="node-3035"></a>
 
 <p align="center"><kbd><img src="assets/0873b612ac60fbdd8e616e2d628df5efe5c347af.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3066"></a>
+<a id="node-3036"></a>
 
 <p align="center"><kbd><img src="assets/c3226ec844ea50d5f588ce68edb59701d003244b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3067"></a>
+<a id="node-3037"></a>
 
 <p align="center"><kbd><img src="assets/e7fdbe945af56528a66347a25edd7cbd137f5c01.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3068"></a>
+<a id="node-3038"></a>
 
 <p align="center"><kbd><img src="assets/9aff99452704b5c2208a0213be7df12be7b22d55.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3069"></a>
+<a id="node-3039"></a>
 
 <p align="center"><kbd><img src="assets/c92101e17d2b90154e2a451e60dd97d078f80b36.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3070"></a>
+<a id="node-3040"></a>
 
 <p align="center"><kbd><img src="assets/c632e2a34b11669abfa7ffa8597ae2a97795a1bb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3071"></a>
+<a id="node-3041"></a>
 
 <p align="center"><kbd><img src="assets/4fdae73ab0066dd410a54307a779b5a6e0d2aaf5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3072"></a>
+<a id="node-3042"></a>
 
 <p align="center"><kbd><img src="assets/4ff86645907b4a0f38f698b8f37f3d91fbb7cdab.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3073"></a>
+<a id="node-3043"></a>
 ## PA: Transformer Summarizer
 
 <br>
 
 
-<a id="node-3074"></a>
+<a id="node-3044"></a>
 ### Welcome to the second assignment of course 4. In this assignment you will explore
 
 > [!NOTE]
@@ -1567,30 +1567,30 @@ summarizer
 <br>
 
 
-<a id="node-3075"></a>
+<a id="node-3045"></a>
 #### Introduction
 
 <br>
 
-<a id="node-3076"></a>
+<a id="node-3046"></a>
 
 <p align="center"><kbd><img src="assets/f40c0b2d6302a3aa83609c72d033204f2cbb26e3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3077"></a>
+<a id="node-3047"></a>
 
 <p align="center"><kbd><img src="assets/7a1ff45aaecfdb917746a2f17d8017d893169af0.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3078"></a>
+<a id="node-3048"></a>
 #### 1 - Importing the Dataset
 
 <br>
 
-<a id="node-3079"></a>
+<a id="node-3049"></a>
 
 <p align="center"><kbd><img src="assets/b86ac890fcfa8ac0b64df5026441089f5ea9243c.png" width="100%"></kbd></p>
 
@@ -1601,12 +1601,12 @@ summarizer
 <br>
 
 
-<a id="node-3080"></a>
+<a id="node-3050"></a>
 #### 1.1 - Tokenize & Detokenize Helper Functions
 
 <br>
 
-<a id="node-3081"></a>
+<a id="node-3051"></a>
 
 <p align="center"><kbd><img src="assets/b5c28dc8fc609d5e818e64770698c25d9b9b6055.png" width="100%"></kbd></p>
 
@@ -1620,7 +1620,7 @@ summarizer
 
 <br>
 
-<a id="node-3082"></a>
+<a id="node-3052"></a>
 
 <p align="center"><kbd><img src="assets/a23d941bbd822d12fdc3fcb472611c0e8c087ac2.png" width="100%"></kbd></p>
 
@@ -1632,13 +1632,13 @@ summarizer
 <br>
 
 
-<a id="node-3083"></a>
+<a id="node-3053"></a>
 #### 1.2 - Preprocessing for Language Models: Concatenate It!
 
 <br>
 
 
-<a id="node-3084"></a>
+<a id="node-3054"></a>
 #### This week you will use a language model -- **Transformer Decoder** -- to solve an input-output problem. As you know, **language models only predict the next word**, they have **no notion of inputs**.  To **create a single input suitable** for a language model, we **concatenate inputs with targets putting a separator in between**. We also need to **create a mask -- with 0s at inputs** and **1s at targets** -- so that the model is **not penalized for mis-predicting the article** and **only focuses on the summary**.  See the preprocess function below for how this is done
 
 > [!NOTE]
@@ -1665,7 +1665,7 @@ summarizer
 
 <br>
 
-<a id="node-3085"></a>
+<a id="node-3055"></a>
 
 <p align="center"><kbd><img src="assets/91ebb69b9bfe564aaf26df8e833bb2ce79e45ba3.png" width="100%"></kbd></p>
 
@@ -1695,14 +1695,14 @@ summarizer
 
 <br>
 
-<a id="node-3086"></a>
+<a id="node-3056"></a>
 
 <p align="center"><kbd><img src="assets/84391e9d64587808f56942b572dfdc3386d1da90.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3087"></a>
+<a id="node-3057"></a>
 #### # prints: **[Example][<EOS>][<pad>][Example Summary][<EOS>]** print(f'Single example:\\\ \\\  {detokenize(**train_input**)}')  Single example:  By . Becky Barrow . PUBLISHED: . 03:39 EST, 8 May 2012 . | . UPDATED: . 18:10 EST, 8 May 2012 . Andrew Moss: He will be paid £80,000 a month for the next year . The boss of Britain’s biggest insurance company will continue to receive his salary of £80,000 a month for the next year despite his humiliating resignation yesterday. Andrew Moss, who has quit as chief executive of Aviva after a shareholder revolt, will receive a golden goodbye worth around £1.75million in total. Last Thursday, 59 per cent of shareholder votes failed to back his gold- plated pay package worth up to £5.2million last year. It was the latest chapter in the growing backlash against boardroom greed, nicknamed the Shareholder Spring. Yesterday the 54-year-old chief executive said he ‘felt it was in the best interests of the company that he step aside to make way for new leadership’. But Mr Moss, who has also sparked public criticism for leaving his wife of 25 years and their four children for a junior married colleague, Deidre Galvin, in 2009, will not be leaving empty-handed. Walked: Aviva Group chief executive Andrew Moss, who is to step down with immediate effect . He will be paid his £960,000 ‘basic’ annual salary for the next year, equal to £80,000 a month, unless he finds another job. Mr Moss will also get a £300,000 bonus payment, a cash injection of £209,000 into his pension pot in five years’ time, deferred shares from a 2009 bonus, currently worth around £236,000, and a maximum of £45, 000 in legal and other expenses. He has two pensions from Aviva: one worth around £530,000 and one worth around £2. 75million, including the £209,000 payment. Mr Moss’s departure was announced on the eve of today’s Queen’s Speech, which is expected to fire the starting gun on a crackdown on boardroom excess and empower shareholders to veto any examples of corporate excess. Bounce: Shares in the UK's largest insurer jumped five per cent following the announcement, suggesting investors approve of Mr Moss's departure . Investor backing: The announcement was immediately followed by a spike in Aviva's shares . At present, shareholders can vote . against pay deals, but their votes are not binding on the company and . directors can still receive the controversial pay and bonuses. The main . role of such votes is to embarrass bosses and damage the firm’s . reputation. The mood of investors has turned ugly recently, triggering . the departure of bosses at drugs company AstraZeneca and newspaper group . Trinity Mirror. Turmoil: Aviva's St Helen's skyscraper looms in the City, where three CEOs have quit amid recent shareholder anger . Yesterday, . the chief executive of William Hill, Ralph Topping, was the latest . victim, with nearly 50 per cent of the betting firm’s shareholders . voting against a £1.2million bonus and a 8.3 per cent pay rise. At its . annual meeting, one angry shareholder said: ‘Chief executives are dining . in the last chance saloon trying to take as much as they can as soon as . possible.’ Business . Secretary Vince Cable, who has heavily criticised boardroom excess, said . bosses are finally being ‘brought back to reality’. He welcomed the . ‘uprising’ by shareholders as ‘a healthy development’, and said he is . determined to stamp out ‘rewards for failure’. Since . Mr Moss became chief executive in July 2007, Aviva’s share price has . more than halved, decimating the nest eggs of thousands of its smaller . shareholders. Liberal Democrat . Lord Oakeshott said: ‘Shareholder votes must be binding, otherwise it . just like a jury who acquit a man of a murder charge but the judge still . gives him 20 years. What’s the point?’ Deborah . Hargreaves, of the High Pay Centre campaign group, said: ‘The irony is . that Aviva was behind some of the recent pay revolts but, at the same . time, they were not looking after their own backyard. ‘This . is what makes Mr Moss’s payoff so intolerable. Aviva’s corporate . governance arm was lecturing others about pay and yet the company was . ignoring its own advice.’ Mr . Moss ceased to be chief executive ‘with immediate effect’ yesterday, but . he will not officially leave until the end of the month. Meanwhile, the average pay of bosses at Britain’s biggest public companies rose by 11 per cent last year to £3.65million, according to research published yesterday. The study, compiled for the BBC by Manifest, the adviser to shareholders, looked at the annual reports of 60 of the companies in the FTSE 100 index. On average, a chief executive gets a basic annual salary of £840,000, a long-term incentive plan of £1.14million, a cash bonus of £689,000 plus several other lucrative perks, according to the research. But the average worker in the private sector is losing ground, according to a report from the pay experts Incomes Data Services. The average pay rise handed out by bosses to their cash- strapped workers between January and March was 3 per cent, it says. It comes at a time when inflation is 3.5 per cent. The report found that 8 per cent of workers, who typically are employed in manufacturing, construction or the not-for-profit sector, had their pay frozen.**<EOS><pad>**\\/AndrewMoss is third victim of recent discontent after departures at Trinity Mirror and AstraZeneca . Investors back the move as shares jump 5 per cent . Small savers and pension investors can have a voice on excessive executive pay. The Mail has teamed up with . the FairPensions campaign to offer a tool that allows you to send your views to . your pension fund or ISA provider. Vote no on fat cat pay: Find out . more .\\/**<EOS>**
 
 > [!NOTE]
@@ -1712,7 +1712,7 @@ summarizer
 <br>
 
 
-<a id="node-3088"></a>
+<a id="node-3058"></a>
 #### print(f"train_target: \\\ {detokenize(**train_target**)}")  train_target:  By . Becky Barrow . PUBLISHED: . 03:39 EST, 8 May 2012 . | . UPDATED: . 18:10 EST, 8 May 2012 . Andrew Moss: He will be paid £80,000 a month for the next year . The boss of Britain’s biggest insurance company will continue to receive his salary of £80,000 a month for the next year despite his humiliating resignation yesterday. Andrew Moss, who has quit as chief executive of Aviva after a shareholder revolt, will receive a golden goodbye worth around £1.75million in total. Last Thursday, 59 per cent of shareholder votes failed to back his gold- plated pay package worth up to £5.2million last year. It was the latest chapter in the growing backlash against boardroom greed, nicknamed the Shareholder Spring. Yesterday the 54-year-old chief executive said he ‘felt it was in the best interests of the company that he step aside to make way for new leadership’. But Mr Moss, who has also sparked public criticism for leaving his wife of 25 years and their four children for a junior married colleague, Deidre Galvin, in 2009, will not be leaving empty-handed. Walked: Aviva Group chief executive Andrew Moss, who is to step down with immediate effect . He will be paid his £960,000 ‘basic’ annual salary for the next year, equal to £80,000 a month, unless he finds another job. Mr Moss will also get a £300,000 bonus payment, a cash injection of £209,000 into his pension pot in five years’ time, deferred shares from a 2009 bonus, currently worth around £236,000, and a maximum of £45,000 in legal and other expenses. He has two pensions from Aviva: one worth around £530,000 and one worth around £2.75million, including the £209,000 payment. Mr Moss’s departure was announced on the eve of today’s Queen’s Speech, which is expected to fire the starting gun on a crackdown on boardroom excess and empower shareholders to veto any examples of corporate excess. Bounce: Shares in the UK's largest insurer jumped five per cent following the announcement, suggesting investors approve of Mr Moss's departure . Investor backing: The announcement was immediately followed by a spike in Aviva's shares . At present, shareholders can vote . against pay deals, but their votes are not binding on the company and . directors can still receive the controversial pay and bonuses. The main . role of such votes is to embarrass bosses and damage the firm’s . reputation. The mood of investors has turned ugly recently, triggering . the departure of bosses at drugs company AstraZeneca and newspaper group . Trinity Mirror. Turmoil: Aviva's St Helen's skyscraper looms in the City, where three CEOs have quit amid recent shareholder anger . Yesterday, . the chief executive of William Hill, Ralph Topping, was the latest . victim, with nearly 50 per cent of the betting firm’s shareholders . voting against a £1.2million bonus and a 8.3 per cent pay rise. At its . annual meeting, one angry shareholder said: ‘Chief executives are dining . in the last chance saloon trying to take as much as they can as soon as . possible.’ Business . Secretary Vince Cable, who has heavily criticised boardroom excess, said . bosses are finally being ‘brought back to reality’. He welcomed the . ‘uprising’ by shareholders as ‘a healthy development’, and said he is . determined to stamp out ‘rewards for failure’. Since . Mr Moss became chief executive in July 2007, Aviva’s share price has . more than halved, decimating the nest eggs of thousands of its smaller . shareholders. Liberal Democrat . Lord Oakeshott said: ‘Shareholder votes must be binding, otherwise it . just like a jury who acquit a man of a murder charge but the judge still . gives him 20 years. What’s the point?’ Deborah . Hargreaves, of the High Pay Centre campaign group, said: ‘The irony is . that Aviva was behind some of the recent pay revolts but, at the same . time, they were not looking after their own backyard. ‘This . is what makes Mr Moss’s payoff so intolerable. Aviva’s corporate . governance arm was lecturing others about pay and yet the company was . ignoring its own advice.’ Mr . Moss ceased to be chief executive ‘with immediate effect’ yesterday, but . he will not officially leave until the end of the month. Meanwhile, the average pay of bosses at Britain’s biggest public companies rose by 11 per cent last year to £3.65million, according to research published yesterday. The study, compiled for the BBC by Manifest, the adviser to shareholders, looked at the annual reports of 60 of the companies in the FTSE 100 index. On average, a chief executive gets a basic annual salary of £840,000, a long-term incentive plan of £1. 14million, a cash bonus of £689,000 plus several other lucrative perks, according to the research. But the average worker in the private sector is losing ground, according to a report from the pay experts Incomes Data Services. The average pay rise handed out by bosses to their cash- strapped workers between January and March was 3 per cent, it says. It comes at a time when inflation is 3.5 per cent. The report found that 8 per cent of workers, who typically are employed in manufacturing, construction or the not-for-profit sector, had their pay frozen.**<EOS><pad>**\\/AndrewMoss is third victim of recent discontent after departures at Trinity Mirror and AstraZeneca . Investors back the move as shares jump 5 per cent . Small savers and pension investors can have a voice on excessive executive pay. The Mail has teamed up with . the FairPensions campaign to offer a tool that allows you to send your views to . your pension fund or ISA provider. Vote no on fat cat pay: Find out . more .\\/**<EOS>**
 
 > [!NOTE]
@@ -1723,12 +1723,12 @@ summarizer
 <br>
 
 
-<a id="node-3089"></a>
+<a id="node-3059"></a>
 #### 1.3 - Batching with Bucketing
 
 <br>
 
-<a id="node-3090"></a>
+<a id="node-3060"></a>
 
 <p align="center"><kbd><img src="assets/9eb8e9f71fb50e620d60e0d9a58e41235a7e8867.png" width="100%"></kbd></p>
 
@@ -1752,13 +1752,13 @@ summarizer
 
 <br>
 
-<a id="node-3091"></a>
+<a id="node-3061"></a>
 
 <p align="center"><kbd><img src="assets/88cc61993afed3af7e4ff688e49dbaf3ed212117.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3092"></a>
+<a id="node-3062"></a>
 
 <p align="center"><kbd><img src="assets/eed623f84167c9bd40d36c406e1783095c64c5dc.png" width="100%"></kbd></p>
 
@@ -1776,7 +1776,7 @@ summarizer
 
 <br>
 
-<a id="node-3093"></a>
+<a id="node-3063"></a>
 
 <p align="center"><kbd><img src="assets/f535e5f7e87514c73b9499044e02fb57757e6bf3.png" width="100%"></kbd></p>
 
@@ -1788,7 +1788,7 @@ summarizer
 
 <br>
 
-<a id="node-3094"></a>
+<a id="node-3064"></a>
 
 <p align="center"><kbd><img src="assets/3420ae75d1ef2e51a9017a36909b5e3270c0b581.png" width="100%"></kbd></p>
 
@@ -1802,13 +1802,13 @@ summarizer
 <br>
 
 
-<a id="node-3095"></a>
+<a id="node-3065"></a>
 #### 2 - Summarization with Transformer
 
 <br>
 
 
-<a id="node-3096"></a>
+<a id="node-3066"></a>
 #### Now that we have given you the **data generator** and have handled the **preprocessing** for you, it is time for you to build your own model. We saved you some time because we know you have already preprocessed data before in this specialization, so we would rather you **spend your time doing the next steps.**  You will be implementing the **attention from scratch** and then **using it in your transformer model**. Concretely, you will understand **how attention works**, how you use it to **connect the encoder and the decoder**
 
 > [!NOTE]
@@ -1816,19 +1816,19 @@ summarizer
 
 <br>
 
-<a id="node-3097"></a>
+<a id="node-3067"></a>
 
 <p align="center"><kbd><img src="assets/edcc93dac860e2b6b4cacbaafd70d24dd2c17035.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3098"></a>
+<a id="node-3068"></a>
 #### 2.1 - Dot Product Attention
 
 <br>
 
-<a id="node-3099"></a>
+<a id="node-3069"></a>
 
 <p align="center"><kbd><img src="assets/d9cdb12eea5e117a7b3001bfdf3b3c08fa9a98a2.png" width="100%"></kbd></p>
 
@@ -1839,7 +1839,7 @@ summarizer
 
 <br>
 
-<a id="node-3100"></a>
+<a id="node-3070"></a>
 
 <p align="center"><kbd><img src="assets/82f0a83ea555a66298e7c0510a1c4cb291b2013d.png" width="100%"></kbd></p>
 
@@ -1854,7 +1854,7 @@ summarizer
 
 <br>
 
-<a id="node-3101"></a>
+<a id="node-3071"></a>
 
 <p align="center"><kbd><img src="assets/9fce80f41e1c2cfdc726717621547e9c7fb3b9f0.png" width="100%"></kbd></p>
 
@@ -1863,7 +1863,7 @@ summarizer
 
 <br>
 
-<a id="node-3102"></a>
+<a id="node-3072"></a>
 
 <p align="center"><kbd><img src="assets/d149be20ec4289c1c1a2ba149c68c9a69d9e0e61.png" width="100%"></kbd></p>
 
@@ -1874,7 +1874,7 @@ summarizer
 
 <br>
 
-<a id="node-3103"></a>
+<a id="node-3073"></a>
 
 <p align="center"><kbd><img src="assets/64ed295e496e75163d0f4417723961d9231d5c6f.png" width="100%"></kbd></p>
 
@@ -1884,7 +1884,7 @@ summarizer
 
 <br>
 
-<a id="node-3104"></a>
+<a id="node-3074"></a>
 
 <p align="center"><kbd><img src="assets/d22d2dc57fda2be51cd8319fdc934a7e22f3fbab.png" width="100%"></kbd></p>
 
@@ -1894,7 +1894,7 @@ summarizer
 
 <br>
 
-<a id="node-3105"></a>
+<a id="node-3075"></a>
 
 <p align="center"><kbd><img src="assets/c2256b26c7bb1551035a0080a9398cebe95a8ce4.png" width="100%"></kbd></p>
 
@@ -1906,12 +1906,12 @@ summarizer
 <br>
 
 
-<a id="node-3106"></a>
+<a id="node-3076"></a>
 #### Exercise 1 - DotProductAttention (UNQ_C1)
 
 <br>
 
-<a id="node-3107"></a>
+<a id="node-3077"></a>
 
 <p align="center"><kbd><img src="assets/48539f5bf7d0bc9e5c6d662b776f5ec8190e5777.png" width="100%"></kbd></p>
 
@@ -1943,43 +1943,43 @@ summarizer
 
 <br>
 
-<a id="node-3108"></a>
+<a id="node-3078"></a>
 
 <p align="center"><kbd><img src="assets/179dab47f36ca6b41e1e3a2bed28b591533e899f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3109"></a>
+<a id="node-3079"></a>
 
 <p align="center"><kbd><img src="assets/ab39b8ff994c52127c4e857eb907351e7edf3a85.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3110"></a>
+<a id="node-3080"></a>
 #### 2.2 - Causal Attention
 
 <br>
 
-<a id="node-3111"></a>
+<a id="node-3081"></a>
 
 <p align="center"><kbd><img src="assets/5432a73cf9331888540528581c8a2f1336325569.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3112"></a>
+<a id="node-3082"></a>
 #### Exercise 2 - Causal Attention
 
 <br>
 
-<a id="node-3113"></a>
+<a id="node-3083"></a>
 
 <p align="center"><kbd><img src="assets/19dbce16145c8e900bc7757a11be443ca6f21ff2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3114"></a>
+<a id="node-3084"></a>
 
 <p align="center"><kbd><img src="assets/0cedae901f7826df4786de474b6974ab769a4da0.png" width="100%"></kbd></p>
 
@@ -1988,18 +1988,18 @@ summarizer
 <br>
 
 
-<a id="node-3115"></a>
+<a id="node-3085"></a>
 #### It is important to know that the following 3 functions would normally be **defined within the CausalAttention function** further below.  However this makes these functions **harder to test**. Because of this, these functions are shown **individually using a closure** (when necessary) that **simulates them being inside of the CausalAttention function**. This is done because they **rely on some variables that can be accessed from within CausalAttention.**
 
 <br>
 
 
-<a id="node-3116"></a>
+<a id="node-3086"></a>
 #### Exercise 2a - compute_attention_heads (UNQ_C2)
 
 <br>
 
-<a id="node-3117"></a>
+<a id="node-3087"></a>
 
 <p align="center"><kbd><img src="assets/bbfacb30a8c9547df67a7719fd49a6c27b03fd59.png" width="100%"></kbd></p>
 
@@ -2009,25 +2009,25 @@ summarizer
 
 <br>
 
-<a id="node-3118"></a>
+<a id="node-3088"></a>
 
 <p align="center"><kbd><img src="assets/cb649c02ed2c166053cf2ba1d001418bda33af3f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3119"></a>
+<a id="node-3089"></a>
 
 <p align="center"><kbd><img src="assets/3895bc1c7c23f3b997b80a748d2371479bbbcd7d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3120"></a>
+<a id="node-3090"></a>
 #### Exercise 2b - dot_product_self_attention(UNQ_C3)
 
 <br>
 
-<a id="node-3121"></a>
+<a id="node-3091"></a>
 
 <p align="center"><kbd><img src="assets/c7895dbc71e3a69c50f9928446f6c2c8fe2c75d5.png" width="100%"></kbd></p>
 
@@ -2042,19 +2042,19 @@ summarizer
 
 <br>
 
-<a id="node-3122"></a>
+<a id="node-3092"></a>
 
 <p align="center"><kbd><img src="assets/3195b3f40fe976346c02f7f1717c89956922b4d2.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3123"></a>
+<a id="node-3093"></a>
 #### Exercise 2c - compute_attention_output (UNQ_C4)
 
 <br>
 
-<a id="node-3124"></a>
+<a id="node-3094"></a>
 
 <p align="center"><kbd><img src="assets/a8aa4484d76fe5122b6a8b01e85e54feb6802d92.png" width="100%"></kbd></p>
 
@@ -2062,31 +2062,31 @@ summarizer
 
 <br>
 
-<a id="node-3125"></a>
+<a id="node-3095"></a>
 
 <p align="center"><kbd><img src="assets/cc4ab03525002837056221f088992f870fc0a63d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3126"></a>
+<a id="node-3096"></a>
 
 <p align="center"><kbd><img src="assets/04be2297e5159b7c397f56bc26c32acfca1dd6fc.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3127"></a>
+<a id="node-3097"></a>
 #### Exercise 2d - CausalAttention (UNQ_C5)
 
 <br>
 
-<a id="node-3128"></a>
+<a id="node-3098"></a>
 
 <p align="center"><kbd><img src="assets/2488b06ff13f5f63cac7281b2ddf97a5d6f9a17e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3129"></a>
+<a id="node-3099"></a>
 
 <p align="center"><kbd><img src="assets/37f804b1d235feecfd02579c1b5a6662356a32a5.png" width="100%"></kbd></p>
 
@@ -2098,19 +2098,19 @@ summarizer
 
 <br>
 
-<a id="node-3130"></a>
+<a id="node-3100"></a>
 
 <p align="center"><kbd><img src="assets/06ed0e58feeb0ff947f812d751d0a3ad91879f56.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3131"></a>
+<a id="node-3101"></a>
 #### 2.3 - Transformer Decoder Block
 
 <br>
 
-<a id="node-3132"></a>
+<a id="node-3102"></a>
 
 <p align="center"><kbd><img src="assets/03884a1c579ae002f2aba1132e872a1f50dbce01.png" width="100%"></kbd></p>
 
@@ -2119,12 +2119,12 @@ summarizer
 <br>
 
 
-<a id="node-3133"></a>
+<a id="node-3103"></a>
 #### Exercise 3 - DecoderBlock (UNQ_C6)
 
 <br>
 
-<a id="node-3134"></a>
+<a id="node-3104"></a>
 
 <p align="center"><kbd><img src="assets/f4b0b003837908d26c480ed3aa650af59d4db859.png" width="100%"></kbd></p>
 
@@ -2137,49 +2137,49 @@ summarizer
 
 <br>
 
-<a id="node-3135"></a>
+<a id="node-3105"></a>
 
 <p align="center"><kbd><img src="assets/e7af58b9d28f87b99cfba0d2375f49bd57f67681.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3136"></a>
+<a id="node-3106"></a>
 
 <p align="center"><kbd><img src="assets/2bfed0e167c40783e1007caae4561123c0fba96e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3137"></a>
+<a id="node-3107"></a>
 
 <p align="center"><kbd><img src="assets/38eb013028dd190242d661cfde378fffe81c0f8c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3138"></a>
+<a id="node-3108"></a>
 #### 2.4 - Transformer Language Model
 
 <br>
 
-<a id="node-3139"></a>
+<a id="node-3109"></a>
 
 <p align="center"><kbd><img src="assets/e2ed3df6780ee09b50c8c116426be1d3e100ebaa.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3140"></a>
+<a id="node-3110"></a>
 #### Exercise 4 - TransformerLM (UNQ_C7)
 
 <br>
 
-<a id="node-3141"></a>
+<a id="node-3111"></a>
 
 <p align="center"><kbd><img src="assets/c0d9b8a4be280ed2c05e41b2c993f10c2b03832b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3142"></a>
+<a id="node-3112"></a>
 
 <p align="center"><kbd><img src="assets/d7ebd9311cc2a227fef61d339b5244aa82fefafe.png" width="100%"></kbd></p>
 
@@ -2187,49 +2187,49 @@ summarizer
 
 <br>
 
-<a id="node-3143"></a>
+<a id="node-3113"></a>
 
 <p align="center"><kbd><img src="assets/16059735e0d076581661ab7a7aa846684799eb79.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3144"></a>
+<a id="node-3114"></a>
 
 <p align="center"><kbd><img src="assets/b9111676aa3f506b25dcbf0152add53308fc7347.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3145"></a>
+<a id="node-3115"></a>
 #### 3 - Training
 
 <br>
 
 
-<a id="node-3146"></a>
+<a id="node-3116"></a>
 #### Now you are going to train your model. As usual, you have to **define the cost function, the optimizer, and decide whether you will be training it on a gpu or cpu.** In this case, you will train your model on a cpu for a few steps and we will **load in a pre-trained model** that you **can use to predict with your own words.**
 
 <br>
 
 
-<a id="node-3147"></a>
+<a id="node-3117"></a>
 #### 3.1 - Training the Model
 
 <br>
 
-<a id="node-3148"></a>
+<a id="node-3118"></a>
 
 <p align="center"><kbd><img src="assets/be03d99e7e1b7f4e7177aee4824161a7864a3b80.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3149"></a>
+<a id="node-3119"></a>
 #### Exercise 5 - training_loop (UNQ_C8)
 
 <br>
 
-<a id="node-3150"></a>
+<a id="node-3120"></a>
 
 <p align="center"><kbd><img src="assets/4b09e15b80026dfc03ebf1c1fcffbb713c9a676d.png" width="100%"></kbd></p>
 
@@ -2242,25 +2242,25 @@ summarizer
 
 <br>
 
-<a id="node-3151"></a>
+<a id="node-3121"></a>
 
 <p align="center"><kbd><img src="assets/ea65f3c98ebe60da04869200c3f2441afc2812e8.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3152"></a>
+<a id="node-3122"></a>
 #### 4 - Evaluation
 
 <br>
 
 
-<a id="node-3153"></a>
+<a id="node-3123"></a>
 #### 4.1 - Loading in a Trained Model
 
 <br>
 
-<a id="node-3154"></a>
+<a id="node-3124"></a>
 
 <p align="center"><kbd><img src="assets/66aaa1f5178128150a061434e5411ba57e460934.png" width="100%"></kbd></p>
 
@@ -2271,24 +2271,24 @@ summarizer
 <br>
 
 
-<a id="node-3155"></a>
+<a id="node-3125"></a>
 #### 5 - Testing with your Own Input
 
 <br>
 
 
-<a id="node-3156"></a>
+<a id="node-3126"></a>
 #### You will now test your input. You are going to implement **greedy decoding**. This consists of two functions. The first one allows you to **identify the next symbol**. It gets the **argmax** of the output of your model and then **returns that index**
 
 <br>
 
 
-<a id="node-3157"></a>
+<a id="node-3127"></a>
 #### Exercise 6 - next_symbol (UNQ_C9)
 
 <br>
 
-<a id="node-3158"></a>
+<a id="node-3128"></a>
 
 <p align="center"><kbd><img src="assets/4121e26a4de961a2bf988965f6202c8ab5b69248.png" width="100%"></kbd></p>
 
@@ -2322,37 +2322,37 @@ summarizer
 
 <br>
 
-<a id="node-3159"></a>
+<a id="node-3129"></a>
 
 <p align="center"><kbd><img src="assets/69d9adbcf106bd071c7495fe8133c4343fa9c643.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-3160"></a>
+<a id="node-3130"></a>
 
 <p align="center"><kbd><img src="assets/083f2e610feb94dd0b4fb21a244ba07b76791030.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-3161"></a>
+<a id="node-3131"></a>
 #### 5.1 - Greedy Decoding
 
 <br>
 
 
-<a id="node-3162"></a>
+<a id="node-3132"></a>
 #### Now you will implement the greedy_decode algorithm that will call the next_symbol function. It takes in the input_sentence, the trained model and returns the the decoded sentence
 
 <br>
 
 
-<a id="node-3163"></a>
+<a id="node-3133"></a>
 #### Exercise 7 - greedy_decode (UNQ_C10)
 
 <br>
 
-<a id="node-3164"></a>
+<a id="node-3134"></a>
 
 <p align="center"><kbd><img src="assets/67a2db1022c0fa52694eff708318995e454403e5.png" width="100%"></kbd></p>
 

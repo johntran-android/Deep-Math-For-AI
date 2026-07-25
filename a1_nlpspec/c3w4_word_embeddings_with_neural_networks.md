@@ -18,13 +18,13 @@ Learning Objectives
  • Tokenization
  • Data generators
 
-<a id="node-1601"></a>
+<a id="node-1571"></a>
 ## Week Introduction
 
 <br>
 
 
-<a id="node-1602"></a>
+<a id="node-1572"></a>
 ### Welcome to week four. You've done a great job so far. This course is really foundational
 
 > [!NOTE]
@@ -46,13 +46,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1603"></a>
+<a id="node-1573"></a>
 ## Overview
 
 <br>
 
 
-<a id="node-1604"></a>
+<a id="node-1574"></a>
 ### 1 Introduction to **word vectors** and **training them from scratch**.
 
 > [!NOTE]
@@ -80,7 +80,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1605"></a>
+<a id="node-1575"></a>
 
 <p align="center"><kbd><img src="assets/a4dcc5f19a17ac657e2f0c846652b1ee2223f444.png" width="100%"></kbd></p>
 
@@ -93,26 +93,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-1606"></a>
+<a id="node-1576"></a>
 
 <p align="center"><kbd><img src="assets/780568368e174f1f115e62e98c7d09e0a2104f7b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1607"></a>
+<a id="node-1577"></a>
 
 <p align="center"><kbd><img src="assets/afb5a094a9f6430b93d0cec637b28e5840f21c00.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1608"></a>
+<a id="node-1578"></a>
 ## Basic Word Representations
 
 <br>
 
 
-<a id="node-1609"></a>
+<a id="node-1579"></a>
 ### 1 Introduction to creating a matrix to represent words in a vocabulary, where  each
 
 > [!NOTE]
@@ -147,7 +147,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1610"></a>
+<a id="node-1580"></a>
 
 <p align="center"><kbd><img src="assets/af6c67aa8bea51ec06b9c99183b068dc647abdc0.png" width="100%"></kbd></p>
 
@@ -156,7 +156,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1611"></a>
+<a id="node-1581"></a>
 
 <p align="center"><kbd><img src="assets/38109bedd75e53777accafeda8e202b66266e04d.png" width="100%"></kbd></p>
 
@@ -169,7 +169,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1612"></a>
+<a id="node-1582"></a>
 
 <p align="center"><kbd><img src="assets/75ad4fafbaa052c87350c129954cdc055ce484c4.png" width="100%"></kbd></p>
 
@@ -184,7 +184,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1613"></a>
+<a id="node-1583"></a>
 
 <p align="center"><kbd><img src="assets/38bfc5ffdcec4223c05adecc0d2a8d799c2777ec.png" width="100%"></kbd></p>
 
@@ -195,7 +195,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1614"></a>
+<a id="node-1584"></a>
 
 <p align="center"><kbd><img src="assets/381f4af4c42c16fe32732f4f98ff6fca6c4e4cdf.png" width="100%"></kbd></p>
 
@@ -211,13 +211,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1615"></a>
+<a id="node-1585"></a>
 ## Word Embeddings
 
 <br>
 
 
-<a id="node-1616"></a>
+<a id="node-1586"></a>
 ### 1 Introduction to a method that can encode meaning in a **low-dimensional vector**,
 
 > [!NOTE]
@@ -251,7 +251,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1617"></a>
+<a id="node-1587"></a>
 
 <p align="center"><kbd><img src="assets/d22deb525298c5297b257e360eccf3be7ec600eb.png" width="100%"></kbd></p>
 
@@ -266,7 +266,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1618"></a>
+<a id="node-1588"></a>
 
 <p align="center"><kbd><img src="assets/51a99d10e6b251727e4d92ecf9ae3b5618810851.png" width="100%"></kbd></p>
 
@@ -286,7 +286,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1619"></a>
+<a id="node-1589"></a>
 
 <p align="center"><kbd><img src="assets/ef8644625b2560ff0c1d4e9e1cdda5fb17c27c4c.png" width="100%"></kbd></p>
 
@@ -302,7 +302,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1620"></a>
+<a id="node-1590"></a>
 
 <p align="center"><kbd><img src="assets/a17390f443c49ab5aa95ec99ef48d9ebe2acdd9b.png" width="100%"></kbd></p>
 
@@ -313,13 +313,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1621"></a>
+<a id="node-1591"></a>
 
 <p align="center"><kbd><img src="assets/d6f8369d55615a4d0ae71d7904e788427f3bf995.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1622"></a>
+<a id="node-1592"></a>
 
 <p align="center"><kbd><img src="assets/b46822e76ce4c87f05aa0977654a752b54b48455.png" width="100%"></kbd></p>
 
@@ -331,13 +331,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1623"></a>
+<a id="node-1593"></a>
 ## How To Create Word Embeddings
 
 <br>
 
 
-<a id="node-1624"></a>
+<a id="node-1594"></a>
 ### 1 To create **word** **embeddings**, two main components are required: a **corpus** of text and an
 
 > [!NOTE]
@@ -379,7 +379,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1625"></a>
+<a id="node-1595"></a>
 
 <p align="center"><kbd><img src="assets/562872a87ab5c476109e9e2e400c2e41d059ff54.png" width="100%"></kbd></p>
 
@@ -410,13 +410,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1626"></a>
+<a id="node-1596"></a>
 ## Word Embedding Methods
 
 <br>
 
 
-<a id="node-1627"></a>
+<a id="node-1597"></a>
 ### 1 **Various word embedding methods** exist and continue to evolve over time.
 
 > [!NOTE]
@@ -452,7 +452,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1628"></a>
+<a id="node-1598"></a>
 
 <p align="center"><kbd><img src="assets/223f4a1596be6bb3102e64b696f2f3bd8b24146c.png" width="100%"></kbd></p>
 
@@ -505,7 +505,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1629"></a>
+<a id="node-1599"></a>
 
 <p align="center"><kbd><img src="assets/d2c9c1b20575053e266c872f9972153a07f64048.png" width="100%"></kbd></p>
 
@@ -544,7 +544,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1630"></a>
+<a id="node-1600"></a>
 
 <p align="center"><kbd><img src="assets/c42a678387fa15cbec041ef372b7a35010d5f869.png" width="100%"></kbd></p>
 
@@ -557,13 +557,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1631"></a>
+<a id="node-1601"></a>
 ## Continous Bag Of Words Model
 
 <br>
 
 
-<a id="node-1632"></a>
+<a id="node-1602"></a>
 ### 1 **Overall process** for **machine learning model-based word embeddings**: To create word
 
 > [!NOTE]
@@ -610,7 +610,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1633"></a>
+<a id="node-1603"></a>
 
 <p align="center"><kbd><img src="assets/4693948539342bda5511f72f9f2195a73ceebd99.png" width="100%"></kbd></p>
 
@@ -623,7 +623,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1634"></a>
+<a id="node-1604"></a>
 
 <p align="center"><kbd><img src="assets/eb3aa01a89ef8d8525d908de38c838f0daeb401f.png" width="100%"></kbd></p>
 
@@ -640,7 +640,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1635"></a>
+<a id="node-1605"></a>
 
 <p align="center"><kbd><img src="assets/21b39183a986b4fac95d86e2b38284ee30aea7ec.png" width="100%"></kbd></p>
 
@@ -654,13 +654,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1636"></a>
+<a id="node-1606"></a>
 
 <p align="center"><kbd><img src="assets/9434a30c13a449be3ebf2c370d0fdf05310ad5c8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1637"></a>
+<a id="node-1607"></a>
 
 <p align="center"><kbd><img src="assets/b6c67a60b2628808d6fbe880b3d884476552c69a.png" width="100%"></kbd></p>
 
@@ -671,7 +671,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1638"></a>
+<a id="node-1608"></a>
 
 <p align="center"><kbd><img src="assets/9e7e8fc859afc703582806fcce181f9d80d6d9ca.png" width="100%"></kbd></p>
 
@@ -682,26 +682,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-1639"></a>
+<a id="node-1609"></a>
 
 <p align="center"><kbd><img src="assets/b171a8a13f9a608a58266db8d7dc270c29e85f45.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1640"></a>
+<a id="node-1610"></a>
 ## Efficient Estimation of Word Representations in Vector Space
 
 <br>
 
 
-<a id="node-1641"></a>
+<a id="node-1611"></a>
 ## Cleaning And Tokenization
 
 <br>
 
 
-<a id="node-1642"></a>
+<a id="node-1612"></a>
 ### 1 **Cleaning** and **tokenization** are important steps in processing a corpus.
 
 > [!NOTE]
@@ -733,7 +733,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1643"></a>
+<a id="node-1613"></a>
 
 <p align="center"><kbd><img src="assets/57b8553b8d54cde7787e03ed8d14cd9ec9fe3f5d.png" width="100%"></kbd></p>
 
@@ -776,13 +776,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1644"></a>
+<a id="node-1614"></a>
 
 <p align="center"><kbd><img src="assets/0cf3ef666ef4e6eb58fdff82346dc218d51c4437.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1645"></a>
+<a id="node-1615"></a>
 
 <p align="center"><kbd><img src="assets/2415d4c37e7e9985801b157f14e6fca08010f22c.png" width="100%"></kbd></p>
 
@@ -794,7 +794,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1646"></a>
+<a id="node-1616"></a>
 
 <p align="center"><kbd><img src="assets/725bfc2634588e047f4992d42b1eed148ac869f9.png" width="100%"></kbd></p>
 
@@ -804,7 +804,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1647"></a>
+<a id="node-1617"></a>
 
 <p align="center"><kbd><img src="assets/7e6bf715f91a67cddee970bc5e59f1707a4ba95d.png" width="100%"></kbd></p>
 
@@ -814,7 +814,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1648"></a>
+<a id="node-1618"></a>
 
 <p align="center"><kbd><img src="assets/096942ddac23c8c5dfd8273f7f9f439eec155b77.png" width="100%"></kbd></p>
 
@@ -827,13 +827,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1649"></a>
+<a id="node-1619"></a>
 ## Sliding Window Of Words In Python
 
 <br>
 
 
-<a id="node-1650"></a>
+<a id="node-1620"></a>
 ### 1 Introduction to **context words** and **center words**: The transcript mentions the importance of
 
 > [!NOTE]
@@ -869,7 +869,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1651"></a>
+<a id="node-1621"></a>
 
 <p align="center"><kbd><img src="assets/1341f9a792e3c0925b69b36ee5aef6352da5bbb8.png" width="100%"></kbd></p>
 
@@ -890,13 +890,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1652"></a>
+<a id="node-1622"></a>
 
 <p align="center"><kbd><img src="assets/e3f89e2fd47e7628c802d7aaf37343a6e25c88eb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1653"></a>
+<a id="node-1623"></a>
 
 <p align="center"><kbd><img src="assets/e8e1b8131f8aaea6e8d5f7bfade2f35060765137.png" width="100%"></kbd></p>
 
@@ -908,13 +908,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1654"></a>
+<a id="node-1624"></a>
 ## Transforming Words Into Vectors
 
 <br>
 
 
-<a id="node-1655"></a>
+<a id="node-1625"></a>
 ### 1 Introduction to **representing context words** and **central word**: The transcript states that in order to
 
 > [!NOTE]
@@ -947,7 +947,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1656"></a>
+<a id="node-1626"></a>
 
 <p align="center"><kbd><img src="assets/af92a232e2a825cffad1c8fcc75caf6440930bf9.png" width="100%"></kbd></p>
 
@@ -957,7 +957,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1657"></a>
+<a id="node-1627"></a>
 
 <p align="center"><kbd><img src="assets/dc0702de2d3be6cbd3bc8d792dbdb42980a91ec0.png" width="100%"></kbd></p>
 
@@ -968,13 +968,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1658"></a>
+<a id="node-1628"></a>
 
 <p align="center"><kbd><img src="assets/a33dd547dd8c27b1cd1bf181f96df6c2bc44b67d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1659"></a>
+<a id="node-1629"></a>
 
 <p align="center"><kbd><img src="assets/cf634e7f138ed3d7f4416759248bd2365c1c54ba.png" width="100%"></kbd></p>
 
@@ -987,13 +987,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1660"></a>
+<a id="node-1630"></a>
 ## Lab: Data Preparation
 
 <br>
 
 
-<a id="node-1661"></a>
+<a id="node-1631"></a>
 ### In this series of ungraded notebooks, you'll \\*try out all the individual techniques that
 
 > [!NOTE]
@@ -1012,36 +1012,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-1662"></a>
+<a id="node-1632"></a>
 #### Import
 
 <br>
 
 
-<a id="node-1663"></a>
+<a id="node-1633"></a>
 #### import re import **nltk**  nltk.download('**punkt**')  import **emoji** import **numpy** as np from nltk.tokenize import **word_tokenize** from utils2 import **get_dict**
 
 <br>
 
 
-<a id="node-1664"></a>
+<a id="node-1634"></a>
 #### Data preparation
 
 <br>
 
 
-<a id="node-1665"></a>
+<a id="node-1635"></a>
 #### In the **data preparation phase**, starting with a **corpus of text**, you will:  • Clean and tokenize the corpus.  • Extract the **pairs of context words and center word** that will make up the  training data set for the CBOW model. The context words are the features that will be fed  into the model, and the **center words** are the target values that the model will learn to  predict.  • Create **simple vector representations** of the context words (features) and  center words (targets) that can be used by the neural network of the CBOW model.
 
 <br>
 
 
-<a id="node-1666"></a>
+<a id="node-1636"></a>
 #### Cleaning and tokenization
 
 <br>
 
-<a id="node-1667"></a>
+<a id="node-1637"></a>
 
 <p align="center"><kbd><img src="assets/7c23df5e41838279e4aab9f1d8abf86553b6e211.png" width="100%"></kbd></p>
 
@@ -1053,7 +1053,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1668"></a>
+<a id="node-1638"></a>
 
 <p align="center"><kbd><img src="assets/f6b23c591099698981659dbf77444016675d820f.png" width="100%"></kbd></p>
 
@@ -1063,7 +1063,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1669"></a>
+<a id="node-1639"></a>
 
 <p align="center"><kbd><img src="assets/6a4a3d8dac9c0c784938cd20a294141b1051aea8.png" width="100%"></kbd></p>
 
@@ -1075,7 +1075,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1670"></a>
+<a id="node-1640"></a>
 
 <p align="center"><kbd><img src="assets/867a9d56b22fbfa1fd9d8f208c53e3b76ae67294.png" width="100%"></kbd></p>
 
@@ -1086,12 +1086,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1671"></a>
+<a id="node-1641"></a>
 #### Sliding window of words
 
 <br>
 
-<a id="node-1672"></a>
+<a id="node-1642"></a>
 
 <p align="center"><kbd><img src="assets/5ef9a75042e61c72727e9249de8042288102c145.png" width="100%"></kbd></p>
 
@@ -1104,25 +1104,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1673"></a>
+<a id="node-1643"></a>
 
 <p align="center"><kbd><img src="assets/467c5ea9ca0db8cbe10bd28dc55401a6fdb60e2d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1674"></a>
+<a id="node-1644"></a>
 #### Transforming words into vectors for the training set
 
 <br>
 
 
-<a id="node-1675"></a>
+<a id="node-1645"></a>
 #### Mapping words to indices and indices to words
 
 <br>
 
-<a id="node-1676"></a>
+<a id="node-1646"></a>
 
 <p align="center"><kbd><img src="assets/6e5a585dc61211f1430967c235f6590ba3037568.png" width="100%"></kbd></p>
 
@@ -1135,19 +1135,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-1677"></a>
+<a id="node-1647"></a>
 
 <p align="center"><kbd><img src="assets/056f3208e4f8975cc4d28bb2129ced47331208bf.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1678"></a>
+<a id="node-1648"></a>
 #### Getting one-hot word vectors
 
 <br>
 
-<a id="node-1679"></a>
+<a id="node-1649"></a>
 
 <p align="center"><kbd><img src="assets/62790490c0ab6d5012500788d1edc55a09fec52f.png" width="100%"></kbd></p>
 
@@ -1161,7 +1161,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1680"></a>
+<a id="node-1650"></a>
 
 <p align="center"><kbd><img src="assets/bd6bf8f81ac62d906b5701ff27c452f70a13541d.png" width="100%"></kbd></p>
 
@@ -1175,12 +1175,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1681"></a>
+<a id="node-1651"></a>
 #### Getting context word vectors
 
 <br>
 
-<a id="node-1682"></a>
+<a id="node-1652"></a>
 
 <p align="center"><kbd><img src="assets/668963d9801bacf1f99f5a7f18cda52255c1e605.png" width="100%"></kbd></p>
 
@@ -1195,7 +1195,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1683"></a>
+<a id="node-1653"></a>
 
 <p align="center"><kbd><img src="assets/ad6bb254c66761422aad74578789adc262b23e03.png" width="100%"></kbd></p>
 
@@ -1207,12 +1207,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1684"></a>
+<a id="node-1654"></a>
 #### Building the training set
 
 <br>
 
-<a id="node-1685"></a>
+<a id="node-1655"></a>
 
 <p align="center"><kbd><img src="assets/097cba4ad8796283dd096fd93fc6a8543d411421.png" width="100%"></kbd></p>
 
@@ -1224,7 +1224,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1686"></a>
+<a id="node-1656"></a>
 
 <p align="center"><kbd><img src="assets/31d9fd85c2e1e857e69c49aa20518b5c5cf5dd4e.png" width="100%"></kbd></p>
 
@@ -1237,13 +1237,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1687"></a>
+<a id="node-1657"></a>
 ## Architecture Of Cbow Model
 
 <br>
 
 
-<a id="node-1688"></a>
+<a id="node-1658"></a>
 ### 1 The **continuous bag of words (CBOW)** model uses a\\* shallow dense neural network
 
 > [!NOTE]
@@ -1279,7 +1279,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1689"></a>
+<a id="node-1659"></a>
 
 <p align="center"><kbd><img src="assets/bb0a0b6be1b987dd1863d86702baf52918cd440f.png" width="100%"></kbd></p>
 
@@ -1295,20 +1295,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1690"></a>
+<a id="node-1660"></a>
 
 <p align="center"><kbd><img src="assets/1d3a490ff446b8e0fc4c5ff07177bd4f7094107d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1691"></a>
+<a id="node-1661"></a>
 ## Architecture Of Cbow Model - Dimensions
 
 <br>
 
 
-<a id="node-1692"></a>
+<a id="node-1662"></a>
 ### 1 Understanding the **dimensions of the layers** in a model can **help in comprehending how the model works**
 
 > [!NOTE]
@@ -1351,7 +1351,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1693"></a>
+<a id="node-1663"></a>
 
 <p align="center"><kbd><img src="assets/6e89fcf79903e1a50ff04163109a77687f97685b.png" width="100%"></kbd></p>
 
@@ -1361,7 +1361,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1694"></a>
+<a id="node-1664"></a>
 
 <p align="center"><kbd><img src="assets/9062f8a6e6dc96adecdea2cd265f36183e70b4cd.png" width="100%"></kbd></p>
 
@@ -1373,13 +1373,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1695"></a>
+<a id="node-1665"></a>
 ## Architecture Of Cbow Model - Dimensions 2
 
 <br>
 
 
-<a id="node-1696"></a>
+<a id="node-1666"></a>
 ### 1 In the **continuous bag of words (CBOW) model**, **feeding several examples** into the neural network at the
 
 > [!NOTE]
@@ -1421,38 +1421,38 @@ Learning Objectives
 
 <br>
 
-<a id="node-1697"></a>
+<a id="node-1667"></a>
 
 <p align="center"><kbd><img src="assets/64beccf03618924c04127855aef371541fffb32c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1698"></a>
+<a id="node-1668"></a>
 
 <p align="center"><kbd><img src="assets/0be0207a59b4fce0d1af936437a234e07ca8bf6d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1699"></a>
+<a id="node-1669"></a>
 
 <p align="center"><kbd><img src="assets/22a893f0b6e41d52f3c27fb982dc79c7e34d2b3e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1700"></a>
+<a id="node-1670"></a>
 
 <p align="center"><kbd><img src="assets/ca54c9e3971cadd70cecd884f08348dee7e68364.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1701"></a>
+<a id="node-1671"></a>
 ## Architecture Of Cbow Model - Activation Functions
 
 <br>
 
 
-<a id="node-1702"></a>
+<a id="node-1672"></a>
 ### 1 The **rectified linear unit (ReLU)** is an **activation function** used in neural networks. It calculates the \\*weighted sum of
 
 > [!NOTE]
@@ -1492,7 +1492,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1703"></a>
+<a id="node-1673"></a>
 
 <p align="center"><kbd><img src="assets/5e41626c556c563ee3b485193036ea51a7fcf2ee.png" width="100%"></kbd></p>
 
@@ -1502,13 +1502,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1704"></a>
+<a id="node-1674"></a>
 
 <p align="center"><kbd><img src="assets/5f721acc5935cb1d1164346fecbdc9266158022f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1705"></a>
+<a id="node-1675"></a>
 
 <p align="center"><kbd><img src="assets/067d9e25c4263d6b966314cf824556d7e766fb14.png" width="100%"></kbd></p>
 
@@ -1521,37 +1521,37 @@ Learning Objectives
 
 <br>
 
-<a id="node-1706"></a>
+<a id="node-1676"></a>
 
 <p align="center"><kbd><img src="assets/82f87de7bffb8e0f799712bd74019e112b00b9ca.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1707"></a>
+<a id="node-1677"></a>
 
 <p align="center"><kbd><img src="assets/f5621f84fa282bb369141b06b573251711e7deac.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1708"></a>
+<a id="node-1678"></a>
 ## Lab: Intro To Cbow Model
 
 <br>
 
-<a id="node-1709"></a>
+<a id="node-1679"></a>
 
 <p align="center"><kbd><img src="assets/905987da33415531d2d275983cb10b9ef0a3c70d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1710"></a>
+<a id="node-1680"></a>
 ### ReLu
 
 <br>
 
-<a id="node-1711"></a>
+<a id="node-1681"></a>
 
 <p align="center"><kbd><img src="assets/4259b6bb6994868338610a4e5f8195973a15ef40.png" width="100%"></kbd></p>
 
@@ -1594,7 +1594,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1712"></a>
+<a id="node-1682"></a>
 
 <p align="center"><kbd><img src="assets/db70c933d4e4ff9d44c25b9faeea092de6af80ae.png" width="100%"></kbd></p>
 
@@ -1606,19 +1606,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-1713"></a>
+<a id="node-1683"></a>
 
 <p align="center"><kbd><img src="assets/6124081214755c14e2ebdb3832f358fd5738777d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1714"></a>
+<a id="node-1684"></a>
 ### Softmax
 
 <br>
 
-<a id="node-1715"></a>
+<a id="node-1685"></a>
 
 <p align="center"><kbd><img src="assets/034581762d892e47004cfbeb67eb3f9c9b2251a8.png" width="100%"></kbd></p>
 
@@ -1629,20 +1629,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1716"></a>
+<a id="node-1686"></a>
 
 <p align="center"><kbd><img src="assets/4e235dc9b46f1b1ead13b6de87e42ce1912e3f6c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1717"></a>
+<a id="node-1687"></a>
 
 <p align="center"><kbd><img src="assets/ad541664bed10877df82b7c762775082470b954d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1718"></a>
+<a id="node-1688"></a>
 ### Dimensions: 1-D arrays vs
 
 > [!NOTE]
@@ -1651,7 +1651,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1719"></a>
+<a id="node-1689"></a>
 
 <p align="center"><kbd><img src="assets/2b4f00afe83c38de4cf68319cec2c288332bae3e.png" width="100%"></kbd></p>
 
@@ -1663,7 +1663,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1720"></a>
+<a id="node-1690"></a>
 
 <p align="center"><kbd><img src="assets/6fa5216982ebde1f4742871c7b2e72d87242a1b9.png" width="100%"></kbd></p>
 
@@ -1675,19 +1675,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-1721"></a>
+<a id="node-1691"></a>
 #### Congratulations on finishing this lecture notebook! Hopefully you now have a better understanding of the activation functions used in the continuous bag-of-words model, as well as a clearer idea of how to leverage Numpy's power for these types of mathematical computations.  In the next lecture notebook you will get a comprehensive dive into:  Forward propagation.  Cross-entropy loss.  Backpropagation.  Gradient descent.  See you next time!
 
 <br>
 
 
-<a id="node-1722"></a>
+<a id="node-1692"></a>
 ## Training A Cbow Model: Cost Function
 
 <br>
 
 
-<a id="node-1723"></a>
+<a id="node-1693"></a>
 ### 1 The cost function for **Softmax** is used to predict one of the possible words in a machine learning
 
 > [!NOTE]
@@ -1726,7 +1726,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1724"></a>
+<a id="node-1694"></a>
 
 <p align="center"><kbd><img src="assets/42dca57bd74a4ebf0d34e3b97695cb19222b4a9c.png" width="100%"></kbd></p>
 
@@ -1762,7 +1762,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1725"></a>
+<a id="node-1695"></a>
 
 <p align="center"><kbd><img src="assets/4cf390b235d0c5faba35a1365fe656d239ef105c.png" width="100%"></kbd></p>
 
@@ -1798,7 +1798,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1726"></a>
+<a id="node-1696"></a>
 
 <p align="center"><kbd><img src="assets/6e87071cdc3b7d9f9b00737c1584e20f8938f03b.png" width="100%"></kbd></p>
 
@@ -1808,7 +1808,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1727"></a>
+<a id="node-1697"></a>
 
 <p align="center"><kbd><img src="assets/039d168e7969900c7a1789a4c61adde135650b5f.png" width="100%"></kbd></p>
 
@@ -1833,7 +1833,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1728"></a>
+<a id="node-1698"></a>
 
 <p align="center"><kbd><img src="assets/d1588fb284d9ad75df07b2048b7df72c6b329d54.png" width="100%"></kbd></p>
 
@@ -1842,13 +1842,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1729"></a>
+<a id="node-1699"></a>
 ## Training A Cbow Model: Forward Prop
 
 <br>
 
 
-<a id="node-1730"></a>
+<a id="node-1700"></a>
 ### 1 **Forward propagation** of the CBOW model is explained, which shows the \\*transformation of inputs through
 
 > [!NOTE]
@@ -1875,7 +1875,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1731"></a>
+<a id="node-1701"></a>
 
 <p align="center"><kbd><img src="assets/5868e406eef8884af6d788ccd8fc20a788b859d1.png" width="100%"></kbd></p>
 
@@ -1885,7 +1885,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1732"></a>
+<a id="node-1702"></a>
 
 <p align="center"><kbd><img src="assets/d8de4c5fde9868533a127438d97a570cee625a79.png" width="100%"></kbd></p>
 
@@ -1901,13 +1901,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1733"></a>
+<a id="node-1703"></a>
 ## Training A Cbow Model: Backprop And G.d
 
 <br>
 
 
-<a id="node-1734"></a>
+<a id="node-1704"></a>
 ### 1 The **goal** is to learn the weights and biases of the linear layer and word embeddings by \\*minimizing
 
 > [!NOTE]
@@ -1945,7 +1945,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1735"></a>
+<a id="node-1705"></a>
 
 <p align="center"><kbd><img src="assets/75ff4f3c7167429e6f35ce4ff5cef6ad46177cbd.png" width="100%"></kbd></p>
 
@@ -1957,7 +1957,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1736"></a>
+<a id="node-1706"></a>
 
 <p align="center"><kbd><img src="assets/84b0477e0cee5c7be500d5436f4706b2270018db.png" width="100%"></kbd></p>
 
@@ -1968,13 +1968,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1737"></a>
+<a id="node-1707"></a>
 
 <p align="center"><kbd><img src="assets/43e86456b7ae369fab2a00fd29686f0a3951c1d8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1738"></a>
+<a id="node-1708"></a>
 
 <p align="center"><kbd><img src="assets/5a43320fba70a0fad40481baf76833669003e9a0.png" width="100%"></kbd></p>
 
@@ -1984,7 +1984,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1739"></a>
+<a id="node-1709"></a>
 
 <p align="center"><kbd><img src="assets/34082d85ba19fa3421374a9d58815086a5e1f8eb.png" width="100%"></kbd></p>
 
@@ -1995,13 +1995,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1740"></a>
+<a id="node-1710"></a>
 ## Lab: Training The Cbow Model
 
 <br>
 
 
-<a id="node-1741"></a>
+<a id="node-1711"></a>
 ### In previous lecture notebooks you saw how to **prepare data** before feeding it to a
 
 > [!NOTE]
@@ -2022,18 +2022,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-1742"></a>
+<a id="node-1712"></a>
 #### Forward propagation
 
 <br>
 
-<a id="node-1743"></a>
+<a id="node-1713"></a>
 
 <p align="center"><kbd><img src="assets/ec08655b47d8adf8af454bd03b64871e87c955fc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1744"></a>
+<a id="node-1714"></a>
 
 <p align="center"><kbd><img src="assets/6684dbcb59a000a445a0df283f629bb60cf1b8a6.png" width="100%"></kbd></p>
 
@@ -2051,7 +2051,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1745"></a>
+<a id="node-1715"></a>
 
 <p align="center"><kbd><img src="assets/6d952d09fce909e4cb1dff4a08fd738cf6feed9d.png" width="100%"></kbd></p>
 
@@ -2062,7 +2062,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1746"></a>
+<a id="node-1716"></a>
 
 <p align="center"><kbd><img src="assets/c427feee2dc4d0d2ab579ba03f37dc14eae85973.png" width="100%"></kbd></p>
 
@@ -2076,7 +2076,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1747"></a>
+<a id="node-1717"></a>
 #### # Define the **tokenized version of the corpus** words = ['i', 'am', 'happy', 'because', 'i', 'am', 'learning']  # Get '**word2Ind**' and '**Ind2word**' dictionaries for the tokenized corpus **word2Ind**, **Ind2word** = **get_dict(words)**  # Define the '**get_windows**' function as seen in a previous notebook def **get_windows**(words, C):     i = C     while i < len(words) - C:         center_word = words[i]         context_words = words[(i - C):i] + words[(i+1):(i+C+1)]         yield context_words, center_word         i += 1  # Define the '**word_to_one_hot_vector**' function as seen in a previous notebook def **word_to_one_hot_vector**(word, word2Ind, V):     one_hot_vector = np.zeros(V)     one_hot_vector[word2Ind[word]] = 1     return one_hot_vector  # Define the '**context_words_to_vector**' function as seen in a previous notebook def context_words_to_vector(context_words, word2Ind, V):     context_words_vectors = [word_to_one_hot_vector(w, word2Ind, V) for w in context_words]     context_words_vectors = np.mean(context_words_vectors, axis=0)     return context_words_vectors  # Define the generator function 'get_training_example' as seen in a previous notebook def **get_training_example**(words, C, word2Ind, V):     for context_words, center_word in get_windows(words, C):         yield context_words_to_vector(context_words, word2Ind, V), word_to_one_hot_vector(center_word, word2Ind, V)
 
 > [!NOTE]
@@ -2086,12 +2086,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1748"></a>
+<a id="node-1718"></a>
 #### Training Example
 
 <br>
 
-<a id="node-1749"></a>
+<a id="node-1719"></a>
 
 <p align="center"><kbd><img src="assets/293c67a50a0b908aaa1f803909199cb0fa28db0b.png" width="100%"></kbd></p>
 
@@ -2107,7 +2107,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1750"></a>
+<a id="node-1720"></a>
 
 <p align="center"><kbd><img src="assets/5ee313bcbe0671738711c7c9ad0d2344d6496f49.png" width="100%"></kbd></p>
 
@@ -2118,7 +2118,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1751"></a>
+<a id="node-1721"></a>
 
 <p align="center"><kbd><img src="assets/6f370f608e970ce421899aee5660b8d89c7b3468.png" width="100%"></kbd></p>
 
@@ -2129,7 +2129,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1752"></a>
+<a id="node-1722"></a>
 
 <p align="center"><kbd><img src="assets/f01733f70b0e0c98e7e68375b2084d38cad9f080.png" width="100%"></kbd></p>
 
@@ -2139,7 +2139,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1753"></a>
+<a id="node-1723"></a>
 
 <p align="center"><kbd><img src="assets/dea48d0494c1c8d68dacb79b33a206104d46191b.png" width="100%"></kbd></p>
 
@@ -2149,7 +2149,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1754"></a>
+<a id="node-1724"></a>
 
 <p align="center"><kbd><img src="assets/5e4ae3f8d3c91967aa6108a4d2a9ef84c7908486.png" width="100%"></kbd></p>
 
@@ -2158,7 +2158,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1755"></a>
+<a id="node-1725"></a>
 
 <p align="center"><kbd><img src="assets/3d965fb9b0f0ca6d9e9a1f2593140aa91841062a.png" width="100%"></kbd></p>
 
@@ -2178,12 +2178,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1756"></a>
+<a id="node-1726"></a>
 #### Cross-entropy loss
 
 <br>
 
-<a id="node-1757"></a>
+<a id="node-1727"></a>
 
 <p align="center"><kbd><img src="assets/bff92d184336c7e431f7c062a15fc16549213784.png" width="100%"></kbd></p>
 
@@ -2195,7 +2195,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1758"></a>
+<a id="node-1728"></a>
 
 <p align="center"><kbd><img src="assets/068f35c6482659e6b941c619385ff424a4374f42.png" width="100%"></kbd></p>
 
@@ -2207,79 +2207,79 @@ Learning Objectives
 <br>
 
 
-<a id="node-1759"></a>
+<a id="node-1729"></a>
 #### Backpropagation
 
 <br>
 
-<a id="node-1760"></a>
+<a id="node-1730"></a>
 
 <p align="center"><kbd><img src="assets/03564c928886926070990f2960386e84887b5acd.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1761"></a>
+<a id="node-1731"></a>
 
 <p align="center"><kbd><img src="assets/c841dbb8a6d4d070259b5c1ae590fb3653daa654.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1762"></a>
+<a id="node-1732"></a>
 
 <p align="center"><kbd><img src="assets/cccbaf2b579291679a2ca2c806084e2df6b4e059.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1763"></a>
+<a id="node-1733"></a>
 
 <p align="center"><kbd><img src="assets/64a097f3dff881418a3da6330df8c6b4a95afab7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1764"></a>
+<a id="node-1734"></a>
 
 <p align="center"><kbd><img src="assets/6ed8ccaa07bd92bf3d80d75d1ef5e4525df3a673.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1765"></a>
+<a id="node-1735"></a>
 
 <p align="center"><kbd><img src="assets/889fb9e1df013d40f2b2e06c5b292f51156e5a05.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1766"></a>
+<a id="node-1736"></a>
 #### Gradient descent
 
 <br>
 
-<a id="node-1767"></a>
+<a id="node-1737"></a>
 
 <p align="center"><kbd><img src="assets/1d72a53ba7c46720bdb0a99a61463dd135e271c8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1768"></a>
+<a id="node-1738"></a>
 
 <p align="center"><kbd><img src="assets/a6d962d8e69d2719e0bb04c33cb0cfca49e9232a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1769"></a>
+<a id="node-1739"></a>
 
 <p align="center"><kbd><img src="assets/92158313cb64a3294a0098d964b5e4869fcb2a54.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1770"></a>
+<a id="node-1740"></a>
 #### Conclusion
 
 <br>
 
 
-<a id="node-1771"></a>
+<a id="node-1741"></a>
 #### Congratulations, you have completed one iteration of training using one training example!  You'll need many more iterations to fully train the neural network, and you can optimize the learning process by training on batches of examples, as described in the lecture. You will get to do this during this week's assignment.  **How this practice relates to and differs from the upcoming graded assignment**   • In the assignment, for each iteration of training **you will use batches of examples** **instead** of a single example. The formulas for forward propagation and backpropagation will be modified accordingly, and you will use **cross-entropy** **cost** instead of **cross-entropy loss.**  • You will also complete **several iterations of training**, until you **reach an acceptably low cross-entropy cost**, at which point you can **extract good word embeddings** from the weight matrices.
 
 > [!NOTE]
@@ -2289,13 +2289,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1772"></a>
+<a id="node-1742"></a>
 ## Extracting Word Embedding Vectors
 
 <br>
 
 
-<a id="node-1773"></a>
+<a id="node-1743"></a>
 ### 1 **Word embeddings are not directly output** by the training process but are a\\* by-product of
 
 > [!NOTE]
@@ -2321,32 +2321,32 @@ Learning Objectives
 
 <br>
 
-<a id="node-1774"></a>
+<a id="node-1744"></a>
 
 <p align="center"><kbd><img src="assets/f193460733a73a75d9d0ba58249aede248132f82.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1775"></a>
+<a id="node-1745"></a>
 
 <p align="center"><kbd><img src="assets/a47336f4a84f5b07a89c2c1c6b7cb0d31adb2899.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1776"></a>
+<a id="node-1746"></a>
 
 <p align="center"><kbd><img src="assets/32f16da6ade4ab98d4678985520081f3aa1edfc3.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1777"></a>
+<a id="node-1747"></a>
 ## Lab: Word Embeddings
 
 <br>
 
 
-<a id="node-1778"></a>
+<a id="node-1748"></a>
 ### In previous lecture notebooks you saw all the steps needed to
 
 > [!NOTE]
@@ -2358,7 +2358,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1779"></a>
+<a id="node-1749"></a>
 
 <p align="center"><kbd><img src="assets/bdc7570be577c9fa97b84ba352f99464e664a789.png" width="100%"></kbd></p>
 
@@ -2369,7 +2369,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1780"></a>
+<a id="node-1750"></a>
 
 <p align="center"><kbd><img src="assets/8e679c1d7e27b04fe47ac6e2d6c30cba8d982d51.png" width="100%"></kbd></p>
 
@@ -2380,13 +2380,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1781"></a>
+<a id="node-1751"></a>
 
 <p align="center"><kbd><img src="assets/b42f6e68cd9e8b0450e9a530fe74934cf957b2c7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1782"></a>
+<a id="node-1752"></a>
 
 <p align="center"><kbd><img src="assets/00eab1f9d9483c36735b4cbca26853eb9195e996.png" width="100%"></kbd></p>
 
@@ -2396,7 +2396,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1783"></a>
+<a id="node-1753"></a>
 
 <p align="center"><kbd><img src="assets/49fe2259305e0eff36786d4b703bc9289a0965dd.png" width="100%"></kbd></p>
 
@@ -2407,13 +2407,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1784"></a>
+<a id="node-1754"></a>
 ## Evaluating Word Embeddings: Intrinsic Evaluation
 
 <br>
 
 
-<a id="node-1785"></a>
+<a id="node-1755"></a>
 ### 1 There are **two types of evaluation metrics** for word embeddings: **intrinsic** evaluation and **extrinsic**
 
 > [!NOTE]
@@ -2444,7 +2444,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1786"></a>
+<a id="node-1756"></a>
 
 <p align="center"><kbd><img src="assets/3c068a226c59742f51a2a1e9c6ec0f1a9ba2d600.png" width="100%"></kbd></p>
 
@@ -2455,7 +2455,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1787"></a>
+<a id="node-1757"></a>
 
 <p align="center"><kbd><img src="assets/154bbadea2ecc0775b48bc78116001cc092c8076.png" width="100%"></kbd></p>
 
@@ -2464,7 +2464,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1788"></a>
+<a id="node-1758"></a>
 
 <p align="center"><kbd><img src="assets/b48ae64e9f83ff3863a4daa37976946465d823f1.png" width="100%"></kbd></p>
 
@@ -2480,20 +2480,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1789"></a>
+<a id="node-1759"></a>
 
 <p align="center"><kbd><img src="assets/ff01d6779205cd3e58c7064b61068b1e02693ba0.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1790"></a>
+<a id="node-1760"></a>
 ## Evaluating Word Embeddings: Extrinsic Evaluation
 
 <br>
 
 
-<a id="node-1791"></a>
+<a id="node-1761"></a>
 ### 1 **Extrinsic evaluation** is a method used to **test word embeddings** on **external tasks**, which are typically
 
 > [!NOTE]
@@ -2525,13 +2525,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1792"></a>
+<a id="node-1762"></a>
 
 <p align="center"><kbd><img src="assets/be677fd2982ae0e9194f9bad8068e0d7c88966fc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1793"></a>
+<a id="node-1763"></a>
 
 <p align="center"><kbd><img src="assets/b4cdd59c3c2f0b843ba31d9427c8b66d673e9781.png" width="100%"></kbd></p>
 
@@ -2548,20 +2548,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1794"></a>
+<a id="node-1764"></a>
 
 <p align="center"><kbd><img src="assets/ae9d2754aace4ceed71b77b9b874af41d11d0671.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1795"></a>
+<a id="node-1765"></a>
 ## Lab: Word Embedding Step By Step
 
 <br>
 
 
-<a id="node-1796"></a>
+<a id="node-1766"></a>
 ### In this ungraded notebook, you'll try out all the individual techniques that you learned
 
 > [!NOTE]
@@ -2578,48 +2578,48 @@ Learning Objectives
 <br>
 
 
-<a id="node-1797"></a>
+<a id="node-1767"></a>
 #### Import
 
 <br>
 
-<a id="node-1798"></a>
+<a id="node-1768"></a>
 
 <p align="center"><kbd><img src="assets/90637777de2006a1b5ef5b8c13484cd8321ac5be.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1799"></a>
+<a id="node-1769"></a>
 #### Data preparation
 
 <br>
 
 
-<a id="node-1800"></a>
+<a id="node-1770"></a>
 #### In the data preparation phase, starting with a **corpus of text**, you will:  • **Clean** and **tokenize the corpus.**  • **Extract the pairs of context words** and **center word** that will **make up the training data set** for the **CBOW model**. The **context words** are the **features** that will be **fed into the model**, and the **center words** are the **target values** that the **model will learn to predict.**  • Create **simple vector representations** of the **context words** (features) and **center words** (targets) that can be used by the **neural network of the CBOW model.**
 
 <br>
 
 
-<a id="node-1801"></a>
+<a id="node-1771"></a>
 #### Cleaning and tokenization
 
 <br>
 
 
-<a id="node-1802"></a>
+<a id="node-1772"></a>
 #### To demonstrate the **cleaning** and **tokenization** process, consider a **corpus** that contains **emojis** and various **punctuation signs**.
 
 <br>
 
 
-<a id="node-1803"></a>
+<a id="node-1773"></a>
 #### corpus = 'Who ❤️ "word embeddings" in 2020? I do!!!'
 
 <br>
 
-<a id="node-1804"></a>
+<a id="node-1774"></a>
 
 <p align="center"><kbd><img src="assets/71373ead92df746193798754b78090bd3a66847f.png" width="100%"></kbd></p>
 
@@ -2635,7 +2635,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1805"></a>
+<a id="node-1775"></a>
 
 <p align="center"><kbd><img src="assets/fda894659bb3f10741de5981af4c88582e0e4fba.png" width="100%"></kbd></p>
 
@@ -2646,12 +2646,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1806"></a>
+<a id="node-1776"></a>
 #### Sliding window of words
 
 <br>
 
-<a id="node-1807"></a>
+<a id="node-1777"></a>
 
 <p align="center"><kbd><img src="assets/8001473299edb3c56126f6fee97c277bbcc35852.png" width="100%"></kbd></p>
 
@@ -2666,31 +2666,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-1808"></a>
+<a id="node-1778"></a>
 
 <p align="center"><kbd><img src="assets/615136bec6d6516246d55e7de72e49efefa38eea.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1809"></a>
+<a id="node-1779"></a>
 #### Transforming words into vectors for the training set
 
 <br>
 
 
-<a id="node-1810"></a>
+<a id="node-1780"></a>
 #### To finish preparing the training set, you need to transform the context words and center words into vectors.
 
 <br>
 
 
-<a id="node-1811"></a>
+<a id="node-1781"></a>
 #### Mapping words to indices and indices to words
 
 <br>
 
-<a id="node-1812"></a>
+<a id="node-1782"></a>
 
 <p align="center"><kbd><img src="assets/b09ea80fb35b95e9611e54c735b6e65563c9a273.png" width="100%"></kbd></p>
 
@@ -2702,12 +2702,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1813"></a>
+<a id="node-1783"></a>
 #### Getting one-hot word vectors
 
 <br>
 
-<a id="node-1814"></a>
+<a id="node-1784"></a>
 
 <p align="center"><kbd><img src="assets/586c260e59d151c136b51d3212174326d39694ce.png" width="100%"></kbd></p>
 
@@ -2720,7 +2720,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1815"></a>
+<a id="node-1785"></a>
 
 <p align="center"><kbd><img src="assets/1ca9b9f9cdf58119a6319155541247703783569c.png" width="100%"></kbd></p>
 
@@ -2734,12 +2734,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1816"></a>
+<a id="node-1786"></a>
 #### Getting context word vectors
 
 <br>
 
-<a id="node-1817"></a>
+<a id="node-1787"></a>
 
 <p align="center"><kbd><img src="assets/819f710453ae43a7899039797308e77ece84011b.png" width="100%"></kbd></p>
 
@@ -2752,7 +2752,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1818"></a>
+<a id="node-1788"></a>
 
 <p align="center"><kbd><img src="assets/6380c4d0d9702e0f80ca5d3067eac72c1c305f50.png" width="100%"></kbd></p>
 
@@ -2764,18 +2764,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-1819"></a>
+<a id="node-1789"></a>
 #### Building the training set
 
 <br>
 
-<a id="node-1820"></a>
+<a id="node-1790"></a>
 
 <p align="center"><kbd><img src="assets/ad774e9edd2eafb9307771f3a83128c3844e731f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1821"></a>
+<a id="node-1791"></a>
 
 <p align="center"><kbd><img src="assets/a37ef95b29906c259c02de6b73119a362c5b6766.png" width="100%"></kbd></p>
 
@@ -2787,30 +2787,30 @@ Learning Objectives
 <br>
 
 
-<a id="node-1822"></a>
+<a id="node-1792"></a>
 #### The continuous bag-of-words model
 
 <br>
 
 
-<a id="node-1823"></a>
+<a id="node-1793"></a>
 #### The continuous bag-of-words model
 
 <br>
 
-<a id="node-1824"></a>
+<a id="node-1794"></a>
 
 <p align="center"><kbd><img src="assets/f7d3596ab72bbc8bb103c41fffdf246505eaeeaf.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1825"></a>
+<a id="node-1795"></a>
 #### Activation functions - reLu
 
 <br>
 
-<a id="node-1826"></a>
+<a id="node-1796"></a>
 
 <p align="center"><kbd><img src="assets/128c41e59750c544a580ca9c48cf55e8d060971a.png" width="100%"></kbd></p>
 
@@ -2823,7 +2823,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1827"></a>
+<a id="node-1797"></a>
 
 <p align="center"><kbd><img src="assets/0003bcf47b390c22b7f4f411cb1f61d64d2c96e7.png" width="100%"></kbd></p>
 
@@ -2835,12 +2835,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1828"></a>
+<a id="node-1798"></a>
 #### Activation functions - softMax
 
 <br>
 
-<a id="node-1829"></a>
+<a id="node-1799"></a>
 
 <p align="center"><kbd><img src="assets/531c054eb7c03ad48ef061019c5b592385ec8be7.png" width="100%"></kbd></p>
 
@@ -2852,7 +2852,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1830"></a>
+<a id="node-1800"></a>
 
 <p align="center"><kbd><img src="assets/e53fc2886355c039875096c0ac88cf3c503bf915.png" width="100%"></kbd></p>
 
@@ -2862,12 +2862,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1831"></a>
+<a id="node-1801"></a>
 #### Dimensions: 1-D arrays vs 2-D column vectors
 
 <br>
 
-<a id="node-1832"></a>
+<a id="node-1802"></a>
 
 <p align="center"><kbd><img src="assets/87496cf3e4afddb0fa92117260f634335b75cf92.png" width="100%"></kbd></p>
 
@@ -2879,12 +2879,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1833"></a>
+<a id="node-1803"></a>
 #### Forward propagation
 
 <br>
 
-<a id="node-1834"></a>
+<a id="node-1804"></a>
 
 <p align="center"><kbd><img src="assets/796a5d40a210ba87cead161c15187c2d4dbc3773.png" width="100%"></kbd></p>
 
@@ -2896,12 +2896,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1835"></a>
+<a id="node-1805"></a>
 #### Initialization of the weights and biases
 
 <br>
 
-<a id="node-1836"></a>
+<a id="node-1806"></a>
 
 <p align="center"><kbd><img src="assets/348a5e1ed9054a8f1fcf2348a4e063145806629a.png" width="100%"></kbd></p>
 
@@ -2916,12 +2916,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1837"></a>
+<a id="node-1807"></a>
 #### Training example
 
 <br>
 
-<a id="node-1838"></a>
+<a id="node-1808"></a>
 
 <p align="center"><kbd><img src="assets/04e4faed5e0c45843cad3eaef07d17ec6f128f3d.png" width="100%"></kbd></p>
 
@@ -2937,7 +2937,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1839"></a>
+<a id="node-1809"></a>
 
 <p align="center"><kbd><img src="assets/2879a922e1cf7d4eb270eb1b2026b708c856d2dc.png" width="100%"></kbd></p>
 
@@ -2949,12 +2949,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1840"></a>
+<a id="node-1810"></a>
 #### Values of the hidden layer
 
 <br>
 
-<a id="node-1841"></a>
+<a id="node-1811"></a>
 
 <p align="center"><kbd><img src="assets/ebd6cfa9a5aa7f992fab94e78708e91f603fbe80.png" width="100%"></kbd></p>
 
@@ -2966,12 +2966,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1842"></a>
+<a id="node-1812"></a>
 #### Values of the output layer
 
 <br>
 
-<a id="node-1843"></a>
+<a id="node-1813"></a>
 
 <p align="center"><kbd><img src="assets/0596b9b825116c617472fbe559f9e4c72b6b393f.png" width="100%"></kbd></p>
 
@@ -2981,7 +2981,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1844"></a>
+<a id="node-1814"></a>
 
 <p align="center"><kbd><img src="assets/1f44e723f0951f94e539dd455c83cacc36e11d0a.png" width="100%"></kbd></p>
 
@@ -2995,12 +2995,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1845"></a>
+<a id="node-1815"></a>
 #### Cross-entropy loss
 
 <br>
 
-<a id="node-1846"></a>
+<a id="node-1816"></a>
 
 <p align="center"><kbd><img src="assets/e1591235dd4fbfa4d75367a27a12ad88dbc00ce8.png" width="100%"></kbd></p>
 
@@ -3010,7 +3010,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1847"></a>
+<a id="node-1817"></a>
 
 <p align="center"><kbd><img src="assets/461b623935badd91fd6eedc0caefc602d5d1b963.png" width="100%"></kbd></p>
 
@@ -3021,12 +3021,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1848"></a>
+<a id="node-1818"></a>
 #### Backpropagation
 
 <br>
 
-<a id="node-1849"></a>
+<a id="node-1819"></a>
 
 <p align="center"><kbd><img src="assets/849ea82b17a99d9f2f3854d2a6f53dad2eff68c4.png" width="100%"></kbd></p>
 
@@ -3036,25 +3036,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1850"></a>
+<a id="node-1820"></a>
 
 <p align="center"><kbd><img src="assets/f9c3929760fe938edd24f64a4fc3338abe007498.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1851"></a>
+<a id="node-1821"></a>
 
 <p align="center"><kbd><img src="assets/cfedb2a6636cdffc77115b3981ded217b9d48dd3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1852"></a>
+<a id="node-1822"></a>
 
 <p align="center"><kbd><img src="assets/33497effeefdc1130049b6497eed7874ce31521a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1853"></a>
+<a id="node-1823"></a>
 
 <p align="center"><kbd><img src="assets/7622433a566e844974fc052fb44cdc8c4439d6f5.png" width="100%"></kbd></p>
 
@@ -3065,25 +3065,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1854"></a>
+<a id="node-1824"></a>
 #### Gradient descent
 
 <br>
 
-<a id="node-1855"></a>
+<a id="node-1825"></a>
 
 <p align="center"><kbd><img src="assets/97944d1945e38700ad408dab787a971fc63969f2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1856"></a>
+<a id="node-1826"></a>
 
 <p align="center"><kbd><img src="assets/473e3d8fd58f6fc8c82825d9dcd0a06b22e3843e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1857"></a>
+<a id="node-1827"></a>
 #### Congratulations, you have completed one iteration of training using one training example!  You'll need many more iterations to fully train the neural network, and you can optimize the learning process by training on batches of examples, as described in the lecture. You will get to do this during this week's assignment.
 
 > [!NOTE]
@@ -3099,49 +3099,49 @@ Learning Objectives
 <br>
 
 
-<a id="node-1858"></a>
+<a id="node-1828"></a>
 #### Extracting word embedding vectors
 
 <br>
 
-<a id="node-1859"></a>
+<a id="node-1829"></a>
 
 <p align="center"><kbd><img src="assets/94b92ddecff735f33f0ca5e3e18a76b9cc2d4be4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1860"></a>
+<a id="node-1830"></a>
 
 <p align="center"><kbd><img src="assets/16173b0cc35b3f06c2f588033c0f76c49b065349.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1861"></a>
+<a id="node-1831"></a>
 
 <p align="center"><kbd><img src="assets/34b8a85cb71e4e6b569a100f3e2c7f02b1cbf925.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1862"></a>
+<a id="node-1832"></a>
 #### How this practice relates to and differs from the upcoming graded assignment
 
 <br>
 
-<a id="node-1863"></a>
+<a id="node-1833"></a>
 
 <p align="center"><kbd><img src="assets/95ac5660858e7d7775d815ba2e4cb72853b2a73c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1864"></a>
+<a id="node-1834"></a>
 ## Conclusion
 
 <br>
 
 
-<a id="node-1865"></a>
+<a id="node-1835"></a>
 ### 1 Word **embeddings** are vectors that **capture the meaning of words** and can be used in various
 
 > [!NOTE]
@@ -3177,98 +3177,98 @@ Learning Objectives
 
 <br>
 
-<a id="node-1866"></a>
+<a id="node-1836"></a>
 
 <p align="center"><kbd><img src="assets/23e3c137768898c135f4c40d3e8ece5f08d7f58f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1867"></a>
+<a id="node-1837"></a>
 
 <p align="center"><kbd><img src="assets/5f172b6c40fa5a397a3cc011c5ee26f4f2b85af2.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1868"></a>
+<a id="node-1838"></a>
 ## Quiz
 
 <br>
 
-<a id="node-1869"></a>
+<a id="node-1839"></a>
 
 <p align="center"><kbd><img src="assets/3deb4657e8e309fd2d13c867ed422da742214462.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1870"></a>
+<a id="node-1840"></a>
 
 <p align="center"><kbd><img src="assets/b9d14649ddb5f43fde283196bc2363d53768c092.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1871"></a>
+<a id="node-1841"></a>
 
 <p align="center"><kbd><img src="assets/00e8e112352b860f37c0b9b340852405e3980cfe.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1872"></a>
+<a id="node-1842"></a>
 
 <p align="center"><kbd><img src="assets/dcad5dcdbcafbac94a7415db368d025e678f4e7e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1873"></a>
+<a id="node-1843"></a>
 
 <p align="center"><kbd><img src="assets/03350c6f86f95a20752e20ffbf0903fff8581fc3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1874"></a>
+<a id="node-1844"></a>
 
 <p align="center"><kbd><img src="assets/c3da4d77c26bd604be94596985d87860e2331344.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1875"></a>
+<a id="node-1845"></a>
 
 <p align="center"><kbd><img src="assets/9e3d1d72acca7a23a84fcc39081bfbb136b9dc8e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1876"></a>
+<a id="node-1846"></a>
 
 <p align="center"><kbd><img src="assets/48d00daf8ac24eda844fe5df70e39e4ac6e06977.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1877"></a>
+<a id="node-1847"></a>
 
 <p align="center"><kbd><img src="assets/a0900871815a0157d94965eb7256f5392945a73d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1878"></a>
+<a id="node-1848"></a>
 
 <p align="center"><kbd><img src="assets/282bcfb58ef73629581a0eb842d9fb3c28411394.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1879"></a>
+<a id="node-1849"></a>
 
 <p align="center"><kbd><img src="assets/1ec43979908f3d2c712d90e0d16855d8f60a8452.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1880"></a>
+<a id="node-1850"></a>
 ## Programming Assignment: Word Embeddings
 
 <br>
 
 
-<a id="node-1881"></a>
+<a id="node-1851"></a>
 ### Welcome to the fourth (and last) programming assignment of Course 2!
 
 > [!NOTE]
@@ -3299,24 +3299,24 @@ Learning Objectives
 <br>
 
 
-<a id="node-1882"></a>
+<a id="node-1852"></a>
 #### 1 - The Continuous Bag of Words Model
 
 <br>
 
-<a id="node-1883"></a>
+<a id="node-1853"></a>
 
 <p align="center"><kbd><img src="assets/169e2995e98fd287ed59c288c2320d41990db749.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1884"></a>
+<a id="node-1854"></a>
 
 <p align="center"><kbd><img src="assets/9e6b4ede31f9d937df4cfab666f5ed9bb05cec96.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1885"></a>
+<a id="node-1855"></a>
 
 <p align="center"><kbd><img src="assets/7080f04b6b1032bc88685dff16af635a947a13be.png" width="100%"></kbd></p>
 
@@ -3326,26 +3326,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-1886"></a>
+<a id="node-1856"></a>
 
 <p align="center"><kbd><img src="assets/7e142894a5ef8d58c4aa40bd32e83e1bcc35cfcd.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1887"></a>
+<a id="node-1857"></a>
 #### # Import Python libraries and helper functions (in utils2)  import nltk from nltk.tokenize import **word_tokenize** import numpy as np from collections import **Counter** from utils2 import **sigmoid**, **get_batches**, **compute_pca**, **get_dict** import **w4_unittest**  nltk.download('**punkt**')
 
 <br>
 
 
-<a id="node-1888"></a>
+<a id="node-1858"></a>
 #### # Download sentence tokenizer **nltk.data.path.append('.')**
 
 <br>
 
 
-<a id="node-1889"></a>
+<a id="node-1859"></a>
 #### # Load, tokenize and process the data import **re**                                                           #  Load the **Regex-modul** **with open('./data/shakespeare.txt') as f:     data = f.read()** #  Read in the data data = **re.sub(r'[,!?;-]', '.',data)**                                 #  **Punktuations** are replaced by **.** data = **nltk.word_tokenize(data)**                                     #  **Tokenize string to words** data = **[ ch.lower() for ch in data if ch.isalpha() or ch == '.']**    #  **Lower case** and **drop non-alphabetical tokens** print("Number of tokens:", len(data),'\\\ ', data[:15])               #  print data sample
 
 > [!NOTE]
@@ -3367,7 +3367,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1890"></a>
+<a id="node-1860"></a>
 #### # **Compute the frequency distribution** of the **words** in the dataset (vocabulary) **fdist** = **nltk.FreqDist**(word for **word** in **data**) print("Size of vocabulary: ",**len(fdist)** ) print("Most frequent tokens: ",**fdist.most_common(20) )** # print the 20 most frequent words and their freq.
 
 <p align="center"><kbd><img src="assets/a52013aa25dc32094a691099a1d9cebc411c404e.png" width="100%"></kbd></p>
@@ -3380,7 +3380,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1891"></a>
+<a id="node-1861"></a>
 
 <p align="center"><kbd><img src="assets/f5f2611045cd77f1f4a128966a339e6810e5fae0.png" width="100%"></kbd></p>
 
@@ -3393,18 +3393,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-1892"></a>
+<a id="node-1862"></a>
 #### 2 - Training the Model
 
 <br>
 
 
-<a id="node-1893"></a>
+<a id="node-1863"></a>
 #### 2.1 - Initializing the Model
 
 <br>
 
-<a id="node-1894"></a>
+<a id="node-1864"></a>
 
 <p align="center"><kbd><img src="assets/b9869a05edce01cd58d96e2fc2bf7354816f901b.png" width="100%"></kbd></p>
 
@@ -3416,12 +3416,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1895"></a>
+<a id="node-1865"></a>
 #### Exercise 1 - initialize_model (UNQ_C1)
 
 <br>
 
-<a id="node-1896"></a>
+<a id="node-1866"></a>
 
 <p align="center"><kbd><img src="assets/43666cee819716232be5a363df55b7d3930c0b8e.png" width="100%"></kbd></p>
 
@@ -3432,19 +3432,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-1897"></a>
+<a id="node-1867"></a>
 
 <p align="center"><kbd><img src="assets/068d19d363add75e3d9f70d1262bf56e1a4b47c5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1898"></a>
+<a id="node-1868"></a>
 #### 2.2 - Softmax
 
 <br>
 
-<a id="node-1899"></a>
+<a id="node-1869"></a>
 
 <p align="center"><kbd><img src="assets/44d29640b8b85d6eb39842d693025e7f1fccb784.png" width="100%"></kbd></p>
 
@@ -3466,12 +3466,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1900"></a>
+<a id="node-1870"></a>
 #### Exercise 2 - softmax (UNQ_C2)
 
 <br>
 
-<a id="node-1901"></a>
+<a id="node-1871"></a>
 
 <p align="center"><kbd><img src="assets/e0904368e9132ec1ceb4a7dfe25bc9fa92b4c1d1.png" width="100%"></kbd></p>
 
@@ -3487,13 +3487,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1902"></a>
+<a id="node-1872"></a>
 
 <p align="center"><kbd><img src="assets/42535675f45efe5770ab8faea9a3712270a63ccb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1903"></a>
+<a id="node-1873"></a>
 
 <p align="center"><kbd><img src="assets/04f40c721b741775ef26145f8bb66573af25a8b8.png" width="100%"></kbd></p>
 
@@ -3505,43 +3505,43 @@ Learning Objectives
 <br>
 
 
-<a id="node-1904"></a>
+<a id="node-1874"></a>
 #### 2.3 - Forward Propagation
 
 <br>
 
-<a id="node-1905"></a>
+<a id="node-1875"></a>
 
 <p align="center"><kbd><img src="assets/86ea5c321b231cb32a78b1a34099d2c9ba805867.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1906"></a>
+<a id="node-1876"></a>
 #### Exercise 3 - forward_prop (UNQ_C3)
 
 <br>
 
-<a id="node-1907"></a>
+<a id="node-1877"></a>
 
 <p align="center"><kbd><img src="assets/bb0f9207bb5280f18cab1441a83c037fdc977831.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1908"></a>
+<a id="node-1878"></a>
 
 <p align="center"><kbd><img src="assets/e299ba37254e7c27da9a6740fb86862c79c01ec4.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1909"></a>
+<a id="node-1879"></a>
 #### 2.4 - Cost Function
 
 <br>
 
 
-<a id="node-1910"></a>
+<a id="node-1880"></a>
 #### # compute_cost: cross-entropy cost function def **compute_cost**(y, yhat, batch_size):      # cost function      logprobs = np.multiply(np.log(yhat),y)     cost = - 1/batch_size * np.sum(logprobs)     cost = np.squeeze(cost)     return cost
 
 > [!NOTE]
@@ -3557,24 +3557,24 @@ Learning Objectives
 <br>
 
 
-<a id="node-1911"></a>
+<a id="node-1881"></a>
 #### 2.5 - Training the Model - Backpropagation
 
 <br>
 
-<a id="node-1912"></a>
+<a id="node-1882"></a>
 
 <p align="center"><kbd><img src="assets/c28144894c3fc7e0bdefd50d982d3611fa2655cf.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1913"></a>
+<a id="node-1883"></a>
 #### Exercise 4 - back_prop (UNQ_C4)
 
 <br>
 
-<a id="node-1914"></a>
+<a id="node-1884"></a>
 
 <p align="center"><kbd><img src="assets/2df7143537c6f554bb5a814975fc878c4d51430d.png" width="100%"></kbd></p>
 
@@ -3614,62 +3614,62 @@ Learning Objectives
 
 <br>
 
-<a id="node-1915"></a>
+<a id="node-1885"></a>
 
 <p align="center"><kbd><img src="assets/4b5e2ef8b967f6b69c3fd4c5f65e944cc7caf5bf.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1916"></a>
+<a id="node-1886"></a>
 #### 2.6 - Gradient Descent
 
 <br>
 
-<a id="node-1917"></a>
+<a id="node-1887"></a>
 
 <p align="center"><kbd><img src="assets/5fef655c050b84284a9799670174d3b25d0cd763.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1918"></a>
+<a id="node-1888"></a>
 #### Exercise 5 - gradient_descent (UNQ_C5)
 
 <br>
 
-<a id="node-1919"></a>
+<a id="node-1889"></a>
 
 <p align="center"><kbd><img src="assets/e3640ea6ec7096317410530a8eae3149dbd3fa85.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1920"></a>
+<a id="node-1890"></a>
 
 <p align="center"><kbd><img src="assets/d7f30c9cf66ee61ebab96ec9491bba1ec5918525.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1921"></a>
+<a id="node-1891"></a>
 
 <p align="center"><kbd><img src="assets/f48c9f366bc88d48bf0bc7c82ca23c9420259a27.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1922"></a>
+<a id="node-1892"></a>
 
 <p align="center"><kbd><img src="assets/fb94d30ceebeb3224f82e30c539ede2dcffefcad.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1923"></a>
+<a id="node-1893"></a>
 #### 3 - Visualizing the Word Vectors
 
 <br>
 
 
-<a id="node-1924"></a>
+<a id="node-1894"></a>
 #### # visualizing the word vectors here from matplotlib import pyplot %config InlineBackend.figure_format = 'svg' words = ['king', 'queen','lord','man', 'woman','dog','wolf',          'rich','happy','sad']  embs = (W1.T + W2)/2.0   # given a list of words and the embeddings, it returns a matrix with all the embeddings idx = [word2Ind[word] for word in words] X = embs[idx, :] print(X.shape, idx)  # X.shape:  Number of words of dimension N each
 
 > [!NOTE]
@@ -3678,7 +3678,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1925"></a>
+<a id="node-1895"></a>
 
 <p align="center"><kbd><img src="assets/7713bf5c4be55ea026bb310c679ee1e5ef38982d.png" width="100%"></kbd></p>
 
@@ -3690,7 +3690,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1926"></a>
+<a id="node-1896"></a>
 
 <p align="center"><kbd><img src="assets/e9c2a36099dd46eb3bde59767ba40e25ac089b66.png" width="100%"></kbd></p>
 

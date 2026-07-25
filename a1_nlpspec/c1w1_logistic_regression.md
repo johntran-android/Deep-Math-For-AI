@@ -1,6 +1,6 @@
 # C1w1_logistic Regression
 
-📊 **Progress:** `46` Notes | `113` Screenshots
+📊 **Progress:** `60` Notes | `113` Screenshots
 
 ---
 
@@ -30,12 +30,6 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <a id="node-3"></a>
 ## Welcome To NLP Spec
 
-<br>
-
-
-<a id="node-4"></a>
-### 1 Introduction of Younes and Lukasz as instructors of the
-
 > [!NOTE]
 > 1 Introduction of Younes and Lukasz as instructors of the
 > specialization.
@@ -63,14 +57,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-5"></a>
+<a id="node-4"></a>
 ## Welcome To Course 1
-
-<br>
-
-
-<a id="node-6"></a>
-### 1 Introduction to NLP course
 
 > [!NOTE]
 > 1 Introduction to NLP course
@@ -82,85 +70,73 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > 4 Example problem of building a system to classify positive and negative
 > product reviews
 >
-> 5 Week 1: **Representing text as a vector** and using **logistic regression** to
+> 5 Week 1: Representing text as a vector and using logistic regression to
 > classify sentiment
 >
-> 6 Week 2: Using the **Naive Bayes classifier** for sentiment classification
+> 6 Week 2: Using the Naive Bayes classifier for sentiment classification
 >
-> 7 Week 3: Learning about **vector space models** and their applications in
-> **information retrieval, indexing, relevancy ranking, and information
-> filtering**
+> 7 Week 3: Learning about vector space models and their applications in
+> information retrieval, indexing, relevancy ranking, and information
+> filtering
 >
-> 8 Week 4: Building a simple **machine translation** system and using
-> **locality sensitive hashing** to improve **nearest neighbor search**
+> 8 Week 4: Building a simple machine translation system and using
+> locality sensitive hashing to improve nearest neighbor search
 >
 > 9 Importance of NLP concepts in search engine algorithms
 
 <br>
 
 
-<a id="node-7"></a>
+<a id="node-5"></a>
 ## Acknowledgement - Ken Church
 
 <br>
 
-<a id="node-8"></a>
+<a id="node-6"></a>
 
 <p align="center"><kbd><img src="assets/ac974b41d5ec7801897a4b467325200831430e30.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-9"></a>
+<a id="node-7"></a>
 ## Week Introduction
-
-<br>
-
-
-<a id="node-10"></a>
-### Welcome to the first week of Course 1.
 
 > [!NOTE]
 > Welcome to the first week of Course 1.
 >
-> This week is all about **logistic regression**, which is a very
+> This week is all about logistic regression, which is a very
 > important tool used in many applications in NLP.
 >
-> Logistic regression algorithms are **particularly useful** because
-> they are **easy to train** and provide you with a **good baseline
-> result**.
+> Logistic regression algorithms are particularly useful because
+> they are easy to train and provide you with a good baseline
+> result.
 >
-> This week you'll use logistic regression for **sentiment analysis of
-> tweets**.
+> This week you'll use logistic regression for sentiment analysis of
+> tweets.
 >
-> You will first **process your data**, then you **train your model** and
-> finally, you will **test the accuracy** of your model.
+> You will first process your data, then you train your model and
+> finally, you will test the accuracy of your model.
 
 <br>
 
 
-<a id="node-11"></a>
+<a id="node-8"></a>
 ## Supervised Ml & Sentiment Analysis
 
-<br>
-
-
-<a id="node-12"></a>
-### 1 The **goal** of supervised machine learning is to **minimize error rates or cost**
-
 > [!NOTE]
-> 1 The **goal** of supervised machine learning is to **minimize error rates or cost**
-> by **mapping input features X to output labels Y hat.**
+> 1 The goal of supervised machine learning is to minimize error rates or cost
+> by mapping input features X to output labels Y hat.
 >
-> 2 **Logistic regression** is a **classification** algorithm used to assign
+> 2 Logistic regression is a classification algorithm used to assign
 > observations to two distinct classes.
 >
-> 3 In the context of **sentiment analysis**, logistic regression can be used to
+> 3 In the context of sentiment analysis, logistic regression can be used to
 > predict whether a tweet has a positive or negative sentiment.
 >
 > 4 The steps for building a logistic regression classifier for sentiment analysis
-> include: p**rocessing raw tweets to extract useful features**, **training** the
-> **classifier** to **minimize the cost,** and **making predictions** based on the trained
+> include: processing raw tweets to extract useful features, training the
+> classifier to minimize the cost, and making predictions based on the trained
 > model.
 >
 > 5 The next video will cover how to extract features from tweets for sentiment
@@ -168,19 +144,19 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-13"></a>
+<a id="node-9"></a>
 
 <p align="center"><kbd><img src="assets/3f2438c7fc532682af150cdff2ecf4b26dd6b473.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-14"></a>
+<a id="node-10"></a>
 
 <p align="center"><kbd><img src="assets/2bc29e6e546e3df7c73abf11f2e1a6e86feb0dbb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-15"></a>
+<a id="node-11"></a>
 
 <p align="center"><kbd><img src="assets/743fc8a632cfa8135c4521e9f3f52690b4abb403.png" width="100%"></kbd></p>
 
@@ -191,28 +167,22 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-16"></a>
+<a id="node-12"></a>
 ## Vocabulary & Feature Extraction
 
-<br>
-
-
-<a id="node-17"></a>
-### 1 Introduction: Learning to **represent text as a vector**
-
 > [!NOTE]
-> 1 Introduction: Learning to **represent text as a vector**
+> 1 Introduction: Learning to represent text as a vector
 >
-> 2 Building a vocabulary: Creating a **list of unique words**
+> 2 Building a vocabulary: Creating a list of unique words
 >
 > 3 Extracting features: Assigning values to features in a tweet
 > based on the vocabulary
 >
-> 4 **Sparse** **representation**: Representation with a small relative
+> 4 Sparse representation: Representation with a small relative
 > number of non-zero values
 >
 > 5 Problems with large vocabularies: Model training takes
-> **excessive time**
+> excessive time
 >
 > 6 Conclusion: Recap of representing text as a vector and
 > introduction to identifying problems with large vocabularies in
@@ -220,7 +190,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-18"></a>
+<a id="node-13"></a>
 
 <p align="center"><kbd><img src="assets/748ac088fc043220a4024be577d0e120f8f215b5.png" width="100%"></kbd></p>
 
@@ -229,7 +199,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-19"></a>
+<a id="node-14"></a>
 
 <p align="center"><kbd><img src="assets/0f416e2a99d96d16f821185dc5b97441056a6a1f.png" width="100%"></kbd></p>
 
@@ -242,7 +212,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-20"></a>
+<a id="node-15"></a>
 
 <p align="center"><kbd><img src="assets/21510d8c74ac0ba47a2f48317ab42ce565bca438.png" width="100%"></kbd></p>
 
@@ -253,13 +223,13 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-21"></a>
+<a id="node-16"></a>
 
 <p align="center"><kbd><img src="assets/0984d76efdc980f581aed9486827ac473c84dcb9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-22"></a>
+<a id="node-17"></a>
 
 <p align="center"><kbd><img src="assets/c2fb0b807731ee81382055ad83bbee4c4de9772b.png" width="100%"></kbd></p>
 
@@ -269,12 +239,12 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-23"></a>
+<a id="node-18"></a>
 ## Negative & Positive Frequencies
 
 <br>
 
-<a id="node-24"></a>
+<a id="node-19"></a>
 
 <p align="center"><kbd><img src="assets/6fa0bf43438cb1407c8f59dab35cd283bca4f70a.png" width="100%"></kbd></p>
 
@@ -285,7 +255,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-25"></a>
+<a id="node-20"></a>
 
 <p align="center"><kbd><img src="assets/cf060eb8a785905030bd9d36c0d334524d4cf42c.png" width="100%"></kbd></p>
 
@@ -295,7 +265,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-26"></a>
+<a id="node-21"></a>
 
 <p align="center"><kbd><img src="assets/731f7b92601db48472612cd08f448980fba99589.png" width="100%"></kbd></p>
 
@@ -305,7 +275,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-27"></a>
+<a id="node-22"></a>
 
 <p align="center"><kbd><img src="assets/31b0ee10bae0de81c184d88390d5b298f5aa3fb8.png" width="100%"></kbd></p>
 
@@ -315,25 +285,25 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-28"></a>
+<a id="node-23"></a>
 
 <p align="center"><kbd><img src="assets/319f9d8c6bbfae9a660205b7b68c2642ae664666.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-29"></a>
+<a id="node-24"></a>
 ## Feature Extraction With Frequencies
 
 <br>
 
-<a id="node-30"></a>
+<a id="node-25"></a>
 
 <p align="center"><kbd><img src="assets/a9a4690cf3b11c64e946032d38b2d55457bdbca2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-31"></a>
+<a id="node-26"></a>
 
 <p align="center"><kbd><img src="assets/693e0493199299553eefe868f1523bbf7a95fd6d.png" width="100%"></kbd></p>
 
@@ -343,7 +313,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-32"></a>
+<a id="node-27"></a>
 
 <p align="center"><kbd><img src="assets/c62e733125ee5c98e6718dfc7d3297ab7b2e9ee2.png" width="100%"></kbd></p>
 
@@ -353,7 +323,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-33"></a>
+<a id="node-28"></a>
 
 <p align="center"><kbd><img src="assets/bae188507dc51b52d076cdfd2daed82cf2c04bf5.png" width="100%"></kbd></p>
 
@@ -363,7 +333,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-34"></a>
+<a id="node-29"></a>
 
 <p align="center"><kbd><img src="assets/b011b0152be8fbeaa21ab55f4594912cdae10a10.png" width="100%"></kbd></p>
 
@@ -373,12 +343,12 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-35"></a>
+<a id="node-30"></a>
 ## Preprocessing
 
 <br>
 
-<a id="node-36"></a>
+<a id="node-31"></a>
 
 <p align="center"><kbd><img src="assets/b6d3de19c0b90e8c8522241f3efb604407da146a.png" width="100%"></kbd></p>
 
@@ -388,11 +358,11 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-37"></a>
+<a id="node-32"></a>
 
 <p align="center"><kbd><img src="assets/b55f7fbb4e5f82f2e56622b768527de0df34015a.png" width="100%"></kbd></p>
 
-🔗 **Related:** [1 \\*NLP errors\\* are \\*inevitable\\* no matter what method you use  2 Errors in NLP can be caused by \\*loss of semantic meaning\\*, \\*word\\* \\*order\\*, and \\*language quirks\\* that are \\*difficult for machines\\* to understand  3 It's important to \\*analyze processed text\\* to ensure accurate results, including \\*checking for punctuation and word removal\\*  4 \\*Naïve base classification\\* relies on word \\*frequency\\* \\*counts\\* and can lead to \\*errors due to its independence assumption\\*  5 \\*Word vectors\\* can be used to improve NLP results  6 Naïve base classification may fail in cases of \\*adversarial attacks,\\* which are \\*language phenomena like sarcasm, irony, and euphemism\\* that machines have\\* difficulty understanding.\\*](error_analysis.md#node-277)
+🔗 **Related:** [ERROR ANALYSIS](error_analysis.md#node-249)
 
 > [!NOTE]
 > Sau đó là punctuation tuy nhiên
@@ -402,7 +372,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-38"></a>
+<a id="node-33"></a>
 
 <p align="center"><kbd><img src="assets/b0e5cdbba2151814937de91d9983af778f4f50aa.png" width="100%"></kbd></p>
 
@@ -412,7 +382,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-39"></a>
+<a id="node-34"></a>
 
 <p align="center"><kbd><img src="assets/3a5a9a9b9e697b82d2f1aa3d16a8e550b7692060.png" width="100%"></kbd></p>
 
@@ -424,7 +394,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-40"></a>
+<a id="node-35"></a>
 
 <p align="center"><kbd><img src="assets/79026f5c72a140e4ef8d1a530d40af3d56a1a774.png" width="100%"></kbd></p>
 
@@ -435,14 +405,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-41"></a>
+<a id="node-36"></a>
 ## Preprocessing Reading
-
-<br>
-
-
-<a id="node-42"></a>
-### When preprocessing, you have to perform the following:
 
 > [!NOTE]
 > When preprocessing, you have to perform the following:
@@ -461,41 +425,29 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > For example the following tweet "@YMourri and @AndrewYNg are tuning a GREAT AI
 > model at https://deeplearning.ai!!!" after preprocessing becomes
 >
-> [\\/tun\\/,\\/great\\/,\\/ai\\/,\\/model\\/]. Hence you can see how we eliminated handles,
+> [tun,great,ai,model]. Hence you can see how we eliminated handles,
 > tokenized it into words, removed stop words, performed stemming, and converted
 > everything to lower case.
 
 <br>
 
 
-<a id="node-43"></a>
+<a id="node-37"></a>
 ## Lab: Nl Preprocessing
-
-<br>
-
-
-<a id="node-44"></a>
-### In this lab, we will be exploring how to preprocess tweets for
 
 > [!NOTE]
 > In this lab, we will be exploring how to preprocess tweets for
-> sentiment analysis. We will **provide a function for
-> preprocessing tweets** during this week's assignment, but it is
-> **still good to know what is going on** under the hood.
+> sentiment analysis. We will provide a function for
+> preprocessing tweets during this week's assignment, but it is
+> still good to know what is going on under the hood.
 >
-> By the end of this lecture, you will see **how to use the NLTK
-> package to perform a preprocessing** pipeline for Twitter
+> By the end of this lecture, you will see how to use the NLTK
+> package to perform a preprocessing pipeline for Twitter
 > datasets.
 
 <br>
 
-
-<a id="node-45"></a>
-#### Setup  Đại khái là sẽ dùng thư viện Python NLTK dùng để natural language preprocessing, có các modules để collect, handling và processing Twitter data
-
-<br>
-
-<a id="node-46"></a>
+<a id="node-38"></a>
 
 <p align="center"><kbd><img src="assets/c73c2a70c1cf0a3834dfe9b463a7b0d1d8ea9dd9.png" width="100%"></kbd></p>
 
@@ -506,13 +458,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-
-<a id="node-47"></a>
-#### About the Twitter dataset
-
-<br>
-
-<a id="node-48"></a>
+<a id="node-39"></a>
 
 <p align="center"><kbd><img src="assets/d0d16f557bf82e09dbc5e21dd65380bf65db88bb.png" width="100%"></kbd></p>
 
@@ -525,19 +471,13 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-49"></a>
+<a id="node-40"></a>
 
 <p align="center"><kbd><img src="assets/9f8fcd774544ed0559caa20e7c0b7ae246b88729.png" width="100%"></kbd></p>
 
 <br>
 
-
-<a id="node-50"></a>
-#### Looking at raw texts
-
-<br>
-
-<a id="node-51"></a>
+<a id="node-41"></a>
 
 <p align="center"><kbd><img src="assets/57f91aa5974d22a3a7ef5492d1d6c9e0e1b111df.png" width="100%"></kbd></p>
 
@@ -547,52 +487,51 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
+<a id="node-42"></a>
 
-<a id="node-52"></a>
-#### Preprocess raw text for Sentiment analysis
+<p align="center"><kbd><img src="assets/3f8aaf6f6c2180347588e13e4a8839802731f25e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Preprocess raw text for
+> Sentiment analysis:
+>
+> Chọn một câu mà ta thấy complex. Download một số tool
+> preprocessing từ NLTK để làm
 
 <br>
 
-
-<a id="node-54"></a>
-#### Remove hyperlinks, Twitter marks and styles
-
-<br>
-
-<a id="node-55"></a>
+<a id="node-43"></a>
 
 <p align="center"><kbd><img src="assets/d1871a6965128d532d8b0ac2090ee1eb642ec0c1.png" width="100%"></kbd></p>
 
-<br>
-
-
-<a id="node-56"></a>
-#### Tokenize the string
+> [!NOTE]
+> Remove hyperlinks,
+> Twitter marks and styles
 
 <br>
 
-<a id="node-57"></a>
+<a id="node-44"></a>
 
 <p align="center"><kbd><img src="assets/04e68ff3ac30049610fcfb8f6e62fd7d7a0f6606.png" width="100%"></kbd></p>
 
-<br>
-
-
-<a id="node-58"></a>
-#### Remove stop words and punctuations
+> [!NOTE]
+> Tokenize the string
 
 <br>
 
-<a id="node-59"></a>
+<a id="node-45"></a>
 
 <p align="center"><kbd><img src="assets/6fa5b3f8c743ac39e08ef9f7e72314e1e3b5a792.png" width="100%"></kbd></p>
 
 > [!NOTE]
+> Remove stop words
+> and punctuations:
+>
 > Xem những stop word và punctuation có gì
 
 <br>
 
-<a id="node-60"></a>
+<a id="node-46"></a>
 
 <p align="center"><kbd><img src="assets/8ce4af17de75237e8ef762d5657aa5aff003fa68.png" width="100%"></kbd></p>
 
@@ -603,17 +542,13 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-
-<a id="node-61"></a>
-#### Stemming
-
-<br>
-
-<a id="node-62"></a>
+<a id="node-47"></a>
 
 <p align="center"><kbd><img src="assets/569961d0a42e468a80c43794bb8181c5c1260af8.png" width="100%"></kbd></p>
 
 > [!NOTE]
+> Stemming:
+>
 > Stemming như trong bài giảng đã hiểu là convert về cái từ gốc mà nếu add
 > mấy cái suffix râu ria sẽ ra nhiều từ khác nhau như ed, ing thì stemming sẽ
 > **giúp giảm vocab size rất nhiều**, mà vẫn **giữ phần lớn ý nghĩa của từ vựng**
@@ -622,46 +557,32 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-63"></a>
+<a id="node-48"></a>
 
 <p align="center"><kbd><img src="assets/068b698234d151a644738fe5fc15d6bfeed1b898.png" width="100%"></kbd></p>
 
 <br>
 
-
-<a id="node-64"></a>
-#### process_tweet()
-
-<br>
-
-<a id="node-65"></a>
+<a id="node-49"></a>
 
 <p align="center"><kbd><img src="assets/b1b8387d2ee866608106c83d95a1dc7dffe11fe1.png" width="100%"></kbd></p>
 
 > [!NOTE]
+> process_tweet()
+>
 > Đai khái là mấy step trên sẽ làm sẵn trong funciton **process_tweet**()
 > **khi làm assignment chỉ việc gọi function** này thôi nhưng **quan trọng là
 > đã hiểu nó làm cái gì**
 
 <br>
 
-<a id="node-53"></a>
 
-<p align="center"><kbd><img src="assets/3f8aaf6f6c2180347588e13e4a8839802731f25e.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Chọn một câu mà ta thấy complex. Download một số tool
-> preprocessing từ NLTK để làm
-
-<br>
-
-
-<a id="node-66"></a>
+<a id="node-50"></a>
 ## Putting It All Together
 
 <br>
 
-<a id="node-67"></a>
+<a id="node-51"></a>
 
 <p align="center"><kbd><img src="assets/5614c8d4217c2a99085e6eab3f2cfd639fdae3d6.png" width="100%"></kbd></p>
 
@@ -671,13 +592,13 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-68"></a>
+<a id="node-52"></a>
 
 <p align="center"><kbd><img src="assets/b7cc1233914ad41610aeca9fc8710700d18d28fc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-69"></a>
+<a id="node-53"></a>
 
 <p align="center"><kbd><img src="assets/72a6bcb1f1ea5720a1d915435fcfd3f7d4339968.png" width="100%"></kbd></p>
 
@@ -687,7 +608,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-70"></a>
+<a id="node-54"></a>
 
 <p align="center"><kbd><img src="assets/0bff38c962b34541c656c0795133a337b5543332.png" width="100%"></kbd></p>
 
@@ -714,23 +635,17 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-71"></a>
+<a id="node-55"></a>
 ## Visualization Word Frequencies
-
-<br>
-
-
-<a id="node-72"></a>
-### Building and Visualizing word frequencies
 
 > [!NOTE]
 > Building and Visualizing word frequencies
 >
-> In this lab, we will focus on the **build_freqs**() helper
+> In this lab, we will focus on the build_freqs() helper
 > function and visualizing a dataset fed into it. In our goal of
-> tweet sentiment analysis, this function will **build a
+> tweet sentiment analysis, this function will build a
 > dictionary where we can lookup how many times a word
-> appears in the lists of positive or negative** tweets. This
+> appears in the lists of positive or negative tweets. This
 > will be very helpful when extracting the features of the
 > dataset in the week's programming assignment. Let's see
 > how this function is implemented under the hood in this
@@ -739,24 +654,24 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-73"></a>
-#### Setup
+<a id="node-56"></a>
+### Setup
 
 <br>
 
-<a id="node-74"></a>
+<a id="node-57"></a>
 
 <p align="center"><kbd><img src="assets/2061659f879b78452a7f7390576b6c1cd2ee2be9.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-75"></a>
-#### Load the NLTK sample dataset
+<a id="node-58"></a>
+### Load the NLTK sample dataset
 
 <br>
 
-<a id="node-76"></a>
+<a id="node-59"></a>
 
 <p align="center"><kbd><img src="assets/f97bd98fa623736294c64391a50424ba026f5f3f.png" width="100%"></kbd></p>
 
@@ -769,18 +684,18 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-77"></a>
-#### Dictionaries
+<a id="node-60"></a>
+### Dictionaries
 
 <br>
 
-<a id="node-78"></a>
+<a id="node-61"></a>
 
 <p align="center"><kbd><img src="assets/475c9cb3e4aaf394586418615d2c0ccdb5975997.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-79"></a>
+<a id="node-62"></a>
 
 <p align="center"><kbd><img src="assets/a4b717212026e0af925a7f216f40503bb54f253b.png" width="100%"></kbd></p>
 
@@ -792,12 +707,12 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-80"></a>
-#### Word frequency dictionary
+<a id="node-63"></a>
+### Word frequency dictionary
 
 <br>
 
-<a id="node-81"></a>
+<a id="node-64"></a>
 
 <p align="center"><kbd><img src="assets/f8acb4b38e8dc3eb82326cade6ec1cd03a8be989.png" width="100%"></kbd></p>
 
@@ -808,37 +723,37 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-82"></a>
+<a id="node-65"></a>
 
 <p align="center"><kbd><img src="assets/ebf65735107785473cad77defaa61770641d84de.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-83"></a>
+<a id="node-66"></a>
 
 <p align="center"><kbd><img src="assets/ea558b4e16d104670885ecc12b0dc40be5a741f7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-84"></a>
-#### Table of word counts
+<a id="node-67"></a>
+### Table of word counts
 
 <br>
 
-<a id="node-85"></a>
+<a id="node-68"></a>
 
 <p align="center"><kbd><img src="assets/f73147e4855050cb45a7a5ade4fecb0522a2a259.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-86"></a>
+<a id="node-69"></a>
 
 <p align="center"><kbd><img src="assets/67c4fdb50418f7d0f096ccebd0c685ba5e11bb81.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-87"></a>
+<a id="node-70"></a>
 
 <p align="center"><kbd><img src="assets/80dc910a1d964d957deca7210242cea125f18d64.png" width="100%"></kbd></p>
 
@@ -860,24 +775,24 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-88"></a>
+<a id="node-71"></a>
 ## Logistic Regression Overview
 
 <br>
 
-<a id="node-89"></a>
+<a id="node-72"></a>
 
 <p align="center"><kbd><img src="assets/eac56b7bd177c2099222fb59213bfc2c28d5268f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-90"></a>
+<a id="node-73"></a>
 
 <p align="center"><kbd><img src="assets/0b4ff86ad66d7d273fecea8f80e224d85cd93282.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-91"></a>
+<a id="node-74"></a>
 
 <p align="center"><kbd><img src="assets/f216eb5aca77580dbe5d9d48e70493b4eef3d36c.png" width="100%"></kbd></p>
 
@@ -889,18 +804,18 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-92"></a>
+<a id="node-75"></a>
 ## Lo.re Training
 
 <br>
 
-<a id="node-93"></a>
+<a id="node-76"></a>
 
 <p align="center"><kbd><img src="assets/6f2333069d091627e4432deabfe9d8a3f7cc9153.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-94"></a>
+<a id="node-77"></a>
 
 <p align="center"><kbd><img src="assets/86a49069f341d7810a296cfc9d23ae11e2a7e2e0.png" width="100%"></kbd></p>
 
@@ -910,20 +825,14 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-95"></a>
+<a id="node-78"></a>
 ## Lab: Visualizing Tweets And Lo.re Models
 
-<br>
-
-
-<a id="node-96"></a>
-### **Objectives:** Visualize and interpret the logistic
-
 > [!NOTE]
-> **Objectives:** Visualize and interpret the logistic
+> Objectives: Visualize and interpret the logistic
 > regression model
 >
-> **Steps:**   • Plot tweets in a scatter plot using their
+> Steps:   • Plot tweets in a scatter plot using their
 > positive and negative sums.
 >
 > • Plot the output of the logistic regression model in the
@@ -932,36 +841,36 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-97"></a>
-#### Import the required libraries
+<a id="node-79"></a>
+### Import the required libraries
 
 <br>
 
-<a id="node-98"></a>
+<a id="node-80"></a>
 
 <p align="center"><kbd><img src="assets/cf3b2f90fd3abc04b08d56ea4619d49053260a08.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-99"></a>
-#### Load the NLTK sample dataset
+<a id="node-81"></a>
+### Load the NLTK sample dataset
 
 <br>
 
-<a id="node-100"></a>
+<a id="node-82"></a>
 
 <p align="center"><kbd><img src="assets/c76ce63e7e3a7c34dc92f9caf5f25cd5c8b84a85.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-101"></a>
-#### Load the extracted features
+<a id="node-83"></a>
+### Load the extracted features
 
 <br>
 
-<a id="node-102"></a>
+<a id="node-84"></a>
 
 <p align="center"><kbd><img src="assets/762092588c90c136f5e374a6e58a3d913c269154.png" width="100%"></kbd></p>
 
@@ -971,31 +880,35 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-103"></a>
+<a id="node-85"></a>
 
 <p align="center"><kbd><img src="assets/63bc3e51f7682370dac687f2027a6ee1d1bd65f7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-104"></a>
-#### Load a pretrained Logistic Regression model
+<a id="node-86"></a>
+### Load a pretrained Logistic Regression model
 
 <br>
 
 
-<a id="node-105"></a>
+<a id="node-87"></a>
 #### In the same way, as part of this week's assignment, a Logistic regression model must be trained. The next cell contains the resulting model from such training. Notice that a list of 3 numeric values represents the whole model, that we have called theta  𝜃  theta = [6.03518871e-08, 5.38184972e-04, -5.58300168e-04]
 
 <br>
 
 
-<a id="node-106"></a>
-#### Plot the samples in a scatter plot
+<a id="node-88"></a>
+### Plot the samples in
+
+> [!NOTE]
+> Plot the samples in
+> a scatter plot
 
 <br>
 
-<a id="node-107"></a>
+<a id="node-89"></a>
 
 <p align="center"><kbd><img src="assets/b3522bda58890d389619b6ae9c58c940aad440f3.png" width="100%"></kbd></p>
 
@@ -1008,19 +921,23 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-108"></a>
+<a id="node-90"></a>
 
 <p align="center"><kbd><img src="assets/f2b32b9725ca35c103f767b541ada647b3392c03.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-109"></a>
-#### Plot the model alongside the data
+<a id="node-91"></a>
+### Plot the model
+
+> [!NOTE]
+> Plot the model
+> alongside the data
 
 <br>
 
-<a id="node-110"></a>
+<a id="node-92"></a>
 
 <p align="center"><kbd><img src="assets/40331d42805e2ec87be728f5f0949d0f1dc67ebf.png" width="100%"></kbd></p>
 
@@ -1030,27 +947,21 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-111"></a>
+<a id="node-93"></a>
 
 <p align="center"><kbd><img src="assets/9c4fd5b0810946383354966a4b76e5761e4a7da6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-112"></a>
+<a id="node-94"></a>
 
 <p align="center"><kbd><img src="assets/f5d73dd9c8fd11fb1ae9e62b30bac2677f2c11c7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-113"></a>
+<a id="node-95"></a>
 ## Log.re: Testing
-
-<br>
-
-
-<a id="node-114"></a>
-### 1 Using data to predict new data points
 
 > [!NOTE]
 > 1 Using data to predict new data points
@@ -1060,9 +971,9 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > 3 Computing accuracy of a model
 >
 > 4 Process of computing sigmoid function for X_val with parameters
-> Theta
+> Θ
 >
-> 5 Evaluating whether each value of h of Theta is greater than or
+> 5 Evaluating whether each value of h of Θ is greater than or
 > equal to a threshold value
 >
 > 6 Building a predictions vector with zeros and ones
@@ -1078,45 +989,39 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-115"></a>
+<a id="node-96"></a>
 
 <p align="center"><kbd><img src="assets/8167d7664300a428c40878b157851d9a53713afd.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-116"></a>
+<a id="node-97"></a>
 
 <p align="center"><kbd><img src="assets/2ccde7f361027e1ce7a865c2325691e569739f28.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-117"></a>
+<a id="node-98"></a>
 
 <p align="center"><kbd><img src="assets/18370db3b5f1417ecd7e92624108e218c5c1e5e0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-118"></a>
+<a id="node-99"></a>
 
 <p align="center"><kbd><img src="assets/d9b7f19d970e1eb5722a9bc07dafb5f2ca6c7386.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-119"></a>
+<a id="node-100"></a>
 
 <p align="center"><kbd><img src="assets/06098ff57163f6d139b12cb5e11768a91c6f0992.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-120"></a>
+<a id="node-101"></a>
 ## Lo.re Cost Function
-
-<br>
-
-
-<a id="node-121"></a>
-### 1 Introduction to logistic regression cost function and its
 
 > [!NOTE]
 > 1 Introduction to logistic regression cost function and its
@@ -1138,7 +1043,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-122"></a>
+<a id="node-102"></a>
 
 <p align="center"><kbd><img src="assets/01ceefd7ec679c103b16c74754905f3a32198640.png" width="100%"></kbd></p>
 
@@ -1156,7 +1061,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-123"></a>
+<a id="node-103"></a>
 
 <p align="center"><kbd><img src="assets/3ecdea347b00addffb969747d3c74a65ee2b7615.png" width="100%"></kbd></p>
 
@@ -1172,7 +1077,7 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-124"></a>
+<a id="node-104"></a>
 
 <p align="center"><kbd><img src="assets/c0b3ed45c24b880b2bb4112fa129b878ee03371e.png" width="100%"></kbd></p>
 
@@ -1184,14 +1089,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-125"></a>
+<a id="node-105"></a>
 ## Optional Logistic Regression: Cost Function
-
-<br>
-
-
-<a id="node-126"></a>
-### 1. Đại khái xây dựng function P(y(i)) cho 1 instance như này sẽ đảm bảo
 
 > [!NOTE]
 > 1. Đại khái xây dựng function P(y(i)) cho 1 instance như này sẽ đảm bảo
@@ -1205,75 +1104,66 @@ Learn to extract features from text into numerical vectors, then build a binary 
 >
 > 4. Và dựa vào phép tính lôgarit, có thể chuyển nó thành dạng tổng log
 >
-> 5. Và Làm nó nó lớn nhất cũng chính là làm cho (Trừ của nó) nhỏ nhất ->
+> 5. Và Làm nó nó lớn nhất cũng chính là làm cho (Trừ của nó) nhỏ nhất →
 > Hoá ra hàm J
-
-> [!NOTE]
-> Hiểu được cái này rồi, rất hay
 
 <br>
 
-<a id="node-127"></a>
+<a id="node-106"></a>
 
 <p align="center"><kbd><img src="assets/7bd085a30f5e839fad9c152f585e75c02b823263.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-128"></a>
+<a id="node-107"></a>
 
 <p align="center"><kbd><img src="assets/6ec2d8a75d0bd6a4ba4363476804bfb21612fcae.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-129"></a>
+<a id="node-108"></a>
 
 <p align="center"><kbd><img src="assets/bc0af5ca28026ee354e1ed9b479fc5c30ec7babf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-130"></a>
+<a id="node-109"></a>
 
 <p align="center"><kbd><img src="assets/b1d58efd6b344e5a34ccbfc1bf7e67f7f66796fa.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-131"></a>
-## Week Conclusion
-
-<br>
-
-
-<a id="node-132"></a>
+<a id="node-110"></a>
 ## Lo.re: Gradient
 
 <br>
 
-<a id="node-133"></a>
+<a id="node-111"></a>
 
 <p align="center"><kbd><img src="assets/45cf04b389a6be9db29ad9b2c785423ff0ae731e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-134"></a>
+<a id="node-112"></a>
 
 <p align="center"><kbd><img src="assets/1dc40e926f793e6aaf15c86999de198dda7b0703.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-135"></a>
+<a id="node-113"></a>
 
 <p align="center"><kbd><img src="assets/fc04b43fe8824cc190a28bcfe020110a9a4d6f99.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-136"></a>
+<a id="node-114"></a>
 
 <p align="center"><kbd><img src="assets/7e2015a95fd40b2f42f9927ea098012bd03b6896.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-137"></a>
+<a id="node-115"></a>
 
 <p align="center"><kbd><img src="assets/7a5d4fc94a3d85f56c14f2c1dd5e7554d2670acf.png" width="100%"></kbd></p>
 
@@ -1289,20 +1179,8 @@ Learn to extract features from text into numerical vectors, then build a binary 
 <br>
 
 
-<a id="node-138"></a>
-## Quiz: Log.re
-
-<br>
-
-
-<a id="node-139"></a>
+<a id="node-116"></a>
 ## Programming Assignment: Log.re
-
-<br>
-
-
-<a id="node-140"></a>
-### Welcome to week one of this specialization. You will learn about
 
 > [!NOTE]
 > Welcome to week one of this specialization. You will learn about
@@ -1311,153 +1189,153 @@ Learn to extract features from text into numerical vectors, then build a binary 
 > will decide if it has a positive sentiment or a negative one.
 > Specifically you will:
 >
-> • Learn how to \\/extract features\\/ for logistic regression given
+> • Learn how to extract features for logistic regression given
 > some text
 >
-> • Implement \\/**logistic regression from scratch**\\/
+> • Implement logistic regression from scratch
 >
-> • Apply logistic regression on a \\/**natural language processing
-> task**\\/
+> • Apply logistic regression on a natural language processing
+> task
 >
-> • \\/**Test**\\/ using your logistic regression
+> • Test using your logistic regression
 >
-> • Perform \\/**error analysis**\\/
+> • Perform error analysis
 
 <br>
 
 
-<a id="node-141"></a>
-#### Import Functions and Data
+<a id="node-117"></a>
+### Import Functions and Data
 
 <br>
 
-<a id="node-142"></a>
+<a id="node-118"></a>
 
 <p align="center"><kbd><img src="assets/080480968103e246f524586e197bd141f89c0003.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-143"></a>
+<a id="node-119"></a>
 
 <p align="center"><kbd><img src="assets/c90d160639383be8a12fd877276dd5fa97480b3a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-144"></a>
+<a id="node-120"></a>
 
 <p align="center"><kbd><img src="assets/1a662400151b5565ca3aa961f87db2985cedad96.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-145"></a>
+<a id="node-121"></a>
 
 <p align="center"><kbd><img src="assets/83e619c76088a15ad21dd42e0e9c0444cc3ac6c5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-146"></a>
+<a id="node-122"></a>
 
 <p align="center"><kbd><img src="assets/2858a9d02592bbfdb292731e4735e4fb6de15209.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-147"></a>
-#### 1 - Logistic Regression
+<a id="node-123"></a>
+### 1 - Logistic Regression
 
 <br>
 
 
-<a id="node-148"></a>
+<a id="node-124"></a>
 #### 1.1 - Sigmoid
 
 <br>
 
-<a id="node-149"></a>
+<a id="node-125"></a>
 
 <p align="center"><kbd><img src="assets/ba3b3f90b099ad6b62ea9ded8fd1ad294dee0ae9.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-150"></a>
+<a id="node-126"></a>
 #### Exercise 1 - sigmoid (UNQ_C1)
 
 <br>
 
-<a id="node-151"></a>
+<a id="node-127"></a>
 
 <p align="center"><kbd><img src="assets/2dbf0c3e80b5dd66c700a0536d8527c1844533be.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-152"></a>
+<a id="node-128"></a>
 
 <p align="center"><kbd><img src="assets/c593a90135907fa0af6a3185e440730d7902eb24.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-153"></a>
+<a id="node-129"></a>
 #### 1.2 - Cost function and Gradient
 
 <br>
 
-<a id="node-154"></a>
+<a id="node-130"></a>
 
 <p align="center"><kbd><img src="assets/601d383e30ba7dc6463059f1dccf6d7769213f6a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-155"></a>
+<a id="node-131"></a>
 
 <p align="center"><kbd><img src="assets/41cf0109bd3657a393f5d58a6f5368cd94fb8a9d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-156"></a>
+<a id="node-132"></a>
 #### Exercise 2 - gradientDescent (UNQ_C2)
 
 <br>
 
-<a id="node-157"></a>
+<a id="node-133"></a>
 
 <p align="center"><kbd><img src="assets/51d5f7bebe27c793a45fe54526f4f88e18491494.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-158"></a>
+<a id="node-134"></a>
 
 <p align="center"><kbd><img src="assets/5ee7d7d0e6511c4f7dd0b1ff1d00a8b51c60666c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-159"></a>
+<a id="node-135"></a>
 
 <p align="center"><kbd><img src="assets/a0de94da1645ab913ea03b1ad0bb27edf3c1ead5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-160"></a>
-#### 2 - Extracting the Features
+<a id="node-136"></a>
+### 2 - Extracting the Features
 
 <br>
 
 
-<a id="node-161"></a>
+<a id="node-137"></a>
 #### Exercise 3 - extract_features (UNQ_C3)
 
 <br>
 
-<a id="node-162"></a>
+<a id="node-138"></a>
 
 <p align="center"><kbd><img src="assets/3154472180f5116c1ebcd6b2431fdbda0098ad43.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-163"></a>
+<a id="node-139"></a>
 
 <p align="center"><kbd><img src="assets/e115bbb1aabe865810118600f853468a83a5c685.png" width="100%"></kbd></p>
 
@@ -1467,104 +1345,104 @@ Learn to extract features from text into numerical vectors, then build a binary 
 
 <br>
 
-<a id="node-164"></a>
+<a id="node-140"></a>
 
 <p align="center"><kbd><img src="assets/a76149d7c24e4949555d0b279c15bb5ac2efd918.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-165"></a>
-#### 3 - Training Your Model
+<a id="node-141"></a>
+### 3 - Training Your Model
 
 <br>
 
-<a id="node-166"></a>
+<a id="node-142"></a>
 
 <p align="center"><kbd><img src="assets/ab87155700ef6cc4886ed4edbffe297ad3d9f3cc.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-167"></a>
-#### 4 - Test your Logistic Regression
+<a id="node-143"></a>
+### 4 - Test your Logistic Regression
 
 <br>
 
 
-<a id="node-168"></a>
+<a id="node-144"></a>
 #### Exercise 4 - predict_tweet (UNQ_C4)
 
 <br>
 
-<a id="node-169"></a>
+<a id="node-145"></a>
 
 <p align="center"><kbd><img src="assets/39ef9d4ea499a1307010f7baa07e049439875b60.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-170"></a>
+<a id="node-146"></a>
 
 <p align="center"><kbd><img src="assets/12af81fcc5a3f113b4f2aa576eb6a5831119af27.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-171"></a>
+<a id="node-147"></a>
 #### 4.1 - Check the Performance using the Test Set
 
 <br>
 
-<a id="node-172"></a>
+<a id="node-148"></a>
 
 <p align="center"><kbd><img src="assets/b12cfd51014fc62f517785528ecca645b7704490.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-173"></a>
+<a id="node-149"></a>
 #### Exercise 5 - test_logistic_regression (UNQ_C5)
 
 <br>
 
-<a id="node-174"></a>
+<a id="node-150"></a>
 
 <p align="center"><kbd><img src="assets/048bdf7d484637dcf92e4c80f805eba9b2891145.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-175"></a>
-#### 5 - Error Analysis
+<a id="node-151"></a>
+### 5 - Error Analysis
 
 <br>
 
-<a id="node-176"></a>
+<a id="node-152"></a>
 
 <p align="center"><kbd><img src="assets/e15b4e024495463759612d8fa69913524929f4a3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-177"></a>
+<a id="node-153"></a>
 
 <p align="center"><kbd><img src="assets/9ba65d155751bb713015ddef128ac277542d312f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-178"></a>
-#### 6 - Predict with your own Tweet
+<a id="node-154"></a>
+### 6 - Predict with your own Tweet
 
 <br>
 
-<a id="node-179"></a>
+<a id="node-155"></a>
 
 <p align="center"><kbd><img src="assets/e97a84d156ed8636a75c0f400aad3eaa1ef4db28.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-180"></a>
+<a id="node-156"></a>
 ## Andrew Ng & Chris Manning
 
 <br>

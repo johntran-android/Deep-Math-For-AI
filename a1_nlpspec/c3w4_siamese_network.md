@@ -16,13 +16,13 @@ Learning Objectives
  • Siamese networks
  • Data generators
 
-<a id="node-2485"></a>
+<a id="node-2455"></a>
 ## Week Introduction
 
 <br>
 
 
-<a id="node-2486"></a>
+<a id="node-2456"></a>
 ### This week you'll learn about **Siamese Networks** and the **triplet loss**. A Siamese
 
 > [!NOTE]
@@ -47,13 +47,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2487"></a>
+<a id="node-2457"></a>
 ## Siamese Network
 
 <br>
 
 
-<a id="node-2488"></a>
+<a id="node-2458"></a>
 ### 1. The video introduces **Siamese networks**, a **special type of neural network** architecture with \\*two identical
 
 > [!NOTE]
@@ -86,7 +86,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2489"></a>
+<a id="node-2459"></a>
 
 <p align="center"><kbd><img src="assets/8d7e5c4c1954b18f4adce10161221b3614fb27c2.png" width="100%"></kbd></p>
 
@@ -98,7 +98,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2490"></a>
+<a id="node-2460"></a>
 
 <p align="center"><kbd><img src="assets/10642e9483c9b27b110249592d94bf9ac6e89b49.png" width="100%"></kbd></p>
 
@@ -109,7 +109,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2491"></a>
+<a id="node-2461"></a>
 
 <p align="center"><kbd><img src="assets/f24cc2468c5ce386fa24976b8b36960661695ea5.png" width="100%"></kbd></p>
 
@@ -121,13 +121,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2492"></a>
+<a id="node-2462"></a>
 ## Architecture
 
 <br>
 
 
-<a id="node-2493"></a>
+<a id="node-2463"></a>
 ### The main ideas from these passages are as follows:
 
 > [!NOTE]
@@ -162,7 +162,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2494"></a>
+<a id="node-2464"></a>
 
 <p align="center"><kbd><img src="assets/31a9c92c6b04c88812e4e6ceb2ae7e9fe0c19d7a.png" width="100%"></kbd></p>
 
@@ -185,7 +185,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2495"></a>
+<a id="node-2465"></a>
 
 <p align="center"><kbd><img src="assets/db7d5abbd1d6b1312bd01ef19fa3e09d6f38d585.png" width="100%"></kbd></p>
 
@@ -195,12 +195,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2496"></a>
+<a id="node-2466"></a>
 ## Lab: Create Siamese Model Using Trax
 
 <br>
 
-<a id="node-2497"></a>
+<a id="node-2467"></a>
 
 <p align="center"><kbd><img src="assets/74a15cd90601f3c31bf2c1247ba9b6fc1bcc467e.png" width="100%"></kbd></p>
 
@@ -210,7 +210,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2498"></a>
+<a id="node-2468"></a>
 
 <p align="center"><kbd><img src="assets/36335941aea09f69ec57684c13ddba22254a6e6b.png" width="100%"></kbd></p>
 
@@ -229,7 +229,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2499"></a>
+<a id="node-2469"></a>
 ### L2 normalization, also known as **Euclidean normalization** or L2 normalization, is
 
 > [!NOTE]
@@ -266,7 +266,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2500"></a>
+<a id="node-2470"></a>
 
 <p align="center"><kbd><img src="assets/46489ec459363e870e1ba36199c1d6b38913655e.png" width="100%"></kbd></p>
 
@@ -276,7 +276,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2501"></a>
+<a id="node-2471"></a>
 
 <p align="center"><kbd><img src="assets/1429a946ba387585614f9851d731101f1bef1674.png" width="100%"></kbd></p>
 
@@ -297,32 +297,32 @@ Learning Objectives
 
 <br>
 
-<a id="node-2502"></a>
+<a id="node-2472"></a>
 
 <p align="center"><kbd><img src="assets/50ea3c89a3b7e40cdb01e6c5934176230598f14a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2503"></a>
+<a id="node-2473"></a>
 
 <p align="center"><kbd><img src="assets/275ba656ea62a06d4f2bbf15a8b2e2d921a9be1d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2504"></a>
+<a id="node-2474"></a>
 
 <p align="center"><kbd><img src="assets/870c26f1091424dd5798693b2c400ab607052726.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2505"></a>
+<a id="node-2475"></a>
 ## Cost Function
 
 <br>
 
 
-<a id="node-2506"></a>
+<a id="node-2476"></a>
 ### Main ideas from the given text:
 
 > [!NOTE]
@@ -357,13 +357,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2507"></a>
+<a id="node-2477"></a>
 
 <p align="center"><kbd><img src="assets/4563b01ad6c91e648f2f659ec743fd647313d9db.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2508"></a>
+<a id="node-2478"></a>
 
 <p align="center"><kbd><img src="assets/f274fc89dc4c947657507b19a768e6ba3f954e3e.png" width="100%"></kbd></p>
 
@@ -378,7 +378,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2509"></a>
+<a id="node-2479"></a>
 
 <p align="center"><kbd><img src="assets/719851971dd7efd17a59deda4054fb72044cd89d.png" width="100%"></kbd></p>
 
@@ -390,13 +390,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2510"></a>
+<a id="node-2480"></a>
 ## Triplets
 
 <br>
 
 
-<a id="node-2511"></a>
+<a id="node-2481"></a>
 ### Main ideas from the given text:
 
 > [!NOTE]
@@ -430,13 +430,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2512"></a>
+<a id="node-2482"></a>
 
 <p align="center"><kbd><img src="assets/b45602897ce5a6d0dcf0986009ec5273144339f5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2513"></a>
+<a id="node-2483"></a>
 
 <p align="center"><kbd><img src="assets/47f3c68aac3fabeb01d586e9b2f6e9c6d2fc9519.png" width="100%"></kbd></p>
 
@@ -454,7 +454,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2514"></a>
+<a id="node-2484"></a>
 
 <p align="center"><kbd><img src="assets/d7c54245eb2a401a49045c731ceeedbd960bc889.png" width="100%"></kbd></p>
 
@@ -468,12 +468,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2515"></a>
+<a id="node-2485"></a>
 #### Tại sao lại dùng max(diff + alpha, 0) trong triplet loss. Lí do là vì nếu chỉ dùng loss = diff. Việc train model để nó ngày càng giảm loss sẽ không ổn vì khi loss mà bắt đầu âm thì s(A, P) sẽ ngày càng lớn là không đúng với yêu cầu.  Nên phải cho loss là max(diff, 0) để giảm diff nhưng khi diff âm thì loss = 0 là cho stop, converge.
 
 <br>
 
-<a id="node-2516"></a>
+<a id="node-2486"></a>
 
 <p align="center"><kbd><img src="assets/5f13c5562b98623766cb4236f11dbddc45bee0a7.png" width="100%"></kbd></p>
 
@@ -490,20 +490,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-2517"></a>
+<a id="node-2487"></a>
 
 <p align="center"><kbd><img src="assets/00c5fc47f369ec64287939118085dcda4d93771f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2518"></a>
+<a id="node-2488"></a>
 ## Computing Cost Function 1
 
 <br>
 
 
-<a id="node-2519"></a>
+<a id="node-2489"></a>
 ### Main ideas extracted from the provided text:
 
 > [!NOTE]
@@ -546,7 +546,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2520"></a>
+<a id="node-2490"></a>
 
 <p align="center"><kbd><img src="assets/f692cfa25dc1fd48266a6151b603834510f884d6.png" width="100%"></kbd></p>
 
@@ -560,7 +560,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2521"></a>
+<a id="node-2491"></a>
 
 <p align="center"><kbd><img src="assets/e37fef71643e0d56baa656b5ea653b886b9aac7e.png" width="100%"></kbd></p>
 
@@ -574,13 +574,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2522"></a>
+<a id="node-2492"></a>
 
 <p align="center"><kbd><img src="assets/1d7d090e802cc9c95a1f7c133f859213702dce1d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2523"></a>
+<a id="node-2493"></a>
 
 <p align="center"><kbd><img src="assets/640454a75df804ff9b970b2ef4b00f9ee9607dd1.png" width="100%"></kbd></p>
 
@@ -615,13 +615,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2524"></a>
+<a id="node-2494"></a>
 ## Computing Cost Function 2
 
 <br>
 
 
-<a id="node-2525"></a>
+<a id="node-2495"></a>
 ### 1. **Similarity Matrix and Diagonals**: The text describes the **similarity matrix** obtained from the Siamese
 
 > [!NOTE]
@@ -654,7 +654,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2526"></a>
+<a id="node-2496"></a>
 
 <p align="center"><kbd><img src="assets/87c013ae7c35138ae3a0f03821018c4db0be2ac1.png" width="100%"></kbd></p>
 
@@ -666,7 +666,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2527"></a>
+<a id="node-2497"></a>
 
 <p align="center"><kbd><img src="assets/79942fcfd1a699d4e36972949715b7165e3b98cc.png" width="100%"></kbd></p>
 
@@ -696,7 +696,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2528"></a>
+<a id="node-2498"></a>
 
 <p align="center"><kbd><img src="assets/6b0502757d520a8125a7ce34892c7830416d195d.png" width="100%"></kbd></p>
 
@@ -729,7 +729,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2529"></a>
+<a id="node-2499"></a>
 
 <p align="center"><kbd><img src="assets/5f8932df1765dbcce0c6b439f70417a380301b44.png" width="100%"></kbd></p>
 
@@ -740,12 +740,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2530"></a>
+<a id="node-2500"></a>
 ## Lab: Modified Triplet Loss
 
 <br>
 
-<a id="node-2531"></a>
+<a id="node-2501"></a>
 
 <p align="center"><kbd><img src="assets/7c7315efb57893712b1a5996f0096e18d2c96bdd.png" width="100%"></kbd></p>
 
@@ -755,12 +755,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2532"></a>
+<a id="node-2502"></a>
 ### Similarity Scores
 
 <br>
 
-<a id="node-2533"></a>
+<a id="node-2503"></a>
 
 <p align="center"><kbd><img src="assets/30fd597ad8dedb01cb8d00051a16487588b0358c.png" width="100%"></kbd></p>
 
@@ -777,7 +777,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2534"></a>
+<a id="node-2504"></a>
 
 <p align="center"><kbd><img src="assets/fe71cedeaf7db13074256b1a19a325b7398e9f39.png" width="100%"></kbd></p>
 
@@ -790,7 +790,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2535"></a>
+<a id="node-2505"></a>
 
 <p align="center"><kbd><img src="assets/2299299c76d78fde8dd5895440e9d1d47230a935.png" width="100%"></kbd></p>
 
@@ -806,25 +806,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-2536"></a>
+<a id="node-2506"></a>
 
 <p align="center"><kbd><img src="assets/c7fc6eb0b5674edd8c92a621d5d59aefa151ad0b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2537"></a>
+<a id="node-2507"></a>
 ### Hard Negative Mining
 
 <br>
 
-<a id="node-2538"></a>
+<a id="node-2508"></a>
 
 <p align="center"><kbd><img src="assets/d23c3ebaf353291b57552daa3bb306bcb0af64d6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2539"></a>
+<a id="node-2509"></a>
 
 <p align="center"><kbd><img src="assets/a6771673ae5e1dbef9f6447335d38521e341a157.png" width="100%"></kbd></p>
 
@@ -840,13 +840,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2540"></a>
+<a id="node-2510"></a>
 
 <p align="center"><kbd><img src="assets/2542796c4ef4614a316594b9cde30b675e28ef6b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2541"></a>
+<a id="node-2511"></a>
 
 <p align="center"><kbd><img src="assets/e6b3d455b1cc48d9ab678e740bd248d3cc875f76.png" width="100%"></kbd></p>
 
@@ -869,7 +869,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2542"></a>
+<a id="node-2512"></a>
 
 <p align="center"><kbd><img src="assets/15ac3fe54bd9fdcf27d44ba3565ff84cb1ce25b6.png" width="100%"></kbd></p>
 
@@ -880,12 +880,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2543"></a>
+<a id="node-2513"></a>
 ### The Loss Functions
 
 <br>
 
-<a id="node-2544"></a>
+<a id="node-2514"></a>
 
 <p align="center"><kbd><img src="assets/bbe53cb20687c397d08dbb040c2d1911e60f050f.png" width="100%"></kbd></p>
 
@@ -915,13 +915,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2545"></a>
+<a id="node-2515"></a>
 ## One-shot Learning
 
 <br>
 
 
-<a id="node-2546"></a>
+<a id="node-2516"></a>
 ### 1. The scenario presented involves **identifying whether a certain poem's author is Lucas or not**.
 
 > [!NOTE]
@@ -946,7 +946,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2547"></a>
+<a id="node-2517"></a>
 
 <p align="center"><kbd><img src="assets/001e960bf705fe7be3f92efcaecec0541daacfd5.png" width="100%"></kbd></p>
 
@@ -989,7 +989,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2548"></a>
+<a id="node-2518"></a>
 
 <p align="center"><kbd><img src="assets/1acdc82c70b7b7e4ddf47fcce7514a77fe50618c.png" width="100%"></kbd></p>
 
@@ -1004,13 +1004,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2549"></a>
+<a id="node-2519"></a>
 ## Training & Testing
 
 <br>
 
 
-<a id="node-2550"></a>
+<a id="node-2520"></a>
 ### 1. Introduction to **Siamese Network**: The passage introduces the concept of a \\*Siamese network, which is
 
 > [!NOTE]
@@ -1042,7 +1042,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2551"></a>
+<a id="node-2521"></a>
 
 <p align="center"><kbd><img src="assets/96a6b529b8cf60a6ff66c042bd728bf2eeb00787.png" width="100%"></kbd></p>
 
@@ -1053,7 +1053,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2552"></a>
+<a id="node-2522"></a>
 
 <p align="center"><kbd><img src="assets/f2f97ca97ab0c7776e10d3c6ddbe83a469e09907.png" width="100%"></kbd></p>
 
@@ -1066,7 +1066,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2553"></a>
+<a id="node-2523"></a>
 
 <p align="center"><kbd><img src="assets/bd5fdce513af2921d35b167cf227fe81e6f68567.png" width="100%"></kbd></p>
 
@@ -1077,7 +1077,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2554"></a>
+<a id="node-2524"></a>
 
 <p align="center"><kbd><img src="assets/18f034a1d99f847040421694f9a912902ff887df.png" width="100%"></kbd></p>
 
@@ -1087,13 +1087,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2555"></a>
+<a id="node-2525"></a>
 
 <p align="center"><kbd><img src="assets/ad52e370b05ec6ec7fd90984b2a94d7545aa44b2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2556"></a>
+<a id="node-2526"></a>
 
 <p align="center"><kbd><img src="assets/94fcbe0183fc1b5713dd77ae8c3cdf682de8d0d8.png" width="100%"></kbd></p>
 
@@ -1114,12 +1114,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2557"></a>
+<a id="node-2527"></a>
 ## Lab: Evaluating Siamese Model
 
 <br>
 
-<a id="node-2558"></a>
+<a id="node-2528"></a>
 
 <p align="center"><kbd><img src="assets/3ef2d80ee565a1d44487f4dc8057c0c28497f936.png" width="100%"></kbd></p>
 
@@ -1139,7 +1139,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2559"></a>
+<a id="node-2529"></a>
 
 <p align="center"><kbd><img src="assets/8161d23378c753d414e9f0c1abacaa3aaafc9700.png" width="100%"></kbd></p>
 
@@ -1150,7 +1150,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2560"></a>
+<a id="node-2530"></a>
 
 <p align="center"><kbd><img src="assets/085c86710d8db7a4f46a2fcddf81703f6fe6c8df.png" width="100%"></kbd></p>
 
@@ -1159,7 +1159,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2561"></a>
+<a id="node-2531"></a>
 
 <p align="center"><kbd><img src="assets/41a87dafc8c0c112f82a2e532691695a8ee7d66a.png" width="100%"></kbd></p>
 
@@ -1170,13 +1170,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2562"></a>
+<a id="node-2532"></a>
 
 <p align="center"><kbd><img src="assets/f7ff3c510f25dc856a1b5d9479ab651c7d825417.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2563"></a>
+<a id="node-2533"></a>
 
 <p align="center"><kbd><img src="assets/d136ab0da1d10c17f976dd369349e5235bb63add.png" width="100%"></kbd></p>
 
@@ -1186,7 +1186,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2564"></a>
+<a id="node-2534"></a>
 
 <p align="center"><kbd><img src="assets/850c445903e2e24cc623f3dff51ef3ddf9b21c54.png" width="100%"></kbd></p>
 
@@ -1197,7 +1197,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2565"></a>
+<a id="node-2535"></a>
 
 <p align="center"><kbd><img src="assets/2fa57320c8a3009f1377a55de523a7790052baef.png" width="100%"></kbd></p>
 
@@ -1256,7 +1256,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2566"></a>
+<a id="node-2536"></a>
 
 <p align="center"><kbd><img src="assets/0ad0575c4a1cde71cd3df988c8dc43b6c4a3dd6a.png" width="100%"></kbd></p>
 
@@ -1266,42 +1266,42 @@ Learning Objectives
 <br>
 
 
-<a id="node-2567"></a>
+<a id="node-2537"></a>
 ## Week Conclusion
 
 <br>
 
 
-<a id="node-2568"></a>
+<a id="node-2538"></a>
 ## Quiz
 
 <br>
 
-<a id="node-2569"></a>
+<a id="node-2539"></a>
 
 <p align="center"><kbd><img src="assets/d50158ad36043f9686e91adf8e7f520df88582ad.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2570"></a>
+<a id="node-2540"></a>
 
 <p align="center"><kbd><img src="assets/f0fb0338fd97bd60037393b69def4dc9debf1cce.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2571"></a>
+<a id="node-2541"></a>
 
 <p align="center"><kbd><img src="assets/d89a6c371c25351ad586f40fa2a26ed8e8402a3c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2572"></a>
+<a id="node-2542"></a>
 
 <p align="center"><kbd><img src="assets/6e6665cfac3a07285119f20fd25f62d3896e716d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2573"></a>
+<a id="node-2543"></a>
 
 <p align="center"><kbd><img src="assets/05e9ff35cbfbf7c76eb9673c454dbb67c3412224.png" width="100%"></kbd></p>
 
@@ -1312,50 +1312,50 @@ Learning Objectives
 
 <br>
 
-<a id="node-2574"></a>
+<a id="node-2544"></a>
 
 <p align="center"><kbd><img src="assets/29b5e1169bfade904f2f1ac280c3b319ac0c3f81.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2575"></a>
+<a id="node-2545"></a>
 
 <p align="center"><kbd><img src="assets/81e01b69924e1c4d76f7aa3936702b17ef93efcf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2576"></a>
+<a id="node-2546"></a>
 
 <p align="center"><kbd><img src="assets/46e54c3e2b9867e8a0fcaa4a25071ed62b961c20.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2577"></a>
+<a id="node-2547"></a>
 
 <p align="center"><kbd><img src="assets/e5f1175f17f25f7709ee378ea72ebff2e3112077.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2578"></a>
+<a id="node-2548"></a>
 
 <p align="center"><kbd><img src="assets/5b1b0e500bb17269066aa79c734adb1b973c6533.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2579"></a>
+<a id="node-2549"></a>
 
 <p align="center"><kbd><img src="assets/d526897cc45890b5481f1c01dbe4894c73e7c8b1.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2580"></a>
+<a id="node-2550"></a>
 ## Programming Assignment: Siamese Model On Question Duplicates
 
 <br>
 
 
-<a id="node-2581"></a>
+<a id="node-2551"></a>
 ### Welcome to the fourth assignment of course 3. In this
 
 > [!NOTE]
@@ -1370,36 +1370,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-2582"></a>
+<a id="node-2552"></a>
 #### Overview
 
 <br>
 
-<a id="node-2583"></a>
+<a id="node-2553"></a>
 
 <p align="center"><kbd><img src="assets/3870f1cba4dbd89e1f198702d7c6664cd0dfcfb5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2584"></a>
+<a id="node-2554"></a>
 #### 1 - Importing the Data
 
 <br>
 
 
-<a id="node-2585"></a>
+<a id="node-2555"></a>
 #### 1.1 - Loading in the Data
 
 <br>
 
 
-<a id="node-2586"></a>
+<a id="node-2556"></a>
 #### You will be using the **Quora question answer dataset** to build a model that could **identify similar questions**. This is a **useful task** because you **don't want to have several versions of the same question posted**. Several times when teaching I end up responding to similar questions on piazza, or on other community forums. This data set **has been labeled** for you. Run the cell below to **import some of the packages** you will be using.
 
 <br>
 
-<a id="node-2587"></a>
+<a id="node-2557"></a>
 
 <p align="center"><kbd><img src="assets/28d1b1fa2ae79399efd8ed44c9aeec482d9d7931.png" width="100%"></kbd></p>
 
@@ -1411,7 +1411,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2588"></a>
+<a id="node-2558"></a>
 
 <p align="center"><kbd><img src="assets/5e793377664e5d4f8edc45c2f53407809960eb63.png" width="100%"></kbd></p>
 
@@ -1422,7 +1422,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2589"></a>
+<a id="node-2559"></a>
 
 <p align="center"><kbd><img src="assets/38c28f18e43705348e5a84f9dcee0a80dce10568.png" width="100%"></kbd></p>
 
@@ -1431,7 +1431,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2590"></a>
+<a id="node-2560"></a>
 
 <p align="center"><kbd><img src="assets/b54508d432250e1884b0d4b3d5271dcac2ec2f4d.png" width="100%"></kbd></p>
 
@@ -1455,7 +1455,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2591"></a>
+<a id="node-2561"></a>
 
 <p align="center"><kbd><img src="assets/70b89a7f3dfa0dd8941839809150fdec52da99c7.png" width="100%"></kbd></p>
 
@@ -1465,7 +1465,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2592"></a>
+<a id="node-2562"></a>
 
 <p align="center"><kbd><img src="assets/97443443b3b45335d638e07a16926fceffec47e2.png" width="100%"></kbd></p>
 
@@ -1476,7 +1476,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2593"></a>
+<a id="node-2563"></a>
 
 <p align="center"><kbd><img src="assets/615d5d34400435d3e9ab56e9eb0afc04ec00d9cc.png" width="100%"></kbd></p>
 
@@ -1487,7 +1487,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2594"></a>
+<a id="node-2564"></a>
 
 <p align="center"><kbd><img src="assets/f52967125cd67cee010ad760abc7330ad71d42fa.png" width="100%"></kbd></p>
 
@@ -1499,7 +1499,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2595"></a>
+<a id="node-2565"></a>
 
 <p align="center"><kbd><img src="assets/ef63ab461109d3256ded43541012a30ae582856a.png" width="100%"></kbd></p>
 
@@ -1515,19 +1515,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-2596"></a>
+<a id="node-2566"></a>
 
 <p align="center"><kbd><img src="assets/9f935602fd514ad503525742374807b1ab12429d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2597"></a>
+<a id="node-2567"></a>
 
 <p align="center"><kbd><img src="assets/ba236873a4fdb476de6d3eb5b10cc8985acc7205.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2598"></a>
+<a id="node-2568"></a>
 
 <p align="center"><kbd><img src="assets/b8336879813198264c7debdd7b5c6468fbaab621.png" width="100%"></kbd></p>
 
@@ -1539,12 +1539,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2599"></a>
+<a id="node-2569"></a>
 #### 1.2 - Converting a Question to a Tensor
 
 <br>
 
-<a id="node-2600"></a>
+<a id="node-2570"></a>
 
 <p align="center"><kbd><img src="assets/4dcceb8079db0c88be8004f9196a94af53f92e16.png" width="100%"></kbd></p>
 
@@ -1556,13 +1556,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2601"></a>
+<a id="node-2571"></a>
 
 <p align="center"><kbd><img src="assets/8a23c5b3928e8beb3ca2bb61b4e8cfbe463438e8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2602"></a>
+<a id="node-2572"></a>
 
 <p align="center"><kbd><img src="assets/8eeba8330cd73b7733fef88497ff318f39a05156.png" width="100%"></kbd></p>
 
@@ -1573,12 +1573,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2603"></a>
+<a id="node-2573"></a>
 #### 1.3 - Understanding the Iterator
 
 <br>
 
-<a id="node-2604"></a>
+<a id="node-2574"></a>
 
 <p align="center"><kbd><img src="assets/d8df9a2d104383d8524f28800b4f901db370c36e.png" width="100%"></kbd></p>
 
@@ -1591,18 +1591,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2605"></a>
+<a id="node-2575"></a>
 #### Exercise 1 - data_generator (UNQ_C1)
 
 <br>
 
-<a id="node-2606"></a>
+<a id="node-2576"></a>
 
 <p align="center"><kbd><img src="assets/8735e7dbaf98bb49410b4f664b60cc87f1ff1742.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2607"></a>
+<a id="node-2577"></a>
 
 <p align="center"><kbd><img src="assets/b57d088d820a080c6b66a55559d9dc7325d586fe.png" width="100%"></kbd></p>
 
@@ -1610,61 +1610,61 @@ Learning Objectives
 
 <br>
 
-<a id="node-2608"></a>
+<a id="node-2578"></a>
 
 <p align="center"><kbd><img src="assets/5efe55f58367e2585f6be0168caf985245e7363b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2609"></a>
+<a id="node-2579"></a>
 
 <p align="center"><kbd><img src="assets/2edf9f589279bb46d771b3d049611c85f76f2289.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2610"></a>
+<a id="node-2580"></a>
 
 <p align="center"><kbd><img src="assets/80968bc0235d44afdd73d8f6990d822cf9c4b513.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2611"></a>
+<a id="node-2581"></a>
 #### 2 - Defining the Siamese Model
 
 <br>
 
 
-<a id="node-2612"></a>
+<a id="node-2582"></a>
 #### 2.1 - Understanding Siamese Network
 
 <br>
 
-<a id="node-2613"></a>
+<a id="node-2583"></a>
 
 <p align="center"><kbd><img src="assets/8c33acfabfedde08091ebb1f2b70bbe7df8975d6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2614"></a>
+<a id="node-2584"></a>
 
 <p align="center"><kbd><img src="assets/1ee051a84d1eb9bc039bf05e4f5cb90fed2e0add.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2615"></a>
+<a id="node-2585"></a>
 #### Exercise 2 - Siamese (UNQ_C2)
 
 <br>
 
-<a id="node-2616"></a>
+<a id="node-2586"></a>
 
 <p align="center"><kbd><img src="assets/56088c70f553ed40068abce337a0c4593eb606ad.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2617"></a>
+<a id="node-2587"></a>
 
 <p align="center"><kbd><img src="assets/2f313ff727fe15223af019d84c2c52c110cba7cb.png" width="100%"></kbd></p>
 
@@ -1697,25 +1697,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-2618"></a>
+<a id="node-2588"></a>
 
 <p align="center"><kbd><img src="assets/433dc1ca1f44b80b4b488e0b9eef888718588fa2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2619"></a>
+<a id="node-2589"></a>
 
 <p align="center"><kbd><img src="assets/986f935734e1cfb500c9f0f973a8bb38d89c1a8d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2620"></a>
+<a id="node-2590"></a>
 #### 2.2 - Hard Negative Mining
 
 <br>
 
-<a id="node-2621"></a>
+<a id="node-2591"></a>
 
 <p align="center"><kbd><img src="assets/4a0e6959cac20cfefbc64eb2a0fbb2f9b7ad9a17.png" width="100%"></kbd></p>
 
@@ -1728,42 +1728,42 @@ Learning Objectives
 <br>
 
 
-<a id="node-2622"></a>
+<a id="node-2592"></a>
 #### Exercise 3 - TripletLossFn (UNQ_C3)
 
 <br>
 
-<a id="node-2623"></a>
+<a id="node-2593"></a>
 
 <p align="center"><kbd><img src="assets/920718314dec3ea93314fab06eb42b029410c87e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2624"></a>
+<a id="node-2594"></a>
 
 <p align="center"><kbd><img src="assets/da5dffad5efcb97da77c7906eed12beaf84b9a29.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2625"></a>
+<a id="node-2595"></a>
 
 <p align="center"><kbd><img src="assets/1ecfaca8e317a58f9f9632fd7633cb46b7064d27.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2626"></a>
+<a id="node-2596"></a>
 
 <p align="center"><kbd><img src="assets/5f5ef9a693920521cefe99e2940e3e068ed2b28c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2627"></a>
+<a id="node-2597"></a>
 
 <p align="center"><kbd><img src="assets/490c60fbf68af2f6c11f8ed180dcb64c4a54338e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2628"></a>
+<a id="node-2598"></a>
 
 <p align="center"><kbd><img src="assets/ccce731da9b3769f090d7199c2ddb8ccc95fbd65.png" width="100%"></kbd></p>
 
@@ -1831,62 +1831,62 @@ Learning Objectives
 
 <br>
 
-<a id="node-2629"></a>
+<a id="node-2599"></a>
 
 <p align="center"><kbd><img src="assets/a5b193d19322feb961e1cb02d87bf2cdec03b5fc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2630"></a>
+<a id="node-2600"></a>
 
 <p align="center"><kbd><img src="assets/e02ea4f444c5292bda5333df6c064631662c5870.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2631"></a>
+<a id="node-2601"></a>
 #### 3 - Training
 
 <br>
 
 
-<a id="node-2632"></a>
+<a id="node-2602"></a>
 #### 3.1 - Training the Model
 
 <br>
 
-<a id="node-2633"></a>
+<a id="node-2603"></a>
 
 <p align="center"><kbd><img src="assets/222c43304a31a407e6c08dd81f3fe7e69d49ec34.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2634"></a>
+<a id="node-2604"></a>
 
 <p align="center"><kbd><img src="assets/450993511204c10036992e5b43d458498122a762.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2635"></a>
+<a id="node-2605"></a>
 #### Exercise 4 - train_model (UNQ_C4)
 
 <br>
 
-<a id="node-2636"></a>
+<a id="node-2606"></a>
 
 <p align="center"><kbd><img src="assets/c997e2f0fe1475cc0cd902fdd75bdfe7eaa806a6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2637"></a>
+<a id="node-2607"></a>
 
 <p align="center"><kbd><img src="assets/dd124a2cd68fea0937233fa969522aac216116ba.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2638"></a>
+<a id="node-2608"></a>
 #### The model was only trained for 5 steps due to the constraints of this environment. For the rest of the assignment you will be using a pretrained model but now you should understand how the training can be done using Trax.
 
 > [!NOTE]
@@ -1896,18 +1896,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2639"></a>
+<a id="node-2609"></a>
 #### 4 - Evaluation
 
 <br>
 
 
-<a id="node-2640"></a>
+<a id="node-2610"></a>
 #### 4.1 - Evaluating your Siamese Network
 
 <br>
 
-<a id="node-2641"></a>
+<a id="node-2611"></a>
 
 <p align="center"><kbd><img src="assets/15059f3ec211bdcbbb46307cc32b786fe347d6d3.png" width="100%"></kbd></p>
 
@@ -1917,13 +1917,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2642"></a>
+<a id="node-2612"></a>
 #### 4.2 - Classify
 
 <br>
 
 
-<a id="node-2643"></a>
+<a id="node-2613"></a>
 #### To determine the accuracy of the model, we will **utilize the test set** that was configured  earlier. While in training we used only positive examples, the test data, Q1_test, Q2_test  and y_test, is setup as pairs of questions, some of which are duplicates some are not.  This routine will **run all the test question pairs** **through the model**, **compute the cosine  simlarity of each pair**, **threshold it** and **compare the result to y_test** - the correct response  from the data set. The results are **accumulated to produce an accuracy.**
 
 > [!NOTE]
@@ -1937,18 +1937,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2644"></a>
+<a id="node-2614"></a>
 #### Exercise 5 - classify (UNQ_C5)
 
 <br>
 
-<a id="node-2645"></a>
+<a id="node-2615"></a>
 
 <p align="center"><kbd><img src="assets/a06218fc439042f3dbbd2c641996f06bca6c4446.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2646"></a>
+<a id="node-2616"></a>
 
 <p align="center"><kbd><img src="assets/68e76df915d9a82fe5571b19c0aaae77b0d3d636.png" width="100%"></kbd></p>
 
@@ -1961,31 +1961,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-2647"></a>
+<a id="node-2617"></a>
 
 <p align="center"><kbd><img src="assets/9ca0c139b6f306934784aa2eb16ebe5960f83117.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2648"></a>
+<a id="node-2618"></a>
 #### 5 -Testing with your Own Questions
 
 <br>
 
 
-<a id="node-2649"></a>
+<a id="node-2619"></a>
 #### Exercise 6 - predict (UNQ_C6)
 
 <br>
 
-<a id="node-2650"></a>
+<a id="node-2620"></a>
 
 <p align="center"><kbd><img src="assets/ac0737d7d29241018392d13eeab6dbf9b2c21037.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2651"></a>
+<a id="node-2621"></a>
 
 <p align="center"><kbd><img src="assets/6f68962584d346c12e55a9ab9441d66aa906e35a.png" width="100%"></kbd></p>
 
@@ -1998,13 +1998,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2652"></a>
+<a id="node-2622"></a>
 
 <p align="center"><kbd><img src="assets/3665e0ec2056963420ab61e6d98ea88e754047fb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2653"></a>
+<a id="node-2623"></a>
 
 <p align="center"><kbd><img src="assets/21b5318f1094e4093160dc8332ad78279e2d03a2.png" width="100%"></kbd></p>
 
@@ -2015,13 +2015,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2654"></a>
+<a id="node-2624"></a>
 #### On Siamese Networks
 
 <br>
 
 
-<a id="node-2655"></a>
+<a id="node-2625"></a>
 #### Siamese networks are **important** and **useful**. Many times there are several questions that are already asked in quora, or other platforms and you can use Siamese networks to avoid question duplicates.  Congratulations, you have now **built a powerful system that can recognize question duplicates**. In the next course we will use **transformers** for **machine translation**, **summarization**, question answering, and chatbots.
 
 <br>

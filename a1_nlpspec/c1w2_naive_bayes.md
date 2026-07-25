@@ -1,6 +1,6 @@
 # C1w2 - Naive Bayes
 
-📊 **Progress:** `57` Notes | `112` Screenshots
+📊 **Progress:** `60` Notes | `112` Screenshots
 
 ---
 
@@ -31,18 +31,18 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
  • Vocabulary creation
  • Supervised learning
 
-<a id="node-182"></a>
+<a id="node-158"></a>
 ## Probability & Bayes's Rule
 
 <br>
 
-<a id="node-183"></a>
+<a id="node-159"></a>
 
 <p align="center"><kbd><img src="assets/e518b89ef736592dba4ad6177ed32fabbd0bca11.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-184"></a>
+<a id="node-160"></a>
 
 <p align="center"><kbd><img src="assets/27aebe7cb9a294cebfd887a4b429deed7addf2cb.png" width="100%"></kbd></p>
 
@@ -52,7 +52,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-185"></a>
+<a id="node-161"></a>
 
 <p align="center"><kbd><img src="assets/8f67086b03e68f2cab63f0a3fba698ced02483df.png" width="100%"></kbd></p>
 
@@ -66,7 +66,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-186"></a>
+<a id="node-162"></a>
 
 <p align="center"><kbd><img src="assets/c93556c3925b7a6ee6db157e3a30e138133c5d0e.png" width="100%"></kbd></p>
 
@@ -77,7 +77,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-187"></a>
+<a id="node-163"></a>
 
 <p align="center"><kbd><img src="assets/80905082dfc58f7f18197e06f7b2d1c796950452.png" width="100%"></kbd></p>
 
@@ -88,12 +88,12 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-188"></a>
+<a id="node-164"></a>
 ## Bayes's Rule
 
 <br>
 
-<a id="node-189"></a>
+<a id="node-165"></a>
 
 <p align="center"><kbd><img src="assets/40e4d69f8c45dfda6bfb1e6162af46dc27956e18.png" width="100%"></kbd></p>
 
@@ -104,7 +104,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-190"></a>
+<a id="node-166"></a>
 
 <p align="center"><kbd><img src="assets/93102b1a96eee7f8fb5a3bbd12885579f9560ead.png" width="100%"></kbd></p>
 
@@ -116,7 +116,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-191"></a>
+<a id="node-167"></a>
 
 <p align="center"><kbd><img src="assets/ca3c89cec9bed604454e0486f8eadc53a767e449.png" width="100%"></kbd></p>
 
@@ -128,7 +128,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-192"></a>
+<a id="node-168"></a>
 
 <p align="center"><kbd><img src="assets/7384739aee5f77c4b6f455ec58bc3a5ac0dd66c8.png" width="100%"></kbd></p>
 
@@ -143,19 +143,19 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-193"></a>
+<a id="node-169"></a>
 
 <p align="center"><kbd><img src="assets/989654c6eb7ce374e26bbcba3ceba19528281a54.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-194"></a>
+<a id="node-170"></a>
 
 <p align="center"><kbd><img src="assets/7016b8fb0d07d940831a1ee24576b4f08d8dec57.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-195"></a>
+<a id="node-171"></a>
 
 <p align="center"><kbd><img src="assets/0cea5f5e84025af3859585ab432bdd75a16f4e84.png" width="100%"></kbd></p>
 
@@ -163,7 +163,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-196"></a>
+<a id="node-172"></a>
 
 <p align="center"><kbd><img src="assets/0ec8ca022a5bcb83052fa7f9628cc9e1b9aba790.png" width="100%"></kbd></p>
 
@@ -174,20 +174,20 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-197"></a>
+<a id="node-173"></a>
 
 <p align="center"><kbd><img src="assets/639c8bb13cc456557e0fcd448fb678de2ffffe3f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-198"></a>
+<a id="node-174"></a>
 ## Naive Bayes Introduction
 
 <br>
 
 
-<a id="node-199"></a>
+<a id="node-175"></a>
 ### 1 Introduction to Naive Bayes as a method for text classification
 
 > [!NOTE]
@@ -224,7 +224,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-200"></a>
+<a id="node-176"></a>
 
 <p align="center"><kbd><img src="assets/7a81c40e68f2e28e6fa306151ea0106d1cd70182.png" width="100%"></kbd></p>
 
@@ -239,7 +239,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-201"></a>
+<a id="node-177"></a>
 
 <p align="center"><kbd><img src="assets/ec801f1c645efbdb90971ab3617e8848d276fa6b.png" width="100%"></kbd></p>
 
@@ -251,7 +251,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-202"></a>
+<a id="node-178"></a>
 
 <p align="center"><kbd><img src="assets/07834317242a6fd6d4f18a24f88bfd43924fefac.png" width="100%"></kbd></p>
 
@@ -261,11 +261,11 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-203"></a>
+<a id="node-179"></a>
 
 <p align="center"><kbd><img src="assets/744d94658206cec29f82c0479a54aae74e528235.png" width="100%"></kbd></p>
 
-🔗 **Related:** [1 Counting word \\*occurrence\\* for probability calculation  2 \\*Problem with probability of zero\\* for \\*unseen word\\* pairs  3 Introduction to \\*smoothing\\*  4 \\*Laplacian smoothing\\* technique to \\*avoid zero probabilities\\*  5 Formula for Laplacian smoothing  6 Calculation of probability using Laplacian smoothing  7 Importance of Laplacian smoothing  8 Introduction to log likelihood in next video.](laplacian_smoothing.md#node-212)
+🔗 **Related:** [1 Counting word \\*occurrence\\* for probability calculation  2 \\*Problem with probability of zero\\* for \\*unseen word\\* pairs  3 Introduction to \\*smoothing\\*  4 \\*Laplacian smoothing\\* technique to \\*avoid zero probabilities\\*  5 Formula for Laplacian smoothing  6 Calculation of probability using Laplacian smoothing  7 Importance of Laplacian smoothing  8 Introduction to log likelihood in next video.](laplacian_smoothing.md#node-188)
 
 > [!NOTE]
 > Những từ như I, am có P_pos và neg bằng nhau và ko giúp ích gì trong
@@ -280,7 +280,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-204"></a>
+<a id="node-180"></a>
 
 <p align="center"><kbd><img src="assets/21c0efe461b7251a277015c972e2d8a2c18a69db.png" width="100%"></kbd></p>
 
@@ -290,20 +290,20 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-205"></a>
+<a id="node-181"></a>
 
 <p align="center"><kbd><img src="assets/cc824fcf1be16bcbf529cdeb1a7089d227564020.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-206"></a>
+<a id="node-182"></a>
 ## Laplacian Smoothing
 
 <br>
 
 
-<a id="node-207"></a>
+<a id="node-183"></a>
 ### 1 Counting word **occurrence** for probability calculation
 
 > [!NOTE]
@@ -318,7 +318,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-208"></a>
+<a id="node-184"></a>
 
 <p align="center"><kbd><img src="assets/5ac697cbbe950ab84b869d820e3526b3b279b640.png" width="100%"></kbd></p>
 
@@ -339,13 +339,13 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-209"></a>
+<a id="node-185"></a>
 
 <p align="center"><kbd><img src="assets/d559b54fa691fb55f3bd1b83c71e3e7ebdaa54fa.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-210"></a>
+<a id="node-186"></a>
 
 <p align="center"><kbd><img src="assets/7d4cd72407fb8dc67ac9b268c124a25a05880411.png" width="100%"></kbd></p>
 
@@ -357,17 +357,17 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-211"></a>
+<a id="node-187"></a>
 
 <p align="center"><kbd><img src="assets/61582d4c01e0afbebcd941c289df3b40948145d4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-212"></a>
+<a id="node-188"></a>
 
 <p align="center"><kbd><img src="assets/11be03bf04d11ec6a0b257aba25df3f83bb6975a.png" width="100%"></kbd></p>
 
-🔗 **Related:** [1 Introduction to Naive Bayes as a method for text classification  2 The Naive Bayes method is a simple and fast baseline for many text classification tasks  3 The Naive Bayes method makes the assumption that all features used for classification are independent  4 The first step in Naive Bayes is to extract the vocabulary and the word counts from the positive and negative corpora  5 The conditional probabilities of each word given the class are computed by dividing the frequency of each word in a class by its corresponding sum of words in the class  6 A table of conditional probabilities is created, which has the property that the sum of probabilities for each class is 1  7 Some words have a significant difference between probabilities, carrying more weight in determining tweet sentiments  8 The probability function is smoothed to avoid a situation where a word appears in only one corpus  9 The Naive Bayes inference condition rule for binary classification is introduced  10 The product of probabilities for each word in the tweet is calculated, and a conclusion is drawn regarding the sentiment of the tweet  11 Issues with the implementation are discussed, and the simplification of calculations is promised for the next video.](naive_bayes_introduction.md#node-203)
+🔗 **Related:** [1 Introduction to Naive Bayes as a method for text classification  2 The Naive Bayes method is a simple and fast baseline for many text classification tasks  3 The Naive Bayes method makes the assumption that all features used for classification are independent  4 The first step in Naive Bayes is to extract the vocabulary and the word counts from the positive and negative corpora  5 The conditional probabilities of each word given the class are computed by dividing the frequency of each word in a class by its corresponding sum of words in the class  6 A table of conditional probabilities is created, which has the property that the sum of probabilities for each class is 1  7 Some words have a significant difference between probabilities, carrying more weight in determining tweet sentiments  8 The probability function is smoothed to avoid a situation where a word appears in only one corpus  9 The Naive Bayes inference condition rule for binary classification is introduced  10 The product of probabilities for each word in the tweet is calculated, and a conclusion is drawn regarding the sentiment of the tweet  11 Issues with the implementation are discussed, and the simplification of calculations is promised for the next video.](naive_bayes_introduction.md#node-179)
 
 > [!NOTE]
 > Với Laplacian Smoothing, P ('because', neg
@@ -375,7 +375,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-213"></a>
+<a id="node-189"></a>
 
 <p align="center"><kbd><img src="assets/f86d60eb41abfd77092e35dc24b2432f9f7d85fa.png" width="100%"></kbd></p>
 
@@ -386,20 +386,20 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-214"></a>
+<a id="node-190"></a>
 
 <p align="center"><kbd><img src="assets/4c7ad2789c1c8d661069927f4f517835dcd4254d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-215"></a>
+<a id="node-191"></a>
 ## Log Likelihood P1
 
 <br>
 
 
-<a id="node-216"></a>
+<a id="node-192"></a>
 ### 1 The video introduces the concept of **log likelihood**s, which
 
 > [!NOTE]
@@ -426,7 +426,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-217"></a>
+<a id="node-193"></a>
 
 <p align="center"><kbd><img src="assets/967c5a06d1b46119c82adaddb29e27681fc3923e.png" width="100%"></kbd></p>
 
@@ -437,7 +437,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-218"></a>
+<a id="node-194"></a>
 
 <p align="center"><kbd><img src="assets/237977c56a7ec8d23ed91b35cac3b9729ecad7f6.png" width="100%"></kbd></p>
 
@@ -451,7 +451,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-219"></a>
+<a id="node-195"></a>
 
 <p align="center"><kbd><img src="assets/f78808de0b791c0cdaca73e0ea9d35bd1d41109e.png" width="100%"></kbd></p>
 
@@ -464,7 +464,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-220"></a>
+<a id="node-196"></a>
 
 <p align="center"><kbd><img src="assets/85bd6e650265168060f041bbf131e220590c6785.png" width="100%"></kbd></p>
 
@@ -478,13 +478,13 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-221"></a>
+<a id="node-197"></a>
 
 <p align="center"><kbd><img src="assets/15df7f84596892ac83bdf678533993a8a8eecd14.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-222"></a>
+<a id="node-198"></a>
 
 <p align="center"><kbd><img src="assets/e43ac22f2af658181096874c308fd05884a9fe84.png" width="100%"></kbd></p>
 
@@ -493,13 +493,13 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-223"></a>
+<a id="node-199"></a>
 ## Log Likelihood P2
 
 <br>
 
 
-<a id="node-224"></a>
+<a id="node-200"></a>
 ### 1 Inference: Learn how to calculate the **log likelihood of a tweet**
 
 > [!NOTE]
@@ -523,7 +523,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-225"></a>
+<a id="node-201"></a>
 
 <p align="center"><kbd><img src="assets/760a25373025017e2dd76fce990ca1d9db613719.png" width="100%"></kbd></p>
 
@@ -533,7 +533,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-226"></a>
+<a id="node-202"></a>
 
 <p align="center"><kbd><img src="assets/c68e1bfea9de5c33426e4cae117141cc419c910b.png" width="100%"></kbd></p>
 
@@ -543,7 +543,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-227"></a>
+<a id="node-203"></a>
 
 <p align="center"><kbd><img src="assets/7376106269da365b005392d62600b5422f40f78d.png" width="100%"></kbd></p>
 
@@ -553,20 +553,20 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-228"></a>
+<a id="node-204"></a>
 
 <p align="center"><kbd><img src="assets/0040985442a9aced774d7d329cad66e348b9eae4.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-229"></a>
+<a id="node-205"></a>
 ## Training Naive Bayes
 
 <br>
 
 
-<a id="node-230"></a>
+<a id="node-206"></a>
 ### 1 Naive Bayes classifier is trained differently from logistic regression or
 
 > [!NOTE]
@@ -595,7 +595,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-231"></a>
+<a id="node-207"></a>
 
 <p align="center"><kbd><img src="assets/32a4a5bc3e89077a44490a5a52f683d831c466d1.png" width="100%"></kbd></p>
 
@@ -607,7 +607,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-232"></a>
+<a id="node-208"></a>
 
 <p align="center"><kbd><img src="assets/1275c1790c06ffeb0a096c5ae9f1c0ce84396895.png" width="100%"></kbd></p>
 
@@ -616,7 +616,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-233"></a>
+<a id="node-209"></a>
 
 <p align="center"><kbd><img src="assets/ece670043173430d920cfe1dc85330db7d0ee6aa.png" width="100%"></kbd></p>
 
@@ -626,7 +626,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-234"></a>
+<a id="node-210"></a>
 
 <p align="center"><kbd><img src="assets/73944e669bc098a9ebe25bb789d91f86b283530b.png" width="100%"></kbd></p>
 
@@ -637,20 +637,20 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-235"></a>
+<a id="node-211"></a>
 
 <p align="center"><kbd><img src="assets/5eda0cd3c188d5a033aeb0289a8c7ea28ed2708f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-236"></a>
+<a id="node-212"></a>
 ## Lab: Visualizing Likelihoods And Confidence
 
 <br>
 
 
-<a id="node-237"></a>
+<a id="node-213"></a>
 ### In this lab, we will cover an **essential part of data analysis** that has not
 
 > [!NOTE]
@@ -670,24 +670,24 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-238"></a>
+<a id="node-214"></a>
 #### Import
 
 <br>
 
-<a id="node-239"></a>
+<a id="node-215"></a>
 
 <p align="center"><kbd><img src="assets/d5b754c2c4cd227673dbab0b83248ed47105305c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-240"></a>
+<a id="node-216"></a>
 #### Calculate the likelihoods for each tweet
 
 <br>
 
-<a id="node-241"></a>
+<a id="node-217"></a>
 
 <p align="center"><kbd><img src="assets/eb6dd3415fb10225f9a98bd97fa2eb065d8d92bc.png" width="100%"></kbd></p>
 
@@ -713,25 +713,25 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-242"></a>
+<a id="node-218"></a>
 
 <p align="center"><kbd><img src="assets/a61ba5da71fff170ebc0b23e0eb0afe53dbca6e7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-243"></a>
+<a id="node-219"></a>
 
 <p align="center"><kbd><img src="assets/f1320758e86c2ac3602c885211b0bfb4df115961.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-244"></a>
+<a id="node-220"></a>
 #### Using Confidence Ellipses to interpret Naïve Bayes
 
 <br>
 
-<a id="node-245"></a>
+<a id="node-221"></a>
 
 <p align="center"><kbd><img src="assets/049f4f645f39dd85c5c40a5eaf843ce62cd79b1f.png" width="100%"></kbd></p>
 
@@ -744,91 +744,85 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-246"></a>
+<a id="node-222"></a>
 
 <p align="center"><kbd><img src="assets/743478402ced6914196a8580fa5f7b4daf3ea2f6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-247"></a>
+<a id="node-223"></a>
 
 <p align="center"><kbd><img src="assets/34501ee7f9672b925006cd29018eeb57642754a2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-248"></a>
+<a id="node-224"></a>
 
 <p align="center"><kbd><img src="assets/a827cd37120e0aeb17d49aa3f345989645212327.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-249"></a>
+<a id="node-225"></a>
 
 <p align="center"><kbd><img src="assets/ba82807fb78f7f1a46251d496b408dec3fe773a9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-250"></a>
+<a id="node-226"></a>
 
 <p align="center"><kbd><img src="assets/60c755556843921ba681261a57533959f59a3bb7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-251"></a>
+<a id="node-227"></a>
 ## Testing Naive Bayes
 
-<br>
-
-
-<a id="node-252"></a>
-### 1 The main task is to apply the Naive Bayes classifier on **real test examples.**
-
 > [!NOTE]
-> 1 The main task is to apply the Naive Bayes classifier on **real test examples.**
+> 1 The main task is to apply the Naive Bayes classifier on real test examples.
 >
-> 2 The **conditional probabilities** are used to predict the sentiment of new unseen tweets.
+> 2 The conditional probabilities are used to predict the sentiment of new unseen tweets.
 >
-> 3 The **model performance** is evaluated using a **test set** of annotated tweets.
+> 3 The model performance is evaluated using a test set of annotated tweets.
 >
-> 4 **Pre-processing of text** is necessary before applying the model to predict sentiments.
+> 4 Pre-processing of text is necessary before applying the model to predict sentiments.
 >
-> 5 The model can only give a score for words **it's seen before.**
+> 5 The model can only give a score for words it's seen before.
 >
-> 6 The **score obtained** from the model can be used to predict whether a tweet has
+> 6 The score obtained from the model can be used to predict whether a tweet has
 > positive or negative sentiment.
 >
-> 7 **Validation set** is used to measure the performance of the trained model.
+> 7 Validation set is used to measure the performance of the trained model.
 >
-> 8 The **accuracy function** is implemented to **measure the performance of the model**.
+> 8 The accuracy function is implemented to measure the performance of the model.
 >
 > 9 The score of each entry in the validation set is computed and evaluated to get a vector of
 > zeros and ones indicating whether the predicted sentiment is negative or positive,
 > respectively.
 >
-> 10 The **accuracy of the model** is computed by **comparing the predicted labels** with
-> the **true labels** provided in the validation set.
+> 10 The accuracy of the model is computed by comparing the predicted labels with
+> the true labels provided in the validation set.
 >
-> 11 The words that don't appear in the Lambda table are treated as **neutral words.**
+> 11 The words that don't appear in the Λ table are treated as neutral words.
 >
 > 12 The Naive Bayes method is applied to classify tweets in the coding exercise at the end
 > of the week.
 
 <br>
 
-<a id="node-253"></a>
+<a id="node-228"></a>
 
 <p align="center"><kbd><img src="assets/6b3226c6c56b059c0f545490bc42e16b96ed0b7e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-254"></a>
+<a id="node-229"></a>
 
 <p align="center"><kbd><img src="assets/80e8a6b06b45b3e318473ad0f609e39ede4430b9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-255"></a>
+<a id="node-230"></a>
 
 <p align="center"><kbd><img src="assets/201a6f8b2bc653edb5d4b15cd9363878b6ce3da1.png" width="100%"></kbd></p>
 
@@ -840,7 +834,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-256"></a>
+<a id="node-231"></a>
 
 <p align="center"><kbd><img src="assets/4a6f0445961dd928196746a00b679db9966b943c.png" width="100%"></kbd></p>
 
@@ -849,69 +843,64 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-257"></a>
+<a id="node-232"></a>
 
 <p align="center"><kbd><img src="assets/f01a3c893de819c9247cb34f7511f1b16257e8ff.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-258"></a>
+<a id="node-233"></a>
 
 <p align="center"><kbd><img src="assets/efd038559b727dd27d6fbc3624bb3dabd4c4c4b5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-259"></a>
+<a id="node-234"></a>
 ## Application Of Naive Bayes
 
-<br>
-
-
-<a id="node-260"></a>
-### 1 Naive Bayes method can be used for v**arious classification tasks**, such as \\*sentiment
-
 > [!NOTE]
-> 1 Naive Bayes method can be used for v**arious classification tasks**, such as **sentiment
-> analysis**, **author identification, spam filtering, information retrieval, and word
-> disambiguation.** 
-> 2 The **Naive Bayes formula** calculates the **ratio between** the **conditional probabilities of the
-> priors** and **likelihoods to estimate the probability for each class**.
+> 1 Naive Bayes method can be used for various classification tasks, such as sentiment
+> analysis, author identification, spam filtering, information retrieval, and word
+> disambiguation.
 >
-> 3 Naive Bayes can be used for **author identification** by training a model to recognize
-> whether a new document was written by one author or another, based on their **unique
-> writing style.**
+> 2 The Naive Bayes formula calculates the ratio between the conditional probabilities of the
+> priors and likelihoods to estimate the probability for each class.
 >
-> 4 **Spam filtering** can be performed using Naive Bayes by **analyzing the sender, subject,
-> and content** of an email to determine whether it is spam or not.
+> 3 Naive Bayes can be used for author identification by training a model to recognize
+> whether a new document was written by one author or another, based on their unique
+> writing style.
 >
-> 5 **Information retrieval** can be done using Naive Bayes by calculating the **likelihood** of
-> **documents given a query** and storing them based on their likelihoods.
+> 4 Spam filtering can be performed using Naive Bayes by analyzing the sender, subject,
+> and content of an email to determine whether it is spam or not.
 >
-> 6 Naive Bayes can be used for **word disambiguation** by **calculating the score of the
-> documents given that a word refers to each possible meaning**, and choosing the one with
+> 5 Information retrieval can be done using Naive Bayes by calculating the likelihood of
+> documents given a query and storing them based on their likelihoods.
+>
+> 6 Naive Bayes can be used for word disambiguation by calculating the score of the
+> documents given that a word refers to each possible meaning, and choosing the one with
 > the highest score.
 >
-> 7 Naive Bayes is a **popular method** due to its **simplicity** in training, use, and interpretation.
+> 7 Naive Bayes is a popular method due to its simplicity in training, use, and interpretation.
 >
 > 8 The assumptions underlying the Naive Bayes method will be discussed in the upcoming
 > videos.
 
 <br>
 
-<a id="node-261"></a>
+<a id="node-235"></a>
 
 <p align="center"><kbd><img src="assets/7b1eb21efb9c9de677bb18f6c8fe05aee3f15ed3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-262"></a>
+<a id="node-236"></a>
 
 <p align="center"><kbd><img src="assets/9d4ff7d1dbce35d572e81cb0ee25e856c8685f3d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-263"></a>
+<a id="node-237"></a>
 
 <p align="center"><kbd><img src="assets/d7af8f12553f63e4cdb56aec47616148f6b15cb1.png" width="100%"></kbd></p>
 
@@ -920,19 +909,19 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-264"></a>
+<a id="node-238"></a>
 
 <p align="center"><kbd><img src="assets/da926f6b0776b3f4c0ce7f964c07341ac69a2fd6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-265"></a>
+<a id="node-239"></a>
 
 <p align="center"><kbd><img src="assets/aba56daec3736af8cd7a6a250db3d1668f63a8d4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-266"></a>
+<a id="node-240"></a>
 
 <p align="center"><kbd><img src="assets/aca703c918d48886a1fad30e96bf867a1d270065.png" width="100%"></kbd></p>
 
@@ -943,32 +932,26 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-267"></a>
+<a id="node-241"></a>
 ## Naive Bayes Assumptions
 
-<br>
-
-
-<a id="node-268"></a>
-### 1 The main **assumption** underlying the naïve bayes method is **independence**
-
 > [!NOTE]
-> 1 The main **assumption** underlying the naïve bayes method is **independence**
-> of **words in a sentence.**
+> 1 The main assumption underlying the naïve bayes method is independence
+> of words in a sentence.
 >
-> 2 Naïve bayes is a **simple** model that **doesn't require setting custom
-> parameter**s.
+> 2 Naïve bayes is a simple model that doesn't require setting custom
+> parameters.
 >
-> 3 Naïve bayes assumes **independence** between the predictors or **features**
-> associated with each class, which may **not always be the case.**
+> 3 Naïve bayes assumes independence between the predictors or features
+> associated with each class, which may not always be the case.
 >
-> 4 Naïve bayes could l**ead to under or overestimation** of the **conditional
-> probabilities of individual words.**  5 Naïve bayes **relies on the distribution of the
-> training data sets**, which could result in an **overly optimistic or pessimistic
-> model**.
+> 4 Naïve bayes could lead to under or overestimation of the conditional
+> probabilities of individual words.  5 Naïve bayes relies on the distribution of the
+> training data sets, which could result in an overly optimistic or pessimistic
+> model.
 >
-> 6 The assumption of **independence in naïve bayes is difficult to guarantee**, but
-> the model **works well in certain situations.**
+> 6 The assumption of independence in naïve bayes is difficult to guarantee, but
+> the model works well in certain situations.
 >
 > 7 The relative frequency of positive and negative tweets in training data sets needs
 > to be balanced for accurate results.
@@ -978,13 +961,13 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-269"></a>
+<a id="node-242"></a>
 
 <p align="center"><kbd><img src="assets/db1d9cfb37dfb09b660bfbf7f70c601460ed9a4a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-270"></a>
+<a id="node-243"></a>
 
 <p align="center"><kbd><img src="assets/26a1f76debf5824ae7f7541c43cc47eb5a2ab57d.png" width="100%"></kbd></p>
 
@@ -996,7 +979,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-271"></a>
+<a id="node-244"></a>
 
 <p align="center"><kbd><img src="assets/9ceab8f145a0b457c8297769ce80f955449765ed.png" width="100%"></kbd></p>
 
@@ -1006,7 +989,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-272"></a>
+<a id="node-245"></a>
 
 <p align="center"><kbd><img src="assets/cd03aaf06ba932c108f6056be863fe1ba1cda4a4.png" width="100%"></kbd></p>
 
@@ -1019,7 +1002,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-273"></a>
+<a id="node-246"></a>
 
 <p align="center"><kbd><img src="assets/254c937517b0e755e0c9541e62c432d2579ee5b0.png" width="100%"></kbd></p>
 
@@ -1030,46 +1013,40 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-274"></a>
+<a id="node-247"></a>
 ## Error Analysis
 
-<br>
-
-
-<a id="node-275"></a>
-### 1 **NLP errors** are **inevitable** no matter what method you use
-
 > [!NOTE]
-> 1 **NLP errors** are **inevitable** no matter what method you use
+> 1 NLP errors are inevitable no matter what method you use
 >
-> 2 Errors in NLP can be caused by **loss of semantic meaning**, **word**
-> **order**, and **language quirks** that are **difficult for machines** to understand
+> 2 Errors in NLP can be caused by loss of semantic meaning, word
+> order, and language quirks that are difficult for machines to understand
 >
-> 3 It's important to **analyze processed text** to ensure accurate results,
-> including **checking for punctuation and word removal**
+> 3 It's important to analyze processed text to ensure accurate results,
+> including checking for punctuation and word removal
 >
-> 4 **Naïve base classification** relies on word **frequency** **counts** and can
-> lead to **errors due to its independence assumption**
+> 4 Naïve base classification relies on word frequency counts and can
+> lead to errors due to its independence assumption
 >
-> 5 **Word vectors** can be used to improve NLP results
+> 5 Word vectors can be used to improve NLP results
 >
-> 6 Naïve base classification may fail in cases of **adversarial attacks,**
-> which are **language phenomena like sarcasm, irony, and euphemism**
-> that machines have **difficulty understanding.**
+> 6 Naïve base classification may fail in cases of adversarial attacks,
+> which are language phenomena like sarcasm, irony, and euphemism
+> that machines have difficulty understanding.
 
 <br>
 
-<a id="node-276"></a>
+<a id="node-248"></a>
 
 <p align="center"><kbd><img src="assets/bdca8e533196c996aac95ba9f789bef862f623b1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-277"></a>
+<a id="node-249"></a>
 
 <p align="center"><kbd><img src="assets/206176e5753ec78a2b44dd2ef30bc090ffe946cb.png" width="100%"></kbd></p>
 
-🔗 **Related:** [PREPROCESSING](preprocessing.md#node-37)
+🔗 **Related:** [PREPROCESSING](preprocessing.md#node-32)
 
 > [!NOTE]
 > Đại khái là nhớ lại 1 điểm lưu ý trong Processing bữa trước khi
@@ -1078,7 +1055,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-278"></a>
+<a id="node-250"></a>
 
 <p align="center"><kbd><img src="assets/28f2e4e21d9996002bbad882a3deac7dfe0cda13.png" width="100%"></kbd></p>
 
@@ -1087,7 +1064,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-279"></a>
+<a id="node-251"></a>
 
 <p align="center"><kbd><img src="assets/dda8fe5bc8a9bce5f3b9d521e2e871d8a9fd93cc.png" width="100%"></kbd></p>
 
@@ -1097,7 +1074,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-280"></a>
+<a id="node-252"></a>
 
 <p align="center"><kbd><img src="assets/2a0440261c6b534a6706d76ba406012a9008fb97.png" width="100%"></kbd></p>
 
@@ -1108,54 +1085,36 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-281"></a>
-#### An adversarial attack in the context of naïve Bayes refers to a situation where the model misclassifies a text input due to the use of language phenomena such as **sarcasm, irony, or euphemism.** These language phenomena can be **easily understood by humans** but can be **challenging for machines** to interpret. In the given example, the text "This is a ridiculously powerful movie. The plot was gripping and I cried right through until the ending" contains **positive** language, but the **pre-processing step used by naïve Bayes** to extract features and analyze sentiment may **incorrectly classify it as negative** due to the presence of words like "**ridiculous**" or "cried."  This can **result in inaccurate sentiment analysis** and affect the overall performance of the model. To avoid such adversarial attacks, it is important to use **more sophisticated models** that can better understand the nuances of language and context. (GPT)
-
-> [!NOTE]
-> Đại khái cái sao đó chính là hiện tượng gọi là Adversarial
-> attack, model quá đơn giản như Naive Bayes ko nắm bắt
-> được sự 'lắt léo' trong ngôn ngữ khiến nó ko hiểu được ý
-> nghĩa positive của câu trên
-
-<br>
-
-
-<a id="node-282"></a>
-## Week Conclusion
-
-<br>
-
-
-<a id="node-283"></a>
+<a id="node-253"></a>
 ## Quiz
 
 <br>
 
-<a id="node-284"></a>
+<a id="node-254"></a>
 
 <p align="center"><kbd><img src="assets/dccf1666f933a953c7a279338c8546b911a5a3c8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-285"></a>
+<a id="node-255"></a>
 
 <p align="center"><kbd><img src="assets/35a244169e495ddbdd96622b52c8fd0e4c735b38.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-286"></a>
+<a id="node-256"></a>
 
 <p align="center"><kbd><img src="assets/fb9deed6f3b8fa2961bf78ecedbfd46577d2d49e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-287"></a>
+<a id="node-257"></a>
 
 <p align="center"><kbd><img src="assets/e09ae57f2c2614f4d8aa145b130121870d7b0201.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-288"></a>
+<a id="node-258"></a>
 
 <p align="center"><kbd><img src="assets/169cde840dcb9fa7e7ff78a0f5458a119fb790de.png" width="100%"></kbd></p>
 
@@ -1166,44 +1125,44 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-289"></a>
+<a id="node-259"></a>
 
 <p align="center"><kbd><img src="assets/45229f46e2c1907d266abf16db7c674519a91c2d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-290"></a>
+<a id="node-260"></a>
 
 <p align="center"><kbd><img src="assets/d4f5e324ad0b2c51462ac6ee94daa5e661f32a33.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-291"></a>
+<a id="node-261"></a>
 
 <p align="center"><kbd><img src="assets/3a3898618f26a59157118589ea09933a573d428a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-292"></a>
+<a id="node-262"></a>
 
 <p align="center"><kbd><img src="assets/b9e9e3996ef394f2594304f538ca34d6743f3603.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-293"></a>
+<a id="node-263"></a>
 
 <p align="center"><kbd><img src="assets/fbe971082faa04f4f29fb3228ea7e56b61c3da6f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-294"></a>
+<a id="node-264"></a>
 ## PROGRAMMING ASSIGNMENT: Naive Bayes
 
 <br>
 
 
-<a id="node-295"></a>
+<a id="node-265"></a>
 ### Welcome to week two of this specialization. You will learn about \\*Naive
 
 > [!NOTE]
@@ -1234,18 +1193,18 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-296"></a>
+<a id="node-266"></a>
 #### Importing Functions and Data
 
 <br>
 
 
-<a id="node-297"></a>
+<a id="node-267"></a>
 #### from utils import process_tweet, lookup import pdb from **nltk.corpus** import **stopwords**, **twitter_samples** import numpy as np import pandas as pd import nltk import string from nltk.tokenize import **TweetTokenizer** from os import getcwd import w2_unittest  **nltk.download('twitter_samples') nltk.download('stopwords')**
 
 <br>
 
-<a id="node-298"></a>
+<a id="node-268"></a>
 
 <p align="center"><kbd><img src="assets/7e6ed9134bc35a610b82f660be5e3bd4bf506f43.png" width="100%"></kbd></p>
 
@@ -1258,84 +1217,84 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-299"></a>
+<a id="node-269"></a>
 #### filePath = f"{getcwd()}/../tmp2/" nltk.data.path.append(filePath)  \\/# **get the sets of positive and negative tweets**\\/ all_positive_tweets = twitter_samples.strings('**positive_tweets.json**') all_negative_tweets = twitter_samples.strings('**negative_tweets.json**')  \\/# **split the data into two pieces**, one for training and one for testing (validation set) \\/test_pos = all_positive_tweets[**4000**:] train_pos = all_positive_tweets[:**4000**] test_neg = all_negative_tweets[4000:] train_neg = all_negative_tweets[:4000]  train_x = train_pos + train_neg test_x = test_pos + test_neg  **# avoid assumptions about the length of all_positive_tweets** train_y = np.append(np.ones(len(train_pos)), np.zeros(len(train_neg))) test_y = np.append(np.ones(len(test_pos)), np.zeros(len(test_neg)))
 
 <br>
 
 
-<a id="node-300"></a>
+<a id="node-270"></a>
 #### 1 - Process the Data
 
 <br>
 
 
-<a id="node-301"></a>
+<a id="node-271"></a>
 #### For any machine learning project, once you've gathered the data, **the first step is to process it** to make useful inputs to your model.  **Remove noise**: You will first want to remove noise from your data -- that is, **remove words that don't tell you much** about the content. These include all **common words like 'I, you, are, is**, etc...' that would not give us enough information on the sentiment.  We'll also remove **stock market tickers**, **retweet** **symbols**, **hyperlinks**, and **hashtags** because they can not tell you a lot of information on the sentiment. You also want to remove all the **punctuation** from a tweet. The reason for doing this is because we want to **treat words with or without the punctuation** as the same word, instead of treating "happy" , "happy?", " happy!", "happy," and "happy." as different words.  Finally you want to use **stemming** to only keep track of one variation of each word. In other words, we'll treat "motivation", "motivated", and " motivate" similarly by grouping them within the same stem of **"motiv-"**. We have given you the function \\/**process_tweet**\\/ that does this for you.
 
 <br>
 
 
-<a id="node-302"></a>
+<a id="node-272"></a>
 #### custom_tweet = "RT @Twitter @chapagain Hello There! Have a great day. :) #good #morning http://chapagain.com.np"  # print cleaned tweet print(process_tweet(custom_tweet)) -> ['hello', 'great', 'day', ':)', 'good', 'morn']
 
 <br>
 
 
-<a id="node-303"></a>
+<a id="node-273"></a>
 #### 1.1 - Implementing your Helper Functions
 
 <br>
 
 
-<a id="node-304"></a>
+<a id="node-274"></a>
 #### To help you train your naive bayes model, you will need to **compute a dictionary** where the **keys are a tuple (word, label)** and the values are the corresponding **frequency**. Note that the labels we'll use here are 1 **for positive and 0 for negative**.  You will also implement a **lookup helper function** that takes in the **freqs** **dictionary**, a **word**, and a **label** (1 or 0) and **returns the number of times that word and label tuple appears in the collection of tweets.**  For example: given a list of tweets ["I am rather excited", "you are rather happy"] and the label 1, the function will return a dictionary that contains the following key-value pairs:  { ("rather", 1): 2, ("happi", 1) : 1, ("excit", 1) : 1 }  - Notice how for each word in the given string, the same label 1 is assigned to each word.  - Notice how the words "I" and "am" are not saved, since it was removed by **process_tweet** because it is a **stopword**.  - Notice how the word " rather" appears twice in the list of tweets, and so its count value is 2.
 
 <br>
 
 
-<a id="node-305"></a>
+<a id="node-275"></a>
 #### Exercise 1 - count_tweets
 
 <br>
 
 
-<a id="node-306"></a>
+<a id="node-276"></a>
 #### Create a function **count_tweets** that **takes a list of tweets** as input, **cleans** all of them, and **returns a dictionary**.  - The **key** in the dictionary is a **tuple containing the stemmed word and its class label,** e.g. ("happi",1).  - The **value** the **number of times this word appears in the given collection of tweet**s (an integer).  **Hints**  • Please use the `**process_tweet**` function that was imported above, and then store the words in their respective dictionaries and sets.  • You may find it useful to use the `**zip**` function to match each element in `tweets` with each element in `ys`.  • Remember to **check** if the key in the dictionary **exists** before adding that key to the dictionary, or incrementing its value.  • Assume that the `result` dictionary that is input will contain clean key-value pairs (you can assume that the values will be integers that can be incremented). It is **good practice to check the datatype** before **incrementing** the value, but it's not required here.
 
 <br>
 
-<a id="node-307"></a>
+<a id="node-277"></a>
 
 <p align="center"><kbd><img src="assets/a48010192fd507381b3836d9e443004ee2c653d8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-308"></a>
+<a id="node-278"></a>
 
 <p align="center"><kbd><img src="assets/a78dec7e25060115b81349b4678a208a18404aae.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-309"></a>
+<a id="node-279"></a>
 #### 2 - Train your Model using Naive Bayes
 
 <br>
 
 
-<a id="node-310"></a>
+<a id="node-280"></a>
 #### Some explaination
 
 <br>
 
-<a id="node-311"></a>
+<a id="node-281"></a>
 
 <p align="center"><kbd><img src="assets/be33a50225a9799f3f00e0f1527db9b296c182c6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-312"></a>
+<a id="node-282"></a>
 
 <p align="center"><kbd><img src="assets/568c0f65b422af5f73d557cdefabc508bda43650.png" width="100%"></kbd></p>
 
@@ -1346,7 +1305,7 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-313"></a>
+<a id="node-283"></a>
 
 <p align="center"><kbd><img src="assets/522544d33a5ec2f2b4415dde55f2799acdaae872.png" width="100%"></kbd></p>
 
@@ -1355,36 +1314,36 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-314"></a>
+<a id="node-284"></a>
 #### \\/**Create freqs dictionary** \\/  • Given your **count_tweets** function, you can compute a dictionary called **freqs** that contains all the frequencies.  • In this freqs dictionary, the **key** is the tuple **(word, label)**  • The value is the **number of times it has appeared**.  We will use this dictionary in several parts of this assignment.
 
 <br>
 
 
-<a id="node-315"></a>
+<a id="node-285"></a>
 #### # Build the freqs dictionary for later uses freqs = count_tweets({}, train_x, train_y)
 
 <br>
 
 
-<a id="node-316"></a>
+<a id="node-286"></a>
 #### Exercise 2 - train_naive_bayes
 
 <br>
 
-<a id="node-317"></a>
+<a id="node-287"></a>
 
 <p align="center"><kbd><img src="assets/9b70f80fd855f957c7b859a03f1aa3eae04d71b6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-318"></a>
+<a id="node-288"></a>
 
 <p align="center"><kbd><img src="assets/18c01da4bb34cd94d3b21764e82b612fb8cc1d52.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-319"></a>
+<a id="node-289"></a>
 
 <p align="center"><kbd><img src="assets/ab0e7b463519b20fa4aee05409ee89d96ec7fc55.png" width="100%"></kbd></p>
 
@@ -1401,61 +1360,61 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-320"></a>
+<a id="node-290"></a>
 
 <p align="center"><kbd><img src="assets/cfd0dc805088d7d45a8ac1c30dbfe18759ca7f63.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-321"></a>
+<a id="node-291"></a>
 #### 3 - Test your Naive Bayes
 
 <br>
 
 
-<a id="node-322"></a>
+<a id="node-292"></a>
 #### Exercise 3 - naive_bayes_predict
 
 <br>
 
-<a id="node-323"></a>
+<a id="node-293"></a>
 
 <p align="center"><kbd><img src="assets/31b7ebbb66d23d5c56fad667eb7e1b9f5ed1134a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-324"></a>
+<a id="node-294"></a>
 #### Note   Note we calculate the **prior** from the **training data**, and that the training data is evenly split between positive and negative labels (4000 positive and 4000 negative tweets). This means that the ratio of positive to negative 1, and the logprior is **0.**  The value of 0.0 means that when we add the logprior to the log likelihood, we're just adding zero to the log likelihood. However, please remember to include the logprior, because whenever the data is not perfectly balanced, the logprior will be a non-zero value.
 
 <br>
 
-<a id="node-325"></a>
+<a id="node-295"></a>
 
 <p align="center"><kbd><img src="assets/8fe7a932b4618d761af00287b5b77f28028934fc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-326"></a>
+<a id="node-296"></a>
 
 <p align="center"><kbd><img src="assets/2770d64fef227f40d790d92fb3e9f3f4f35c7b4a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-327"></a>
+<a id="node-297"></a>
 #### Exercise 4 - test_naive_bayes
 
 <br>
 
 
-<a id="node-328"></a>
+<a id="node-298"></a>
 #### Implement test_naive_bayes. **Instructions**:  • Implement **test_naive_bayes** to check the accuracy of your predictions.  • The function takes in your **test_x**, **test_y**, **log_prior**, and **loglikelihood**  • It returns the accuracy of your model.  • First, use **naive_bayes_predict** function to make predictions for each tweet in test_x.
 
 <br>
 
-<a id="node-329"></a>
+<a id="node-299"></a>
 
 <p align="center"><kbd><img src="assets/75d8cf0357a25af2c5775489950ac63a30cd37c8.png" width="100%"></kbd></p>
 
@@ -1474,73 +1433,73 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 
 <br>
 
-<a id="node-330"></a>
+<a id="node-300"></a>
 
 <p align="center"><kbd><img src="assets/7c2a48e1caaef4e554ea54658302a2ab7288f195.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-331"></a>
+<a id="node-301"></a>
 #### # UNQ_C7 (UNIQUE CELL IDENTIFIER, DO NOT EDIT) # Run this cell to test your function for tweet in ['I am happy', 'I am bad', 'this movie should have been great.', 'great', 'great great', 'great great great', 'great great great great']:     # print( '%s -> %f' % (tweet, naive_bayes_predict(tweet, logprior, loglikelihood)))     p = naive_bayes_predict(tweet, logprior, loglikelihood) #     print(f'{tweet} -> {p:.2f} ({p_category})')     print(f'{tweet} -> {p:.2f}')  -> I am happy -> 2.14 I am bad -> -1.31 this movie should have been great. -> 2.12 great -> 2.13 great great -> 4.26 great great great -> 6.39 great great great great -> 8.52 
 
 <br>
 
-<a id="node-332"></a>
+<a id="node-302"></a>
 
 <p align="center"><kbd><img src="assets/15671033ba2a210fabde7bae17e7fcf15d91c889.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-333"></a>
+<a id="node-303"></a>
 #### 4 - Filter words by Ratio of Positive to Negative Counts
 
 <br>
 
 
-<a id="node-334"></a>
+<a id="node-304"></a>
 #### • Some words have **more positive counts** than others, and can be considered "more positive". Likewise, some words can be considered more negative than others.  • One way for us to define the level of positiveness or negativeness, without calculating the log likelihood, is to compare the positive to negative frequency of the word.  ▪ Note that we can also use the log likelihood calculations to compare relative positivity or negativity of words.  • We can calculate the ratio of positive to negative frequencies of a word.  • Once we're able to calculate these ratios, we can also **filter a subset of words** that have a **minimum ratio of positivity / negativity** or higher.  • Similarly, we can also filter a subset of words that have a maximum ratio of positivity / negativity or lower (words that are at least as negative, or even more negative than a given threshold).
 
 <br>
 
 
-<a id="node-335"></a>
+<a id="node-305"></a>
 #### Exercise 5 - get_ratio
 
 <br>
 
-<a id="node-336"></a>
+<a id="node-306"></a>
 
 <p align="center"><kbd><img src="assets/90cce6cacf6456c8523f5c0795f4666a3b79ce7d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-337"></a>
+<a id="node-307"></a>
 
 <p align="center"><kbd><img src="assets/40aaf11fd869fa7eebcb25a0c410adf067a94ad2.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-338"></a>
+<a id="node-308"></a>
 #### Exercise 6 - get_words_by_threshold
 
 <br>
 
-<a id="node-339"></a>
+<a id="node-309"></a>
 
 <p align="center"><kbd><img src="assets/7b1a5cf76f4368bede2a2696a198fbade6433cac.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-340"></a>
+<a id="node-310"></a>
 
 <p align="center"><kbd><img src="assets/9d047b1ea2f069f1b200bc1c43215a967c6f341a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-341"></a>
+<a id="node-311"></a>
 
 <p align="center"><kbd><img src="assets/aca666002df7d2ce2a79a326ffa73ec5ffa7df5e.png" width="100%"></kbd></p>
 
@@ -1553,13 +1512,13 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-342"></a>
+<a id="node-312"></a>
 #### 5 - Error Analysis¶
 
 <br>
 
 
-<a id="node-343"></a>
+<a id="node-313"></a>
 #### # Some error analysis done for you print('Truth Predicted Tweet') for x, y in zip(test_x, test_y):     y_hat = naive_bayes_predict(x, logprior, loglikelihood)     if y != (np.sign(y_hat) > 0):         print('%d\\t%0.2f\\t%s' % (y, np.sign(y_hat) > 0, ' '.join(             process_tweet(x)).encode('ascii', 'ignore')))
 
 > [!NOTE]
@@ -1571,19 +1530,19 @@ Learn the theory behind Bayes' rule for conditional probabilities, then apply it
 <br>
 
 
-<a id="node-344"></a>
+<a id="node-314"></a>
 #### Truth Predicted Tweet 1 0.00 b'truli later move know queen bee upward bound movingonup' 1 0.00 b'new report talk burn calori cold work harder warm feel better weather :p' 1 0.00 b'harri niall 94 harri born ik stupid wanna chang :D' 1 0.00 b'park get sunlight' 1 0.00 b'uff itna miss karhi thi ap :p' 0 1.00 b'hello info possibl interest jonatha close join beti :( great' 0 1.00 b'u prob fun david' 0 1.00 b'pat jay' 0 1.00 b'sr financi analyst expedia inc bellevu wa financ expediajob job job hire'
 
 <br>
 
 
-<a id="node-345"></a>
+<a id="node-315"></a>
 #### 6 - Predict with your own Tweet
 
 <br>
 
 
-<a id="node-346"></a>
+<a id="node-316"></a>
 #### # Test with your own tweet - feel free to modify `my_tweet` my_tweet = 'I am happy because I am learning :)'  p = naive_bayes_predict(my_tweet, logprior, loglikelihood) print(p)  -> 9.571143871339594
 
 > [!NOTE]

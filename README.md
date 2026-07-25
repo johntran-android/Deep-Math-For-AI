@@ -2,7 +2,7 @@
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
 
-**`~12,457 notes` · `~16,935 screenshots` · `19 courses`** · work in progress
+**`~12,483 notes` · `~16,944 screenshots` · `19 courses`** · work in progress
 
 ---
 
@@ -411,7 +411,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [Σ Lec 21](a0_stat110/σ_lec_21.md) — `0n / 8i` 
 - [Σ lec 22](a0_stat110/σ_lec_22.md) — `0n / 3i`
 
-### 📂 Casella & Berger — Statistical Inference (📝 909 Notes | 📸 1051 Screenshots)
+### 📂 Casella & Berger — Statistical Inference (📝 915 Notes | 📸 1057 Screenshots)
 
 - [1.1 Set Theory](a0_casella/11_set_theory.md) — `6n / 9i` 
 - [1.2.1 Axiomatic Foundation](a0_casella/121_axiomatic_foundation.md) — `11n / 10i` 
@@ -457,7 +457,7 @@ Mục tiêu là trở thành một engineer có thể hiểu AI system ở tần
 - [9.1 Introduction](a0_casella/91_introduction.md) — `9n / 9i` 
 - [9.2 Methods Of Finding Interval Estimators](a0_casella/92_methods_of_finding_interval_estimators.md) — `53n / 61i` 
 - [9.3 Methods Of Evaluating Interval Estimators](a0_casella/93_methods_of_evaluating_interval_estimators.md) — `36n / 35i` 
-- [10.1 Asymtotic Evaluation - Point Estimation](a0_casella/101_asymtotic_evaluation_point_estimation.md) — `22n / 25i`
+- [10.1 Asymtotic Evaluation - Point Estimation](a0_casella/101_asymtotic_evaluation_point_estimation.md) — `28n / 31i`
 
 ### 📂 ISL — Introduction to Statistical Learning (📝 95 Notes | 📸 233 Screenshots)
 
@@ -576,7 +576,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_sm/72_limited_memory_quasi_newton_methods.md) — `20n / 23i` 
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_sm/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 
-### 📂 Bishop PRML — Pattern Recognition & ML (📝 325 Notes | 📸 450 Screenshots)
+### 📂 Bishop PRML — Pattern Recognition & ML (📝 328 Notes | 📸 453 Screenshots)
 
 - [2.0 Intro](a0_bishop_prml/20_intro.md) — `4n / 5i` 
 - [2.1 Binary Variables](a0_bishop_prml/21_binary_variables.md) — `16n / 24i` 
@@ -615,6 +615,7 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [3.1.3 Sequential learning](a0_bishop_prml/313_sequential_learning.md) — `1n / 2i` 
 - [3.1.4 Regularization](a0_bishop_prml/314_regularization.md) — `3n / 7i` 
 - [3.1.5 Multiple outputs](a0_bishop_prml/315_multiple_outputs.md) — `3n / 3i` 
+- [3.2 The Bias-Variance Decomposition](a0_bishop_prml/32_the_bias_variance_decomposition.md) — `3n / 3i` 
 - [Appendix C - Matrices](a0_bishop_prml/appendix_c_matrices.md) — `19n / 20i`
 
 ### 📂 CS50X — Programming Foundations (📝 1259 Notes | 📸 1845 Screenshots)
@@ -732,20 +733,20 @@ Derivative Approx](numerical_optimization/81_finite_difference_derivative_approx
 - [Lecture 15: Add Knowledge To Language Model](a0_cs224n/lecture_15_add_knowledge_to_language_model.md) — `23n / 27i` 
 - [Assignment 5: Self-attention, Transformers And Pretraining](a0_cs224n/assignment_5_self_attention_transformers_and_pretraining.md) — `10n / 9i`
 
-### 📂 NLP Specialization (📝 1446 Notes | 📸 2284 Screenshots)
+### 📂 NLP Specialization (📝 1463 Notes | 📸 2284 Screenshots)
 
-- [C1w1_logistic Regression](a1_nlpspec/c1w1_logistic_regression.md) — `46n / 113i` 
-- [C1w2 - Naive Bayes](a1_nlpspec/c1w2_naive_bayes.md) — `57n / 112i` 
+- [C2w1_autocorrect](a1_nlpspec/c2w1_autocorrect.md) — `56n / 123i` 
+- [C2w2_part Of Speech Tagging And Hidden Markov Models](a1_nlpspec/c2w2_part_of_speech_tagging_and_hidden_markov_models.md) — `146n / 171i` 
+- [C2w3_autocomplete And Language Models](a1_nlpspec/c2w3_autocomplete_and_language_models.md) — `128n / 143i` 
+- [C3w4_word Embeddings With Neural Networks](a1_nlpspec/c3w4_word_embeddings_with_neural_networks.md) — `134n / 211i` 
+- [C1w1_logistic Regression](a1_nlpspec/c1w1_logistic_regression.md) — `60n / 113i` 
+- [C1w2 - Naive Bayes](a1_nlpspec/c1w2_naive_bayes.md) — `60n / 112i` 
 - [C1w3 - Vector Space Models](a1_nlpspec/c1w3_vector_space_models.md) — `81n / 122i` 
 - [C1w4 - Machine Translation & Document Search](a1_nlpspec/c1w4_machine_translation_document_search.md) — `77n / 115i` 
 - [C3w1_neural Networks For Sentiment Analysis](a1_nlpspec/c3w1_neural_networks_for_sentiment_analysis.md) — `73n / 141i` 
 - [C3w2_recurrent Neural Networks For Language Modeling](a1_nlpspec/c3w2_recurrent_neural_networks_for_language_modeling.md) — `67n / 138i` 
 - [C3W3_LSTMs AND NAMED ENTITY REGCONITION:](a1_nlpspec/c3w3_lstms_and_named_entity_regconition.md) — `64n / 108i` 
 - [C3w4 - Siamese Network](a1_nlpspec/c3w4_siamese_network.md) — `73n / 122i` 
-- [C2w1_autocorrect](a1_nlpspec/c2w1_autocorrect.md) — `56n / 123i` 
-- [C2w2_part Of Speech Tagging And Hidden Markov Models](a1_nlpspec/c2w2_part_of_speech_tagging_and_hidden_markov_models.md) — `146n / 171i` 
-- [C2w3_autocomplete And Language Models](a1_nlpspec/c2w3_autocomplete_and_language_models.md) — `128n / 143i` 
-- [C3w4_word Embeddings With Neural Networks](a1_nlpspec/c3w4_word_embeddings_with_neural_networks.md) — `134n / 211i` 
 - [C4w1_neural Machine Translation](a1_nlpspec/c4w1_neural_machine_translation.md) — `170n / 220i` 
 - [C4w2_text Summarization](a1_nlpspec/c4w2_text_summarization.md) — `77n / 145i` 
 - [C4w3 - Question Answering](a1_nlpspec/c4w3_question_answering.md) — `119n / 187i` 

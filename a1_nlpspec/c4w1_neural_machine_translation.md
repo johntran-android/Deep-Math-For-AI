@@ -18,13 +18,13 @@ predictions
 quality
  • Describe several decoding methods including MBR and Beam search
 
-<a id="node-2658"></a>
+<a id="node-2628"></a>
 ## Course 4 Introduction
 
 <br>
 
 
-<a id="node-2659"></a>
+<a id="node-2629"></a>
 ### Main ideas from the provided text:
 
 > [!NOTE]
@@ -68,19 +68,19 @@ quality
 <br>
 
 
-<a id="node-2660"></a>
+<a id="node-2630"></a>
 ## Week Introduction
 
 <br>
 
 
-<a id="node-2661"></a>
+<a id="node-2631"></a>
 ## Seq2seq
 
 <br>
 
 
-<a id="node-2662"></a>
+<a id="node-2632"></a>
 ### 1. Introduction to **Neural Machine Translation (NMT)**: The text introduces **neural machine translation**,
 
 > [!NOTE]
@@ -119,19 +119,19 @@ quality
 
 <br>
 
-<a id="node-2663"></a>
+<a id="node-2633"></a>
 
 <p align="center"><kbd><img src="assets/5218a2a8fd5b0e97a4bc001e149167a3e1cc9f33.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2664"></a>
+<a id="node-2634"></a>
 
 <p align="center"><kbd><img src="assets/648939681dc442ff4ea607b125448dbb1ea2ab0b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2665"></a>
+<a id="node-2635"></a>
 
 <p align="center"><kbd><img src="assets/000f268e2cc801f6cd31c03a79796c7a2a8a92d9.png" width="100%"></kbd></p>
 
@@ -160,7 +160,7 @@ quality
 
 <br>
 
-<a id="node-2666"></a>
+<a id="node-2636"></a>
 
 <p align="center"><kbd><img src="assets/5192fb47deaec7d3ab148a8fc85328bc3b55cc9b.png" width="100%"></kbd></p>
 
@@ -172,7 +172,7 @@ quality
 
 <br>
 
-<a id="node-2667"></a>
+<a id="node-2637"></a>
 
 <p align="center"><kbd><img src="assets/82d4459f8c3fecc98ea5a4933155f658071b6d11.png" width="100%"></kbd></p>
 
@@ -194,7 +194,7 @@ quality
 
 <br>
 
-<a id="node-2668"></a>
+<a id="node-2638"></a>
 
 <p align="center"><kbd><img src="assets/3c5af331026cc630e527d3f1dc833ec93e4ba563.png" width="100%"></kbd></p>
 
@@ -217,7 +217,7 @@ quality
 
 <br>
 
-<a id="node-2669"></a>
+<a id="node-2639"></a>
 
 <p align="center"><kbd><img src="assets/8f4a1ef74509d497bd8dd3982f1fad1b37a93c51.png" width="100%"></kbd></p>
 
@@ -237,7 +237,7 @@ quality
 
 <br>
 
-<a id="node-2670"></a>
+<a id="node-2640"></a>
 
 <p align="center"><kbd><img src="assets/444ddd983d723d9273ec8b6d15e0fe593c216df6.png" width="100%"></kbd></p>
 
@@ -257,7 +257,7 @@ quality
 
 <br>
 
-<a id="node-2671"></a>
+<a id="node-2641"></a>
 
 <p align="center"><kbd><img src="assets/4e86ba8dc54537e4c24274b81b528c8bfb7def1d.png" width="100%"></kbd></p>
 
@@ -276,7 +276,7 @@ quality
 
 <br>
 
-<a id="node-2672"></a>
+<a id="node-2642"></a>
 
 <p align="center"><kbd><img src="assets/f8c8134b98f83c1129c6e455c940c5f1af78503a.png" width="100%"></kbd></p>
 
@@ -297,13 +297,13 @@ quality
 <br>
 
 
-<a id="node-2673"></a>
+<a id="node-2643"></a>
 ## Seq2seq Model With Attention
 
 <br>
 
 
-<a id="node-2674"></a>
+<a id="node-2644"></a>
 ### 1. **Attention** is a **crucial concept** in machine learning that\\* allows models to focus on specific
 
 > [!NOTE]
@@ -334,13 +334,13 @@ quality
 
 <br>
 
-<a id="node-2675"></a>
+<a id="node-2645"></a>
 
 <p align="center"><kbd><img src="assets/4e2c1e0e21279d2026062b1b2d3db0088faf8992.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2676"></a>
+<a id="node-2646"></a>
 
 <p align="center"><kbd><img src="assets/244dea5b43a854d8fc52bc1d463dc590ced3f3bf.png" width="100%"></kbd></p>
 
@@ -377,7 +377,7 @@ quality
 
 <br>
 
-<a id="node-2677"></a>
+<a id="node-2647"></a>
 
 <p align="center"><kbd><img src="assets/dd5445ddad6d2beff00988e50648abb4a142c4d9.png" width="100%"></kbd></p>
 
@@ -392,7 +392,7 @@ quality
 
 <br>
 
-<a id="node-2678"></a>
+<a id="node-2648"></a>
 
 <p align="center"><kbd><img src="assets/5e3faa61bb642c5cac60875575b53716b2457e6f.png" width="100%"></kbd></p>
 
@@ -411,7 +411,7 @@ quality
 
 <br>
 
-<a id="node-2679"></a>
+<a id="node-2649"></a>
 
 <p align="center"><kbd><img src="assets/6eaa84faedb7c05757f89366ce336c2a904c66f1.png" width="100%"></kbd></p>
 
@@ -433,7 +433,7 @@ quality
 
 <br>
 
-<a id="node-2680"></a>
+<a id="node-2650"></a>
 
 <p align="center"><kbd><img src="assets/3ee62d911bdc767047484acc1cd34365d3dc47bd.png" width="100%"></kbd></p>
 
@@ -457,7 +457,7 @@ quality
 
 <br>
 
-<a id="node-2681"></a>
+<a id="node-2651"></a>
 
 <p align="center"><kbd><img src="assets/167d044cb4ecb652e76c30f3a3b422b262399962.png" width="100%"></kbd></p>
 
@@ -481,7 +481,7 @@ quality
 
 <br>
 
-<a id="node-2682"></a>
+<a id="node-2652"></a>
 
 <p align="center"><kbd><img src="assets/c2dbcf507fd11282732494228f2d16410be73e5e.png" width="100%"></kbd></p>
 
@@ -524,13 +524,13 @@ quality
 <br>
 
 
-<a id="node-2683"></a>
+<a id="node-2653"></a>
 ## Bsckground On Seq2seq
 
 <br>
 
 
-<a id="node-2684"></a>
+<a id="node-2654"></a>
 ### Recurrent models typically take in a sequence in the order it is written and use that to
 
 > [!NOTE]
@@ -566,13 +566,13 @@ quality
 <br>
 
 
-<a id="node-2685"></a>
+<a id="node-2655"></a>
 ## Queries, Keys, Values And Attention
 
 <br>
 
 
-<a id="node-2686"></a>
+<a id="node-2656"></a>
 ### 1. **Introduction and Attention Concepts:**
 
 > [!NOTE]
@@ -622,7 +622,7 @@ quality
 
 <br>
 
-<a id="node-2687"></a>
+<a id="node-2657"></a>
 
 <p align="center"><kbd><img src="assets/bb7453bee98e2bfa2207f29188d4f09e38058b3c.png" width="100%"></kbd></p>
 
@@ -643,7 +643,7 @@ quality
 
 <br>
 
-<a id="node-2688"></a>
+<a id="node-2658"></a>
 
 <p align="center"><kbd><img src="assets/11df28fc6f0ec021fd1efa67fe8dcf51aad543f9.png" width="100%"></kbd></p>
 
@@ -706,7 +706,7 @@ quality
 
 <br>
 
-<a id="node-2689"></a>
+<a id="node-2659"></a>
 
 <p align="center"><kbd><img src="assets/ea8d333bdb9ec07c86afaad9993b25b471e06359.png" width="100%"></kbd></p>
 
@@ -717,7 +717,7 @@ quality
 
 <br>
 
-<a id="node-2690"></a>
+<a id="node-2660"></a>
 
 <p align="center"><kbd><img src="assets/ce6d73140623b0e438d3f59f9554a3cd3056d495.png" width="100%"></kbd></p>
 
@@ -735,7 +735,7 @@ quality
 
 <br>
 
-<a id="node-2691"></a>
+<a id="node-2661"></a>
 
 <p align="center"><kbd><img src="assets/c4c7f722f29ef79f2c6552784c4d3d2a88e9834e.png" width="100%"></kbd></p>
 
@@ -757,7 +757,7 @@ quality
 
 <br>
 
-<a id="node-2692"></a>
+<a id="node-2662"></a>
 
 <p align="center"><kbd><img src="assets/ef4de5d259b418ad566aa42e07a4a2245d2c8466.png" width="100%"></kbd></p>
 
@@ -775,13 +775,13 @@ quality
 <br>
 
 
-<a id="node-2693"></a>
+<a id="node-2663"></a>
 ## Lab: Basic Attention
 
 <br>
 
 
-<a id="node-2694"></a>
+<a id="node-2664"></a>
 ### As you've learned, attention allows a seq2seq decoder to \\_use
 
 > [!NOTE]
@@ -809,19 +809,19 @@ quality
 
 <br>
 
-<a id="node-2695"></a>
+<a id="node-2665"></a>
 
 <p align="center"><kbd><img src="assets/21b5824265acd43dbd8b8f53f62651f2cbbe14e2.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2696"></a>
+<a id="node-2666"></a>
 #### 1: Calculating alignment scores
 
 <br>
 
-<a id="node-2697"></a>
+<a id="node-2667"></a>
 
 <p align="center"><kbd><img src="assets/ea5cba5e2579ef16f9d7e925cea3e3b305fccd57.png" width="100%"></kbd></p>
 
@@ -851,13 +851,13 @@ quality
 
 <br>
 
-<a id="node-2698"></a>
+<a id="node-2668"></a>
 
 <p align="center"><kbd><img src="assets/d44deeaf8436af102ec869315f316c994dab232d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2699"></a>
+<a id="node-2669"></a>
 
 <p align="center"><kbd><img src="assets/3ac440655c39b329af5338380518e67773c3de0c.png" width="100%"></kbd></p>
 
@@ -882,13 +882,13 @@ quality
 
 <br>
 
-<a id="node-2700"></a>
+<a id="node-2670"></a>
 
 <p align="center"><kbd><img src="assets/7225dcc3fba094bae87922e733fb08f289810500.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2701"></a>
+<a id="node-2671"></a>
 
 <p align="center"><kbd><img src="assets/da8e6a4f8da93d77dca2ea6a293b08f7d220c83f.png" width="100%"></kbd></p>
 
@@ -899,12 +899,12 @@ quality
 <br>
 
 
-<a id="node-2702"></a>
+<a id="node-2672"></a>
 #### 2: Turning alignment into weights
 
 <br>
 
-<a id="node-2703"></a>
+<a id="node-2673"></a>
 
 <p align="center"><kbd><img src="assets/40455eaea8310d93fd2aebdcfae1a656a0cbdfca.png" width="100%"></kbd></p>
 
@@ -915,12 +915,12 @@ quality
 <br>
 
 
-<a id="node-2704"></a>
+<a id="node-2674"></a>
 #### 3: Weight the encoder output vectors and sum
 
 <br>
 
-<a id="node-2705"></a>
+<a id="node-2675"></a>
 
 <p align="center"><kbd><img src="assets/441e69e69d05c0cbd65159c807c4001df988385f.png" width="100%"></kbd></p>
 
@@ -931,25 +931,25 @@ quality
 
 <br>
 
-<a id="node-2706"></a>
+<a id="node-2676"></a>
 
 <p align="center"><kbd><img src="assets/f36782ef1ededfc434defcf6321d52689f79b29e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2707"></a>
+<a id="node-2677"></a>
 
 <p align="center"><kbd><img src="assets/e29ec97f8062733c85e706e2352bbf156dc75681.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2708"></a>
+<a id="node-2678"></a>
 
 <p align="center"><kbd><img src="assets/336b8c77a0976339ae5662d852d5ae6c6e75b1fe.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2709"></a>
+<a id="node-2679"></a>
 
 <p align="center"><kbd><img src="assets/2920029a6d1344afecafdb54827d0498dd54c7d9.png" width="100%"></kbd></p>
 
@@ -962,13 +962,13 @@ quality
 <br>
 
 
-<a id="node-2710"></a>
+<a id="node-2680"></a>
 ## Setup For Machine Translation
 
 <br>
 
 
-<a id="node-2711"></a>
+<a id="node-2681"></a>
 ### 1. **Introduction to Neural Machine Translation (NMT)**:
 
 > [!NOTE]
@@ -1006,7 +1006,7 @@ quality
 
 <br>
 
-<a id="node-2712"></a>
+<a id="node-2682"></a>
 
 <p align="center"><kbd><img src="assets/dae62ca958c9481ae3e50e23b69dfa30ae80c290.png" width="100%"></kbd></p>
 
@@ -1017,7 +1017,7 @@ quality
 
 <br>
 
-<a id="node-2713"></a>
+<a id="node-2683"></a>
 
 <p align="center"><kbd><img src="assets/ae7fd756f6997128b6f9cbae86ded2b78a74c6de.png" width="100%"></kbd></p>
 
@@ -1034,32 +1034,32 @@ quality
 
 <br>
 
-<a id="node-2714"></a>
+<a id="node-2684"></a>
 
 <p align="center"><kbd><img src="assets/36c6a46e8a9ed2564c4736db91c6b993aa12e9df.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2715"></a>
+<a id="node-2685"></a>
 
 <p align="center"><kbd><img src="assets/45624621dc2c7fd88bdb5112082e862481f6eefb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2716"></a>
+<a id="node-2686"></a>
 
 <p align="center"><kbd><img src="assets/c974a3081bb46d28219a3e4bafa311ec4edf718b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2717"></a>
+<a id="node-2687"></a>
 ## Lab: Scaled Dot-product Attention
 
 <br>
 
 
-<a id="node-2718"></a>
+<a id="node-2688"></a>
 ### The 2017 paper \\_Attention Is All You Need  (\\_\\/https://arxiv.org/abs/1706.03762\\/)  introduced
 
 > [!NOTE]
@@ -1083,7 +1083,7 @@ quality
 
 <br>
 
-<a id="node-2719"></a>
+<a id="node-2689"></a>
 
 <p align="center"><kbd><img src="assets/14cbfb8e16eb6747fd4ec5f83a1386e5f71a8ff6.png" width="100%"></kbd></p>
 
@@ -1099,7 +1099,7 @@ quality
 
 <br>
 
-<a id="node-2720"></a>
+<a id="node-2690"></a>
 
 <p align="center"><kbd><img src="assets/c912b5e96138e7c2fd94f6f42656637892f3f63b.png" width="100%"></kbd></p>
 
@@ -1152,18 +1152,18 @@ quality
 <br>
 
 
-<a id="node-2721"></a>
+<a id="node-2691"></a>
 #### **Implement the softmax** function with Numpy and use it to **calculate the weights** from the **queries and keys**. Assume the queries and keys are **2D arrays** (matrices). Note that since the **dot-product of Q and K** will be a matrix, you'll need to take care to calculate **softmax** over a **specific axi**s. See the end of the notebook for solutions.
 
 <br>
 
-<a id="node-2722"></a>
+<a id="node-2692"></a>
 
 <p align="center"><kbd><img src="assets/4ed731f2a1f253602382c981a8eebdc19d442927.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2723"></a>
+<a id="node-2693"></a>
 
 <p align="center"><kbd><img src="assets/2f7b3a87b1870cc7cbd3b24853277516f92aa325.png" width="100%"></kbd></p>
 
@@ -1189,19 +1189,19 @@ quality
 
 <br>
 
-<a id="node-2724"></a>
+<a id="node-2694"></a>
 
 <p align="center"><kbd><img src="assets/24e6e4e31242cb4d5f290ccf30d31a2376a5c850.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2725"></a>
+<a id="node-2695"></a>
 
 <p align="center"><kbd><img src="assets/44784b32f7cffafdbb2eeaa76b29b312d2850809.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2726"></a>
+<a id="node-2696"></a>
 
 <p align="center"><kbd><img src="assets/5bb9a0de9bfbfcebca8174bfc5031a64009f007a.png" width="100%"></kbd></p>
 
@@ -1216,32 +1216,32 @@ quality
 
 <br>
 
-<a id="node-2727"></a>
+<a id="node-2697"></a>
 
 <p align="center"><kbd><img src="assets/6dc308623a6f2604570118cd576a7e5774fbfd82.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2728"></a>
+<a id="node-2698"></a>
 
 <p align="center"><kbd><img src="assets/ab67565bc575641e9dc5d3140fb30475e2c6efcc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2729"></a>
+<a id="node-2699"></a>
 
 <p align="center"><kbd><img src="assets/11c51275afd534bf6c0ddc83435f30cb8792533b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2730"></a>
+<a id="node-2700"></a>
 ## Teacher Forcing
 
 <br>
 
 
-<a id="node-2731"></a>
+<a id="node-2701"></a>
 ### 1. Introduction to training a neural machine translation (NMT) system.
 
 > [!NOTE]
@@ -1278,7 +1278,7 @@ quality
 
 <br>
 
-<a id="node-2732"></a>
+<a id="node-2702"></a>
 
 <p align="center"><kbd><img src="assets/852243c449681d7d52bfc7b40a54be94182cf8a1.png" width="100%"></kbd></p>
 
@@ -1289,7 +1289,7 @@ quality
 
 <br>
 
-<a id="node-2733"></a>
+<a id="node-2703"></a>
 
 <p align="center"><kbd><img src="assets/567a3b1e15bc9b4f9f4049574e86589ec6ed2e2d.png" width="100%"></kbd></p>
 
@@ -1309,7 +1309,7 @@ quality
 
 <br>
 
-<a id="node-2734"></a>
+<a id="node-2704"></a>
 
 <p align="center"><kbd><img src="assets/76256f14d66a0363669e56dd2ed2a7566f18dad1.png" width="100%"></kbd></p>
 
@@ -1322,7 +1322,7 @@ quality
 
 <br>
 
-<a id="node-2735"></a>
+<a id="node-2705"></a>
 
 <p align="center"><kbd><img src="assets/1c75ec0aaf4e6f2b64982e10699de00e24740381.png" width="100%"></kbd></p>
 
@@ -1335,7 +1335,7 @@ quality
 <br>
 
 
-<a id="node-2736"></a>
+<a id="node-2706"></a>
 ## (optional) What Is Teacher Forcing?
 
 > [!NOTE]
@@ -1345,7 +1345,7 @@ quality
 
 <br>
 
-<a id="node-2737"></a>
+<a id="node-2707"></a>
 
 <p align="center"><kbd><img src="assets/e897b3c959e087e62751a5bc36bb3332ef7fd5f8.png" width="100%"></kbd></p>
 
@@ -1367,20 +1367,20 @@ quality
 
 <br>
 
-<a id="node-2738"></a>
+<a id="node-2708"></a>
 
 <p align="center"><kbd><img src="assets/e3269af55681ad53a4696a31c90a8fed3344679e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2739"></a>
+<a id="node-2709"></a>
 ## NMT Model With Attention
 
 <br>
 
 
-<a id="node-2740"></a>
+<a id="node-2710"></a>
 ### 1. Training a **neural machine translation** system\\* from scratch.
 
 > [!NOTE]
@@ -1417,7 +1417,7 @@ quality
 
 <br>
 
-<a id="node-2741"></a>
+<a id="node-2711"></a>
 
 <p align="center"><kbd><img src="assets/7b63cf6a4cee049e9286d48a9b895dd8b2ff089d.png" width="100%"></kbd></p>
 
@@ -1434,7 +1434,7 @@ quality
 
 <br>
 
-<a id="node-2742"></a>
+<a id="node-2712"></a>
 
 <p align="center"><kbd><img src="assets/140415496a92fb5f8f3be76048de18038d47cd55.png" width="100%"></kbd></p>
 
@@ -1452,7 +1452,7 @@ quality
 
 <br>
 
-<a id="node-2743"></a>
+<a id="node-2713"></a>
 
 <p align="center"><kbd><img src="assets/edc278221139511a72b9540435fedf1bc5b9e31c.png" width="100%"></kbd></p>
 
@@ -1500,13 +1500,13 @@ quality
 <br>
 
 
-<a id="node-2744"></a>
+<a id="node-2714"></a>
 ## Bleu Score
 
 <br>
 
 
-<a id="node-2745"></a>
+<a id="node-2715"></a>
 ### 1. **Importance of **Model Assessmen**t**: After **building and training a machine translation model**, it's
 
 > [!NOTE]
@@ -1552,7 +1552,7 @@ quality
 
 <br>
 
-<a id="node-2746"></a>
+<a id="node-2716"></a>
 
 <p align="center"><kbd><img src="assets/2e633fbfb5057a082d705ab0460f8528717254d3.png" width="100%"></kbd></p>
 
@@ -1565,7 +1565,7 @@ quality
 
 <br>
 
-<a id="node-2747"></a>
+<a id="node-2717"></a>
 
 <p align="center"><kbd><img src="assets/141584c7b9c670122a8cc41024d1d000f349fa7c.png" width="100%"></kbd></p>
 
@@ -1576,7 +1576,7 @@ quality
 
 <br>
 
-<a id="node-2748"></a>
+<a id="node-2718"></a>
 
 <p align="center"><kbd><img src="assets/a7de6d548f7a5e2d032ab0b00ebc9431a8b71feb.png" width="100%"></kbd></p>
 
@@ -1596,7 +1596,7 @@ quality
 
 <br>
 
-<a id="node-2749"></a>
+<a id="node-2719"></a>
 
 <p align="center"><kbd><img src="assets/542178169f410ea26f5dee3b364192c5b125b046.png" width="100%"></kbd></p>
 
@@ -1619,7 +1619,7 @@ quality
 
 <br>
 
-<a id="node-2750"></a>
+<a id="node-2720"></a>
 
 <p align="center"><kbd><img src="assets/1e815ee666dda9cb7d9b34621ecef8014253d8b1.png" width="100%"></kbd></p>
 
@@ -1630,13 +1630,13 @@ quality
 <br>
 
 
-<a id="node-2751"></a>
+<a id="node-2721"></a>
 ## Lab: Bleu Score
 
 <br>
 
 
-<a id="node-2752"></a>
+<a id="node-2722"></a>
 ### In this ungraded lab, we will implement a popular metric for
 
 > [!NOTE]
@@ -1652,12 +1652,12 @@ quality
 <br>
 
 
-<a id="node-2753"></a>
+<a id="node-2723"></a>
 #### 1.1 Importing the Libraries
 
 <br>
 
-<a id="node-2754"></a>
+<a id="node-2724"></a>
 
 <p align="center"><kbd><img src="assets/47b2436679530b1273178dc09b517f782595699b.png" width="100%"></kbd></p>
 
@@ -1669,12 +1669,12 @@ quality
 <br>
 
 
-<a id="node-2755"></a>
+<a id="node-2725"></a>
 #### 1.2 Defining the BLEU Score
 
 <br>
 
-<a id="node-2756"></a>
+<a id="node-2726"></a>
 
 <p align="center"><kbd><img src="assets/d8cf454534cf1901d6da27e8f46b113c948f62a8.png" width="100%"></kbd></p>
 
@@ -1696,12 +1696,12 @@ quality
 <br>
 
 
-<a id="node-2757"></a>
+<a id="node-2727"></a>
 #### 1.3 Explaining the BLEU score
 
 <br>
 
-<a id="node-2758"></a>
+<a id="node-2728"></a>
 
 <p align="center"><kbd><img src="assets/9ad998c50b5293855fd885d9e8d16b1657565404.png" width="100%"></kbd></p>
 
@@ -1715,7 +1715,7 @@ quality
 
 <br>
 
-<a id="node-2759"></a>
+<a id="node-2729"></a>
 
 <p align="center"><kbd><img src="assets/70274632957233272b34e5f6f91d9430b1a39a32.png" width="100%"></kbd></p>
 
@@ -1735,7 +1735,7 @@ quality
 
 <br>
 
-<a id="node-2760"></a>
+<a id="node-2730"></a>
 
 <p align="center"><kbd><img src="assets/88f85334f6aad56d5f92d02717f9f805a0f0b7cc.png" width="100%"></kbd></p>
 
@@ -1747,12 +1747,12 @@ quality
 <br>
 
 
-<a id="node-2761"></a>
+<a id="node-2731"></a>
 #### 1.4 Example Calculations of the BLEU score
 
 <br>
 
-<a id="node-2762"></a>
+<a id="node-2732"></a>
 
 <p align="center"><kbd><img src="assets/f92609bd177c40b08bf954f53fcd27c9fe7bd2f7.png" width="100%"></kbd></p>
 
@@ -1763,7 +1763,7 @@ quality
 
 <br>
 
-<a id="node-2763"></a>
+<a id="node-2733"></a>
 
 <p align="center"><kbd><img src="assets/19dbd3c5724a715c8af3c5aefac55633a765e8e1.png" width="100%"></kbd></p>
 
@@ -1774,7 +1774,7 @@ quality
 
 <br>
 
-<a id="node-2764"></a>
+<a id="node-2734"></a>
 
 <p align="center"><kbd><img src="assets/c2b685b95de12e38d872277bcf071104b57dbe4d.png" width="100%"></kbd></p>
 
@@ -1796,37 +1796,37 @@ quality
 
 <br>
 
-<a id="node-2765"></a>
+<a id="node-2735"></a>
 
 <p align="center"><kbd><img src="assets/8e4197f4b333305943ab3f5f207b46b310a2d95e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2766"></a>
+<a id="node-2736"></a>
 #### BLEU computation on a corpus
 
 <br>
 
-<a id="node-2767"></a>
+<a id="node-2737"></a>
 
 <p align="center"><kbd><img src="assets/b742c60ea304e38e1eb3e9892222bffb9e969431.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2768"></a>
+<a id="node-2738"></a>
 
 <p align="center"><kbd><img src="assets/f4eea9403d2ed1de2b2eb0cebdb248fb0fdaeeb4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2769"></a>
+<a id="node-2739"></a>
 
 <p align="center"><kbd><img src="assets/65ac6c2b0abe4b239abd049724b5efbca974f988.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2770"></a>
+<a id="node-2740"></a>
 
 <p align="center"><kbd><img src="assets/da6d4ed6a2b2945b7ab9dd76e2db3d48971aed1f.png" width="100%"></kbd></p>
 
@@ -1836,13 +1836,13 @@ quality
 <br>
 
 
-<a id="node-2771"></a>
+<a id="node-2741"></a>
 ## Rouge-n Score
 
 <br>
 
 
-<a id="node-2772"></a>
+<a id="node-2742"></a>
 ### The main ideas from this portion of the lecture are:
 
 > [!NOTE]
@@ -1888,7 +1888,7 @@ quality
 
 <br>
 
-<a id="node-2773"></a>
+<a id="node-2743"></a>
 
 <p align="center"><kbd><img src="assets/6957b8026b5349e89821f30956ce8602abd164f6.png" width="100%"></kbd></p>
 
@@ -1936,7 +1936,7 @@ quality
 
 <br>
 
-<a id="node-2774"></a>
+<a id="node-2744"></a>
 
 <p align="center"><kbd><img src="assets/d60cb98c574a7ab7de65eb95e9fa3f3d75664058.png" width="100%"></kbd></p>
 
@@ -1959,7 +1959,7 @@ quality
 
 <br>
 
-<a id="node-2775"></a>
+<a id="node-2745"></a>
 
 <p align="center"><kbd><img src="assets/5d0b3e8da3626c2f16037411e40199bfcba9f201.png" width="100%"></kbd></p>
 
@@ -1971,7 +1971,7 @@ quality
 
 <br>
 
-<a id="node-2776"></a>
+<a id="node-2746"></a>
 
 <p align="center"><kbd><img src="assets/394d88dfa7d8cfe0c411d54c34003e7715075ce3.png" width="100%"></kbd></p>
 
@@ -1985,13 +1985,13 @@ quality
 <br>
 
 
-<a id="node-2777"></a>
+<a id="node-2747"></a>
 ## Sampling And Decoding
 
 <br>
 
 
-<a id="node-2778"></a>
+<a id="node-2748"></a>
 ### The main ideas from this part of the lecture are:
 
 > [!NOTE]
@@ -2028,13 +2028,13 @@ quality
 
 <br>
 
-<a id="node-2779"></a>
+<a id="node-2749"></a>
 
 <p align="center"><kbd><img src="assets/137410333383f87030839383d1f0a84d356cc60a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2780"></a>
+<a id="node-2750"></a>
 
 <p align="center"><kbd><img src="assets/cefdcb53451046a3630b8d7fe82076250588b9ea.png" width="100%"></kbd></p>
 
@@ -2054,7 +2054,7 @@ quality
 
 <br>
 
-<a id="node-2781"></a>
+<a id="node-2751"></a>
 
 <p align="center"><kbd><img src="assets/b7f7e8ef381e0014b292d767f77e9fc4769ac8ef.png" width="100%"></kbd></p>
 
@@ -2076,7 +2076,7 @@ quality
 
 <br>
 
-<a id="node-2782"></a>
+<a id="node-2752"></a>
 
 <p align="center"><kbd><img src="assets/0a8524d3a0667e93069e6e5d0cdf1fe69d0944e0.png" width="100%"></kbd></p>
 
@@ -2096,7 +2096,7 @@ quality
 
 <br>
 
-<a id="node-2783"></a>
+<a id="node-2753"></a>
 
 <p align="center"><kbd><img src="assets/76868ff22a7b893ed7832bcce8f1f065a73d8c1f.png" width="100%"></kbd></p>
 
@@ -2120,13 +2120,13 @@ quality
 <br>
 
 
-<a id="node-2784"></a>
+<a id="node-2754"></a>
 ## Beam Search
 
 <br>
 
 
-<a id="node-2785"></a>
+<a id="node-2755"></a>
 ### 1. **Beam Search Technique**: Beam search is used to **identify best sequences** within a
 
 > [!NOTE]
@@ -2162,7 +2162,7 @@ quality
 
 <br>
 
-<a id="node-2786"></a>
+<a id="node-2756"></a>
 
 <p align="center"><kbd><img src="assets/463094cc27ee1a162480bb38c3c6914853dc9f87.png" width="100%"></kbd></p>
 
@@ -2175,7 +2175,7 @@ quality
 
 <br>
 
-<a id="node-2787"></a>
+<a id="node-2757"></a>
 
 <p align="center"><kbd><img src="assets/cb732557f86a02e8ae68e247a8b64d2287aab40e.png" width="100%"></kbd></p>
 
@@ -2192,7 +2192,7 @@ quality
 
 <br>
 
-<a id="node-2788"></a>
+<a id="node-2758"></a>
 
 <p align="center"><kbd><img src="assets/82a478b2c7739ccdd8556e97f93467b6202798cb.png" width="100%"></kbd></p>
 
@@ -2206,7 +2206,7 @@ quality
 
 <br>
 
-<a id="node-2789"></a>
+<a id="node-2759"></a>
 
 <p align="center"><kbd><img src="assets/0e1709f99722c5b7eceda2f0e72cb89fdd88a291.png" width="100%"></kbd></p>
 
@@ -2230,7 +2230,7 @@ quality
 
 <br>
 
-<a id="node-2790"></a>
+<a id="node-2760"></a>
 
 <p align="center"><kbd><img src="assets/bc94fe247a93dab8231343255c843a332b603b7c.png" width="100%"></kbd></p>
 
@@ -2240,7 +2240,7 @@ quality
 
 <br>
 
-<a id="node-2791"></a>
+<a id="node-2761"></a>
 
 <p align="center"><kbd><img src="assets/1b41058ea2d7db424cbd638fb2a65af98dc50936.png" width="100%"></kbd></p>
 
@@ -2255,7 +2255,7 @@ quality
 
 <br>
 
-<a id="node-2792"></a>
+<a id="node-2762"></a>
 
 <p align="center"><kbd><img src="assets/0e63bf82bf0a183dee16eb76260aff6420050743.png" width="100%"></kbd></p>
 
@@ -2266,13 +2266,13 @@ quality
 <br>
 
 
-<a id="node-2793"></a>
+<a id="node-2763"></a>
 ## Minimum Bayes Risk
 
 <br>
 
 
-<a id="node-2794"></a>
+<a id="node-2764"></a>
 ### 1. Introduction to a Final Evaluation Technique: The narrator introduces the last technique for
 
 > [!NOTE]
@@ -2307,7 +2307,7 @@ quality
 
 <br>
 
-<a id="node-2795"></a>
+<a id="node-2765"></a>
 
 <p align="center"><kbd><img src="assets/da8ed9f942e34f95b7b2d2cf4c6db718b8b307ad.png" width="100%"></kbd></p>
 
@@ -2345,7 +2345,7 @@ quality
 
 <br>
 
-<a id="node-2796"></a>
+<a id="node-2766"></a>
 
 <p align="center"><kbd><img src="assets/6e9c0be80453e4d3c7c3303dd56cc1f81898daac.png" width="100%"></kbd></p>
 
@@ -2363,7 +2363,7 @@ quality
 
 <br>
 
-<a id="node-2797"></a>
+<a id="node-2767"></a>
 
 <p align="center"><kbd><img src="assets/b1555bb931c7aac0f38123d81c93bf49102259dc.png" width="100%"></kbd></p>
 
@@ -2382,7 +2382,7 @@ quality
 
 <br>
 
-<a id="node-2798"></a>
+<a id="node-2768"></a>
 
 <p align="center"><kbd><img src="assets/20aa46b377236283905dde2701bbddbbe48bb819.png" width="100%"></kbd></p>
 
@@ -2393,13 +2393,13 @@ quality
 <br>
 
 
-<a id="node-2799"></a>
+<a id="node-2769"></a>
 ## Lab: Stack Semantics
 
 <br>
 
 
-<a id="node-2800"></a>
+<a id="node-2770"></a>
 ### In this ungraded lab, we will explain the **stack semantics** in **Trax**. This will
 
 > [!NOTE]
@@ -2426,24 +2426,24 @@ quality
 <br>
 
 
-<a id="node-2801"></a>
+<a id="node-2771"></a>
 #### Import
 
 <br>
 
-<a id="node-2802"></a>
+<a id="node-2772"></a>
 
 <p align="center"><kbd><img src="assets/7112d40a46a8a38374bf62da65b8a8f0da2a8400.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2803"></a>
+<a id="node-2773"></a>
 #### 1. The tl.Serial Combinator is Stack Oriented
 
 <br>
 
-<a id="node-2804"></a>
+<a id="node-2774"></a>
 
 <p align="center"><kbd><img src="assets/d5e72547dbd27e6ba5c1b847d44f22d939d6d541.png" width="100%"></kbd></p>
 
@@ -2466,37 +2466,37 @@ quality
 
 <br>
 
-<a id="node-2805"></a>
+<a id="node-2775"></a>
 
 <p align="center"><kbd><img src="assets/b0207422695150793caccead5b403e836897cfaf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2806"></a>
+<a id="node-2776"></a>
 
 <p align="center"><kbd><img src="assets/c283dab7cd2777f35997cdbeb2e301f06997d7af.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2807"></a>
+<a id="node-2777"></a>
 
 <p align="center"><kbd><img src="assets/4c93746002553cc3b4d0f77106c289cfc0f5dd5b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2808"></a>
+<a id="node-2778"></a>
 
 <p align="center"><kbd><img src="assets/a447ec08f99092b8b81148c4f3923589d5951d1c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2809"></a>
+<a id="node-2779"></a>
 
 <p align="center"><kbd><img src="assets/82a792c15231aab0311516ee1cfdffb8e815b89a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2810"></a>
+<a id="node-2780"></a>
 
 <p align="center"><kbd><img src="assets/bd55440175c9f620109dfd90fd278b68e97b79d9.png" width="100%"></kbd></p>
 
@@ -2546,18 +2546,18 @@ quality
 <br>
 
 
-<a id="node-2811"></a>
+<a id="node-2781"></a>
 #### 2. The tl.Select combinator in the context of the serial combinator
 
 <br>
 
-<a id="node-2812"></a>
+<a id="node-2782"></a>
 
 <p align="center"><kbd><img src="assets/aee4368f5877cbf8fce2146d7485b0c066272e5f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2813"></a>
+<a id="node-2783"></a>
 
 <p align="center"><kbd><img src="assets/73741916fe450876d84edff031f2a668f0d19304.png" width="100%"></kbd></p>
 
@@ -2581,7 +2581,7 @@ quality
 
 <br>
 
-<a id="node-2814"></a>
+<a id="node-2784"></a>
 
 <p align="center"><kbd><img src="assets/28e90acfcfaedb58bd59c092bf548c0876565c1e.png" width="100%"></kbd></p>
 
@@ -2595,13 +2595,13 @@ quality
 
 <br>
 
-<a id="node-2815"></a>
+<a id="node-2785"></a>
 
 <p align="center"><kbd><img src="assets/5fae39e8fc46e0ff4a2531aa7d4340ab597fa9e8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2816"></a>
+<a id="node-2786"></a>
 
 <p align="center"><kbd><img src="assets/d691281d358aad194a41b4e6ba8247a3aaffb3ef.png" width="100%"></kbd></p>
 
@@ -2619,31 +2619,31 @@ quality
 
 <br>
 
-<a id="node-2817"></a>
+<a id="node-2787"></a>
 
 <p align="center"><kbd><img src="assets/e31a850d9e948419c38ab137c61f7720a6f89972.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2818"></a>
+<a id="node-2788"></a>
 
 <p align="center"><kbd><img src="assets/d10b74d5e9c5521f9dc72b216a833e6c9be9c2c8.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2819"></a>
+<a id="node-2789"></a>
 #### 3. The tl.Residual combinator in the context of the serial combinator
 
 <br>
 
-<a id="node-2820"></a>
+<a id="node-2790"></a>
 
 <p align="center"><kbd><img src="assets/2bead597b60d432b26f277eab9142956df3a6777.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2821"></a>
+<a id="node-2791"></a>
 
 <p align="center"><kbd><img src="assets/9733a5ae4e342e67eb81bc29f35db76988622a57.png" width="100%"></kbd></p>
 
@@ -2658,7 +2658,7 @@ quality
 
 <br>
 
-<a id="node-2822"></a>
+<a id="node-2792"></a>
 
 <p align="center"><kbd><img src="assets/dc35ac1fa6f20adc1849d8043fe98efdbe4f0a6a.png" width="100%"></kbd></p>
 
@@ -2683,7 +2683,7 @@ quality
 
 <br>
 
-<a id="node-2823"></a>
+<a id="node-2793"></a>
 
 <p align="center"><kbd><img src="assets/9760deb7b5564aa5a3b511222c4eb894ee028293.png" width="100%"></kbd></p>
 
@@ -2716,13 +2716,13 @@ quality
 
 <br>
 
-<a id="node-2824"></a>
+<a id="node-2794"></a>
 
 <p align="center"><kbd><img src="assets/813de6816f53c96a1483808b140aa80e8e799908.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2825"></a>
+<a id="node-2795"></a>
 
 <p align="center"><kbd><img src="assets/61232c465b15e2adff2551ccdc3a2da1f48cc252.png" width="100%"></kbd></p>
 
@@ -2732,12 +2732,12 @@ quality
 <br>
 
 
-<a id="node-2826"></a>
+<a id="node-2796"></a>
 ## Week Conclusion
 
 <br>
 
-<a id="node-2827"></a>
+<a id="node-2797"></a>
 
 <p align="center"><kbd><img src="assets/040125349d26e82146d0bdba6c8a4d20541d7b05.png" width="100%"></kbd></p>
 
@@ -2769,79 +2769,79 @@ quality
 <br>
 
 
-<a id="node-2828"></a>
+<a id="node-2798"></a>
 ## Neural Machine Translation
 
 <br>
 
-<a id="node-2829"></a>
+<a id="node-2799"></a>
 
 <p align="center"><kbd><img src="assets/78bd58d18d638570fd31eb8048e42f1872184dbb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2830"></a>
+<a id="node-2800"></a>
 
 <p align="center"><kbd><img src="assets/3a72c4aa2b53279828cb3b58414aacb04ce612e9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2831"></a>
+<a id="node-2801"></a>
 
 <p align="center"><kbd><img src="assets/6ee43b8f4599a6bbbd91954fd7d2d70cbeaf90b5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2832"></a>
+<a id="node-2802"></a>
 
 <p align="center"><kbd><img src="assets/94e89d694cd0ec6ade551a98d1d8702e855467d7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2833"></a>
+<a id="node-2803"></a>
 
 <p align="center"><kbd><img src="assets/37092c809ff7dad5f7f51c1560d4fa8fa423a6c2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2834"></a>
+<a id="node-2804"></a>
 
 <p align="center"><kbd><img src="assets/e81908c66613c7748e0bc86344229bd2b3d1a95b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2835"></a>
+<a id="node-2805"></a>
 
 <p align="center"><kbd><img src="assets/bcc21cb3c7f4c45d1b1919ee6d3ef62db2f03c29.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2836"></a>
+<a id="node-2806"></a>
 
 <p align="center"><kbd><img src="assets/ae07d374bcda82e14d6149cd347b3b39326c0839.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2837"></a>
+<a id="node-2807"></a>
 
 <p align="center"><kbd><img src="assets/9d99377014c24101ba351d29dcde3a2dc461672e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2838"></a>
+<a id="node-2808"></a>
 
 <p align="center"><kbd><img src="assets/4c272a4a1df449cd4eecaa75e7cf80da69162913.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2839"></a>
+<a id="node-2809"></a>
 ## Pa. NMT With Attention
 
 <br>
 
 
-<a id="node-2840"></a>
+<a id="node-2810"></a>
 ### Welcome to the first assignment of Course 4. Here, you will build an **English-to-German** 
 
 > [!NOTE]
@@ -2878,25 +2878,25 @@ quality
 <br>
 
 
-<a id="node-2841"></a>
+<a id="node-2811"></a>
 #### 1 - Data Preparation
 
 <br>
 
 
-<a id="node-2842"></a>
+<a id="node-2812"></a>
 #### 1.1 - Importing the Data
 
 <br>
 
-<a id="node-2843"></a>
+<a id="node-2813"></a>
 
 <p align="center"><kbd><img src="assets/f6e131f4eec5d86b0aa274ec652c1c005d0d954d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2844"></a>
+<a id="node-2814"></a>
 #### Next, we will import the dataset we will use to train the model. To **meet the** **storage constraints** in this lab environment, we will just use a **small dataset from Opus  https://opus.nlpl.eu/**, a growing **collection of translated texts from the web**.  Particularly, we will get an **English to German translation subset** specified as **opus/medical** which has **medical related texts.**  If storage is not an issue, you can opt to get a **larger corpus** such as the English to German translation dataset from **ParaCrawl https://paracrawl.eu/**, a **large multi-lingual translation dataset created by the European Union**. Both of these datasets are available **via Tensorflow Datasets (TFDS)** and you can **browse through the other available datasets** here. https://www.tensorflow. org/datasets/catalog/overview   We have **downloaded the data for you** in the **data/ directory** of your workspace. As you' ll see below, you can **easily access this dataset from TFDS with trax.data.TFDS**.  The result is a **python generator function yielding tuples**. Use the k**eys argument** to select **what appears** at **which position** in the tuple. For example, keys=('en', 'de') below will return pairs as (English sentence, German sentence).
 
 > [!NOTE]
@@ -2913,7 +2913,7 @@ quality
 
 <br>
 
-<a id="node-2845"></a>
+<a id="node-2815"></a>
 
 <p align="center"><kbd><img src="assets/255684409994268ca216055186a7c736002b0fad.png" width="100%"></kbd></p>
 
@@ -2930,7 +2930,7 @@ quality
 <br>
 
 
-<a id="node-2846"></a>
+<a id="node-2816"></a>
 #### Notice that **TFDS** returns a **generator function**, not a **generator**. This is because in Python, you **cannot reset generators** so you **cannot go back to a previously yielded value**.  During deep learning **training**, you use **Stochastic Gradient Descent** and **don't actually need to go back** -- but it is **sometimes** good to be able to do that, and that's where the functions come in.  It is actually **very common to use generator functions in Python** -- e. g., **zip** is a **generator function**. You can read more about Python generators to understand **why we use them**.   https://book.pythontips.com/en/latest/generators.html   Let's print a a **sample pair** from our **train and eval data**. Notice that the **raw ouput is represented in bytes** (denoted by the **b**' prefix) and these will be **converted to strings internally in the next steps**.
 
 > [!NOTE]
@@ -2945,7 +2945,7 @@ quality
 
 <br>
 
-<a id="node-2847"></a>
+<a id="node-2817"></a>
 
 <p align="center"><kbd><img src="assets/87a46e676c95c820f1824e9da292ea1d281be5d2.png" width="100%"></kbd></p>
 
@@ -2956,13 +2956,13 @@ quality
 <br>
 
 
-<a id="node-2848"></a>
+<a id="node-2818"></a>
 #### 1.2 - Tokenization and Formatting
 
 <br>
 
 
-<a id="node-2849"></a>
+<a id="node-2819"></a>
 #### Now that we have imported our corpus, we will be **preprocessing the sentences** into a  **format** that our model can accept. This will be composed of several steps: **Tokenizing the sentences using subword representations:** As you've learned in the earlier courses of this specialization, we want to **represent each sentence as an array of  integers instead of strings**.  For our application, we will use \\/**subword\\/ representations** to  **tokenize our sentences**. This is a **common technique to avoid out-of-vocabulary words** by **allowing parts of words to be represented separately**.  For example, instead of having  separate entries in your vocabulary for --**"fear", " fearless", "fearsome", "some"**, and  "less"--, you can simply store --**"fear", "some"**, and **"less"**-- then allow **your tokenizer to  combine these subwords when needed**. This allows it to be **more flexible** so you **won't  have to save uncommon words explicitly** in your vocabulary (e.g. \\/stylebender\\/, \\/nonce\\/,  etc).  Tokenizing is done with the **trax.data.Tokenize()** **command** and we have provided you the c**ombined subword vocabulary for English and German** (i.e. **ende_32k. subword**)  **saved in the data directory**. Feel free to open this file to **see how the subwords look like**.
 
 > [!NOTE]
@@ -2979,7 +2979,7 @@ quality
 
 <br>
 
-<a id="node-2850"></a>
+<a id="node-2820"></a>
 
 <p align="center"><kbd><img src="assets/23d160cb26f8eec6ff8778c2be7842118aafc8e7.png" width="100%"></kbd></p>
 
@@ -2992,7 +2992,7 @@ quality
 
 <br>
 
-<a id="node-2851"></a>
+<a id="node-2821"></a>
 
 <p align="center"><kbd><img src="assets/a03ff8e1dfe7cc2d56a1813f01ed6267dba6df15.png" width="100%"></kbd></p>
 
@@ -3014,7 +3014,7 @@ quality
 
 <br>
 
-<a id="node-2852"></a>
+<a id="node-2822"></a>
 
 <p align="center"><kbd><img src="assets/5cc54df523d664711a06c5c282ad79161542f019.png" width="100%"></kbd></p>
 
@@ -3029,12 +3029,12 @@ quality
 <br>
 
 
-<a id="node-2853"></a>
+<a id="node-2823"></a>
 #### 1.3 - tokenize & detokenize Helper Functions
 
 <br>
 
-<a id="node-2854"></a>
+<a id="node-2824"></a>
 
 <p align="center"><kbd><img src="assets/7debdd55f85e2bce4a3de014e0d28a96b109f26d.png" width="100%"></kbd></p>
 
@@ -3053,7 +3053,7 @@ quality
 
 <br>
 
-<a id="node-2855"></a>
+<a id="node-2825"></a>
 
 <p align="center"><kbd><img src="assets/2b121c3bee25869a0b2b7f0500d2efb19ef062ac.png" width="100%"></kbd></p>
 
@@ -3078,7 +3078,7 @@ quality
 
 <br>
 
-<a id="node-2856"></a>
+<a id="node-2826"></a>
 
 <p align="center"><kbd><img src="assets/08da259bcaf478227bfa00180e53ee5843bf78d5.png" width="100%"></kbd></p>
 
@@ -3096,7 +3096,7 @@ quality
 
 <br>
 
-<a id="node-2857"></a>
+<a id="node-2827"></a>
 
 <p align="center"><kbd><img src="assets/53381c81d4f37ced0096995e409ca7dc98f3739f.png" width="100%"></kbd></p>
 
@@ -3114,13 +3114,13 @@ quality
 <br>
 
 
-<a id="node-2858"></a>
+<a id="node-2828"></a>
 #### 1.4 - Bucketing
 
 <br>
 
 
-<a id="node-2859"></a>
+<a id="node-2829"></a>
 #### Bucketing the tokenized sentences is an important technique used to speed up training in  NLP. Here is a \\_nice article describing it in detail\\_ https://rashmi-margani.medium. com/how-to-speed-up-the-training-of-the-sequence-model-using-bucketing-techniques-9e302b0fd976 but the gist is very simple.  Our inputs  have **variable lengths** and you want to **make these the same when batching** groups of sentences together. One way to do that is to **pad each sentence to the length of the  longest sentence** in the dataset. This might l**ead to some wasted computation** though.  For  example, if there are **multiple short sentences with just two tokens**, do we want to **pad  these when the longest sentence is composed of a 100 tokens?** Instead of **padding with  0s to the maximum length of a sentence each time**, we can **group our tokenized sentences by length and bucket**, as on this image (from the article above):
 
 > [!NOTE]
@@ -3132,7 +3132,7 @@ quality
 
 <br>
 
-<a id="node-2860"></a>
+<a id="node-2830"></a>
 
 <p align="center"><kbd><img src="assets/ddb6f0560070d95ba2cbfd0ebb9d9cc9a5334219.png" width="100%"></kbd></p>
 
@@ -3167,7 +3167,7 @@ quality
 
 <br>
 
-<a id="node-2861"></a>
+<a id="node-2831"></a>
 
 <p align="center"><kbd><img src="assets/10c9cf36550b4ac42f26043bf26ac6a7392736ab.png" width="100%"></kbd></p>
 
@@ -3189,12 +3189,12 @@ quality
 <br>
 
 
-<a id="node-2862"></a>
+<a id="node-2832"></a>
 #### 1.5 - Exploring the Data
 
 <br>
 
-<a id="node-2863"></a>
+<a id="node-2833"></a>
 
 <p align="center"><kbd><img src="assets/513ac6ed06b9a8b552795c9dc7e16c74f3b7dd5f.png" width="100%"></kbd></p>
 
@@ -3212,7 +3212,7 @@ quality
 <br>
 
 
-<a id="node-2864"></a>
+<a id="node-2834"></a>
 #### The **input_batch** and **target_batch** are Numpy arrays consisting of tokenized English  sentences and German sentences respectively. These tokens will later be used to  produce **embedding vectors for each word** in the sentence (so the embedding for a  sentence will be a matrix). The number of sentences in each **batch is usually a power of 2 for optimal computer memory usage.**  We can now visually inspect some of the data. You can run the cell below several times  to shuffle through the sentences. Just to note, while this is a standard data set that is  used widely, it does have some known wrong translations. With that, let's pick a random  sentence and print its tokenized representation.
 
 > [!NOTE]
@@ -3234,7 +3234,7 @@ quality
 
 <br>
 
-<a id="node-2865"></a>
+<a id="node-2835"></a>
 
 <p align="center"><kbd><img src="assets/666dd255f83a463d9e57fb62c291aa18b9e219fb.png" width="100%"></kbd></p>
 
@@ -3248,18 +3248,18 @@ quality
 <br>
 
 
-<a id="node-2866"></a>
+<a id="node-2836"></a>
 #### 2 - Neural Machine Translation with Attention
 
 <br>
 
 
-<a id="node-2867"></a>
+<a id="node-2837"></a>
 #### 2.1 - Attention Overview
 
 <br>
 
-<a id="node-2868"></a>
+<a id="node-2838"></a>
 
 <p align="center"><kbd><img src="assets/c76e0d6ff06ce6412afd805a0066463da88ba8ba.png" width="100%"></kbd></p>
 
@@ -3274,7 +3274,7 @@ quality
 
 <br>
 
-<a id="node-2869"></a>
+<a id="node-2839"></a>
 
 <p align="center"><kbd><img src="assets/af25599664514994c0a299d4f9126378c5406646.png" width="100%"></kbd></p>
 
@@ -3301,7 +3301,7 @@ quality
 
 <br>
 
-<a id="node-2870"></a>
+<a id="node-2840"></a>
 
 <p align="center"><kbd><img src="assets/9db1538cb6a8bf981669691da76c1bc8e022b252.png" width="100%"></kbd></p>
 
@@ -3326,18 +3326,18 @@ quality
 <br>
 
 
-<a id="node-2871"></a>
+<a id="node-2841"></a>
 #### 2.2 - Helper Functions
 
 <br>
 
 
-<a id="node-2872"></a>
+<a id="node-2842"></a>
 #### 2.2.1 - Input Encoder
 
 <br>
 
-<a id="node-2873"></a>
+<a id="node-2843"></a>
 
 <p align="center"><kbd><img src="assets/2a1cc0d7e0ad2ec85009c7aece80f4b3d5cec0e8.png" width="100%"></kbd></p>
 
@@ -3359,31 +3359,31 @@ quality
 
 <br>
 
-<a id="node-2874"></a>
+<a id="node-2844"></a>
 
 <p align="center"><kbd><img src="assets/980cc1080fe1b9355b81f0b1393f6ac84080c2d7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2875"></a>
+<a id="node-2845"></a>
 #### Exercise 1 - input_encoder_fn (UNQ_C1)
 
 <br>
 
-<a id="node-2876"></a>
+<a id="node-2846"></a>
 
 <p align="center"><kbd><img src="assets/d48e418518c8e7b030d37ccf1b5448997d62b63f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2877"></a>
+<a id="node-2847"></a>
 #### 2.2.2 - Pre-attention Decoder
 
 <br>
 
-<a id="node-2878"></a>
+<a id="node-2848"></a>
 
 <p align="center"><kbd><img src="assets/14f8225b29b4b7c8492e79d5aa98923e79b397db.png" width="100%"></kbd></p>
 
@@ -3407,32 +3407,32 @@ quality
 
 <br>
 
-<a id="node-2879"></a>
+<a id="node-2849"></a>
 
 <p align="center"><kbd><img src="assets/a0e36fdb8cc7bcd0c60ea132e52797ea160a0918.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2880"></a>
+<a id="node-2850"></a>
 #### Exercise 2 - pre_attention_decoder_fn (UNQ_C2)
 
 <br>
 
-<a id="node-2881"></a>
+<a id="node-2851"></a>
 
 <p align="center"><kbd><img src="assets/38254a2da7001ba3b352d5e97bcd0c1850aa5484.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2882"></a>
+<a id="node-2852"></a>
 #### 2.2.3 - Preparing the Attention Input
 
 <br>
 
 
-<a id="node-2883"></a>
+<a id="node-2853"></a>
 #### This function will prepare the inputs to the attention layer. We want to **take in the encoder  and pre-attention decoder activations** and **assign** it to the **queries, keys, and values**.   In  addition, another output here will be the **mask** to **distinguish real tokens from padding  tokens.** This mask will **be used internally by Trax** when **computing the softmax so padding  tokens will not have an effect on the computated probabilities**. From the data preparation  steps in Section 1 of this assignment, you should know which tokens in the input  correspond to padding.  We have filled the last two lines in composing the mask for you because it includes a  concept that will be discussed further next week. This is related to \\/**multiheaded  attention**\\/ which you can think of right now as **computing the attention multiple times** to  improve the model's predictions.  It is required to **consider this additional axis in the output**  so we've included it already but you **don't need to analyze it just yet.** What's important  now is for you to know **which should be the queries, keys, and values**, as well as to **initialize the mask.**
 
 > [!NOTE]
@@ -3450,12 +3450,12 @@ quality
 <br>
 
 
-<a id="node-2884"></a>
+<a id="node-2854"></a>
 #### Exercise 3 - prepare_attention_input (UNQ_C3)
 
 <br>
 
-<a id="node-2885"></a>
+<a id="node-2855"></a>
 
 <p align="center"><kbd><img src="assets/792c2af436e33f6fb2d6db478fc25284b2a46278.png" width="100%"></kbd></p>
 
@@ -3485,18 +3485,18 @@ quality
 <br>
 
 
-<a id="node-2886"></a>
+<a id="node-2856"></a>
 #### 2.3 - Implementation Overview
 
 <br>
 
 
-<a id="node-2887"></a>
+<a id="node-2857"></a>
 #### We are now **ready to implement** our sequence-to-sequence model with attention. This will be a **Serial network** and is illustrated in the diagram below.  It shows the layers you'll be using in Trax and you'll see that **each step can be implemented quite easily with one line commands.** We' ve placed several links to the documentation for each relevant layer in the discussion after the figure below.
 
 <br>
 
-<a id="node-2888"></a>
+<a id="node-2858"></a>
 
 <p align="center"><kbd><img src="assets/a54bb593c9ba1f3ef995878050b2470c773ec879.png" width="100%"></kbd></p>
 
@@ -3505,36 +3505,36 @@ quality
 <br>
 
 
-<a id="node-2889"></a>
+<a id="node-2859"></a>
 #### Exercise 4 - NMTAttn (UNQ_C4)
 
 <br>
 
-<a id="node-2890"></a>
+<a id="node-2860"></a>
 
 <p align="center"><kbd><img src="assets/7741ade1e6f463fb8dfc59c280f408c199defc84.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2891"></a>
+<a id="node-2861"></a>
 
 <p align="center"><kbd><img src="assets/e1b4bad0afa1097e03c54f1032458102686dd589.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2892"></a>
+<a id="node-2862"></a>
 
 <p align="center"><kbd><img src="assets/d83fb3160f52aad22ffbdc84cbc74ca5034af24d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2893"></a>
+<a id="node-2863"></a>
 
 <p align="center"><kbd><img src="assets/57df23093cd39c20bbb8a86a687e6d8b38065b0e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2894"></a>
+<a id="node-2864"></a>
 
 <p align="center"><kbd><img src="assets/3870fc425753ad9ef7cc2edf82cfb69b88a9a1b4.png" width="100%"></kbd></p>
 
@@ -3543,25 +3543,25 @@ quality
 
 <br>
 
-<a id="node-2895"></a>
+<a id="node-2865"></a>
 
 <p align="center"><kbd><img src="assets/6c1f885b9a0af842dbd52054a55146cdba9a77dc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2896"></a>
+<a id="node-2866"></a>
 
 <p align="center"><kbd><img src="assets/2b78633dd5693e41c6200d60e70192678cff9f72.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2897"></a>
+<a id="node-2867"></a>
 
 <p align="center"><kbd><img src="assets/6980501d28caf8386a9a43984d6b22cc6f8ab546.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2898"></a>
+<a id="node-2868"></a>
 
 <p align="center"><kbd><img src="assets/f453a7ef9df75a327fb1db3c6c2f5103be87aa38.png" width="100%"></kbd></p>
 
@@ -3590,7 +3590,7 @@ quality
 
 <br>
 
-<a id="node-2899"></a>
+<a id="node-2869"></a>
 
 <p align="center"><kbd><img src="assets/7d60859a0467a505fcff4ed5e678ff823238c5b4.png" width="100%"></kbd></p>
 
@@ -3601,7 +3601,7 @@ quality
 
 <br>
 
-<a id="node-2900"></a>
+<a id="node-2870"></a>
 
 <p align="center"><kbd><img src="assets/bbd3b21036c6473b72722061435924c5a2bdc9a3.png" width="100%"></kbd></p>
 
@@ -3609,7 +3609,7 @@ quality
 
 <br>
 
-<a id="node-2901"></a>
+<a id="node-2871"></a>
 
 <p align="center"><kbd><img src="assets/073b2e890e07cf4a1347c48019b5500d5a0010dc.png" width="100%"></kbd></p>
 
@@ -3686,7 +3686,7 @@ quality
 
 <br>
 
-<a id="node-2902"></a>
+<a id="node-2872"></a>
 
 <p align="center"><kbd><img src="assets/d96919c38393b9d41607a3d3c37e3e4888623f5f.png" width="100%"></kbd></p>
 
@@ -3695,24 +3695,24 @@ quality
 <br>
 
 
-<a id="node-2903"></a>
+<a id="node-2873"></a>
 #### 3 - Training
 
 <br>
 
 
-<a id="node-2904"></a>
+<a id="node-2874"></a>
 #### 3.1 - TrainTask
 
 <br>
 
 
-<a id="node-2905"></a>
+<a id="node-2875"></a>
 #### Exercise 5 - train_task_function (UNQ_C5)
 
 <br>
 
-<a id="node-2906"></a>
+<a id="node-2876"></a>
 
 <p align="center"><kbd><img src="assets/2c1796d529b0ae53688a4868aae21e140bd12bbe.png" width="100%"></kbd></p>
 
@@ -3722,49 +3722,49 @@ quality
 
 <br>
 
-<a id="node-2907"></a>
+<a id="node-2877"></a>
 
 <p align="center"><kbd><img src="assets/efa0dde71432f83c8497abb93dd893de1987beea.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2908"></a>
+<a id="node-2878"></a>
 #### 3.2 - EvalTask
 
 <br>
 
-<a id="node-2909"></a>
+<a id="node-2879"></a>
 
 <p align="center"><kbd><img src="assets/69487fa6d605af53932ff314cc06fb38f495003b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2910"></a>
+<a id="node-2880"></a>
 #### 3.3 - Loop
 
 <br>
 
-<a id="node-2911"></a>
+<a id="node-2881"></a>
 
 <p align="center"><kbd><img src="assets/baaceae32fe04d2b7848ce554d809d2cfeca56a9.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2912"></a>
+<a id="node-2882"></a>
 #### 4 - Testing
 
 <br>
 
 
-<a id="node-2913"></a>
+<a id="node-2883"></a>
 #### Testing
 
 <br>
 
-<a id="node-2914"></a>
+<a id="node-2884"></a>
 
 <p align="center"><kbd><img src="assets/af818dcabf8d2a44b0997c56b36146fd55520fd2.png" width="100%"></kbd></p>
 
@@ -3775,12 +3775,12 @@ quality
 <br>
 
 
-<a id="node-2915"></a>
+<a id="node-2885"></a>
 #### 4.1 - Decoding
 
 <br>
 
-<a id="node-2916"></a>
+<a id="node-2886"></a>
 
 <p align="center"><kbd><img src="assets/90c265cc244e76e06a9224a1a5bf1f9c406c19bf.png" width="100%"></kbd></p>
 
@@ -3800,7 +3800,7 @@ quality
 
 <br>
 
-<a id="node-2917"></a>
+<a id="node-2887"></a>
 
 <p align="center"><kbd><img src="assets/12ad0179250efc969a53ca7ec90a1026b2b3b172.png" width="100%"></kbd></p>
 
@@ -3810,37 +3810,37 @@ quality
 
 <br>
 
-<a id="node-2918"></a>
+<a id="node-2888"></a>
 
 <p align="center"><kbd><img src="assets/4ca0e0ec74df816e86ac3e0462dce2743ff2ade3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2919"></a>
+<a id="node-2889"></a>
 
 <p align="center"><kbd><img src="assets/9a3541b200ecaaab1212f547628a8dc07a007f08.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2920"></a>
+<a id="node-2890"></a>
 #### is is  the similar 'random sampling with distribution" technique?  ChatGPT  Yes, Gumbel sampling with temperature can be considered a form of random sampling with a specific distribution. In this case, the Gumbel distribution is used as the underlying distribution for sampling. Random sampling with distribution involves drawing samples from a given probability distribution. In the case of Gumbel sampling, the goal is to sample from a categorical distribution. The Gumbel distribution is utilized to introduce randomness and exploration in the sampling process. The Gumbel distribution is often used to model extreme values and is defined by its shape and location parameters. By transforming uniform random numbers through the Gumbel distribution, Gumbel sampling allows us to select a category or item from a categorical distribution in a probabilistic manner. The temperature parameter in Gumbel sampling controls the level of randomness in the sampling process. Higher temperatures lead to more diverse and random samples, while lower temperatures make the sampling process more focused and deterministic. Therefore, Gumbel sampling with temperature can be seen as a form of random sampling with the Gumbel distribution, where the temperature parameter determines the level of exploration and randomness in the generated samples.
 
 <br>
 
 
-<a id="node-2921"></a>
+<a id="node-2891"></a>
 #### Exercise 6 - next_symbol (UNQ_C6)
 
 <br>
 
-<a id="node-2922"></a>
+<a id="node-2892"></a>
 
 <p align="center"><kbd><img src="assets/5ac199acd6df251bf321051466aad5e9295f2862.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2923"></a>
+<a id="node-2893"></a>
 
 <p align="center"><kbd><img src="assets/80a788680d82354e1bf78f490a5243303831ff6e.png" width="100%"></kbd></p>
 
@@ -3899,19 +3899,19 @@ quality
 
 <br>
 
-<a id="node-2924"></a>
+<a id="node-2894"></a>
 
 <p align="center"><kbd><img src="assets/aae4aea1a9778a2fd11bb379e6fdbf2e45a65db6.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2925"></a>
+<a id="node-2895"></a>
 #### In the provided code, it appears that padding is not added to the `input_tokens` before model inference. However, it does add padding to the `cur_output_tokens`. Let's go through the code and understand the reasoning behind this:  1. `input_tokens`: These are the tokens representing the input sentence. It seems that padding is not added to the `input_tokens` because the code is focused on generating the next symbol in the translated sentence (`cur_output_tokens`) rather than processing the input sequence. The model's attention mechanism takes care of aligning input and output tokens during inference.  2. `cur_output_tokens`: These are the tokens generated so far in the translated sentence. Padding is added to `cur_output_tokens` to ensure that they have the same length as the `input_tokens` before passing them to the model for generating the next symbol. This is done so that both the input and output sequences have consistent dimensions when passing them through the model.  3. Padding Length: The code calculates the next power of 2 for the padding length. This is determined by the length of the `input_tokens`. The purpose of padding with the next power of 2 is likely to optimize memory usage and computation efficiency in some contexts. By using the next power of 2, you ensure that the padded sequence length aligns well with hardware and software optimization strategies that leverage power-of-two sizes.  4. Model Inference: The padded `cur_output_tokens` are reshaped into a numpy array with shape `(1, padded_length)` to represent a batch of size 1. This shape is expected by the model's inference process.  5. Generating Next Symbol: The model is then used to predict the next token in the translated sentence based on both the input tokens and the padded output tokens. Log probabilities for the next token are extracted from the model's output.  6. Sampling: The `tl.logsoftmax_sample` function is used to perform probabilistic sampling based on the log probabilities of the next symbol. This sampling introduces controlled randomness, controlled by the `temperature` parameter.  To summarize, padding is added to the `cur_output_tokens` to ensure that they have the same length as the `input_tokens` before passing them to the model for generating the next symbol. Padding is not added to `input_tokens` likely because the focus of this code is on generating the translated sentence rather than processing the input sequence.
 
 <br>
 
-<a id="node-2926"></a>
+<a id="node-2896"></a>
 
 <p align="center"><kbd><img src="assets/e219562a2e93afc2808d31edeee0c4a26a06f636.png" width="100%"></kbd></p>
 
@@ -3926,7 +3926,7 @@ quality
 
 <br>
 
-<a id="node-2927"></a>
+<a id="node-2897"></a>
 
 <p align="center"><kbd><img src="assets/fcd85a0a625138d2ce5d4cfcbf4095db5868a690.png" width="100%"></kbd></p>
 
@@ -3935,18 +3935,18 @@ quality
 <br>
 
 
-<a id="node-2928"></a>
+<a id="node-2898"></a>
 #### Exercise 7 - sampling_decode (UNQ_C7)
 
 <br>
 
 
-<a id="node-2929"></a>
+<a id="node-2899"></a>
 #### Now you will implement the sampling_decode() function. This will call the next_symbol() function above several times until the next output is the end-of-sentence token (i.e. EOS). It takes in an input string and returns the translated version of that string.
 
 <br>
 
-<a id="node-2930"></a>
+<a id="node-2900"></a>
 
 <p align="center"><kbd><img src="assets/5d60e5b7e5d2b107ae2cd2fd6f5d3c7f3a31acc4.png" width="100%"></kbd></p>
 
@@ -3976,7 +3976,7 @@ quality
 
 <br>
 
-<a id="node-2931"></a>
+<a id="node-2901"></a>
 
 <p align="center"><kbd><img src="assets/53a3dc01d59f70873c89448edaddedb0c553f144.png" width="100%"></kbd></p>
 
@@ -3984,7 +3984,7 @@ quality
 
 <br>
 
-<a id="node-2932"></a>
+<a id="node-2902"></a>
 
 <p align="center"><kbd><img src="assets/da3047a567ab342da6ec6b36e605c567d6312f7a.png" width="100%"></kbd></p>
 
@@ -3996,20 +3996,20 @@ quality
 
 <br>
 
-<a id="node-2933"></a>
+<a id="node-2903"></a>
 
 <p align="center"><kbd><img src="assets/18e813c1fbe32cb8a7fdd0c62fa607396ddf282c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2934"></a>
+<a id="node-2904"></a>
 #### 4.2 - Minimum Bayes-Risk Decoding
 
 <br>
 
 
-<a id="node-2935"></a>
+<a id="node-2905"></a>
 #### As mentioned in the lectures, **getting the most probable token**  at each step **may not necessarily produce the best results**.  Another approach is to do **Minimum Bayes Risk Decodin**g or MBR.   The general steps to implement this are:  1 **take several random samples**  2 **score each sample against all other samples**  3 **select the one with the highest score**  You will be building **helper functions** for these steps in the following  sections.
 
 > [!NOTE]
@@ -4023,18 +4023,18 @@ quality
 <br>
 
 
-<a id="node-2936"></a>
+<a id="node-2906"></a>
 #### 4.2.1 - Generating Samples
 
 <br>
 
 
-<a id="node-2937"></a>
+<a id="node-2907"></a>
 #### First, let's build a function to generate several samples. You can use the sampling_decode() function you developed earlier to do this easily. We want to record the token list and log probability for each sample as these will be needed in the next step.
 
 <br>
 
-<a id="node-2938"></a>
+<a id="node-2908"></a>
 
 <p align="center"><kbd><img src="assets/01cf6961d0d63691a3b0177fafb363e606b45c06.png" width="100%"></kbd></p>
 
@@ -4047,19 +4047,19 @@ quality
 
 <br>
 
-<a id="node-2939"></a>
+<a id="node-2909"></a>
 
 <p align="center"><kbd><img src="assets/b0048034494149c6822939394d16e320eeadc999.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2940"></a>
+<a id="node-2910"></a>
 #### 4.2.2 - Comparing Overlaps
 
 <br>
 
-<a id="node-2941"></a>
+<a id="node-2911"></a>
 
 <p align="center"><kbd><img src="assets/c41679cca9159291cc52406f78e94f9799266a76.png" width="100%"></kbd></p>
 
@@ -4077,7 +4077,7 @@ quality
 <br>
 
 
-<a id="node-2942"></a>
+<a id="node-2912"></a>
 #### One of the more commonly used metrics in machine translation is the ROUGE score. For unigrams, this is called **ROUGE-1** and as shown in class, you can **output the scores for both precision and recall** when comparing two samples. To get the final score, you will want to compute the **F1-score** as given by:
 
 <p align="center"><kbd><img src="assets/8ef7279305448d988b448b95554d209659d33ca7.png" width="100%"></kbd></p>
@@ -4085,12 +4085,12 @@ quality
 <br>
 
 
-<a id="node-2943"></a>
+<a id="node-2913"></a>
 #### Exercise 8 - rouge1_similarity (UNQ_C8)
 
 <br>
 
-<a id="node-2944"></a>
+<a id="node-2914"></a>
 
 <p align="center"><kbd><img src="assets/b8f24bddeb6db7ab33c032d74ef72c4ae1e98ebb.png" width="100%"></kbd></p>
 
@@ -4130,37 +4130,37 @@ quality
 
 <br>
 
-<a id="node-2945"></a>
+<a id="node-2915"></a>
 
 <p align="center"><kbd><img src="assets/033daf57932d3d9fe79f034472672e9bee187233.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2946"></a>
+<a id="node-2916"></a>
 
 <p align="center"><kbd><img src="assets/b37467afba01f0fd2d03acbc30f81d77ac559976.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2947"></a>
+<a id="node-2917"></a>
 #### 4.2.3 - Overall Score
 
 <br>
 
-<a id="node-2948"></a>
+<a id="node-2918"></a>
 
 <p align="center"><kbd><img src="assets/060faecb7cf08697bf80ca78af2726dc67b3a5ca.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2949"></a>
+<a id="node-2919"></a>
 #### Exercise 9 - average_overlap (UNQ_C9)
 
 <br>
 
-<a id="node-2950"></a>
+<a id="node-2920"></a>
 
 <p align="center"><kbd><img src="assets/f9efea66d3502a6174c9ed0d37345d1b4a8ee7aa.png" width="100%"></kbd></p>
 
@@ -4177,19 +4177,19 @@ quality
 
 <br>
 
-<a id="node-2951"></a>
+<a id="node-2921"></a>
 
 <p align="center"><kbd><img src="assets/71def5d637d3bec922ff1b6e3d6449c78391a77f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2952"></a>
+<a id="node-2922"></a>
 #### In practice, it is also common to see the **weighted mean** being used to **calculate the overall score** instead of just the **arithmetic mean**. We have implemented it below and you can use it in your experiements to see which one will give better results.
 
 <br>
 
-<a id="node-2953"></a>
+<a id="node-2923"></a>
 
 <p align="center"><kbd><img src="assets/c996788598148cb664583d022acfb0f409560a86.png" width="100%"></kbd></p>
 
@@ -4205,13 +4205,13 @@ quality
 <br>
 
 
-<a id="node-2954"></a>
+<a id="node-2924"></a>
 #### 4.2.4 - Putting it all Together
 
 <br>
 
 
-<a id="node-2955"></a>
+<a id="node-2925"></a>
 #### We will now p**ut everything together** and develop the **mbr_decode**() function. Please use the helper functions you just developed to complete this. You will want to **generate samples**, **get the score for each sample**, **get the highest score among all samples**, then **detokenize this sample to get the translated sentence**
 
 > [!NOTE]
@@ -4223,12 +4223,12 @@ quality
 <br>
 
 
-<a id="node-2956"></a>
+<a id="node-2926"></a>
 #### Exercise 10 - mbr_decode (UNQ_C10)
 
 <br>
 
-<a id="node-2957"></a>
+<a id="node-2927"></a>
 
 <p align="center"><kbd><img src="assets/73d275d25fcd7a3c988f7939ae4ff75f32c3f593.png" width="100%"></kbd></p>
 
@@ -4239,14 +4239,14 @@ quality
 
 <br>
 
-<a id="node-2958"></a>
+<a id="node-2928"></a>
 
 <p align="center"><kbd><img src="assets/5f4f1679a76cba408db7e9c9d6eb4427a0c6f1bd.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2959"></a>
+<a id="node-2929"></a>
 #### Congratulations! Next week, you'll dive deeper into attention models and study the **Transformer** architecture. You will build another network but without the recurrent part. It will show that attention is all you need! It should be fun!
 
 > [!NOTE]
@@ -4255,7 +4255,7 @@ quality
 
 <br>
 
-<a id="node-2960"></a>
+<a id="node-2930"></a>
 
 <p align="center"><kbd><img src="assets/b6c08f078fcb74122adb4af9abe7df4aeca8c031.png" width="100%"></kbd></p>
 

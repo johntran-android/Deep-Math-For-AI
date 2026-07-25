@@ -18,13 +18,13 @@ Learning Objectives
  • Backoff
  • Tokenization
 
-<a id="node-1340"></a>
+<a id="node-1310"></a>
 ## N-grams: Overview
 
 <br>
 
 
-<a id="node-1341"></a>
+<a id="node-1311"></a>
 ### 1 **N-grams** are **fundamental concepts** in NLP used in **various applications** like
 
 > [!NOTE]
@@ -61,7 +61,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1342"></a>
+<a id="node-1312"></a>
 
 <p align="center"><kbd><img src="assets/798e8363ed7f3e4f745f95cf2dc94a97dee8f3a7.png" width="100%"></kbd></p>
 
@@ -75,7 +75,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1343"></a>
+<a id="node-1313"></a>
 
 <p align="center"><kbd><img src="assets/03f93425873234277e8827e2c49958046e93882e.png" width="100%"></kbd></p>
 
@@ -93,7 +93,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1344"></a>
+<a id="node-1314"></a>
 
 <p align="center"><kbd><img src="assets/93a76341d203b585a7a411a498fd1e292e8188ae.png" width="100%"></kbd></p>
 
@@ -119,13 +119,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1345"></a>
+<a id="node-1315"></a>
 ## N-grams & Probs
 
 <br>
 
 
-<a id="node-1346"></a>
+<a id="node-1316"></a>
 ### 1 **N-gram language models** allow you to **generate texts** by **estimating the \\/conditional probability**\\/ of an
 
 > [!NOTE]
@@ -171,7 +171,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1347"></a>
+<a id="node-1317"></a>
 
 <p align="center"><kbd><img src="assets/c5ef3a24f9e72d72193acfd2b68059ef9bfbea84.png" width="100%"></kbd></p>
 
@@ -195,13 +195,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1348"></a>
+<a id="node-1318"></a>
 
 <p align="center"><kbd><img src="assets/b73ed737e191e3ce97c13b8a37aada1bf0bf1dc1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1349"></a>
+<a id="node-1319"></a>
 
 <p align="center"><kbd><img src="assets/fb48002c8eac55ea8cc3940247dd45cc98c69db8.png" width="100%"></kbd></p>
 
@@ -211,7 +211,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1350"></a>
+<a id="node-1320"></a>
 
 <p align="center"><kbd><img src="assets/a38fa997cc5eb0dc8e996e0785fc432cc9222fea.png" width="100%"></kbd></p>
 
@@ -224,7 +224,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1351"></a>
+<a id="node-1321"></a>
 
 <p align="center"><kbd><img src="assets/3207c08e24c5e6de2e4e5f329be02ced4372b3da.png" width="100%"></kbd></p>
 
@@ -242,7 +242,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1352"></a>
+<a id="node-1322"></a>
 
 <p align="center"><kbd><img src="assets/2c9a6d873ccdd0c5b29e808f9567434315a488b4.png" width="100%"></kbd></p>
 
@@ -256,7 +256,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1353"></a>
+<a id="node-1323"></a>
 
 <p align="center"><kbd><img src="assets/62584a97e789dcc0d57711c63498d1e2cd229591.png" width="100%"></kbd></p>
 
@@ -272,7 +272,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1354"></a>
+<a id="node-1324"></a>
 
 <p align="center"><kbd><img src="assets/4f3ff9d59ec2608e525133592b3f25a2acef4b59.png" width="100%"></kbd></p>
 
@@ -286,13 +286,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1355"></a>
+<a id="node-1325"></a>
 ## Sequence Probabilities
 
 <br>
 
 
-<a id="node-1356"></a>
+<a id="node-1326"></a>
 ### 1 Modeling **whole sentences** using **n-gram probabilities**.
 
 > [!NOTE]
@@ -317,7 +317,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1357"></a>
+<a id="node-1327"></a>
 
 <p align="center"><kbd><img src="assets/c009aa5f2ef440cbbe3e050d8aa3c364a6c3a7b5.png" width="100%"></kbd></p>
 
@@ -341,7 +341,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1358"></a>
+<a id="node-1328"></a>
 
 <p align="center"><kbd><img src="assets/5b04dce1e6960337017ac77de0ce939422121f16.png" width="100%"></kbd></p>
 
@@ -357,7 +357,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1359"></a>
+<a id="node-1329"></a>
 
 <p align="center"><kbd><img src="assets/63cd0b728e9b84377ca9343b977ed65dee9412cc.png" width="100%"></kbd></p>
 
@@ -380,7 +380,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1360"></a>
+<a id="node-1330"></a>
 
 <p align="center"><kbd><img src="assets/b240a4656960ec9ff986d732eb4a0482dae1136d.png" width="100%"></kbd></p>
 
@@ -435,7 +435,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1361"></a>
+<a id="node-1331"></a>
 
 <p align="center"><kbd><img src="assets/c498357ea16ff8b340673b39ba6f628a63220f50.png" width="100%"></kbd></p>
 
@@ -465,7 +465,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1362"></a>
+<a id="node-1332"></a>
 
 <p align="center"><kbd><img src="assets/b582fedf966c8b86f48992f2aceda698404575e0.png" width="100%"></kbd></p>
 
@@ -479,7 +479,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1363"></a>
+<a id="node-1333"></a>
 
 <p align="center"><kbd><img src="assets/ac0f7553788d8ef6090e38cb43bd483f18377a02.png" width="100%"></kbd></p>
 
@@ -547,13 +547,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1364"></a>
+<a id="node-1334"></a>
 ## Start And Ending Sentence
 
 <br>
 
 
-<a id="node-1365"></a>
+<a id="node-1335"></a>
 ### 1 Introduction to **handling the beginning** and **end of sentences** in \\*N-gram
 
 > [!NOTE]
@@ -590,13 +590,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1366"></a>
+<a id="node-1336"></a>
 
 <p align="center"><kbd><img src="assets/6a2a8e190fffb9125a07e91c82874cae1111e98f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1367"></a>
+<a id="node-1337"></a>
 
 <p align="center"><kbd><img src="assets/2cd0be9c887a7fe96a9851282e30e4c1f8a6b2c4.png" width="100%"></kbd></p>
 
@@ -615,7 +615,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1368"></a>
+<a id="node-1338"></a>
 
 <p align="center"><kbd><img src="assets/a226f4cf0cbcee82111adb7046fb28f09b0b0ae0.png" width="100%"></kbd></p>
 
@@ -627,7 +627,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1369"></a>
+<a id="node-1339"></a>
 
 <p align="center"><kbd><img src="assets/32ec5ded3f0bb8794e730ed5606c761f6cac2cef.png" width="100%"></kbd></p>
 
@@ -641,31 +641,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-1370"></a>
+<a id="node-1340"></a>
 
 <p align="center"><kbd><img src="assets/a59c937af15de9f66c70a1ad1c29e35c785c13e1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1371"></a>
+<a id="node-1341"></a>
 
 <p align="center"><kbd><img src="assets/9d49add150d68025654cebc691103e5b61f70893.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1372"></a>
+<a id="node-1342"></a>
 
 <p align="center"><kbd><img src="assets/f38f955f3a6a8557b1d575f013c14310ee1ba36b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1373"></a>
+<a id="node-1343"></a>
 
 <p align="center"><kbd><img src="assets/a4a8beaac8bf76024c028681b7f7a6ea2283c172.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1374"></a>
+<a id="node-1344"></a>
 
 <p align="center"><kbd><img src="assets/faa14841d6abf927e55b35317b66ae8a8609aa18.png" width="100%"></kbd></p>
 
@@ -679,7 +679,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1375"></a>
+<a id="node-1345"></a>
 
 <p align="center"><kbd><img src="assets/5227a17a9a23828714802fb48c7203659c61198f.png" width="100%"></kbd></p>
 
@@ -689,13 +689,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1376"></a>
+<a id="node-1346"></a>
 
 <p align="center"><kbd><img src="assets/4b7209ba393cd64070b0ecf99f8d030b3f2fae11.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1377"></a>
+<a id="node-1347"></a>
 
 <p align="center"><kbd><img src="assets/9ba9bd6dd0234a4714a885efcc35616034e03455.png" width="100%"></kbd></p>
 
@@ -706,20 +706,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1378"></a>
+<a id="node-1348"></a>
 
 <p align="center"><kbd><img src="assets/cca492bd2042242f55e077bf8bdbfdadf65a01fa.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1379"></a>
+<a id="node-1349"></a>
 ## Lab: N-gram Corpus Preprocessing
 
 <br>
 
 
-<a id="node-1380"></a>
+<a id="node-1350"></a>
 ### The **input corpus** in this week's assignment is a **continuous text** that \\*needs some
 
 > [!NOTE]
@@ -742,7 +742,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1381"></a>
+<a id="node-1351"></a>
 #### import **nltk**               # NLP toolkit import **re**                 # Library for Regular expression operations  nltk.download('**punkt**')    # Download the **Punkt sentence tokenizer**
 
 > [!NOTE]
@@ -752,37 +752,37 @@ Learning Objectives
 <br>
 
 
-<a id="node-1382"></a>
+<a id="node-1352"></a>
 #### Lowercase
 
 <br>
 
 
-<a id="node-1383"></a>
+<a id="node-1353"></a>
 #### Words at the beginning of a sentence and names start with a **capital letter**. However,  when **counting words**, you want to **treat them the same** as if they appeared in the middle  of a sentence.  You can do that by converting the text to lowercase using [**str. lowercase**] (\\_https:// docs.python. org/3/library/stdtypes. html?highlight=split#str. lower\\_).
 
 <br>
 
 
-<a id="node-1384"></a>
+<a id="node-1354"></a>
 #### # change the corpus to lowercase **corpus** = "Learning% makes 'me' happy. I am happy be-cause I am learning! :)" corpus = corpus.**lower()**  # note that word "learning" will now be the same regardless of its position in the sentence print(corpus)
 
 <br>
 
 
-<a id="node-1385"></a>
+<a id="node-1355"></a>
 #### learning% makes 'me' happy. i am happy be-cause i am learning! :)
 
 <br>
 
 
-<a id="node-1386"></a>
+<a id="node-1356"></a>
 #### Remove special charactes
 
 <br>
 
 
-<a id="node-1387"></a>
+<a id="node-1357"></a>
 #### **Some of the characters** may **need to be removed** from the corpus before we start  processing the text to find **n-grams.**  Often, the special characters such as **double quotes '"'** or **dash '-'** are removed, and the **interpunction** such as full **stop '.'** or **question mark ' ?'** are **left** in the corpus.
 
 > [!NOTE]
@@ -793,7 +793,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1388"></a>
+<a id="node-1358"></a>
 #### # **remove special characters** corpus = "learning**%** makes **'**me**'** happy. i am happy be-cause i am learning! **:)**" corpus = **re.sub(r"[^a-zA-Z0-9.?! ]+", "", corpus)** print(corpus)  learning makes me happy. i am happy because i am learning!
 
 > [!NOTE]
@@ -806,7 +806,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1389"></a>
+<a id="node-1359"></a>
 #### Note that this process gets rid of the **happy face made with punctuations :).** Remember that for **sentiment analysis**, **this emoticon was very important**. However, we **will not consider it here.**
 
 > [!NOTE]
@@ -817,13 +817,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1390"></a>
+<a id="node-1360"></a>
 #### Text splitting
 
 <br>
 
 
-<a id="node-1391"></a>
+<a id="node-1361"></a>
 #### In the assignment, the **sentences in the corpus** are separated by a special delimiter **\\\** .  You will need to **split the corpus** into an **array of sentences** using this **delimiter**. One way  to do that is by using the \\_**str.split**\\_ method.  The following examples illustrate how to use this method. The code shows: • how to **split a string** containing a **date** into an **array of** **date parts**   • how to **split a string** with **time** into an **array containing hours, minutes and  seconds**  Also, note what happens if there are **several \\/back-to-back delimiters**\\/ like between "May"  and "9".  This text splitting is more complicated than the tokenization process used for sentiment analysis.
 
 > [!NOTE]
@@ -834,13 +834,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1392"></a>
+<a id="node-1362"></a>
 #### # split text by a delimiter to array input_date="**Sat May  9 07:33:35 CEST 2020**"  # get the date parts in array date_parts = input_date.**split(" ")** print(f"date parts = {date_parts}")  #get the time parts in array time_parts = **date_parts[4].split(":")** print(f"time parts = {time_parts}")
 
 <br>
 
 
-<a id="node-1393"></a>
+<a id="node-1363"></a>
 #### date parts = ['Sat', 'May', **''**, '9', '07:33:35', 'CEST', '2020'] time parts = ['07', '33', '35']
 
 > [!NOTE]
@@ -851,13 +851,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1394"></a>
+<a id="node-1364"></a>
 #### Sentence tokenizing
 
 <br>
 
 
-<a id="node-1395"></a>
+<a id="node-1365"></a>
 #### Once you have a **list of sentences**, the next step is to **split each sentence into a list of  words.**  This process c**ould be done in several ways**, even using the **str.split** method described  above, but we will use the **NLTK library** \\_nltk\\_ to help us with that. **https://www.nltk.org/**  In the code assignment, you will use the method \\_**word_tokenize**\\_ to **split your sentence  into a list of words**. Let us try the method in an example.   https://www.nltk.org/api/nltk.tokenize.html#nltk.tokenize.punkt.PunktLanguageVars.word_tokenize
 
 > [!NOTE]
@@ -868,25 +868,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1396"></a>
+<a id="node-1366"></a>
 #### # tokenize the sentence into an array of words  sentence = 'I am happy because I am learning.' tokenized_sentence = **nltk.word_tokenize**(sentence) print(f'{sentence} -> {tokenized_sentence}')
 
 <br>
 
 
-<a id="node-1397"></a>
+<a id="node-1367"></a>
 #### I am happy because I am learning. -> ['I', 'am', 'happy', ' because', 'I', 'am', 'learning', '.']
 
 <br>
 
 
-<a id="node-1398"></a>
+<a id="node-1368"></a>
 #### Now that the sentence is tokenized, you can **work with each word** in the sentence **separately**. This will be useful later when **creating** and **counting N-grams.** In the following code example, you will see how to **find the length of each word**.
 
 <br>
 
 
-<a id="node-1399"></a>
+<a id="node-1369"></a>
 #### # find length of each word in the tokenized sentence sentence = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.'] word_lengths = [(word, **len(word)**) for word in sentence] # Create a list with the word lengths using a list comprehension print(f' Lengths of the words: \\\ {word_lengths}')
 
 > [!NOTE]
@@ -896,7 +896,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1400"></a>
+<a id="node-1370"></a>
 #### Lengths of the words:  [('I', 1), ('am', 2), ('happy', 5), ('because', 7), ('I', 1), ('am', 2), ('learning', 8), ('.', 1)]
 
 > [!NOTE]
@@ -911,13 +911,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1401"></a>
+<a id="node-1371"></a>
 #### N-grams
 
 <br>
 
 
-<a id="node-1402"></a>
+<a id="node-1372"></a>
 #### **Sentence to n-gram**  The next step is to **build n-grams** from the **tokenized sentences.**  A **sliding window of size n-words** can **generate the n-grams**. The window **scans the list of  words** starting at the sentence beginning, **moving by a step of one word** until it **reaches  the end of the sentence.**  Here is an example method that prints all trigrams in the given sentence.
 
 > [!NOTE]
@@ -927,12 +927,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1403"></a>
+<a id="node-1373"></a>
 #### def **sentence_to_trigram**(tokenized_sentence):     """     Prints all **trigrams** in the given tokenized sentence.          Args:         tokenized_sentence: The **words list.**          Returns:         No output     """     # note that the **last position of i** is **3rd to the end**     for i in range(**len(tokenized_sentence)** **- 3** **+ 1**):         # the sliding window **starts at position i** and contains **3 words**         **trigram** = tokenized_sentence[**i : i + 3**]         print(trigram)  tokenized_sentence = ['i', 'am', 'happy', 'because', 'i', 'am', 'learning', '.']  print(f'List all trigrams of sentence: {tokenized_sentence}\\\ ') sentence_to_trigram(tokenized_sentence) 
 
 <br>
 
-<a id="node-1404"></a>
+<a id="node-1374"></a>
 
 <p align="center"><kbd><img src="assets/c8668dced4a9743c0efc17d32cd1e231b9a6c051.png" width="100%"></kbd></p>
 
@@ -940,7 +940,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1405"></a>
+<a id="node-1375"></a>
 
 <p align="center"><kbd><img src="assets/bfb035912e379a27b6a2296b577308667257c466.png" width="100%"></kbd></p>
 
@@ -952,7 +952,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1406"></a>
+<a id="node-1376"></a>
 #### # get **trigram prefix** from a **4-gram** fourgram = ['I', 'am', 'happy','because'] trigram = fourgram**[0:-1]** # Get the elements **from 0**, included, **up to the last element**, **not included**. print(trigram)
 
 > [!NOTE]
@@ -964,20 +964,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1407"></a>
+<a id="node-1377"></a>
 
 <p align="center"><kbd><img src="assets/a5b68966248fef42d80cb798090eed0c7b100e3b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1408"></a>
+<a id="node-1378"></a>
 #### Start and end of sentence word
 
 <br>
 
 
-<a id="node-1409"></a>
+<a id="node-1379"></a>
 #### You could see in the lecture that we **must add some special characters at the beginning and the end** of each sentence:  **<**𝑠**>**   at beginning **<**𝑒**>**   at the end For n-grams, we must **prepend n-1 of characters at the begining of the sentence.**  Let us have a look at how you can implement this in code.
 
 > [!NOTE]
@@ -988,7 +988,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1410"></a>
+<a id="node-1380"></a>
 #### # when working with **trigrams**, you need to prepend **2 <s>** and append **one </s>** n = 3 tokenized_sentence = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.'] tokenized_sentence = [**"<s>"] * (n - 1)** + tokenized_sentence + **["<e>"]** print(tokenized_sentence)
 
 > [!NOTE]
@@ -999,19 +999,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-1411"></a>
+<a id="node-1381"></a>
 #### ['<s>', '<s>', 'I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.', '<e>']
 
 <br>
 
 
-<a id="node-1412"></a>
+<a id="node-1382"></a>
 ## The N-gram Language Model
 
 <br>
 
 
-<a id="node-1413"></a>
+<a id="node-1383"></a>
 ### 1 Creating a **count matrix**: The first step is to **process a corpus** and create a **count matrix** that
 
 > [!NOTE]
@@ -1043,13 +1043,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1414"></a>
+<a id="node-1384"></a>
 
 <p align="center"><kbd><img src="assets/ff376de499fd9c581a268c1c8acd20c7950e7b05.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1415"></a>
+<a id="node-1385"></a>
 
 <p align="center"><kbd><img src="assets/72488acf6e76b68106c6f745efb1507b426e87f1.png" width="100%"></kbd></p>
 
@@ -1077,7 +1077,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1416"></a>
+<a id="node-1386"></a>
 
 <p align="center"><kbd><img src="assets/260880a9c9bb87944d7927d3e9e4a196f7ecb913.png" width="100%"></kbd></p>
 
@@ -1087,7 +1087,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1417"></a>
+<a id="node-1387"></a>
 
 <p align="center"><kbd><img src="assets/bc939c593ef3082adeb116a8c776570d57243b18.png" width="100%"></kbd></p>
 
@@ -1103,12 +1103,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1418"></a>
+<a id="node-1388"></a>
 #### Mặc khác nó có thể **dự đoán từ tiếp theo** của câu bằng cách lấy ra cái **(N-1)-gram** cuối của câu đang có và tìm trong **probability matrix** cái row tương ứng với (N-1)-gram đó và **xem từ nào tạo nên xác suất cao nhất**.  Ví dụ trong cái bản 2-gram ở trước, thì mỗi hàng là những cái 1-gram, giả sử có câu " Tomorrow I ..." yêu cầu **tìm từ có xác suất cao nhất để điền vào** thì ta extract **1-gram** cuối của câu = **"I"** và xem trong matrix thấy với hàng I thì từ **"study"** và **"learn"** có **bigram probability cao nhất** suy ra prediction có thể là **Tomorrow I learn** hoặc **Tomorrow I study**
 
 <br>
 
-<a id="node-1419"></a>
+<a id="node-1389"></a>
 
 <p align="center"><kbd><img src="assets/39b224d2f1cf099901960f680ea8df0e2bca5347.png" width="100%"></kbd></p>
 
@@ -1119,7 +1119,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1420"></a>
+<a id="node-1390"></a>
 
 <p align="center"><kbd><img src="assets/5e739b1dd72fd68a088f56c463cac5cc09cec8eb.png" width="100%"></kbd></p>
 
@@ -1136,20 +1136,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1421"></a>
+<a id="node-1391"></a>
 
 <p align="center"><kbd><img src="assets/bf35250f734b030a28a3aab4232ad5fd79f9573a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1422"></a>
+<a id="node-1392"></a>
 ## Language Model Evaluation
 
 <br>
 
 
-<a id="node-1423"></a>
+<a id="node-1393"></a>
 ### 1 Introduction to language model **evaluation**: The video explains how to **evaluate a language model** using a
 
 > [!NOTE]
@@ -1188,7 +1188,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1424"></a>
+<a id="node-1394"></a>
 
 <p align="center"><kbd><img src="assets/416d88184a9f6c6aec8e2e867710cd4ff9e368c0.png" width="100%"></kbd></p>
 
@@ -1198,7 +1198,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1425"></a>
+<a id="node-1395"></a>
 
 <p align="center"><kbd><img src="assets/f3302f37e48a0298f4748408a7a43a3108a6902a.png" width="100%"></kbd></p>
 
@@ -1213,7 +1213,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1426"></a>
+<a id="node-1396"></a>
 
 <p align="center"><kbd><img src="assets/5da90f06cf33303ef7973d4f051263661fb94012.png" width="100%"></kbd></p>
 
@@ -1233,7 +1233,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1427"></a>
+<a id="node-1397"></a>
 
 <p align="center"><kbd><img src="assets/6ec653c00212708e9951de6a4ec25ef3f4ea5494.png" width="100%"></kbd></p>
 
@@ -1247,7 +1247,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1428"></a>
+<a id="node-1398"></a>
 
 <p align="center"><kbd><img src="assets/4180deb002cbc93cc055a206ac5648d36bb2495a.png" width="100%"></kbd></p>
 
@@ -1259,12 +1259,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1429"></a>
+<a id="node-1399"></a>
 #### Nhìn đáng sợ nhưng thật ra công thức rất dễ hiểu:  Tính **Bi-gram probability** của **từng câu** (ví dụ câu w1w2w3, nhớ lại P(w1w2w3) sẽ ~= P(w3|w2)*P(w2|w1)) và chính là **tích của tất cả các Bi-gram probability các bigram của câu đó.**  Sau đó tính tính product / **nhân hết P của các câu lại ví dụ ra A**,  thì A **cũng chính là tích của tất cả các Bi-gram trong entire set**.  Và **luỹ thừa -1/m** mà chính là **căn bậc m** 
 
 <br>
 
-<a id="node-1430"></a>
+<a id="node-1400"></a>
 
 <p align="center"><kbd><img src="assets/430a0791237ac5ba0bc6aea1c85c7336644ca12a.png" width="100%"></kbd></p>
 
@@ -1274,7 +1274,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1431"></a>
+<a id="node-1401"></a>
 
 <p align="center"><kbd><img src="assets/c92e07a2f03ebc6726e0bb44c6c3fdff073bf52d.png" width="100%"></kbd></p>
 
@@ -1295,7 +1295,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1432"></a>
+<a id="node-1402"></a>
 
 <p align="center"><kbd><img src="assets/20dc83ec14b9c844753bcc87a94842c68356205b.png" width="100%"></kbd></p>
 
@@ -1307,7 +1307,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1433"></a>
+<a id="node-1403"></a>
 ## Lab: Building The
 
 > [!NOTE]
@@ -1317,13 +1317,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1434"></a>
+<a id="node-1404"></a>
 ### Count matrix
 
 <br>
 
 
-<a id="node-1435"></a>
+<a id="node-1405"></a>
 #### To calculate the **n-gram probability**, you will need to **count frequencies** of **n-grams** and **n- gram prefixes** in the training dataset. In some of the code assignment exercises, you will  store the **n-gram frequencies** in a dictionary.  In other parts of the assignment, you will build a **count matrix** that keeps counts of (**n-1)- gram** **prefix** followed by **all possible last words in the vocabulary**.  The following code shows how to **check**, **retrieve** and **update** **counts of n-grams** in the  word count dictionary.
 
 > [!NOTE]
@@ -1336,7 +1336,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1436"></a>
+<a id="node-1406"></a>
 #### # manipulate n_gram count **dictionary**  **n_gram_counts** = {     ('I', 'am', 'happy'): 2,     ('am', 'happy', 'because'): 1}  # **get count** for an n-gram **tuple** print(f"count of n-gram {('I', 'am', 'happy')}: {n_gram_counts[('I', 'am', 'happy')]}")  # **check** if n-gram is **present** in the dictionary if **('I', 'am', 'learning') in n_gram_counts**:     print(f"n-gram {('I', 'am', 'learning')} found") else:     print(f"n-gram {('I', 'am', 'learning')} missing")  # **update the count** in the word count dictionary **n_gram_counts[('I', 'am', 'learning')] = 1** if ('I', 'am', 'learning') in n_gram_counts:     print(f"n-gram {('I', 'am', 'learning')} found") else:     print(f"n-gram {('I', 'am', 'learning')} missing") 
 
 > [!NOTE]
@@ -1349,20 +1349,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1437"></a>
+<a id="node-1407"></a>
 
 <p align="center"><kbd><img src="assets/d799eb5dfda6eadb635c197a975ad80ffeb61867.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1438"></a>
+<a id="node-1408"></a>
 #### The next code snippet shows **how to merge two tuples** in **Python**. That will be handy when **creating the n-gram** from the **prefix** and the **last word.**
 
 <br>
 
 
-<a id="node-1439"></a>
+<a id="node-1409"></a>
 #### # concatenate tuple for prefix and tuple with the last word to create the n_gram prefix = ('I', 'am', 'happy') word = 'because'  # **note here the syntax for creating a tuple for a single word** n_gram = **prefix + (word,)** print(n_gram)
 
 > [!NOTE]
@@ -1373,19 +1373,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1440"></a>
+<a id="node-1410"></a>
 #### In the lecture, you've seen that the **count matrix** could be made in a single pass through the corpus. Here is one approach to do that.
 
 <br>
 
 
-<a id="node-1441"></a>
+<a id="node-1411"></a>
 #### import **numpy** as np import **pandas** as pd from collections import **defaultdict** def **single_pass_trigram_count_matrix**(corpus):     """     Creates the **trigram count matrix** from the **input corpus** in a **single pass through the corpus**.          Args:         corpus: **Pre-processed** and **tokenized corpus.**           Returns:         **bigrams**: list of a**ll bigram prefixes**, **row index**         **vocabulary**: list of **all found words**, the **column index**         **count_matrix**: pandas **dataframe** with **bigram prefixes as rows**,                        v**ocabulary words** as **columns**                        and t**he counts of the bigram/word combinations** (i.e. **trigrams**) as values     """     bigrams = []     vocabulary = []     count_matrix_dict = defaultdict(dict)          # **go through the corpus** once with a **sliding window**     for i in range(l**en(corpus) - 3 + 1**):         # the sliding window starts at position I and contains 3 words         **trigram = tuple(corpus[i : i + 3])**                  **bigram = trigram[0 : -1]**         if not bigram in bigrams:             **bigrams**.**append**(bigram)                          **last_word** = **trigram[-1]**         if not last_word in vocabulary:             **vocabulary**.append(last_word)                  if (**bigram,last_word**) not in **count_matrix_dict**:             count_matrix_dict[bigram,last_word] = 0                      count_matrix_dict[bigram,last_word] **+= 1**          # convert the count_matrix to **np.array** to fill in the blanks     count_matrix = **np.zeros((len(bigrams), len(vocabulary)))**     for **trigram_key**, **trigam_count** in count_matrix_dict.items():         count_matrix[bigrams.index(trigram_key[0]), \\\\                      vocabulary.index(trigram_key[1])]\\\\         = trigam_count          # **np.array** to **pandas dataframe** conversion     count_matrix = **pd.DataFrame**(**count_matrix**, index=bigrams, columns=vocabulary)     return bigrams, vocabulary, count_matrix  corpus = ['I', 'am', 'happy', 'because', 'I', 'am', 'learning', '.']  bigrams, vocabulary, count_matrix = single_pass_trigram_count_matrix(corpus)  print(count_matrix) 
 
 <br>
 
+<a id="node-1415"></a>
 
-<a id="node-1442"></a>
+<p align="center"><kbd><img src="assets/c8a14bb43ff9e72690f6245f67a6db39b7f75a32.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1412"></a>
 #### # **go through the corpus** once with a **sliding window**     for i in range(l**en(corpus) - 3 + 1**):         # the sliding window starts at position I and contains 3 words         **trigram = tuple(corpus[i : i + 3])**
 
 > [!NOTE]
@@ -1395,7 +1401,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-1443"></a>
+<a id="node-1414"></a>
+#### # convert the count_matrix to **np.array** to fill in the blanks     count_matrix = **np.zeros((len(bigrams), len(vocabulary)))**     for **trigram_key**, **trigam_count** in count_matrix_dict.items():         count_matrix[bigrams.index(trigram_key[0]), \\\\                      vocabulary.index(trigram_key[1])]\\\\         = trigam_count          # **np.array** to **pandas dataframe** conversion     count_matrix = **pd.DataFrame**(**count_matrix**, index=bigrams, columns=vocabulary)     return bigrams, vocabulary, count_matrix
+
+> [!NOTE]
+> cái này nó **convert count matrix** đang ở **"dạng" là
+> một dictionary** (tri-gram - count) thành **"dạng" array**
+> với **hàng là bi-gram, cột là từ** Cuối cùng bỏ vào Panda dataframe
+
+<br>
+
+
+<a id="node-1413"></a>
 #### **bigram = trigram[0 : -1]**         if not bigram in bigrams:             **bigrams**.**append**(bigram)                          **last_word** = **trigram[-1]**         if not last_word in vocabulary:             **vocabulary**.append(last_word)                  if (**bigram,last_word**) not in **count_matrix_dict**:             count_matrix_dict[bigram,last_word] = 0                      count_matrix_dict[bigram,last_word] **+= 1**
 
 > [!NOTE]
@@ -1412,30 +1429,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1444"></a>
-#### # convert the count_matrix to **np.array** to fill in the blanks     count_matrix = **np.zeros((len(bigrams), len(vocabulary)))**     for **trigram_key**, **trigam_count** in count_matrix_dict.items():         count_matrix[bigrams.index(trigram_key[0]), \\\\                      vocabulary.index(trigram_key[1])]\\\\         = trigam_count          # **np.array** to **pandas dataframe** conversion     count_matrix = **pd.DataFrame**(**count_matrix**, index=bigrams, columns=vocabulary)     return bigrams, vocabulary, count_matrix
-
-> [!NOTE]
-> cái này nó **convert count matrix** đang ở **"dạng" là
-> một dictionary** (tri-gram - count) thành **"dạng" array**
-> với **hàng là bi-gram, cột là từ** Cuối cùng bỏ vào Panda dataframe
-
-<br>
-
-<a id="node-1445"></a>
-
-<p align="center"><kbd><img src="assets/c8a14bb43ff9e72690f6245f67a6db39b7f75a32.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1446"></a>
+<a id="node-1416"></a>
 ### Probability matrix
 
 <br>
 
 
-<a id="node-1447"></a>
+<a id="node-1417"></a>
 #### The next step is to **build a probability matrix** from the **count matrix.**  You can use an object **dataframe** from library **pandas** and its methods \\_**sum**\\_ and \\_**div**\\_ to  **normalize the cell counts** with the **sum of the respective rows.**
 
 > [!NOTE]
@@ -1447,7 +1447,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1448"></a>
+<a id="node-1418"></a>
 #### # create the **probability matrix** from the count matrix row_sums = **count_matrix.sum(axis=1)** # divide each row by its sum prob_matrix = count_matrix.**div**(row_sums, axis=0)  print(prob_matrix)
 
 > [!NOTE]
@@ -1457,14 +1457,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1449"></a>
+<a id="node-1419"></a>
 
 <p align="center"><kbd><img src="assets/069b25c49e6c4859665921bf08c6f6d9366eb7d0.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1450"></a>
+<a id="node-1420"></a>
 #### # find the probability of a trigram in the probability matrix trigram = ('I', 'am', 'happy')  # find the prefix bigram  bigram = trigram[:-1] print(f'bigram: {bigram}')  # find the last word of the trigram word = trigram[-1] print(f'word: {word}')  # we are using the pandas dataframes here, column with vocabulary word comes first, row with the prefix bigram second trigram_probability = **prob_matrix[word][bigram]** print(f'trigram_probability: {trigram_probability}')
 
 > [!NOTE]
@@ -1478,14 +1478,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1451"></a>
+<a id="node-1421"></a>
 
 <p align="center"><kbd><img src="assets/d99ee46b4e7d52d829e04743586af7357940cc29.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1452"></a>
+<a id="node-1422"></a>
 #### In the code assignment, you will be **searching for the most probable words** starting with a  **prefix**. You can use the method \\_**str.startswith**\\_ to **test if a word starts with a prefix.**  Here is a code snippet showing how to use this method.
 
 > [!NOTE]
@@ -1496,19 +1496,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-1453"></a>
+<a id="node-1423"></a>
 #### # lists all words in vocabulary starting with a given prefix vocabulary = ['I', 'am', 'happy', 'because', 'learning', '.', 'have', 'you', 'seen','it', '?'] starts_with = 'ha'  print(f'words in vocabulary starting with prefix: {starts_with}\\\ ') for word in vocabulary:     if **word.startswith(starts_with):**         print(word)
 
 <br>
 
 
-<a id="node-1454"></a>
+<a id="node-1424"></a>
 ### Language model evaluation
 
 <br>
 
 
-<a id="node-1455"></a>
+<a id="node-1425"></a>
 #### **Train/validation/test split**   In the videos, you saw that **to evaluate language models**, you need to **keep some of the  corpus data for validation and testing**.  The choice of the **test** and **validation data** should correspond **as much as possible** to the  **distribution of the data coming from the actual application**. \\/**If nothing but the input corpus  is known**\\/, then **random sampling** from the corpus is used to define the test and validation  subset.  Here is a code similar to what you'll see in the code assignment. The following function  allows you to **randomly sample the input data** and return t**rain/validation/test subsets** in a  split given by the method parameters.
 
 > [!NOTE]
@@ -1520,7 +1520,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1456"></a>
+<a id="node-1426"></a>
 #### # we only need train and validation %, test is the remainder import random def train_validation_test_split(data, train_percent, validation_percent):     """     Splits the input data to  train/validation/test according to the percentage provided          Args:         **data**: **Pre-processed and tokenized corpus**, i.e. list of sentences.         **train_percent**: integer **0-100**, defines the portion of input corpus allocated for training         **validation_percent**: integer **0-100**, defines the portion of input corpus allocated for validation                  Note: **train_percent** + **validation_percent** need to be **<=100**               the reminder to 100 is allocated for the test set          Returns:         train_data: list of sentences, the training part of the corpus         validation_data: list of sentences, the validation part of the corpus         test_data: list of sentences, the test part of the corpus     """     # fixed seed here for reproducibility     random.seed(87)          # reshuffle all input sentences     **random.shuffle**(data)      **train_size** = int(len(data) * train_percent / 100)     train_data = data[**0:train_size**]          **validation_size** = int(len(data) * validation_percent / 100)     validation_data = data[**train_size:train_size + validation_size**]          **test_data** = data[**train_size + validation_size:**]          return train_data, validation_data, test_data  data = [x for x in range (0, 100)] **//Tạo 1 data giả bộ**  train_data, validation_data, test_data = train_validation_test_split(data, 80, 10) print("split 80/10/10:\\\ ",f"train data:{train_data}\\\ ", f"validation data:{validation_data}\\\ ",        f"test data:{test_data}\\\ ")  train_data, validation_data, test_data = train_validation_test_split(data, 98, 1) print("split 98/1/1:\\\ ",f"train data:{train_data}\\\ ", f"validation data:{validation_data}\\\ ",        f"test data:{test_data}\\\ ")
 
 > [!NOTE]
@@ -1530,12 +1530,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1457"></a>
+<a id="node-1427"></a>
 ### Perplexity
 
 <br>
 
-<a id="node-1458"></a>
+<a id="node-1428"></a>
 
 <p align="center"><kbd><img src="assets/8fff43dc26ffa6a3988ec12545c502e672183c0a.png" width="100%"></kbd></p>
 
@@ -1545,20 +1545,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1459"></a>
+<a id="node-1429"></a>
 
 <p align="center"><kbd><img src="assets/97bef7225f1740676a65f16dc6eb76b71a318766.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1460"></a>
+<a id="node-1430"></a>
 ## Out Of Vocabulary
 
 <br>
 
 
-<a id="node-1461"></a>
+<a id="node-1431"></a>
 ### 1 **Out of vocabulary words** (**OOV**) and their significance:
 
 > [!NOTE]
@@ -1600,7 +1600,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1462"></a>
+<a id="node-1432"></a>
 
 <p align="center"><kbd><img src="assets/15d62c73f7fb1f187a642a01a32676603070bd80.png" width="100%"></kbd></p>
 
@@ -1616,7 +1616,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1463"></a>
+<a id="node-1433"></a>
 
 <p align="center"><kbd><img src="assets/8158eb01084b5b8798513d5e0a0733dd1b86d09a.png" width="100%"></kbd></p>
 
@@ -1632,7 +1632,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1464"></a>
+<a id="node-1434"></a>
 
 <p align="center"><kbd><img src="assets/3d41f32f852c527cef5c82be9bb02095ebe0793a.png" width="100%"></kbd></p>
 
@@ -1645,7 +1645,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1465"></a>
+<a id="node-1435"></a>
 
 <p align="center"><kbd><img src="assets/043c2e7e9efc0f3d651f358acc05256c3c855440.png" width="100%"></kbd></p>
 
@@ -1663,20 +1663,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1466"></a>
+<a id="node-1436"></a>
 
 <p align="center"><kbd><img src="assets/be69dfa622ee39ec065e95c39ed128e2bf9958e8.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1467"></a>
+<a id="node-1437"></a>
 ## Smoothing
 
 <br>
 
 
-<a id="node-1468"></a>
+<a id="node-1438"></a>
 ### 1 **N-gram probabilities** can be **skewed** when trained on a **limited corpus**.
 
 > [!NOTE]
@@ -1724,13 +1724,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1469"></a>
+<a id="node-1439"></a>
 
 <p align="center"><kbd><img src="assets/f767d04da09864d97e61e574dd3b6f9014080119.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1470"></a>
+<a id="node-1440"></a>
 
 <p align="center"><kbd><img src="assets/3896a6c199c7d90d5a67918b0696c07126e93ba3.png" width="100%"></kbd></p>
 
@@ -1745,7 +1745,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1471"></a>
+<a id="node-1441"></a>
 
 <p align="center"><kbd><img src="assets/b1c43702cdbb5c01d32f17105bb6721ece7d97f9.png" width="100%"></kbd></p>
 
@@ -1770,7 +1770,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1472"></a>
+<a id="node-1442"></a>
 
 <p align="center"><kbd><img src="assets/b01544f1529187c1b0516885c0bad9147b982f87.png" width="100%"></kbd></p>
 
@@ -1798,7 +1798,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1473"></a>
+<a id="node-1443"></a>
 
 <p align="center"><kbd><img src="assets/68484043bba0a1ead41160bf22071335918d4b5d.png" width="100%"></kbd></p>
 
@@ -1816,7 +1816,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1474"></a>
+<a id="node-1444"></a>
 ## Lab: Language Model
 
 > [!NOTE]
@@ -1826,13 +1826,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1475"></a>
+<a id="node-1445"></a>
 ### Vocabulary
 
 <br>
 
 
-<a id="node-1476"></a>
+<a id="node-1446"></a>
 #### **Vocabulary**  In the video about the **out of vocabulary words**, you saw that the first step in dealing with  the unknown words is to **decide which words belong to the vocabulary.**  In the code assignment, you will try the method based on **minimum frequency** - all words  appearing in the training set with **frequency >= minimum frequency** are **added** to the  vocabulary.  Here is a code for the other method, where the **target size of the vocabulary is known in  advance** and the vocabulary is filled with words based on their frequency in the training  set.
 
 > [!NOTE]
@@ -1848,7 +1848,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1477"></a>
+<a id="node-1457"></a>
+#### the new vocabulary containing 3 most frequent words: **['happy', ' because', 'learning']**
+
+<br>
+
+
+<a id="node-1447"></a>
 #### # **build the vocabulary** from **M most frequent words** # use **Counter object** from the collections library to **find M most common words** from collections **import Counter**  # the **target size of the vocabulary** **M = 3**  # pre-calculated word counts # Counter could be used to build this dictionary from the source corpus word_counts = {'happy': 5, 'because': 3, 'I': 2, 'am': 2, 'learning': 3, '.': 1}  vocabulary = **Counter(word_counts).most_common(M)**  # **remove the frequencies and leave just the words** vocabulary = **[w[0] for w in vocabulary]**  print(f"the new vocabulary containing {M} most frequent words: {vocabulary}\\\ ")
 
 > [!NOTE]
@@ -1861,13 +1867,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1478"></a>
+<a id="node-1448"></a>
 #### Now that the vocabulary is ready, you can use it to **replace the OOV words** with  **<**𝑈𝑁𝐾**>**   as you saw in the lecture.
 
 <br>
 
 
-<a id="node-1479"></a>
+<a id="node-1449"></a>
 #### # test if words in the input sentences are in the vocabulary, if OOV, print <UNK> sentence = **['am', 'I', 'learning']** output_sentence = [] print(f"input sentence: {sentence}")  for w in sentence:     # test if word w is in vocabulary     **if w in vocabulary:**         output_sentence.append**(w)**     else:         output_sentence.append**('<UNK>')**          print(f"output sentence: {output_sentence}")
 
 > [!NOTE]
@@ -1877,20 +1883,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1480"></a>
+<a id="node-1450"></a>
 
 <p align="center"><kbd><img src="assets/a26b10edef27ef10be39eb6498d63c83a48f4e52.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1481"></a>
+<a id="node-1451"></a>
 #### When building the vocabulary in the code assignment, you will need to know **how to iterate through the word counts dictionary.**  Here is an example of a similar task showing how to **go through all the word counts** and print out only the words with the **frequency equal to f.**
 
 <br>
 
 
-<a id="node-1482"></a>
+<a id="node-1452"></a>
 #### # **iterate through all word counts and print words** with given frequency f f = 3  word_counts = {'happy': 5, 'because': 3, 'I': 2, 'am': 2, 'learning':3, '.': 1}  for **word**, **freq** in **word_counts.items()**:     **if freq == f:**         print(word)
 
 > [!NOTE]
@@ -1899,20 +1905,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1483"></a>
+<a id="node-1453"></a>
 
 <p align="center"><kbd><img src="assets/1aad52989fbbe0683b73ccbcf43ddd02317f9959.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1484"></a>
+<a id="node-1454"></a>
 #### As mentioned in the videos, **if there are many  <**𝑈𝑁𝐾**>** replacements in your train and test set, you may **get a very low perplexity** even though the **model itself wouldn' t be very helpful.**  Here is a sample code showing this unwanted effect.
 
 <br>
 
 
-<a id="node-1485"></a>
+<a id="node-1455"></a>
 #### # many <unk> low perplexity  training_set = ['i', 'am', 'happy', 'because','i', 'am', 'learning', '.'] training_set_unk = ['i', 'am', '<UNK>', '<UNK>','i', 'am', '<UNK>', '<UNK>']  test_set = ['i', 'am', 'learning'] test_set_unk = ['i', 'am', '<UNK>']  M = len(test_set) probability = 1 probability_unk = 1  # pre-calculated probabilities bigram_probabilities = {('i', 'am'): 1.0, ('am', 'happy'): 0.5, ('happy', 'because'): 1.0, ('because', 'i'): 1.0, ('am', 'learning'): 0.5, ('learning', '.'): 1.0} bigram_probabilities_unk = {('i', 'am'): 1.0, ('am', '<UNK>'): 1.0, ('<UNK>', '<UNK>'): 0.5, ('<UNK>', 'i'): 0.25}  # got through the test set and calculate its bigram probability for i in range(len(test_set) - 2 + 1):     bigram = tuple(test_set[i: i + 2])     probability = probability * bigram_probabilities[bigram]              bigram_unk = tuple(test_set_unk[i: i + 2])     probability_unk = probability_unk * bigram_probabilities_unk[bigram_unk]  # calculate perplexity for both original test set and test set with <UNK> perplexity = probability ** (-1 / M) perplexity_unk = probability_unk ** (-1 / M)  print(f"perplexity for the training set: {perplexity}") print(f"perplexity for the training set with <UNK>: {perplexity_unk}") 
 
 > [!NOTE]
@@ -1921,26 +1927,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1486"></a>
+<a id="node-1456"></a>
 
 <p align="center"><kbd><img src="assets/de53e6695621850f9441dac2833501b88f5c666a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1487"></a>
-#### the new vocabulary containing 3 most frequent words: **['happy', ' because', 'learning']**
-
-<br>
-
-
-<a id="node-1488"></a>
+<a id="node-1458"></a>
 ### Smoothing
 
 <br>
 
 
-<a id="node-1489"></a>
+<a id="node-1459"></a>
 #### **Add-k smoothing** was described as a method for smoothing of the **probabilities** for **previously unseen n-grams.**  Here is an example code that shows how to implement **add-k smoothing** but also **highlights a disadvantage of this method**. The **downside** is that n-grams **not previously seen in the training dataset get too high probability.**  In the code output bellow you'll see that **a phrase that is in the training set** gets the **same probability** as an **unknown phrase.**
 
 > [!NOTE]
@@ -1952,25 +1952,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1490"></a>
+<a id="node-1460"></a>
 #### def **add_k_smooting_probability**(k, vocabulary_size, **n_gram_count**, **n_gram_prefix_count**):     numerator = n_gram_count **+ k**     denominator = n_gram_prefix_count + **k * vocabulary_size**     return **numerator / denominator**  trigram_probabilities = {('I', 'am', 'happy') : 2} bigram_probabilities = {( 'am', 'happy') : 10} vocabulary_size = 5 k = 1  probability_known_trigram = **add_k_smooting_probability**(k, vocabulary_size, **trigram_probabilities[('I', 'am', 'happy')]**,                             bigram_probabilities[( 'am', 'happy')])  probability_unknown_trigram = add_k_smooting_probability(k, vocabulary_size, **0, 0**)  print(f"probability_known_trigram: {probability_known_trigram}") print(f"probability_unknown_trigram: {probability_unknown_trigram}") 
 
 <br>
 
-<a id="node-1491"></a>
+<a id="node-1461"></a>
 
 <p align="center"><kbd><img src="assets/c970ec7e0b0efe9da785eab1a227a145fad759d8.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1492"></a>
+<a id="node-1462"></a>
 ### Back-off
 
 <br>
 
 
-<a id="node-1493"></a>
+<a id="node-1463"></a>
 #### Back-off is a **model generalization method** that leverages information from **lower order n-grams** in case information about the **high order n-grams is missing**. For example, if the probability of an trigram is missing, use bigram information and so on.  Here you can see an example of a **simple back-off** technique.
 
 > [!NOTE]
@@ -1981,25 +1981,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1494"></a>
+<a id="node-1464"></a>
 #### # pre-calculated probabilities of all types of n-grams trigram_probabilities = {('i', 'am', 'happy'): 0} bigram_probabilities = {( 'am', 'happy'): 0.3} unigram_probabilities = {'happy': 0.4}  # this is the input trigram we need to estimate trigram = ('are', 'you', 'happy')  # find the last bigram and unigram of the input **bigram = trigram[1: 3] unigram = trigram[2]** print(f"besides the trigram {trigram} we also use bigram {bigram} and unigram ({unigram})\\\ ")  # 0.4 is used as an example, experimentally found for web-scale corpuses when using the "stupid" back-off lambda_factor = 0.4 probability_hat_trigram = 0  # **search for first non-zero probability starting with trigram** # to generalize this for any order of n-gram hierarchy,  # you could loop through the probability dictionaries instead of if/else cascade if **trigram** not in **trigram_probabilities** or **trigram_probabilities[trigram]** == 0:     print(f"probability for trigram {trigram} not found")          if **bigram** not in **bigram_probabilities** or **bigram_probabilities[bigram]** == 0:         print(f"probability for bigram {bigram} not found")                  if **unigram** in **unigram_probabilities**:             print(f"probability for unigram {unigram} found\\\ ")             probability_hat_trigram = lambda_factor * lambda_factor * unigram_probabilities[unigram]         else:             probability_hat_trigram = 0     else:         probability_hat_trigram = lambda_factor * bigram_probabilities[bigram] else:     probability_hat_trigram = trigram_probabilities[trigram]  print(f"probability for trigram {trigram} estimated as {probability_hat_trigram}") 
 
 <br>
 
-<a id="node-1495"></a>
+<a id="node-1465"></a>
 
 <p align="center"><kbd><img src="assets/e05e289473aaa0410e601470bdf8a5eced04ddc5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1496"></a>
+<a id="node-1466"></a>
 ### Interpolation
 
 <br>
 
 
-<a id="node-1497"></a>
+<a id="node-1467"></a>
 #### The other method for using **probabilities** of **lower order n-grams** is the **interpolation**. In this case, you use **weighted probabilities of n-grams** of all orders every time,\\/ **not just when high order information is missing.**\\/  For example, you **always combine** **trigram, bigram and unigram probability**. You can see how this in the following code snippet.
 
 > [!NOTE]
@@ -2011,7 +2011,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1498"></a>
+<a id="node-1468"></a>
 #### # pre-calculated probabilities of all types of n-grams trigram_probabilities = {('I', 'am', 'happy'): 0.15} bigram_probabilities = {( 'am', 'happy'): 0.3} unigram_probabilities = {'happy': 0.4}  # the weights come from optimization on a validation set lambda_1 = 0.8 lambda_2 = 0.15 lambda_3 = 0.05  # this is the **input trigram we need to estimate** trigram = **('I', 'am', 'happy')**  # find the last bigram and unigram of the input bigram = trigram[1: 3] unigram = trigram[2] print(f"besides the trigram {trigram} we also use bigram {bigram} and unigram ({unigram})\\\ ")  # in the production code, you would need to check if the probability n-gram dictionary contains the n-gram probability_hat_trigram = **lambda_1 * trigram_probabilities[trigram]**  + **lambda_2** * **bigram_probabilities[bigram]** + **lambda_3** * **unigram_probabilities[unigram]**  print(f"estimated probability of the input trigram {trigram} is {probability_hat_trigram}") 
 
 <p align="center"><kbd><img src="assets/75b18192cf6a1c5d12877cc97757a6a729d42fac.png" width="100%"></kbd></p>
@@ -2019,19 +2019,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-1499"></a>
+<a id="node-1469"></a>
 #### besides the trigram ('I', 'am', 'happy') we also use bigram ('am', 'happy') and unigram (happy)  estimated probability of the input trigram ('I', 'am', 'happy') is 0.12
 
 <br>
 
 
-<a id="node-1500"></a>
+<a id="node-1470"></a>
 ## Week Conclusion
 
 <br>
 
 
-<a id="node-1501"></a>
+<a id="node-1471"></a>
 ### 1 Recap of the **key concepts** learned in **N-Gram language models**.
 
 > [!NOTE]
@@ -2061,20 +2061,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1502"></a>
+<a id="node-1472"></a>
 
 <p align="center"><kbd><img src="assets/248e75b599e4d04d622db581ef5d06729bcc1034.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1503"></a>
+<a id="node-1473"></a>
 ## Week Conclusion
 
 <br>
 
 
-<a id="node-1504"></a>
+<a id="node-1474"></a>
 ### You will l**oad and pre-process the data**, \\*develop an Ngram based language
 
 > [!NOTE]
@@ -2089,18 +2089,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-1505"></a>
+<a id="node-1475"></a>
 ## Quiz
 
 <br>
 
-<a id="node-1506"></a>
+<a id="node-1476"></a>
 
 <p align="center"><kbd><img src="assets/ea98e08b627dddd89fb161fa085665480ba62bee.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1507"></a>
+<a id="node-1477"></a>
 
 <p align="center"><kbd><img src="assets/d7db9469e1ef257fbbc4da80ba884b2fbfba3b6b.png" width="100%"></kbd></p>
 
@@ -2108,7 +2108,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1508"></a>
+<a id="node-1478"></a>
 
 <p align="center"><kbd><img src="assets/400490c581b8f8ad800e2472b09587babf463444.png" width="100%"></kbd></p>
 
@@ -2116,13 +2116,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1509"></a>
+<a id="node-1479"></a>
 
 <p align="center"><kbd><img src="assets/4c3d34f03c96c7148a61b6126c9ab7e01845dde6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1510"></a>
+<a id="node-1480"></a>
 
 <p align="center"><kbd><img src="assets/fce8c7f3de5dd0b88b485a904b53c5239db2e89e.png" width="100%"></kbd></p>
 
@@ -2130,19 +2130,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-1511"></a>
+<a id="node-1481"></a>
 
 <p align="center"><kbd><img src="assets/7ba9b13f6f19956f11d2da3ccd8ad49b07a98c28.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1512"></a>
+<a id="node-1482"></a>
 
 <p align="center"><kbd><img src="assets/8d5150f56509c0149f75945e3bbf7b2367a898d3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1513"></a>
+<a id="node-1483"></a>
 
 <p align="center"><kbd><img src="assets/cb15015707c8b20a9bc98f93fad0722cec818c5a.png" width="100%"></kbd></p>
 
@@ -2150,7 +2150,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1514"></a>
+<a id="node-1484"></a>
 
 <p align="center"><kbd><img src="assets/69b130211053e97e587dcc67007867d199be1ef2.png" width="100%"></kbd></p>
 
@@ -2158,20 +2158,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1515"></a>
+<a id="node-1485"></a>
 
 <p align="center"><kbd><img src="assets/d9044b15e7ea0456eea984f1d24d6ea269e117b7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1516"></a>
+<a id="node-1486"></a>
 
 <p align="center"><kbd><img src="assets/2e08f4a1d277c2f6505df8a2b7050ca32e9db40b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1517"></a>
+<a id="node-1487"></a>
 ## Programming Assignment:
 
 > [!NOTE]
@@ -2181,7 +2181,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1518"></a>
+<a id="node-1488"></a>
 ### In this assignment, you will build an **auto-complete system**.
 
 > [!NOTE]
@@ -2202,12 +2202,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1519"></a>
+<a id="node-1489"></a>
 #### 1 - Load and Preprocess Data
 
 <br>
 
-<a id="node-1520"></a>
+<a id="node-1490"></a>
 
 <p align="center"><kbd><img src="assets/fd431a6936d08230cbf59ab56a46df7e312d9419.png" width="100%"></kbd></p>
 
@@ -2221,25 +2221,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1521"></a>
+<a id="node-1491"></a>
 #### Here are the steps of this assignment:  1 **Load and preprocess data**  • **Load** and **tokenize data.**  • **Split the sentences** into **train** and **test** sets.  • **Replace words** with a **low frequency** by an unknown marker <**unk**>.   2 Develop **N-gram** based language models  • Compute the **count** of **n-grams** from a given data set.  • Estimate the **conditional probability** of a **next word** with **k-smoothing**.  3 **Evaluate the N-gram models** by computing the **perplexity score**.  4 **Use your own model** to suggest an **upcoming word** given your sentence.
 
 <br>
 
 
-<a id="node-1522"></a>
+<a id="node-1492"></a>
 #### import **math** import **random** import **numpy** as np import **pandas** as pd import **nltk** nltk.download('**punkt**')  import **w3_unittest** nltk.data.path.append('.')
 
 <br>
 
 
-<a id="node-1523"></a>
+<a id="node-1493"></a>
 #### 1.1 - Load the Data
 
 <br>
 
 
-<a id="node-1524"></a>
+<a id="node-1494"></a>
 #### You will use **twitter** data. Load the data and view the first few sentences by running the next cell.  Notice that data is a **long string** that contains many many **tweets**. Observe that there is a **line break "\\\ "** between tweets.
 
 > [!NOTE]
@@ -2250,7 +2250,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1525"></a>
+<a id="node-1495"></a>
 #### **with open**(".**/data/en_US.twitter.txt**", "r") as **f**:     data = **f.read()** print("Data type:", **type(data)**) print("Number of letters:", **len(data)**) print("First 300 letters of the data") print("-------") display(data[**0:300**]) print("-------")  print("Last 300 letters of the data") print("-------") display(data[**-300:**]) print("-------")
 
 > [!NOTE]
@@ -2259,20 +2259,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1526"></a>
+<a id="node-1496"></a>
 
 <p align="center"><kbd><img src="assets/19589daa096359bd256eda840d690004e0e45cc4.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1527"></a>
+<a id="node-1497"></a>
 #### 1.2 - Pre-process the Data
 
 <br>
 
 
-<a id="node-1528"></a>
+<a id="node-1498"></a>
 #### Preprocess this data with the following steps:   1 **Split data into sentences** using **"\\\ "** as the **delimiter**.   2 **Split each sentence** into **tokens**. Note that in this assignment we use **"token"**  and "**words"** **interchangeably**.   3 **Assign** sentences into **train** or **test** sets.   4 **Find tokens** that **appear** **at least N times** in the training data.   5 **Replace tokens** that appear **less than N times** by **<unk>**  Note: we **omit validation data** in this exercise.  • In **real applications,** we should **hold a part of data** as a **validation set** and use it  to **tune our training.**  • We s**kip this process for simplicity.**
 
 > [!NOTE]
@@ -2289,12 +2289,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1529"></a>
+<a id="node-1499"></a>
 #### Exercise 1- split_to_sentences (UNQ_C1)
 
 <br>
 
-<a id="node-1530"></a>
+<a id="node-1500"></a>
 
 <p align="center"><kbd><img src="assets/ce417f68c9603985b0a4e4cd38db81e141ca7738.png" width="100%"></kbd></p>
 
@@ -2306,20 +2306,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1531"></a>
+<a id="node-1501"></a>
 
 <p align="center"><kbd><img src="assets/b835fc09512c3b9f090510c97258c8f2d3254caa.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1532"></a>
+<a id="node-1502"></a>
 #### Exercise 2 - tokenize_sentences (UNQ_C2)
 
 <br>
 
 
-<a id="node-1533"></a>
+<a id="node-1503"></a>
 #### The next step is to **tokenize** sentences (**split** a sentence into a **list of words**).  • **Convert all tokens** into **lower case** so that words which are capitalized (for example, at the start of a sentence) in the original text are treated the same as the lowercase versions of the words.  • Append each tokenized list of words into a **list of tokenized sentences.**
 
 > [!NOTE]
@@ -2333,36 +2333,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-1534"></a>
+<a id="node-1504"></a>
 #### **Hints**  • Use \\_str.lower\\_ to convert strings to lowercase.  • Please use \\_nltk. word_tokenize\\_ to split sentences into tokens.  \\/https://www.nltk.org/api/nltk.tokenize.html#nltk.tokenize.punkt. PunktLanguageVars.word_tokenize\\/  • If you used str.split instead of nltk.word_tokenize, there are additional edge  cases to handle, such as the **punctuation** (comma, period) that follows a word.
 
 <br>
 
-<a id="node-1535"></a>
+<a id="node-1505"></a>
 
 <p align="center"><kbd><img src="assets/391aaa55c9a3076abff215972e50f5600bd02af9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1536"></a>
+<a id="node-1506"></a>
 
 <p align="center"><kbd><img src="assets/57f36a2f886b9b8461c8d31fdbf3c75c707c1ea0.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1537"></a>
+<a id="node-1507"></a>
 #### Exercise 3 - get_tokenized_data (UNQ_C3)
 
 <br>
 
 
-<a id="node-1538"></a>
+<a id="node-1508"></a>
 #### Use the two functions that you have just implemented  to **get the tokenized data.**   • **split the data into sentences**  • **tokenize those sentences**
 
 <br>
 
-<a id="node-1539"></a>
+<a id="node-1509"></a>
 
 <p align="center"><kbd><img src="assets/0c4539c537574697ac969511a7b0658d6b91ed18.png" width="100%"></kbd></p>
 
@@ -2373,19 +2373,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-1540"></a>
+<a id="node-1510"></a>
 
 <p align="center"><kbd><img src="assets/b4faa58ce2ab2e623bf68b32cc21043f627610c2.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1541"></a>
+<a id="node-1511"></a>
 #### Split to train/test
 
 <br>
 
-<a id="node-1542"></a>
+<a id="node-1512"></a>
 
 <p align="center"><kbd><img src="assets/d28af9fc1941e200046b141da7540b1afed0b0c4.png" width="100%"></kbd></p>
 
@@ -2398,13 +2398,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1543"></a>
+<a id="node-1513"></a>
 #### Exercise 4 - count_words (UNQ_C4)
 
 <br>
 
 
-<a id="node-1544"></a>
+<a id="node-1514"></a>
 #### You **won't use all the tokens** (words) appearing in the data for training. Instead, you will  use the **more frequently used words**.  • You will focus on the words that appear **at least N times in the data.**  • First **count how many times each word appears** in the data.  You will need a **double for-loop,** one for **sentences** and the other for **tokens within a  sentence**.  **Hints**   • If you decide to import and use **defaultdict**, remember to **cast the dictionary  back to a regular 'dict'** before **returning** it.
 
 > [!NOTE]
@@ -2415,7 +2415,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1545"></a>
+<a id="node-1515"></a>
 
 <p align="center"><kbd><img src="assets/b8acaa6bb68cd6c9790c06f231a965dc9a3adf03.png" width="100%"></kbd></p>
 
@@ -2429,32 +2429,32 @@ Learning Objectives
 
 <br>
 
-<a id="node-1546"></a>
+<a id="node-1516"></a>
 
 <p align="center"><kbd><img src="assets/d44c6e9304544516dfebcc6c159705b2b6dc6164.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1547"></a>
+<a id="node-1517"></a>
 #### Handling 'Out of Vocabulary' words
 
 <br>
 
 
-<a id="node-1548"></a>
+<a id="node-1518"></a>
 #### If your model is **performing autocomplete**, but encounters a word that it **never saw** during  training, it won't have an input word to help it determine the next word to suggest. The  model will not be able to predict the next word because there are no counts for the  current word.   • This 'new' word is called an 'unknown word', or **out of vocabulary  (OOV)** words.   • The percentage of unknown words in the test set is called the **OOV** rate.  To handle unknown words during prediction, use a special token to represent all unknown  words 'unk'.   • **Modify the training data** so that it **has some 'unknown' words to train on.**   • Words to convert into "unknown" words are those that **do not occur very  frequently** in the training set.   • Create a list of the most frequent words in the training set, called the **closed  vocabulary** .   • Convert all the other words that are not part of the closed vocabulary to the  token 'unk'.
 
 <br>
 
 
-<a id="node-1549"></a>
+<a id="node-1519"></a>
 #### Exercise 5 - get_words_with_nplus_frequency (UNQ_C5)
 
 <br>
 
 
-<a id="node-1550"></a>
+<a id="node-1520"></a>
 #### You will now create a **function** that takes in a **text document** and a  threshold **count_threshold**.   • Any word whose **count is greater than or equal** to the  threshold **count_threshold** is kept in the **closed vocabulary**.   • Returns the word closed vocabulary list.
 
 > [!NOTE]
@@ -2464,7 +2464,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1551"></a>
+<a id="node-1521"></a>
 
 <p align="center"><kbd><img src="assets/a36cf644f5b8ced95d6e6c8ec7617945f987db20.png" width="100%"></kbd></p>
 
@@ -2475,25 +2475,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1552"></a>
+<a id="node-1522"></a>
 
 <p align="center"><kbd><img src="assets/b798f45b9ba7eaa6b0e54767559127318edaa28c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1553"></a>
+<a id="node-1523"></a>
 #### Exercise 6 - replace_oov_words_by_unk (UNQ_C6)
 
 <br>
 
 
-<a id="node-1554"></a>
+<a id="node-1524"></a>
 #### The words that appear **count_threshold** times or more are in the closed vocabulary.  • All other words are regarded as **unknown**.  • **Replace words** not in the closed vocabulary with the token **<unk>**.
 
 <br>
 
-<a id="node-1555"></a>
+<a id="node-1525"></a>
 
 <p align="center"><kbd><img src="assets/bf1e64a1537d06aef5d2a904b3fd6d17069041e2.png" width="100%"></kbd></p>
 
@@ -2517,20 +2517,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1556"></a>
+<a id="node-1526"></a>
 
 <p align="center"><kbd><img src="assets/7b16ade4ce24fe0b642932347eea72e16b33827a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1557"></a>
+<a id="node-1527"></a>
 #### Exercise 7 - preprocess_data (UNQ_C7)
 
 <br>
 
 
-<a id="node-1558"></a>
+<a id="node-1528"></a>
 #### Now we are ready to **process our data** by combining the functions that you just  implemented.  1 **Find tokens that appear at least count_threshold** times in the training data.  2 **Replace tokens** that appear **less than count_threshold** times by " <**unk**>" both  for training and test data.
 
 > [!NOTE]
@@ -2540,31 +2540,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-1559"></a>
+<a id="node-1529"></a>
 
 <p align="center"><kbd><img src="assets/014c045a47c5c4080182d9d56bfb64b6dc0462e8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1560"></a>
+<a id="node-1530"></a>
 
 <p align="center"><kbd><img src="assets/28c8dadfa9d526153bd6a9d692e02c443e68d8ef.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1561"></a>
+<a id="node-1531"></a>
 #### 2 - Develop n-gram based Language Models
 
 <br>
 
 
-<a id="node-1562"></a>
+<a id="node-1532"></a>
 #### Exercise 8 - count_n_grams (UNQ_C8)
 
 <br>
 
-<a id="node-1563"></a>
+<a id="node-1533"></a>
 
 <p align="center"><kbd><img src="assets/ac0f7553788d8ef6090e38cb43bd483f18377a02.png" width="100%"></kbd></p>
 
@@ -2636,7 +2636,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1564"></a>
+<a id="node-1534"></a>
 
 <p align="center"><kbd><img src="assets/c81e2a8442df9ebdb25fc28b56cb71ec9c799735.png" width="100%"></kbd></p>
 
@@ -2651,7 +2651,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1565"></a>
+<a id="node-1535"></a>
 
 <p align="center"><kbd><img src="assets/7efeba44e23175c5188362fe4be6e501c434b6c6.png" width="100%"></kbd></p>
 
@@ -2679,13 +2679,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1566"></a>
+<a id="node-1536"></a>
 
 <p align="center"><kbd><img src="assets/b702c9f9ff4d697e1c26b4f449edcd9e64c78bd7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1567"></a>
+<a id="node-1537"></a>
 
 <p align="center"><kbd><img src="assets/ba66e1671a6ab1acc0a2f06651a1caf5f9072609.png" width="100%"></kbd></p>
 
@@ -2739,25 +2739,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1568"></a>
+<a id="node-1538"></a>
 
 <p align="center"><kbd><img src="assets/29911c59f8615147a56cd66ac46baa0be7867bba.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1569"></a>
+<a id="node-1539"></a>
 #### Exercise 9 - estimate_probability (UNQ_C9)
 
 <br>
 
-<a id="node-1570"></a>
+<a id="node-1540"></a>
 
 <p align="center"><kbd><img src="assets/3235657b83c773173812e6d68a88362d2967e1a2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1571"></a>
+<a id="node-1541"></a>
 
 <p align="center"><kbd><img src="assets/192e6b985b5ccc3712d80477b5fe799968c74f27.png" width="100%"></kbd></p>
 
@@ -2775,7 +2775,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1572"></a>
+<a id="node-1542"></a>
 
 <p align="center"><kbd><img src="assets/32aac9d3dc0453137297a9cb0a2accee3ef3ebf0.png" width="100%"></kbd></p>
 
@@ -2788,7 +2788,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1573"></a>
+<a id="node-1543"></a>
 
 <p align="center"><kbd><img src="assets/96c3364bcb305afd36bd2c6d2bf98d2571d98b56.png" width="100%"></kbd></p>
 
@@ -2812,7 +2812,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1574"></a>
+<a id="node-1544"></a>
 
 <p align="center"><kbd><img src="assets/b6489aa7e24768d0228699ea7876b583ff80168f.png" width="100%"></kbd></p>
 
@@ -2837,25 +2837,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1575"></a>
+<a id="node-1545"></a>
 
 <p align="center"><kbd><img src="assets/f1c20c095ec74039e19f4d29ad7624d40ec61a99.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1576"></a>
+<a id="node-1546"></a>
 
 <p align="center"><kbd><img src="assets/204fc8d06f39345c2893b74b81890992799dac26.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1577"></a>
+<a id="node-1547"></a>
 #### Estimate Probabilities For All Words
 
 <br>
 
-<a id="node-1578"></a>
+<a id="node-1548"></a>
 
 <p align="center"><kbd><img src="assets/9618ad976bdd2305fe48c089c73eab9379780011.png" width="100%"></kbd></p>
 
@@ -2873,7 +2873,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1579"></a>
+<a id="node-1549"></a>
 
 <p align="center"><kbd><img src="assets/32f4d5c597afc8977dad56e1be4ed7a518d3013d.png" width="100%"></kbd></p>
 
@@ -2885,25 +2885,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1580"></a>
+<a id="node-1550"></a>
 
 <p align="center"><kbd><img src="assets/0bb40f9bcd1b631592b3eaf0c27a216452377ea8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1581"></a>
+<a id="node-1551"></a>
 
 <p align="center"><kbd><img src="assets/ddb9b056460f20aafae5821428ccadd86203c62c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1582"></a>
+<a id="node-1552"></a>
 #### Count Matrices
 
 <br>
 
-<a id="node-1583"></a>
+<a id="node-1553"></a>
 
 <p align="center"><kbd><img src="assets/35f1187b9fe3fd329cf6e82eaaf37a6bd519090f.png" width="100%"></kbd></p>
 
@@ -2916,7 +2916,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1584"></a>
+<a id="node-1554"></a>
 
 <p align="center"><kbd><img src="assets/3a99a53356d47f2fd829c01d83a3426603af8ed5.png" width="100%"></kbd></p>
 
@@ -2932,25 +2932,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1585"></a>
+<a id="node-1555"></a>
 
 <p align="center"><kbd><img src="assets/feb0ba10f9d96ad05b076956343b00ceb055588d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1586"></a>
+<a id="node-1556"></a>
 
 <p align="center"><kbd><img src="assets/d5e7e9705faacb00f188aa88f5aae5f924f3fc00.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1587"></a>
+<a id="node-1557"></a>
 #### Probability Matrices
 
 <br>
 
-<a id="node-1588"></a>
+<a id="node-1558"></a>
 
 <p align="center"><kbd><img src="assets/bc337a71df28807aa36f633ba65544e5beeaf7e4.png" width="100%"></kbd></p>
 
@@ -2964,31 +2964,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-1589"></a>
+<a id="node-1559"></a>
 
 <p align="center"><kbd><img src="assets/d7d72cc69eb9564184e6811e6eea6174876d7f83.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1590"></a>
+<a id="node-1560"></a>
 #### 3 - Perplexity
 
 <br>
 
-<a id="node-1591"></a>
+<a id="node-1561"></a>
 
 <p align="center"><kbd><img src="assets/26aeb1aa4b2b5ffe36aad7e22ee8b282ea9d881e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1592"></a>
+<a id="node-1562"></a>
 #### Exercise 10 - calculate_perplexity (UNQ_C10)
 
 <br>
 
-<a id="node-1593"></a>
+<a id="node-1563"></a>
 
 <p align="center"><kbd><img src="assets/c99e51f523c41399464125250a06328cc4b34c00.png" width="100%"></kbd></p>
 
@@ -2996,7 +2996,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1594"></a>
+<a id="node-1564"></a>
 
 <p align="center"><kbd><img src="assets/bd66a0d72ec657e90446a769f1a66a4e8ed80e83.png" width="100%"></kbd></p>
 
@@ -3066,25 +3066,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1595"></a>
+<a id="node-1565"></a>
 
 <p align="center"><kbd><img src="assets/372c14511421846c4cc453c6339a83295c8956c1.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1596"></a>
+<a id="node-1566"></a>
 #### 4 - Build an Auto-complete System
 
 <br>
 
-<a id="node-1597"></a>
+<a id="node-1567"></a>
 
 <p align="center"><kbd><img src="assets/ff2e3c16010bbdc3afeb48e3ac69140e4992885d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1598"></a>
+<a id="node-1568"></a>
 
 <p align="center"><kbd><img src="assets/20e5a75a566f7d0aa937d6c927f105305abc0ea5.png" width="100%"></kbd></p>
 
@@ -3108,7 +3108,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1599"></a>
+<a id="node-1569"></a>
 #### Exercise 11 - suggest_a_word (UNQ_C11)
 
 <br>

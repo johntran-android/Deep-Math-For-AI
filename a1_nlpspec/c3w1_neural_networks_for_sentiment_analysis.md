@@ -19,13 +19,13 @@ Learning Objectives
  • Trax
  • Neural networks
 
-<a id="node-1929"></a>
+<a id="node-1899"></a>
 ## Course 3 Introduction
 
 <br>
 
 
-<a id="node-1930"></a>
+<a id="node-1900"></a>
 ### 1 The course is about **natural language processing** with **sequence models.**
 
 > [!NOTE]
@@ -66,62 +66,62 @@ Learning Objectives
 
 <br>
 
-<a id="node-1931"></a>
+<a id="node-1901"></a>
 
 <p align="center"><kbd><img src="assets/1f0c764aedb958461fd826d66e4a4fedfc91d482.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1932"></a>
+<a id="node-1902"></a>
 
 <p align="center"><kbd><img src="assets/d4d1feeff094a3c1aa65d336d1e6eb87bf401f01.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1933"></a>
+<a id="node-1903"></a>
 
 <p align="center"><kbd><img src="assets/ed0f5be725d95db85f5d92c8eb5dab80178d6387.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1934"></a>
+<a id="node-1904"></a>
 
 <p align="center"><kbd><img src="assets/42832b832b0343bc61e237547a76adabe2cd8b50.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1935"></a>
+<a id="node-1905"></a>
 
 <p align="center"><kbd><img src="assets/29fc3d0dcd56d31c99abae0356697a44b7def247.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1936"></a>
+<a id="node-1906"></a>
 
 <p align="center"><kbd><img src="assets/b39c4cf8c0af6fa722d90b3c126568651723c1c1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1937"></a>
+<a id="node-1907"></a>
 
 <p align="center"><kbd><img src="assets/1bd6c4be713e25941de09f3ac03b784dbab14f8b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1938"></a>
+<a id="node-1908"></a>
 
 <p align="center"><kbd><img src="assets/f83d1169a919fb9321206d92fb4c4317aae9d30f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1939"></a>
+<a id="node-1909"></a>
 ## Week Intro
 
 <br>
 
 
-<a id="node-1940"></a>
+<a id="node-1910"></a>
 ### 1 This week focuses on using **sequence models** for **natural language processing** (NLP).
 
 > [!NOTE]
@@ -148,13 +148,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1941"></a>
+<a id="node-1911"></a>
 ## Neural Networks For Sentiment Analysis
 
 <br>
 
 
-<a id="node-1942"></a>
+<a id="node-1912"></a>
 ### 1 The focus of this week is on creating **neural networks using layers**, which \\*simplifies the task.
 
 > [!NOTE]
@@ -185,13 +185,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1943"></a>
+<a id="node-1913"></a>
 
 <p align="center"><kbd><img src="assets/97025df7e8875f971c352ca4213e197d016c7fe2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1944"></a>
+<a id="node-1914"></a>
 
 <p align="center"><kbd><img src="assets/5778a604b839b1f114f2a88b9c97f1bd5a5c947c.png" width="100%"></kbd></p>
 
@@ -201,7 +201,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1945"></a>
+<a id="node-1915"></a>
 
 <p align="center"><kbd><img src="assets/ab1d787109a53ea10c862654c0563f1ccb00d724.png" width="100%"></kbd></p>
 
@@ -215,7 +215,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1946"></a>
+<a id="node-1916"></a>
 
 <p align="center"><kbd><img src="assets/22d098aea5a019f8ffbcc78674ad6c8a6f059039.png" width="100%"></kbd></p>
 
@@ -228,32 +228,32 @@ Learning Objectives
 
 <br>
 
-<a id="node-1947"></a>
+<a id="node-1917"></a>
 
 <p align="center"><kbd><img src="assets/59eaf54ff6a87a1a66c42b12ab12e29092a5e6a6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1948"></a>
+<a id="node-1918"></a>
 
 <p align="center"><kbd><img src="assets/52b46f7ef8cb40b2a26c2cac3dbc0b9debb58772.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1949"></a>
+<a id="node-1919"></a>
 
 <p align="center"><kbd><img src="assets/a2029180c630d6404b95e21807a7afc7abd85444.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1950"></a>
+<a id="node-1920"></a>
 ## Trax: Neural Networks
 
 <br>
 
 
-<a id="node-1951"></a>
+<a id="node-1921"></a>
 ### 1 The focus is on defining neural networks using **Trax**, a **framework** built on **TensorFlow**.
 
 > [!NOTE]
@@ -281,13 +281,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1952"></a>
+<a id="node-1922"></a>
 
 <p align="center"><kbd><img src="assets/e50e981d811bcc07d2791075e329fda2304e95bf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1953"></a>
+<a id="node-1923"></a>
 
 <p align="center"><kbd><img src="assets/add7a3b12d84ca2c2772d628f6b3bf72d2494fe0.png" width="100%"></kbd></p>
 
@@ -295,13 +295,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1954"></a>
+<a id="node-1924"></a>
 
 <p align="center"><kbd><img src="assets/c9c1fd0fe39fcbae758254eef402ad55edf64ccf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1955"></a>
+<a id="node-1925"></a>
 
 <p align="center"><kbd><img src="assets/4391932e683d461d43e9916489c221cc3ab1c67f.png" width="100%"></kbd></p>
 
@@ -311,7 +311,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1956"></a>
+<a id="node-1926"></a>
 
 <p align="center"><kbd><img src="assets/7473c77adad345ef7576c3d95614ce5cd3eaf49e.png" width="100%"></kbd></p>
 
@@ -320,20 +320,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1957"></a>
+<a id="node-1927"></a>
 
 <p align="center"><kbd><img src="assets/b8dfdd374c71533f5862313d3e7fc3a229d511f2.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1958"></a>
+<a id="node-1928"></a>
 ## Why We Recommend Trax
 
 <br>
 
 
-<a id="node-1959"></a>
+<a id="node-1929"></a>
 ### 1 Introduction and personal background:
 
 > [!NOTE]
@@ -370,25 +370,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1960"></a>
+<a id="node-1930"></a>
 
 <p align="center"><kbd><img src="assets/96f2d00842b1737f5b7723b1084ca005cf0c21dd.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1961"></a>
+<a id="node-1931"></a>
 
 <p align="center"><kbd><img src="assets/abcef167c1c8d0220b946365264b64c97eba2046.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1962"></a>
+<a id="node-1932"></a>
 
 <p align="center"><kbd><img src="assets/888d443e555a77b1c02fc942029b73464f711241.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1963"></a>
+<a id="node-1933"></a>
 
 <p align="center"><kbd><img src="assets/a0c5883534d4ad29fee8fe7a11153a78ae4f9034.png" width="100%"></kbd></p>
 
@@ -400,26 +400,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-1964"></a>
+<a id="node-1934"></a>
 
 <p align="center"><kbd><img src="assets/c10daf2d2345b085c6542ca933d7c4061326de79.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1965"></a>
+<a id="node-1935"></a>
 
 <p align="center"><kbd><img src="assets/3461b972128b77eedc2e283e2c4c8eb9e2dbefb1.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1966"></a>
+<a id="node-1936"></a>
 ## Reading: Trax And Jax, Docs And Code
 
 <br>
 
 
-<a id="node-1967"></a>
+<a id="node-1937"></a>
 ### Official Trax documentation maintained by the Google Brain team:
 
 > [!NOTE]
@@ -436,12 +436,193 @@ Learning Objectives
 <br>
 
 
-<a id="node-1968"></a>
+<a id="node-1938"></a>
 ## Lab: Introduction To Trax
 
 <br>
 
-<a id="node-1969"></a>
+
+<a id="node-1944"></a>
+### Layers
+
+<br>
+
+
+<a id="node-1945"></a>
+#### **Layers** are the **core building blocks** in Trax or as mentioned in the lectures, they are the **base classes**.  They take **inputs**, **compute functions/custom calculations** and **return outputs.**  You can also **inspect layer properties**. Let me show you some examples.
+
+<br>
+
+<a id="node-1946"></a>
+
+<p align="center"><kbd><img src="assets/465a391ef8034cb4a230ba5211ded4f0ee7ffa7b.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ về **Relu** layer - yes, trong **Trax activation function
+> cũng là layer**. Layer là base-class, có các thông số input
+> (**n_in**), output (**n_out**), name (**name**). Relu layer kiểu này thì **không có params**
+
+<br>
+
+<a id="node-1947"></a>
+
+<p align="center"><kbd><img src="assets/b86ace075ae5e9d12f43af7f1da6de7d2c8d195e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Một loại non-param layer khác - work
+> như một Function là concatenate giúp
+> concatenate tensor
+
+<br>
+
+<a id="node-1948"></a>
+
+<p align="center"><kbd><img src="assets/ce013475d2335cc60bb762407dfd24c6689e35fc.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ này ý nói layers có thể được
+> configured lại như Concatenate có thể
+> được define để expect nhận 3 input
+
+<br>
+
+<a id="node-1949"></a>
+
+<p align="center"><kbd><img src="assets/484cf1e18c798fb7f95bf389ca8e731cc0ccdd4e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> dùng help(tl layer) vào sẽ mở
+> ra document rất tiện
+
+<br>
+
+
+<a id="node-1950"></a>
+### Layers can **have Weights**
+
+<br>
+
+
+<a id="node-1951"></a>
+#### **Some layer** types include **mutable weights and biases** that are used in **computation** and **training**. Layers of this type **require initialization before use.**  For example the **LayerNorm** layer **calculates normalized data**, that is also **scaled by weights and biases**. During initialization you **pass the data shape** and **data type of the inputs**, so the layer **can initialize compatible arrays of weights and biases.**
+
+> [!NOTE]
+> Đại khái là **ngoài các layer như reLu hay
+> Concatenate** làm việc **như một function** thì các
+> **weight layer có weight và bias** cần được **Initialize**.
+> Cái này không có gì mới
+
+<br>
+
+<a id="node-1952"></a>
+
+<p align="center"><kbd><img src="assets/6ffb6e6d2d8096c010bd8ba54a7a696c3fd5366e.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ta thấy cũng tương tự như những "kiểu" **syntax initialization** là cần
+> d**efine một cái shape**, thì đây cũng vậy, shape được "lấy" bằng cách
+> dùng cái class là **shapes**, và function **signatures()**. Import cái
+> class "shapes" và gọi function **signatures(x)** bỏ vào tensor x nó sẽ
+> **cho biết shape, và dtype**
+
+<br>
+
+<a id="node-1953"></a>
+
+<p align="center"><kbd><img src="assets/a01c25a226e8094459255be9eac44939409e08e2.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1954"></a>
+### Custom Layers
+
+<br>
+
+<a id="node-1955"></a>
+
+<p align="center"><kbd><img src="assets/03b374b60a05ab35a8f624e43c04f2b217c91580.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói về cách **define custom layer,** ví dụ này define layer work
+> như function x2: ta thấy **define name**, rồi **define một cái
+> function**, và bỏ cả hai vào t**f.Fn()** Nó tự thấy layer sử dụng function func(x) có 1 input và tính ra 
+> 1 output x**2. Nên layer.n_in bằng 1 và n_out bằng 1
+
+<br>
+
+<a id="node-1956"></a>
+
+<p align="center"><kbd><img src="assets/4aff81f7f32d63447d42fff862fe543077f5b129.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1957"></a>
+### Combinators
+
+<br>
+
+<a id="node-1958"></a>
+
+<p align="center"><kbd><img src="assets/5dc689e5f54d18e9d41eb4589ce15c9d4567aec4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> **Combinator** giúp **combine layers thành các kiến trúc phức tạp
+> hơn**. Có **Serial** và **Parallel**.
+
+<br>
+
+<a id="node-1959"></a>
+
+<p align="center"><kbd><img src="assets/78134f9bc7ce4eed1c5a5c96fbcf9298ad4eb4ba.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Và khi add các layer lại với **combinator**, **bản thân nó như một layer**, với
+> **inputs**, **outputs**, và **weights**. Và tiếp tục **có thể add vào các combinator khác**
+
+<br>
+
+<a id="node-1960"></a>
+
+<p align="center"><kbd><img src="assets/5cb9d6815f3542999e0db33c20414840180b0d81.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1961"></a>
+### Jax
+
+<br>
+
+<a id="node-1962"></a>
+
+<p align="center"><kbd><img src="assets/6c679e81368d28536aa02c01600ddb21413410ee.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Nói về **numpy** và J**AX numpy,**  với chú ý là vẫn có những cái
+> numpy làm được mà JAX numpy không làm được.
+
+<br>
+
+
+<a id="node-1963"></a>
+### Summary
+
+<br>
+
+
+<a id="node-1964"></a>
+#### Trax is a **concise framework**, built on **TensorFlow**, for **end to end machine learning.** The **key building blocks** are **layers** and **combinators**. This notebook is just a taste, but sets you up with some key **intuitions** to take forward into the rest of the course and assignments where you will build end to end models.
+
+> [!NOTE]
+> **concise**: Ngắn gọn. Nói chung Trax là một f**ramework "ngắn
+> gọn"** với **layers** và **combinators** giúp việc t**hực hành build các
+> model DL nhanh và gọn**
+
+<br>
+
+<a id="node-1939"></a>
 
 <p align="center"><kbd><img src="assets/fcd4a913e42366b6dd243f572dba324338d3984f.png" width="100%"></kbd></p>
 
@@ -454,7 +635,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1970"></a>
+<a id="node-1940"></a>
 
 <p align="center"><kbd><img src="assets/35fca4e39ad026c66a3762c4090ac3324c4713cc.png" width="100%"></kbd></p>
 
@@ -466,7 +647,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1971"></a>
+<a id="node-1941"></a>
 
 <p align="center"><kbd><img src="assets/d16fb66a5475efee71f614548e3b9ab9838defa9.png" width="100%"></kbd></p>
 
@@ -486,7 +667,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1972"></a>
+<a id="node-1942"></a>
 ### Resources
 
 > [!NOTE]
@@ -500,201 +681,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1973"></a>
+<a id="node-1943"></a>
 
 <p align="center"><kbd><img src="assets/9452c4933fb439e09591c84eb03a2e00c9522a5f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1974"></a>
-### Layers
-
-<br>
-
-
-<a id="node-1975"></a>
-#### **Layers** are the **core building blocks** in Trax or as mentioned in the lectures, they are the **base classes**.  They take **inputs**, **compute functions/custom calculations** and **return outputs.**  You can also **inspect layer properties**. Let me show you some examples.
-
-<br>
-
-<a id="node-1976"></a>
-
-<p align="center"><kbd><img src="assets/465a391ef8034cb4a230ba5211ded4f0ee7ffa7b.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Ví dụ về **Relu** layer - yes, trong **Trax activation function
-> cũng là layer**. Layer là base-class, có các thông số input
-> (**n_in**), output (**n_out**), name (**name**). Relu layer kiểu này thì **không có params**
-
-<br>
-
-<a id="node-1977"></a>
-
-<p align="center"><kbd><img src="assets/b86ace075ae5e9d12f43af7f1da6de7d2c8d195e.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Một loại non-param layer khác - work
-> như một Function là concatenate giúp
-> concatenate tensor
-
-<br>
-
-<a id="node-1978"></a>
-
-<p align="center"><kbd><img src="assets/ce013475d2335cc60bb762407dfd24c6689e35fc.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Ví dụ này ý nói layers có thể được
-> configured lại như Concatenate có thể
-> được define để expect nhận 3 input
-
-<br>
-
-<a id="node-1979"></a>
-
-<p align="center"><kbd><img src="assets/484cf1e18c798fb7f95bf389ca8e731cc0ccdd4e.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> dùng help(tl layer) vào sẽ mở
-> ra document rất tiện
-
-<br>
-
-
-<a id="node-1980"></a>
-### Layers can **have Weights**
-
-<br>
-
-
-<a id="node-1981"></a>
-#### **Some layer** types include **mutable weights and biases** that are used in **computation** and **training**. Layers of this type **require initialization before use.**  For example the **LayerNorm** layer **calculates normalized data**, that is also **scaled by weights and biases**. During initialization you **pass the data shape** and **data type of the inputs**, so the layer **can initialize compatible arrays of weights and biases.**
-
-> [!NOTE]
-> Đại khái là **ngoài các layer như reLu hay
-> Concatenate** làm việc **như một function** thì các
-> **weight layer có weight và bias** cần được **Initialize**.
-> Cái này không có gì mới
-
-<br>
-
-<a id="node-1982"></a>
-
-<p align="center"><kbd><img src="assets/6ffb6e6d2d8096c010bd8ba54a7a696c3fd5366e.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Ta thấy cũng tương tự như những "kiểu" **syntax initialization** là cần
-> d**efine một cái shape**, thì đây cũng vậy, shape được "lấy" bằng cách
-> dùng cái class là **shapes**, và function **signatures()**. Import cái
-> class "shapes" và gọi function **signatures(x)** bỏ vào tensor x nó sẽ
-> **cho biết shape, và dtype**
-
-<br>
-
-<a id="node-1983"></a>
-
-<p align="center"><kbd><img src="assets/a01c25a226e8094459255be9eac44939409e08e2.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1984"></a>
-### Custom Layers
-
-<br>
-
-<a id="node-1985"></a>
-
-<p align="center"><kbd><img src="assets/03b374b60a05ab35a8f624e43c04f2b217c91580.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Nói về cách **define custom layer,** ví dụ này define layer work
-> như function x2: ta thấy **define name**, rồi **define một cái
-> function**, và bỏ cả hai vào t**f.Fn()** Nó tự thấy layer sử dụng function func(x) có 1 input và tính ra 
-> 1 output x**2. Nên layer.n_in bằng 1 và n_out bằng 1
-
-<br>
-
-<a id="node-1986"></a>
-
-<p align="center"><kbd><img src="assets/4aff81f7f32d63447d42fff862fe543077f5b129.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1987"></a>
-### Combinators
-
-<br>
-
-<a id="node-1988"></a>
-
-<p align="center"><kbd><img src="assets/5dc689e5f54d18e9d41eb4589ce15c9d4567aec4.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> **Combinator** giúp **combine layers thành các kiến trúc phức tạp
-> hơn**. Có **Serial** và **Parallel**.
-
-<br>
-
-<a id="node-1989"></a>
-
-<p align="center"><kbd><img src="assets/78134f9bc7ce4eed1c5a5c96fbcf9298ad4eb4ba.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Và khi add các layer lại với **combinator**, **bản thân nó như một layer**, với
-> **inputs**, **outputs**, và **weights**. Và tiếp tục **có thể add vào các combinator khác**
-
-<br>
-
-<a id="node-1990"></a>
-
-<p align="center"><kbd><img src="assets/5cb9d6815f3542999e0db33c20414840180b0d81.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1991"></a>
-### Jax
-
-<br>
-
-<a id="node-1992"></a>
-
-<p align="center"><kbd><img src="assets/6c679e81368d28536aa02c01600ddb21413410ee.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Nói về **numpy** và J**AX numpy,**  với chú ý là vẫn có những cái
-> numpy làm được mà JAX numpy không làm được.
-
-<br>
-
-
-<a id="node-1993"></a>
-### Summary
-
-<br>
-
-
-<a id="node-1994"></a>
-#### Trax is a **concise framework**, built on **TensorFlow**, for **end to end machine learning.** The **key building blocks** are **layers** and **combinators**. This notebook is just a taste, but sets you up with some key **intuitions** to take forward into the rest of the course and assignments where you will build end to end models.
-
-> [!NOTE]
-> **concise**: Ngắn gọn. Nói chung Trax là một f**ramework "ngắn
-> gọn"** với **layers** và **combinators** giúp việc t**hực hành build các
-> model DL nhanh và gọn**
-
-<br>
-
-
-<a id="node-1995"></a>
+<a id="node-1965"></a>
 ## Classes, Subclasses And Inheritance
 
 <br>
 
 
-<a id="node-1996"></a>
+<a id="node-1966"></a>
 ### 1 Classes in Python: Classes are used to define **common properties** and methods for \\*similar
 
 > [!NOTE]
@@ -729,7 +729,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1997"></a>
+<a id="node-1967"></a>
 
 <p align="center"><kbd><img src="assets/85fcc1d0d5687a55558a008f44ffa3ed11066739.png" width="100%"></kbd></p>
 
@@ -740,7 +740,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1998"></a>
+<a id="node-1968"></a>
 
 <p align="center"><kbd><img src="assets/4aa229cb66c46a8ed711191a69328425d57fba2a.png" width="100%"></kbd></p>
 
@@ -765,7 +765,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1999"></a>
+<a id="node-1969"></a>
 
 <p align="center"><kbd><img src="assets/67642ce38b0c36bbaa42d1833d70ad44565c61a0.png" width="100%"></kbd></p>
 
@@ -776,7 +776,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2000"></a>
+<a id="node-1970"></a>
 
 <p align="center"><kbd><img src="assets/80f31d10821eb88d78c92a704ca5f737b85b655e.png" width="100%"></kbd></p>
 
@@ -788,13 +788,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2001"></a>
+<a id="node-1971"></a>
 ## Lab: Classes And Subclasses
 
 <br>
 
 
-<a id="node-2002"></a>
+<a id="node-1972"></a>
 ### In this notebook, I will show you the **basics of classes and subclasses** in Python. As
 
 > [!NOTE]
@@ -815,73 +815,73 @@ Learning Objectives
 <br>
 
 
-<a id="node-2003"></a>
+<a id="node-1973"></a>
 #### Part 1: Parameters, methods and instances
 
 <br>
 
-<a id="node-2004"></a>
+<a id="node-1974"></a>
 
 <p align="center"><kbd><img src="assets/dd58da7fd8abe82fce47743db7496fd553d40cd1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2005"></a>
+<a id="node-1975"></a>
 
 <p align="center"><kbd><img src="assets/415d29d09d13767193148b4872e202698740498a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2006"></a>
+<a id="node-1976"></a>
 
 <p align="center"><kbd><img src="assets/47ccaa7808ace2eaf427bb51f6c205c1e09406a7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2007"></a>
+<a id="node-1977"></a>
 
 <p align="center"><kbd><img src="assets/c1c72c977f825b5b96717446e1ba67e61be48e51.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2008"></a>
+<a id="node-1978"></a>
 
 <p align="center"><kbd><img src="assets/6c2bee4db2074278a254f70c67ff732953fec8ba.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2009"></a>
+<a id="node-1979"></a>
 
 <p align="center"><kbd><img src="assets/ed444988841ffe048961ea6795feea550bc3da12.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2010"></a>
+<a id="node-1980"></a>
 #### Part 2: Subclasses and Inheritance
 
 <br>
 
-<a id="node-2011"></a>
+<a id="node-1981"></a>
 
 <p align="center"><kbd><img src="assets/661d67456a415bf64cf2b865b949e1d630b1e765.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2012"></a>
+<a id="node-1982"></a>
 
 <p align="center"><kbd><img src="assets/29a07fa004ba2bac12d33e5b07b2a38fb0a9ed0d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2013"></a>
+<a id="node-1983"></a>
 ## Dense And Relu Layers
 
 <br>
 
 
-<a id="node-2014"></a>
+<a id="node-1984"></a>
 ### 1 Dense Layer: The text introduces the **dense layer**, which is a **commonly used layer** in neural
 
 > [!NOTE]
@@ -916,13 +916,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2015"></a>
+<a id="node-1985"></a>
 
 <p align="center"><kbd><img src="assets/b455f3f01acd53baa4c45357d4df53f348113bdc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2016"></a>
+<a id="node-1986"></a>
 
 <p align="center"><kbd><img src="assets/b4692c90aad390125ce5149ed4915d075be0b24c.png" width="100%"></kbd></p>
 
@@ -933,7 +933,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2017"></a>
+<a id="node-1987"></a>
 
 <p align="center"><kbd><img src="assets/97aad3795bc779abcfa394b97991ed8eda50e5a3.png" width="100%"></kbd></p>
 
@@ -943,20 +943,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-2018"></a>
+<a id="node-1988"></a>
 
 <p align="center"><kbd><img src="assets/1bc326cd3eaf9ada76fb7c5db29c403be7dec674.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2019"></a>
+<a id="node-1989"></a>
 ## Serial Layer
 
 <br>
 
 
-<a id="node-2020"></a>
+<a id="node-1990"></a>
 ### For instance, in a **vanilla neural network** like the one presented in this slide,
 
 > [!NOTE]
@@ -971,7 +971,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2021"></a>
+<a id="node-1991"></a>
 
 <p align="center"><kbd><img src="assets/f33be17d64d2b5ff8516685015c5335b87caf0e6.png" width="100%"></kbd></p>
 
@@ -983,13 +983,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2022"></a>
+<a id="node-1992"></a>
 ## Other Layers
 
 <br>
 
 
-<a id="node-2023"></a>
+<a id="node-1993"></a>
 ### 1 Introduction to **Embedding** and Mean Layers: The text introduces **two additional layers** in neural
 
 > [!NOTE]
@@ -1026,7 +1026,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2024"></a>
+<a id="node-1994"></a>
 
 <p align="center"><kbd><img src="assets/28d13d1fea48a89a287817281ab6daf5b2acef40.png" width="100%"></kbd></p>
 
@@ -1049,13 +1049,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2025"></a>
+<a id="node-1995"></a>
 
 <p align="center"><kbd><img src="assets/4d87bac15dd5ea729dfd040541229cb0e9e5c5ea.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2026"></a>
+<a id="node-1996"></a>
 
 <p align="center"><kbd><img src="assets/d5ee37c6879e2be0799d97635c98b72044402b63.png" width="100%"></kbd></p>
 
@@ -1067,26 +1067,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-2027"></a>
+<a id="node-1997"></a>
 
 <p align="center"><kbd><img src="assets/c73414f5d72e07fb02b7cc1716f53a06981d31fe.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2028"></a>
+<a id="node-1998"></a>
 
 <p align="center"><kbd><img src="assets/136314a0e4b0c97619d214397d82619c96fac3b3.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2029"></a>
+<a id="node-1999"></a>
 ## Training
 
 <br>
 
 
-<a id="node-2030"></a>
+<a id="node-2000"></a>
 ### 1 **Gradients** and **Backpropagation**: The text emphasizes the importance of **computing gradients** in
 
 > [!NOTE]
@@ -1123,13 +1123,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2031"></a>
+<a id="node-2001"></a>
 
 <p align="center"><kbd><img src="assets/c64d9ba4b789ed03409c005c554c211037b526ee.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2032"></a>
+<a id="node-2002"></a>
 
 <p align="center"><kbd><img src="assets/e501e96a0b0b144cade8f79b98792503636a5b77.png" width="100%"></kbd></p>
 
@@ -1140,7 +1140,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2033"></a>
+<a id="node-2003"></a>
 
 <p align="center"><kbd><img src="assets/f8418059e902b15288444a2b3e4e8208cd8f8b63.png" width="100%"></kbd></p>
 
@@ -1159,20 +1159,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-2034"></a>
+<a id="node-2004"></a>
 
 <p align="center"><kbd><img src="assets/f515942c21a1653c45a25d1a433c4ead877b9c89.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2035"></a>
+<a id="node-2005"></a>
 ## Lab: Data Generators
 
 <br>
 
 
-<a id="node-2036"></a>
+<a id="node-2006"></a>
 ### In Python, a **generator** is a function that behaves like an **iterator**. It will\\* return
 
 > [!NOTE]
@@ -1195,7 +1195,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2037"></a>
+<a id="node-2007"></a>
 #### import random as rnd import numpy as np  # Example of **traversing a list of indexes to create a circular list** a = [1, 2, 3, 4] b = [0] * 10  a_size = len(a) b_size = len(b)  # is equivalent to **[i for i in range(0,a_size)]**, the difference being the advantage  # of using ***** to **pass values of range iterator** **to** **list** directly similar to index in data_generator below lines_index = **[*range(a_size)]**   index = 0                       for i in range(**b_size**):        # `b` is longer than `a` forcing a wrap     # We **wrap** by resetting index to 0 so the sequences circle back at the end to point to the first index     **if index >= a_size:**         index = 0          b[i] = a[**lines_index**[**index**]]     #  `indexes_list[index]` point to a index of a. Store the result in b     index += 1      print(b)
 
 > [!NOTE]
@@ -1208,7 +1208,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2038"></a>
+<a id="node-2008"></a>
 #### Shuffling the data order  In the next example, we will do the same as before, but **shuffling the order of the elements in the output list**. Note that here, our strategy of traversing using **lines_index** and **index** becomes **very important**, because we can **simulate a shuffle in the input data**, **without doing that in reality.**
 
 > [!NOTE]
@@ -1217,7 +1217,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2039"></a>
+<a id="node-2009"></a>
 
 <p align="center"><kbd><img src="assets/4457b27d3c20e42b010d3772df54e659465ff5d6.png" width="100%"></kbd></p>
 
@@ -1232,7 +1232,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2040"></a>
+<a id="node-2010"></a>
 #### Note: We **call an epoch each time** that an **algorithm passes over all the training examples**. **Shuffling** the examples **for each epoch** is known to **reduce variance**, making the **models more general and overfit less.**
 
 > [!NOTE]
@@ -1243,7 +1243,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2041"></a>
+<a id="node-2011"></a>
 #### **Exercise  Instructions:** Implement a data generator function that takes in batch_size, x, y  shuffle where x could be a large list of samples, and y is a list of the tags associated with  those samples. Return a subset of those inputs in a tuple of two arrays (X,Y). Each is an  array of dimension (batch_size). If shuffle=True, the data will be traversed in a random  form.  **Details:**  This code as an outer loop while True:   ...   yield((X,Y))    Which runs continuously in the fashion of generators, pausing when yielding the next  values. We will generate a batch_size output on each pass of this loop. It has an inner loop that stores in temporal lists (X, Y) the data samples to be included in  the next batch. 
 
 > [!NOTE]
@@ -1260,7 +1260,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2042"></a>
+<a id="node-2012"></a>
 #### 1.The first is the use of a **list of a predefined size** to **store the data for each batch**. Using a **predefined size list** reduces the computation time i**f the elements in the array are of a fixed size**, like **numbers**. If the elements are of **different sizes**, it is better to use an **empty array** and **append one element at a time** during the loop.
 
 > [!NOTE]
@@ -1274,7 +1274,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2043"></a>
+<a id="node-2013"></a>
 #### The second is **tracking the current location** in the **incoming lists of samples**. Generators variables **hold their values between invocations**, so **we create an index variable**, **initialize to zero**, and **increment by one** for **each sample included in a batch**. However, we \\_**do not use the index to**\\_ \\_**access the positions of the list of sentences directly**\\_. Instead, we use it to **select one index from a list of indexes**. In this way, we can **change the order in which we traverse our original list**, keeping **untouched our original list.**
 
 <p align="center"><kbd><img src="assets/c52b7953f527e864631e9cf1718a9c6b2dfe6e26.png" width="100%"></kbd></p>
@@ -1289,7 +1289,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2044"></a>
+<a id="node-2014"></a>
 #### The third also relates to **wrapping**. Because **batch_size** and the **length of the input lists** are not aligned, gathering a batch_size group of inputs may involve **wrapping back to the beginning of the input loop**. In our approach, it is just enough to reset the index to 0. We can re-shuffle the list of indexes to produce different batches each time.
 
 > [!NOTE]
@@ -1302,7 +1302,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2045"></a>
+<a id="node-2015"></a>
 
 <p align="center"><kbd><img src="assets/45898e4fda2712b3792b75d47e7b17ff9cae2a69.png" width="100%"></kbd></p>
 
@@ -1313,13 +1313,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2046"></a>
+<a id="node-2016"></a>
 ## Week Conclusion
 
 <br>
 
 
-<a id="node-2047"></a>
+<a id="node-2017"></a>
 ### Good job going through the lectures. You now know how you can use \\*neural
 
 > [!NOTE]
@@ -1336,48 +1336,48 @@ Learning Objectives
 <br>
 
 
-<a id="node-2048"></a>
+<a id="node-2018"></a>
 ## Quiz
 
 <br>
 
-<a id="node-2049"></a>
+<a id="node-2019"></a>
 
 <p align="center"><kbd><img src="assets/05a2434fc10c0671af584acb7171c6d2b293ba2c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2050"></a>
+<a id="node-2020"></a>
 
 <p align="center"><kbd><img src="assets/c58e5fcbae2fa64383e0412dbcbcf59c574f3c2e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2051"></a>
+<a id="node-2021"></a>
 
 <p align="center"><kbd><img src="assets/1654a0bea4738cc90b5fce274beee80eadfa26c3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2052"></a>
+<a id="node-2022"></a>
 
 <p align="center"><kbd><img src="assets/c7a5b03774982706e8bcf05f86d78f561d824f8e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2053"></a>
+<a id="node-2023"></a>
 
 <p align="center"><kbd><img src="assets/e61560fda2e0d498d9ab91534c9b3c12c46b0c5e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2054"></a>
+<a id="node-2024"></a>
 ## P.a: Sentiment With Deep Neural Networks
 
 <br>
 
-<a id="node-2055"></a>
+<a id="node-2025"></a>
 
 <p align="center"><kbd><img src="assets/521a0d6357ed9f61a76e4121cb431d39587313b9.png" width="100%"></kbd></p>
 
@@ -1391,18 +1391,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2056"></a>
+<a id="node-2026"></a>
 ### 1 - Import Libraries and try out Trax
 
 <br>
 
 
-<a id="node-2057"></a>
+<a id="node-2027"></a>
 #### import os  import shutil import random as rnd  # import relevant libraries import **trax** import **trax.fastmath.numpy** as np from trax import **layers** as tl from trax import **fastmath**  # import Layer from the utils.py file from utils import **Layer**, **load_tweets**, **process_tweet** import w1_unittest
 
 <br>
 
-<a id="node-2058"></a>
+<a id="node-2028"></a>
 
 <p align="center"><kbd><img src="assets/6d1acd65ae2c48814f6f6f1e8319df4d365158f3.png" width="100%"></kbd></p>
 
@@ -1413,7 +1413,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2059"></a>
+<a id="node-2029"></a>
 
 <p align="center"><kbd><img src="assets/177a0c4a2430d2950ba45f8b76274d043168f86c.png" width="100%"></kbd></p>
 
@@ -1425,24 +1425,24 @@ Learning Objectives
 <br>
 
 
-<a id="node-2060"></a>
+<a id="node-2030"></a>
 ### 2 - Importing the Data
 
 <br>
 
 
-<a id="node-2061"></a>
+<a id="node-2031"></a>
 #### 2.1 - Loading in the Data
 
 <br>
 
 
-<a id="node-2062"></a>
+<a id="node-2032"></a>
 #### Import the data set.   • You may recognize this from earlier assignments in the specialization.   • Details of process_tweet function are available in utils.py file
 
 <br>
 
-<a id="node-2063"></a>
+<a id="node-2033"></a>
 
 <p align="center"><kbd><img src="assets/84bc373e784bcdde62c6dbfc821a5bb770e3e489.png" width="100%"></kbd></p>
 
@@ -1453,7 +1453,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2064"></a>
+<a id="node-2034"></a>
 
 <p align="center"><kbd><img src="assets/ccfe565e7d5156cba552753c9d032572c08c4d3c.png" width="100%"></kbd></p>
 
@@ -1467,18 +1467,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2065"></a>
+<a id="node-2035"></a>
 #### 2.2 - Building the Vocabulary
 
 <br>
 
-<a id="node-2066"></a>
+<a id="node-2036"></a>
 
 <p align="center"><kbd><img src="assets/5c19f80a484cf5ea7820854d5697d0727a4c4fd4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2067"></a>
+<a id="node-2037"></a>
 
 <p align="center"><kbd><img src="assets/bce0a8c0c78e7a41c0364afb5190f2e7e781f503.png" width="100%"></kbd></p>
 
@@ -1495,25 +1495,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-2068"></a>
+<a id="node-2038"></a>
 
 <p align="center"><kbd><img src="assets/585c4dd66bbdab345c649f8d75a47eb4bdc217e4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2069"></a>
+<a id="node-2039"></a>
 
 <p align="center"><kbd><img src="assets/116f93d3251c44362afce83b3dc5fa70649168fb.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2070"></a>
+<a id="node-2040"></a>
 #### 2.3 - Converting a Tweet to a Tensor
 
 <br>
 
-<a id="node-2071"></a>
+<a id="node-2041"></a>
 
 <p align="center"><kbd><img src="assets/3105711492321f2722163d6df844433ee018ddf1.png" width="100%"></kbd></p>
 
@@ -1525,18 +1525,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2072"></a>
+<a id="node-2042"></a>
 #### Exercise 1 - tweet_to_tensor (UNQ_C1)
 
 <br>
 
-<a id="node-2073"></a>
+<a id="node-2043"></a>
 
 <p align="center"><kbd><img src="assets/0390021341f376a4804554a76f181f51ae5a7c7e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2074"></a>
+<a id="node-2044"></a>
 
 <p align="center"><kbd><img src="assets/52cca97e2c8611f18aca5652d360211bd061f67e.png" width="100%"></kbd></p>
 
@@ -1548,19 +1548,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-2075"></a>
+<a id="node-2045"></a>
 
 <p align="center"><kbd><img src="assets/17a4e0302bb58aa5a7db1b62ecd8433bef6b3b07.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2076"></a>
+<a id="node-2046"></a>
 #### 2.4 - Creating a Batch Generator
 
 <br>
 
-<a id="node-2077"></a>
+<a id="node-2047"></a>
 
 <p align="center"><kbd><img src="assets/9aa226819cce2a93fe848ce5cb12f66279c76587.png" width="100%"></kbd></p>
 
@@ -1574,18 +1574,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2078"></a>
+<a id="node-2048"></a>
 #### Exercise 2 - data_generator (UNQ_C2)
 
 <br>
 
-<a id="node-2079"></a>
+<a id="node-2049"></a>
 
 <p align="center"><kbd><img src="assets/5834d04e29c0a7b6497e072a32e786acf28a9fa2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2080"></a>
+<a id="node-2050"></a>
 
 <p align="center"><kbd><img src="assets/59999166cf4fc920f00c1c28554a60ec96028be4.png" width="100%"></kbd></p>
 
@@ -1600,7 +1600,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2081"></a>
+<a id="node-2051"></a>
 
 <p align="center"><kbd><img src="assets/1b953bbcf93d9d8175477d2cde2b87c416a5d1e4.png" width="100%"></kbd></p>
 
@@ -1611,7 +1611,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2082"></a>
+<a id="node-2052"></a>
 
 <p align="center"><kbd><img src="assets/75b4d5d61a8157c8920cf50eaeae9ba12c7c2880.png" width="100%"></kbd></p>
 
@@ -1625,43 +1625,43 @@ Learning Objectives
 
 <br>
 
-<a id="node-2083"></a>
+<a id="node-2053"></a>
 
 <p align="center"><kbd><img src="assets/f0dbf37bfa29c8bf1af547fc499de66f9912e5e6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2084"></a>
+<a id="node-2054"></a>
 
 <p align="center"><kbd><img src="assets/9537c28593733c4fec4cac037ce304e795b5cb73.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2085"></a>
+<a id="node-2055"></a>
 #### Now you can use your data generator to create a data generator for the training data, and another data generator for the validation data.  We will create a third data generator that does not loop, for testing the final accuracy of the model.
 
 <br>
 
 
-<a id="node-2086"></a>
+<a id="node-2056"></a>
 #### Now that you have your train/val generators, you can just call them and they will return tensors which correspond to your tweets in the first column and their corresponding labels in the second column. Now you can go ahead and start building your neural network.
 
 <br>
 
 
-<a id="node-2087"></a>
+<a id="node-2057"></a>
 ### 3 - Defining Classes
 
 <br>
 
 
-<a id="node-2088"></a>
+<a id="node-2058"></a>
 #### 3 - Defining Classes
 
 <br>
 
-<a id="node-2089"></a>
+<a id="node-2059"></a>
 
 <p align="center"><kbd><img src="assets/e7bc4e54bd539ec145af274aab440ec2aa7f703a.png" width="100%"></kbd></p>
 
@@ -1674,42 +1674,42 @@ Learning Objectives
 <br>
 
 
-<a id="node-2090"></a>
+<a id="node-2060"></a>
 #### 3.1 - ReLU Class
 
 <br>
 
 
-<a id="node-2091"></a>
+<a id="node-2061"></a>
 #### Exercise 3 - Relu (UNQ_C3)
 
 <br>
 
-<a id="node-2092"></a>
+<a id="node-2062"></a>
 
 <p align="center"><kbd><img src="assets/e5f613d75d9c7755ce36f869d7bf34306a769516.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2093"></a>
+<a id="node-2063"></a>
 
 <p align="center"><kbd><img src="assets/298d0417c8f490ab8bcb2182fd133190d589ec37.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2094"></a>
+<a id="node-2064"></a>
 #### 3.2 - Dense Class
 
 <br>
 
 
-<a id="node-2095"></a>
+<a id="node-2065"></a>
 #### Exercise 4 - Dense (UNQ_C4)
 
 <br>
 
-<a id="node-2096"></a>
+<a id="node-2066"></a>
 
 <p align="center"><kbd><img src="assets/756c40a4010c686431d53174af496d9ae5eb2b43.png" width="100%"></kbd></p>
 
@@ -1723,7 +1723,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2097"></a>
+<a id="node-2067"></a>
 
 <p align="center"><kbd><img src="assets/667cb3434a8432c65188a3e14772ea6a1b0192e1.png" width="100%"></kbd></p>
 
@@ -1734,13 +1734,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2098"></a>
+<a id="node-2068"></a>
 
 <p align="center"><kbd><img src="assets/dc028654b273b21b33551849ea910ef3cecc1280.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2099"></a>
+<a id="node-2069"></a>
 
 <p align="center"><kbd><img src="assets/9dc89b579585fcdb510916df39b6d6b638bd3f7f.png" width="100%"></kbd></p>
 
@@ -1750,49 +1750,49 @@ Learning Objectives
 
 <br>
 
-<a id="node-2100"></a>
+<a id="node-2070"></a>
 
 <p align="center"><kbd><img src="assets/8c51b401d0008c68b86259d1ef25a3bf17cf4851.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2101"></a>
+<a id="node-2071"></a>
 #### 3.3 - Model
 
 <br>
 
-<a id="node-2102"></a>
+<a id="node-2072"></a>
 
 <p align="center"><kbd><img src="assets/60cb00a1494db528c20f4844d4dc9323b99bd12e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2103"></a>
+<a id="node-2073"></a>
 
 <p align="center"><kbd><img src="assets/a266839d0135fed91e4103e85d66897319a26244.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2104"></a>
+<a id="node-2074"></a>
 
 <p align="center"><kbd><img src="assets/826871f95cf2c135f1291e32c4c18d3805d4e4a0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2105"></a>
+<a id="node-2075"></a>
 
 <p align="center"><kbd><img src="assets/63b0f17d45d76604e30ea6d015e8836e834024b3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2106"></a>
+<a id="node-2076"></a>
 
 <p align="center"><kbd><img src="assets/c12a99f644bca84bf16d76ba11a8f1186380f34b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2107"></a>
+<a id="node-2077"></a>
 
 <p align="center"><kbd><img src="assets/b584862a78412badbe7887e2d5a5bb955f72ae35.png" width="100%"></kbd></p>
 
@@ -1800,31 +1800,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-2108"></a>
+<a id="node-2078"></a>
 
 <p align="center"><kbd><img src="assets/0fb8538985cf09100cedd6dab2cbc2bac31d4c3e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2109"></a>
+<a id="node-2079"></a>
 #### Exercise 5 - classifier (UNQ_C5)
 
 <br>
 
-<a id="node-2110"></a>
+<a id="node-2080"></a>
 
 <p align="center"><kbd><img src="assets/c0806bc557135a5e8b33c71164a8ac6424fd6800.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2111"></a>
+<a id="node-2081"></a>
 
 <p align="center"><kbd><img src="assets/59bdcdc88810049ca4848ff49cffc1f09c69fa63.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2112"></a>
+<a id="node-2082"></a>
 
 <p align="center"><kbd><img src="assets/c7728a23e4a96d7fcc1bdf9b4022428ff0daa4fe.png" width="100%"></kbd></p>
 
@@ -1836,80 +1836,80 @@ Learning Objectives
 
 <br>
 
-<a id="node-2113"></a>
+<a id="node-2083"></a>
 
 <p align="center"><kbd><img src="assets/16657ff0426e5ec793e20dda83f35b1bf226c63e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2114"></a>
+<a id="node-2084"></a>
 
 <p align="center"><kbd><img src="assets/d451e1571f128b3802a5258448d96e11ab5d9ff7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2115"></a>
+<a id="node-2085"></a>
 ### 4 - Training
 
 <br>
 
 
-<a id="node-2116"></a>
+<a id="node-2086"></a>
 #### 4 - Training
 
 <br>
 
 
-<a id="node-2117"></a>
+<a id="node-2087"></a>
 #### To train a model on a task, Trax defines an  abstraction \\_trax.supervised.training. TrainTask\\_ which packages the train data, loss and  optimizer (among other things) together into an object.  Similarly to evaluate a model, Trax defines an  abstraction \\_trax.supervised.training. EvalTask\\_ which packages the eval data and metrics  (among other things) into another object.  The final piece tying things together is the \\_trax.supervised.training.Loop\\_ abstraction that is a very simple and flexible way to put everything together and train the model, all the while evaluating it and saving checkpoints. Using Loop will save you a lot of code compared to always writing the training loop by hand, like you did in courses 1 and 2.  More importantly, you are less likely to have a bug in that code that would ruin your  training.
 
 <br>
 
-<a id="node-2118"></a>
+<a id="node-2088"></a>
 
 <p align="center"><kbd><img src="assets/2779bf152a7986429039cc75189ac7e06af4cdcd.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2119"></a>
+<a id="node-2089"></a>
 
 <p align="center"><kbd><img src="assets/b26cbfab19738c23bb59e5eb3badef07f4923d8f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2120"></a>
+<a id="node-2090"></a>
 #### 4.1 Training the Model
 
 <br>
 
 
-<a id="node-2121"></a>
+<a id="node-2091"></a>
 #### Exercise 6 - train_model (UNQ_C6)
 
 <br>
 
-<a id="node-2122"></a>
+<a id="node-2092"></a>
 
 <p align="center"><kbd><img src="assets/d482e22f50df98d1fd2e0a923adc9f85341da9a4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2123"></a>
+<a id="node-2093"></a>
 
 <p align="center"><kbd><img src="assets/9e83ee5454142a904ce2d7e8ff792f29c12a207c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2124"></a>
+<a id="node-2094"></a>
 #### 4.2 - Practice Making a Prediction
 
 <br>
 
 
-<a id="node-2125"></a>
+<a id="node-2095"></a>
 #### Now that you have trained a model, you can access it as **training_loop. model** object. We  will actually use **training_loop.eval_model** and in the **next weeks** you will **learn why we  sometimes use a different model for evaluation**, e.g., **one without dropout**. For now, make predictions with your model.  Use the **training data** just to see how the prediction process works.  • Later, you will use **validation data** to **evaluate your model's performance.**
 
 > [!NOTE]
@@ -1926,7 +1926,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2126"></a>
+<a id="node-2096"></a>
 
 <p align="center"><kbd><img src="assets/fe15fdb5537c182de3e17a06346d523a2a9fad0d.png" width="100%"></kbd></p>
 
@@ -1939,7 +1939,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2127"></a>
+<a id="node-2097"></a>
 
 <p align="center"><kbd><img src="assets/6380f634f709d72ae00033f83548d3ff008921bd.png" width="100%"></kbd></p>
 
@@ -1957,7 +1957,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2128"></a>
+<a id="node-2098"></a>
 #### To turn these **probabilities into categories** (**negative** or **positive** **sentiment prediction)**, for  each row:  • **Compare the probabilities** in each column.  • If **column 1 has a value greater than column 0**, classify that as a positive tweet.  • Otherwise if column 1 is less than or equal to column 0, classify that example  as a negative tweet.
 
 > [!NOTE]
@@ -1973,7 +1973,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2129"></a>
+<a id="node-2099"></a>
 
 <p align="center"><kbd><img src="assets/6dcffe5c97593eaacfee7abc645782632f3d7905.png" width="100%"></kbd></p>
 
@@ -1983,7 +1983,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2130"></a>
+<a id="node-2100"></a>
 
 <p align="center"><kbd><img src="assets/57e0045bd6db114bcf380f13b2c2b5c265fd19e9.png" width="100%"></kbd></p>
 
@@ -1993,7 +1993,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2131"></a>
+<a id="node-2101"></a>
 
 <p align="center"><kbd><img src="assets/567855888474db8edc032f744e1a89e63cab4c45.png" width="100%"></kbd></p>
 
@@ -2006,30 +2006,30 @@ Learning Objectives
 <br>
 
 
-<a id="node-2132"></a>
+<a id="node-2102"></a>
 ### 5 - Evaluation
 
 <br>
 
 
-<a id="node-2133"></a>
+<a id="node-2103"></a>
 #### 5.1 - Computing the Accuracy on a Batch
 
 <br>
 
-<a id="node-2134"></a>
+<a id="node-2104"></a>
 
 <p align="center"><kbd><img src="assets/01df47a0a52164e0dd66b75b87a71324e3e8ddc5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2135"></a>
+<a id="node-2105"></a>
 #### Exercise 7 - compute_accuracy (UNQ_C7)
 
 <br>
 
-<a id="node-2136"></a>
+<a id="node-2106"></a>
 
 <p align="center"><kbd><img src="assets/72deffcc19050e69af6f1e3631d3eb6345f48e7e.png" width="100%"></kbd></p>
 
@@ -2049,31 +2049,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-2137"></a>
+<a id="node-2107"></a>
 
 <p align="center"><kbd><img src="assets/3050da9b75bad0617e3c612265b651953d6da646.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2138"></a>
+<a id="node-2108"></a>
 #### 5.2 - Testing your Model on Validation Data
 
 <br>
 
-<a id="node-2139"></a>
+<a id="node-2109"></a>
 
 <p align="center"><kbd><img src="assets/fbed9623c63de16fa948fb8a60bef7187b747e25.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2140"></a>
+<a id="node-2110"></a>
 #### Exercise 8 - test_model (UNQ_C8)
 
 <br>
 
-<a id="node-2141"></a>
+<a id="node-2111"></a>
 
 <p align="center"><kbd><img src="assets/516392be786b8bcdf160eb59ebc33c14e394ead0.png" width="100%"></kbd></p>
 
@@ -2081,37 +2081,37 @@ Learning Objectives
 
 <br>
 
-<a id="node-2142"></a>
+<a id="node-2112"></a>
 
 <p align="center"><kbd><img src="assets/a281519f92cdb038e229915ac7f3e3c31975befe.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2143"></a>
+<a id="node-2113"></a>
 ### 6 - Testing with your Own Input
 
 <br>
 
-<a id="node-2144"></a>
+<a id="node-2114"></a>
 
 <p align="center"><kbd><img src="assets/d610b110f5fc211c313629fcc728ecd37030eee3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2145"></a>
+<a id="node-2115"></a>
 
 <p align="center"><kbd><img src="assets/aaf7d50a4d7cf8301c07702bcfb79542517e7561.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2146"></a>
+<a id="node-2116"></a>
 ### 7 - Word Embeddings
 
 <br>
 
-<a id="node-2147"></a>
+<a id="node-2117"></a>
 
 <p align="center"><kbd><img src="assets/c4f8b55d32f0aa392bc20ba7083ad815c6e29119.png" width="100%"></kbd></p>
 
@@ -2128,7 +2128,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2148"></a>
+<a id="node-2118"></a>
 
 <p align="center"><kbd><img src="assets/af8486dbe3886c20e6a4c05ebffc9b8484a69f30.png" width="100%"></kbd></p>
 
@@ -2140,7 +2140,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2149"></a>
+<a id="node-2119"></a>
 
 <p align="center"><kbd><img src="assets/65fc1a5b33e4a5d09f2df6c88220d0e02815638c.png" width="100%"></kbd></p>
 
@@ -2159,7 +2159,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2150"></a>
+<a id="node-2120"></a>
 #### On Deep Nets Deep nets allow you to understand and capture dependencies that you would have not been able to capture with a simple linear regression, or logistic regression.  It also allows you to better use pre-trained embeddings for classification and tends to generalize better.
 
 <br>

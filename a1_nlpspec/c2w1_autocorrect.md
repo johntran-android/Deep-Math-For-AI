@@ -18,31 +18,31 @@ Learning Objectives
 
 • Autocorrect
 
-<a id="node-815"></a>
+<a id="node-785"></a>
 ## Intro To Course 2
 
 <br>
 
 
-<a id="node-816"></a>
+<a id="node-786"></a>
 ## Week Introduction
 
 <br>
 
 
-<a id="node-817"></a>
+<a id="node-787"></a>
 ## Overview
 
 <br>
 
 
-<a id="node-818"></a>
+<a id="node-788"></a>
 ## Autocorrect
 
 <br>
 
 
-<a id="node-819"></a>
+<a id="node-789"></a>
 ### 1 **Autocorrect** overview:
 
 > [!NOTE]
@@ -82,7 +82,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-820"></a>
+<a id="node-790"></a>
 
 <p align="center"><kbd><img src="assets/074f000d74daa4fd6c5305d269164e313c9b1e4b.png" width="100%"></kbd></p>
 
@@ -92,19 +92,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-821"></a>
+<a id="node-791"></a>
 
 <p align="center"><kbd><img src="assets/df3872c8cc2fcff5bbf89a2fda8ba47ad94cd471.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-822"></a>
+<a id="node-792"></a>
 
 <p align="center"><kbd><img src="assets/1ac38c0a4ea72fcf4aac404be96141b97b7fe4d0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-823"></a>
+<a id="node-793"></a>
 
 <p align="center"><kbd><img src="assets/2b3d5d34dae3857f9c31c4709719b11809f09cdb.png" width="100%"></kbd></p>
 
@@ -122,7 +122,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-824"></a>
+<a id="node-794"></a>
 
 <p align="center"><kbd><img src="assets/25791f03e34daa41b237990134e7d252898ada36.png" width="100%"></kbd></p>
 
@@ -132,7 +132,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-825"></a>
+<a id="node-795"></a>
 
 <p align="center"><kbd><img src="assets/41a42a23d9257d486c40ff32f49ac83c898f1afb.png" width="100%"></kbd></p>
 
@@ -144,7 +144,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-826"></a>
+<a id="node-796"></a>
 
 <p align="center"><kbd><img src="assets/376a8998319915f9310cc8eb35f88e074e9dfdb2.png" width="100%"></kbd></p>
 
@@ -155,7 +155,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-827"></a>
+<a id="node-797"></a>
 
 <p align="center"><kbd><img src="assets/543a12cafe853dfb4343861fc05892311790e5fe.png" width="100%"></kbd></p>
 
@@ -165,20 +165,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-828"></a>
+<a id="node-798"></a>
 
 <p align="center"><kbd><img src="assets/b32198654cfb42c74e5eca06a6691960b652fdb1.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-829"></a>
+<a id="node-799"></a>
 ## Building The Model I
 
 <br>
 
 
-<a id="node-830"></a>
+<a id="node-800"></a>
 ### 1 Step 1: **Identify misspelled words:**
 
 > [!NOTE]
@@ -217,7 +217,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-831"></a>
+<a id="node-801"></a>
 
 <p align="center"><kbd><img src="assets/12f47ad9e75fc0f2b70b486628bb35283a6685e6.png" width="100%"></kbd></p>
 
@@ -229,7 +229,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-832"></a>
+<a id="node-802"></a>
 #### Step 1, **identify a misspelled word**. When the string there is encountered, **how do you know it's a misspelled word?** Well, if it's s**pelled correctly**, you will **find it in the dictionary**. If not, then it's probably a misspelled word. If a word is not given in a dictionary, flag it for correction.  Recall that **you're not searching for contextual errors**, **just spelling errors**. There are **much more sophisticated techniques** for **identifying words that are probably incorrect** by **looking at the words surrounding them**. Some of which you'll **visit later in the course**.  But for now, quickly identifying a word as incorrect **by its appearance misspelling** is a **simple** and is a **powerful** model that works well. Words like **deer** **will pass** through this filter just fine as it is spelled correctly **regardless of how the context may seem**.
 
 > [!NOTE]
@@ -239,7 +239,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-833"></a>
+<a id="node-803"></a>
 
 <p align="center"><kbd><img src="assets/35a8a36795d6029efdc86d10fd11587222ca0e8d.png" width="100%"></kbd></p>
 
@@ -250,19 +250,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-834"></a>
+<a id="node-804"></a>
 
 <p align="center"><kbd><img src="assets/53da2cf0f2bfcbccad08c533707a53d35e61f848.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-835"></a>
+<a id="node-805"></a>
 #### Using the four edits; insert, delete, switch, and replace, you can modify any string. By combining these edits, you can **find a list of all possible strings that's are n edits away.** For **auto-correc**t, **n** is usually **1-3 edits.** You'll implement each of these edits in this week's programming exercise and combine edits to **get a list of 2 edit distances** from the **original input string**
 
 <br>
 
-<a id="node-836"></a>
+<a id="node-806"></a>
 
 <p align="center"><kbd><img src="assets/a05f6d1e65bd0ec1d135c0cc501e24d466b13f7d.png" width="100%"></kbd></p>
 
@@ -274,43 +274,43 @@ Learning Objectives
 <br>
 
 
-<a id="node-837"></a>
+<a id="node-807"></a>
 #### Now Step 3, **filter candidates**. Notice how many of the strings that are generated **do not look like actual words**. To filter these strings and keep ones that are real words, you only want to consider **real** and **correctly spelled** words **from your candidate lists.** Again, **compare it to a known dictionary or vocabulary,** just like in **Step 1.** This time, if the string does **not appear in the dictionary**, **remove it** from the list of candidates. When you're **left with a list of actual words only**, then that is good progress. That's the first three steps of building the auto-correct model. In the next lesson, you'll see the fourth and final step
 
 <br>
 
 
-<a id="node-838"></a>
+<a id="node-808"></a>
 ## Lab: Bulding The Vocab
 
 <br>
 
 
-<a id="node-839"></a>
+<a id="node-809"></a>
 ### Imports and Data
 
 <br>
 
 
-<a id="node-840"></a>
+<a id="node-810"></a>
 #### # imports import re # regular expression library; for tokenization of words from collections import Counter # collections library; counter: dict subclass for counting hashable objects import matplotlib.pyplot as plt # for data visualization
 
 <br>
 
 
-<a id="node-841"></a>
+<a id="node-811"></a>
 #### # the tiny corpus of text !  text = 'red pink cyan cyan pink blue blue yellow ORANGE BLUE BLUE PINK' # 🌈 print(text) print('string length : ',len(text))
 
 <br>
 
 
-<a id="node-842"></a>
+<a id="node-812"></a>
 #### red pink cyan cyan pink blue blue yellow ORANGE BLUE BLUE PINK string length :  62
 
 <br>
 
 
-<a id="node-843"></a>
+<a id="node-813"></a>
 ### Preprocessing
 
 > [!NOTE]
@@ -325,19 +325,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-844"></a>
+<a id="node-814"></a>
 #### # convert all letters to lower case text_lowercase = text**.lower()** print(text_lowercase) print('string length : ',len(text_lowercase))
 
 <br>
 
 
-<a id="node-845"></a>
+<a id="node-815"></a>
 #### red pink cyan cyan pink blue blue yellow orange blue blue pink string length :  62
 
 <br>
 
 
-<a id="node-846"></a>
+<a id="node-816"></a>
 #### # some regex to **tokenize the string to words** and **return them in a list** words = **re.findall(r'\\\\w+', text_lowercase)** print(words) print('count : ',len(words))
 
 > [!NOTE]
@@ -348,13 +348,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-847"></a>
+<a id="node-817"></a>
 #### ['red', 'pink', 'cyan', 'cyan', 'pink', 'blue', 'blue', 'yellow', 'orange', 'blue', 'blue', 'pink'] count :  12
 
 <br>
 
 
-<a id="node-848"></a>
+<a id="node-818"></a>
 ### Create Vocabulary
 
 > [!NOTE]
@@ -366,7 +366,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-849"></a>
+<a id="node-819"></a>
 #### # create vocab vocab = **set(words)** print(vocab) print('count : ',len(vocab))
 
 > [!NOTE]
@@ -380,13 +380,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-850"></a>
+<a id="node-820"></a>
 #### {'cyan', 'yellow', 'orange', 'pink', 'blue', 'red'} count :  6
 
 <br>
 
 
-<a id="node-851"></a>
+<a id="node-821"></a>
 ### Add Information with Word Counts
 
 > [!NOTE]
@@ -398,7 +398,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-852"></a>
+<a id="node-822"></a>
 #### # create vocab including word count counts_a = **dict()** for w in words:     counts_a[w] = counts_a.get(w,0)+1 print(counts_a) print('count : ',len(counts_a))
 
 > [!NOTE]
@@ -412,55 +412,55 @@ Learning Objectives
 <br>
 
 
-<a id="node-853"></a>
+<a id="node-823"></a>
 #### {'red': 1, 'pink': 3, 'cyan': 2, 'blue': 4, 'yellow': 1, 'orange': 1} count :  6
 
 <br>
 
 
-<a id="node-854"></a>
+<a id="node-824"></a>
 #### # create vocab including word count using collections.Counter counts_b = dict() counts_b = Counter(words) print(counts_b) print('count : ',len(counts_b))
 
 <br>
 
 
-<a id="node-855"></a>
+<a id="node-825"></a>
 #### Counter({'blue': 4, 'pink': 3, 'cyan': 2, 'red': 1, 'yellow': 1, 'orange': 1}) count :  6
 
 <br>
 
 
-<a id="node-856"></a>
+<a id="node-826"></a>
 #### # barchart of sorted word counts d = {'blue': counts_b['blue'], 'pink': counts_b['pink'], 'cyan': counts_b['cyan'], 'red': counts_b['red'], 'yellow': counts_b['yellow'], 'orange': counts_b['orange']} plt.bar(range(len(d)), list(d.values()), align='center', color=d.keys()) _ = plt.xticks(range(len(d)), list(d.keys()))
 
 <br>
 
-<a id="node-857"></a>
+<a id="node-827"></a>
 
 <p align="center"><kbd><img src="assets/8523c4adcec05817a0a886d19a30484555700c9b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-858"></a>
+<a id="node-828"></a>
 ### Ungraded Exercise
 
 <br>
 
-<a id="node-859"></a>
+<a id="node-829"></a>
 
 <p align="center"><kbd><img src="assets/2d5d918259c7914797cf4303f382f3094781a44b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-860"></a>
+<a id="node-830"></a>
 ### Summary
 
 <br>
 
 
-<a id="node-861"></a>
+<a id="node-831"></a>
 #### This is a tiny example but the methodology scales very well.  In the assignment you will **create a large vocabulary of thousands of words**, from a **corpus of tens of thousands or words**! But the **mechanics are exactly the same.**  The only **extra things to pay attention** to should be; run time, **memory management** and the **vocab data structure**.  So the **choice of approach** used in code blocks **counts_a** vs **counts_b**, above, will be important.
 
 > [!NOTE]
@@ -472,13 +472,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-862"></a>
+<a id="node-832"></a>
 ## Building The Model Ii
 
 <br>
 
 
-<a id="node-863"></a>
+<a id="node-833"></a>
 ### 1 Step 4: **Calculate word probabilities:**
 
 > [!NOTE]
@@ -527,7 +527,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-864"></a>
+<a id="node-834"></a>
 
 <p align="center"><kbd><img src="assets/1bfbf11c2852f6f6e44a12268b7c4c39a7669a43.png" width="100%"></kbd></p>
 
@@ -538,25 +538,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-865"></a>
+<a id="node-835"></a>
 
 <p align="center"><kbd><img src="assets/1a49b1e2f7f1f44a15de5735ca78e4cff3fcc183.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-866"></a>
+<a id="node-836"></a>
 
 <p align="center"><kbd><img src="assets/9e3f90c68d1b43ec9f53a641afc05032c922df53.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-867"></a>
+<a id="node-837"></a>
 
 <p align="center"><kbd><img src="assets/3c44b13480f039418618377d6fe3997c60629282.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-868"></a>
+<a id="node-838"></a>
 
 <p align="center"><kbd><img src="assets/6713547add281a2b84c76e4e3e9f601e9da67beb.png" width="100%"></kbd></p>
 
@@ -567,7 +567,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-869"></a>
+<a id="node-839"></a>
 
 <p align="center"><kbd><img src="assets/9d3152fe25b8f0562dfc09c6f1c73a4bd89f4683.png" width="100%"></kbd></p>
 
@@ -581,20 +581,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-870"></a>
+<a id="node-840"></a>
 
 <p align="center"><kbd><img src="assets/c3cf35bc3ac40c47337223c14103bf7662894ad1.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-871"></a>
+<a id="node-841"></a>
 ## Lab: Candidates From Edits
 
 <br>
 
 
-<a id="node-872"></a>
+<a id="node-842"></a>
 ### Splits
 
 > [!NOTE]
@@ -604,13 +604,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-873"></a>
+<a id="node-843"></a>
 
 <p align="center"><kbd><img src="assets/36323162875bacd910320b526ac811dae737ca0f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-874"></a>
+<a id="node-844"></a>
 
 <p align="center"><kbd><img src="assets/31363d7cf92fc97fff64ecae8712c177815ef3fb.png" width="100%"></kbd></p>
 
@@ -621,7 +621,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-875"></a>
+<a id="node-845"></a>
 ### Delete Edit
 
 > [!NOTE]
@@ -635,7 +635,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-876"></a>
+<a id="node-846"></a>
 
 <p align="center"><kbd><img src="assets/f80dd2e5a4e280f71a48272d3cff8cb4882c248e.png" width="100%"></kbd></p>
 
@@ -651,7 +651,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-877"></a>
+<a id="node-847"></a>
 
 <p align="center"><kbd><img src="assets/fc4e0d097c2a2989d19f529662380286cc0ea444.png" width="100%"></kbd></p>
 
@@ -663,7 +663,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-878"></a>
+<a id="node-848"></a>
 ### Find candidate
 
 > [!NOTE]
@@ -676,7 +676,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-879"></a>
+<a id="node-849"></a>
 
 <p align="center"><kbd><img src="assets/8ad5895eb5ffb9ee1c589a4ed2dda933b0239c27.png" width="100%"></kbd></p>
 
@@ -689,25 +689,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-880"></a>
+<a id="node-850"></a>
 ### Summary
 
 <br>
 
 
-<a id="node-881"></a>
+<a id="node-851"></a>
 #### You've unpacked an integral part of the assignment by **breaking down splits and edits**, specifically looking at deletes here. Implementation of the other **edit types (insert, replace, switch)** follows a **similar methodology** and should now feel somewhat familiar when you see them. This bit of the code isn't as intuitive as other sections, so well done! You should now feel confident facing some of the **more technical parts of the assignment** at the end of the week.
 
 <br>
 
 
-<a id="node-882"></a>
+<a id="node-852"></a>
 ## Minimum Edit Distance
 
 <br>
 
 
-<a id="node-883"></a>
+<a id="node-853"></a>
 ### 1 **Minimum Edit Distance** (**MED**) has various **applications**, including **spelling**
 
 > [!NOTE]
@@ -742,7 +742,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-884"></a>
+<a id="node-854"></a>
 
 <p align="center"><kbd><img src="assets/d3115a032e54799a27c18996a00fe3ebfe9ac624.png" width="100%"></kbd></p>
 
@@ -753,19 +753,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-885"></a>
+<a id="node-855"></a>
 
 <p align="center"><kbd><img src="assets/a2cfed4fc259dbb31b58d8e8196f6c3c4eeea18d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-886"></a>
+<a id="node-856"></a>
 
 <p align="center"><kbd><img src="assets/ddc7c18d1261a4f7f5ec9357eaecd3f1dd96b356.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-887"></a>
+<a id="node-857"></a>
 
 <p align="center"><kbd><img src="assets/3d20e0e34ef838bbc9a6eb18aa26ef007acb7cc2.png" width="100%"></kbd></p>
 
@@ -776,7 +776,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-888"></a>
+<a id="node-858"></a>
 
 <p align="center"><kbd><img src="assets/3606b51ef84464e42de0ab5b8021d993dbf5e16e.png" width="100%"></kbd></p>
 
@@ -788,13 +788,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-889"></a>
+<a id="node-859"></a>
 ## Minimum Edit Distance Algorithm
 
 <br>
 
 
-<a id="node-890"></a>
+<a id="node-860"></a>
 ### Main ideas (indexed):
 
 > [!NOTE]
@@ -827,7 +827,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-891"></a>
+<a id="node-861"></a>
 
 <p align="center"><kbd><img src="assets/ec7c9384dd59babcfad042aa29883502892fa7e4.png" width="100%"></kbd></p>
 
@@ -843,7 +843,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-892"></a>
+<a id="node-862"></a>
 
 <p align="center"><kbd><img src="assets/80e1ba8025a24540d68e65369b44333eb9ff173f.png" width="100%"></kbd></p>
 
@@ -853,7 +853,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-893"></a>
+<a id="node-863"></a>
 
 <p align="center"><kbd><img src="assets/52a97dd9a584ff9a16a921edf86fa6339fdd7b4d.png" width="100%"></kbd></p>
 
@@ -879,13 +879,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-894"></a>
+<a id="node-864"></a>
 ## Minimum Edit Distance Algorithm Ii
 
 <br>
 
 
-<a id="node-895"></a>
+<a id="node-865"></a>
 ### 1 The video focuses on translating the process of populating a table for minimum
 
 > [!NOTE]
@@ -912,13 +912,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-896"></a>
+<a id="node-866"></a>
 
 <p align="center"><kbd><img src="assets/a7b70132d6482a015e1e1edaffd43c5a55aed763.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-897"></a>
+<a id="node-867"></a>
 
 <p align="center"><kbd><img src="assets/a20f0554a17ebeac2602a35c15dfb78f638e8061.png" width="100%"></kbd></p>
 
@@ -938,13 +938,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-898"></a>
+<a id="node-868"></a>
 
 <p align="center"><kbd><img src="assets/99f967aab5577e54317dfa229d206160a4d5c4d7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-899"></a>
+<a id="node-869"></a>
 
 <p align="center"><kbd><img src="assets/af628b23c8c978f25a68082430cc1746c2ddad72.png" width="100%"></kbd></p>
 
@@ -962,7 +962,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-900"></a>
+<a id="node-870"></a>
 
 <p align="center"><kbd><img src="assets/efa3ef35f5bc0906d779bb729e647f95beb262fc.png" width="100%"></kbd></p>
 
@@ -973,12 +973,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-901"></a>
+<a id="node-871"></a>
 #### So the distance to this orange cell is going to be the minimum distance to reach it from any of the previous three cells, interesting, right?
 
 <br>
 
-<a id="node-902"></a>
+<a id="node-872"></a>
 
 <p align="center"><kbd><img src="assets/fb6eded6a53b2eaabcbb3e112e7c4c8bb0e545c2.png" width="100%"></kbd></p>
 
@@ -1010,7 +1010,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-903"></a>
+<a id="node-873"></a>
 
 <p align="center"><kbd><img src="assets/a78ecd4aa6d24372558da37c5d8cfddec0c5697d.png" width="100%"></kbd></p>
 
@@ -1020,7 +1020,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-904"></a>
+<a id="node-874"></a>
 
 <p align="center"><kbd><img src="assets/2942d96e9783063870e07c26b5b0bb66bc2cdff6.png" width="100%"></kbd></p>
 
@@ -1030,14 +1030,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-905"></a>
+<a id="node-875"></a>
 
 <p align="center"><kbd><img src="assets/ebb6b159f495279bbf5b688461e9501fb2b80834.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-906"></a>
+<a id="node-876"></a>
 #### TO -> GO  Đi từ ô trên: cost T->GO + cost của delete O = 3 + 1 = 4 Đi từ ô trái: cost TO->G + cost của insert O = 3 + 1 = 4 Đi từ ô chéo: cost T->G + cost của replace O với O (mà hai cái giống nhau nên = 0) => 2 + 0 = 2  -> Min 3 cái đó là 2
 
 > [!NOTE]
@@ -1057,13 +1057,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-907"></a>
+<a id="node-877"></a>
 
 <p align="center"><kbd><img src="assets/3bc61a905d9d2af3657bf5a405a1b2ccf5d91e8b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-908"></a>
+<a id="node-878"></a>
 
 <p align="center"><kbd><img src="assets/68bd85a1753d0de3ab88c36c85435a178e3c2f21.png" width="100%"></kbd></p>
 
@@ -1071,7 +1071,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-909"></a>
+<a id="node-879"></a>
 
 <p align="center"><kbd><img src="assets/f3827b344c84ef0d8be9f2e60eacb852c6afbd6e.png" width="100%"></kbd></p>
 
@@ -1083,13 +1083,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-910"></a>
+<a id="node-880"></a>
 ## Minimum Edit Distance Algorithm Iii
 
 <br>
 
 
-<a id="node-911"></a>
+<a id="node-881"></a>
 ### 1 The video provides an overview of **minimum edit distance** and explains how to
 
 > [!NOTE]
@@ -1124,7 +1124,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-912"></a>
+<a id="node-882"></a>
 
 <p align="center"><kbd><img src="assets/03b711d2169a55bbe652621afece8e52495251e4.png" width="100%"></kbd></p>
 
@@ -1136,7 +1136,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-913"></a>
+<a id="node-883"></a>
 #### Finally, this **tabular method** for computation instead of **brute force**, is a technique known as **dynamic programming**. Intuitively, this just means that **solving the smallest subproblem first** and then **reusing that result to solve the next biggest subproblem**, saving that result, **reusing it again and so on**. This is what you did here by solving each cell in order. It's a **well-known technique** in **computer science** and will appear again and again in the coming weeks of this course.
 
 > [!NOTE]
@@ -1146,26 +1146,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-914"></a>
+<a id="node-884"></a>
 
 <p align="center"><kbd><img src="assets/b742e02ef29ce0e703ac609859f29291cfa9f7e7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-915"></a>
+<a id="node-885"></a>
 ## Week Conclusion
 
 <br>
 
-<a id="node-916"></a>
+<a id="node-886"></a>
 
 <p align="center"><kbd><img src="assets/b868ebaa5cbf71d6f21c740d4ed2cb3bdbd328df.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-917"></a>
+<a id="node-887"></a>
 ### Good job in learning this week's materials. You now know how
 
 > [!NOTE]
@@ -1189,36 +1189,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-918"></a>
+<a id="node-888"></a>
 ## Quiz
 
 <br>
 
-<a id="node-919"></a>
+<a id="node-889"></a>
 
 <p align="center"><kbd><img src="assets/08b3d3d835acf3504396b5dc905f2bcd61020f8e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-920"></a>
+<a id="node-890"></a>
 
 <p align="center"><kbd><img src="assets/f3cc7d531a3b659a7971fc138bd7217883467071.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-921"></a>
+<a id="node-891"></a>
 
 <p align="center"><kbd><img src="assets/2028e3d4e1495a098db3680d5badc3340dade66d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-922"></a>
+<a id="node-892"></a>
 
 <p align="center"><kbd><img src="assets/8d81231a107000c927860a8726ea183f94c6e62a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-923"></a>
+<a id="node-893"></a>
 
 <p align="center"><kbd><img src="assets/222f785323608d876a1d172904893106429898ab.png" width="100%"></kbd></p>
 
@@ -1229,13 +1229,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-924"></a>
+<a id="node-894"></a>
 
 <p align="center"><kbd><img src="assets/38d7d1cc2d69d94ed3f5574526f5567ee038f6c7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-925"></a>
+<a id="node-895"></a>
 
 <p align="center"><kbd><img src="assets/9bf81bfee3a12e9ae17cd2107e30d0016330f32c.png" width="100%"></kbd></p>
 
@@ -1243,19 +1243,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-926"></a>
+<a id="node-896"></a>
 
 <p align="center"><kbd><img src="assets/0058e27ab316d8fdf0a876f5bc028124bd6e4bb9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-927"></a>
+<a id="node-897"></a>
 
 <p align="center"><kbd><img src="assets/ce16dbf809a327530cf566a0c889a41cc9bdf02f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-928"></a>
+<a id="node-898"></a>
 
 <p align="center"><kbd><img src="assets/9e050a3b83ab11945caa90180ab69aa803543d76.png" width="100%"></kbd></p>
 
@@ -1263,7 +1263,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-929"></a>
+<a id="node-899"></a>
 
 <p align="center"><kbd><img src="assets/f386338329ec0e613e44f0ecb326a67b6c1ddb82.png" width="100%"></kbd></p>
 
@@ -1273,7 +1273,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-930"></a>
+<a id="node-900"></a>
 
 <p align="center"><kbd><img src="assets/eeb1dd32a7a6e8030c061a6fadb63c7dbac08fcb.png" width="100%"></kbd></p>
 
@@ -1284,7 +1284,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-931"></a>
+<a id="node-901"></a>
 
 <p align="center"><kbd><img src="assets/51375973fad0ccf2c12bf0f083ef2acb5a7fec1a.png" width="100%"></kbd></p>
 
@@ -1295,13 +1295,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-932"></a>
+<a id="node-902"></a>
 ## Programming Assignment
 
 <br>
 
 
-<a id="node-933"></a>
+<a id="node-903"></a>
 ### Welcome to the first assignment of Course 2. This
 
 > [!NOTE]
@@ -1314,36 +1314,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-934"></a>
+<a id="node-904"></a>
 #### 0 - Overview
 
 <br>
 
 
-<a id="node-935"></a>
+<a id="node-905"></a>
 #### You use **autocorrect** every day on your cell phone and computer. In this assignment, you  will explore what really goes on behind the scenes. Of course, the model you are about to  implement is **not identical** to the one used in your phone, but it is **still quite good.**  By completing this assignment you will learn how to:  • Get a **word count** given a **corpus**  • Get a **word probability** in the **corpus**  • **Manipulate strings**  • **Filter strings**  • Implement **Minimum edit distance** to **compare strings** and to help **find the  optimal path for the edits**.  • Understand how **dynamic programming** works  Similar systems are used everywhere.  • For example, if you type in the word **"I am lerningg"**, chances are very high  that you meant to write **"learning"**, as shown in **Figure 1**.
 
 <br>
 
-<a id="node-936"></a>
+<a id="node-906"></a>
 
 <p align="center"><kbd><img src="assets/45cc2cce00069d8028325fb17ae42220b30d35c7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-937"></a>
+<a id="node-907"></a>
 #### 0.1 - Edit Distance
 
 <br>
 
 
-<a id="node-938"></a>
+<a id="node-908"></a>
 #### In this assignment, you will implement models that **correct words** that are  **1 and 2 edit distances away**.   • We say two words are **n edit distance away** from each other when we need **n  edits to change one word into another**.  An edit could consist of one of the following options:  • **Delete** (remove a letter): ‘hat’ => ‘at, ha, ht’  • **Switch** (swap 2 adjacent letters): ‘eta’ => ‘eat, tea,...’  • **Replace** (change 1 letter to another): ‘jat’ => ‘hat, rat, cat, mat, ...’  • **Insert** (add a letter): ‘te’ => ‘the, ten, ate, ...’  You will be using the four methods above to implement an **Auto-correct**.  • To do so, you will need to compute **probabilities that a certain word is correct  given an input**.  This auto-correct you are about to implement was first created by \\_**Peter Norvig**\\_ in 2007.  • His \\_original article\\_ may be a useful reference for this assignment.  \\/**https://norvig.com/spell-correct.html**\\/
 
 <br>
 
-<a id="node-939"></a>
+<a id="node-909"></a>
 
 <p align="center"><kbd><img src="assets/6f31151d19df520a3806464b2ee136c58a67f09a.png" width="100%"></kbd></p>
 
@@ -1354,54 +1354,54 @@ Learning Objectives
 <br>
 
 
-<a id="node-940"></a>
+<a id="node-910"></a>
 #### The equation above is Bayes Rule.  - Equation 1 says that the **probability of a word being correct** 𝑃**(**𝑐**|**𝑤**)** is equal to the **probability of having a certain word** 𝑤, **given that it is correct** 𝑃**(**𝑤**|**𝑐**)** , multiplied by the **probability of being correct in general** 𝑃**(**𝐶**)**  divided by the **probability of that word** 𝑤 **appearing** 𝑃**(**𝑤**) in general**.  - To compute equation 1, you will first **import a data set** and then **create all the probabilities that you need** using that data set.
 
 <br>
 
 
-<a id="node-941"></a>
+<a id="node-911"></a>
 #### 1 - Data Preprocessing
 
 <br>
 
 
-<a id="node-942"></a>
+<a id="node-912"></a>
 #### Data Preprocessing
 
 <br>
 
 
-<a id="node-943"></a>
+<a id="node-913"></a>
 #### import re from collections import Counter import numpy as np import pandas as pd  import w1_unittest
 
 <br>
 
 
-<a id="node-944"></a>
+<a id="node-914"></a>
 #### As in any other machine learning task, the first thing you have to do is **process your data  set.**  • Many courses load in **pre-processed data for you**.  • However, **in the real world**, when you build these NLP systems,  you **load** the datasets and **process them.**  • So let's get some real world practice in **pre-processing the data**!  Your first task is to read in a file called **'shakespeare.txt'** which is found in your file  directory. To look at this file you can go to File ==> Open.
 
 <br>
 
 
-<a id="node-945"></a>
+<a id="node-915"></a>
 #### Exercise 1 - process_data (UNQ_C1)
 
 <br>
 
 
-<a id="node-946"></a>
+<a id="node-916"></a>
 #### Implement the function **process_data** which  1) **Reads in a corpus (text file)**  2) Changes everything to **lowercase**  3) **Returns a list of words**.
 
 <br>
 
 
-<a id="node-947"></a>
+<a id="node-917"></a>
 #### **Options and Hints**  • If you would like more of a **real-life practice**, don't open the 'Hints' below (yet)  and **try searching the web to derive your answer.**  • If you want a little help, click on the green "**General Hints"** section by clicking  on it with your mouse.  • If you get stuck or are not getting the expected results, click on the green  'Detailed Hints' section to get hints for each step that you'll take to complete this function
 
 <br>
 
-<a id="node-948"></a>
+<a id="node-918"></a>
 
 <p align="center"><kbd><img src="assets/9471738d653d7bcaf3c5cc312d12129d5a30a1d1.png" width="100%"></kbd></p>
 
@@ -1410,73 +1410,73 @@ Learning Objectives
 
 <br>
 
-<a id="node-949"></a>
+<a id="node-919"></a>
 
 <p align="center"><kbd><img src="assets/4672f34e323e29bf7a6dbd16e460e0acf06690bc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-950"></a>
+<a id="node-920"></a>
 
 <p align="center"><kbd><img src="assets/570d17cc1acb9a76b2e5167a13de347906ab9e23.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-951"></a>
+<a id="node-921"></a>
 #### Exercise 2 - get_count (UNQ_C2)
 
 <br>
 
 
-<a id="node-952"></a>
+<a id="node-922"></a>
 #### Implement a get_count function that returns a dictionary  The dictionary's keys are words  The value for each word is the number of times that word appears in the corpus.  For example, given the following sentence: "I am happy because I am learning", your dictionary should return the following:
 
 <br>
 
-<a id="node-953"></a>
+<a id="node-923"></a>
 
 <p align="center"><kbd><img src="assets/3b814af19a93dbc649841bc19914513835c782c6.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-954"></a>
+<a id="node-924"></a>
 #### **Instructions**: Implement a get_count which returns a dictionary where the key is a word and the value is the number of times the word appears in the list.  **Hints**  • Try implementing this using a for loop and a regular dictionary. This may be good practice for similar coding interview questions  • You can also use defaultdict instead of a regular dictionary, along with the for loop  • Otherwise, to skip using a `for` loop, you can use Python's \\_Counter class\\_
 
 <br>
 
-<a id="node-955"></a>
+<a id="node-925"></a>
 
 <p align="center"><kbd><img src="assets/787208c54d2c802217d30d3691aad5913f5de1b7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-956"></a>
+<a id="node-926"></a>
 
 <p align="center"><kbd><img src="assets/3d2597ea9a8d501906efa40b17b14dfb5c61d587.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-957"></a>
+<a id="node-927"></a>
 #### Exercise 3 - get_probs (UNQ_C3)
 
 <br>
 
-<a id="node-958"></a>
+<a id="node-928"></a>
 
 <p align="center"><kbd><img src="assets/30cd7848ed030e79a5d8708414001564addca5f3.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-959"></a>
+<a id="node-929"></a>
 #### General advice  Use dictionary.**values()** Use **sum**() The cardinality (number of words in the corpus should be equal to len(word_l).  You will calculate this same number, but using the word count dictionary. If you're using a for loop:  Use dictionary.**keys()** If you're using a dictionary comprehension:  Use dictionary.items()
 
 <br>
 
-<a id="node-960"></a>
+<a id="node-930"></a>
 
 <p align="center"><kbd><img src="assets/0cdb7ae9370ff7794ea667237fe0f8739bca4ecc.png" width="100%"></kbd></p>
 
@@ -1486,32 +1486,32 @@ Learning Objectives
 
 <br>
 
-<a id="node-961"></a>
+<a id="node-931"></a>
 
 <p align="center"><kbd><img src="assets/890792384dc9f688619bdc616fcab0a32145438f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-962"></a>
+<a id="node-932"></a>
 #### 2 - String Manipulations
 
 <br>
 
 
-<a id="node-963"></a>
+<a id="node-933"></a>
 #### 2 - String Manipulations
 
 <br>
 
 
-<a id="node-964"></a>
+<a id="node-934"></a>
 #### Now that you have computed 𝑃(𝑤𝑖) for all the words in the corpus, you will write a few  functions to **manipulate strings**  so that you can **edit the erroneous strings** and return the **right spellings** of the words.   In this section, you will implement four functions:  • **delete_letter**: given a word, it returns all the possible strings that have **one  character removed**.  • **switch_letter**: given a word, it returns all the possible strings that have **two  adjacent letters switched**.  • **replace_letter**: given a word, it returns all the possible strings that have **one  character replaced by another different letter**.  • **insert_letter**: given a word, it returns all the possible strings that have  an **additional character inserted**.
 
 <br>
 
 
-<a id="node-965"></a>
+<a id="node-935"></a>
 #### **List comprehensions**  String and list manipulation in python will often make use of a python feature called \\_**list  comprehensions**\\_. The routines below will be described as using list comprehensions, but  if you would rather implement them in another way, you are free to do so as long as the  result is the same. Further, the following section will provide detailed instructions on how  to use list comprehensions and how to implement the desired functions. If you are a  python expert, feel free to skip the python hints and move to implementing the routines  directly.  **Python List Comprehensions** embed a **looping structure** inside of a **list declaration**,  collapsing **many lines** of code into a **single line**. If you are not familiar with them, they  seem slightly out of order relative to for loops.
 
 > [!NOTE]
@@ -1521,67 +1521,67 @@ Learning Objectives
 
 <br>
 
-<a id="node-966"></a>
+<a id="node-936"></a>
 
 <p align="center"><kbd><img src="assets/5c3af9e7ed67c942ea8be194fa04c225c3e2390f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-967"></a>
+<a id="node-937"></a>
 #### The diagram above shows that the **components** of a **list comprehension** are the **same** components you would find in a typical for loop that appends to a list, but in a **different order**. With that in mind, we'll continue the specifics of this assignment. We will be very descriptive for the first function, deletes(), and less so in later functions as you become familiar with list comprehensions.
 
 <br>
 
 
-<a id="node-968"></a>
+<a id="node-938"></a>
 #### Exercise 4 - delete_letter (UNQ_C4)
 
 <br>
 
 
-<a id="node-969"></a>
+<a id="node-939"></a>
 #### **Instructions for delete_letter():**  Implement a delete_letter() function that, given a word,  returns a list of strings with one character deleted.  For example, given the word **nice**, it would return the set: {'ice', 'nce', 'nic', 'nie'}.  **Step 1:** Create a list of 'splits'. This is all the ways you can split a word into Left and  Right:  For example, 'nice is split into : [('', 'nice'), ('n', 'ice'), ('ni', 'ce'), ('nic', 'e'), ('nice', '')]  This is common to all four functions (delete, replace, switch, insert).
 
 <br>
 
-<a id="node-970"></a>
+<a id="node-940"></a>
 
 <p align="center"><kbd><img src="assets/885733b79094914eb7a6b4f1c0651cd4412e527c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-971"></a>
+<a id="node-941"></a>
 #### **Step 2:** This is specific to **delete_letter**. Here, we are generating all words that result from  deleting one character.  This can be done in a **single line** with a **list comprehension**. You can make use of this  type of syntax:  [f(a,b) for a, b in splits if condition]  For our 'nice' example you get: ['ice', 'nce', 'nie', 'nic']
 
 <br>
 
-<a id="node-972"></a>
+<a id="node-942"></a>
 
 <p align="center"><kbd><img src="assets/8b167980a3bc6220b064dbf899bf0cded18579b4.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-973"></a>
+<a id="node-943"></a>
 #### **Levels of assistance**  Try this exercise with these levels of assistance.  • We hope that this will make it both a **meaningful** experience but also not a  **frustrating** experience.  • Start with level 1, then move onto level 2, and 3 as needed.  ▪ Level 1. Try to think this through and implement this yourself.  ▪ Level 2. Click on the "Level 2 Hints" section for some hints to get started.  ▪ Level 3. If you would prefer more guidance, please click on the "Level 3 Hints"  cell for step by step instructions.  • If you are still stuck, look at the images in the "list comprehensions" section  above.
 
 <br>
 
-<a id="node-974"></a>
+<a id="node-944"></a>
 
 <p align="center"><kbd><img src="assets/e855513566eb15cc9110fa911bb28195c4ff2c63.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-975"></a>
+<a id="node-945"></a>
 
 <p align="center"><kbd><img src="assets/2201637260a1b1bee3442a5ddc6566f4d22bf3f6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-976"></a>
+<a id="node-946"></a>
 
 <p align="center"><kbd><img src="assets/7beba01f4d12d4aafa000919f3d2bc4cdb8e9e08.png" width="100%"></kbd></p>
 
@@ -1590,61 +1590,61 @@ Learning Objectives
 
 <br>
 
-<a id="node-977"></a>
+<a id="node-947"></a>
 
 <p align="center"><kbd><img src="assets/4add48fb5be225e067ee84f7ec75eebedb5e345c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-978"></a>
+<a id="node-948"></a>
 
 <p align="center"><kbd><img src="assets/82c67f4b9d055456a26453911493919f7911207f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-979"></a>
+<a id="node-949"></a>
 
 <p align="center"><kbd><img src="assets/6bbbfa306d7312f4ac242b32a1e9282294701b64.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-980"></a>
+<a id="node-950"></a>
 #### Exercise 5 - switch_letter (UNQ_C5)
 
 <br>
 
 
-<a id="node-981"></a>
+<a id="node-951"></a>
 #### **Instructions for switch_letter()**:  Now implement a function that **switches two letters** in a word. It takes in a word and **returns a list of all the possible switches** of two letters **that are adjacent to each other**.  • For example, given the word **'eta'**, it returns **{'eat', 'tea'}**, but does not return ' ate'.  **Step 1:** is the same as in **delete_letter**()   **Step 2:** A list comprehension or for loop which forms strings by swapping adjacent letters.  This is of the form: [f(L,R) for L, R in splits if condition] where 'condition' will test the length of R in a given iteration. See below.
 
 <br>
 
-<a id="node-982"></a>
+<a id="node-952"></a>
 
 <p align="center"><kbd><img src="assets/71eefc69789c704d21ea38f1d56689e173bf48f8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-983"></a>
+<a id="node-953"></a>
 
 <p align="center"><kbd><img src="assets/cbd52b5e715d7c60eac8979adc04dcb74d9a0464.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-984"></a>
+<a id="node-954"></a>
 
 <p align="center"><kbd><img src="assets/39a9cd3ca6a6b445d1e1832456875a77d3cb8355.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-985"></a>
+<a id="node-955"></a>
 
 <p align="center"><kbd><img src="assets/165e042718499e68f448ee113e49827d69c10baf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-986"></a>
+<a id="node-956"></a>
 
 <p align="center"><kbd><img src="assets/b95bfb8b71d56f2a622da5247184b6a914808c74.png" width="100%"></kbd></p>
 
@@ -1653,229 +1653,229 @@ Learning Objectives
 
 <br>
 
-<a id="node-987"></a>
+<a id="node-957"></a>
 
 <p align="center"><kbd><img src="assets/23307ebf7dcea4ffb76b986c012e30f32573fb29.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-988"></a>
+<a id="node-958"></a>
 
 <p align="center"><kbd><img src="assets/747ace22f6c440408055a4fef3ff514b60275690.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-989"></a>
+<a id="node-959"></a>
 #### Exercise 6 - replace_letter (UNQ_C6)
 
 <br>
 
 
-<a id="node-990"></a>
+<a id="node-960"></a>
 #### **Instructions for replace_letter()**:  Now implement a function that takes in a word and returns a list of strings with one **replaced letter** from the original word.  **Step 1:** is the same as in delete_letter()  **Step 2:** A list comprehension or for loop which form strings by replacing letters. This can be of the form:  [f(a,b,c) for a, b in splits if condition for c in string] Note the use of the second for loop. It is expected in this routine that one or more of the replacements will include the original word. For example, replacing the first letter of 'ear' with 'e' will return 'ear'.  **Step 3:** Remove the original input letter from the output.  **Hints**   • To remove a word from a list, first store its contents inside a set()  • Use **set.discard**('the_word') to remove a word in a set. Using  set.remove('the_word') throws a KeyError if the word does not exist in the set.
 
 <br>
 
-<a id="node-991"></a>
+<a id="node-961"></a>
 
 <p align="center"><kbd><img src="assets/abfc6635908f19f58d51f6777266929b809aa2cf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-992"></a>
+<a id="node-962"></a>
 
 <p align="center"><kbd><img src="assets/a9d0f124db0710399cc095f79d02f2cd996f9f26.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-993"></a>
+<a id="node-963"></a>
 
 <p align="center"><kbd><img src="assets/3c5b249e591fa0f09bbf3421de775b977e33f452.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-994"></a>
+<a id="node-964"></a>
 #### Exercise 7 - insert_letter (UNQ_C7)
 
 <br>
 
 
-<a id="node-995"></a>
+<a id="node-965"></a>
 #### **Instructions for insert_letter()**:   Now implement a function that takes in a word and returns a list with **a  letter inserted** at **every offset**. **Step 1:** is the same as in **delete_letter**() **Step 2:** This can be a list comprehension of the form:  [f(a,b,c) for a, b in splits if condition for c in string]
 
 <br>
 
-<a id="node-996"></a>
+<a id="node-966"></a>
 
 <p align="center"><kbd><img src="assets/288e7edb18be9c3c637ef0c634ec920eeee7850f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-997"></a>
+<a id="node-967"></a>
 #### Phải lấy rang len(word) + 1 để split_l nó có tuple 'word', ' ' để có insert vào cuối từ nữa
 
 <br>
 
-<a id="node-998"></a>
+<a id="node-968"></a>
 
 <p align="center"><kbd><img src="assets/0d40c47185696ec47a8b212b19b765d2c9a66449.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-999"></a>
+<a id="node-969"></a>
 
 <p align="center"><kbd><img src="assets/85f728933023ecb104161980e80d2cc8cca3420d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1000"></a>
+<a id="node-970"></a>
 
 <p align="center"><kbd><img src="assets/a78b287792287654d7e4ebad046b1dcee47c8ce6.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1001"></a>
+<a id="node-971"></a>
 #### 3 - Combining the Edits
 
 <br>
 
 
-<a id="node-1002"></a>
+<a id="node-972"></a>
 #### Combining the Edits
 
 <br>
 
 
-<a id="node-1003"></a>
+<a id="node-973"></a>
 #### Now that you have implemented the string manipulations, you will create two functions that, **given a string, will return all the possible single and double edits on that string.** These will be **edit_one_letter**() and **edit_two_letters**()**.**
 
 <br>
 
 
-<a id="node-1004"></a>
+<a id="node-974"></a>
 #### 3.1 - Edit One Letter
 
 <br>
 
 
-<a id="node-1005"></a>
+<a id="node-975"></a>
 #### Exercise 8 - edit_one_letter (UNQ_C8)
 
 <br>
 
 
-<a id="node-1006"></a>
+<a id="node-976"></a>
 #### **Instructions**:  Implement the **edit_one_letter** function to get **all the possible edits** that are **one edit away**  from a word. The edits consist of the **replace**, **insert**, **delete**, and optionally the **switch**  operation. You should **use the previous functions** you have already implemented to  complete this function. The 'switch' function is a less common edit function, so its use will  be selected by an **" allow_switches"** input argument.  Note that those functions return \\/**lists**\\/ while this function should return a \\/python **set**\\/.  Utilizing a set **eliminates any duplicate entries.  Hints**   • Each of the functions returns a list. You can combine lists using the `+` operator.  • To get unique strings (avoid duplicates), you can use the set() function.
 
 <br>
 
-<a id="node-1007"></a>
+<a id="node-977"></a>
 
 <p align="center"><kbd><img src="assets/6ba0ab1e0dcdb1d3e64b4a5e9139d4ece8fe84c1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1008"></a>
+<a id="node-978"></a>
 
 <p align="center"><kbd><img src="assets/281ed0cc6f84503ae2a2c3ab0cc15d2406cb54d8.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1009"></a>
+<a id="node-979"></a>
 #### 3.2 - Edit Two Letters
 
 <br>
 
 
-<a id="node-1010"></a>
+<a id="node-980"></a>
 #### Exercise 9 - edit_two_letters (UNQ_C9)
 
 <br>
 
 
-<a id="node-1011"></a>
+<a id="node-981"></a>
 #### **Exercise 9 - edit_two_letters** Now you can generalize this to implement to get two edits on a word. To do so, you would  have to get **all the possible edits** on a **single word** and then **for each modified word, you  would have to modify it again**.  **Instructions**: Implement the edit_two_letters function that returns a set of words that are  **two edits away**. Note that creating additional edits based on the edit_one_letter function  may 'restore' some one_edits to zero or one edits. That is allowed here. This is  accounted for in get_corrections.  **Hints**   • You will likely want to take the union of two sets.  • You can either use **set.update()** or use the **'|'** (or operator) to union two sets  • See the documentation \\_Python sets \\_for examples of using operators or  functions of the Python set.
 
 <br>
 
-<a id="node-1012"></a>
+<a id="node-982"></a>
 
 <p align="center"><kbd><img src="assets/a1df7144eaf9115a0901fa1c16f22a6ca4b41337.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1013"></a>
+<a id="node-983"></a>
 
 <p align="center"><kbd><img src="assets/01e89e868a524bf08c97cc28863d73566d7946a0.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1014"></a>
+<a id="node-984"></a>
 #### 3.3 - Suggest Spelling Suggestions
 
 <br>
 
 
-<a id="node-1015"></a>
+<a id="node-985"></a>
 #### Exercise 10 - get_corrections (UNQ_C20)
 
 <br>
 
 
-<a id="node-1016"></a>
+<a id="node-986"></a>
 #### Now you will use your edit_two_letters function to get a set of all the possible 2 edits on  your word. You will then use those strings to get the most probable word you meant to  type a.k.a your typing suggestion.  **Exercise 10 - get_corrections  Instructions**: Implement get_corrections, which returns a list of zero to n possible  suggestion tuples of the form (word, probability_of_word).  **Step 1:** Generate suggestions for a supplied word: You'll use the edit functions you have  developed. The 'suggestion algorithm' should follow this logic:  • If the word is in the vocabulary, suggest the word.  • Otherwise, if there are suggestions from edit_one_letter that are in the  vocabulary, use those.  • Otherwise, if there are suggestions from edit_two_letters that are in the  vocabulary, use those.  • Otherwise, suggest the input word.*  • The idea is that words generated from fewer edits are more likely than words  with more edits.  Note:  • Edits of two letters may 'restore' strings to either zero or one edit. This  algorithm accounts for this by preferentially selecting lower distance edits first.
 
 <br>
 
-<a id="node-1017"></a>
+<a id="node-987"></a>
 
 <p align="center"><kbd><img src="assets/cc5f841eefe1c4e64e8b6046c8289d97041fe9e4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1018"></a>
+<a id="node-988"></a>
 
 <p align="center"><kbd><img src="assets/b95b3fd4ce308f0b801e1835df00436fc75b58e7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1019"></a>
+<a id="node-989"></a>
 
 <p align="center"><kbd><img src="assets/4062ddbb6b948e02d7d58fe0f3c0ffcead5da53d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1020"></a>
+<a id="node-990"></a>
 #### 4 - Minimum Edit Distance
 
 <br>
 
 
-<a id="node-1021"></a>
+<a id="node-991"></a>
 #### Now that you **have implemented your auto-correct**, how do you **evaluate the similarity between two strings**? For example: '**waht**' and '**what**'  Also how do you **efficiently find the shortest path** to **go from the word, 'waht' to the word 'what'?**  You will implement a **dynamic programming system** that will tell you the **minimum number of edits required to convert a string into another string.**
 
 <br>
 
 
-<a id="node-1022"></a>
+<a id="node-992"></a>
 #### 4.1 - Dynamic Programming
 
 <br>
 
 
-<a id="node-1023"></a>
+<a id="node-993"></a>
 #### Dynamic Programming **breaks a problem down into subproblems** which can be **combined to form the final solution**. Here, given a string **source[0..I]** and a string **target[0..j]**, we will compute all the combinations of **substrings[I, j]** and **calculate their edit distance**.  To do this efficiently, we will **use a table to maintain the previously computed substrings** and use those to calculate larger substrings.
 
 <br>
 
-<a id="node-1024"></a>
+<a id="node-994"></a>
 
 <p align="center"><kbd><img src="assets/b2459b98a93c717f6501e22dc1d02b70c9dd2c2b.png" width="100%"></kbd></p>
 
@@ -1885,7 +1885,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1025"></a>
+<a id="node-995"></a>
 
 <p align="center"><kbd><img src="assets/4c2826687b342da49bf675e9bb9df434f7272f7a.png" width="100%"></kbd></p>
 
@@ -1898,18 +1898,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-1026"></a>
+<a id="node-996"></a>
 #### The operations used in this algorithm are '**insert', 'delete', and 'replace'.** These correspond to the functions that you defined earlier: **insert_letter**(), **delete_letter**() and **replace_letter**(). **switch_letter**() is not used here.  The diagram below describes how to initialize the table. Each entry in D[i,j] represents the **minimum cost** of **converting string source[0:i] to string target[0:j]**. The first column is initialized to represent the cumulative cost of deleting the source characters to convert string " EER" to "". The first row is initialized to represent the cumulative cost of inserting the target characters to convert from "" to "NEAR".
 
 <br>
 
-<a id="node-1027"></a>
+<a id="node-997"></a>
 
 <p align="center"><kbd><img src="assets/820d0aa144343076567e3735563e6d606a8e7df0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1028"></a>
+<a id="node-998"></a>
 
 <p align="center"><kbd><img src="assets/aa93e5f0c621e36c03707e5ec3cffce20164435a.png" width="100%"></kbd></p>
 
@@ -1922,19 +1922,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-1029"></a>
+<a id="node-999"></a>
 
 <p align="center"><kbd><img src="assets/dc17b513be9d64811850ede03f763e25a33fef81.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1030"></a>
+<a id="node-1000"></a>
 
 <p align="center"><kbd><img src="assets/147eac7dc6e076a797719c587a40f796180bf78a.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1031"></a>
+<a id="node-1001"></a>
 
 <p align="center"><kbd><img src="assets/0af36e98b66300fe00ee9d61eff6da1a636ca069.png" width="100%"></kbd></p>
 
@@ -1944,36 +1944,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-1032"></a>
+<a id="node-1002"></a>
 #### Exercise 11 - min_edit_distance (UNQ_C11)
 
 <br>
 
 
-<a id="node-1033"></a>
+<a id="node-1003"></a>
 #### Again, the word "substitution" appears in the figure, but think of this as "replacement".  **Instructions**:  Implement the function below to get the **minimum amount of edits** required given a source string and a target string.  **Hints**  • The **range(start, stop, step)** function excludes 'stop' from its output  • \\_words\\_
 
 <br>
 
-<a id="node-1034"></a>
+<a id="node-1004"></a>
 
 <p align="center"><kbd><img src="assets/791412aea948d8bd6e50f41f3e77ff988448f486.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1035"></a>
+<a id="node-1005"></a>
 
 <p align="center"><kbd><img src="assets/685c5fd436d060edac718fb8d086e51a445357f7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1036"></a>
+<a id="node-1006"></a>
 
 <p align="center"><kbd><img src="assets/57451cb537c2c749923723a8018d58b6beaaf370.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1037"></a>
+<a id="node-1007"></a>
 
 <p align="center"><kbd><img src="assets/32d2435c3594b1dcc18053a83dca234d4babbde0.png" width="100%"></kbd></p>
 
@@ -1982,20 +1982,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1038"></a>
+<a id="node-1008"></a>
 
 <p align="center"><kbd><img src="assets/2fa8b872a12cf095a2a8ef9ad4b304878e835c0f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1039"></a>
+<a id="node-1009"></a>
 #### 5 - Backtrace (Optional)
 
 <br>
 
 
-<a id="node-1040"></a>
+<a id="node-1010"></a>
 #### Once you have computed your matrix using minimum edit distance, how would find the shortest path from the top left corner to the bottom right corner?  Note that you could use backtrace algorithm. Try to find the shortest path given the matrix that your min_edit_distance function returned.  You can use these lecture slides on minimum edit distance by Dan Jurafsky to learn about the algorithm for backtrace.  https://web.stanford.edu/class/cs124/lec/med.pdf
 
 > [!NOTE]

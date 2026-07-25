@@ -16,30 +16,30 @@ Learning Objectives
  • Transition probabilities
  • Emission probabilities
 
-<a id="node-1042"></a>
+<a id="node-1012"></a>
 ## Week Introduction
 
 <br>
 
 
-<a id="node-1043"></a>
+<a id="node-1013"></a>
 ## Part Of Speech Tagging
 
 <br>
 
-<a id="node-1044"></a>
+<a id="node-1014"></a>
 
 <p align="center"><kbd><img src="assets/f4dd8171c7641fe4f16375b25f8fab42cc38b893.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1045"></a>
+<a id="node-1015"></a>
 
 <p align="center"><kbd><img src="assets/26e433b86bc1a82ac724bea551e2d6642cc6df56.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1046"></a>
+<a id="node-1016"></a>
 
 <p align="center"><kbd><img src="assets/2349f1f688bffcbef580b10669e96d7d2da711d3.png" width="100%"></kbd></p>
 
@@ -49,7 +49,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1047"></a>
+<a id="node-1017"></a>
 
 <p align="center"><kbd><img src="assets/32689d803f17c6a76657334a78b4372a4a176ed0.png" width="100%"></kbd></p>
 
@@ -61,7 +61,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1048"></a>
+<a id="node-1018"></a>
 ### Because **POS tags** describe the **characteristic structure of lexical terms** in a
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1049"></a>
+<a id="node-1019"></a>
 #### Part of Speech Tagging (POS) is the process of **assigning a Part of  Speech tag to a word**. By doing so, you will learn the following:    • **Markov Chains**  • **Hidden Markov Models**  • **Viterbi algorithm**
 
 > [!NOTE]
@@ -102,14 +102,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1050"></a>
+<a id="node-1020"></a>
 
 <p align="center"><kbd><img src="assets/01741d44907c6137747c10c09d852db8b7fb3021.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1051"></a>
+<a id="node-1021"></a>
 #### You can use **part of speech tagging for**:     • **Identifying named entities**  • **Speech recognition**  • **Coreference Resolution**   You can use the **probabilities** of **POS tags** **happening near  one another** to **come up with the most reasonable output**.
 
 > [!NOTE]
@@ -124,13 +124,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1052"></a>
+<a id="node-1022"></a>
 ## Lab: Working With Text Files
 
 <br>
 
 
-<a id="node-1053"></a>
+<a id="node-1023"></a>
 ### In this lecture notebook you will **create a vocabular**y from a **tagged dataset** and learn how
 
 > [!NOTE]
@@ -145,13 +145,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1054"></a>
+<a id="node-1024"></a>
 #### Read Text Data
 
 <br>
 
 
-<a id="node-1055"></a>
+<a id="node-1025"></a>
 #### A **tagged dataset** taken from the **Wall Street Journal** is provided in the  file **WSJ_02-21.pos**.  To **read this file** you can use **Python's context manager** by using the with **keyword 'open'** and  **specifying the name of the file** you wish to read. To actually save the contents of the file  into memory you will need to use the **readlines()** method and **store its return value in a  variable**.  **Python's context managers** are great because you **don't need to explicitly close** **the  connection to the file**, this is done under the hood:
 
 > [!NOTE]
@@ -168,7 +168,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1056"></a>
+<a id="node-1026"></a>
 #### # Read lines from 'WSJ_02-21.pos' file and save them into the '**lines**' variable **with** **open**("\\/**./data/WSJ_02-21.pos**\\/", 'r') as **f**:     **lines** = f.**readlines**()
 
 > [!NOTE]
@@ -183,42 +183,42 @@ Learning Objectives
 <br>
 
 
-<a id="node-1057"></a>
+<a id="node-1027"></a>
 #### # Print columns for reference print("\\\\t\\\\tWord", "\\\\tTag\\\ ")  # Print first five lines of the dataset for I in range(5):     print(f'line number {I+1}: {**lines[I]**}')
 
 <br>
 
-<a id="node-1058"></a>
+<a id="node-1028"></a>
 
 <p align="center"><kbd><img src="assets/4725b72984a7aa400f0577a85c1c36e79e6aef93.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1059"></a>
+<a id="node-1029"></a>
 #### Each **line** within the dataset has a **word** followed by its **corresponding tag**. However since  the printing was done using a formatted string it can be inferred that the **word** and  the **tag** are **separated by a tab** (or some spaces) and there is a **newline at the end of  each line** (notice that there is a space between each line).  If you want to understand the meaning of these tags you can take a look \\_here\\_.
 
 <br>
 
-<a id="node-1060"></a>
+<a id="node-1030"></a>
 
 <p align="center"><kbd><img src="assets/b51beec1c6d0c3d7b39cd0d737ed25d3319eb7d0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1061"></a>
+<a id="node-1031"></a>
 
 <p align="center"><kbd><img src="assets/8de5954c2c4c3daec3a99b34af861c63c9ded182.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1062"></a>
+<a id="node-1032"></a>
 #### To better understand how the information is structured in the dataset it is recommended to **print an unformatted version of it:**
 
 <br>
 
-<a id="node-1063"></a>
+<a id="node-1033"></a>
 
 <p align="center"><kbd><img src="assets/d5eae1652a9acbecd5d5e33fd738384b550bb867.png" width="100%"></kbd></p>
 
@@ -233,19 +233,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-1064"></a>
+<a id="node-1034"></a>
 #### Creating a vocabulary
 
 <br>
 
 
-<a id="node-1065"></a>
+<a id="node-1035"></a>
 #### Now that you understand **how the dataset is structured**, you will **create a vocabulary** out  of it. A vocabulary is made up of **every** **word** that **appeared at least 2 times** in the dataset.  For this, follow these steps:  • Get **only the words** from the dataset  • Use a **defaultdict** to **count the number of times** each word **appears**  • **Filter the dict** to **only** **include** words that appeared **at least 2 times**  • **Create a list** out of the **filtered dict**  • **Sort the list**
 
 <br>
 
 
-<a id="node-1066"></a>
+<a id="node-1036"></a>
 #### # Get the words from each line in the dataset words = [line.split(**'\\\\t'**)[**0**] for line in lines]
 
 > [!NOTE]
@@ -269,7 +269,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1067"></a>
+<a id="node-1037"></a>
 #### Step 2 can be done easily by **leveraging defaultdict**. In case you aren't familiar with  **defaultdicts** they are a **special kind of dictionaries** that **return the "zero" value of a type  if you try to access a key that does not exist**. Since you want the **frequencies** of  words, you should define the **defaultdict** with a **type of int.**  Now you don't need to worry about the case when the word is not present within the  dictionary because getting the value for that key will simply return a zero. Isn't that cool?
 
 > [!NOTE]
@@ -282,7 +282,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1068"></a>
+<a id="node-1038"></a>
 #### # Define defaultdict of type 'int' freq = **defaultdict(int)**  # **Count frequency of occurrence** for each word in the dataset **for word in words:     freq[word] += 1**
 
 > [!NOTE]
@@ -298,7 +298,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1069"></a>
+<a id="node-1039"></a>
 #### **Filtering** the **freq** **dictionary** can be done using **list comprehensions** again (aren't they handy?). You should filter out words that **appeared only once** and also **words** that are **just a newline character**:
 
 > [!NOTE]
@@ -309,7 +309,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1070"></a>
+<a id="node-1040"></a>
 #### # Create the vocabulary by filtering the 'freq' dictionary vocab = [k for k, v in **freq.items()** if (v > 1 and k != '\\\ ')]
 
 > [!NOTE]
@@ -327,7 +327,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1071"></a>
+<a id="node-1041"></a>
 #### # Sort the vocabulary vocab.**sort()**  # Print some random values of the vocabulary for I in range(4000, 4005):     print(vocab[I])
 
 > [!NOTE]
@@ -338,14 +338,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1072"></a>
+<a id="node-1042"></a>
 
 <p align="center"><kbd><img src="assets/14579d221effb897e284454f9a5039c3bbb653cd.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1073"></a>
+<a id="node-1043"></a>
 #### Now you have successfully **created a vocabulary from the dataset.** **Great job**! The vocabulary is **quite extensive** so it is not printed out but you can still do so by creating a cell and running something like print(vocab).  At this point you will u**sually write the vocabulary into a file** for future use, but that is out of the scope of this notebook. If you are curious it is very similar to how you read the file at the beginning of this notebook.
 
 > [!NOTE]
@@ -358,7 +358,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1074"></a>
+<a id="node-1044"></a>
 #### # Read lines from 'WSJ_02-21.pos' file and save them into the 'lines' variable with open("./data/WSJ_02-21.pos", 'r') as f:     lines = f.readlines()  # Get the words from each line in the dataset words = [line.split('\\t')[0] for line in lines]  # Define defaultdict of type 'int' freq = defaultdict(int)  # Count frequency of ocurrence for each word in the dataset for word in words:     freq[word] += 1  # Sort the vocabulary vocab.sort()  # Print some random values of the vocabulary for i in range(4000, 4005):     print(vocab[i])
 
 > [!NOTE]
@@ -369,25 +369,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1075"></a>
+<a id="node-1045"></a>
 #### Processing new text sources
 
 <br>
 
 
-<a id="node-1076"></a>
+<a id="node-1046"></a>
 #### Dealing with unknown words
 
 <br>
 
 
-<a id="node-1077"></a>
+<a id="node-1047"></a>
 #### Now that you have a **vocabulary**, you will use it when processing new text sources. **A  new text will have words that do not appear in the current vocabulary**. To tackle this,  you can simply **classify each new word** as an **unknown one**, but you can do better by  **creating a function** that tries to **classify the type of each unknown word** and **assign it a  corresponding unknown token**
 
 <br>
 
 
-<a id="node-1078"></a>
+<a id="node-1048"></a>
 #### This function will do the following **checks** and return an **appropriate token**:  • Check if the unknown word **contains any character that is a digit**  ▪ return --**unk_digit**--  • Check if the unknown word contains any **punctuation** character  ▪ return --**unk_punct**--  • Check if the unknown word contains any **upper-case character**  ▪ return --**unk_upper**--  • Check if the unknown word **ends with a suffix** that could indicate it is a noun,  verb, adjective or adverb  ▪ return --**unk_noun**--, --**unk_verb**--, --**unk_adj**--, --**unk_adv**-- respectively
 
 > [!NOTE]
@@ -401,7 +401,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1079"></a>
+<a id="node-1049"></a>
 #### If a word fails to **fall** under any condition then its token will be a **plain --unk--**. The  conditions will be evaluated in the **same order as listed here**. So if a word contains a  punctuation character but does not contain digits, it will fall under the second condition.  To achieve this behaviour some **if/elif statements** can be used along with **early returns**.  This function is implemented next. Notice that the **any()** **function** is being **heavily used**. It  returns True if at least one of the cases it evaluates is True.
 
 > [!NOTE]
@@ -411,7 +411,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1080"></a>
+<a id="node-1050"></a>
 #### def **assign_unk**(word):     """     Assign tokens to unknown words     """          # **Punctuation characters**     # Try printing them out in a new cell!     punct = set(**string.punctuation**)           # **Suffixes**     **noun_suffix** = ["action", "age", "ance", "cy", "dom", "ee", "ence", "er", "hood", "ion", "ism", "ist", "ity", "ling", "ment", "ness", "or", "ry", "scape", "ship", "ty"]     **verb_suffix** = ["ate", "ify", "ise", "ize"]     **adj_suffix** = ["able", "ese", "ful", "i", "ian", "ible", "ic", "ish", "ive", "less", "ly", "ous"]     **adv_suffix** = ["ward", "wards", "wise"]      # **Loop the characters in the word, check if any is a digit**     if **any**(**char.isdigit**() for char in word):         return "--**unk_digit**--"      # Loop the characters in the word, check if any is a punctuation character     elif any(char **in** **punct** for char in word):         return "--**unk_punct**--"      # Loop the characters in the word, check if any is an upper case character     elif **any**(**char.isupper**() for char in word):         return "--**unk_upper**--"      # Check if word ends with any noun suffix     elif any(**word.endswith**(**suffix**) for suffix in **noun_suffix**):         return "--unk_noun--"      # Check if word ends with any verb suffix     elif any(**word.endswith**(**suffix**) for suffix in **verb_suffix**):         return "--unk_verb--"      # Check if word ends with any adjective suffix     elif any(**word.endswith**(**suffix**) for suffix in **adj_suffix**):         return "--unk_adj--"      # Check if word ends with any adverb suffix     elif any(**word.endswith**(**suffix**) for suffix in **adv_suffix**):         return "--unk_adv--"          # If none of the previous criteria is met, return plain unknown     return "--unk--" 
 
 > [!NOTE]
@@ -431,19 +431,19 @@ Learning Objectives
 <br>
 
 
-<a id="node-1081"></a>
+<a id="node-1051"></a>
 #### A POS tagger will **always encounter** words that are not within the vocabulary that is being used. By augmenting the dataset to include these **unknown** word tokens you are **helping the tagger to have a better idea** of the appropriate tag for these words.
 
 <br>
 
 
-<a id="node-1082"></a>
+<a id="node-1052"></a>
 #### Getting the correct tag for a word
 
 <br>
 
 
-<a id="node-1083"></a>
+<a id="node-1053"></a>
 #### All that is left is to **implement a function** that will **get the correct tag** for a **particular word**  taking special considerations for unknown words. Since the dataset provides each word  and tag within the same line and a word being known depends on the vocabulary used,  these two elements should be arguments to this function.  This function should **check if a line is empty** and if so, it should return a **placeholder** **word**  and **tag**, **--n--** and **--s--** respectively.  If not, it should process the line to return the **correct word** and **tag** pair, considering if a  word is unknown in which scenario the function **assign_unk**() should be used.  The function is implemented next. Notice that the **split()** method can be used without  specifying the **delimiter**, in which case it will default to **any whitespace**.
 
 > [!NOTE]
@@ -457,31 +457,31 @@ Learning Objectives
 <br>
 
 
-<a id="node-1084"></a>
+<a id="node-1054"></a>
 #### def **get_word_tag**(**line**, **vocab**):     # If **line is empty** return placeholders for word and tag     **if not line.split():** \\/#Tức là nếu split bởi whitespace mà  #vẫn không có gì, thì tức là line is empty\\/         word = "--n--"         tag = "--s--"     else:         # Split line to separate word and tag \\/#Cái này cũng là split  #bởi (any) whitespace vì tab (mỗi line của data có dạng word + tab + tag) cũng là  #whitespace \\/        word, tag = **line.split()**         # Check if word is not in vocabulary         if **word** **not in vocab:**              # Handle unknown word             tag = **assign_unk(word)**     return **word, tag**
 
 <br>
 
-<a id="node-1085"></a>
+<a id="node-1055"></a>
 
 <p align="center"><kbd><img src="assets/c68427cb8ab838521e1aa5812e468c566a0e46af.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1086"></a>
+<a id="node-1056"></a>
 #### Congratulations on finishing this lecture notebook! Now you should be more familiar with working with text data and **have a better understanding** of how a **basic POS tagger works**.  Keep it up!
 
 <br>
 
 
-<a id="node-1087"></a>
+<a id="node-1057"></a>
 ## Markov Chains
 
 <br>
 
 
-<a id="node-1088"></a>
+<a id="node-1058"></a>
 ### 1 Introduction to Markov Chains:
 
 > [!NOTE]
@@ -515,7 +515,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1089"></a>
+<a id="node-1059"></a>
 
 <p align="center"><kbd><img src="assets/3fb6b021c49594add87f1485155ecc909e92ef69.png" width="100%"></kbd></p>
 
@@ -538,7 +538,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1090"></a>
+<a id="node-1060"></a>
 
 <p align="center"><kbd><img src="assets/197853ea12afa382e9b2a39da0d9c3adeecdc921.png" width="100%"></kbd></p>
 
@@ -550,7 +550,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1091"></a>
+<a id="node-1061"></a>
 
 <p align="center"><kbd><img src="assets/4121608ce651c675605e3ff3d1e4c51addee7b59.png" width="100%"></kbd></p>
 
@@ -569,7 +569,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1092"></a>
+<a id="node-1062"></a>
 
 <p align="center"><kbd><img src="assets/0b0ee9bde3bbc275d466b4f990e42ac74ccc32dc.png" width="100%"></kbd></p>
 
@@ -598,20 +598,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1093"></a>
+<a id="node-1063"></a>
 
 <p align="center"><kbd><img src="assets/ed5344e473f24e756e75a1f60dfd96f5b85277c0.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1094"></a>
+<a id="node-1064"></a>
 ## Markov Chains And Pos Tags
 
 <br>
 
 
-<a id="node-1095"></a>
+<a id="node-1065"></a>
 ### 1 Introduction to **parts of speech tags** and **transition probabilities**
 
 > [!NOTE]
@@ -641,7 +641,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1096"></a>
+<a id="node-1066"></a>
 
 <p align="center"><kbd><img src="assets/42c686b0e2ac29f8d6e29999c7e43f50168e2fe3.png" width="100%"></kbd></p>
 
@@ -672,7 +672,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1097"></a>
+<a id="node-1067"></a>
 
 <p align="center"><kbd><img src="assets/afaacbd0ae7d05c7fb1158dcee3200f1bb6eb713.png" width="100%"></kbd></p>
 
@@ -714,7 +714,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1098"></a>
+<a id="node-1068"></a>
 
 <p align="center"><kbd><img src="assets/8f69ae9b2fb6229b85b08cea78be1f18c2bf67d3.png" width="100%"></kbd></p>
 
@@ -738,7 +738,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1099"></a>
+<a id="node-1069"></a>
 
 <p align="center"><kbd><img src="assets/9ee7c0d74eee95fe649bc46a3202b6fa81f392a2.png" width="100%"></kbd></p>
 
@@ -747,7 +747,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1100"></a>
+<a id="node-1070"></a>
 
 <p align="center"><kbd><img src="assets/d8be80bdfab33168ee5e8128854c80da74b89713.png" width="100%"></kbd></p>
 
@@ -759,7 +759,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1101"></a>
+<a id="node-1071"></a>
 #### Câu hỏi nên hỏi là mấy cái số này (giá trị probability POS này -> POS kia) ở đâu mà ra???
 
 <p align="center"><kbd><img src="assets/8a2d497b762ee701e5b44652dd5a2ac68ec762d0.png" width="100%"></kbd></p>
@@ -781,7 +781,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1102"></a>
+<a id="node-1072"></a>
 
 <p align="center"><kbd><img src="assets/a2685b34c022fe957ec4c2745e54d9cad211fc62.png" width="100%"></kbd></p>
 
@@ -794,7 +794,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1103"></a>
+<a id="node-1073"></a>
 
 <p align="center"><kbd><img src="assets/74460546c442957e3c02a5a60e4cdf7316761e45.png" width="100%"></kbd></p>
 
@@ -803,7 +803,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1104"></a>
+<a id="node-1074"></a>
 
 <p align="center"><kbd><img src="assets/59cf5bfdbe944ed55c177b0af9c4b131b2d63413.png" width="100%"></kbd></p>
 
@@ -816,13 +816,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1105"></a>
+<a id="node-1075"></a>
 ## Hidden Markov Models
 
 <br>
 
 
-<a id="node-1106"></a>
+<a id="node-1076"></a>
 ### 1 Introduction to **Hidden Markov models (HMM)**:
 
 > [!NOTE]
@@ -864,7 +864,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1107"></a>
+<a id="node-1077"></a>
 
 <p align="center"><kbd><img src="assets/d8c688cb4fd158ef3777b9aba599fdff7784db04.png" width="100%"></kbd></p>
 
@@ -884,7 +884,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1108"></a>
+<a id="node-1078"></a>
 
 <p align="center"><kbd><img src="assets/3a44de3b0bbfd08c446dc48516a0bafc1f63fa39.png" width="100%"></kbd></p>
 
@@ -894,7 +894,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1109"></a>
+<a id="node-1079"></a>
 
 <p align="center"><kbd><img src="assets/fdd1ec4aa59ce9fb7c42576a2945acb00c75a9af.png" width="100%"></kbd></p>
 
@@ -912,7 +912,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1110"></a>
+<a id="node-1080"></a>
 
 <p align="center"><kbd><img src="assets/ded522dc3645d3f049853890688981123fabfbe6.png" width="100%"></kbd></p>
 
@@ -934,7 +934,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1111"></a>
+<a id="node-1081"></a>
 
 <p align="center"><kbd><img src="assets/246247dd7b309fe4fb7f6a701d1f3e2aa3b51a1b.png" width="100%"></kbd></p>
 
@@ -964,7 +964,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1112"></a>
+<a id="node-1082"></a>
 
 <p align="center"><kbd><img src="assets/68b510663f126028060a067a9fc2ea7019994e9a.png" width="100%"></kbd></p>
 
@@ -992,7 +992,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1113"></a>
+<a id="node-1083"></a>
 
 <p align="center"><kbd><img src="assets/7ae7fae20cfe1181664e125d0130744d9efb820b.png" width="100%"></kbd></p>
 
@@ -1008,26 +1008,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-1114"></a>
+<a id="node-1084"></a>
 
 <p align="center"><kbd><img src="assets/b47dcba79dcab8c71c6e49c9efb3fa4e3ce1bec2.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1115"></a>
+<a id="node-1085"></a>
 
 <p align="center"><kbd><img src="assets/de35f0d2d1a1eeca4a88d596ea35c3ce6698807e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1116"></a>
+<a id="node-1086"></a>
 ## Calculating Probabilities
 
 <br>
 
 
-<a id="node-1117"></a>
+<a id="node-1087"></a>
 ### 1 Introduction: Learn how to **compute probabilities for transition** and **emission** matrices in a
 
 > [!NOTE]
@@ -1060,7 +1060,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1118"></a>
+<a id="node-1088"></a>
 
 <p align="center"><kbd><img src="assets/604c9db6156964c84ba66d19c43a9305d3650874.png" width="100%"></kbd></p>
 
@@ -1074,7 +1074,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1119"></a>
+<a id="node-1089"></a>
 
 <p align="center"><kbd><img src="assets/e85d00d516838fc6403504c932b834d9dc83e2d7.png" width="100%"></kbd></p>
 
@@ -1085,7 +1085,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1120"></a>
+<a id="node-1090"></a>
 
 <p align="center"><kbd><img src="assets/1a1f09e3a21ef04dad7444b12f4ddecaeaa4a992.png" width="100%"></kbd></p>
 
@@ -1097,7 +1097,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1121"></a>
+<a id="node-1091"></a>
 
 <p align="center"><kbd><img src="assets/7a39b0e15dba9483cc7d4e88e8e6084e55361f7e.png" width="100%"></kbd></p>
 
@@ -1127,7 +1127,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1122"></a>
+<a id="node-1092"></a>
 
 <p align="center"><kbd><img src="assets/3c504d918e7e37dd813c69a8a60b8b57cd09b38e.png" width="100%"></kbd></p>
 
@@ -1138,7 +1138,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1123"></a>
+<a id="node-1093"></a>
 
 <p align="center"><kbd><img src="assets/9d1d93c0f4f85b83e04fa352ab82e85a86b19159.png" width="100%"></kbd></p>
 
@@ -1157,7 +1157,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1124"></a>
+<a id="node-1094"></a>
 
 <p align="center"><kbd><img src="assets/f2e2955733f7f6c6ab4f39f01ef9a7adf9805c50.png" width="100%"></kbd></p>
 
@@ -1167,13 +1167,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1125"></a>
+<a id="node-1095"></a>
 ## Populating The Transition Matrix
 
 <br>
 
 
-<a id="node-1126"></a>
+<a id="node-1096"></a>
 ### 1 Introduction: To **populate the transition matrix**, calculate \\*probabilities of tag transitions
 
 > [!NOTE]
@@ -1213,7 +1213,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1127"></a>
+<a id="node-1097"></a>
 
 <p align="center"><kbd><img src="assets/1cfe5e97a49cc3e046419f3da3929208f6e820bb.png" width="100%"></kbd></p>
 
@@ -1223,7 +1223,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1128"></a>
+<a id="node-1098"></a>
 
 <p align="center"><kbd><img src="assets/0ba59532dbbfdc46c922695b9b5b284560061938.png" width="100%"></kbd></p>
 
@@ -1234,13 +1234,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1129"></a>
+<a id="node-1099"></a>
 
 <p align="center"><kbd><img src="assets/593097a34779a5434f0631d731377becc7859e1c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1130"></a>
+<a id="node-1100"></a>
 
 <p align="center"><kbd><img src="assets/b1be5e423928493c33fd369c671c408615dc0fca.png" width="100%"></kbd></p>
 
@@ -1251,7 +1251,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1131"></a>
+<a id="node-1101"></a>
 
 <p align="center"><kbd><img src="assets/a1fd943804afbaee863bcce8fb5175f36e7f5de0.png" width="100%"></kbd></p>
 
@@ -1266,13 +1266,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1132"></a>
+<a id="node-1102"></a>
 
 <p align="center"><kbd><img src="assets/96f46925a59862c6d0dbca1335fe450c3813aaa8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1133"></a>
+<a id="node-1103"></a>
 
 <p align="center"><kbd><img src="assets/472795b147e900c6a6be2f629b5d43537e80e092.png" width="100%"></kbd></p>
 
@@ -1293,7 +1293,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1134"></a>
+<a id="node-1104"></a>
 
 <p align="center"><kbd><img src="assets/46474bcdd674781f6ccc0a8ed751913b46de99e6.png" width="100%"></kbd></p>
 
@@ -1304,7 +1304,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1135"></a>
+<a id="node-1105"></a>
 
 <p align="center"><kbd><img src="assets/55c0f63ebadfb26d2522f891cd83f725a9b35a22.png" width="100%"></kbd></p>
 
@@ -1332,26 +1332,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-1136"></a>
+<a id="node-1106"></a>
 
 <p align="center"><kbd><img src="assets/0b84d32b6a134d7bf1a4320aace2d34c47c80435.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1137"></a>
+<a id="node-1107"></a>
 
 <p align="center"><kbd><img src="assets/8a69b8bc88692b2e8c4e01d26aa227e73141daa5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1138"></a>
+<a id="node-1108"></a>
 ## Populating The Emission Matrix
 
 <br>
 
 
-<a id="node-1139"></a>
+<a id="node-1109"></a>
 ### 1 Introduction: Introduction to the need for a new matrix to incorporate
 
 > [!NOTE]
@@ -1381,7 +1381,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1140"></a>
+<a id="node-1110"></a>
 
 <p align="center"><kbd><img src="assets/04c1d8017a73849a82162b0836450a3f02d47923.png" width="100%"></kbd></p>
 
@@ -1391,25 +1391,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1141"></a>
+<a id="node-1111"></a>
 
 <p align="center"><kbd><img src="assets/7d0621519734a6808af218f40ad7f52ab549c5eb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1142"></a>
+<a id="node-1112"></a>
 
 <p align="center"><kbd><img src="assets/cc25e98d96d486d0870f52726b9296ae49aa6151.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1143"></a>
+<a id="node-1113"></a>
 
 <p align="center"><kbd><img src="assets/a93917af9498b50b8e866d9e9e888248fadd5981.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1144"></a>
+<a id="node-1114"></a>
 
 <p align="center"><kbd><img src="assets/3bbfe48680ada8d2218affdbe83822ed1dd4fedd.png" width="100%"></kbd></p>
 
@@ -1429,20 +1429,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1145"></a>
+<a id="node-1115"></a>
 
 <p align="center"><kbd><img src="assets/b9869ccf31f60bb2ff455ee428646b3872567841.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1146"></a>
+<a id="node-1116"></a>
 ## Lab: Working With Tags And Numpy
 
 <br>
 
 
-<a id="node-1147"></a>
+<a id="node-1117"></a>
 ### In this lecture notebook you will **create a matrix** using
 
 > [!NOTE]
@@ -1455,37 +1455,37 @@ Learning Objectives
 <br>
 
 
-<a id="node-1148"></a>
+<a id="node-1118"></a>
 #### import numpy as np import pandas as pd
 
 <br>
 
 
-<a id="node-1149"></a>
+<a id="node-1119"></a>
 #### Some information on tags
 
 <br>
 
 
-<a id="node-1150"></a>
+<a id="node-1120"></a>
 #### For this notebook you will be using a **toy example** including only **three tags** (or states). In a **real world application** there are **many more tags** which can be found here.
 
 <br>
 
-<a id="node-1151"></a>
+<a id="node-1121"></a>
 
 <p align="center"><kbd><img src="assets/f5efd4d9c3117f1f1c485270776ff66d40a56210.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1152"></a>
+<a id="node-1122"></a>
 #### # Define tags for Adverb, Noun and To (the preposition) , respectively tags = ['RB', 'NN', 'TO']
 
 <br>
 
 
-<a id="node-1153"></a>
+<a id="node-1123"></a>
 #### In this week's assignment you will **construct some dictionaries** that provide **useful information of the tags** and words you will be working with.  One of these dictionaries is the **transition_counts** which counts the number of times a **particular tag happened next to another.** The keys of this dictionary have the form (**previous_tag**, **tag**) and the values are the **frequency of occurrences**.  Another one is the **emission_counts** dictionary which will count the number of times a **particular pair of (tag, word) appeared in the training dataset.**  In general think of **transition** when working with **tags only** and of **emission** when working with **tags and words.**  In this notebook you will be looking at the first one:
 
 > [!NOTE]
@@ -1498,7 +1498,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1154"></a>
+<a id="node-1124"></a>
 #### # Define '**transition_counts**' dictionary # Note: values are the same as the ones in the assignment transition_counts = {     ('NN', 'NN'): 16241,     ('RB', 'RB'): 2263,     ('TO', 'TO'): 2,     ('NN', 'TO'): 5256,     ('RB', 'TO'): 855,     ('TO', 'NN'): 734,     ('NN', 'RB'): 2431,     ('RB', 'NN'): 358,     ('TO', 'RB'): 200 }
 
 > [!NOTE]
@@ -1513,25 +1513,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1155"></a>
+<a id="node-1125"></a>
 #### Using Numpy for matrix creation
 
 <br>
 
 
-<a id="node-1156"></a>
+<a id="node-1126"></a>
 #### # Store the number of tags in the 'num_tags' variable num_tags = len(tags)  # Initialize a 3X3 numpy array with zeros transition_matrix = np.zeros((num_tags, num_tags))  # Print matrix transition_matrix
 
 <br>
 
-<a id="node-1157"></a>
+<a id="node-1127"></a>
 
 <p align="center"><kbd><img src="assets/18e06acff7455013c3e09652dc20eaac186dd592.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1158"></a>
+<a id="node-1128"></a>
 #### # Print shape of the matrix transition_matrix.shape
 
 > [!NOTE]
@@ -1541,14 +1541,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1159"></a>
+<a id="node-1129"></a>
 
 <p align="center"><kbd><img src="assets/201e6d8ce82b693e039164fbc6424d6f051294ed.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1160"></a>
+<a id="node-1130"></a>
 #### # Create sorted version of the tag's list **sorted_tags** = **sorted**(tags)  # Print sorted list sorted_tags
 
 > [!NOTE]
@@ -1558,14 +1558,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1161"></a>
+<a id="node-1131"></a>
 
 <p align="center"><kbd><img src="assets/5399de40be57eebe54d1150a9dd4cdea30a2986a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1162"></a>
+<a id="node-1132"></a>
 #### # Loop rows for **i** in range(**num_tags**):     # Loop columns     for **j** in range(**num_tags**):         # Define tag pair         **tag_tuple** = (**sorted_tags**[i], **sorted_tags**[j])         # Get frequency from transition_counts dict and assign to (i, j) position in the matrix         **transition_matrix[i, j] = transition_counts.get(tag_tuple)**  # Print matrix transition_matrix
 
 > [!NOTE]
@@ -1574,79 +1574,79 @@ Learning Objectives
 
 <br>
 
-<a id="node-1163"></a>
+<a id="node-1133"></a>
 
 <p align="center"><kbd><img src="assets/5974375ab76eea15cfd20c7d02af6ce4ceb94086.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1164"></a>
+<a id="node-1134"></a>
 #### Looks like this worked fine. However the **matrix** can be hard to read as **Numpy** is more  about efficiency, rather than presenting values in a pretty format.  For this you can use a **Pandas** **DataFrame**. In particular, a function that takes the matrix  as input and prints out a pretty version of it will be very useful:
 
 <br>
 
 
-<a id="node-1165"></a>
+<a id="node-1135"></a>
 #### # Define 'print_matrix' function def print_matrix(matrix):     print(pd.**DataFrame**(matrix, index=**sorted_tags**, columns=**sorted_tags**))
 
 <br>
 
 
-<a id="node-1166"></a>
+<a id="node-1136"></a>
 #### Notice that the **tags are not a parameter** **of the function**. This is because the **sorted_tags** list **will not change** in the rest of the notebook so it is safe to use the variable previously declared. To test this function simply run:
 
 <br>
 
 
-<a id="node-1167"></a>
+<a id="node-1137"></a>
 #### # Print the 'transition_matrix' by calling the 'print_matrix' function print_matrix(transition_matrix)
 
 <br>
 
-<a id="node-1168"></a>
+<a id="node-1138"></a>
 
 <p align="center"><kbd><img src="assets/255d3c2da5cb9eb8ffed6bb6ebce7ecafb76dc5b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1169"></a>
+<a id="node-1139"></a>
 #### Working with Numpy for matrix manipulation
 
 <br>
 
 
-<a id="node-1170"></a>
+<a id="node-1140"></a>
 #### Now that you got the matrix set up it is time to see how a matrix can be manipulated after  being created.  Numpy allows **vectorized operations** which means that operations that would normally  include looping over the matrix can be done in a simpler manner. This is consistent with  **treating numpy arrays as matrices** since you get support for common matrix operations.  You can do matrix multiplication, scalar multiplication, vector addition and many more!  For instance try **scaling each value in the matrix by a factor of 1/10**  Normally you would loop over each value in the matrix, updating them accordingly. But in Numpy this is as easy as **dividing the whole matrix by 10**:
 
 <br>
 
 
-<a id="node-1171"></a>
+<a id="node-1141"></a>
 #### # Scale transition matrix transition_matrix = **transition_matrix/10**  # Print scaled matrix print_matrix(transition_matrix)
 
 <br>
 
-<a id="node-1172"></a>
+<a id="node-1142"></a>
 
 <p align="center"><kbd><img src="assets/173444cfcbaeeb897d7ea9b1150505b303ddef93.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1173"></a>
+<a id="node-1143"></a>
 
 <p align="center"><kbd><img src="assets/5c114f254b79db56f77312db09dc5f74aff64fb3.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1174"></a>
+<a id="node-1144"></a>
 #### # Compute sum of row for each row rows_sum = transition_matrix.**sum**(**axis=1**, keepdims=True)  # Print sum of rows rows_sum
 
 <br>
 
-<a id="node-1175"></a>
+<a id="node-1145"></a>
 
 <p align="center"><kbd><img src="assets/aa229183073cd6a85346b81f7fa14b3bd8c4713a.png" width="100%"></kbd></p>
 
@@ -1656,14 +1656,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1176"></a>
+<a id="node-1146"></a>
 
 <p align="center"><kbd><img src="assets/4108fce23d16d850fb02c7d9ddfe1a11bf904204.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1177"></a>
+<a id="node-1147"></a>
 #### Notice that the **sum()** method was used. This method does exactly what its name implies.  Since the **sum of the rows** was **desired** the **axis was set to 1.** In Numpy **axis=1 refers to  the columns** so the sum is done by summing each column of a particular row, for each  row.  Also the **keepdims** parameter was set to **True** so the resulting array had **shape (3,  1) rather than (3,)**. This was done so that the axes were consistent with the desired  operation.  When working with Numpy, always **remember to check the shape of the arrays** you are  working with, **many unexpected errors happen because of axes not being consistent**.  The \\/**shape attribute is your friend**\\/ for these cases.
 
 > [!NOTE]
@@ -1680,37 +1680,37 @@ Learning Objectives
 <br>
 
 
-<a id="node-1178"></a>
+<a id="node-1148"></a>
 #### # Normalize transition matrix transition_matrix = transition_matrix / rows_sum  # Print normalized matrix print_matrix(transition_matrix)
 
 <br>
 
-<a id="node-1179"></a>
+<a id="node-1149"></a>
 
 <p align="center"><kbd><img src="assets/86736084f5690fe64e388cdc2b6a977bcfb086e8.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1180"></a>
+<a id="node-1150"></a>
 #### Notice that the **normalization** that was carried out forces the **sum of each row to be equal to 1**. You can easily check this by running the sum method on the resulting matrix:
 
 <br>
 
 
-<a id="node-1181"></a>
+<a id="node-1151"></a>
 #### transition_matrix. sum(**axis=1**, **keepdims**=True)
 
 <br>
 
-<a id="node-1182"></a>
+<a id="node-1152"></a>
 
 <p align="center"><kbd><img src="assets/81c98dd3ebff8c79766492b4af3534aa2dc2f498.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1183"></a>
+<a id="node-1153"></a>
 #### For a final example
 
 > [!NOTE]
@@ -1719,97 +1719,97 @@ Learning Objectives
 <br>
 
 
-<a id="node-1184"></a>
+<a id="node-1154"></a>
 #### For a final example you are asked to **modify each value of the diagonal of the matrix** so  that they are **equal to the log of the sum of the current row plus the current value**. When  doing mathematical operations like this one don't forget to import the math module.  This can be done using a **standard for loop** or **vectorization**. You'll see both in action:
 
 <br>
 
 
-<a id="node-1185"></a>
+<a id="node-1155"></a>
 #### import math  # **Copy transition matrix** for for-loop example t_matrix_for = **np.copy(**transition_matrix)  # **Copy** transition matrix for numpy functions example t_matrix_np = **np.copy**(transition_matrix)
 
 <br>
 
 
-<a id="node-1186"></a>
+<a id="node-1156"></a>
 #### # Loop values in the diagonal for i in range(num_tags):     t_matrix_for[i, i] =  t_matrix_for[i, i] + math.log(rows_sum[i])  # Print matrix print_matrix(t_matrix_for)
 
 <br>
 
-<a id="node-1187"></a>
+<a id="node-1157"></a>
 
 <p align="center"><kbd><img src="assets/018dab966ffbd6b1e68a8b00d68c413f75d08aee.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1188"></a>
+<a id="node-1158"></a>
 #### # Save diagonal in a numpy array d = **np.diag(t_matrix_np)**  # Print shape of diagonal d.shape
 
 <br>
 
-<a id="node-1189"></a>
+<a id="node-1159"></a>
 
 <p align="center"><kbd><img src="assets/6e80e0f7ecd474a10cd9414398f49f278c4b86ea.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1190"></a>
+<a id="node-1160"></a>
 #### You can **save the diagonal** in a numpy array using Numpy' s **diag() function**. Notice that  this array has shape **(3,)** so it is **inconsistent** with the dimensions of the rows_sum array  which are **(3, 1)**. You'll have to **reshape** before moving forward. For this you can use Numpy's **reshape**() function, specifying the desired shape in a tuple
 
 <br>
 
 
-<a id="node-1191"></a>
+<a id="node-1161"></a>
 #### # Reshape diagonal numpy array d = np.**reshape**(d, (3,1))  # Print shape of diagonal d.shape
 
 <br>
 
-<a id="node-1192"></a>
+<a id="node-1162"></a>
 
 <p align="center"><kbd><img src="assets/ed88dc2ef357855056e36402a2ad94e081f92577.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1193"></a>
+<a id="node-1163"></a>
 #### Now that the **diagonal** has the **correct shape** you can do the vectorized operation by  applying the **math.log()** function to the **rows_sum** array and adding the diagonal.  To apply a function to each element of a numpy array use Numpy' s **vectorize()** function  \\/**providing the desired function as a parameter.**\\/ This function returns a vectorized function  that accepts a numpy array as a parameter.  To update the original matrix you can use Numpy' s **fill_diagonal**() function.
 
 <br>
 
 
-<a id="node-1194"></a>
+<a id="node-1164"></a>
 #### # Perform the vectorized operation d = d + **np.vectorize(math.log)(rows_sum)**  # Use numpy's '**fill_diagonal**' function to update the diagonal **np.fill_diagonal**(t_matrix_np, d)  # Print the matrix print_matrix(t_matrix_np)
 
 <br>
 
-<a id="node-1195"></a>
+<a id="node-1165"></a>
 
 <p align="center"><kbd><img src="assets/471c84d5f3811b59211dd5b84c2ebadac71abf80.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1196"></a>
+<a id="node-1166"></a>
 #### To perform a **sanity check** that both methods yield the same result you can compare both matrices. Notice that this operation is also vectorized so you will get the equality check for each element in both matrices:
 
 <br>
 
-<a id="node-1197"></a>
+<a id="node-1167"></a>
 
 <p align="center"><kbd><img src="assets/70e5774750ccc345e4b90cbea50b73ef2fb62b60.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1198"></a>
+<a id="node-1168"></a>
 ## The Viterbi Algorithm
 
 <br>
 
 
-<a id="node-1199"></a>
+<a id="node-1169"></a>
 ### 1 **Introduction** to the **Viterbi algorithm** and its purpose.
 
 > [!NOTE]
@@ -1861,7 +1861,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1200"></a>
+<a id="node-1170"></a>
 #### So far you've calculated the **transition** and **emission** probabilities for the **Markov chain** and the **hidden Markov model**. Given a **part of speech tag** and **these probabilities**, you can **easily select the most likely next parts of speech tag** or the **most probable word**. You can do so by looking up the correct entry in the respective row of the transition or emission matrix.
 
 > [!NOTE]
@@ -1873,7 +1873,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1201"></a>
+<a id="node-1171"></a>
 
 <p align="center"><kbd><img src="assets/e1ffa1fb2a8a1dda679db53c9af4d4257b776233.png" width="100%"></kbd></p>
 
@@ -1903,7 +1903,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1202"></a>
+<a id="node-1172"></a>
 
 <p align="center"><kbd><img src="assets/57468ca2c4e2216c19f707282de0745811cff87b.png" width="100%"></kbd></p>
 
@@ -1948,7 +1948,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1203"></a>
+<a id="node-1173"></a>
 
 <p align="center"><kbd><img src="assets/87624fce16e142381af2dee42ba980a5a8c23107.png" width="100%"></kbd></p>
 
@@ -1976,7 +1976,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1204"></a>
+<a id="node-1174"></a>
 
 <p align="center"><kbd><img src="assets/954478dc9502cf11db6fb2ada552a27b62652bcf.png" width="100%"></kbd></p>
 
@@ -1987,7 +1987,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1205"></a>
+<a id="node-1175"></a>
 
 <p align="center"><kbd><img src="assets/af9832cbfae080fa9eb31a65252283ea2c5fdacf.png" width="100%"></kbd></p>
 
@@ -1997,7 +1997,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1206"></a>
+<a id="node-1176"></a>
 
 <p align="center"><kbd><img src="assets/bb78b3f38c8711327c23ee5068bd1772e432b396.png" width="100%"></kbd></p>
 
@@ -2010,7 +2010,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1207"></a>
+<a id="node-1177"></a>
 
 <p align="center"><kbd><img src="assets/65fb49aaf208be02da6fa04edb5189b59748e832.png" width="100%"></kbd></p>
 
@@ -2056,13 +2056,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1208"></a>
+<a id="node-1178"></a>
 ## Viterbi: Initialization
 
 <br>
 
 
-<a id="node-1209"></a>
+<a id="node-1179"></a>
 ###  **1 Initialization Step**: The initialization step involves populating the \\*first
 
 > [!NOTE]
@@ -2093,13 +2093,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-1210"></a>
+<a id="node-1180"></a>
 
 <p align="center"><kbd><img src="assets/7b1cb2aeb30848e7cec427943fa114b8b9f0e4a1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1211"></a>
+<a id="node-1188"></a>
+
+<p align="center"><kbd><img src="assets/8e25cc20e893275cdd2f546917008877b9daa488.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1189"></a>
+
+<p align="center"><kbd><img src="assets/0220d275fa9c4a74ac19939b26f3a760e82f6c2c.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1181"></a>
 
 <p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
 
@@ -2139,7 +2151,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1212"></a>
+<a id="node-1182"></a>
 
 <p align="center"><kbd><img src="assets/d0e81a6f8ab5325e97b69fadd9d498317b4e8981.png" width="100%"></kbd></p>
 
@@ -2163,7 +2175,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1213"></a>
+<a id="node-1183"></a>
 #### w1, w2, w3, w4.....w_numOfWords: Là chuỗi các từ trong corpus, giữ nguyên thứ tự ví dụ w1 = He, w2 = like, w3 = apple. Trong corpus He like apple  Ý nghĩa của bước Initialization:  Đối với tất cả các từ w1,w2... ta đều cần tìm POS tag nào có xác suất cao nhất để trở thành / gắn với nó  Nhưng ví dụ tìm POS tag cho w2 thì khó vì nó phụ thuộc vào w1 - Why? -> Vì theo.. state sau phải depend vào state trước. Mà w1 thì ta chưa biết state của nó (pos tag) nên đâu tính được state của w2.  Vậy tính w1, mà tương tự, w1 thì không biết state của trước nó là gì, vậy phải tính làm  sao.  Thì nó có cái state π của không có gì, coi trước w1 là 'Không có gì' thì state là π. và có Probability của π-> t1, t2....tN Và như vậy ta có thể tính ra POS tag của w1 bằng cách tìm POS tag t_k nào có xác  suất π->t_k->w1 cao nhất, thế là ta có thể tìm ra POS tag cho w1.  Đây chính là ý nghĩa cái bước Initialization của Viterbi algorithm.  Tiếp theo, qua forward pass: Dùng các giá trị cột 1, tất nhiên transition + emission để tính cột 2,3..
 
 <p align="center"><kbd><img src="assets/18b3f519e2b8ba07fad1817573faec22dc37e8d4.png" width="100%"></kbd></p>
@@ -2171,49 +2183,37 @@ Learning Objectives
 <br>
 
 
-<a id="node-1214"></a>
+<a id="node-1184"></a>
 #### Forward pass
 
 <br>
 
 
-<a id="node-1215"></a>
+<a id="node-1185"></a>
 #### Backward pass
 
 <br>
 
-<a id="node-1216"></a>
+<a id="node-1186"></a>
 
 <p align="center"><kbd><img src="assets/559ef94edba7c0984827e4a4896e2252a758e5fb.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1217"></a>
+<a id="node-1187"></a>
 
 <p align="center"><kbd><img src="assets/171537a265a461126a90d224c130f643a10308ab.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1218"></a>
 
-<p align="center"><kbd><img src="assets/8e25cc20e893275cdd2f546917008877b9daa488.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-1219"></a>
-
-<p align="center"><kbd><img src="assets/0220d275fa9c4a74ac19939b26f3a760e82f6c2c.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1220"></a>
+<a id="node-1190"></a>
 ## Viterbi: Forward Pass
 
 <br>
 
 
-<a id="node-1221"></a>
+<a id="node-1191"></a>
 ###  **1 Forward Pass**: The forward pass is the second step in populating the matrices
 
 > [!NOTE]
@@ -2244,7 +2244,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1222"></a>
+<a id="node-1192"></a>
 
 <p align="center"><kbd><img src="assets/e4795a6dbd0b7f6676fc83aba1bb80f0a12b5841.png" width="100%"></kbd></p>
 
@@ -2255,7 +2255,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1223"></a>
+<a id="node-1193"></a>
 
 <p align="center"><kbd><img src="assets/292466420702095edbad9dd13b074a1f3f8faa9a.png" width="100%"></kbd></p>
 
@@ -2285,7 +2285,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1224"></a>
+<a id="node-1194"></a>
 
 <p align="center"><kbd><img src="assets/a11334662a3d618638013cae6e4332bbb35576b3.png" width="100%"></kbd></p>
 
@@ -2312,12 +2312,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1225"></a>
+<a id="node-1195"></a>
 ## Viterbi: Backpass
 
 <br>
 
-<a id="node-1226"></a>
+<a id="node-1196"></a>
 
 <p align="center"><kbd><img src="assets/f7325c3a9278c5b849a1bc525c943c566957194c.png" width="100%"></kbd></p>
 
@@ -2329,7 +2329,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1227"></a>
+<a id="node-1197"></a>
 
 <p align="center"><kbd><img src="assets/3c72d68a8233656b133b864e86ffc8c4325b0308.png" width="100%"></kbd></p>
 
@@ -2374,7 +2374,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1228"></a>
+<a id="node-1198"></a>
 
 <p align="center"><kbd><img src="assets/2d093509c075439c9a32268d87a09ce7b0a71275.png" width="100%"></kbd></p>
 
@@ -2385,7 +2385,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1229"></a>
+<a id="node-1199"></a>
 
 <p align="center"><kbd><img src="assets/a10ff6972feb4eed8603fb4d7deee7970633a0d9.png" width="100%"></kbd></p>
 
@@ -2393,19 +2393,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-1230"></a>
+<a id="node-1200"></a>
 
 <p align="center"><kbd><img src="assets/680e80b98f21d93863dc632c1d0baf8ae6701adf.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1231"></a>
+<a id="node-1201"></a>
 
 <p align="center"><kbd><img src="assets/cff9cd98f54db8779e52d3ebb8ac16de5380082d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1232"></a>
+<a id="node-1202"></a>
 
 <p align="center"><kbd><img src="assets/1e9704491d4712c0132c395306aeafb4953ba295.png" width="100%"></kbd></p>
 
@@ -2415,49 +2415,49 @@ Learning Objectives
 
 <br>
 
-<a id="node-1233"></a>
+<a id="node-1203"></a>
 
 <p align="center"><kbd><img src="assets/022208fc8db2145c6670be9b7c2009c5f2d5d41c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1234"></a>
+<a id="node-1204"></a>
 ## Week Conclution
 
 <br>
 
 
-<a id="node-1235"></a>
+<a id="node-1205"></a>
 ## Quiz: Part Of Speech Tagging
 
 <br>
 
-<a id="node-1236"></a>
+<a id="node-1206"></a>
 
 <p align="center"><kbd><img src="assets/b27dcd58d8805d6aad64c7849fe1b07d051ef849.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1237"></a>
+<a id="node-1207"></a>
 
 <p align="center"><kbd><img src="assets/7702dc7a4018111b8629684d35fd9b7663730b86.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1238"></a>
+<a id="node-1208"></a>
 
 <p align="center"><kbd><img src="assets/a850261c7d95c5252cc2ba108785ed6b16a719d3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1239"></a>
+<a id="node-1209"></a>
 
 <p align="center"><kbd><img src="assets/0f869ae515dfcc0fad7dbb6259c009a80ef41203.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1240"></a>
+<a id="node-1210"></a>
 
 <p align="center"><kbd><img src="assets/f719cdb7549ebef27d17db86141f41f599db9ff9.png" width="100%"></kbd></p>
 
@@ -2468,32 +2468,32 @@ Learning Objectives
 
 <br>
 
-<a id="node-1241"></a>
+<a id="node-1211"></a>
 
 <p align="center"><kbd><img src="assets/1cc0ee03a6c5b964c4c8acf6baee215687d7856c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1242"></a>
+<a id="node-1212"></a>
 
 <p align="center"><kbd><img src="assets/53e97077066c41b661c466673db0e668e15ff822.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1243"></a>
+<a id="node-1213"></a>
 
 <p align="center"><kbd><img src="assets/cf9b68df2756fa2fa368f14b97895d0e2bca8988.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1244"></a>
+<a id="node-1214"></a>
 ## Programming Assignment: Part Of Speech Tagging
 
 <br>
 
 
-<a id="node-1245"></a>
+<a id="node-1215"></a>
 ### Welcome to the second assignment of Course 2 in the Natural Language Processing
 
 > [!NOTE]
@@ -2524,36 +2524,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-1246"></a>
+<a id="node-1216"></a>
 #### 0 - Data Sources
 
 <br>
 
 
-<a id="node-1247"></a>
+<a id="node-1217"></a>
 #### # Importing packages and loading in the data set  from utils_pos import get_word_tag, preprocess   import pandas as pd from collections import defaultdict import math import numpy as np import w2_unittest
 
 <br>
 
 
-<a id="node-1248"></a>
+<a id="node-1218"></a>
 #### This assignment will use two **tagged data sets** collected from the **Wall Street Journal (WSJ)**. \\_ Here\\_ is an example **'tag-set'** or **Part of Speech** designation describing the two or three  letter tag and their meaning.  • One data set (**WSJ-2_21.pos**) will be used for **training**.  • The other (**WSJ-24.pos**) for **testing**.  • The tagged training data has been preprocessed to form a vocabulary  (**hmm_vocab.txt**).  • The words in the vocabulary are words from the training set that were used  two or more times.  • The vocabulary is augmented with a set of '**unknown word tokens**', described below. The training set will be used to create the **emission, transition and tag counts**.
 
 <br>
 
 
-<a id="node-1249"></a>
+<a id="node-1219"></a>
 #### The test set (WSJ-24.pos) is read in to create **y**.  • This contains both the **test text and the true tag.**  • The test set has also been preprocessed to **remove the tags** to  form **test_words.txt**.  • This is read in and further processed to identify the end of sentences and  handle words not in the vocabulary using functions provided in **utils_pos.py**.  • This forms the **list prep**, the preprocessed text used to test our POS taggers.
 
 <br>
 
 
-<a id="node-1250"></a>
+<a id="node-1220"></a>
 #### **A POS tagger** will necessarily encounter words that are not in its datasets.  • To improve accuracy, these words are **further analyzed** during preprocessing  to **extract available hints** as to their appropriate tag.  • For example, the suffix '**ize**' is a hint that the word is a verb, as in '**final-ize**' or  '**character-ize**'.  • A set of unknown-tokens, such as '**--unk-verb--**' or '**--unk-noun--**' will replace  the unknown words in both the training and test corpus and will appear in the emission,  transition and tag data structures.
 
 <br>
 
-<a id="node-1251"></a>
+<a id="node-1221"></a>
 
 <p align="center"><kbd><img src="assets/ecce1eb53265b15e8c14f7cdfcd2933c12e2be07.png" width="100%"></kbd></p>
 
@@ -2563,7 +2563,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1252"></a>
+<a id="node-1222"></a>
 
 <p align="center"><kbd><img src="assets/39a722021e3300e4f7c7f141d829d3cab4501204.png" width="100%"></kbd></p>
 
@@ -2593,7 +2593,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1253"></a>
+<a id="node-1223"></a>
 #### Implementation note:  • For python 3.6 and beyond, **dictionaries** retain the **insertion order**.  • Furthermore, their **hash-based lookup** makes them suitable for **rapid  membership tests**.  ▪ If \\/di\\/ is a dictionary, key in di will return True if \\/di\\/ has a key _key_, else False.  The dictionary vocab will utilize these features.
 
 > [!NOTE]
@@ -2605,7 +2605,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1254"></a>
+<a id="node-1224"></a>
 #### # load in the training corpus **with open**("./data/WSJ_02-21.pos", 'r') **as** **f**:     **training_corpus** = **f.readlines()**  print(f"A few items of the training corpus list") print(training_corpus[**0:5**])
 
 > [!NOTE]
@@ -2614,14 +2614,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1255"></a>
+<a id="node-1225"></a>
 
 <p align="center"><kbd><img src="assets/b0d062e27892de10ad017bc2e63aa3faf3b785b9.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1256"></a>
+<a id="node-1226"></a>
 #### # read the vocabulary data, split by each line of text, and **save the list** with open("./data/**hmm_vocab.txt**", 'r') as f:     **voc_l** = f.read().**split**('\\\ ')  print("A few items of the vocabulary list") print(voc_l[0:50]) print() print("A few items at the end of the vocabulary list") print(voc_l[-50:])
 
 > [!NOTE]
@@ -2630,14 +2630,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1257"></a>
+<a id="node-1227"></a>
 
 <p align="center"><kbd><img src="assets/8421d6036ea26bc7d1b326cc05703678c0e47002.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1258"></a>
+<a id="node-1228"></a>
 #### # **vocab**: **dictionary** that has the **index of the corresponding words** vocab = {}  # Get the index of the corresponding words.  for I, word in enumerate(sorted(**voc_l**)):      **vocab[word] = I**             print("Vocabulary dictionary, key is the word, value is a unique integer") cnt = 0 for k,v in vocab.items():     print(f"{k}:{v}")     cnt += 1     if cnt > 20:         break
 
 > [!NOTE]
@@ -2647,7 +2647,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1259"></a>
+<a id="node-1229"></a>
 
 <p align="center"><kbd><img src="assets/2edd7c000b4f375ac3e79c45357e39155e03a35f.png" width="100%"></kbd></p>
 
@@ -2658,7 +2658,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1260"></a>
+<a id="node-1230"></a>
 #### # load in the test corpus with open("./data/WSJ_24.pos", 'r') as f:     y = f.readlines()      print("A sample of the test corpus") print(y[0:10])
 
 > [!NOTE]
@@ -2667,14 +2667,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-1261"></a>
+<a id="node-1231"></a>
 
 <p align="center"><kbd><img src="assets/f6acfc68fa81c099fab5ebbb8a74780824387af9.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1262"></a>
+<a id="node-1232"></a>
 #### #corpus without tags, preprocessed _, prep = preprocess(vocab, "./data/test.words")       print('The length of the preprocessed test corpus: ', len(prep)) print('This is a sample of the test_corpus: ') print(prep[0:10])
 
 > [!NOTE]
@@ -2684,26 +2684,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-1263"></a>
+<a id="node-1233"></a>
 
 <p align="center"><kbd><img src="assets/27e78d49667fa98ae467b83ae981ae9517c4043a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1264"></a>
+<a id="node-1234"></a>
 #### 1 - Parts-of-speech Tagging
 
 <br>
 
 
-<a id="node-1265"></a>
+<a id="node-1235"></a>
 #### 1.1 - Training
 
 <br>
 
 
-<a id="node-1266"></a>
+<a id="node-1236"></a>
 #### You will start with the **simplest** possible **parts-of-speech tagger** and we will build up to the  **state of the art.**  In this section, you will find the words that are **not ambiguous.**  • For example, the word is is a verb and it is not ambiguous.  • In the WSJ corpus, **86%** of the token are unambiguous (meaning they have  only one tag)  • About 14% are ambiguous (meaning that they have more than one tag)
 
 > [!NOTE]
@@ -2713,19 +2713,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-1267"></a>
+<a id="node-1237"></a>
 
 <p align="center"><kbd><img src="assets/30c13abc63bc135a3e0a27f244e78ae3c21fa692.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1268"></a>
+<a id="node-1238"></a>
 #### Before you start **predicting the tags of each word**, you will need to compute a **few dictionaries** that will help you to **generate the tables**.
 
 <br>
 
-<a id="node-1269"></a>
+<a id="node-1239"></a>
 
 <p align="center"><kbd><img src="assets/051a53f4cfe3ba817b9c42349777f93581472696.png" width="100%"></kbd></p>
 
@@ -2738,7 +2738,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1270"></a>
+<a id="node-1240"></a>
 
 <p align="center"><kbd><img src="assets/964d38fdc29f3066eaa9097837c0c4b88ad0daeb.png" width="100%"></kbd></p>
 
@@ -2751,7 +2751,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1271"></a>
+<a id="node-1241"></a>
 
 <p align="center"><kbd><img src="assets/5e1d1531c7b33c189fb84d749e2d3b5f9e24d8cf.png" width="100%"></kbd></p>
 
@@ -2763,13 +2763,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-1272"></a>
+<a id="node-1242"></a>
 #### Exercise 1 - create_dictionaries (UNQ_C1)
 
 <br>
 
 
-<a id="node-1273"></a>
+<a id="node-1243"></a>
 #### **Instructions:**  Write a program that takes in the **training_corpus** and returns the **three  dictionaries** mentioned above **transition_counts**, **emission_counts**, and **tag_counts**.  • **emission_counts**: maps (tag, word) to the number of times it happened.  • **transition_counts**: maps (prev_tag, tag) to the number of times it has  appeared.  • **tag_counts**: maps (tag) to the number of times it has occurred.  Implementation note: This routine utilizes \\/**defaultdict**\\/, which is a **subclass of \\/dict**\\/.  • A standard Python dictionary throws a \\/KeyError\\/ if you try to access an item  with a key that is not currently in the dictionary.  • In contrast, the \\/defaultdict\\/ will create an item of the type of the argument, in  this case an integer with the default value of 0.  • See \\_defaultdict\\_.
 
 > [!NOTE]
@@ -2780,31 +2780,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-1274"></a>
+<a id="node-1244"></a>
 
 <p align="center"><kbd><img src="assets/342be27b6a2d5e7c38f3b3a9898a465d8fd0d003.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1275"></a>
+<a id="node-1245"></a>
 
 <p align="center"><kbd><img src="assets/8c321d0ec3c12ad69d36fba1a4ee7e97bf560976.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1276"></a>
+<a id="node-1246"></a>
 
 <p align="center"><kbd><img src="assets/885c24ed768ce56382cb839a42d427094ed232fb.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1277"></a>
+<a id="node-1247"></a>
 #### The '**states**' are the Parts-of-speech designations found in the training data. They will also  be referred to as '**tags**' or **POS** in this assignment.  • "**NN**" is **noun**, **singular**,  • '**NNS**' is **noun**, **plural**.  • In addition, there are helpful tags like '**--s--**' which indicate a **start of a  sentence**.  • You can get a more complete description at \\_clips/MBSP\\_.
 
 <br>
 
-<a id="node-1278"></a>
+<a id="node-1248"></a>
 
 <p align="center"><kbd><img src="assets/9c75e6589d497f740d12bcdf0fd9bf7426da965b.png" width="100%"></kbd></p>
 
@@ -2814,25 +2814,25 @@ Learning Objectives
 <br>
 
 
-<a id="node-1279"></a>
+<a id="node-1249"></a>
 #### print("transition examples: ") for ex in **list**(**transition_counts.items()**)[**:3**]:     print(ex) print()  print("emission examples: ") for ex in **list**(**emission_counts.items()**)[**200:203**]:     print (ex) print()  print("ambiguous word example: ") for tup,cnt in emission_counts.items():     if tup[1] == 'back': print (tup, cnt)
 
 <br>
 
-<a id="node-1280"></a>
+<a id="node-1250"></a>
 
 <p align="center"><kbd><img src="assets/9d759526733a0099c729f4cd3be726d4bb187b08.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1281"></a>
+<a id="node-1251"></a>
 #### 1.2 - Testing
 
 <br>
 
 
-<a id="node-1282"></a>
+<a id="node-1252"></a>
 #### Now you will **test** the **accuracy of your parts-of-speech tagger** using  your **emission_counts** dictionary.  • Given your **preprocessed test corpus prep**, you will assign a **parts-of-speech**  **tag** to every word in that corpus.  • Using the **original tagged test corpus y,** you will then **compute what percent of  the tags you got correct**.
 
 > [!NOTE]
@@ -2843,20 +2843,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-1283"></a>
+<a id="node-1253"></a>
 
 <p align="center"><kbd><img src="assets/a9267f01e473c21a22d6f08d9dcf8a7d5cc4132f.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1284"></a>
+<a id="node-1254"></a>
 #### Exercise 2 - predict_pos (UNQ_C2)
 
 <br>
 
 
-<a id="node-1285"></a>
+<a id="node-1255"></a>
 #### **Exercise 2 - predict_pos  Instructions:** Implement **predict_pos** that computes the accuracy of your model.  • This is a **warm up exercise.**  • To assign a part of speech to a word, assign the **most frequent POS** for **that  word** in the **training set.**  • Then **evaluate how well this approach works**. Each time you predict based on  the most frequent POS for the given word, check whether the actual POS of that word is  the same. If so, the prediction was correct!  • Calculate the accuracy as the **number of correct predictions** divided by the  **total number of words** for which you predicted the POS tag.
 
 > [!NOTE]
@@ -2869,13 +2869,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-1286"></a>
+<a id="node-1256"></a>
 
 <p align="center"><kbd><img src="assets/85ca759e47394686323c8d3cffece84ba30c86cd.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1287"></a>
+<a id="node-1257"></a>
 
 <p align="center"><kbd><img src="assets/bd1381accff9bbb4a2f39d0842287e58ec84686f.png" width="100%"></kbd></p>
 
@@ -2883,26 +2883,120 @@ Learning Objectives
 
 <br>
 
-<a id="node-1288"></a>
+<a id="node-1258"></a>
 
 <p align="center"><kbd><img src="assets/f8375d86f9303d9301dd1655259320f83568e056.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1289"></a>
+<a id="node-1259"></a>
 
 <p align="center"><kbd><img src="assets/8a622f70d2db39b8414e7878f138d6e197ed55cd.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1290"></a>
+<a id="node-1260"></a>
 #### 2 - Hidden Markov Models for POS
 
 <br>
 
 
-<a id="node-1291"></a>
+<a id="node-1262"></a>
+#### 2.1 - Generating Matrices
+
+<br>
+
+
+<a id="node-1263"></a>
+#### **Creating the 'A' transition probabilities matrix**  Now that you have your **emission_counts**, **transition_counts**, and **tag_counts**, you will  start implementing the **Hidden Markov Model**.  This will allow you to quickly construct the  • **A transition probabilities matrix**.  • and the **B emission probabilities matrix**.  You will also use some **smoothing** when computing these matrices.  Here is an example of what the A transition matrix would look like (it is simplified to 5 tags  for viewing. It is 46x46 in this assignment.):
+
+<br>
+
+<a id="node-1264"></a>
+
+<p align="center"><kbd><img src="assets/ff490898087e0a5516f8f2e3ca1e1404857a463b.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1265"></a>
+
+<p align="center"><kbd><img src="assets/e842cc6d53961adeba344e8a6b2a2e6ceb29f3a1.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1266"></a>
+#### Exercise 3 - create_transition_matrix (UNQ_C3)
+
+<br>
+
+
+<a id="node-1267"></a>
+#### Instructions: Implement the create_transition_matrix below for all tags. Your task is to output a **matrix** that computes **equation 3** for **each cell in matrix A.** 
+
+<br>
+
+<a id="node-1268"></a>
+
+<p align="center"><kbd><img src="assets/d84226d1a8cef4fb58b3ba33dd66ea870942cbfe.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1269"></a>
+
+<p align="center"><kbd><img src="assets/691e0f2d955d08ffbc4a2c8ae4fc49e93f7eea93.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1270"></a>
+
+<p align="center"><kbd><img src="assets/893a22dc69692cdf8aa0ce722000ac8e6f83952d.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1271"></a>
+#### Exercise 4 - create_emission_matrix (UNQ_C4)
+
+<br>
+
+<a id="node-1272"></a>
+
+<p align="center"><kbd><img src="assets/8a0dc06280080416d207f7a48b460afd89270c2b.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1273"></a>
+#### Instructions: Implement the create_emission_matrix below that computes the B emission probabilities matrix. Your function takes in  𝛼  , the smoothing parameter, tag_counts, which is a dictionary mapping each tag to its respective count, the emission_counts dictionary where the keys are (tag, word) and the values are the counts. Your task is to output a matrix that computes equation 4 for each cell in matrix B.
+
+<br>
+
+<a id="node-1274"></a>
+
+<p align="center"><kbd><img src="assets/0799902f0b8b2e844ee67be666a5e126f8baf3db.png" width="100%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1275"></a>
+
+<p align="center"><kbd><img src="assets/059c10da42f267532a4d975c0fc5ca37c0af7669.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1276"></a>
+
+<p align="center"><kbd><img src="assets/452e0a5875965fd8a15462fe4c617bfd6b19f217.png" width="100%"></kbd></p>
+
+<br>
+
+
+<a id="node-1261"></a>
 #### Now you will build something more **context specific**. Concretely, you will be implementing  a **Hidden Markov Model (HMM)** with a **Viterbi decoder**  • The HMM is one of the **most commonly used algorithms** in **Natural Language  Processing**, and is a **foundation** **to many deep learning techniques** you will see in this  specialization.  • In addition to **parts-of-speech tagging**, HMM is used in **speech recognition**,  **speech synthesis**, etc.  • By completing this part of the assignment you will get a **95% accuracy** on the  same dataset you used in Part 1.  The Markov Model contains a **number of states** and the **probability of transition between  those states**.  • **In this case**, the **states** are the **parts-of-speech.**  • A Markov Model utilizes a **transition matrix, A**.  • A Hidden Markov Model adds an **observation** or **emission matrix B** which  describes the **probability of a visible observation when we are in a particular state.**  • In this case, the **emissions** are the **words in the corpus**  • The state, which is hidden, is the **POS tag** of that word.
 
 > [!NOTE]
@@ -2915,130 +3009,36 @@ Learning Objectives
 <br>
 
 
-<a id="node-1292"></a>
-#### 2.1 - Generating Matrices
-
-<br>
-
-
-<a id="node-1293"></a>
-#### **Creating the 'A' transition probabilities matrix**  Now that you have your **emission_counts**, **transition_counts**, and **tag_counts**, you will  start implementing the **Hidden Markov Model**.  This will allow you to quickly construct the  • **A transition probabilities matrix**.  • and the **B emission probabilities matrix**.  You will also use some **smoothing** when computing these matrices.  Here is an example of what the A transition matrix would look like (it is simplified to 5 tags  for viewing. It is 46x46 in this assignment.):
-
-<br>
-
-<a id="node-1294"></a>
-
-<p align="center"><kbd><img src="assets/ff490898087e0a5516f8f2e3ca1e1404857a463b.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-1295"></a>
-
-<p align="center"><kbd><img src="assets/e842cc6d53961adeba344e8a6b2a2e6ceb29f3a1.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1296"></a>
-#### Exercise 3 - create_transition_matrix (UNQ_C3)
-
-<br>
-
-
-<a id="node-1297"></a>
-#### Instructions: Implement the create_transition_matrix below for all tags. Your task is to output a **matrix** that computes **equation 3** for **each cell in matrix A.** 
-
-<br>
-
-<a id="node-1298"></a>
-
-<p align="center"><kbd><img src="assets/d84226d1a8cef4fb58b3ba33dd66ea870942cbfe.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/31cf4d5435d0b1b1784c35cc2e67f75e358d4be4.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-1299"></a>
-
-<p align="center"><kbd><img src="assets/691e0f2d955d08ffbc4a2c8ae4fc49e93f7eea93.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-1300"></a>
-
-<p align="center"><kbd><img src="assets/893a22dc69692cdf8aa0ce722000ac8e6f83952d.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1301"></a>
-#### Exercise 4 - create_emission_matrix (UNQ_C4)
-
-<br>
-
-<a id="node-1302"></a>
-
-<p align="center"><kbd><img src="assets/8a0dc06280080416d207f7a48b460afd89270c2b.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1303"></a>
-#### Instructions: Implement the create_emission_matrix below that computes the B emission probabilities matrix. Your function takes in  𝛼  , the smoothing parameter, tag_counts, which is a dictionary mapping each tag to its respective count, the emission_counts dictionary where the keys are (tag, word) and the values are the counts. Your task is to output a matrix that computes equation 4 for each cell in matrix B.
-
-<br>
-
-<a id="node-1304"></a>
-
-<p align="center"><kbd><img src="assets/0799902f0b8b2e844ee67be666a5e126f8baf3db.png" width="100%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ba1fe18d65ff0a1047d64f9f39fb705e62a87a33.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-1305"></a>
-
-<p align="center"><kbd><img src="assets/059c10da42f267532a4d975c0fc5ca37c0af7669.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-1306"></a>
-
-<p align="center"><kbd><img src="assets/452e0a5875965fd8a15462fe4c617bfd6b19f217.png" width="100%"></kbd></p>
-
-<br>
-
-
-<a id="node-1307"></a>
+<a id="node-1277"></a>
 #### 3 - Viterbi Algorithm and Dynamic Programming
 
 <br>
 
 
-<a id="node-1308"></a>
+<a id="node-1278"></a>
 #### In this part of the assignment you will implement the **Viterbi algorithm** which makes use of  dynamic programming. Specifically, you will use your two matrices, **A** and **B** to compute  the **Viterbi algorithm**. We have decomposed this process into three main steps for you.  **• Initialization** - In this part you **initialize**  the **best_paths** and **best_probabilities** **matrices** that you will be populating  in feed_forward.  **• Feed forward** - At each step, you **calculate the probability of each path**  happening and **the best paths up to that point.**  **• Feed backward**: This allows you to **find the best path** with the **highest  probabilities.**
 
 <br>
 
 
-<a id="node-1309"></a>
+<a id="node-1279"></a>
 #### 3.1 - Initialization
 
 <br>
 
 
-<a id="node-1310"></a>
+<a id="node-1280"></a>
 #### You will start by **initializing two matrices** of the same dimension.  • **best_probs**: Each cell contains the **probability of going from one POS tag to a  word in the corpus**.  • **best_paths**: A matrix that helps you trace through the **best possible path in the  corpus.**
 
 <br>
 
 
-<a id="node-1311"></a>
+<a id="node-1281"></a>
 #### Exercise 5 - initialize (UNQ_C5)
 
 <br>
 
-<a id="node-1312"></a>
+<a id="node-1282"></a>
 
 <p align="center"><kbd><img src="assets/8defda8ecffeeb7ea359954bb7eb56ad816c722d.png" width="100%"></kbd></p>
 
@@ -3050,12 +3050,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-1313"></a>
+<a id="node-1283"></a>
 #### Tại sao phải giả định từ đầu tiên của Corpus được preceding bởi --s--?
 
 <br>
 
-<a id="node-1314"></a>
+<a id="node-1284"></a>
 
 <p align="center"><kbd><img src="assets/5d7ef02c1711e6d06971e929659ff575bc958a46.png" width="100%"></kbd></p>
 
@@ -3095,31 +3095,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-1315"></a>
+<a id="node-1285"></a>
 
 <p align="center"><kbd><img src="assets/6f9052869a9210a0eb08aafc0269dc4fdc6bb16f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1316"></a>
+<a id="node-1286"></a>
 
 <p align="center"><kbd><img src="assets/f1c8ac51b99f3693607d3deb832f6ff0c8278d32.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1317"></a>
+<a id="node-1287"></a>
 
 <p align="center"><kbd><img src="assets/0cf018b1a46dbb27287ff39b5cfef5c597170867.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1318"></a>
+<a id="node-1288"></a>
 #### 3.2 - Viterbi Forward
 
 <br>
 
-<a id="node-1319"></a>
+<a id="node-1289"></a>
 
 <p align="center"><kbd><img src="assets/85f680a3fae1beb1354da0d8bc0415deca778b4d.png" width="100%"></kbd></p>
 
@@ -3128,31 +3128,31 @@ Learning Objectives
 
 <br>
 
-<a id="node-1320"></a>
+<a id="node-1290"></a>
 
 <p align="center"><kbd><img src="assets/dd0a551bbd8b9a6684d915fcb0ca2249711d727b.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-1321"></a>
+<a id="node-1291"></a>
 #### Exercise 6 - viterbi_forward (UNQ_C6)
 
 <br>
 
-<a id="node-1322"></a>
+<a id="node-1292"></a>
 
 <p align="center"><kbd><img src="assets/e30d58b2f59dad093e5d915f3fb8d9ae4e34d5e1.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1323"></a>
+<a id="node-1293"></a>
 
 <p align="center"><kbd><img src="assets/93d71334e57e0cdfd7ac69209aea5e102f91c13e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1324"></a>
+<a id="node-1294"></a>
 
 <p align="center"><kbd><img src="assets/44c501d334cb90b6aeae67faddf8afc3e7d404ae.png" width="100%"></kbd></p>
 
@@ -3161,30 +3161,30 @@ Learning Objectives
 <br>
 
 
-<a id="node-1325"></a>
+<a id="node-1295"></a>
 #### 3.3 - Viterbi Backward
 
 <br>
 
 
-<a id="node-1326"></a>
+<a id="node-1296"></a>
 #### Exercise 7 - viterbi_backward (UNQ_C7)
 
 <br>
 
-<a id="node-1327"></a>
+<a id="node-1297"></a>
 
 <p align="center"><kbd><img src="assets/4353e2a63ff50442f5c748768000a9f124e8b219.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1328"></a>
+<a id="node-1298"></a>
 
 <p align="center"><kbd><img src="assets/d2e206782e957f2519ffbd9d14bbf791a8c815a5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1329"></a>
+<a id="node-1299"></a>
 
 <p align="center"><kbd><img src="assets/2d093509c075439c9a32268d87a09ce7b0a71275.png" width="100%"></kbd></p>
 
@@ -3195,30 +3195,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-1330"></a>
-
-<p align="center"><kbd><img src="assets/d34a9326deab325eec9e580496caef232b8eec0f.png" width="100%"></kbd></p>
-
-<br>
-
-<a id="node-1331"></a>
-
-<p align="center"><kbd><img src="assets/52736420682d1c19c52f79dc724676716659a6be.png" width="100%"></kbd></p>
-
-> [!NOTE]
-> Bước 1 hoàn toàn chỉ nhờ vào best_prop, đơn giản chỉ xem trong cột
-> cuối của best_prob thằng nào to nhất, thì **index hàng của thằng to
-> nhất** chính là POS tag id.
->
-> Và bỏ id vào states để đổi ra POS tag string.
->
-> Update vào pred[], tất nhiên là cũng là ở vị trí cuối.
->
-> Và update cái **index hàng của thằng to nhất** đó vào **z[]**
-
-<br>
-
-<a id="node-1332"></a>
+<a id="node-1302"></a>
 
 <p align="center"><kbd><img src="assets/b4c0d6e351c55f4a2d1183416e949cea8a87188d.png" width="100%"></kbd></p>
 
@@ -3266,18 +3243,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-1333"></a>
+<a id="node-1303"></a>
 #### Để như vầy: ...range(m-1, -1, -1):.. sẽ bị lỗi gọi là "update ngược thằng cuối"
 
 <br>
 
-<a id="node-1334"></a>
+<a id="node-1304"></a>
 
 <p align="center"><kbd><img src="assets/3cbae937877e88d3dd924d12d721e8092a7d3fd5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-1335"></a>
+<a id="node-1305"></a>
 
 <p align="center"><kbd><img src="assets/d0ec2240bf9cd4be3a97fd24abc1b8c7e1462359.png" width="100%"></kbd></p>
 
@@ -3302,13 +3279,36 @@ Learning Objectives
 
 <br>
 
+<a id="node-1300"></a>
 
-<a id="node-1336"></a>
+<p align="center"><kbd><img src="assets/d34a9326deab325eec9e580496caef232b8eec0f.png" width="100%"></kbd></p>
+
+<br>
+
+<a id="node-1301"></a>
+
+<p align="center"><kbd><img src="assets/52736420682d1c19c52f79dc724676716659a6be.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Bước 1 hoàn toàn chỉ nhờ vào best_prop, đơn giản chỉ xem trong cột
+> cuối của best_prob thằng nào to nhất, thì **index hàng của thằng to
+> nhất** chính là POS tag id.
+>
+> Và bỏ id vào states để đổi ra POS tag string.
+>
+> Update vào pred[], tất nhiên là cũng là ở vị trí cuối.
+>
+> Và update cái **index hàng của thằng to nhất** đó vào **z[]**
+
+<br>
+
+
+<a id="node-1306"></a>
 #### Exercise 8 - compute_accuracy (UNQ_C8)
 
 <br>
 
-<a id="node-1337"></a>
+<a id="node-1307"></a>
 
 <p align="center"><kbd><img src="assets/dec45725af8ca4ccec3a3aae9ce4b40d800d774c.png" width="100%"></kbd></p>
 
@@ -3324,7 +3324,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-1338"></a>
+<a id="node-1308"></a>
 #### 4 - Predicting on a Dataset
 
 <br>

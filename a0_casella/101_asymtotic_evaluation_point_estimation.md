@@ -1,6 +1,6 @@
 # 10.1 Asymtotic Evaluation - Point Estimation
 
-📊 **Progress:** `22` Notes | `25` Screenshots
+📊 **Progress:** `28` Notes | `31` Screenshots
 
 ---
 
@@ -980,7 +980,8 @@
 <p align="center"><kbd><img src="assets/e9150efacab6881a26dc400f8321cde80618915b.png" width="100%"></kbd></p>
 
 > [!NOTE]
-> Rồi, bây giờ ta áp dụng công thức Var^(h(θ^)) ≈ [h'(θ)]^2|θ=θ^ / [-∂^2/∂θ^2 log L(θ|**x**)]|θ=θ^
+> Rồi, bây giờ ta áp dụng công thức Var^(h(θ^)) ≈ [h'(θ)]^2|θ=θ^ / [-∂^2/∂θ^2 log
+> L(θ|**x**)]|θ=θ^
 >
 > Với h(θ) = θ thì:
 >
@@ -1030,12 +1031,14 @@
 >
 > = np^/p^2 + n(1-p^)/(1-p)^2
 >
-> (chú ý, np^/p^2 là n p_hat chia p bình phương, coi chừng nhìn nhầm và rút gọn thành n/p^ là
-> sai)
+> (chú ý, np^/p^2 là n p_hat chia p bình phương, coi chừng nhìn nhầm và rút gọn
+> thành n/p^ là sai)
 >
 > Evaluate tại p = p^:
 >
-> [-∂^2/∂θ^2 log L(θ|**x**)]|θ=θ^ = np^/(p^)^2 + n(1-p^)/(1-p^)^2
+> [-∂^2/∂p^2 log L(p|**x**)]|p=p^
+>
+> = np^/(p^)^2 + n(1-p^)/(1-p^)^2
 >
 > = n/p^ + n/(1-p^)
 >
@@ -1043,14 +1046,362 @@
 >
 > = n/p^(1-p^)
 >
-> Và như vậy Var^(h(p^)) ≈ [h'(p)]^2|p=p^ / [-∂^2/∂p^2 log L(θ|**x**)]|p=p^
+> Và như vậy Var^(h(p^)) ≈ [h'(p)]^2|p=p^ / [-∂^2/∂p^2 log L(p|**x**)]|p=p^
 >
 > ⇔ Var^(p^) ≈ 1 / [n/p^(1-p^)]
 >
 > ⇔ Var^(p^) ≈ p^(1-p^)/n
 >
-> Và công thức này thì giống công thức Var^(p^) = p^(1-p^)/n mà ta đã tính hồi nãy (thế p^ thay
-> cho p, trong công thức Var(p) = p(1-p)/n)
+> Và công thức này thì giống công thức Var^(p^) = p^(1-p^)/n mà ta đã tính hồi nãy
+> (thế p^ thay cho p, trong công thức Var(p) = p(1-p)/n
+>
+> Ý quan trọng muốn nhấn mạnh đó là: Trong bài toán này, ta biết mle thật sự sẽ có
+> công thức là Var(p^) (hay Var_p(p^), để thể hiện nó là hàm theo p) = p(1-p)/n. Để rồi
+> từ đó, bằng cách dùng p^ thay p, ta có ước lượng của variance Var^(p^) =
+> p^(1-p^)/n.
+>
+> Sau đó, bằng cách tiếp cận dựa trên lí thuyết nói rằng Var^(h(θ^)) ≈ [h'(θ)]^2|θ=θ^ /
+> [-∂^2/∂θ^2 log L(θ|**x**)]|θ=θ^, ta cũng tính ra được cùng kết quả Var^(p^) ≈
+> p^(1-p^)/n.
+>
+> Như vậy có nghĩa là: **Giả sử ta không có công thức** **Var(θ^) theo θ, kí hiệu
+> Var_θ(θ^), để từ đó thế θ^ vào để có Var^(θ^), là xấp xỉ của Var_θ(θ^). Thì ta có thể
+> dùng cách tiếp cận thứ hai nói trên**: Chỉ việc tính:
+>
+> i) [h'(θ)]^2|θ=θ^, mà ở đây khi đang tính Var(θ^) thì tức là h(.) = identity function, [h'
+> (θ)]^2|θ=θ^ = 1.
+>
+> ii) Tính -∂^2/∂θ^2 log L(θ|**x**)]|θ=θ^, tức là derive công thức đạo hàm bậc hai của
+> log likelihood L(θ|**x**), sẽ ra một hàm theo θ, lấy dấu âm, và thế θ^ vào.
+>
+> iii) Khi đó 1/[kết quả mẫu số], chính là cũng sẽ cho ra Var^(θ^), mà trong ví dụ cụ thể
+> này, đó là Var^(p^) ≈ p^(1-p^)/n
+
+<br>
+
+<a id="node-871"></a>
+
+<p align="center"><kbd><img src="assets/43f3b60da8147de047686b01d052233b1505f11f.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, đoạn này nói rằng vì p^, hay θ^ là mle, được theo theorem nào đó, là một
+> estimator có tính hiệu quả tiệm cận và consistent.
+>
+> √n(p^ - p) → (d) n(0, 1/I1(p))
+>
+> với I1(p) = E_p[(∂/∂p log f(X|p))^2]
+>
+> log f(X|p) = log[p^X (1-p)^(1-X)]
+>
+> = X log(p) + (1-X)l og(1-p)
+>
+> ⇨ d/dp [X log(p) + (1-X) log(1-p)]
+>
+> = X/p + (1-X) [-1/(1-p)]
+>
+> = X/p - (1-X)/(1-p)
+>
+> = X(1-p)/p(1-p) - p(1-X)/p(1-p)
+>
+> = [X(1-p) - p(1-X)]/p(1-p)
+>
+> = [X - Xp - p + pX)]/p(1-p)
+>
+> = (X-p)/p(1-p)
+>
+> E_p[(∂/∂p log f(X|p))^2] = E_p[((X-p)/p(1-p))^2]
+>
+> = E_p[((X-p))^2] / [p(1-p)]^2
+>
+> = Var_p(X) / [p(1-p)]^2
+>
+> = p(1-p) / [p(1-p)]^2
+>
+> = 1 / p(1-p)
+>
+> Như vậy **√n(p^-p) → (d) n(0, 1/I1(p)) = n(0, p(1-p))**
+>
+> Lại cộng với Slusky theorem: Xn → (d) X, Yn → (p) a ⇨ XnYn → (d) aX
+>
+> Ta có ở trên √n(p^-p) → (d) n(0, p(1-p)),
+>
+> và 1/√[p^(1-p^)] → (p) 1/√[p(1-p)] do p^ → (p) p
+>
+> nên √n(p^-p) × [1/√[p^(1-p^)]] → (d) n(0, p(1-p)) × 1/√[p(1-p)])
+>
+> Mà với Z ~ n(0, σ^2), tức là một thành viên của location scale family ứng với scale =
+> σ, thì theo location scale family, Z/σ sẽ ~ n(0,1). Vậy n(0, p(1-p)) /√[p(1-p)] sẽ ~ n(0,
+> 1)
+>
+> Vậy √n(p^-p)/√[p(1-p)] → (d) n(0, 1).
+
+<br>
+
+<a id="node-872"></a>
+
+<p align="center"><kbd><img src="assets/88f4bee0f7d9684eb06a97dbbf34a027764ecf60.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Mình thấy cần thiết phải ôn lại cái lập luận dẫn đến cách tiếp cận để giải quyết được bài toán estiamte variance của một
+> mle vì thật sự đây là kiến thức rất khó và quan trọng.
+>
+> Đầu tiên cần nhấn mạnh, yêu cầu đặt ra là estiamte được variance của một mle θ^, của θ. Ta sẽ dựa trên các công cụ sau
+> đây:
+>
+> Đầu tiên là khái niệm phương sai tiệm cận (asymptotically variance), kí hiệu Avar, được định nghĩa là phương sai của phân
+> phối chuẩn mà √n(Wn - θ) hội tụ (distribution) về. Tức là, nếu ta có √n(Wn - θ) → (d) n(0, σ^2), thì Avar(Wn) = σ^2.
+>
+> Rồi, tiếp theo, là Delta method theorem, nói rằng nếu √n(Wn - θ) → (d) n(0, σ^2), thì √n(g(Wn) - g(θ)) → (d) n(0, g'(θ)^2
+> σ^2). Điều này cũng đồng nghĩa nói đơn giản hơn là nếu Wn có phương sai tiệm cận là Avar(Wn) thì Avar[g(Wn)] = [g'
+> (θ)]^2 Avar(Wn).
+>
+> Kế đến, là công cụ nữa: Khái niệm thế nào là một estimator có tính hiệu qủa tiệm cận: Định nghĩa nói rằng, nếu estimator
+> Wn của θ có Avar(Wn) = 1/I1(θ), thì nó là estiamator hiệu quả tiệm cận, đồng thời cũng imply consistent.
+>
+> Và công cụ tiếp theo là theorem nói rằng ML estimator của θ hay h(θ) thì sẽ là estimator hiệu quả tiệm cận.
+>
+> Với tất cả các công cụ trên ta sẽ lập luận như sau:
+>
+> Xét θ^, là MLE của θ và ta như ban đầu đã nói, ta muốn estimate variance của h(θ^).
+>
+> Thế thì, vì θ^ là MLE của θ, nên nó là estimator hiệu quả tiệm cận: Do đó Avar(θ^) = 1/I1(θ), I1(θ) là information number
+> của 1 observation. Và theo định nghĩa của phương sai tiệm cận thì ta có √n(θ^ - θ) → (d) n(0, 1/I1(θ)).
+>
+> Rồi, theo Delta method theorem, khi θ^ có phương sai tiệm cận là Avar(θ^) thì Avar[h(θ^)] = [h'(θ)]^2 Avar(θ^), thay kết quả
+> trên vào ta có:
+>
+> Avar[h(θ^)] = [h'(θ)]^2 [1/I1(θ)]
+>
+> Và theo định nghĩa của phương sai tiệm cận thì ta có:
+>
+> √n[h(θ^) - h(θ)] → (d) n(0, [h'(θ)]^2 [1/I1(θ)])
+>
+> Và điều này, ý nghĩa của nó là, khi n lớn đến vô hạn thì random variable √n[h(θ^) - h(θ)] sẽ có distribution là n(0, [h'(θ)]^2
+> [1/I1(θ)]).
+>
+> Vậy nếu xét n đủ lớn, thì ta có thể nói Var[ √n[h(θ^) - h(θ)]] ≈ [h'(θ)]^2 [1/I1(θ)]
+>
+> ⇔ n [Var[h(θ^)] + 0] ≈ [h'(θ)]^2 [1/I1(θ)] (khai triến vế trái theo tính chất của phương sai Var(c1X + c2) = c1^2Var(X).
+>
+> ⇔ Var[h(θ^)] ≈ [h'(θ)]^2 [1/I1(θ)] / n
+>
+> ⇔ Var[h(θ^)] ≈ [h'(θ)]^2 / nI1(θ)
+>
+> Tới đây là ta đã có công thức để tính xấp xỉ variance của h(θ^) rồi.
+>
+> Và với việc biết về theorem Cramer Rao Lower Bound, nói rằng, nếu ta có Wn là chuỗi estimator của θ, thì phương sai của
+> nó không thể nhỏ hơn CRLB: Var_θ(Wn) ≥ [d/dθ E_θ[Wn]^2/ In(θ). Và nếu ta có Wn là estiamtor có E[Wn] = h(θ) thì
+> Var_θ(Wn) ≥ [h'(θ)]^2/ In(θ) = [h'(θ)]^2/ nI1(θ) chính là cái trên. Do đó ta mới nói:
+>
+> Var[h(θ^)] ≈ [h'(θ)]^2 / nI1(θ) là CRLB của một estimator Wn có E[Wn] = h(θ)
+>
+> Rồi, thế thì tuy là ta có công thức để mà estimate Var(h(θ^)) ≈ [h'(θ)]^2 / nI1(θ) nhưng công thức này vô dụng vì dù sao ta
+> cũng không thể biết θ là gì. Do đó, ta sẽ làm hai động tác để lại mang ý nghĩa là ta sẽ ước lượng (estimate) cái công thức
+> xấp xỉ (approximate) trên:
+>
+> i) Động tác đầu tiên là chỗ nào có θ thì ta dùng θ^.
+>
+> ii) Động tác thứ hai, là nói về cái In(θ), vốn có công thức cần phải tính kì vọng: E_θ{[∂/∂θ log f(**X**|θ)]^2}, nên nó gọi là
+> expected information number.
+>
+> Phân tích cái này: Đầu tiên hãy hiểu rằng f(**X**|θ) là random variable có được bởi việc áp joint pdf của **X**: f(**x**|θ) lên
+> random variable vector **X**, và sau đó là áp hàm log, rồi lấy đạo hàm theo θ, rồi bình phương, nên cuối cùng ta vẫn là có
+> một random variable. Hay nói cách khác, ta có thể coi như đây là random variable có được bằng cách áp hàm g(**x**) =
+> {d/dθ [log f(**x**|θ)]}^2, lên **X**. Và vì là random variable, nên ta có quyền lấy kì vọng. Và thêm nữa vì đây là random
+> variabel có được từ việc áp dụng hàm g lên **X**, mà ông **X** có distribution phụ thuộc θ: **X** ~ f(**x**|θ) nên dĩ nhiên
+> g(**X**) cũng vậy, và do đó expected value của nó phải là hàm phụ thuộc θ, nên nó mới có cái chữ θ ở dưới chân:
+> E_θ{[∂/∂θ log f(**X**|θ)]^2}. Nói chung hiểu bản chất của hắn ta sẽ dễ hiểu mấy khúc sau.
+>
+> Rồi, Theo Lemma 7.3.11 nói rằng nếu f(x|θ) thỏa d/dθ E_θ[∂/∂θ log f(**X**|θ)] = ∫ ∂/∂θ[(∂/∂θ log f(x|θ)d(x|θ)] dx thì:
+>
+> E_θ{[∂/∂θ log f(**X**|θ)]^2} = - E_θ[∂^2/∂θ^2 log f(**X**|θ)]
+>
+> Và để tính kì vọng cuả cái này, thì vì ko biết θ, nên cũng không thể tính được. Do đó, ta sẽ không dùng kì vọng, mà thay
+> bằng cái gọi là **observed information number**.
+>
+> Tức là thay - E_θ[∂^2/∂θ^2 log f(**X**|θ)]
+>
+> bằng: - ∂^2/∂θ^2 log f(**x**|θ)
+>
+> (chú ý, ở trên, là **X**, vì đây là random variable, và ta tính kì vọng của cái ∂^2/∂θ^2 log f(**X**|θ), cũng là random variable.
+> Còn ở dưới, là ta thế observed value vào, bỏ kì vọng)
+>
+> Và với hai động tác đó, ta có công thức estimate cái công thức approximate:
+>
+> Var[h(θ^)] ≈ [h'(θ)]^2 / nI1(θ)
+>
+> ≈ [h'(θ)]^2|θ=θ^ / [-∂^2/∂θ^2 log f(**x**|θ)]|θ=θ^
+>
+> Và dĩ nhiên f(**x**|θ) = L(θ|**x**)
+>
+> ≈ [h'(θ)]^2|θ=θ^ / [-∂^2/∂θ^2 logL(θ|**x**)]|θ=θ^
+>
+> Rồi. thế thì ở đây nhắc đến trong bài tập 5.5.22 mình đã dùng Delta Method để approximate var(p^/(1-p^)). Thì như vừa ôn
+> lại Delta method ở trên, theorem này nói rằng nếu Wn có Avar(Wn) thì g(Wn) có Avar(g(Wn)) = [g'(θ)]^2 Avar(Wn). Nên áp
+> dụng cái này, ta sẽ coi như g(p^) = p^/(1-p^) để rồi:
+>
+> Avar[p^/(1-p^)] = [g'(p)]^2 Avar(p^)
+>
+> và với cái này thì ta có thể có Var[p^/(1-p^)] ≈ [g'(p)]^2 Avar(p^)/n
+>
+> Thế thì mình biết với random sample X1, X2,... Xn có mean μ và variance σ^2 thì CLT (central limit theorem) cho ta biết
+> rằng √n(Xbar - μ)/σ → (d) n(0, 1), cũng chính là √n(Xbar - μ) → n(0, σ^2).
+>
+> Vậy áp dụng CLT ta sẽ có √n(p^ - p) → n(0, true variance) với true variance trong bài toán này là p(1-p). Vậy nên Avar(p^)
+> = p(1-p).
+>
+> Còn [g'(p)]^2: g(p) = p/(1-p)
+>
+> ⇨ g'(p) = { [d/dp p](1-p) - p [d/dp (1-p)] } / (1-p)^2
+>
+> = [(1-p) + p] / (1-p)^2
+>
+> = 1 / (1-p)^2
+>
+> Vậy thay vô ta có: Var[p^/(1-p^)] ≈ [g'(p)]^2 Avar(p^)/n
+>
+> = [1 / (1-p)^2]^2 × p(1-p) / n
+>
+> = [1 / (1-p)^4] × p(1-p) / n
+>
+> = p / n(1-p)^3]
+>
+> Vậy Var[p^/(1-p^)] ≈ p / n(1-p)^3] và đây chính là ta đã giải lại bài tập 5.5.22 tính Var[p^/(1-p^)] theo Delta method. Và dĩ
+> nhiên ta lại không có p, nên dùng cách thay p^ vào p, để có estimate của cái xấp xỉ này:
+>
+> Var^[p^/(1-p^)] ≈ Var_p[p^/(1-p^)]|p=p^ = p/n(1-p)^3|p=p^
+>
+> = **p^/n(1-p^)^3**
+>
+> Giờ, ta sẽ dùng cái kiến thức hồi nãy vừa ôn lại để tính cái này theo cách đó.
+>
+> Đó là Var(g(p^)) ≈ [g'(p)]^2|p=p^ / [-∂^2/∂θ^2 log L(p|**x**)]|p=p^
+>
+> Tử số: [g'(p)]^2 như trên đã tính = 1/(1-p)^4
+>
+> ⇨ 1/(1-p)^4|p=p^ = 1/(1-p^)^4
+>
+> Mẫu số: -∂^2/∂θ^2 log L(p|**x**) note trước mình đã tính = np^/p^2 + n(1-p^)/(1-p)^2
+>
+> Evaluate tại p^: np^/p^2 + n(1-p^)/(1-p)^2|p=p^
+>
+> = np^/p^2 + n(1-p^)/(1-p^)^2
+>
+> = n/p^ + n/(1-p^)
+>
+> = n/p^(1-p^)
+>
+> Vậy Var(g(p^)) = [1/(1-p^)^4] / [n/p^(1-p^)]
+>
+> = [1/(1-p^)^4] × [p^(1-p^)/n]
+>
+> = **p^/n(1-p^)^3**
+>
+> Kết quả y chang cách 1 dùng Delta method.
+
+<br>
+
+<a id="node-873"></a>
+
+<p align="center"><kbd><img src="assets/1206fddefd0158e0129a35e4dac6485f96583943.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là tuy phương pháp ước lượng xấp xỉ variance của MLE
+> hoạt động khá tốt trong nhiều trường hợp, nhưng nó không phải là không
+> thể fail. Đặc biệt là khi hàm h(θ^) không monotone. Trong những trường
+> hợp như vậy, đạo hàm h'sẽ đổi dấu, và điều này sẽ dẫn đến việc
+> underestimate - đánh giá giá trị của variance thấp hơn thực tế.
+>
+> Ông nói thêm, vốn dĩ, việc dùng CRLB để ước lượng xấp xỉ cho variance
+> của h(θ^) vốn dĩ đã có thể dễ dẫn dến under estimate rồi. Nhưng với hàm
+> không monotone thì vấn đề có thể tệ hơn.
+
+<br>
+
+<a id="node-874"></a>
+
+<p align="center"><kbd><img src="assets/21b73e50e7358491b38786e852a6c1aa1e419bb4.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau, nhưng đại ý đoạn này là minh họa rằng khi h(θ^) ko monotone
+> thì giá trị xấp xỉ của variance Var(h(θ^)) có thể bị thấp hơn giá trị thật.
+
+<br>
+
+<a id="node-875"></a>
+
+<p align="center"><kbd><img src="assets/04161446fa81f3cbe871288f187711a45eaac757.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Đại khái đoạn này nói rằng, tính chất hiệu quả tiệm cận rõ ràng cho ta một
+> thước đo tiêu chuẩn mà một estimator hướng tới: Ý là, xét trên diện phương sai
+> tiệm cận, thì tốt nhất chính là đặt được cái Cramer Rao Lower Bound (1/I1(θ)),
+> để được gọi là estimator hiệu quả tiệm cận.
+>
+> Thì bên cạnh vai trò trên, ta sẽ bàn qua một tác dụng nữa của tính hiệu quả
+> tiệm cận: Đó là dùng để so sánh các estimator.
+>
+> Để làm việc này, ta sẽ có định nghĩa của hiệu quả tiệm cận tương đối -
+> asymptotic relative efficiency.
+>
+> Định nghĩa như sau:
+>
+> nếu ta có hai estimator Wn và Vn thỏa:
+>
+> √n(Wn - τ(θ)) → (d) n(0, σW^2) và
+>
+> √n(Vn - τ(θ)) → (d) n(0, σV^2)
+>
+> thì ARE của Vn wrt Wn được định nghĩa là ARE(Vn, Wn) = σW^2 / σV^2
+>
+> Suy nghĩ chút về cái định nghĩa này:
+>
+> Ta đã biết định nghĩa của phương sai tiệm cận: Đó là nếu √n(Wn - τ(θ)) → (d)
+> n(0, σ^2) thì phương sai tiệm cận của Wn chính là σ^2: Avar(Wn) = σ^2.
+>
+> Vậy thì ở đây có thể hiểu định nghĩa của hiệu quả tiệm cận tương đối của Vn
+> đối với Wn chính là tỉ lệ của Avar(Wn) và Avar(Vn) thôi chứ có gì đâu:
+>
+> ARE(Vn, Wn) = Avar(Wn) / Avar(Vn)
+
+<br>
+
+<a id="node-876"></a>
+
+<p align="center"><kbd><img src="assets/ed143214b749483d4e7ed9ee42520e81c5eb5c13.png" width="100%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ này sẽ giúp ta thấy công dụng của ARE (hiệu quả tiệm cận tương đối). Đầu tiên, bài
+> toán là cho X1, X2,... iid Poisson(λ). Và ta muốn estimate xác suất 0.
+>
+> Hiểu đại khái Xác suất 0, tức là xác suất X ~ pois(λ), bằng 0. Tức P(X = 0), và với pdf của
+> Pois, thì P(X = 0) là e^-λ. Và ta hiểu thế này: ta ko biết λ thật bằng bao nhiêu, và ta muốn
+> estimate cái hàm h(λ) = e^-λ này.
+>
+> Và đây cũng chỉ là bài toán point estimation thôi, thay vì estimate λ, ta estimate h(λ).
+>
+> Thế thì, mình nghĩ, ủa, thì nói mẹ nó là estimate λ đi, khi mày estimate được λ, ví dụ có λ^
+> (mle của λ) thì e^-λ^ sẽ là estimate cho "xác suất 0" không đúng sao.
+>
+> Nhưng cứ đọc tiếp: Thì tiếp theo, đại khái là gs nói rằng một cách đơn giản để estimate h(λ)
+> đó là đặt Yi = I(Xi = 0), và dùng τ^ = (ΣYi)/n để estimate cho h(λ).
+>
+> Chỗ này mình hiểu: Có nghĩa là, cách làm naive và đơn giản là xem thử trung bình thì có bao
+> nhiêu observed data = 0. Vì cái ta muốn estiamte là xác suất X = 0 mà. Nên ta sẽ đếm xem
+> số event Xi = 0, hay số observed data có giá trị 0, và lấy trung bình.
+>
+> Và tức là mình hiểu Y1, ..Yn là các statistic: Y1 = I(X1 = 0), ..Yn = I(Xn = 0) và vì X1,..Xn iid ~
+> pois(λ) nên Y1,...Yn cũng tạo thành random sample iid ~ Bern(P(X = 0)), tức Bern(e^-λ) và τ^
+> chính là sample mean của random sample này.
+>
+> Nên ta có thể ghi là τ^(**Y**), mà thậm chí cũng có thể ghi là τ^(**X**), vì any way, **Y** vẫn là
+> hàm theo **X**: **Y** = [I(X1 = 0, ...I(Xn = 0)]
+>
+> Trong các cháp trước mình đã biết với X ~ Bern(p) thì EX = p, Var(X) = p(1-p).
+>
+> Và ta cũng đã biết E[Xbar] = EX, Var(Xbar) = Var(X)/n
+>
+> Nên áp dụng vào đây, E[τ^] = EYi = e^-λ và Var(τ^) = (e^-λ)(1-e^-λ)/n
 
 <br>
 

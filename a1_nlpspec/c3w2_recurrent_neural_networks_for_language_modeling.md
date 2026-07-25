@@ -14,13 +14,13 @@ Learning Objectives
  • Gated recurrent units
  • Recurrent neural networks
 
-<a id="node-2152"></a>
+<a id="node-2122"></a>
 ## Traditional Languages Models
 
 <br>
 
 
-<a id="node-2153"></a>
+<a id="node-2123"></a>
 ### 1 N-gram language models have **limitations** in terms of **space** and **memory requirements.**
 
 > [!NOTE]
@@ -49,7 +49,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2154"></a>
+<a id="node-2124"></a>
 
 <p align="center"><kbd><img src="assets/a210392f2c31afd45c562f4435e5eca831776a6e.png" width="100%"></kbd></p>
 
@@ -58,7 +58,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2155"></a>
+<a id="node-2125"></a>
 
 <p align="center"><kbd><img src="assets/95b804b56fd5ca8f9b21feb6ba18a64ccd9a6ddb.png" width="100%"></kbd></p>
 
@@ -70,13 +70,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2156"></a>
+<a id="node-2126"></a>
 ## RNN
 
 <br>
 
 
-<a id="node-2157"></a>
+<a id="node-2127"></a>
 ### 1 **Recurrent Neural Networks (RNNs)** have **advantages** over \\*traditional N-gram language
 
 > [!NOTE]
@@ -112,7 +112,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2158"></a>
+<a id="node-2128"></a>
 
 <p align="center"><kbd><img src="assets/298e1152b6034f1c8e33e5bb1fc7e683aa59f981.png" width="100%"></kbd></p>
 
@@ -123,7 +123,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2159"></a>
+<a id="node-2129"></a>
 
 <p align="center"><kbd><img src="assets/ff13d1e3a59a84d8e5d9fc73f488c77e9590e6e2.png" width="100%"></kbd></p>
 
@@ -133,7 +133,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2160"></a>
+<a id="node-2130"></a>
 
 <p align="center"><kbd><img src="assets/a6d62c7c147a2146d830ed514f4431cd003c2680.png" width="100%"></kbd></p>
 
@@ -145,7 +145,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2161"></a>
+<a id="node-2131"></a>
 
 <p align="center"><kbd><img src="assets/b5db699251d040f9e0e2642ee1bc4aead6e4af48.png" width="100%"></kbd></p>
 
@@ -157,26 +157,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-2162"></a>
+<a id="node-2132"></a>
 
 <p align="center"><kbd><img src="assets/59c70c6259af4623c2ce03bb8e224b8264191a56.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2163"></a>
+<a id="node-2133"></a>
 
 <p align="center"><kbd><img src="assets/d8652619717f4fc859cb2ccc4d8ccf3486f00b7a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2164"></a>
+<a id="node-2134"></a>
 ## Applications Of RNN
 
 <br>
 
 
-<a id="node-2165"></a>
+<a id="node-2135"></a>
 ### 1 **Different tasks in A**I can be **categorized** based on their **input and output nature.**
 
 > [!NOTE]
@@ -211,25 +211,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-2166"></a>
+<a id="node-2136"></a>
 
 <p align="center"><kbd><img src="assets/1d7f29343ebc1464915fed1863e5879b2a55b329.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2167"></a>
+<a id="node-2137"></a>
 
 <p align="center"><kbd><img src="assets/033d1985aadf6faf27730740258d933ed4a50d74.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2168"></a>
+<a id="node-2138"></a>
 
 <p align="center"><kbd><img src="assets/27cd731f8c91d03a239e409a726de9dff2e2deed.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2169"></a>
+<a id="node-2139"></a>
 
 <p align="center"><kbd><img src="assets/90aec5fb963c0fedd78b8dc28419c6fd7cbc65f0.png" width="100%"></kbd></p>
 
@@ -237,26 +237,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-2170"></a>
+<a id="node-2140"></a>
 
 <p align="center"><kbd><img src="assets/d0f53ae2db1bacf8ca764a08fc374e7dca3073e9.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2171"></a>
+<a id="node-2141"></a>
 
 <p align="center"><kbd><img src="assets/7b1c57077c59878274caa788d228b633685bdabe.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2172"></a>
+<a id="node-2142"></a>
 ## Math In RNN
 
 <br>
 
 
-<a id="node-2173"></a>
+<a id="node-2143"></a>
 ### 1 **Recurrent Neural Networks** (RNNs) are **powerful models** for **processing sequential data** and \\*making sequential
 
 > [!NOTE]
@@ -287,13 +287,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2174"></a>
+<a id="node-2144"></a>
 
 <p align="center"><kbd><img src="assets/926f962ff1091093922ff08ce06c798d64da65a0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2175"></a>
+<a id="node-2145"></a>
 
 <p align="center"><kbd><img src="assets/b785522c5ad4e81f600f75041b4f6cf9baac5b4c.png" width="100%"></kbd></p>
 
@@ -311,13 +311,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2176"></a>
+<a id="node-2146"></a>
 
 <p align="center"><kbd><img src="assets/3f21ad24651e7cadd544c72d799d0134cb18b3f0.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2177"></a>
+<a id="node-2147"></a>
 
 <p align="center"><kbd><img src="assets/517b3033b925878ba1d15d85eed4a2ab8a5b217f.png" width="100%"></kbd></p>
 
@@ -327,13 +327,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2178"></a>
+<a id="node-2148"></a>
 
 <p align="center"><kbd><img src="assets/2340aad096ee2d9701c79ffcc58aad45a58fe674.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2179"></a>
+<a id="node-2149"></a>
 
 <p align="center"><kbd><img src="assets/c997c89a2a40918b30edc7f3259bdcd4139076dd.png" width="100%"></kbd></p>
 
@@ -344,7 +344,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2180"></a>
+<a id="node-2150"></a>
 
 <p align="center"><kbd><img src="assets/b09f7ea6adff0c20151f205d44f75410daf60b29.png" width="100%"></kbd></p>
 
@@ -356,18 +356,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2181"></a>
+<a id="node-2151"></a>
 ## Lab: Hidden State Activation
 
 <br>
 
-<a id="node-2182"></a>
+<a id="node-2152"></a>
 
 <p align="center"><kbd><img src="assets/21c8ff5dbcc723a21c6303121f4989a7df326a80.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2183"></a>
+<a id="node-2153"></a>
 
 <p align="center"><kbd><img src="assets/305f22f26d649d57f5b8773ab544733f187b877f.png" width="100%"></kbd></p>
 
@@ -378,13 +378,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2184"></a>
+<a id="node-2154"></a>
 
 <p align="center"><kbd><img src="assets/3a7af6cf672f094e59dbbeca168aec295db03f77.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2185"></a>
+<a id="node-2155"></a>
 
 <p align="center"><kbd><img src="assets/4088fd46b809b91ef990d01e81b737be0ca28ae2.png" width="100%"></kbd></p>
 
@@ -396,13 +396,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2186"></a>
+<a id="node-2156"></a>
 
 <p align="center"><kbd><img src="assets/9388175c815b03689dd22ba8838dcc3abcc76a3e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2187"></a>
+<a id="node-2157"></a>
 
 <p align="center"><kbd><img src="assets/a32272f642cac7f6554105fefd79635825c032e5.png" width="100%"></kbd></p>
 
@@ -411,7 +411,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2188"></a>
+<a id="node-2158"></a>
 
 <p align="center"><kbd><img src="assets/7d2c9ad959844e732177cfcc1e13c70e52ffb47b.png" width="100%"></kbd></p>
 
@@ -421,13 +421,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2189"></a>
+<a id="node-2159"></a>
 
 <p align="center"><kbd><img src="assets/33bccfb3200cda81116b112073b37a93f37855ac.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2190"></a>
+<a id="node-2160"></a>
 
 <p align="center"><kbd><img src="assets/dddec18ccfd7f9fa51046f9b620741f284ee80b8.png" width="100%"></kbd></p>
 
@@ -439,13 +439,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2191"></a>
+<a id="node-2161"></a>
 
 <p align="center"><kbd><img src="assets/a9dcd97150259d51c936d7ae84e6ce95854c6948.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2192"></a>
+<a id="node-2162"></a>
 
 <p align="center"><kbd><img src="assets/7312ac22f5239c428898aca41682f2732e5f4040.png" width="100%"></kbd></p>
 
@@ -456,7 +456,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2193"></a>
+<a id="node-2163"></a>
 ### Summary That's it! We've verified that the \\*two formulas
 
 > [!NOTE]
@@ -469,12 +469,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2194"></a>
+<a id="node-2164"></a>
 ## Cost Function For RNN
 
 <br>
 
-<a id="node-2195"></a>
+<a id="node-2165"></a>
 
 <p align="center"><kbd><img src="assets/e854853bde170ddb9905b9ae11abb154231140dd.png" width="100%"></kbd></p>
 
@@ -505,7 +505,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2196"></a>
+<a id="node-2166"></a>
 ### So sánh, ôn lại hai bài toán
 
 > [!NOTE]
@@ -514,43 +514,43 @@ Learning Objectives
 
 <br>
 
-<a id="node-2197"></a>
+<a id="node-2167"></a>
 
 <p align="center"><kbd><img src="assets/78c1eec6f2d7db0115d51d0f7eb3f5d89c633e67.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2198"></a>
+<a id="node-2168"></a>
 
 <p align="center"><kbd><img src="assets/3deea2a978ee57af449f63c567adedd1058117bc.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2199"></a>
+<a id="node-2169"></a>
 
 <p align="center"><kbd><img src="assets/4002537a06cad469bb267b9bac6676f5774a8e43.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2200"></a>
+<a id="node-2170"></a>
 
 <p align="center"><kbd><img src="assets/a42169407415bf2d6e589e1607bc9b5a5c740582.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2201"></a>
+<a id="node-2171"></a>
 
 <p align="center"><kbd><img src="assets/e21cc06264af64833733357130718c6789615480.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2202"></a>
+<a id="node-2172"></a>
 
 <p align="center"><kbd><img src="assets/d75a45a02a0ab8c31557d0500c11db2fa9a833d4.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2203"></a>
+<a id="node-2173"></a>
 
 <p align="center"><kbd><img src="assets/f6a2576e57c195e8a9246ebfde09aa9c65699459.png" width="100%"></kbd></p>
 
@@ -561,18 +561,18 @@ Learning Objectives
 <br>
 
 
-<a id="node-2204"></a>
+<a id="node-2174"></a>
 ## Implementation Note
 
 <br>
 
-<a id="node-2205"></a>
+<a id="node-2175"></a>
 
 <p align="center"><kbd><img src="assets/9bf213ba33a7d471210be0b97f3e820a3e8886a6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2206"></a>
+<a id="node-2176"></a>
 
 <p align="center"><kbd><img src="assets/0d75ddce52cd702308f3fb29dc4496dd9349e53b.png" width="100%"></kbd></p>
 
@@ -590,26 +590,26 @@ Learning Objectives
 
 <br>
 
-<a id="node-2207"></a>
+<a id="node-2177"></a>
 
 <p align="center"><kbd><img src="assets/84c899239c8b446aad31ddfcc887aeaff7f0485b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2208"></a>
+<a id="node-2178"></a>
 
 <p align="center"><kbd><img src="assets/84c4c2a1119ef859281e75fee867e7ae610ccf99.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2209"></a>
+<a id="node-2179"></a>
 
 <p align="center"><kbd><img src="assets/c7c690743bd5469a4615effa7adad34544b354b5.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2210"></a>
+<a id="node-2180"></a>
 ## Lab: Vanilla RNN, Gru And The Scan
 
 > [!NOTE]
@@ -618,14 +618,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-2211"></a>
+<a id="node-2181"></a>
 
 <p align="center"><kbd><img src="assets/4b46447080633743ce9938014e4b1f8c507b4630.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2212"></a>
+<a id="node-2182"></a>
 ### Part 1: Forward method for
 
 > [!NOTE]
@@ -634,7 +634,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2213"></a>
+<a id="node-2183"></a>
 
 <p align="center"><kbd><img src="assets/b4c2b54b9bd4c689ec51502420db139650558b10.png" width="100%"></kbd></p>
 
@@ -646,7 +646,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2214"></a>
+<a id="node-2184"></a>
 
 <p align="center"><kbd><img src="assets/860e45c80769a6c870bd52293bffb235572994f9.png" width="100%"></kbd></p>
 
@@ -656,7 +656,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2215"></a>
+<a id="node-2185"></a>
 
 <p align="center"><kbd><img src="assets/980311e75d69732c5e426c49a4715e8a87e4c2bc.png" width="100%"></kbd></p>
 
@@ -676,7 +676,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2216"></a>
+<a id="node-2186"></a>
 
 <p align="center"><kbd><img src="assets/dca356940b3183d7e19d32e59a4fde468e5d5219.png" width="100%"></kbd></p>
 
@@ -685,7 +685,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2217"></a>
+<a id="node-2187"></a>
 
 <p align="center"><kbd><img src="assets/2fc0003b3f5d0d49d958db5194fa9b65c1080794.png" width="100%"></kbd></p>
 
@@ -694,14 +694,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-2218"></a>
+<a id="node-2188"></a>
 
 <p align="center"><kbd><img src="assets/9ff763a9f4d0991087126f7518137a13b5c74bdf.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2219"></a>
+<a id="node-2189"></a>
 ### Part 2: Implementation of
 
 > [!NOTE]
@@ -710,14 +710,14 @@ Learning Objectives
 
 <br>
 
-<a id="node-2220"></a>
+<a id="node-2190"></a>
 
 <p align="center"><kbd><img src="assets/2c4b5b9e7932ec4d4443b324388d01e397b6a9cf.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2221"></a>
+<a id="node-2191"></a>
 ### Part 3: Comparison between
 
 > [!NOTE]
@@ -726,7 +726,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2222"></a>
+<a id="node-2192"></a>
 
 <p align="center"><kbd><img src="assets/a4a5fcd365d4982e9015a27670707eaa0bc0bce3.png" width="100%"></kbd></p>
 
@@ -738,7 +738,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2223"></a>
+<a id="node-2193"></a>
 ## Lab: Working With Jax Numpy And
 
 > [!NOTE]
@@ -748,30 +748,30 @@ Learning Objectives
 <br>
 
 
-<a id="node-2224"></a>
+<a id="node-2194"></a>
 ### Jax numpy
 
 <br>
 
-<a id="node-2225"></a>
+<a id="node-2195"></a>
 
 <p align="center"><kbd><img src="assets/5e3d4a9bb41b65c4563954b6222c37acad22983e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2226"></a>
+<a id="node-2196"></a>
 
 <p align="center"><kbd><img src="assets/f9e9051402511e2a6f19926e040b534e0d25df3c.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2227"></a>
+<a id="node-2197"></a>
 ### Calculating Perplexity
 
 <br>
 
-<a id="node-2228"></a>
+<a id="node-2198"></a>
 
 <p align="center"><kbd><img src="assets/cc92cf12720f389cf4d5e2d171f7f918867758fe.png" width="100%"></kbd></p>
 
@@ -790,7 +790,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2229"></a>
+<a id="node-2199"></a>
 
 <p align="center"><kbd><img src="assets/729c2f6f9e56198a8aa4d22bfdc22739bae8c50a.png" width="100%"></kbd></p>
 
@@ -809,7 +809,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2230"></a>
+<a id="node-2200"></a>
 
 <p align="center"><kbd><img src="assets/b9b6f8b7ab2a5b14a0b4b3b58fd86579ee51b69e.png" width="100%"></kbd></p>
 
@@ -838,7 +838,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2231"></a>
+<a id="node-2201"></a>
 
 <p align="center"><kbd><img src="assets/d88aa660f2f7aeb8408aaee544a13eb515fb5f37.png" width="100%"></kbd></p>
 
@@ -861,7 +861,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2232"></a>
+<a id="node-2202"></a>
 
 <p align="center"><kbd><img src="assets/0662a20519ca0b927bb9f5c8eac4bc84eb305c27.png" width="100%"></kbd></p>
 
@@ -874,7 +874,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2233"></a>
+<a id="node-2203"></a>
 
 <p align="center"><kbd><img src="assets/1e4edf4420a6beb6e1eba803e65402a3be2a5728.png" width="100%"></kbd></p>
 
@@ -893,13 +893,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2234"></a>
+<a id="node-2204"></a>
 
 <p align="center"><kbd><img src="assets/fbb8c0ebc7ddda8f43db6b720c17b821393b5321.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2235"></a>
+<a id="node-2205"></a>
 
 <p align="center"><kbd><img src="assets/45222098756ddb33d970241c47aee62383eafb91.png" width="100%"></kbd></p>
 
@@ -908,7 +908,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2236"></a>
+<a id="node-2206"></a>
 
 <p align="center"><kbd><img src="assets/25b1191aa974dc8647d9baff9aba94aafc4d9dc8.png" width="100%"></kbd></p>
 
@@ -918,13 +918,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2237"></a>
+<a id="node-2207"></a>
 
 <p align="center"><kbd><img src="assets/b99c1735f2e3dc3c15b9eac1a16e1bb307529701.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2238"></a>
+<a id="node-2208"></a>
 
 <p align="center"><kbd><img src="assets/779482dd4f5a2ce6577a87eacc53d726554e13c7.png" width="100%"></kbd></p>
 
@@ -939,25 +939,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-2239"></a>
+<a id="node-2209"></a>
 
 <p align="center"><kbd><img src="assets/eff54c0c96062bdcfad3cf3c4bb06ced25e2a9e7.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2240"></a>
+<a id="node-2210"></a>
 ## Gru - Gated Recurrent Units
 
 <br>
 
-<a id="node-2241"></a>
+<a id="node-2211"></a>
 
 <p align="center"><kbd><img src="assets/1baec91eea914f42b6d614c649ee5d725c203472.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2242"></a>
+<a id="node-2212"></a>
 
 <p align="center"><kbd><img src="assets/193b85fcfdf906ac2b5e76fcd0338d1beaabeb31.png" width="100%"></kbd></p>
 
@@ -1017,7 +1017,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2243"></a>
+<a id="node-2213"></a>
 
 <p align="center"><kbd><img src="assets/56037290360fb8f22cbba61a92906c1fa4919a1b.png" width="100%"></kbd></p>
 
@@ -1031,25 +1031,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-2244"></a>
+<a id="node-2214"></a>
 
 <p align="center"><kbd><img src="assets/ea206eb57c6a92e6f7d80fb5a11fe184c250e3ca.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2245"></a>
+<a id="node-2215"></a>
 
 <p align="center"><kbd><img src="assets/f53abc39355356499c438768e96cfe2ee6d26b20.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2246"></a>
+<a id="node-2216"></a>
 ## Lab: Creating A Gru Model Using Trax
 
 <br>
 
-<a id="node-2247"></a>
+<a id="node-2217"></a>
 
 <p align="center"><kbd><img src="assets/5a0bc51b5934188262c27fdcffd72257856f803a.png" width="100%"></kbd></p>
 
@@ -1063,13 +1063,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2248"></a>
+<a id="node-2218"></a>
 
 <p align="center"><kbd><img src="assets/c7761dda28448639a6bd82306e3e559fb0c95719.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2249"></a>
+<a id="node-2219"></a>
 
 <p align="center"><kbd><img src="assets/3bad460a726d4104b6c9b3ada5a2d4e9b28e036a.png" width="100%"></kbd></p>
 
@@ -1090,7 +1090,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2250"></a>
+<a id="node-2220"></a>
 
 <p align="center"><kbd><img src="assets/2ac18e55b23eca3560d3ecf46803b32abbd5f922.png" width="100%"></kbd></p>
 
@@ -1119,7 +1119,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2251"></a>
+<a id="node-2221"></a>
 
 <p align="center"><kbd><img src="assets/9cc172439930d473d5cf7a0ee62a3d69ee237044.png" width="100%"></kbd></p>
 
@@ -1131,13 +1131,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2252"></a>
+<a id="node-2222"></a>
 ## Deep And Bi-directional Rnns
 
 <br>
 
 
-<a id="node-2253"></a>
+<a id="node-2223"></a>
 ### 1 **Deep recurrent neural networks (RNNs)** are useful for \\*capturing dependencies that shallow
 
 > [!NOTE]
@@ -1171,13 +1171,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2254"></a>
+<a id="node-2224"></a>
 
 <p align="center"><kbd><img src="assets/c130cf58abedf7a0c9f63ca566680ec86f32cc2d.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2255"></a>
+<a id="node-2225"></a>
 
 <p align="center"><kbd><img src="assets/c099e7318e6d2365f27e536e486b33d12ed926eb.png" width="100%"></kbd></p>
 
@@ -1195,7 +1195,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2256"></a>
+<a id="node-2226"></a>
 
 <p align="center"><kbd><img src="assets/7f170439cc33a60264f278312857a381fbedbf55.png" width="100%"></kbd></p>
 
@@ -1208,7 +1208,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2257"></a>
+<a id="node-2227"></a>
 
 <p align="center"><kbd><img src="assets/4d43fb1384835a43830e423e5fbea7af267428df.png" width="100%"></kbd></p>
 
@@ -1218,7 +1218,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2258"></a>
+<a id="node-2228"></a>
 
 <p align="center"><kbd><img src="assets/6513074be9300b372b5f11494b9891ce1d843b67.png" width="100%"></kbd></p>
 
@@ -1229,7 +1229,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2259"></a>
+<a id="node-2229"></a>
 
 <p align="center"><kbd><img src="assets/d7aab7aecfacc3a7ad7a80e554ab671ad3f626e2.png" width="100%"></kbd></p>
 
@@ -1241,61 +1241,61 @@ Learning Objectives
 
 <br>
 
-<a id="node-2260"></a>
+<a id="node-2230"></a>
 
 <p align="center"><kbd><img src="assets/b7502536c17aedf2e48dd3e437fb337dd7275080.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2261"></a>
+<a id="node-2231"></a>
 
 <p align="center"><kbd><img src="assets/62799c1d300ddb410b22949c475cb1455aad3ed8.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2262"></a>
+<a id="node-2232"></a>
 
 <p align="center"><kbd><img src="assets/86a78af0fb0e8a5949be6bcfc31aa82e3b191ff2.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2263"></a>
+<a id="node-2233"></a>
 ## Week Conclusion
 
 <br>
 
 
-<a id="node-2264"></a>
+<a id="node-2234"></a>
 ## Quiz
 
 <br>
 
-<a id="node-2265"></a>
+<a id="node-2235"></a>
 
 <p align="center"><kbd><img src="assets/370eef86ac88170a46c24817b309aaaa4da89913.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2266"></a>
+<a id="node-2236"></a>
 
 <p align="center"><kbd><img src="assets/bde7f8dc483110a8ecd48987ecc037037b1aa834.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2267"></a>
+<a id="node-2237"></a>
 
 <p align="center"><kbd><img src="assets/73730dad53e3ed8f45ccc303eb50796df980e2d6.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2268"></a>
+<a id="node-2238"></a>
 
 <p align="center"><kbd><img src="assets/2f2c6fed1a9291d8e65ef7a8fab1ba671386b216.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2269"></a>
+<a id="node-2239"></a>
 
 <p align="center"><kbd><img src="assets/f6fa4cf07744798bac83b73a9a8be588c1b25eec.png" width="100%"></kbd></p>
 
@@ -1311,44 +1311,44 @@ Learning Objectives
 
 <br>
 
-<a id="node-2270"></a>
+<a id="node-2240"></a>
 
 <p align="center"><kbd><img src="assets/c00dbed260daccaf6a40b3edf2ba411acff3915e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2271"></a>
+<a id="node-2241"></a>
 
 <p align="center"><kbd><img src="assets/21dea7eb325f0d3d0fa511368d642ee07441211e.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2272"></a>
+<a id="node-2242"></a>
 
 <p align="center"><kbd><img src="assets/370f6447c0c70f5293005f2552d4ded7ef53f25c.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2273"></a>
+<a id="node-2243"></a>
 
 <p align="center"><kbd><img src="assets/ece51d2b3962e4eb9428da2a4ab559c9bb9080b7.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2274"></a>
+<a id="node-2244"></a>
 
 <p align="center"><kbd><img src="assets/af772f8681c548453666d7654b07bcb88e468c6e.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2275"></a>
+<a id="node-2245"></a>
 ## P.a Deep N-grams
 
 <br>
 
 
-<a id="node-2276"></a>
+<a id="node-2246"></a>
 ### Welcome to the second assignment of course 3. In this assignment you will explore
 
 > [!NOTE]
@@ -1369,13 +1369,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2277"></a>
+<a id="node-2247"></a>
 #### Overview
 
 <br>
 
 
-<a id="node-2278"></a>
+<a id="node-2248"></a>
 #### Your task will be to **predict the next set of characters** using the **previous characters.**  • Although this task **sounds simple**, it is **pretty useful.**  • You will start by **converting a line of text** into a **tensor**  • Then you will **create a generator** to **feed data into the model**  • You will **train a neural network** in order to **predict the new set of characters** of  defined length.  • You will **use embeddings** for each character and **feed them as inputs** to your  model.  ▪ Many **natural language task**s rely on **using embeddings for predictions.**  • Your model will **convert each character to its embedding**, run the embeddings  through a **Gated Recurrent Unit GRU**, and **run it through a linear layer** to predict the next  set of characters.
 
 > [!NOTE]
@@ -1387,43 +1387,43 @@ Learning Objectives
 
 <br>
 
-<a id="node-2279"></a>
+<a id="node-2249"></a>
 
 <p align="center"><kbd><img src="assets/daccccf219538f5badbea098cffa6542ce8cf9ae.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2280"></a>
+<a id="node-2250"></a>
 #### The figure above gives you a summary of what you are about to implement.  • You will **get the embeddings**;  • **Stack the embeddings on top of each other**;  • Run them through **two layers** with a **relu activation** in the middle;  • Finally, you will **compute the softmax**.  To predict the next character:   • **Use the softmax output** and **identify the word** with the **highest probability.**  • The word with the highest probability is the prediction for the next word.
 
 <br>
 
-<a id="node-2281"></a>
+<a id="node-2251"></a>
 
 <p align="center"><kbd><img src="assets/9ef0d9161ddb19238b20c9e9c750bbebae70070d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2282"></a>
+<a id="node-2252"></a>
 #### 1 - Importing the Data
 
 <br>
 
 
-<a id="node-2283"></a>
+<a id="node-2253"></a>
 #### 1.1 - Loading in the Data
 
 <br>
 
 
-<a id="node-2284"></a>
+<a id="node-2254"></a>
 #### Now **import the dataset** and do some **processing**.  • The dataset has **one sentence per line.**  • You will be **doing character generation**, so you have to process each sentence  by **converting each character (and not word) to a number.**  • You will use the **ord** function to c**onvert a unique character** to a **unique integer  ID.**  • **Store** **each line** in a **list**.  • Create a **data generator** that takes in the **batch_size** and the **max_length**.  ▪ The **max_length** corresponds to the **maximum length of the sentence**.
 
 <br>
 
-<a id="node-2285"></a>
+<a id="node-2255"></a>
 
 <p align="center"><kbd><img src="assets/6bd3ddec9e45902b4f958f25c9df6e690bb9bc17.png" width="100%"></kbd></p>
 
@@ -1434,7 +1434,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2286"></a>
+<a id="node-2256"></a>
 
 <p align="center"><kbd><img src="assets/681bea9b71a67c36a4b625928676d9e20098ad4e.png" width="100%"></kbd></p>
 
@@ -1446,12 +1446,12 @@ Learning Objectives
 <br>
 
 
-<a id="node-2287"></a>
+<a id="node-2257"></a>
 #### 1.2 - Convert a Line to Tensor
 
 <br>
 
-<a id="node-2288"></a>
+<a id="node-2258"></a>
 
 <p align="center"><kbd><img src="assets/d528c35af1e8b2717d7aaaf8244da0f372d2a4bf.png" width="100%"></kbd></p>
 
@@ -1464,13 +1464,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2289"></a>
+<a id="node-2259"></a>
 #### Exercise 1 - line_to_tensor (UNQ_C1)
 
 <br>
 
 
-<a id="node-2290"></a>
+<a id="node-2260"></a>
 #### **Instructions:** **Write a function** that **takes in a single line** and **transforms each character**  into **its unicode integer.** This returns **a list of integers**, which we'll refer to as a **tensor**.  • Use a **special integer** to represent the **end of the sentence** (the end of the line).  • This will be the **EOS_int** (end of sentence integer) parameter of the function.  • Include the **EOS_int** as the **last integer** of the  • For this exercise, you will **use the number 1** to **represent the end of a  sentence.**
 
 > [!NOTE]
@@ -1481,20 +1481,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-2291"></a>
+<a id="node-2261"></a>
 
 <p align="center"><kbd><img src="assets/2b63aeb838844a60abe03f5bc316920b7bafbc60.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2292"></a>
+<a id="node-2262"></a>
 #### 1.3 - Batch Generator
 
 <br>
 
 
-<a id="node-2293"></a>
+<a id="node-2263"></a>
 #### Most of the time in **Natural Language Processing**, and **AI** in general we use **batches** when  training our data sets. Here, you will **build a data generator** that **takes in a text** and  r**eturns a batch of text lines** (lines are **sentences**).   • The **generator** converts **text lines** (sentences) into n**umpy arrays of integers**  **padded by zeros** so that **all arrays have the same length**, which is the **length of the  longest sentence** in the entire data set.  Once you create the generator, you can **iterate on it** like this: **next(data_generator)**  This generator r**eturns the data** in a **format** that you could **directly use in your model** when  computing the **feed-forward of your algorithm**. This iterator returns a **batch of lines** and  **per token mask**. The batch is a tuple of three parts: **inputs**, **targets**, **mask**. The **inputs** and  **targets** are **identical**. The **second column** will be u**sed to evaluate your predictions**. **Mask  is 1 for non-padding tokens.**
 
 > [!NOTE]
@@ -1517,55 +1517,55 @@ Learning Objectives
 <br>
 
 
-<a id="node-2294"></a>
+<a id="node-2264"></a>
 #### **Instructions:** Implement the data generator below. Here are some things you will need.  • **While True loop**: this will **yield one batch** at a time.  • **if index >= num_lines**, **set index to 0**.  • The generator should return **shuffled** batches of data. To achieve this **without  modifying the actual lines** a **list containing the indexes of data_lines** is created. This list  can be **shuffled** and **used to get random batches** everytime the index is reset.  • **if len(line) < max_length** **append line to cur_batch**.  ▪ Note that a line that has **length equal** to **max_length** should **not be appended**  to the batch.  ▪ This is because **when converting the characters into a tensor of integers**, an  **additional end of sentence token id will be added**.  ▪ So if max_length is 5, and a line has 4 characters, the tensor representing  those 4 characters plus the end of sentence character will be of length 5, which is the  max length.  • if **len(cur_batch) == batch_size**, go over every line, convert it to an int and  store it.  **Remember that when calling np you are really calling trax.fastmath.numpy which is  trax’s version of numpy that is compatible with JAX. As a result of this, where you  used to encounter the type numpy.ndarray now you will find the type  jax.interpreters.xla.DeviceArray.**
 
 <br>
 
 
-<a id="node-2295"></a>
+<a id="node-2265"></a>
 #### Exercise 2 - data_generator (UNQ_C2)
 
 <br>
 
-<a id="node-2296"></a>
+<a id="node-2266"></a>
 
 <p align="center"><kbd><img src="assets/b945e27d4dfb0f96a267bdc9f0262d3f3943b858.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2297"></a>
+<a id="node-2267"></a>
 
 <p align="center"><kbd><img src="assets/f4b29b23e744c2a8d444c1ebc63f7e7940f0b882.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2298"></a>
+<a id="node-2268"></a>
 
 <p align="center"><kbd><img src="assets/4b5d91d5facc60e998611d223933bce713022c4f.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2299"></a>
+<a id="node-2269"></a>
 
 <p align="center"><kbd><img src="assets/55e146eb00585987907cb1c6fbeb0f3b54e83a61.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2300"></a>
+<a id="node-2270"></a>
 #### Now that you have your generator, you can just call them and they will return tensors which correspond to your lines in Shakespeare. The **first column and the second column are identical**. Now you can go ahead and start building your neural network
 
 <br>
 
 
-<a id="node-2301"></a>
+<a id="node-2271"></a>
 #### 1.4 - Repeating Batch Generator
 
 <br>
 
 
-<a id="node-2302"></a>
+<a id="node-2272"></a>
 #### The way the iterator is currently defined, it will **keep providing batches forever.**  Although it is not needed, we want to show you the **itertools.cycle function** which is really  **useful when the generator eventually stops**  Notice that **it is expected to use this function within the training function** further below  Usually we want to **cycle over the dataset multiple times during training** (i.e. train for  **multiple \\/epochs**\\/).  For small datasets we can use \\_**itertools.cycle**\\_ to achieve this easily.
 
 > [!NOTE]
@@ -1575,7 +1575,13 @@ Learning Objectives
 
 <br>
 
-<a id="node-2303"></a>
+
+<a id="node-2274"></a>
+#### The purpose of using itertools.cycle in this context is to create an iterator that can provide  an infinite sequence of batches of data. The iterator keeps cycling through the provided data repeatedly, allowing for easy repetition of the dataset during training.  In the given code, the infinite_data_generator is created using itertools.cycle. It takes the output of the data_generator function, which likely generates batches of data for training a machine learning model. By using itertools.cycle, the data generator is transformed into an infinite iterator.  This is particularly useful when training a model for multiple epochs or repeatedly cycling over the dataset. During each iteration, the next function is called on the infinite_data_generator to retrieve the next batch of data. Since itertools.cycle ensures that the iterator keeps cycling indefinitely, it allows for seamless access to the dataset without explicitly handling the end of the data.  The use of itertools.cycle **simplifies** the **process of iterating over the dataset** **multiple times**, especially when dealing with small datasets. It **eliminates t**he need to **manually reset or handle the end of the dataset**, making it **convenient** for **training functions** that **require repeated access to the data.**
+
+<br>
+
+<a id="node-2273"></a>
 
 <p align="center"><kbd><img src="assets/d25a07a23b0c27458f7216b48f1a6db322f44fca.png" width="100%"></kbd></p>
 
@@ -1586,19 +1592,13 @@ Learning Objectives
 <br>
 
 
-<a id="node-2304"></a>
-#### The purpose of using itertools.cycle in this context is to create an iterator that can provide  an infinite sequence of batches of data. The iterator keeps cycling through the provided data repeatedly, allowing for easy repetition of the dataset during training.  In the given code, the infinite_data_generator is created using itertools.cycle. It takes the output of the data_generator function, which likely generates batches of data for training a machine learning model. By using itertools.cycle, the data generator is transformed into an infinite iterator.  This is particularly useful when training a model for multiple epochs or repeatedly cycling over the dataset. During each iteration, the next function is called on the infinite_data_generator to retrieve the next batch of data. Since itertools.cycle ensures that the iterator keeps cycling indefinitely, it allows for seamless access to the dataset without explicitly handling the end of the data.  The use of itertools.cycle **simplifies** the **process of iterating over the dataset** **multiple times**, especially when dealing with small datasets. It **eliminates t**he need to **manually reset or handle the end of the dataset**, making it **convenient** for **training functions** that **require repeated access to the data.**
-
-<br>
-
-
-<a id="node-2305"></a>
+<a id="node-2275"></a>
 #### 2 - Defining the GRU Model
 
 <br>
 
 
-<a id="node-2306"></a>
+<a id="node-2276"></a>
 #### Now that you have the input and output tensors, you will go ahead and **initialize your  model**. You will be implementing the **GRULM**, **gated recurrent unit** model. To implement  this model, you will be using **google's trax package**. Instead of making you implement the GRU from scratch, we will give you the **necessary method**s from a build in package.  You can use the following packages when constructing the model:
 
 > [!NOTE]
@@ -1607,7 +1607,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2307"></a>
+<a id="node-2277"></a>
 
 <p align="center"><kbd><img src="assets/ab5fa4de1964aa393a417028cc997a8136b7eda2.png" width="100%"></kbd></p>
 
@@ -1619,7 +1619,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2308"></a>
+<a id="node-2278"></a>
 
 <p align="center"><kbd><img src="assets/3bad460a726d4104b6c9b3ada5a2d4e9b28e036a.png" width="100%"></kbd></p>
 
@@ -1640,19 +1640,19 @@ Learning Objectives
 
 <br>
 
-<a id="node-2309"></a>
+<a id="node-2279"></a>
 
 <p align="center"><kbd><img src="assets/dc704b586df8393a0b0ea013121846b8fac2182a.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2310"></a>
+<a id="node-2280"></a>
 #### Exercise 3 - GRULM (UNQ_C3)
 
 <br>
 
-<a id="node-2311"></a>
+<a id="node-2281"></a>
 
 <p align="center"><kbd><img src="assets/61fc1c27327bf23bf025251dadfdcbc7a61dad76.png" width="100%"></kbd></p>
 
@@ -1681,20 +1681,20 @@ Learning Objectives
 
 <br>
 
-<a id="node-2312"></a>
+<a id="node-2282"></a>
 
 <p align="center"><kbd><img src="assets/093dbfe46263c3b27c0ccdadbd231d1cbd88a006.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2313"></a>
+<a id="node-2283"></a>
 #### 3 - Training
 
 <br>
 
 
-<a id="node-2314"></a>
+<a id="node-2284"></a>
 #### Now you are **going to train your model**. As usual, you have to **define the cost function**, the **optimizer**, and **decide whether you will be training it** on a **gpu** or **cpu**. You also have to **feed in a built model**. Before, going into the training, we re-introduce the **TrainTask** and **EvalTask** **abstractions** from the **last week's assignment.**  To train a model on a task, Trax defines an **abstraction** t**rax.supervised.training**.**TrainTask** which **packages the train data, loss and optimizer (among other things) together into an object.**  Similarly to evaluate a model, Trax defines an abstraction **trax.supervised.training.EvalTask** which **packages the eval data and metrics** (among other things) into another object.  The final piece tying things together is the **trax.supervised.training.Loop abstraction** that is a very **simple and flexible** way to **put** **everything together** and train the model, all the while **evaluating it and saving checkpoint**s. Using **training.Loop** will **save you a lot of code** compared to always **writing the training loop by hand**, like you did in **courses 1 and 2.** More importantly, you are **less likely to have a bug** in that code that would **ruin your training**
 
 > [!NOTE]
@@ -1706,7 +1706,7 @@ Learning Objectives
 <br>
 
 
-<a id="node-2315"></a>
+<a id="node-2285"></a>
 #### An **epoch** is traditionally defined as **one pass through the dataset.**  Since the **dataset was divided in batches** you need **several steps (gradient evaluations)** in order to complete an epoch. So, one epoch corresponds to the **number of examples in a batch** times the **number of steps**. In short, in **each epoch** you **go over all the dataset.**  The **max_length** variable defines the **maximum length of lines** to be used in training our data, **lines longer than that** length **are discarded.**  Below is a function and results that indicate **how many lines conform to our criteria of maximum length** of a sentence **in the entire dataset** and **how many steps are required in order to cover the entire dataset** which in turn corresponds to an **epoch**..
 
 > [!NOTE]
@@ -1721,7 +1721,7 @@ Learning Objectives
 
 <br>
 
-<a id="node-2316"></a>
+<a id="node-2286"></a>
 
 <p align="center"><kbd><img src="assets/dcb42c8bab61d39c6a883603a3d098396a2e700d.png" width="100%"></kbd></p>
 
@@ -1730,73 +1730,73 @@ Learning Objectives
 
 <br>
 
-<a id="node-2317"></a>
+<a id="node-2287"></a>
 
 <p align="center"><kbd><img src="assets/4f9a30aab8905959643b810a9ef27d9f17a24360.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2318"></a>
+<a id="node-2288"></a>
 #### 3.1 - Training the Model
 
 <br>
 
-<a id="node-2319"></a>
+<a id="node-2289"></a>
 
 <p align="center"><kbd><img src="assets/70fffd1f0cb3d95065769ddf07fd85385aa3e233.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2320"></a>
+<a id="node-2290"></a>
 #### Exercise 4 - train_model (UNQ_C4)
 
 <br>
 
-<a id="node-2321"></a>
+<a id="node-2291"></a>
 
 <p align="center"><kbd><img src="assets/1bab6ee9a614ba43da2ebc0558953bb673f47ef5.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2322"></a>
+<a id="node-2292"></a>
 
 <p align="center"><kbd><img src="assets/103fd15bcd3b29d50b97520511a7f7cb95810b62.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2323"></a>
+<a id="node-2293"></a>
 
 <p align="center"><kbd><img src="assets/ad46a24a4df9c9a66fbef32aeb701e3a8e6e896d.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2324"></a>
+<a id="node-2294"></a>
 #### 4 - Evaluation
 
 <br>
 
-<a id="node-2325"></a>
+<a id="node-2295"></a>
 
 <p align="center"><kbd><img src="assets/44bf2efb5d6c71309527abe6aaa4095e7db0e861.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2326"></a>
+<a id="node-2296"></a>
 #### 4.1 - Evaluating using the Deep Nets
 
 <br>
 
 
-<a id="node-2327"></a>
+<a id="node-2297"></a>
 #### Exercise 5 - test_model (UNQ_C5)
 
 <br>
 
-<a id="node-2328"></a>
+<a id="node-2298"></a>
 
 <p align="center"><kbd><img src="assets/3627f4de4968f55c7674afcab58ce7d411fb9631.png" width="100%"></kbd></p>
 
@@ -1806,25 +1806,25 @@ Learning Objectives
 
 <br>
 
-<a id="node-2329"></a>
+<a id="node-2299"></a>
 
 <p align="center"><kbd><img src="assets/b8f45d7f6059f21a54c01d02bf152314ca2bed73.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2330"></a>
+<a id="node-2300"></a>
 #### 5 - Generating the Language with your Own Model
 
 <br>
 
-<a id="node-2331"></a>
+<a id="node-2301"></a>
 
 <p align="center"><kbd><img src="assets/ba0b1e5e172c98ba1f872fb5493f055ca536472b.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2332"></a>
+<a id="node-2302"></a>
 
 <p align="center"><kbd><img src="assets/ce2a52ae2d2f3826cade5294078f775b65f4bce2.png" width="100%"></kbd></p>
 
@@ -1837,62 +1837,62 @@ Learning Objectives
 
 <br>
 
-<a id="node-2333"></a>
+<a id="node-2303"></a>
 
 <p align="center"><kbd><img src="assets/12ad0179250efc969a53ca7ec90a1026b2b3b172.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2334"></a>
+<a id="node-2304"></a>
 
 <p align="center"><kbd><img src="assets/36832ec0102f688254a535f2b78cfdac655a4461.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2335"></a>
+<a id="node-2305"></a>
 
 <p align="center"><kbd><img src="assets/58f6315675735354c4e927485e803757b784ee91.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2336"></a>
+<a id="node-2306"></a>
 
 <p align="center"><kbd><img src="assets/436b529dd19a7b2b7b7af303d8a2867b9c4abd07.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2337"></a>
+<a id="node-2307"></a>
 
 <p align="center"><kbd><img src="assets/4ca0e0ec74df816e86ac3e0462dce2743ff2ade3.png" width="100%"></kbd></p>
 
 <br>
 
-<a id="node-2338"></a>
+<a id="node-2308"></a>
 
 <p align="center"><kbd><img src="assets/9a3541b200ecaaab1212f547628a8dc07a007f08.png" width="100%"></kbd></p>
 
 <br>
 
 
-<a id="node-2339"></a>
+<a id="node-2309"></a>
 #### in the predict() function above, why don't we use the max probability to get the next character?  ChatGPT  In the predict() function, the max probability is not used directly to select the next character because the goal is to introduce randomness and diversity in the generated text. By using Gumbel sampling instead of directly choosing the maximum probability, the generated text becomes less deterministic and more varied.  If the maximum probability were always chosen, the generated text would be more predictable and repetitive. The Gumbel sampling process adds randomness by considering the probabilities along with the Gumbel noise, controlled by the temperature parameter. This randomness allows the model to explore different possibilities and generate more diverse text.  In essence, Gumbel sampling with the temperature parameter provides a way to balance between exploration and exploitation. Higher temperatures result in more exploration and randomness, while lower temperatures make the sampling process more focused on exploiting the highest probabilities.  By using Gumbel sampling instead of relying solely on the maximum probability, the generated text becomes more interesting and less predictable, capturing a broader range of possibilities and allowing for more creative outputs.
 
 <br>
 
 
-<a id="node-2340"></a>
+<a id="node-2310"></a>
 #### is is  the similar 'random sampling with distribution" technique?  ChatGPT  Yes, Gumbel sampling with temperature can be considered a form of random sampling with a specific distribution. In this case, the Gumbel distribution is used as the underlying distribution for sampling. Random sampling with distribution involves drawing samples from a given probability distribution. In the case of Gumbel sampling, the goal is to sample from a categorical distribution. The Gumbel distribution is utilized to introduce randomness and exploration in the sampling process. The Gumbel distribution is often used to model extreme values and is defined by its shape and location parameters. By transforming uniform random numbers through the Gumbel distribution, Gumbel sampling allows us to select a category or item from a categorical distribution in a probabilistic manner. The temperature parameter in Gumbel sampling controls the level of randomness in the sampling process. Higher temperatures lead to more diverse and random samples, while lower temperatures make the sampling process more focused and deterministic. Therefore, Gumbel sampling with temperature can be seen as a form of random sampling with the Gumbel distribution, where the temperature parameter determines the level of exploration and randomness in the generated samples.
 
 <br>
 
 
-<a id="node-2341"></a>
+<a id="node-2311"></a>
 #### Summary
 
 <br>
 
 
-<a id="node-2342"></a>
+<a id="node-2312"></a>
 #### **On statistical methods**  Using a **statistical method** like the one you implemented in **course 2** will **not give you  results that are as good.** Your model will **not be able to encode information seen  previously in the data set** and as a result, the **perplexity will increase**. Remember from  course 2 that the **higher the perplexity, the worse your model** is. Furthermore, **statistical  ngram models** take up t**oo much space and memory**. As a result, it will be **inefficient** and  too **slow**. Conversely, with **deepnets, you can get a better perplexity**. Note, l**earning about  n-gram language models is still important** and allows you to better understand deepnets.
 
 > [!NOTE]
