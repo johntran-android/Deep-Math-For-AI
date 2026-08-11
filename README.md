@@ -1,3 +1,12 @@
+> [!IMPORTANT]
+> **This repo is no longer being updated.**
+>
+> I have switched to a new workflow powered by [StudyBoard](https://studyboard.app/landing.html) — notes are now published automatically from the app whenever I study.
+>
+> 👉 **Follow my active learning journal here: [johntran-android/StudyBoard-Publish](https://github.com/johntran-android/StudyBoard-Publish)**
+
+---
+
 # Deep Math For AI — A Self-Study Learning Lab
 
 > *Learning AI from the mathematical foundations up — through active explanation, derivations, implementation, and product-building.*
